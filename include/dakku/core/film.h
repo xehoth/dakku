@@ -8,6 +8,7 @@
 #include "geometry.h"
 #include "spectrum.h"
 #include <vector>
+#include <string>
 
 namespace dakku {
 class Film {
@@ -23,6 +24,8 @@ class Film {
     const int offset = p.x + p.y * width;
     return pixels[offset];
   }
+
+  void write(const std::string &fileName);
 };
 }  // namespace dakku
 #endif  // DAKKU_INCLUDE_DAKKU_CORE_FILM_H_
