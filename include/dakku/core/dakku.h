@@ -41,6 +41,7 @@ class Ray;
 class Transform;
 struct Matrix4x4;
 class RGBSpectrum;
+class Film;
 }  // namespace dakku
 
 #endif  // DAKKU_INCLUDE_DAKKU_H_

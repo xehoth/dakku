@@ -2,7 +2,7 @@ set(DAKKU_RENDER_SRC
         core/geometry.cpp
         core/transform.cpp
         core/spectrum.cpp
-)
+        core/film.cpp)
 
 find_package(glm CONFIG REQUIRED)
 
