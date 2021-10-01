@@ -1,0 +1,7 @@
+BasedOnStyle: Google
+SortIncludes: Never
+UseCRLF: false
+DeriveLineEnding: false
+DerivePointerAlignment: false
+PointerAlignment: Right
+FixNamespaceComments: true
