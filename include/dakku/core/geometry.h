@@ -11,6 +11,33 @@ namespace dakku {
 
 template <typename T>
 requires std::is_arithmetic_v<T>
+struct TVector2 {
+  TVector2() : v(0) {}
+  template <typename U>
+  requires std::is_arithmetic_v<U>
+  explicit TVector2(U xyz) : v(xyz) {}
+  explicit TVector2(const glm::vec<2, T> &v) : v(v) {}
+  template <typename U>
+  requires std::is_arithmetic_v<U>
+  explicit TVector2(U x, U y) : v(x, y) {}
+
+  union {
+    struct {
+      T x, y;
+    };
+    struct {
+      T s, t;
+    };
+    glm::vec<2, T> v;
+  };
+
+  template <typename Vec>
+  requires std::derived_from<Vec, TVector2<T>>
+  friend Vec normalize(const Vec &vec) { return Vec(glm::normalize(vec.v)); };
+};
+
+template <typename T>
+requires std::is_arithmetic_v<T>
 struct TVector3 {
   TVector3() : v(0) {}
   template <typename U>
@@ -34,6 +61,16 @@ struct TVector3 {
   requires std::derived_from<Vec, TVector3<T>>
   friend Vec normalize(const Vec &vec) { return Vec(glm::normalize(vec.v)); };
 };
+
+template <typename T>
+requires std::is_arithmetic_v<T>
+class Point2 : public TVector2<T> {
+ public:
+  using TVector2<T>::TVector2;
+  explicit Point2(const TVector2<T> &vec) : TVector2<T>(vec) {}
+};
+
+using Point2i = Point2<int>;
 
 template <typename T>
 requires std::is_arithmetic_v<T>
