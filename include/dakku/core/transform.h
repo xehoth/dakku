@@ -15,7 +15,7 @@ struct Matrix4x4 {
 
   Matrix4x4 operator*(const Matrix4x4 &rhs) const;
   friend Matrix4x4 inverse(const Matrix4x4 &m);
-
+  bool operator==(const Matrix4x4 &rhs) const;
   glm::mat<4, 4, Float> m;
 };
 
@@ -25,7 +25,9 @@ class Transform {
   explicit Transform(const Matrix4x4 &m);
   explicit Transform(const Matrix4x4 &m, const Matrix4x4 &mInv);
 
+  Transform operator*(const Transform &t) const;
   friend Transform inverse(const Transform &t);
+  [[nodiscard]] bool isIdentity() const;
  private:
   Matrix4x4 m, mInv;
 };

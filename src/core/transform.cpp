@@ -12,10 +12,21 @@ Matrix4x4 Matrix4x4::operator*(const Matrix4x4 &rhs) const {
 
 Matrix4x4 inverse(const Matrix4x4 &m) { return Matrix4x4(glm::inverse(m.m)); }
 
+bool Matrix4x4::operator==(const Matrix4x4 &rhs) const {
+  return this->m == rhs.m;
+}
+
 Transform::Transform(const Matrix4x4 &m) : m(m), mInv(inverse(m)) {}
 
-Transform::Transform(const Matrix4x4 &m, const Matrix4x4 &mInv) : m(m), mInv(mInv) {}
+Transform::Transform(const Matrix4x4 &m, const Matrix4x4 &mInv)
+    : m(m), mInv(mInv) {}
 
 Transform inverse(const Transform &t) { return Transform(t.mInv, t.m); }
 
+Transform Transform::operator*(const Transform &t) const {
+  return Transform(m * t.m, t.mInv * mInv);
 }
+
+bool Transform::isIdentity() const { return m == Matrix4x4(); }
+
+}  // namespace dakku
