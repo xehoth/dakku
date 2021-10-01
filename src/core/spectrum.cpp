@@ -14,5 +14,4 @@ RGBSpectrum &RGBSpectrum::operator+=(const RGBSpectrum &rhs) {
   return *this;
 }
 
-
-}
+}  // namespace dakku

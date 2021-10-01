@@ -13,9 +13,15 @@ Film::Film(const Point2i &resolution) : fullResolution(resolution) {
 
 void Film::write(const std::string &fileName) {
   const std::string ext = fileName.substr(fileName.rfind('.') + 1);
+  std::vector<std::uint8_t> output(this->pixels.size() * 3);
+  for (size_t i = 0; i < this->pixels.size(); ++i) {
+    output[i * 3 + 0] = static_cast<std::uint8_t>(this->pixels[i].r * 255.999);
+    output[i * 3 + 1] = static_cast<std::uint8_t>(this->pixels[i].g * 255.999);
+    output[i * 3 + 2] = static_cast<std::uint8_t>(this->pixels[i].b * 255.999);
+  }
   if (ext == "png") {
     stbi_write_png(fileName.c_str(), fullResolution.x, fullResolution.y, 3,
-                   pixels.data(), 0);
+                   output.data(), 0);
   }
 }
 }  // namespace dakku
