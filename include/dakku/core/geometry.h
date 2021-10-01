@@ -11,33 +11,36 @@ namespace dakku {
 
 template <typename T>
 requires std::is_arithmetic_v<T>
-struct IVector3 {
-  IVector3() : v(0) {}
+struct TVector3 {
+  TVector3() : v(0) {}
   template <typename U>
   requires std::is_arithmetic_v<U>
-  explicit IVector3(U xyz) : v(xyz) {}
-  explicit IVector3(const glm::vec<3, T> &v) : v(v) {}
+  explicit TVector3(U xyz) : v(xyz) {}
+  explicit TVector3(const glm::vec<3, T> &v) : v(v) {}
   template <typename U>
-  requires std::is_arithmetic_v<U> IVector3(U x, U y, U z) : v(x, y, z) {}
+  requires std::is_arithmetic_v<U> TVector3(U x, U y, U z) : v(x, y, z) {}
 
   union {
     struct {
       T x, y, z;
     };
+    struct {
+      T r, g, b;
+    };
     glm::vec<3, T> v;
   };
 
   template <typename Vec>
-  requires std::derived_from<Vec, IVector3<T>>
+  requires std::derived_from<Vec, TVector3<T>>
   friend Vec normalize(const Vec &vec) { return Vec(glm::normalize(vec.v)); };
 };
 
 template <typename T>
 requires std::is_arithmetic_v<T>
-class Vector3 : public IVector3<T> {
+class Vector3 : public TVector3<T> {
  public:
-  using IVector3<T>::IVector3;
-  explicit Vector3(const IVector3<T> &vec) : IVector3<T>(vec) {}
+  using TVector3<T>::TVector3;
+  explicit Vector3(const TVector3<T> &vec) : TVector3<T>(vec) {}
 
   Vector3 operator+(const Vector3 &rhs) const {
     return Vector3(this->v + rhs.v);
@@ -50,9 +53,9 @@ using Vector3f = Vector3<Float>;
 
 template <typename T>
 requires std::is_arithmetic_v<T>
-class Point3 : public IVector3<T> {
+class Point3 : public TVector3<T> {
  public:
-  using IVector3<T>::IVector3;
+  using TVector3<T>::TVector3;
 
   Point3 operator+(const Vector3<T> &v) const { return Point3(this->v + v.v); }
 };
@@ -61,9 +64,9 @@ using Point3f = Point3<Float>;
 
 template <typename T>
 requires std::is_arithmetic_v<T>
-class Normal3 : public IVector3<T> {
+class Normal3 : public TVector3<T> {
  public:
-  using IVector3<T>::IVector3;
+  using TVector3<T>::TVector3;
 };
 
 using Normal3f = Normal3<Float>;
