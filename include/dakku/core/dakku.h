@@ -38,6 +38,8 @@ template <typename T>
 requires std::is_arithmetic_v<T>
 class Normal3;
 class Ray;
+class Transform;
+struct Matrix4x4;
 }  // namespace dakku
 
 #endif  // DAKKU_INCLUDE_DAKKU_H_
