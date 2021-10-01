@@ -71,7 +71,7 @@ using Normal3f = Normal3<Float>;
 class Ray {
  public:
   Ray() = default;
-  Ray(const Point3f &o, const Vector3f &d, Float tMax = INF);
+  explicit Ray(const Point3f &o, const Vector3f &d, Float tMax = INF);
   Point3f operator()(Float t) const;
 
   Point3f o;
