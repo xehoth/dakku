@@ -40,6 +40,7 @@ class Normal3;
 class Ray;
 class Transform;
 struct Matrix4x4;
+class RGBSpectrum;
 }  // namespace dakku
 
 #endif  // DAKKU_INCLUDE_DAKKU_H_

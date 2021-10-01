@@ -1,0 +1,18 @@
+//
+// Created by xehoth on 2021/10/1.
+//
+#include <dakku/core/spectrum.h>
+
+namespace dakku {
+
+RGBSpectrum RGBSpectrum::operator+(const RGBSpectrum &rhs) const {
+  return RGBSpectrum{this->v + rhs.v};
+}
+
+RGBSpectrum &RGBSpectrum::operator+=(const RGBSpectrum &rhs) {
+  this->v += rhs.v;
+  return *this;
+}
+
+
+}
