@@ -9,4 +9,4 @@ add_subdirectory(src)
 
 if (DAKKU_BUILD_TESTS)
   add_subdirectory(tests)
-endif()
+endif ()
