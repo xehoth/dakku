@@ -18,8 +18,7 @@ struct TVector2 {
   explicit TVector2(U xyz) : v(static_cast<T>(xyz)) {}
   explicit TVector2(const glm::vec<2, T> &v) : v(v) {}
   template <typename U>
-  requires std::is_arithmetic_v<U>
-  explicit TVector2(U x, U y) : v(x, y) {}
+  requires std::is_arithmetic_v<U> TVector2(U x, U y) : v(x, y) {}
 
   union {
     struct {
@@ -53,10 +52,22 @@ struct TVector3 {
     glm::vec<3, T> v;
   };
 
+  decltype(auto) operator[](int i) const { return v[i]; }
+  decltype(auto) operator[](int i) { return v[i]; }
+
   template <typename Vec>
   requires std::derived_from<Vec, TVector3<T>>
   friend Vec normalize(const Vec &vec) { return Vec(glm::normalize(vec.v)); };
 };
+
+template <typename T>
+requires std::is_arithmetic_v<T>
+class Vector2 : public TVector2<T> {
+ public:
+  using TVector2<T>::TVector2;
+};
+
+using Vector2f = Vector2<Float>;
 
 template <typename T>
 requires std::is_arithmetic_v<T>
@@ -81,6 +92,8 @@ class Vector3 : public TVector3<T> {
   }
 
   Vector3 operator*(T f) const { return Vector3(this->v * f); }
+
+  Vector3 operator-() const { return Vector3{-this->v}; }
 };
 
 using Vector3f = Vector3<Float>;
@@ -101,6 +114,14 @@ requires std::is_arithmetic_v<T>
 class Normal3 : public TVector3<T> {
  public:
   using TVector3<T>::TVector3;
+
+  bool operator!=(const Normal3 &rhs) const { return this->v != rhs.v; }
+
+  Normal3 operator*(T f) const { return Normal3{this->v * f}; }
+
+  Normal3 operator+(const Normal3 &rhs) const {
+    return Normal3{this->v + rhs.v};
+  }
 };
 
 using Normal3f = Normal3<Float>;
@@ -120,5 +141,12 @@ template <typename T>
 requires std::is_arithmetic_v<T>
 decltype(auto) radians(T x) { return glm::radians(x); }
 
+Point3f offsetRayOrigin(const Point3f &p, const Normal3f &n, const Vector3f &w);
+
+template <typename T>
+requires std::is_arithmetic_v<T>
+inline T dot(const TVector3<T> &a, const TVector3<T> &b) {
+  return glm::dot(a.v, b.v);
+}
 }  // namespace dakku
 #endif  // DAKKU_INCLUDE_DAKKU_CORE_GEOMETRY_H_

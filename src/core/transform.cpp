@@ -41,8 +41,16 @@ Vector3f Transform::operator()(const Vector3f &p) const {
   return Vector3f{glm::mat<3, 3, Float>(m.m) * p.v};
 }
 
+Normal3f Transform::operator()(const Normal3f &n) const {
+  return Normal3f{glm::transpose(glm::mat<3, 3, Float>(mInv.m)) * n.v};
+}
+
 Ray Transform::operator()(const Ray &r) const {
   return Ray{(*this)(r.o), (*this)(r.d), r.tMax};
+}
+
+Transform lookAt(const Point3f &eye, const Vector3f &look, const Vector3f &up) {
+  return Transform{Matrix4x4{glm::lookAt(eye.v, look.v, up.v)}};
 }
 
 }  // namespace dakku

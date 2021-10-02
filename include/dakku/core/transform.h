@@ -28,12 +28,17 @@ class Transform {
   Transform operator*(const Transform &t) const;
   Point3f operator()(const Point3f &p) const;
   Vector3f operator()(const Vector3f &p) const;
+  Normal3f operator()(const Normal3f &n) const;
   Ray operator()(const Ray &r) const;
 
   friend Transform inverse(const Transform &t);
   [[nodiscard]] bool isIdentity() const;
+
  private:
   Matrix4x4 m, mInv;
 };
+
+Transform lookAt(const Point3f &eye, const Vector3f &look,
+                 const Vector3f &up = Vector3f(0, 1, 0));
 }  // namespace dakku
 #endif  // DAKKU_INCLUDE_DAKKU_CORE_TRANSFORM_H_

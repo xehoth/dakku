@@ -26,7 +26,7 @@ Float PerspectiveCamera::generateRay(const CameraSample &sample,
 Vector3f PerspectiveCamera::rasterToCamera(const Point2f &p) const {
   Float cameraX = (2 * p.x / static_cast<Float>(film->fullResolution.x) - 1) *
                   imagePlaneWidth;
-  Float cameraY = (2 * p.y / static_cast<Float>(film->fullResolution.y) - 1) *
+  Float cameraY = -(2 * p.y / static_cast<Float>(film->fullResolution.y) - 1) *
                   imagePlaneHeight;
   return Vector3f{cameraX, cameraY, static_cast<Float>(-1)};
 }

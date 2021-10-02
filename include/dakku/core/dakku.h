@@ -44,6 +44,14 @@ class RGBSpectrum;
 class Film;
 struct CameraSample;
 class Camera;
+class Shape;
+struct Interaction;
+class SurfaceInteraction;
+class Primitive;
+class Light;
+class VisibilityTester;
+class AreaLight;
+class SceneParser;
 }  // namespace dakku
 
 #endif  // DAKKU_INCLUDE_DAKKU_H_
