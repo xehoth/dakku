@@ -4,9 +4,9 @@
 
 #ifndef DAKKU_INCLUDE_DAKKU_CORE_FILM_H_
 #define DAKKU_INCLUDE_DAKKU_CORE_FILM_H_
-#include "dakku.h"
-#include "geometry.h"
-#include "spectrum.h"
+#include <dakku/core/dakku.h>
+#include <dakku/core/geometry.h>
+#include <dakku/core/spectrum.h>
 #include <vector>
 #include <string>
 

@@ -4,8 +4,8 @@
 
 #ifndef DAKKU_INCLUDE_DAKKU_CORE_SPECTRUM_H_
 #define DAKKU_INCLUDE_DAKKU_CORE_SPECTRUM_H_
-#include "dakku.h"
-#include "geometry.h"
+#include <dakku/core/dakku.h>
+#include <dakku/core/geometry.h>
 
 namespace dakku {
 
