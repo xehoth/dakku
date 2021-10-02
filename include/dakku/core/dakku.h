@@ -53,6 +53,8 @@ class VisibilityTester;
 class AreaLight;
 class SceneParser;
 class Sampler;
+class Material;
+class BxDF;
 }  // namespace dakku
 
 #endif  // DAKKU_INCLUDE_DAKKU_H_

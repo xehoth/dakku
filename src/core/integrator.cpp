@@ -16,6 +16,7 @@ SamplerIntegrator::SamplerIntegrator(std::shared_ptr<const Camera> camera,
 void SamplerIntegrator::preprocess(const Scene &scene, Sampler &sampler) {}
 
 void SamplerIntegrator::render(const Scene &scene) {
+  preprocess(scene, *sampler);
   const Point2i resolution = this->camera->film->fullResolution;
   for (int x = 0; x < resolution.x; ++x) {
     for (int y = 0; y < resolution.y; ++y) {

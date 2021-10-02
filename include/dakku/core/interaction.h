@@ -26,8 +26,10 @@ class SurfaceInteraction : public Interaction {
  public:
   SurfaceInteraction() = default;
   SurfaceInteraction(const Point3f &p, const Normal3f &n, const Vector3f &wo);
-
+  [[nodiscard]] RGBSpectrum emit(const Vector3f &w) const;
   std::shared_ptr<const Primitive> primitive{nullptr};
+
+  void computeScatteringFunctions(const Ray &ray);
 };
 }
 #endif  // DAKKU_INCLUDE_DAKKU_CORE_INTERACTION_H_

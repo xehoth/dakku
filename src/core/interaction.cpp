@@ -2,6 +2,9 @@
 // Created by xehoth on 2021/10/2.
 //
 #include <dakku/core/interaction.h>
+#include <dakku/core/primitive.h>
+#include <dakku/core/light.h>
+#include <dakku/core/spectrum.h>
 
 namespace dakku {
 Interaction::Interaction(const Point3f &p, const Normal3f &n,
@@ -18,4 +21,13 @@ Ray Interaction::spawnRay(const Vector3f &d) const {
 SurfaceInteraction::SurfaceInteraction(const Point3f &p, const Normal3f &n,
                                        const Vector3f &wo)
     : Interaction(p, n, wo) {}
+
+RGBSpectrum SurfaceInteraction::emit(const Vector3f &w) const {
+  std::shared_ptr<const AreaLight> area = primitive->getAreaLight();
+  return area ? area->emit(*this, w) : RGBSpectrum(0);
+}
+
+void SurfaceInteraction::computeScatteringFunctions(const Ray &ray) {
+  primitive->computeScatteringFunctions(*this);
+}
 }  // namespace dakku
