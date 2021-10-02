@@ -10,9 +10,12 @@ set(DAKKU_RENDER_SRC
         core/interaction.cpp
         core/scene.cpp
         core/parser.cpp
+        core/integrator.cpp
+        core/sampler.cpp
         cameras/perspective.cpp
         shapes/triangle.cpp
-        accelerators/embree_accel.cpp)
+        accelerators/embree_accel.cpp
+        samplers/random.cpp)
 
 find_package(glm CONFIG REQUIRED)
 find_path(STB_INCLUDE_DIRS "stb.h")
