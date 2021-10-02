@@ -26,6 +26,10 @@ class Transform {
   explicit Transform(const Matrix4x4 &m, const Matrix4x4 &mInv);
 
   Transform operator*(const Transform &t) const;
+  Point3f operator()(const Point3f &p) const;
+  Vector3f operator()(const Vector3f &p) const;
+  Ray operator()(const Ray &r) const;
+
   friend Transform inverse(const Transform &t);
   [[nodiscard]] bool isIdentity() const;
  private:

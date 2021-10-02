@@ -14,8 +14,8 @@ requires std::is_arithmetic_v<T>
 struct TVector2 {
   TVector2() : v(0) {}
   template <typename U>
-  requires std::is_arithmetic_v<U>
-  explicit TVector2(U xyz) : v(xyz) {}
+  requires std::is_convertible_v<U, T>
+  explicit TVector2(U xyz) : v(static_cast<T>(xyz)) {}
   explicit TVector2(const glm::vec<2, T> &v) : v(v) {}
   template <typename U>
   requires std::is_arithmetic_v<U>
@@ -30,10 +30,6 @@ struct TVector2 {
     };
     glm::vec<2, T> v;
   };
-
-  template <typename Vec>
-  requires std::derived_from<Vec, TVector2<T>>
-  friend Vec normalize(const Vec &vec) { return Vec(glm::normalize(vec.v)); };
 };
 
 template <typename T>
@@ -41,8 +37,8 @@ requires std::is_arithmetic_v<T>
 struct TVector3 {
   TVector3() : v(0) {}
   template <typename U>
-  requires std::is_arithmetic_v<U>
-  explicit TVector3(U xyz) : v(xyz) {}
+  requires std::is_convertible_v<U, T>
+  explicit TVector3(U xyz) : v(static_cast<T>(xyz)) {}
   explicit TVector3(const glm::vec<3, T> &v) : v(v) {}
   template <typename U>
   requires std::is_arithmetic_v<U> TVector3(U x, U y, U z) : v(x, y, z) {}
@@ -119,6 +115,10 @@ class Ray {
   Vector3f d;
   mutable Float tMax{INF};
 };
+
+template <typename T>
+requires std::is_arithmetic_v<T>
+decltype(auto) radians(T x) { return glm::radians(x); }
 
 }  // namespace dakku
 #endif  // DAKKU_INCLUDE_DAKKU_CORE_GEOMETRY_H_

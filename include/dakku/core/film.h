@@ -17,6 +17,11 @@ class Film {
 
   const Point2i fullResolution;
 
+  [[nodiscard]] Float getAspectRatio() const {
+    return static_cast<Float>(fullResolution.x) /
+           static_cast<Float>(fullResolution.y);
+  }
+
   std::vector<RGBSpectrum> pixels;
 
   RGBSpectrum &getPixel(const Point2i &p) {

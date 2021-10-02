@@ -29,4 +29,20 @@ Transform Transform::operator*(const Transform &t) const {
 
 bool Transform::isIdentity() const { return m == Matrix4x4(); }
 
+Point3f Transform::operator()(const Point3f &p) const {
+  using vec4 = glm::vec<4, Float>;
+  using vec3 = glm::vec<3, Float>;
+  vec4 res = m.m * vec4(p.v, 1);
+  vec3 ret = vec3(res) / res.w;
+  return Point3f{ret};
+}
+
+Vector3f Transform::operator()(const Vector3f &p) const {
+  return Vector3f{glm::mat<3, 3, Float>(m.m) * p.v};
+}
+
+Ray Transform::operator()(const Ray &r) const {
+  return Ray{(*this)(r.o), (*this)(r.d), r.tMax};
+}
+
 }  // namespace dakku
