@@ -71,6 +71,7 @@ class Point2 : public TVector2<T> {
 };
 
 using Point2i = Point2<int>;
+using Point2f = Point2<Float>;
 
 template <typename T>
 requires std::is_arithmetic_v<T>

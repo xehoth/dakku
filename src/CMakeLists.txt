@@ -2,7 +2,8 @@ set(DAKKU_RENDER_SRC
         core/geometry.cpp
         core/transform.cpp
         core/spectrum.cpp
-        core/film.cpp)
+        core/film.cpp
+        core/camera.cpp)
 
 find_package(glm CONFIG REQUIRED)
 find_path(STB_INCLUDE_DIRS "stb.h")

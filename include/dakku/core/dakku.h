@@ -42,6 +42,8 @@ class Transform;
 struct Matrix4x4;
 class RGBSpectrum;
 class Film;
+struct CameraSample;
+class Camera;
 }  // namespace dakku
 
 #endif  // DAKKU_INCLUDE_DAKKU_H_
