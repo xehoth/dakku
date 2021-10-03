@@ -10,6 +10,7 @@ MatteMaterial::MatteMaterial(const RGBSpectrum &Kd)
     : Kd(Kd), lambertian(std::make_shared<LambertianReflection>(Kd)) {}
 
 void MatteMaterial::computeScatteringFunctions(SurfaceInteraction &si) const {
-  si.bsdf = this->lambertian;
+  si.bsdf = BSDF{si};
+  si.bsdf.add(this->lambertian);
 }
 }  // namespace dakku

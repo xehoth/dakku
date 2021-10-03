@@ -60,6 +60,7 @@ class SceneParser;
 class Sampler;
 class Material;
 class BxDF;
+class BSDF;
 }  // namespace dakku
 
 #endif  // DAKKU_INCLUDE_DAKKU_H_

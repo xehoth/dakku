@@ -39,8 +39,7 @@ Float Triangle::area() const {
   return cross(p1 - p0, p2 - p0).length() / 2;
 }
 
-Interaction Triangle::sample(const Interaction &ref, const Point2f &u,
-                             Float &pdf) const {
+Interaction Triangle::sample(const Point2f &u, Float &pdf) const {
   Point2f b = uniformSampleTriangle(u);
   const Point3f &p0 = mesh->p[v[0]];
   const Point3f &p1 = mesh->p[v[1]];

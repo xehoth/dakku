@@ -44,7 +44,7 @@ RGBSpectrum PathIntegrator::radiance(const Ray &r, const Scene &scene,
     if (!foundInteraction || bounces >= maxDepth) break;
 
     isect.computeScatteringFunctions(ray);
-    if (!isect.bsdf) {
+    if (!isect.bsdf.isValid()) {
       ray = isect.spawnRay(ray.d);
       --bounces;
       continue;
@@ -57,7 +57,7 @@ RGBSpectrum PathIntegrator::radiance(const Ray &r, const Scene &scene,
 
     Vector3f wo = -ray.d, wi;
     Float pdf;
-    RGBSpectrum f = isect.bsdf->sample(wo, wi, sampler.get2D(), pdf);
+    RGBSpectrum f = isect.bsdf.sample(wo, wi, sampler.get2D(), pdf);
     if (f.isBlack() || pdf == 0) break;
     beta *= f * absDot(wi, isect.n) / pdf;
 

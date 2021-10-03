@@ -20,18 +20,35 @@ void SamplerIntegrator::preprocess(const Scene &scene, Sampler &sampler) {}
 void SamplerIntegrator::render(const Scene &scene) {
   preprocess(scene, *sampler);
   const Point2i resolution = this->camera->film->fullResolution;
-//#pragma omp parallel for collapse(2)
+  constexpr int sqrtSpp = 8;
+  constexpr int spp = sqrtSpp * sqrtSpp;
+  constexpr Float invSqrtSpp = 1 / static_cast<Float>(sqrtSpp);
+  constexpr Float invSpp = 1 / static_cast<Float>(spp);
+  const Float totalSteps = static_cast<Float>(resolution.x);
+  Float progress = 0;
+//#pragma omp parallel for collapse(2) schedule(dynamic)
+#pragma omp parallel for schedule(dynamic) num_threads(16)
   for (int x = 0; x < resolution.x; ++x) {
+    printf("\r%04.2f%%", ++progress / totalSteps * 100);
     for (int y = 0; y < resolution.y; ++y) {
-      const int spp = 1;
       RGBSpectrum res(0);
-      for (int i = 0; i < spp; ++i) {
-        CameraSample cameraSample = sampler->getCameraSample(Point2i{x, y});
-        Ray ray;
-        camera->generateRay(cameraSample, ray);
-        res += radiance(ray, scene, *sampler);
+      for (int sx = 0; sx < sqrtSpp; ++sx) {
+        for (int sy = 0; sy < sqrtSpp; ++sy) {
+          Point2f uv = sampler->get2D();
+          //          CameraSample cameraSample =
+          //          sampler->getCameraSample(Point2i{x, y});
+          CameraSample cameraSample;
+          cameraSample.pFilm =
+              Point2f{static_cast<Float>(x) +
+                          (static_cast<Float>(sx) + uv.x) * invSqrtSpp,
+                      static_cast<Float>(y) +
+                          (static_cast<Float>(sy) + uv.y) * invSqrtSpp};
+          Ray ray;
+          camera->generateRay(cameraSample, ray);
+          res += radiance(ray, scene, *sampler);
+        }
       }
-      camera->film->getPixel(Point2i{x, y}) = res / spp;
+      camera->film->getPixel(Point2i{x, y}) = res * invSpp;
     }
   }
 }
@@ -64,8 +81,8 @@ RGBSpectrum estimateDirect(const Interaction &it, const Point2f &uShading,
     RGBSpectrum f;
     if (it.isSurfaceInteraction()) {
       const auto &isect = static_cast<const SurfaceInteraction &>(it);
-      f = isect.bsdf->f(isect.wo, wi) * absDot(wi, isect.n);
-      scatteringPdf = isect.bsdf->pdf(isect.wo, wi);
+      f = isect.bsdf.f(isect.wo, wi) * absDot(wi, isect.n);
+      scatteringPdf = isect.bsdf.pdf(isect.wo, wi);
     } else {
       // TODO: volume
     }
@@ -73,9 +90,9 @@ RGBSpectrum estimateDirect(const Interaction &it, const Point2f &uShading,
       if (false) {
         // TODO: volume
       } else {
-//        if (!visibility.unoccluded(scene)) {
-//          Li = RGBSpectrum(0);
-//        }
+        if (!visibility.unoccluded(scene)) {
+          Li = RGBSpectrum(0);
+        }
       }
       if (!Li.isBlack()) {
         if (isDeltaLight(light.flags)) {

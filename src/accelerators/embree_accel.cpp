@@ -64,15 +64,16 @@ bool EmbreeAccel::intersect(const Ray &r, SurfaceInteraction &isect) const {
     return false;
 
   const auto &[mesh, prims] = (*this->p)[rayHit.hit.geomID];
-  isect.primitive = (*prims)[rayHit.hit.primID];
+  Point3f pHit = r(rayHit.ray.tfar);
   Float u = rayHit.hit.u;
   Float v = rayHit.hit.v;
   Float w = 1 - u - v;
-  isect.p = r(rayHit.ray.tfar);
   int idx = rayHit.hit.primID * 3;
-  isect.n = normalize(mesh->n[mesh->indices[idx + 0]] * w +
+  Normal3f hitN = normalize(mesh->n[mesh->indices[idx + 0]] * w +
                       mesh->n[mesh->indices[idx + 1]] * u +
                       mesh->n[mesh->indices[idx + 2]] * v);
+  isect = SurfaceInteraction(pHit, hitN, -r.d);
+  isect.primitive = (*prims)[rayHit.hit.primID];
   r.tMax = rayHit.ray.tfar;
 
   return true;

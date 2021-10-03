@@ -21,7 +21,7 @@ Ray Interaction::spawnRayTo(const Interaction &it) const {
   Point3f origin = offsetRayOrigin(p, n, it.p - p);
   Point3f target = offsetRayOrigin(it.p, it.n, origin - it.p);
   Vector3f d = target - origin;
-  return Ray{origin, d, 1 - SHADOW_EPS};
+  return Ray{origin, d, d.length() - SHADOW_EPS};
 }
 
 SurfaceInteraction::SurfaceInteraction(const Point3f &p, const Normal3f &n,

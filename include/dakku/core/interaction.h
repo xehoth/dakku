@@ -6,6 +6,7 @@
 #define DAKKU_INCLUDE_DAKKU_CORE_INTERACTION_H_
 #include <dakku/core/dakku.h>
 #include <dakku/core/geometry.h>
+#include <dakku/core/reflection.h>
 #include <memory>
 
 namespace dakku {
@@ -28,7 +29,7 @@ class SurfaceInteraction : public Interaction {
   SurfaceInteraction(const Point3f &p, const Normal3f &n, const Vector3f &wo);
   [[nodiscard]] RGBSpectrum emit(const Vector3f &w) const;
   std::shared_ptr<const Primitive> primitive{nullptr};
-  std::shared_ptr<BxDF> bsdf{nullptr};
+  BSDF bsdf;
 
   void computeScatteringFunctions(const Ray &ray);
 };

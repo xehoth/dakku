@@ -3,6 +3,7 @@
 //
 #include <dakku/core/scene.h>
 #include <dakku/core/primitive.h>
+#include <dakku/core/interaction.h>
 
 namespace dakku {
 

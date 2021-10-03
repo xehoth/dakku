@@ -28,9 +28,9 @@ RGBSpectrum DiffuseAreaLight::sampleLi(const Interaction &ref, const Point2f &u,
     pdf = 0;
     return RGBSpectrum{0};
   }
-  Vector3f l = pShape.p - ref.p;
   wi = normalize(pShape.p - ref.p);
-  pdf *= l.lengthSquared() / absDot(-wi, pShape.n);
+//  Vector3f l = pShape.p - ref.p;
+//  pdf *= l.lengthSquared() / absDot(-wi, pShape.n);
   vis = VisibilityTester(ref, pShape);
   return this->emit(pShape, -wi);
 }

@@ -13,9 +13,9 @@ Film::Film(const Point2i &resolution) : fullResolution(resolution) {
 
 inline Float gammaCorrect(Float value) {
   value = glm::clamp(value, 0.f, 1.f);
-  return std::pow(value, 1.0f / 2.2f);
-//  if (value <= 0.0031308f) return 12.92f * value;
-//  return 1.055f * std::pow(value, (Float)(1.f / 2.4f)) - 0.055f;
+//  return std::pow(value, 1.0f / 2.2f);
+  if (value <= 0.0031308f) return 12.92f * value;
+  return 1.055f * std::pow(value, (Float)(1.f / 2.4f)) - 0.055f;
 }
 
 void Film::write(const std::string &fileName) {
