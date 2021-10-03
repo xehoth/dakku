@@ -14,11 +14,14 @@ set(DAKKU_RENDER_SRC
         core/sampler.cpp
         core/material.cpp
         core/reflection.cpp
+        core/sampling.cpp
         cameras/perspective.cpp
         shapes/triangle.cpp
         accelerators/embree_accel.cpp
         samplers/random.cpp
-        materials/matte.cpp integrators/path.cpp)
+        materials/matte.cpp
+        integrators/path.cpp
+        lights/diffuse.cpp)
 
 find_package(glm CONFIG REQUIRED)
 find_path(STB_INCLUDE_DIRS "stb.h")
@@ -36,6 +39,9 @@ target_link_libraries(dakku-render PRIVATE
         nlohmann_json
         nlohmann_json::nlohmann_json)
 target_include_directories(dakku-render PRIVATE ${STB_INCLUDE_DIRS})
+if (MSVC)
+  target_compile_options(dakku-render PRIVATE "/openmp")
+endif ()
 add_library(dakku::render ALIAS dakku-render)
 
 add_subdirectory(main)
