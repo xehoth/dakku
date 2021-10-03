@@ -55,9 +55,10 @@ struct TVector3 {
   decltype(auto) operator[](int i) const { return v[i]; }
   decltype(auto) operator[](int i) { return v[i]; }
 
-  template <typename Vec>
-  requires std::derived_from<Vec, TVector3<T>>
-  friend Vec normalize(const Vec &vec) { return Vec(glm::normalize(vec.v)); };
+  [[nodiscard]] decltype(auto) length() const { return glm::length(this->v); }
+  [[nodiscard]] decltype(auto) lengthSquared() const {
+    return x * x + y * y + z * z;
+  }
 };
 
 template <typename T>
@@ -75,6 +76,11 @@ class Point2 : public TVector2<T> {
  public:
   using TVector2<T>::TVector2;
   explicit Point2(const TVector2<T> &vec) : TVector2<T>(vec) {}
+
+  Point2 operator*(T f) const { return Point2{this->v * f}; }
+  Point2 operator-(const Vector2<T> &vec) const {
+    return Point2{this->v - vec.v};
+  }
 };
 
 using Point2i = Point2<int>;
@@ -105,6 +111,11 @@ class Point3 : public TVector3<T> {
   using TVector3<T>::TVector3;
 
   Point3 operator+(const Vector3<T> &v) const { return Point3(this->v + v.v); }
+  Point3 operator*(T f) const { return Point3{this->v * f}; }
+  Point3 operator+(const Point3 &p) const { return Point3{this->v + p.v}; }
+  Vector3<T> operator-(const Point3 &p) const {
+    return Vector3<T>{this->v - p.v};
+  }
 };
 
 using Point3f = Point3<Float>;
@@ -115,7 +126,11 @@ class Normal3 : public TVector3<T> {
  public:
   using TVector3<T>::TVector3;
 
+  explicit Normal3(const TVector3<T> &vec) : TVector3<T>(vec) {}
+
   bool operator!=(const Normal3 &rhs) const { return this->v != rhs.v; }
+
+  Normal3 operator-() const { return Normal3{-this->v}; }
 
   Normal3 operator*(T f) const { return Normal3{this->v * f}; }
 
@@ -147,6 +162,36 @@ template <typename T>
 requires std::is_arithmetic_v<T>
 inline T dot(const TVector3<T> &a, const TVector3<T> &b) {
   return glm::dot(a.v, b.v);
+}
+
+template <typename T>
+requires std::is_arithmetic_v<T>
+inline T absDot(const TVector3<T> &a, const TVector3<T> &b) {
+  return std::abs(dot(a, b));
+}
+
+template <typename T>
+requires std::is_arithmetic_v<T>
+inline Vector3<T> cross(const Vector3<T> &a, const Vector3<T> &b) {
+  return Vector3<T>{glm::cross(a.v, b.v)};
+}
+
+template <typename T>
+requires std::is_arithmetic_v<T>
+inline Normal3<T> faceforward(const Normal3<T> &n, const Normal3<T> &n2) {
+  return dot(n, n2) < 0 ? -n : n;
+}
+
+template <typename T>
+requires std::is_arithmetic_v<T>
+inline Vector3<T> normalize(const Vector3<T> &vec) {
+  return Vector3<T>{glm::normalize(vec.v)};
+}
+
+template <typename T>
+requires std::is_arithmetic_v<T>
+inline Normal3<T> normalize(const Normal3<T> &n) {
+  return Normal3<T>{glm::normalize(n.v)};
 }
 }  // namespace dakku
 #endif  // DAKKU_INCLUDE_DAKKU_CORE_GEOMETRY_H_

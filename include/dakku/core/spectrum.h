@@ -28,6 +28,9 @@ class RGBSpectrum : public TVector3<Float> {
     return *this;
   }
   RGBSpectrum operator*(const RGBSpectrum &rhs) const;
+  RGBSpectrum operator/(Float x) const;
+  RGBSpectrum &operator*=(const RGBSpectrum &rhs);
+  [[nodiscard]] bool isBlack() const { return this->r == 0 && this->g == 0 && this->b == 0; }
 };
 }  // namespace dakku
 #endif  // DAKKU_INCLUDE_DAKKU_CORE_SPECTRUM_H_

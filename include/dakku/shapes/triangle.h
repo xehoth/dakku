@@ -28,6 +28,9 @@ struct TriangleMesh {
 class Triangle : public Shape {
  public:
   Triangle(const std::shared_ptr<TriangleMesh> &mesh, int triNumber);
+  [[nodiscard]] Float area() const override;
+  Interaction sample(const Interaction &ref, const Point2f &u,
+                     Float &pdf) const override;
 
  private:
   std::shared_ptr<TriangleMesh> mesh{nullptr};

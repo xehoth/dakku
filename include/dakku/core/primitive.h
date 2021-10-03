@@ -17,17 +17,21 @@ class Primitive {
   [[nodiscard]] virtual bool occluded(const Ray &r) const = 0;
   virtual void computeScatteringFunctions(SurfaceInteraction &isect) const = 0;
   [[nodiscard]] virtual std::shared_ptr<const Material> getMaterial() const = 0;
-  [[nodiscard]] virtual std::shared_ptr<const AreaLight> getAreaLight() const = 0;
+  [[nodiscard]] virtual std::shared_ptr<const AreaLight> getAreaLight()
+      const = 0;
 };
 
 class GeometricPrimitive : public Primitive {
  public:
-  explicit GeometricPrimitive(const std::shared_ptr<Shape> &shape);
+  explicit GeometricPrimitive(const std::shared_ptr<Shape> &shape,
+                              std::shared_ptr<Material> material,
+                              std::shared_ptr<AreaLight> areaLight = nullptr);
   bool intersect(const Ray &r, SurfaceInteraction &isect) const override;
   [[nodiscard]] bool occluded(const Ray &r) const override;
   void computeScatteringFunctions(SurfaceInteraction &isect) const override;
   [[nodiscard]] std::shared_ptr<const Material> getMaterial() const override;
   [[nodiscard]] std::shared_ptr<const AreaLight> getAreaLight() const override;
+
  private:
   std::shared_ptr<Shape> shape{nullptr};
   std::shared_ptr<Material> material{nullptr};

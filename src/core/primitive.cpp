@@ -20,8 +20,10 @@ std::shared_ptr<const Material> Aggregate::getMaterial() const {
   return nullptr;
 }
 
-GeometricPrimitive::GeometricPrimitive(const std::shared_ptr<Shape> &shape)
-    : shape(shape) {}
+GeometricPrimitive::GeometricPrimitive(const std::shared_ptr<Shape> &shape,
+                                       std::shared_ptr<Material> material,
+                                       std::shared_ptr<AreaLight> areaLight)
+    : shape(shape), material(material), areaLight(areaLight) {}
 
 bool GeometricPrimitive::intersect(const Ray &r,
                                    SurfaceInteraction &isect) const {

@@ -6,6 +6,8 @@
 #define DAKKU_INCLUDE_DAKKU_MATERIALS_MATTE_H_
 #include <dakku/core/material.h>
 #include <dakku/core/spectrum.h>
+#include <dakku/core/reflection.h>
+#include <memory>
 
 namespace dakku {
 class MatteMaterial : public Material {
@@ -15,6 +17,7 @@ class MatteMaterial : public Material {
 
  private:
   RGBSpectrum Kd;
+  std::shared_ptr<BxDF> lambertian{nullptr};
 };
 }
 #endif  // DAKKU_INCLUDE_DAKKU_MATERIALS_MATTE_H_

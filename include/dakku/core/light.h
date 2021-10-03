@@ -6,7 +6,8 @@
 #define DAKKU_INCLUDE_DAKKU_CORE_LIGHT_H_
 #include <dakku/core/dakku.h>
 #include <dakku/core/geometry.h>
-
+#include <dakku/core/interaction.h>
+#include <dakku/core/transform.h>
 namespace dakku {
 
 enum class LightFlags : int {
@@ -28,24 +29,31 @@ inline bool isDeltaLight(LightFlags flags) {
 class Light {
  public:
   virtual ~Light() = default;
-  explicit Light(LightFlags flags);
+  explicit Light(LightFlags flags, const Transform &lightToWorld);
+  virtual RGBSpectrum sampleLi(const Interaction &ref, const Point2f &u,
+                               Vector3f &wi, Float &pdf,
+                               VisibilityTester &vis) const = 0;
 
   const LightFlags flags;
+
+ protected:
+  const Transform lightToWorld, worldToLight;
 };
 
-// class VisibilityTester {
-//  public:
-//   VisibilityTester() = default;
-//   VisibilityTester(const Interaction &p0, const Interaction &p1)
-//       : p0(p0), p1(p1) {}
-//
-//  private:
-//   Interaction p0, p1;
-// };
+class VisibilityTester {
+ public:
+  VisibilityTester() = default;
+  VisibilityTester(const Interaction &p0, const Interaction &p1)
+      : p0(p0), p1(p1) {}
+  [[nodiscard]] bool unoccluded(const Scene &scene) const;
+
+ private:
+  Interaction p0, p1;
+};
 
 class AreaLight : public Light {
  public:
-  AreaLight();
+  explicit AreaLight(const Transform &lightToWorld);
   virtual RGBSpectrum emit(const Interaction &intr,
                            const Vector3f &w) const = 0;
 };

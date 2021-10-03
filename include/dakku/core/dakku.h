@@ -7,6 +7,7 @@
 #include <type_traits>
 #include <limits>
 #include <concepts>
+#include <numbers>
 
 namespace dakku {
 
@@ -17,7 +18,11 @@ using Float = float;
 #endif
 
 constexpr Float INF = std::numeric_limits<Float>::infinity();
-constexpr Float SHADOW_EPS = static_cast<Float>(1e-4);
+constexpr Float SHADOW_EPS = static_cast<Float>(1e-5);
+constexpr Float PI = std::numbers::pi_v<Float>;
+constexpr Float INV_PI = std::numbers::inv_pi_v<Float>;
+constexpr Float PI_OVER2 = PI / 2;
+constexpr Float PI_OVER4 = PI / 4;
 
 class Scene;
 class Integrator;

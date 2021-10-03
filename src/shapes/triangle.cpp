@@ -3,6 +3,9 @@
 //
 #include <dakku/shapes/triangle.h>
 #include <dakku/core/transform.h>
+#include <dakku/core/interaction.h>
+#include <dakku/core/geometry.h>
+#include <dakku/core/sampling.h>
 
 namespace dakku {
 
@@ -28,6 +31,32 @@ Triangle::Triangle(const std::shared_ptr<TriangleMesh> &mesh, int triNumber)
       mesh(mesh),
       v(mesh->indices.begin() + 3 * triNumber,
         mesh->indices.begin() + 3 * triNumber + 3) {}
+
+Float Triangle::area() const {
+  const Point3f &p0 = mesh->p[v[0]];
+  const Point3f &p1 = mesh->p[v[1]];
+  const Point3f &p2 = mesh->p[v[2]];
+  return cross(p1 - p0, p2 - p0).length() / 2;
+}
+
+Interaction Triangle::sample(const Interaction &ref, const Point2f &u,
+                             Float &pdf) const {
+  Point2f b = uniformSampleTriangle(u);
+  const Point3f &p0 = mesh->p[v[0]];
+  const Point3f &p1 = mesh->p[v[1]];
+  const Point3f &p2 = mesh->p[v[2]];
+  Interaction it;
+  it.p = p0 * b.x + p1 * b.y + p2 * (1 - b.x - b.y);
+  it.n = normalize(Normal3f{cross(p1 - p0, p2 - p0)});
+  if (!mesh->n.empty()) {
+    Normal3f ns(mesh->n[v[0]] * b.x + mesh->n[v[1]] * b.y +
+                mesh->n[v[2]] * (1 - b.x - b.y));
+    it.n = faceforward(it.n, ns);
+  }
+
+  pdf = 1 / area();
+  return it;
+}
 
 std::pair<std::shared_ptr<TriangleMesh>,
           std::shared_ptr<std::vector<std::shared_ptr<Shape>>>>

@@ -5,6 +5,9 @@
 #include <dakku/core/spectrum.h>
 #include <dakku/core/interaction.h>
 #include <dakku/core/scene.h>
+#include <dakku/core/reflection.h>
+#include <dakku/core/sampler.h>
+#include <dakku/core/geometry.h>
 
 namespace dakku {
 
@@ -41,6 +44,26 @@ RGBSpectrum PathIntegrator::radiance(const Ray &r, const Scene &scene,
     if (!foundInteraction || bounces >= maxDepth) break;
 
     isect.computeScatteringFunctions(ray);
+    if (!isect.bsdf) {
+      ray = isect.spawnRay(ray.d);
+      --bounces;
+      continue;
+    }
+
+    if (true) {
+      RGBSpectrum Ld = beta * uniformSampleOneLight(isect, scene, sampler);
+      L += Ld;
+    }
+
+    Vector3f wo = -ray.d, wi;
+    Float pdf;
+    RGBSpectrum f = isect.bsdf->sample(wo, wi, sampler.get2D(), pdf);
+    if (f.isBlack() || pdf == 0) break;
+    beta *= f * absDot(wi, isect.n) / pdf;
+
+    ray = isect.spawnRay(wi);
+
+    // TODO: Russian roulette
   }
   return L;
 }
