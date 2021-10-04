@@ -26,6 +26,7 @@ set(DAKKU_RENDER_SRC
 find_package(glm CONFIG REQUIRED)
 find_path(STB_INCLUDE_DIRS "stb.h")
 find_package(embree 3 CONFIG REQUIRED)
+find_package(TBB CONFIG REQUIRED)
 find_package(nlohmann_json CONFIG REQUIRED)
 
 add_library(dakku-render STATIC ${DAKKU_RENDER_SRC})
@@ -34,6 +35,7 @@ target_link_libraries(
         dakku-render PUBLIC
         glm::glm
         embree
+        TBB::tbb
 )
 target_link_libraries(dakku-render PRIVATE
         nlohmann_json
