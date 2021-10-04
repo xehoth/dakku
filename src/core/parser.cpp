@@ -173,7 +173,7 @@ decltype(auto) createPrimsFromMesh(std::vector<std::shared_ptr<Shape>> &shapes,
   std::shared_ptr<std::vector<std::shared_ptr<Primitive>>> prims =
       std::make_shared<std::vector<std::shared_ptr<Primitive>>>();
   for (auto &p : shapes) {
-    prims->push_back(std::make_shared<GeometricPrimitive>(p, mat));
+    prims->push_back(std::make_shared<GeometricPrimitive>(p, mat, nullptr));
   }
   return prims;
 }
@@ -218,8 +218,7 @@ void parseCamera(const Json &json, RenderOptions &renderOptions) {
 }
 
 void parsePrimitives(const Json &json, RenderOptions &renderOptions) {
-  auto prims =
-      std::make_shared<std::vector<EmbreeAccel::TrianglePrimitivePair>>();
+  auto prims = std::make_shared<std::vector<std::shared_ptr<TrianglePrimitives>>>();
   auto primitives = json["primitives"];
   auto parseRawMeshShape = [&](auto &primitive) {
     auto data = primitive["data"];
@@ -257,9 +256,8 @@ void parsePrimitives(const Json &json, RenderOptions &renderOptions) {
     std::string matName = primitive["material"];
     if (type == "raw_mesh") {
       auto shapes = parseRawMeshShape(primitive);
-      auto triPrim =
-          createPrimsFromMesh(*shapes.second, renderOptions.materials[matName]);
-      prims->emplace_back(shapes.first, triPrim);
+      auto triPrim = createTrianglePrimitives(shapes, renderOptions.materials[matName], nullptr);
+      prims->push_back(triPrim);
     }
   }
 
@@ -275,18 +273,18 @@ void parsePrimitives(const Json &json, RenderOptions &renderOptions) {
     std::string shapeType = light["shape"]["type"];
     if (shapeType == "raw_mesh") {
       auto shapes = parseRawMeshShape(light["shape"]);
-      std::shared_ptr<std::vector<std::shared_ptr<Primitive>>> triPrim =
-          std::make_shared<std::vector<std::shared_ptr<Primitive>>>();
-      for (auto &sh : *shapes.second) {
+      auto triPrim = std::make_shared<TrianglePrimitives>();
+      triPrim->mesh = shapes->mesh;
+      for (auto &sh : shapes->shapes) {
         std::shared_ptr<AreaLight> l{nullptr};
         if (type == "diffuse") {
           l = std::make_shared<DiffuseAreaLight>(Transform{}, power, sh);
         }
         renderOptions.lights.push_back(l);
-        triPrim->push_back(std::make_shared<GeometricPrimitive>(
+        triPrim->primitives.push_back(std::make_shared<GeometricPrimitive>(
             sh, renderOptions.materials[matName], l));
       }
-      prims->emplace_back(shapes.first, triPrim);
+      prims->push_back(triPrim);
     }
   }
   std::shared_ptr<Primitive> aggregate = std::make_shared<EmbreeAccel>(prims);

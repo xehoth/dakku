@@ -20,6 +20,7 @@ struct RenderOptions {
   std::shared_ptr<Camera> camera{nullptr};
   std::map<std::string, std::shared_ptr<Material>> materials;
   std::vector<std::shared_ptr<Light>> lights;
+  std::vector<std::shared_ptr<Primitive>> primitives;
 };
 
 class SceneParser {

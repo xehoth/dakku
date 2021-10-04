@@ -36,10 +36,15 @@ class Triangle : public Shape {
   std::span<const int, 3> v;
 };
 
-std::pair<std::shared_ptr<TriangleMesh>,
-          std::shared_ptr<std::vector<std::shared_ptr<Shape>>>>
-createTriangleMesh(const Transform &o2w, const std::vector<int> &indices,
-                   int nVertices, std::span<Point3f> pos,
-                   std::span<Normal3f> normal, std::span<Point2f> texCoord);
+class TriangleMeshShapes {
+ public:
+  std::shared_ptr<TriangleMesh> mesh{nullptr};
+  std::vector<std::shared_ptr<Shape>> shapes;
+};
+
+std::shared_ptr<TriangleMeshShapes> createTriangleMesh(
+    const Transform &o2w, const std::vector<int> &indices, int nVertices,
+    std::span<Point3f> pos, std::span<Normal3f> normal,
+    std::span<Point2f> texCoord);
 }  // namespace dakku
 #endif  // DAKKU_INCLUDE_DAKKU_SHAPES_TRIANGLE_H_

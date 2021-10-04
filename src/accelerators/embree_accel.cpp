@@ -7,7 +7,8 @@
 
 namespace dakku {
 
-EmbreeAccel::EmbreeAccel(std::shared_ptr<std::vector<TrianglePrimitivePair>> p)
+EmbreeAccel::EmbreeAccel(
+    std::shared_ptr<std::vector<std::shared_ptr<TrianglePrimitives>>> p)
     : p(p) {
   if (!this->rtcDevice) {
     this->rtcDevice = rtcNewDevice(nullptr);
@@ -19,7 +20,8 @@ EmbreeAccel::EmbreeAccel(std::shared_ptr<std::vector<TrianglePrimitivePair>> p)
   }
   if (p) {
     int idx = 0;
-    for (const auto &[mesh, prims] : *p) {
+    for (const auto &triPrim : *p) {
+      const auto &[mesh, prims] = *triPrim;
       auto geom = rtcNewGeometry(this->rtcDevice, RTC_GEOMETRY_TYPE_TRIANGLE);
       rtcSetSharedGeometryBuffer(geom, RTC_BUFFER_TYPE_VERTEX, 0,
                                  RTC_FORMAT_FLOAT3, mesh->p.data(), 0,
@@ -63,17 +65,17 @@ bool EmbreeAccel::intersect(const Ray &r, SurfaceInteraction &isect) const {
       rayHit.hit.primID == RTC_INVALID_GEOMETRY_ID)
     return false;
 
-  const auto &[mesh, prims] = (*this->p)[rayHit.hit.geomID];
+  const auto &[mesh, prims] = *((*this->p)[rayHit.hit.geomID]);
   Point3f pHit = r(rayHit.ray.tfar);
   Float u = rayHit.hit.u;
   Float v = rayHit.hit.v;
   Float w = 1 - u - v;
   int idx = rayHit.hit.primID * 3;
   Normal3f hitN = normalize(mesh->n[mesh->indices[idx + 0]] * w +
-                      mesh->n[mesh->indices[idx + 1]] * u +
-                      mesh->n[mesh->indices[idx + 2]] * v);
+                            mesh->n[mesh->indices[idx + 1]] * u +
+                            mesh->n[mesh->indices[idx + 2]] * v);
   isect = SurfaceInteraction(pHit, hitN, -r.d);
-  isect.primitive = (*prims)[rayHit.hit.primID];
+  isect.primitive = prims[rayHit.hit.primID];
   r.tMax = rayHit.ray.tfar;
 
   return true;
@@ -96,5 +98,22 @@ bool EmbreeAccel::occluded(const Ray &r) const {
   rtcInitIntersectContext(&context);
   rtcOccluded1(this->rtcScene, &context, &rtcRay);
   return rtcRay.tfar < 0;
+}
+
+TrianglePrimitives::TrianglePrimitives(
+    std::shared_ptr<TriangleMeshShapes> shapes,
+    std::shared_ptr<Material> material, std::shared_ptr<AreaLight> areaLight)
+    : mesh(shapes->mesh) {
+  this->primitives.reserve(shapes->shapes.size());
+  for (auto &sh : shapes->shapes) {
+    this->primitives.push_back(
+        std::make_shared<GeometricPrimitive>(sh, material, areaLight));
+  }
+}
+
+std::shared_ptr<TrianglePrimitives> createTrianglePrimitives(
+    std::shared_ptr<TriangleMeshShapes> shapes,
+    std::shared_ptr<Material> material, std::shared_ptr<AreaLight> areaLight) {
+  return std::make_shared<TrianglePrimitives>(shapes, material, areaLight);
 }
 }  // namespace dakku

@@ -25,7 +25,7 @@ class GeometricPrimitive : public Primitive {
  public:
   explicit GeometricPrimitive(const std::shared_ptr<Shape> &shape,
                               std::shared_ptr<Material> material,
-                              std::shared_ptr<AreaLight> areaLight = nullptr);
+                              std::shared_ptr<AreaLight> areaLight);
   bool intersect(const Ray &r, SurfaceInteraction &isect) const override;
   [[nodiscard]] bool occluded(const Ray &r) const override;
   void computeScatteringFunctions(SurfaceInteraction &isect) const override;
