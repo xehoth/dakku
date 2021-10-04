@@ -1,0 +1,63 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  build:
+    name: ${{ matrix.os }}-build
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest]
+        include:
+          - os: windows-latest
+            triplet: x64-windows
+    env:
+      buildDir: '${{ github.workspace }}/build/'
+      buildType: Release
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      
+      - name: Get latest CMake
+        uses: lukka/get-cmake@latest
+        
+      - name: dir
+        run: find $RUNNER_TEMP
+        shell: bash
+      - name: dir
+        run: find $RUNNER_WORKSPACE
+        shell: bash
+      - name: Restore artifacts, or setup vcpkg (do not install any package)
+        uses: lukka/run-vcpkg@main
+        id: runvcpkg
+        with:
+          setupOnly: true
+          vcpkgDirectory: '${{ github.workspace }}/vcpkg'
+          # Ensure the cache key changes any time the content of the manifest file changes.
+          appendedCacheKey: ${{ hashFiles( '**/vcpkg_manifest/vcpkg.json' ) }}
+          # Ensure the vcpkg artifacts are cached, they are generated in the 'CMAKE_BINARY_DIR/vcpkg_installed'.
+          additionalCachedPaths: ${{ env.buildDir }}/vcpkg_installed
+          vcpkgTriplet: ${{ matrix.triplet }}
+        
+      - name: Prints output of run-vcpkg's action
+        run: echo "root='${{ steps.runvcpkg.outputs.RUNVCPKG_VCPKG_ROOT_OUT }}', triplet='${{ steps.runvcpkg.outputs.RUNVCPKG_VCPKG_TRIPLET_OUT }}'"
+        
+      - name: Run CMake with vcpkg.json manifest
+        uses: lukka/run-cmake@main
+        with:
+          cmakeListsOrSettingsJson: CMakeListsTxtAdvanced
+          cmakeListsTxtPath: '${{ github.workspace }}/CMakeLists.txt'
+          useVcpkgToolchainFile: true
+          buildDirectory: ${{ env.buildDir }}
+          cmakeAppendedArgs: '-DVCPKG_TARGET_TRIPLET=${{ matrix.triplet }} -DCMAKE_BUILD_TYPE=${{ env.buildType }}'
+          buildWithCMake: true
