@@ -12,7 +12,7 @@ The project structure is similar to [pbrt-v3](https://github.com/mmp/pbrt-v3) bu
 
 ## Build
 
-We recommend you to use [vcpkg] to install prerequisite libraries.  
+We recommend you to use [vcpkg](https://github.com/microsoft/vcpkg) to install prerequisite libraries.  
 We use vcpkg [manifest mode](https://github.com/microsoft/vcpkg/blob/master/docs/specifications/manifests.md) for dependency management.  
 You can take a look at [vcpkg.json](vcpkg.json) if you want to install dependency on your own without vcpkg.
 
@@ -20,6 +20,7 @@ Then use [CMake](https://cmake.org/) to build the project.
 
 ## Scenes
 
+[Cornell Box](scenes/cornell_box/cornell_box.json)
 ![Cornell Box](scenes/cornell_box/cornell_box.png)
 
 ## Finished features
