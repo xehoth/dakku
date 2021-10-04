@@ -24,6 +24,7 @@ jobs:
     env:
       buildDir: '${{ github.workspace }}/build/'
       buildType: Release
+      vcpkgCommitId: '2a31089e777fc187f1cc05338250b8e1810cfb52'
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -43,6 +44,7 @@ jobs:
         with:
           setupOnly: true
           vcpkgDirectory: '${{ github.workspace }}/vcpkg'
+          vcpkgGitCommitId: '${{ env.vcpkgCommitId }}'
           # Ensure the cache key changes any time the content of the manifest file changes.
           appendedCacheKey: ${{ hashFiles( '**/vcpkg_manifest/vcpkg.json' ) }}
           # Ensure the vcpkg artifacts are cached, they are generated in the 'CMAKE_BINARY_DIR/vcpkg_installed'.
