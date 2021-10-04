@@ -15,6 +15,7 @@
 #include <dakku/lights/diffuse.h>
 #include <dakku/samplers/random.h>
 #include <dakku/integrators/path.h>
+#include <dakku/textures/constant.h>
 #include <nlohmann/json.hpp>
 #include <fstream>
 #include <iostream>
@@ -186,7 +187,8 @@ void parseMaterials(const Json &json, RenderOptions &renderOptions) {
       Kd.x = mat["Kd"][0];
       Kd.y = mat["Kd"][1];
       Kd.z = mat["Kd"][2];
-      renderOptions.materials[name] = std::make_shared<MatteMaterial>(Kd);
+      auto tex = std::make_shared<ConstantTexture<RGBSpectrum>>(Kd);
+      renderOptions.materials[name] = std::make_shared<MatteMaterial>(tex);
     }
   }
 }

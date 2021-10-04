@@ -12,11 +12,11 @@
 namespace dakku {
 class MatteMaterial : public Material {
  public:
-  MatteMaterial(const RGBSpectrum &Kd);
+  MatteMaterial(const std::shared_ptr<Texture<RGBSpectrum>> &Kd);
   void computeScatteringFunctions(SurfaceInteraction &si) const override;
 
  private:
-  RGBSpectrum Kd;
+  std::shared_ptr<Texture<RGBSpectrum>> Kd{nullptr};
   std::shared_ptr<BxDF> lambertian{nullptr};
 };
 }

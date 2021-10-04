@@ -15,13 +15,15 @@ set(DAKKU_RENDER_SRC
         core/material.cpp
         core/reflection.cpp
         core/sampling.cpp
+        core/texture.cpp
         cameras/perspective.cpp
         shapes/triangle.cpp
         accelerators/embree_accel.cpp
         samplers/random.cpp
         materials/matte.cpp
         integrators/path.cpp
-        lights/diffuse.cpp)
+        lights/diffuse.cpp
+        textures/constant.cpp)
 
 find_package(glm CONFIG REQUIRED)
 find_path(STB_INCLUDE_DIRS "stb.h")
