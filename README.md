@@ -1,5 +1,7 @@
 # The Dakku Renderer
 
+[![CI](https://github.com/xehoth/dakku/actions/workflows/build.yml/badge.svg)](https://github.com/xehoth/dakku/actions/workflows/build.yml)
+
 ## About
 
 **Dakku** is a **physically based** renderer for the purpose of learning global illumination and ray tracing.   
@@ -10,17 +12,15 @@ The project structure is similar to [pbrt-v3](https://github.com/mmp/pbrt-v3) bu
 
 ## Build
 
-We recommend you to use [vcpkg] to install prerequisite libraries.
-
-```commandline
-vcpkg install gtest
-vcpkg install embree3
-vcpkg install glm
-vcpkg install nlohmann-json
-vcpkg install stb
-```
+We recommend you to use [vcpkg] to install prerequisite libraries.  
+We use vcpkg [manifest mode](https://github.com/microsoft/vcpkg/blob/master/docs/specifications/manifests.md) for dependency management.  
+You can take a look at [vcpkg.json](vcpkg.json) if you want to install dependency on your own without vcpkg.
 
 Then use [CMake](https://cmake.org/) to build the project.
+
+## Scenes
+
+![Cornell Box](scenes/cornell_box/cornell_box.png)
 
 ## Finished features
 
