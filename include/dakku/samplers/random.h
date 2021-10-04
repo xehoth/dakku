@@ -11,6 +11,7 @@ namespace dakku {
 
 class RandomSampler : public Sampler {
  public:
+  explicit RandomSampler(std::uint32_t spp);
   Float get1D() override;
   Point2f get2D() override;
  private:

@@ -11,4 +11,6 @@ Float RandomSampler::get1D() {
 }
 
 Point2f RandomSampler::get2D() { return Point2f{get1D(), get1D()}; }
+
+RandomSampler::RandomSampler(std::uint32_t spp) : Sampler(spp) {}
 }  // namespace dakku

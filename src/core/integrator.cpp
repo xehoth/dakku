@@ -20,10 +20,11 @@ void SamplerIntegrator::preprocess(const Scene &scene, Sampler &sampler) {}
 void SamplerIntegrator::render(const Scene &scene) {
   preprocess(scene, *sampler);
   const Point2i resolution = this->camera->film->fullResolution;
-  constexpr int sqrtSpp = 8;
-  constexpr int spp = sqrtSpp * sqrtSpp;
-  constexpr Float invSqrtSpp = 1 / static_cast<Float>(sqrtSpp);
-  constexpr Float invSpp = 1 / static_cast<Float>(spp);
+  const int spp = sampler->samplesPerPixel;
+  const int sqrtSpp = static_cast<int>(std::sqrt(spp));
+  const int remainSpp = spp - sqrtSpp * sqrtSpp;
+  const Float invSqrtSpp = 1 / static_cast<Float>(sqrtSpp);
+  const Float invSpp = 1 / static_cast<Float>(spp);
   const Float totalSteps = static_cast<Float>(resolution.x);
   Float progress = 0;
 //#pragma omp parallel for collapse(2) schedule(dynamic)
@@ -35,8 +36,6 @@ void SamplerIntegrator::render(const Scene &scene) {
       for (int sx = 0; sx < sqrtSpp; ++sx) {
         for (int sy = 0; sy < sqrtSpp; ++sy) {
           Point2f uv = sampler->get2D();
-          //          CameraSample cameraSample =
-          //          sampler->getCameraSample(Point2i{x, y});
           CameraSample cameraSample;
           cameraSample.pFilm =
               Point2f{static_cast<Float>(x) +
@@ -47,6 +46,12 @@ void SamplerIntegrator::render(const Scene &scene) {
           camera->generateRay(cameraSample, ray);
           res += radiance(ray, scene, *sampler);
         }
+      }
+      for (int i = 0; i < remainSpp; ++i) {
+        CameraSample cameraSample = sampler->getCameraSample(Point2i{x, y});
+        Ray ray;
+        camera->generateRay(cameraSample, ray);
+        res += radiance(ray, scene, *sampler);
       }
       camera->film->getPixel(Point2i{x, y}) = res * invSpp;
     }

@@ -13,10 +13,12 @@ namespace dakku {
 class Sampler {
  public:
   virtual ~Sampler() = default;
-  Sampler();
+  explicit Sampler(std::uint32_t samplesPerPixel);
   virtual Float get1D() = 0;
   virtual Point2f get2D() = 0;
   CameraSample getCameraSample(const Point2i &pRaster);
+
+  const std::uint32_t samplesPerPixel;
 };
 }
 #endif  // DAKKU_INCLUDE_DAKKU_CORE_SAMPLER_H_

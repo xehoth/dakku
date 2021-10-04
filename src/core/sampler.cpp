@@ -5,7 +5,7 @@
 #include <dakku/core/camera.h>
 namespace dakku {
 
-Sampler::Sampler() {}
+Sampler::Sampler(std::uint32_t samplesPerPixel) : samplesPerPixel(samplesPerPixel) {}
 
 CameraSample Sampler::getCameraSample(const Point2i &pRaster) {
   CameraSample ret;

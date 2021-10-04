@@ -137,5 +137,15 @@
       },
       "material": "Light"
     }
-  ]
+  ],
+  "sampler": {
+    "type": "random",
+    "spp": 16
+  },
+  "integrator": {
+    "type": "path",
+    "data": {
+      "depth": 65
+    }
+  }
 }

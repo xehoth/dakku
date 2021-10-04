@@ -17,10 +17,11 @@ using namespace dakku;
 
 int main(int argc, const char *argv[]) {
   DakkuSceneParser parser;
-  parser.parse("../../../scenes/cornell_box.json");
-  auto sampler = std::make_shared<RandomSampler>();
-  auto integrator = std::make_shared<PathIntegrator>(65, parser.camera, sampler);
-  integrator->render(*parser.scene);
+  parser.parse("../../../scenes/cornell_box/cornell_box.json");
+  parser.renderOptions.integrator->render(*parser.renderOptions.scene);
+//  auto sampler = std::make_shared<RandomSampler>();
+//  auto integrator = std::make_shared<PathIntegrator>(65, parser.camera, sampler);
+//  integrator->render(*parser.scene);
 //  for (int i = 0; i < 1024; ++i) {
 //    for (int j = 0; j < 1024; ++j) {
 //      Ray ray;
@@ -44,6 +45,6 @@ int main(int argc, const char *argv[]) {
 //      //      //          RGBSpectrum(i / 1920., j / 1080., 0.3);
 //    }
 //  }
-  parser.film->write("test.png");
+  parser.renderOptions.film->write("test.png");
   return 0;
 }
