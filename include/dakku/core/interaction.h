@@ -29,6 +29,7 @@ class SurfaceInteraction : public Interaction {
   SurfaceInteraction(const Point3f &p, const Normal3f &n, const Vector3f &wo);
   [[nodiscard]] RGBSpectrum emit(const Vector3f &w) const;
   std::shared_ptr<const Primitive> primitive{nullptr};
+  Point2f uv;
   BSDF bsdf;
 
   void computeScatteringFunctions(const Ray &ray);
