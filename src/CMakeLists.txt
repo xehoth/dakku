@@ -23,7 +23,8 @@ set(DAKKU_RENDER_SRC
         materials/matte.cpp
         integrators/path.cpp
         lights/diffuse.cpp
-        textures/constant.cpp)
+        textures/constant.cpp
+        textures/imagemap.cpp)
 
 find_package(glm CONFIG REQUIRED)
 find_path(STB_INCLUDE_DIRS "stb.h")
