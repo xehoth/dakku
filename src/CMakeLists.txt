@@ -16,6 +16,7 @@ set(DAKKU_RENDER_SRC
         core/reflection.cpp
         core/sampling.cpp
         core/texture.cpp
+        core/image.cpp
         cameras/perspective.cpp
         shapes/triangle.cpp
         accelerators/embree_accel.cpp
