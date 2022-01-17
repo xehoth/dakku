@@ -152,5 +152,72 @@ using Bounds2i = Bounds2<int>;
 using Bounds3f = Bounds3<float>;
 using Bounds3i = Bounds3<int>;
 
+template <ArithmeticType T>
+inline Bounds3<T> union_bounds(const Bounds3<T> &a, const Point3<T> &p) {
+  Bounds3<T> ret;
+  ret.p_min = min(a.p_min, p);
+  ret.p_max = max(a.p_max, p);
+  return ret;
+}
+
+template <ArithmeticType T>
+inline Bounds3<T> union_bounds(const Bounds3<T> &a, const Bounds3<T> &b) {
+  Bounds3<T> ret;
+  ret.p_min = min(a.p_min, b.p_min);
+  ret.p_max = max(a.p_max, b.p_max);
+  return ret;
+}
+
+template <ArithmeticType T>
+inline Bounds3<T> intersect(const Bounds3<T> &a, const Bounds3<T> &b) {
+  Bounds3<T> ret;
+  ret.p_min = max(a.p_min, b.p_min);
+  ret.p_max = min(a.p_max, b.p_max);
+  return ret;
+}
+
+template <ArithmeticType T>
+inline bool overlaps(const Bounds3<T> &a, const Bounds3<T> &b) {
+  bool x = (a.p_max.x() >= b.p_min.x()) && (a.p_min.x() <= b.p_max.x());
+  bool y = (a.p_max.y() >= b.p_min.y()) && (a.p_min.y() <= b.p_max.y());
+  bool z = (a.p_max.z() >= b.p_min.z()) && (a.p_min.z() <= b.p_max.z());
+  return (x && y && z);
+}
+
+template <ArithmeticType T>
+inline bool inside(const Point3<T> &p, const Bounds3<T> &b) {
+  return (p.x() >= b.p_min.x() && p.x() <= b.p_max.x() &&
+          p.y() >= b.p_min.y() && p.y() <= b.p_max.y() &&
+          p.z() >= b.p_min.z() && p.z() <= b.p_max.z());
+}
+
+template <ArithmeticType T>
+inline bool inside_exclusive(const Point3<T> &p, const Bounds3<T> &b) {
+  return (p.x() >= b.p_min.x() && p.x() < b.p_max.x() && p.y() >= b.p_min.y() &&
+          p.y() < b.p_max.y() && p.z() >= b.p_min.z() && p.z() < b.p_max.z());
+}
+
+template <ArithmeticType T, ArithmeticType U>
+requires std::is_same_v<T, std::common_type_t<T, U>>
+inline Bounds3<T> expand(const Bounds3<T> &b, U delta) {
+  return Bounds3<T>(b.p_min - Vector3<T>(delta, delta, delta),
+                    b.p_max + Vector3<T>(delta, delta, delta));
+}
+
+// min squared distance from point to box; returns zero if point is inside.
+template <ArithmeticType T, ArithmeticType U>
+inline float distance_squared(const Point3<T> &p, const Bounds3<U> &b) {
+  float dx = std::max<float>(0.0f, b.p_min.x() - p.x(), p.x() - b.p_max.x());
+  float dy = std::max<float>(0.0f, b.p_min.y() - p.y(), p.y() - b.p_max.y());
+  float dz = std::max<float>(0.0f, b.p_min.z() - p.z(), p.z() - b.p_max.z());
+  return dx * dx + dy * dy + dz * dz;
+}
+
+template <ArithmeticType T, ArithmeticType U>
+inline float distance(const Point3<T> &p, const Bounds3<U> &b) {
+  return std::sqrt(distance_squared(p, b));
+}
+
+
 
 }  // namespace dakku::core
