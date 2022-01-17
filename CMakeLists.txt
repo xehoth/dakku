@@ -1,12 +1,17 @@
 cmake_minimum_required(VERSION 3.21)
-project(dakku DESCRIPTION "dakku renderer" LANGUAGES CXX)
+project(dakku LANGUAGES CXX)
 
-option(DAKKU_BUILD_TESTS "build tests" on)
+list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
 
-include_directories(include)
+include(CPM)
+
+if (USE_SANITIZER OR USE_STATIC_ANALYZER)
+  CPMAddPackage("gh:StableCoder/cmake-scripts#1f822d1fc87c8d7720c074cde8a278b44963c354")
+
+  if (USE_SANITIZER)
+    include(${cmake-scripts_SOURCE_DIR}/sanitizers.cmake)
+  endif()
+endif()
 
 add_subdirectory(src)
-
-if (DAKKU_BUILD_TESTS)
-  add_subdirectory(tests)
-endif ()
+add_subdirectory(tests)
