@@ -218,6 +218,56 @@ inline float distance(const Point3<T> &p, const Bounds3<U> &b) {
   return std::sqrt(distance_squared(p, b));
 }
 
+template <ArithmeticType T>
+inline Bounds2<T> union_bounds(const Bounds2<T> &b, const Point2<T> &p) {
+  Bounds2<T> ret;
+  ret.p_min = min(b.p_min, p);
+  ret.p_max = max(b.p_max, p);
+  return ret;
+}
+
+template <ArithmeticType T>
+inline Bounds2<T> union_bounds(const Bounds2<T> &a, const Bounds2<T> &b) {
+  Bounds2<T> ret;
+  ret.p_min = min(a.p_min, b.p_min);
+  ret.p_max = max(a.p_max, b.p_max);
+  return ret;
+}
+
+template <ArithmeticType T>
+inline Bounds2<T> intersect(const Bounds2<T> &a, const Bounds2<T> &b) {
+  Bounds2<T> ret;
+  ret.p_min = max(a.p_min, b.p_min);
+  ret.p_max = min(a.p_max, b.p_max);
+  return ret;
+}
+
+template <ArithmeticType T>
+inline bool overlaps(const Bounds2<T> &ba, const Bounds2<T> &bb) {
+  bool x = (ba.p_max.x() >= bb.p_min.x()) && (ba.p_min.x() <= bb.p_max.x());
+  bool y = (ba.p_max.y() >= bb.p_min.y()) && (ba.p_min.y() <= bb.p_max.y());
+  return (x && y);
+}
+
+template <ArithmeticType T>
+inline bool inside(const Point2<T> &pt, const Bounds2<T> &b) {
+  return (pt.x() >= b.p_min.x() && pt.x() <= b.p_max.x() &&
+          pt.y() >= b.p_min.y() && pt.y() <= b.p_max.y());
+}
+
+template <ArithmeticType T>
+inline bool inside_exclusive(const Point2<T> &pt, const Bounds2<T> &b) {
+  return (pt.x() >= b.p_min.x() && pt.x() < b.p_max.x() &&
+          pt.y() >= b.p_min.y() && pt.y() < b.p_max.y());
+}
+
+template <ArithmeticType T, ArithmeticType U>
+requires std::is_same_v<T, std::common_type_t<T, U>>
+inline Bounds2<T> expand(const Bounds2<T> &b, U delta) {
+  return Bounds2<T>(b.p_min - Vector2<T>(delta, delta),
+                    b.p_max + Vector2<T>(delta, delta));
+}
+
 
 
 }  // namespace dakku::core
