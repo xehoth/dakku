@@ -1,13 +1,9 @@
 #pragma once
 #include <spdlog/spdlog.h>
 
-namespace dakku::log {
-
-void init(std::string_view filename = {});
-
-}  // namespace dakku::log
-
 namespace dakku {
+
+void init_logger(std::string_view filename = {});
 
 #define LOG_ERROR SPDLOG_ERROR
 #define LOG_INFO SPDLOG_INFO

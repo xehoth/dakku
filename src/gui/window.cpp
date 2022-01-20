@@ -1,11 +1,11 @@
 #include <gui/window.h>
 #include <logger/logger.h>
 
-namespace dakku::gui {
+namespace dakku {
 
 Window::Window(int width, int height, std::string_view title) {
   LOG_INFO("Create window of ({} x {})", width, height);
-  DAKKU_CHECK(glfwInit() == GLFW_TRUE, "Failed to init glfw");
+  DAKKU_CHECK(glfwInit() == GLFW_TRUE, "Failed to init_logger glfw");
   glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
   glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 #ifdef __APPLE__
@@ -20,7 +20,7 @@ Window::Window(int width, int height, std::string_view title) {
   DAKKU_CHECK(window != nullptr, "Failed to create window");
   glfwMakeContextCurrent(window);
   glfwSwapInterval(1);
-  DAKKU_CHECK(glewInit() == GLEW_OK, "Failed to init glew");
+  DAKKU_CHECK(glewInit() == GLEW_OK, "Failed to init_logger glew");
 }
 
 Window::~Window() { glfwTerminate(); }

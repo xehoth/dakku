@@ -5,7 +5,7 @@
 #include <string_view>
 #include <span>
 
-namespace dakku::gui {
+namespace dakku {
 
 class Window {
  public:

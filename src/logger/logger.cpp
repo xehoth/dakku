@@ -3,9 +3,9 @@
 #include <spdlog/sinks/basic_file_sink.h>
 #include <spdlog/sinks/stdout_color_sinks.h>
 
-namespace dakku::log {
+namespace dakku {
 
-void init(std::string_view filename) {
+void init_logger(std::string_view filename) {
   spdlog::cfg::load_env_levels();
   if (!filename.empty()) {
     spdlog::set_default_logger(
@@ -14,4 +14,4 @@ void init(std::string_view filename) {
     spdlog::set_default_logger(spdlog::stdout_color_mt("dakku"));
   }
 }
-}  // namespace dakku::log
+}  // namespace dakku
