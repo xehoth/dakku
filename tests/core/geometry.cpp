@@ -28,104 +28,109 @@ TEST(core, Vector) {
   vec2f = vec2f + vec2f;
   EXPECT_EQ(vec2f.x(), 1.0f);
   EXPECT_EQ(vec2f.y(), -1.0f);
-//  vec2f += vec2f;
-//  EXPECT_EQ(vec2f.x(), 2.0f);
-//  EXPECT_EQ(vec2f.y(), -2.0f);
-//  {
-//    auto a = Vector2f(1, -3);
-//    auto b = Vector2f(-2, 3);
-//    auto c = a - b;
-//    EXPECT_EQ(c.x(), 3.0f);
-//    EXPECT_EQ(c.y(), -6.0f);
-//    c = a;
-//    c -= b;
-//    EXPECT_EQ(c.x(), 3.0f);
-//    EXPECT_EQ(c.y(), -6.0f);
-//    c = a * 2;
-//    EXPECT_EQ(c.x(), 2.0f);
-//    EXPECT_EQ(c.y(), -6.0f);
-//    c = a;
-//    c *= 2;
-//    EXPECT_EQ(c.x(), 2.0f);
-//    EXPECT_EQ(c.y(), -6.0f);
-//    c = a / 2;
-//    EXPECT_EQ(c.x(), 0.5f);
-//    EXPECT_EQ(c.y(), -1.5f);
-//    c = a;
-//    c /= 2;
-//    EXPECT_EQ(c.x(), 0.5f);
-//    EXPECT_EQ(c.y(), -1.5f);
-//    c = -a;
-//    EXPECT_EQ(c.x(), -1.0f);
-//    EXPECT_EQ(c.y(), 3.0f);
-//  }
-//  {
-//    auto a = Vector3f(2, -1, 3);
-//    auto b = Vector3f(-3, 2, 4);
-//    auto c = a + b;
-//    EXPECT_EQ(c.x(), -1.0f);
-//    EXPECT_EQ(c.y(), 1.0f);
-//    EXPECT_EQ(c.z(), 7.0f);
-//    c = a;
-//    c += b;
-//    EXPECT_EQ(c.x(), -1.0f);
-//    EXPECT_EQ(c.y(), 1.0f);
-//    EXPECT_EQ(c.z(), 7.0f);
-//    c = a - b;
-//    EXPECT_EQ(c.x(), 5.0f);
-//    EXPECT_EQ(c.y(), -3.0f);
-//    EXPECT_EQ(c.z(), -1.0f);
-//    c = a;
-//    c -= b;
-//    EXPECT_EQ(c.x(), 5.0f);
-//    EXPECT_EQ(c.y(), -3.0f);
-//    EXPECT_EQ(c.z(), -1.0f);
-//    c = -a;
-//    EXPECT_EQ(c.x(), -2.0f);
-//    EXPECT_EQ(c.y(), 1.0f);
-//    EXPECT_EQ(c.z(), -3.0f);
-//  }
-//  {
-//    auto a = Vector2f(Point2f(1.5, -2.5));
-//    EXPECT_EQ(a.x(), 1.5f);
-//    EXPECT_EQ(a.y(), -2.5f);
-//  }
+  vec2f += vec2f;
+  EXPECT_EQ(vec2f.x(), 2.0f);
+  EXPECT_EQ(vec2f.y(), -2.0f);
+  {
+    auto a = Vector2f(1, -3);
+    auto b = Vector2f(-2, 3);
+    auto c = a - b;
+    EXPECT_EQ(c.x(), 3.0f);
+    EXPECT_EQ(c.y(), -6.0f);
+    c = a;
+    c -= b;
+    EXPECT_EQ(c.x(), 3.0f);
+    EXPECT_EQ(c.y(), -6.0f);
+    c = a * 2;
+    EXPECT_EQ(c.x(), 2.0f);
+    EXPECT_EQ(c.y(), -6.0f);
+    c = 2 * a;
+    EXPECT_EQ(c.x(), 2.0f);
+    EXPECT_EQ(c.y(), -6.0f);
+    c = a;
+    c *= 2;
+    EXPECT_EQ(c.x(), 2.0f);
+    EXPECT_EQ(c.y(), -6.0f);
+    c = a / 2;
+    EXPECT_EQ(c.x(), 0.5f);
+    EXPECT_EQ(c.y(), -1.5f);
+    c = a;
+    c /= 2;
+    EXPECT_EQ(c.x(), 0.5f);
+    EXPECT_EQ(c.y(), -1.5f);
+    c = -a;
+    EXPECT_EQ(c.x(), -1.0f);
+    EXPECT_EQ(c.y(), 3.0f);
+  }
+  {
+    auto a = Vector3f(2, -1, 3);
+    auto b = Vector3f(-3, 2, 4);
+    auto c = a + b;
+    EXPECT_EQ(c.x(), -1.0f);
+    EXPECT_EQ(c.y(), 1.0f);
+    EXPECT_EQ(c.z(), 7.0f);
+    c = a;
+    c += b;
+    EXPECT_EQ(c.x(), -1.0f);
+    EXPECT_EQ(c.y(), 1.0f);
+    EXPECT_EQ(c.z(), 7.0f);
+    c = a - b;
+    EXPECT_EQ(c.x(), 5.0f);
+    EXPECT_EQ(c.y(), -3.0f);
+    EXPECT_EQ(c.z(), -1.0f);
+    c = a;
+    c -= b;
+    EXPECT_EQ(c.x(), 5.0f);
+    EXPECT_EQ(c.y(), -3.0f);
+    EXPECT_EQ(c.z(), -1.0f);
+    c = -a;
+    EXPECT_EQ(c.x(), -2.0f);
+    EXPECT_EQ(c.y(), 1.0f);
+    EXPECT_EQ(c.z(), -3.0f);
+  }
+  {
+    auto a = Vector2f(Point2f(1.5, -2.5));
+    EXPECT_EQ(a.x(), 1.5f);
+    EXPECT_EQ(a.y(), -2.5f);
+  }
 }
 
  TEST(core, Point) {
-//   {
-//     Point2f p2f;
-//     EXPECT_EQ(p2f.x(), 0);
-//     EXPECT_EQ(p2f.y(), 0);
-//     p2f = Point2f(-1, 2);
-//     EXPECT_EQ(p2f.x(), -1);
-//     EXPECT_EQ(p2f.y(), 2);
-//     p2f = Point2f(Vector2i(3, -4));
-//     EXPECT_EQ(p2f.x(), 3.0f);
-//     EXPECT_EQ(p2f.y(), -4.0f);
-//     auto b = Vector2i(p2f);
-//     EXPECT_EQ(b.x(), 3);
-//     EXPECT_EQ(b.y(), -4);
-//   }
-//   {
-//     auto a = Point2f(1.5f, 0.6f);
-//     Point2f b = a + Vector2f(1.3f, 1.0f);
-//     EXPECT_EQ(b.x(), 2.8f);
-//     EXPECT_EQ(b.y(), 1.6f);
-//   }
-//   {
-//     Vector2f v = Point2f(1.5f, 0.5f) - Point2f(0.5f, -1.0f);
-//     EXPECT_EQ(v.x(), 1.0f);
-//     EXPECT_EQ(v.y(), 1.5f);
-//     Point2f p = Point2f(1.5f, 0.5f) - Vector2f(0.5f, -1.0f);
-//     EXPECT_EQ(p.x(), 1.0f);
-//     EXPECT_EQ(p.y(), 1.5f);
-//     p = Point2f(1.5f, 0.5f);
-//     p -= Vector2f(0.5f, -1.0f);
-//     EXPECT_EQ(p.x(), 1.0f);
-//     EXPECT_EQ(p.y(), 1.5f);
-//     p = Vector2f(1, 1);
-//   }
+   {
+     Point2f p2f;
+     EXPECT_EQ(p2f.x(), 0);
+     EXPECT_EQ(p2f.y(), 0);
+     p2f = Point2f(-1, 2);
+     EXPECT_EQ(p2f.x(), -1);
+     EXPECT_EQ(p2f.y(), 2);
+     p2f = Point2f(Vector2i(3, -4));
+     EXPECT_EQ(p2f.x(), 3.0f);
+     EXPECT_EQ(p2f.y(), -4.0f);
+     auto b = Vector2i(p2f);
+     EXPECT_EQ(b.x(), 3);
+     EXPECT_EQ(b.y(), -4);
+   }
+   {
+     auto a = Point2f(1.5f, 0.6f);
+     Point2f b = a + Vector2f(1.3f, 1.0f);
+     EXPECT_EQ(b.x(), 2.8f);
+     EXPECT_EQ(b.y(), 1.6f);
+   }
+   {
+     Vector2f v = Point2f(1.5f, 0.5f) - Point2f(0.5f, -1.0f);
+     EXPECT_EQ(v.x(), 1.0f);
+     EXPECT_EQ(v.y(), 1.5f);
+     Point2f p = Point2f(1.5f, 0.5f) - Vector2f(0.5f, -1.0f);
+     EXPECT_EQ(p.x(), 1.0f);
+     EXPECT_EQ(p.y(), 1.5f);
+     p = Point2f(1.5f, 0.5f);
+     Point2f t = (p -= Vector2f(0.5f, -1.0f)) + Vector2f(0.5f, -1.0f);
+     EXPECT_EQ(p.x(), 1.0f);
+     EXPECT_EQ(p.y(), 1.5f);
+
+     EXPECT_EQ(t.x(), 1.5f);
+     EXPECT_EQ(t.y(), 0.5f);
+   }
 //   {
 //     auto a = Point2f(1, -1);
 //     auto b = -a;

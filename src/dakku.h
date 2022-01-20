@@ -22,4 +22,14 @@ using Float = float;
 
 constexpr Float INF = std::numeric_limits<Float>::infinity();
 
+template <typename T>
+inline bool isnan(const T x) {
+  return std::isnan(x);
+}
+
+template <>
+inline bool isnan(const int x) {
+  return false;
+}
+
 }  // namespace dakku

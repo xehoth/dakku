@@ -18,25 +18,23 @@ requires(size == 3) class Normal;
 
 template <ArithmeticType T, size_t size, typename Derived>
 class Array {
- protected:
-  using internal_data_type = enoki::Array<T, size>;
-  internal_data_type _data;
-
  public:
-  Array() { _data = enoki::zero<internal_data_type>(); }
+  // default: zero
+  Array() { set_zero(); }
 
+  // construct by values
   template <ArithmeticType... Args>
   requires(sizeof...(Args) == size) explicit Array(Args &&...args)
       : _data(std::forward<Args>(args)...) {
     DAKKU_CHECK(!has_nans(), "has nan");
   }
 
+  template <ArithmeticType U, typename D>
+  explicit Array(const Array<U, size, D> &array) : _data(array.data()) {}
+
   [[nodiscard]] bool has_nans() const {
     return enoki::any(enoki::isnan(_data));
   }
-
-  explicit Array(const internal_data_type &data) : _data(data) {}
-  explicit Array(internal_data_type &&data) : _data(std::move(data)) {}
 
   const T &x() const {
     static_assert(size >= 1, "Array::x() requires size >= 1");
@@ -62,14 +60,83 @@ class Array {
   }
   T &w() { return const_cast<T &>(static_cast<const Array &>(*this).w()); }
 
+  const T &operator[](size_t i) const {
+    DAKKU_CHECK(i < size, "index out of range");
+    return _data[i];
+  }
+  T &operator[](size_t i) {
+    return const_cast<T &>(static_cast<const Array &>(*this)[i]);
+  }
+
   Derived operator+(const Derived &rhs) const {
+    DAKKU_CHECK(!rhs.has_nans(), "has nan in rhs");
     return Derived(_data + rhs._data);
   }
   Derived &operator+=(const Derived &rhs) {
+    DAKKU_CHECK(!rhs.has_nans(), "has nan in rhs");
     _data += rhs._data;
     return static_cast<Derived &>(*this);
   }
+  Derived operator-(const Derived &rhs) const {
+    DAKKU_CHECK(!rhs.has_nans(), "has nan in rhs");
+    return Derived(_data - rhs._data);
+  }
+  Derived &operator-=(const Derived &rhs) {
+    DAKKU_CHECK(!rhs.has_nans(), "has nan in rhs");
+    _data -= rhs._data;
+    return static_cast<Derived &>(*this);
+  }
+  template <ArithmeticType U>
+  requires std::is_same_v<T, std::common_type_t<T, U>> Derived
+  operator*(U v) const {
+    DAKKU_CHECK(!isnan(v), "v is nan");
+    return Derived(_data * v);
+  }
+  template <ArithmeticType U>
+  requires std::is_same_v<T, std::common_type_t<T, U>> Derived &operator*=(
+      U v) {
+    DAKKU_CHECK(!isnan(v), "v is nan");
+    _data *= v;
+    return static_cast<Derived &>(*this);
+  }
+  template <ArithmeticType U>
+  requires std::is_same_v<T, std::common_type_t<T, U>> Derived
+  operator/(U v) const {
+    DAKKU_CHECK(v != U(0), "v is zero (dividing by zero)");
+    return Derived(_data / v);
+  }
+  template <ArithmeticType U>
+  requires std::is_same_v<T, std::common_type_t<T, U>> Derived &operator/=(
+      U v) {
+    DAKKU_CHECK(v != U(0), "v is zero (dividing by zero)");
+    _data /= v;
+    return static_cast<Derived &>(*this);
+  }
+  Derived operator-() const { return Derived(-_data); }
+
+  void set_zero() { _data = enoki::zero<internal_data_type>(); }
+
+  decltype(auto) data() { return _data; }
+  decltype(auto) data() const { return _data; }
+
+ protected:
+  using internal_data_type = enoki::Array<T, size>;
+  internal_data_type _data;
+
+  // helper constructors: internal used for operator
+  explicit Array(const internal_data_type &data) : _data(data) {
+    DAKKU_CHECK(!has_nans(), "has nan");
+  }
+  explicit Array(internal_data_type &&data) : _data(std::move(data)) {
+    DAKKU_CHECK(!has_nans(), "has nan");
+  }
 };
+
+template <ArithmeticType T, size_t size, typename Derived, ArithmeticType U>
+requires std::is_same_v<T, std::common_type_t<T, U>>
+inline Derived operator*(U v, const Array<T, size, Derived> &array) {
+  return array.operator*(v);
+}
 
 template <ArithmeticType T, size_t size>
 class Vector : public Array<T, size, Vector<T, size>> {
@@ -84,13 +151,29 @@ requires(2 <= size && size <= 3) class Point
  public:
   using Base = Array<T, size, Point<T, size>>;
   using Base::Base;
+
+  Point operator+(const Vector<T, size> &v) const {
+    return Base::operator+(Point(v));
+  }
+  Point &operator+=(const Vector<T, size> &v) {
+    return Base::operator+=(Point(v));
+  }
+  Vector<T, size> operator-(const Point &p) const {
+    return Vector<T, size>(*this) - Vector<T, size>(p);
+  }
+  Point operator-(const Vector<T, size> &v) const {
+    return Base::operator-(Point(v));
+  }
+  Point &operator-=(const Vector<T, size> &v) {
+    return Base::operator-=(Point(v));
+  }
 };
 
 template <ArithmeticType T, size_t size>
 requires(size == 3) class Normal : public Array<T, size, Normal<T, size>> {
  public:
   using Base = Array<T, size, Normal<T, size>>;
-  using Base::Array;
+  using Base::Base;
 };
 
 using Vector2f = Vector<Float, 2>;
