@@ -119,6 +119,8 @@ class Array {
   decltype(auto) data() { return _data; }
   decltype(auto) data() const { return _data; }
 
+  auto operator<=>(const Array &) const = default;
+
  protected:
   using internal_data_type = enoki::Array<T, size>;
   internal_data_type _data;
@@ -158,6 +160,8 @@ requires(2 <= size && size <= 3) class Point
   Point &operator+=(const Vector<T, size> &v) {
     return Base::operator+=(Point(v));
   }
+  Point operator+(const Point &p) const { return Base::operator+(p); }
+  Point &operator+=(const Point &p) { return Base::operator+=(p); }
   Vector<T, size> operator-(const Point &p) const {
     return Vector<T, size>(*this) - Vector<T, size>(p);
   }
@@ -167,6 +171,7 @@ requires(2 <= size && size <= 3) class Point
   Point &operator-=(const Vector<T, size> &v) {
     return Base::operator-=(Point(v));
   }
+  Point operator-() const { return Base::operator-(); }
 };
 
 template <ArithmeticType T, size_t size>

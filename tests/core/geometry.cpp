@@ -131,118 +131,118 @@ TEST(core, Vector) {
      EXPECT_EQ(t.x(), 1.5f);
      EXPECT_EQ(t.y(), 0.5f);
    }
-//   {
-//     auto a = Point2f(1, -1);
-//     auto b = -a;
-//     EXPECT_EQ(b.x(), -1.0f);
-//     EXPECT_EQ(b.y(), 1.0f);
-//   }
-//   {
-//     auto a = Point2f(1.5f, 0.6f);
-//     Point2f b = a + Point2f(1.3f, 1.0f);
-//     EXPECT_EQ(b.x(), 2.8f);
-//     EXPECT_EQ(b.y(), 1.6f);
-//     b = a;
-//     b += Point2f(1.3f, 1.0f);
-//     EXPECT_EQ(b.x(), 2.8f);
-//     EXPECT_EQ(b.y(), 1.6f);
-//   }
-//   {
-//     auto a = Point2f(1.5f, 0.5f);
-//     a *= 2;
-//     EXPECT_EQ(a.x(), 3.0f);
-//     EXPECT_EQ(a.y(), 1.0f);
-//     a = Point2f(1.5f, 0.5f);
-//     auto b = a * 2;
-//     a = b;
-//     EXPECT_EQ(a.x(), 3.0f);
-//     EXPECT_EQ(a.y(), 1.0f);
-//     a = Point2f(1.5f, 0.5f);
-//     a /= 2;
-//     EXPECT_EQ(a, Point2f(1.5f, 0.5f) / 2);
-//     EXPECT_EQ(a.x(), 0.75f);
-//   }
-//   {
-//     Point3f a;
-//     EXPECT_EQ(a.x(), 0);
-//     EXPECT_EQ(a.y(), 0);
-//     EXPECT_EQ(a.z(), 0);
-//     a = Point3f(-1, 2, 3);
-//     EXPECT_EQ(a.x(), -1);
-//     EXPECT_EQ(a.y(), 2);
-//     EXPECT_EQ(a.z(), 3);
-//     a = Point3f(Point3i(3, -2, 4));
-//     EXPECT_EQ(a.x(), 3.0f);
-//     EXPECT_EQ(a.y(), -2.0f);
-//     EXPECT_EQ(a.z(), 4.0f);
-//     a = Point3f(Vector3i(3, -4, 2));
-//     EXPECT_EQ(a.x(), 3.0f);
-//     EXPECT_EQ(a.y(), -4.0f);
-//     EXPECT_EQ(a.z(), 2.0f);
-//     auto b = Vector2i(a);
-//     EXPECT_EQ(b.x(), 3);
-//     EXPECT_EQ(b.y(), -4);
-//   }
-//   {
-//     auto a = Point3f(1.5f, 0.6f, 0.5f);
-//     Point3f b = a + Vector3f(1.3f, 1.0f, 0.5f);
-//     EXPECT_EQ(b.x(), 2.8f);
-//     EXPECT_EQ(b.y(), 1.6f);
-//     EXPECT_EQ(b.z(), 1.0f);
-//   }
-//   {
-//     Vector3f v = Point3f(1.5f, 0.5f, 0.5f) - Point3f(0.5f, -1.0f, -0.5f);
-//     EXPECT_EQ(v.x(), 1.0f);
-//     EXPECT_EQ(v.y(), 1.5f);
-//     EXPECT_EQ(v.z(), 1.0f);
-//     Point3f p = Point3f(1.5f, 0.5f, 0.5f) - Vector3f(0.5f, -1.0f, -0.5f);
-//     EXPECT_EQ(p.x(), 1.0f);
-//     EXPECT_EQ(p.y(), 1.5f);
-//     EXPECT_EQ(p.z(), 1.0f);
-//     p = Point3f(1.5f, 0.5f, 0.5f);
-//     p -= Vector3f(0.5f, -1.0f, -0.5f);
-//     EXPECT_EQ(p.x(), 1.0f);
-//     EXPECT_EQ(p.y(), 1.5f);
-//     EXPECT_EQ(p.z(), 1.0f);
-//   }
-//   {
-//     auto a = Point3f(1, -1, 1);
-//     auto b = -a;
-//     EXPECT_EQ(b.x(), -1.0f);
-//     EXPECT_EQ(b.y(), 1.0f);
-//     EXPECT_EQ(b.z(), -1.0f);
-//   }
-//   {
-//     auto a = Point3f(1.5f, 0.6f, 1.0f);
-//     Point3f b = a + Point3f(1.3f, 1.0f, 1.0f);
-//     EXPECT_EQ(b.x(), 2.8f);
-//     EXPECT_EQ(b.y(), 1.6f);
-//     EXPECT_EQ(b.z(), 2.0f);
-//     b = a;
-//     b += Point3f(1.3f, 1.0f, 1.0f);
-//     EXPECT_EQ(b.x(), 2.8f);
-//     EXPECT_EQ(b.y(), 1.6f);
-//     EXPECT_EQ(b.z(), 2.0f);
-//   }
-//   {
-//     auto a = Point3f(1.5f, 0.5f, 1.0f);
-//     a *= 2;
-//     EXPECT_EQ(a.x(), 3.0f);
-//     EXPECT_EQ(a.y(), 1.0f);
-//     EXPECT_EQ(a.z(), 2.0f);
-//
-//     a = Point3f(1.5f, 0.5f, 1.0f);
-//     auto b = a * 2;
-//     a = b;
-//     EXPECT_EQ(a.x(), 3.0f);
-//     EXPECT_EQ(a.y(), 1.0f);
-//     EXPECT_EQ(a.z(), 2.0f);
-//
-//     a = Point3f(1.5f, 0.5f, 1.0f);
-//     a /= 2;
-//     EXPECT_EQ(a, Point3f(1.5f, 0.5f, 1.0f) / 2);
-//     EXPECT_EQ(a.x(), 0.75f);
-//   }
+   {
+     auto a = Point2f(1, -1);
+     auto b = -a;
+     EXPECT_EQ(b.x(), -1.0f);
+     EXPECT_EQ(b.y(), 1.0f);
+   }
+   {
+     auto a = Point2f(1.5f, 0.6f);
+     Point2f b = a + Point2f(1.3f, 1.0f);
+     EXPECT_EQ(b.x(), 2.8f);
+     EXPECT_EQ(b.y(), 1.6f);
+     b = a;
+     b += Point2f(1.3f, 1.0f);
+     EXPECT_EQ(b.x(), 2.8f);
+     EXPECT_EQ(b.y(), 1.6f);
+   }
+   {
+     auto a = Point2f(1.5f, 0.5f);
+     a *= 2;
+     EXPECT_EQ(a.x(), 3.0f);
+     EXPECT_EQ(a.y(), 1.0f);
+     a = Point2f(1.5f, 0.5f);
+     auto b = a * 2;
+     a = b;
+     EXPECT_EQ(a.x(), 3.0f);
+     EXPECT_EQ(a.y(), 1.0f);
+     a = Point2f(1.5f, 0.5f);
+     a /= 2;
+     EXPECT_EQ(a, Point2f(1.5f, 0.5f) / 2);
+     EXPECT_EQ(a.x(), 0.75f);
+   }
+   {
+     Point3f a;
+     EXPECT_EQ(a.x(), 0);
+     EXPECT_EQ(a.y(), 0);
+     EXPECT_EQ(a.z(), 0);
+     a = Point3f(-1, 2, 3);
+     EXPECT_EQ(a.x(), -1);
+     EXPECT_EQ(a.y(), 2);
+     EXPECT_EQ(a.z(), 3);
+     a = Point3f(Point3i(3, -2, 4));
+     EXPECT_EQ(a.x(), 3.0f);
+     EXPECT_EQ(a.y(), -2.0f);
+     EXPECT_EQ(a.z(), 4.0f);
+     a = Point3f(Vector3i(3, -4, 2));
+     EXPECT_EQ(a.x(), 3.0f);
+     EXPECT_EQ(a.y(), -4.0f);
+     EXPECT_EQ(a.z(), 2.0f);
+     auto b = Vector2i(a.x(), a.y());
+     EXPECT_EQ(b.x(), 3);
+     EXPECT_EQ(b.y(), -4);
+   }
+   {
+     auto a = Point3f(1.5f, 0.6f, 0.5f);
+     Point3f b = a + Vector3f(1.3f, 1.0f, 0.5f);
+     EXPECT_EQ(b.x(), 2.8f);
+     EXPECT_EQ(b.y(), 1.6f);
+     EXPECT_EQ(b.z(), 1.0f);
+   }
+   {
+     Vector3f v = Point3f(1.5f, 0.5f, 0.5f) - Point3f(0.5f, -1.0f, -0.5f);
+     EXPECT_EQ(v.x(), 1.0f);
+     EXPECT_EQ(v.y(), 1.5f);
+     EXPECT_EQ(v.z(), 1.0f);
+     Point3f p = Point3f(1.5f, 0.5f, 0.5f) - Vector3f(0.5f, -1.0f, -0.5f);
+     EXPECT_EQ(p.x(), 1.0f);
+     EXPECT_EQ(p.y(), 1.5f);
+     EXPECT_EQ(p.z(), 1.0f);
+     p = Point3f(1.5f, 0.5f, 0.5f);
+     p -= Vector3f(0.5f, -1.0f, -0.5f);
+     EXPECT_EQ(p.x(), 1.0f);
+     EXPECT_EQ(p.y(), 1.5f);
+     EXPECT_EQ(p.z(), 1.0f);
+   }
+   {
+     auto a = Point3f(1, -1, 1);
+     auto b = -a;
+     EXPECT_EQ(b.x(), -1.0f);
+     EXPECT_EQ(b.y(), 1.0f);
+     EXPECT_EQ(b.z(), -1.0f);
+   }
+   {
+     auto a = Point3f(1.5f, 0.6f, 1.0f);
+     Point3f b = a + Point3f(1.3f, 1.0f, 1.0f);
+     EXPECT_EQ(b.x(), 2.8f);
+     EXPECT_EQ(b.y(), 1.6f);
+     EXPECT_EQ(b.z(), 2.0f);
+     b = a;
+     b += Point3f(1.3f, 1.0f, 1.0f);
+     EXPECT_EQ(b.x(), 2.8f);
+     EXPECT_EQ(b.y(), 1.6f);
+     EXPECT_EQ(b.z(), 2.0f);
+   }
+   {
+     auto a = Point3f(1.5f, 0.5f, 1.0f);
+     a *= 2;
+     EXPECT_EQ(a.x(), 3.0f);
+     EXPECT_EQ(a.y(), 1.0f);
+     EXPECT_EQ(a.z(), 2.0f);
+
+     a = Point3f(1.5f, 0.5f, 1.0f);
+     auto b = a * 2;
+     a = b;
+     EXPECT_EQ(a.x(), 3.0f);
+     EXPECT_EQ(a.y(), 1.0f);
+     EXPECT_EQ(a.z(), 2.0f);
+
+     a = Point3f(1.5f, 0.5f, 1.0f);
+     a /= 2;
+     EXPECT_EQ(a, Point3f(1.5f, 0.5f, 1.0f) / 2);
+     EXPECT_EQ(a.x(), 0.75f);
+   }
  }
 
 // TEST(core, Normal) {

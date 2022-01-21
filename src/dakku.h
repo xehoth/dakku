@@ -12,7 +12,7 @@
 namespace dakku {
 
 template <typename T>
-concept ArithmeticType = std::is_arithmetic_v<T>;
+concept ArithmeticType = std::is_arithmetic_v<std::decay_t<T>>;
 
 #ifdef DAKKU_USE_DOUBLE_AS_FLOAT
 using Float = double;
