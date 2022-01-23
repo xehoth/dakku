@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include <core/geometry.h>
+#include <core/vector.h>
 
 using namespace dakku;
 
