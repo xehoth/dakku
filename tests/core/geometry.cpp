@@ -245,61 +245,71 @@ TEST(core, Vector) {
    }
  }
 
-// TEST(core, Normal) {
-//   {
-//     Normal3f n;
-//     EXPECT_EQ(n.x(), 0);
-//     EXPECT_EQ(n.y(), 0);
-//     EXPECT_EQ(n.z(), 0);
-//     n = Normal3f(1, -1, 2);
-//     EXPECT_EQ(n.x(), 1);
-//     EXPECT_EQ(n.y(), -1);
-//     EXPECT_EQ(n.z(), 2);
-//     n = Normal3f(Vector3f(1, -1, 2));
-//     EXPECT_EQ(n.x(), 1);
-//     EXPECT_EQ(n.y(), -1);
-//     EXPECT_EQ(n.z(), 2);
-//     n = Normal3f(Point3f(1, -1, 2));
-//     EXPECT_EQ(n.x(), 1);
-//     EXPECT_EQ(n.y(), -1);
-//     EXPECT_EQ(n.z(), 2);
-//     n = Normal3f(Point3i(1, -1, 2));
-//     EXPECT_EQ(n.x(), 1);
-//     EXPECT_EQ(n.y(), -1);
-//     EXPECT_EQ(n.z(), 2);
-//     n = Normal3f(Vector3i(1, -1, 2));
-//     EXPECT_EQ(n.x(), 1);
-//     EXPECT_EQ(n.y(), -1);
-//     EXPECT_EQ(n.z(), 2);
-//     n = -n;
-//     EXPECT_EQ(n.x(), -1);
-//     EXPECT_EQ(n.y(), 1);
-//     EXPECT_EQ(n.z(), -2);
-//   }
-//   {
-//     auto a = Normal3f(2, -1, 3);
-//     auto b = Normal3f(-3, 2, 4);
-//     auto c = a + b;
-//     EXPECT_EQ(c.x(), -1.0f);
-//     EXPECT_EQ(c.y(), 1.0f);
-//     EXPECT_EQ(c.z(), 7.0f);
-//     c = a;
-//     c += b;
-//     EXPECT_EQ(c.x(), -1.0f);
-//     EXPECT_EQ(c.y(), 1.0f);
-//     EXPECT_EQ(c.z(), 7.0f);
-//     c = a - b;
-//     EXPECT_EQ(c.x(), 5.0f);
-//     EXPECT_EQ(c.y(), -3.0f);
-//     EXPECT_EQ(c.z(), -1.0f);
-//     c = a;
-//     c -= b;
-//     EXPECT_EQ(c.x(), 5.0f);
-//     EXPECT_EQ(c.y(), -3.0f);
-//     EXPECT_EQ(c.z(), -1.0f);
-//     c = -a;
-//     EXPECT_EQ(c.x(), -2.0f);
-//     EXPECT_EQ(c.y(), 1.0f);
-//     EXPECT_EQ(c.z(), -3.0f);
-//   }
-// }
+ TEST(core, Normal) {
+   {
+     Normal3f n;
+     EXPECT_EQ(n.x(), 0);
+     EXPECT_EQ(n.y(), 0);
+     EXPECT_EQ(n.z(), 0);
+     n = Normal3f(1, -1, 2);
+     EXPECT_EQ(n.x(), 1);
+     EXPECT_EQ(n.y(), -1);
+     EXPECT_EQ(n.z(), 2);
+     n = Normal3f(Vector3f(1, -1, 2));
+     EXPECT_EQ(n.x(), 1);
+     EXPECT_EQ(n.y(), -1);
+     EXPECT_EQ(n.z(), 2);
+     n = Normal3f(Point3f(1, -1, 2));
+     EXPECT_EQ(n.x(), 1);
+     EXPECT_EQ(n.y(), -1);
+     EXPECT_EQ(n.z(), 2);
+     n = Normal3f(Point3i(1, -1, 2));
+     EXPECT_EQ(n.x(), 1);
+     EXPECT_EQ(n.y(), -1);
+     EXPECT_EQ(n.z(), 2);
+     n = Normal3f(Vector3i(1, -1, 2));
+     EXPECT_EQ(n.x(), 1);
+     EXPECT_EQ(n.y(), -1);
+     EXPECT_EQ(n.z(), 2);
+     n = -n;
+     EXPECT_EQ(n.x(), -1);
+     EXPECT_EQ(n.y(), 1);
+     EXPECT_EQ(n.z(), -2);
+   }
+   {
+     auto a = Normal3f(2, -1, 3);
+     auto b = Normal3f(-3, 2, 4);
+     auto c = a + b;
+     EXPECT_EQ(c.x(), -1.0f);
+     EXPECT_EQ(c.y(), 1.0f);
+     EXPECT_EQ(c.z(), 7.0f);
+     c = a;
+     c += b;
+     EXPECT_EQ(c.x(), -1.0f);
+     EXPECT_EQ(c.y(), 1.0f);
+     EXPECT_EQ(c.z(), 7.0f);
+     c = a - b;
+     EXPECT_EQ(c.x(), 5.0f);
+     EXPECT_EQ(c.y(), -3.0f);
+     EXPECT_EQ(c.z(), -1.0f);
+     c = a;
+     c -= b;
+     EXPECT_EQ(c.x(), 5.0f);
+     EXPECT_EQ(c.y(), -3.0f);
+     EXPECT_EQ(c.z(), -1.0f);
+     c = -a;
+     EXPECT_EQ(c.x(), -2.0f);
+     EXPECT_EQ(c.y(), 1.0f);
+     EXPECT_EQ(c.z(), -3.0f);
+     Normal3f d = abs(c);
+     EXPECT_EQ(d.x(), 2.0f);
+     EXPECT_EQ(d.y(), 1.0f);
+     EXPECT_EQ(d.z(), 3.0f);
+
+     EXPECT_EQ(dot(d, c), -4 + 1 - 9);
+     EXPECT_EQ(abs_dot(d, c), std::abs(-4 + 1 - 9));
+
+     EXPECT_EQ(min_component(c), -3);
+     EXPECT_EQ(max_component(c), 1);
+   }
+ }
