@@ -6,7 +6,7 @@ if (enoki_ADDED)
   target_include_directories(enoki INTERFACE ${enoki_SOURCE_DIR}/include)
 endif()
 
-file(GLOB SRC_FILES "*.cpp")
+file(GLOB SRC_FILES "*.cpp" "*.h")
 add_library(${PROJECT_NAME} STATIC ${SRC_FILES})
 target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_SOURCE_DIR}/src)
 target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_20)
