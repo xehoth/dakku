@@ -189,6 +189,8 @@ class Vector : public Array<T, size, Vector<T, size>> {
  public:
   using Base = Array<T, size, Vector<T, size>>;
   using Base::Base;
+
+  friend struct Matrix4x4;
 };
 
 template <ArithmeticType T, size_t size>
