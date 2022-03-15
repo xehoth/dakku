@@ -4,6 +4,7 @@ DAKKU_BEGIN
 
 void BoxFilter::serialize(Json &json, OutputStream *) const {
   DAKKU_SER_J(radius);
+  json["class"] = getClassName();
 }
 
 void BoxFilter::unserialize(const Json &json, InputStream *) {
