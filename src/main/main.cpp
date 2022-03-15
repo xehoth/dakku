@@ -1,10 +1,12 @@
 #include <core/api.h>
+#include <filters/api.h>
 #include <cxxopts.hpp>
 #include <iostream>
 using namespace dakku;
 
 int main(int argc, const char *argv[]) {
   core::init();
+  filters::init();
   auto state = RenderState::load("../../../assets/scene.json");
 //  state->save("../../../assets/scene_bak.json");
 //Class a;

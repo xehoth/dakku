@@ -1,18 +1,12 @@
-project(dakku-core LANGUAGES CXX)
-
-find_package(Eigen3 CONFIG REQUIRED)
-find_package(spdlog CONFIG REQUIRED)
-find_package(nlohmann_json CONFIG REQUIRED)
+project(dakku-filters LANGUAGES CXX)
 
 file(GLOB SRC_FILES "*.cpp" "*.h")
 
 add_library(${PROJECT_NAME} SHARED ${SRC_FILES})
 target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_SOURCE_DIR}/src)
 target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_20)
-target_link_libraries(${PROJECT_NAME} PUBLIC Eigen3::Eigen spdlog::spdlog
-        nlohmann_json::nlohmann_json)
-target_compile_definitions(${PROJECT_NAME} PRIVATE DAKKU_BUILD_MODULE=${DAKKU_MODULE_CORE})
-add_library(dakku::core ALIAS ${PROJECT_NAME})
+target_link_libraries(${PROJECT_NAME} PUBLIC dakku::core)
+add_library(dakku::filters ALIAS ${PROJECT_NAME})
 
 set_target_properties(${PROJECT_NAME} PROPERTIES
         POSITION_INDEPENDENT_CODE ON

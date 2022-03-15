@@ -10,7 +10,7 @@ DAKKU_BEGIN
 /**
  * dakku RTTI
  */
-class Class final : public Singleton<Class> {
+class DAKKU_EXPORT_CORE Class final : public Singleton<Class> {
  public:
   /**
    * register an object class
@@ -49,13 +49,6 @@ void Class::registerClass() {
 template <typename T>
 Object *Class::constructor() {
   return new T;
-}
-
-Object *Class::create(std::string_view name) {
-  if (auto it = _classMap.find(name); it != _classMap.end())
-    return it->second();
-  DAKKU_ERR("failed to find {} in class map", name);
-  return nullptr;
 }
 
 /**

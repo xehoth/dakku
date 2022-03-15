@@ -37,3 +37,4 @@
 build
 build-*
 cmake-build-*
+src/defines.h

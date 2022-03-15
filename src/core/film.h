@@ -2,6 +2,7 @@
 #define DAKKU_SRC_CORE_FILM_H_
 #include <core/sobject.h>
 #include <core/bounds.h>
+#include <core/filter.h>
 
 DAKKU_BEGIN
 class Film : public SerializableObject {
@@ -13,6 +14,7 @@ class Film : public SerializableObject {
 
   Point2i fullResolution;
   Float diagonal{0.35f};
+  std::unique_ptr<Filter> filter{};
   std::string fileName;
   Bounds2f cropWindow{Point2f(0, 0), Point2f(1, 1)};
   Bounds2i croppedPixelBounds;

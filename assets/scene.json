@@ -1,6 +1,9 @@
 {
   "film": {
     "fullResolution": [1920, 1080],
-    "fileName": "scene.png"
+    "fileName": "scene.png",
+    "filter": {
+      "class": "BoxFilter"
+    }
   }
 }

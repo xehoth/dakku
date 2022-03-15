@@ -1,9 +1,6 @@
 #ifndef DAKKU_SRC_CORE_SINGLETON_H_
 #define DAKKU_SRC_CORE_SINGLETON_H_
 #include <core/fwd.h>
-#include <memory>
-#include <mutex>
-#include "class.h"
 
 DAKKU_BEGIN
 /**

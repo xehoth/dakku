@@ -1,5 +1,6 @@
 #ifndef DAKKU_SRC_CORE_FWD_H_
 #define DAKKU_SRC_CORE_FWD_H_
+#include <defines.h>
 #include <type_traits>
 
 #if !defined(DAKKU_BEGIN)
@@ -11,6 +12,15 @@
 #endif
 
 DAKKU_BEGIN
+
+#if !defined(DAKKU_EXPORT_CORE)
+#if DAKKU_BUILD_MODULE == DAKKU_MODULE_CORE
+#define DAKKU_EXPORT_CORE DAKKU_EXPORT
+#else
+#define DAKKU_EXPORT_CORE DAKKU_IMPORT
+#endif
+#endif
+
 #ifdef DAKKU_FLOAT_AS_DOUBLE
 using Float = double;
 #else
@@ -38,6 +48,7 @@ struct SerializableObject;
 struct RelativeRoot;
 
 class Film;
+class Filter;
 class RenderState;
 DAKKU_END
 #endif  // DAKKU_SRC_CORE_FWD_H_

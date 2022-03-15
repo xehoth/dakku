@@ -43,6 +43,7 @@ using Point2 = Point<T, 2>;
 template <ArithmeticType T>
 using Point3 = Point<T, 3>;
 
+using Vector2f = Vector2<Float>;
 using Point2i = Point2<int>;
 using Point2f = Point2<Float>;
 DAKKU_END
