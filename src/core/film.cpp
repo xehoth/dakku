@@ -24,19 +24,22 @@ void Film::unserialize(const Json &json, InputStream *stream) {
   DAKKU_UNSER_JIE(fileName, "dakku.png");
   DAKKU_UNSER_JI(cropWindow);
 
+  std::string filterType = "BoxFilter";
+  Json jFilterDummy;
+  const Json *jFilter = &jFilterDummy;
   if (!json.contains("filter")) {
-    DAKKU_ERR("film does not have filter");
+    DAKKU_WARN("film does not have a filter, use default: BoxFilter");
   } else {
-    const auto &jFilter = json["filter"];
-    if (!jFilter.contains("class")) {
-      DAKKU_ERR("filter type is unknown");
+    jFilter = &json["filter"];
+    if (!jFilter->contains("class")) {
+      DAKKU_WARN("filter type is unknown, use default: BoxFilter");
     } else {
-      filter.reset(
-          dynamic_cast<Filter *>(Class::instance().create(jFilter["class"])));
-      DAKKU_INFO("create filter: {}", filter->getClassName());
-      filter->unserialize(jFilter, stream);
+      jFilter->at("class").get_to(filterType);
     }
   }
+  filter.reset(dynamic_cast<Filter *>(Class::instance().create(filterType)));
+  DAKKU_INFO("create filter: {}", filter->getClassName());
+  filter->unserialize(*jFilter, stream);
 
   croppedPixelBounds = Bounds2i(
       Point2i(
