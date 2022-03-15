@@ -9,6 +9,7 @@ int main(int argc, const char *argv[]) {
   filters::init();
   auto state = RenderState::load("../../../assets/scene.json");
   state->save("../../../assets/scene_bak.json");
+  std::cout << state->film.getSampleBounds();
   // Class a;
   //   cxxopts::Options options("dakku", "renderer");
   //   options.add_options()("s,scene", "scene file",

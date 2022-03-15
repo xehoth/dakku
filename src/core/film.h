@@ -12,6 +12,8 @@ class Film : public SerializableObject {
   void serialize(Json &json, OutputStream *stream) const override;
   void unserialize(const Json &json, InputStream *stream) override;
 
+  [[nodiscard]] Bounds2i getSampleBounds() const;
+
   Point2i fullResolution;
   Float diagonal{0.35f};
   std::unique_ptr<Filter> filter{};
@@ -24,6 +26,8 @@ class Film : public SerializableObject {
     Float xyz[3];
   };
   std::unique_ptr<Pixel[]> pixels{};
+  static constexpr int filterTableWidth = 16;
+  Float filterTable[filterTableWidth * filterTableWidth];
 };
 DAKKU_END
 #endif  // DAKKU_SRC_CORE_FILM_H_

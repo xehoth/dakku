@@ -32,6 +32,12 @@ class Point : public VectorBase<T, size, Point<T, size>> {
   Vector<T, size> operator-(const Point<T, size> &rhs) const {
     return Vector<T, size>(*this) - Vector<T, size>(rhs);
   }
+  Point operator+(const Vector<T, size> &rhs) const {
+    return static_cast<Point>(super::operator+(super(rhs)));
+  }
+  Point operator-(const Vector<T, size> &rhs) const {
+    return static_cast<Point>(super::operator-(super(rhs)));
+  }
 };
 
 template <ArithmeticType T>

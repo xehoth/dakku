@@ -149,6 +149,12 @@ class VectorBase {
   friend VectorBase max(const VectorBase &a, const VectorBase &b) {
     return VectorBase(a._data.cwiseMax(b._data));
   }
+  friend VectorBase floor(const VectorBase &v) {
+    return VectorBase(v._data.array().floor());
+  }
+  friend VectorBase ceil(const VectorBase &v) {
+    return VectorBase(v._data.array().ceil());
+  }
 
   friend void to_json(nlohmann::json &nlohmann_json_j,
                       const VectorBase &nlohmann_json_t) {

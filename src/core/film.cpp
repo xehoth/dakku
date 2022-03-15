@@ -59,5 +59,21 @@ void Film::unserialize(const Json &json, InputStream *stream) {
       stream && stream->readBytes(pixels.get(), size) != size) {
     DAKKU_WARN("read pixels size unmatched");
   }
+
+  // precompute filter weight table
+  for (int y = 0, offset = 0; y < filterTableWidth; ++y) {
+    for (int x = 0; x < filterTableWidth; ++x, ++offset) {
+      Point2f p((x + 0.5) * filter->radius.x() / filterTableWidth,
+                (y + 0.5) * filter->radius.y() / filterTableWidth);
+      filterTable[offset] = filter->evaluate(p);
+    }
+  }
+}
+
+Bounds2i Film::getSampleBounds() const {
+  return Bounds2i(Bounds2f(floor(Point2f(croppedPixelBounds.pMin) +
+                                 Vector2f(0.5f, 0.5f) - filter->radius),
+                           ceil(Point2f(croppedPixelBounds.pMax) -
+                                Vector2f(0.5f, 0.5f) + filter->radius)));
 }
 DAKKU_END
