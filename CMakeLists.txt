@@ -14,4 +14,3 @@ if (USE_SANITIZER OR USE_STATIC_ANALYZER)
 endif()
 
 add_subdirectory(src)
-add_subdirectory(tests)
