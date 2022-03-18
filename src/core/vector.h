@@ -42,18 +42,6 @@ class Point : public VectorBase<T, size, Point<T, size>> {
   }
 };
 
-template <ArithmeticType T>
-using Vector2 = Vector<T, 2>;
-template <ArithmeticType T>
-using Vector3 = Vector<T, 3>;
-template <ArithmeticType T>
-using Point2 = Point<T, 2>;
-template <ArithmeticType T>
-using Point3 = Point<T, 3>;
-
-using Vector2f = Vector2<Float>;
-using Point2i = Point2<int>;
-using Point2f = Point2<Float>;
 DAKKU_END
 
 #endif  // DAKKU_SRC_CORE_VECTOR_H_

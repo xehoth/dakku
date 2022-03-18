@@ -175,6 +175,9 @@ class VectorBase {
     return os;
   }
 
+  friend struct Matrix4x4;
+  friend struct Transform;
+
  protected:
   explicit VectorBase(const internalType &data) : _data(data) {}
   explicit VectorBase(internalType &&data) : _data(std::move(data)) {}

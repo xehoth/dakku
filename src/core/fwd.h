@@ -47,6 +47,35 @@ class Class;
 template <typename T>
 concept ObjectType = std::is_base_of_v<Object, T>;
 
+// vectors
+template <ArithmeticType T, size_t size, typename Derived>
+class VectorBase;
+template <ArithmeticType T, size_t size>
+class Vector;
+template <ArithmeticType T, size_t size>
+class Normal;
+template <ArithmeticType T, size_t size>
+class Point;
+template <ArithmeticType T>
+using Vector2 = Vector<T, 2>;
+template <ArithmeticType T>
+using Vector3 = Vector<T, 3>;
+template <ArithmeticType T>
+using Point2 = Point<T, 2>;
+template <ArithmeticType T>
+using Point3 = Point<T, 3>;
+template <ArithmeticType T>
+using Normal3 = Normal<T, 3>;
+
+using Vector2f = Vector2<Float>;
+using Vector3f = Vector3<Float>;
+using Point2i = Point2<int>;
+using Point2f = Point2<Float>;
+using Point3f = Point3<Float>;
+
+class Ray;
+class RayDifferential;
+
 // serialization
 class InputStream;
 class OutputStream;
@@ -68,6 +97,10 @@ class RgbSpectrum;
 #else
 using Spectrum = RgbSpectrum;
 #endif
+
+// transform
+struct Matrix4x4;
+class Transform;
 
 class Film;
 class FilmTile;
