@@ -124,8 +124,8 @@ class Transform final {
   inline Normal3<T> operator()(const Normal3<T> &n) const;
   inline Ray operator()(const Ray &r) const;
   inline RayDifferential operator()(const RayDifferential &r) const;
-  Transform operator*(const Transform &rhs) const;
-  [[nodiscard]] bool swapsHandedNess() const;
+  inline Transform operator*(const Transform &rhs) const;
+  [[nodiscard]] inline bool swapsHandedNess() const;
 
  private:
   Matrix4x4 m, mInv;
@@ -155,7 +155,7 @@ inline Ray Transform::operator()(const Ray &r) const {
   return Ray(o, d, r.tMax);
 }
 
-RayDifferential Transform::operator()(const RayDifferential &r) const {
+inline RayDifferential Transform::operator()(const RayDifferential &r) const {
   Ray tr = (*this)(static_cast<const Ray &>(r));
   RayDifferential ret(tr.o, tr.d, tr.tMax);
   ret.hasDifferentials = r.hasDifferentials;
@@ -166,11 +166,11 @@ RayDifferential Transform::operator()(const RayDifferential &r) const {
   return ret;
 }
 
-Transform Transform::operator*(const Transform &rhs) const {
+inline Transform Transform::operator*(const Transform &rhs) const {
   return Transform(m * rhs.m, rhs.mInv * mInv);
 }
 
-bool Transform::swapsHandedNess() const {
+inline bool Transform::swapsHandedNess() const {
   return m._data.block<3, 3>(0, 0).determinant() < 0;
 }
 
