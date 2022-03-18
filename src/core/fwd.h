@@ -2,6 +2,8 @@
 #define DAKKU_SRC_CORE_FWD_H_
 #include <defines.h>
 #include <type_traits>
+#include <limits>
+#include <numbers>
 
 #if !defined(DAKKU_BEGIN)
 #define DAKKU_BEGIN namespace dakku {
@@ -30,6 +32,13 @@ using Float = float;
 template <typename T>
 concept ArithmeticType = std::is_arithmetic_v<std::decay_t<T>>;
 
+// global constants
+static constexpr Float INF = std::numeric_limits<Float>::infinity();
+static constexpr Float MAX_FLOAT = std::numeric_limits<Float>::max();
+static constexpr Float SHADOW_EPS = static_cast<Float>(0.0001);
+static constexpr Float PI = std::numbers::pi_v<Float>;
+static constexpr Float INV_PI = std::numbers::inv_pi_v<Float>;
+
 // abstraction & helpers
 template <typename T>
 class Singleton;
@@ -47,8 +56,23 @@ struct Serializable;
 struct SerializableObject;
 struct RelativeRoot;
 
+// spectrum
+template <ArithmeticType T, size_t size>
+class CoefficientSpectrumT;
+template <size_t size>
+using CoefficientSpectrum = CoefficientSpectrumT<Float, size>;
+class RgbSpectrum;
+
+#ifdef DAKKU_SAMPLED_SPECTRUM
+
+#else
+using Spectrum = RgbSpectrum;
+#endif
+
 class Film;
+class FilmTile;
 class Filter;
+
 class RenderState;
 DAKKU_END
 #endif  // DAKKU_SRC_CORE_FWD_H_
