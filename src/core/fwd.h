@@ -72,6 +72,7 @@ using Vector3f = Vector3<Float>;
 using Point2i = Point2<int>;
 using Point2f = Point2<Float>;
 using Point3f = Point3<Float>;
+using Normal3f = Normal3<Float>;
 
 class Ray;
 class RayDifferential;
@@ -105,6 +106,11 @@ class Transform;
 class Film;
 class FilmTile;
 class Filter;
+
+class Shape;
+struct Interaction;
+class SurfaceInteraction;
+class Primitive;
 
 class RenderState;
 DAKKU_END
