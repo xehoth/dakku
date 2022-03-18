@@ -9,7 +9,7 @@ class RenderState final : public SerializableObject {
  public:
   DAKKU_DECLARE_OBJECT(RenderState);
 
-  static std::unique_ptr<RenderState> load(const std::filesystem::path &path);
+  void load(const std::filesystem::path &path);
   void save(const std::filesystem::path &path);
 
   void serialize(Json &json, OutputStream *stream) const override;
@@ -17,5 +17,7 @@ class RenderState final : public SerializableObject {
 
   Film film;
 };
+
+extern DAKKU_EXPORT_CORE RenderState renderState;
 DAKKU_END
 #endif  // DAKKU_SRC_CORE_STATE_H_

@@ -11,10 +11,8 @@ void RenderState::unserialize(const Json &json, InputStream *stream) {
   film.unserialize(json["film"], stream);
 }
 
-std::unique_ptr<RenderState> RenderState::load(
-    const std::filesystem::path &path) {
+void RenderState::load(const std::filesystem::path &path) {
   RelativeRoot::set(path);
-  auto state = std::make_unique<RenderState>();
 
   Json json;
   std::ifstream jStream(path);
@@ -31,8 +29,7 @@ std::unique_ptr<RenderState> RenderState::load(
   } else {
     DAKKU_INFO("load render state without serialized data");
   }
-  state->unserialize(json, stream.get());
-  return state;
+  this->unserialize(json, stream.get());
 }
 
 void RenderState::save(const std::filesystem::path &path) {
@@ -47,4 +44,6 @@ void RenderState::save(const std::filesystem::path &path) {
   std::ofstream jStream(path);
   jStream << json;
 }
+
+RenderState renderState;
 DAKKU_END
