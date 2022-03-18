@@ -29,6 +29,8 @@ class Point : public VectorBase<T, size, Point<T, size>> {
  public:
   DAKKU_DECLARE_VECTOR_DERIVED(Point, T, size);
 
+  using super::operator+;
+
   Vector<T, size> operator-(const Point<T, size> &rhs) const {
     return Vector<T, size>(*this) - Vector<T, size>(rhs);
   }

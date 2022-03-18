@@ -24,7 +24,7 @@ struct Serializable {
  * if name exists then unserialize
  */
 #define DAKKU_UNSER_JI(name) \
-  if (json.contains(#name)) DAKKU_UNSER_J(name)
+  if (json.contains(#name) && !json.at(#name).is_null()) DAKKU_UNSER_J(name)
 /**
  * if name exists then unserialize
  * else set to value
