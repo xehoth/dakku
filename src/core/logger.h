@@ -1,6 +1,9 @@
 #ifndef DAKKU_SRC_CORE_LOGGER_H_
 #define DAKKU_SRC_CORE_LOGGER_H_
 #include <core/fwd.h>
+#ifdef _DEBUG
+#define SPDLOG_ACTIVE_LEVEL SPDLOG_LEVEL_DEBUG
+#endif
 #include <spdlog/spdlog.h>
 #include <spdlog/fmt/ostr.h>
 #include <string_view>

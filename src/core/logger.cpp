@@ -14,6 +14,10 @@ void init(std::string_view fileName) {
   } else {
     spdlog::set_default_logger(spdlog::stdout_color_mt("dakku"));
   }
+#ifdef _DEBUG
+  spdlog::set_level(spdlog::level::debug);
+  DAKKU_DEBUG("running under debug mode");
+#endif
 }
 }  // namespace core::logger
 
