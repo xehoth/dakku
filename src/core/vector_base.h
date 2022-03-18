@@ -155,6 +155,14 @@ class VectorBase {
   friend VectorBase ceil(const VectorBase &v) {
     return VectorBase(v._data.array().ceil());
   }
+  template <typename OtherDerived>
+  decltype(auto) dot(const VectorBase<T, size, OtherDerived> &rhs) const {
+    return _data.dot(rhs._data);
+  }
+  template <typename OtherDerived>
+  decltype(auto) absDot(const VectorBase<T, size, OtherDerived> &rhs) const {
+    return std::abs(dot(rhs));
+  }
 
   friend void to_json(nlohmann::json &nlohmann_json_j,
                       const VectorBase &nlohmann_json_t) {
