@@ -1,5 +1,7 @@
 #include <core/api.h>
 #include <filters/api.h>
+#include <shapes/api.h>
+#include <core/transform.h>
 #include <cxxopts.hpp>
 #include <iostream>
 using namespace dakku;
@@ -7,9 +9,19 @@ using namespace dakku;
 int main(int argc, const char *argv[]) {
   core::init();
   filters::init();
-  auto state = RenderState::load("../../../assets/scene.json");
-  state->save("../../../assets/scene_bak.json");
-  std::cout << state->film.getSampleBounds();
+  shapes::init();
+//  Json json = Json::parse("[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]");
+//  Matrix4x4 a = json;
+//  std::cout << a << std::endl;
+//  Json out = a;
+//  std::cout << out << std::endl;
+//  a = out;
+//  std::cout << a;
+  renderState.load("../../../assets/scene.json");
+//  renderState.save("../../../assets/scene_bak.json");
+//  auto state = RenderState::load("../../../assets/scene.json");
+//  state->save("../../../assets/scene_bak.json");
+//  std::cout << state->film.getSampleBounds();
   // Class a;
   //   cxxopts::Options options("dakku", "renderer");
   //   options.add_options()("s,scene", "scene file",

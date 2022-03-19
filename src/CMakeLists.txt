@@ -6,4 +6,5 @@ configure_file(${CMAKE_CURRENT_SOURCE_DIR}/defines.h.in ${CMAKE_CURRENT_SOURCE_D
 
 add_subdirectory(core)
 add_subdirectory(filters)
+add_subdirectory(shapes)
 add_subdirectory(main)
