@@ -53,6 +53,13 @@ class VectorBase {
   VectorBase(VectorBase &&other) : _data(std::move(other._data)) {
     DAKKU_CHECK(!hasNaN(), "has nan");
   }
+
+  const Derived &derived() const { return static_cast<const Derived &>(*this); }
+  Derived &derived() {
+    return const_cast<Derived &>(
+        static_cast<const VectorBase &>(*this).derived());
+  }
+
   VectorBase &operator=(const VectorBase &other) {
     if (this == &other) return *this;
     _data = other._data;
@@ -73,7 +80,7 @@ class VectorBase {
   }
 
   template <ArithmeticType U>
-  requires std::is_same_v<std::common_type_t<T, U>, T> VectorBase
+  requires std::is_same_v<std::common_type_t<T, U>, T> Derived
   operator*(U f) const {
     return VectorBase(_data * static_cast<T>(f));
   }
@@ -86,11 +93,11 @@ class VectorBase {
   }
   template <ArithmeticType U>
   requires std::is_same_v<std::common_type_t<T, U>, T>
-  friend VectorBase operator*(U f, const VectorBase &rhs) {
+  friend Derived operator*(U f, const VectorBase &rhs) {
     return rhs * static_cast<T>(f);
   }
   template <ArithmeticType U>
-  requires std::is_same_v<std::common_type_t<T, U>, T> VectorBase
+  requires std::is_same_v<std::common_type_t<T, U>, T> Derived
   operator/(U f) const {
     return VectorBase(_data / static_cast<T>(f));
   }
@@ -101,7 +108,7 @@ class VectorBase {
     _data /= static_cast<T>(f);
     return *this;
   }
-  VectorBase operator-() const { return VectorBase(-_data); }
+  Derived operator-() const { return VectorBase(-_data); }
   T operator[](int i) const {
     DAKKU_CHECK(0 <= i && i < size, "index out of range");
     return _data[i];
@@ -131,11 +138,11 @@ class VectorBase {
   operator std::span<T, size>() { return span(); }
 
   template <ArithmeticType U>
-  VectorBase pow(U f) const {
+  Derived pow(U f) const {
     return VectorBase(_data.pow(f));
   }
 
-  VectorBase normalized() const { return VectorBase(_data.normalized()); }
+  Derived normalized() const { return VectorBase(_data.normalized()); }
   VectorBase &normalize() {
     _data.normalize();
     return *this;
@@ -143,17 +150,21 @@ class VectorBase {
   decltype(auto) squaredNorm() const { return _data.squaredNorm(); }
   decltype(auto) norm() const { return _data.norm(); }
 
-  friend VectorBase min(const VectorBase &a, const VectorBase &b) {
+  friend Derived min(const VectorBase &a, const VectorBase &b) {
     return VectorBase(a._data.cwiseMin(b._data));
   }
-  friend VectorBase max(const VectorBase &a, const VectorBase &b) {
+  friend Derived max(const VectorBase &a, const VectorBase &b) {
     return VectorBase(a._data.cwiseMax(b._data));
   }
-  friend VectorBase floor(const VectorBase &v) {
+  friend Derived floor(const VectorBase &v) {
     return VectorBase(v._data.array().floor());
   }
-  friend VectorBase ceil(const VectorBase &v) {
+  friend Derived ceil(const VectorBase &v) {
     return VectorBase(v._data.array().ceil());
+  }
+  template <typename OtherDerived>
+  decltype(auto) dot(const VectorBase &rhs) const {
+    return _data.dot(rhs._data);
   }
   template <typename OtherDerived>
   decltype(auto) dot(const VectorBase<T, size, OtherDerived> &rhs) const {
@@ -162,6 +173,16 @@ class VectorBase {
   template <typename OtherDerived>
   decltype(auto) absDot(const VectorBase<T, size, OtherDerived> &rhs) const {
     return std::abs(dot(rhs));
+  }
+  Derived cross(const VectorBase &rhs) const {
+    return VectorBase(_data.cross(rhs._data));
+  }
+
+  friend inline Derived barycentricInterpolate(const VectorBase &a,
+                                                  const VectorBase &b,
+                                                  const VectorBase &c,
+                                                  const Point2f &u) {
+    return b[0] * a + b[1] * b + (1 - b[0] - b[1]) * c;
   }
 
   friend void to_json(nlohmann::json &nlohmann_json_j,
@@ -200,7 +221,7 @@ class VectorBase {
                                                       &data)
       : _data(data) {}
 
-  VectorBase operator+(const VectorBase &rhs) const {
+  Derived operator+(const VectorBase &rhs) const {
     return VectorBase(_data + rhs._data);
   }
   VectorBase &operator+=(const VectorBase &rhs) {
@@ -208,7 +229,7 @@ class VectorBase {
     _data += rhs._data;
     return *this;
   }
-  VectorBase operator-(const VectorBase &rhs) const {
+  Derived operator-(const VectorBase &rhs) const {
     return VectorBase(_data - rhs._data);
   }
   VectorBase &operator-=(const VectorBase &rhs) {

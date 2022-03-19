@@ -42,6 +42,26 @@ class Point : public VectorBase<T, size, Point<T, size>> {
   }
 };
 
+template <typename T>
+inline Normal3<T> faceforward(const Normal3<T> &n, const Vector3<T> &v) {
+  return (n.dot(v) < 0) ? -n : n;
+}
+
+template <typename T>
+inline Normal3<T> faceforward(const Normal3<T> &n, const Normal3<T> &n2) {
+  return (n.dot(n2) < 0.f) ? -n : n;
+}
+
+template <typename T>
+inline Vector3<T> faceforward(const Vector3<T> &v, const Vector3<T> &v2) {
+  return (v.dot(v2) < 0.f) ? -v : v;
+}
+
+template <typename T>
+inline Vector3<T> faceforward(const Vector3<T> &v, const Normal3<T> &n2) {
+  return (v.dot(n2) < 0.f) ? -v : v;
+}
+
 DAKKU_END
 
 #endif  // DAKKU_SRC_CORE_VECTOR_H_
