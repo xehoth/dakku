@@ -102,6 +102,7 @@ using Spectrum = RgbSpectrum;
 // transform
 struct Matrix4x4;
 class Transform;
+class TransformCache;
 
 class Film;
 class FilmTile;
