@@ -14,6 +14,27 @@ DAKKU_BEGIN
 #define DAKKU_ALLOCA(type, count) \
   (reinterpret_cast<type *>(alloca((count) * sizeof(type))))
 
+class L1CacheLineAlignedResource : public std::pmr::memory_resource {
+ public:
+  void *do_allocate(size_t bytes, size_t) override {
+    DAKKU_DEBUG("allocate pool of {} bytes", bytes);
+    return upStream->allocate(bytes, L1_CACHE_LINE_SIZE);
+  }
+
+  void do_deallocate(void *ptr, size_t bytes, size_t) override {
+    DAKKU_DEBUG("deallocate pool of {} bytes", bytes);
+    upStream->deallocate(ptr, bytes, L1_CACHE_LINE_SIZE);
+  }
+
+  [[nodiscard]] bool do_is_equal(
+      const memory_resource &rhs) const noexcept override {
+    return this == &rhs;
+  }
+
+ private:
+  std::pmr::memory_resource *upStream = std::pmr::get_default_resource();
+};
+
 template <typename T>
 class TypedMemoryArena {
  public:
@@ -21,12 +42,11 @@ class TypedMemoryArena {
   T *allocObject(Args &&...args) {
     return allocator.template new_object<T>(std::forward<Args>(args)...);
   }
-  void release() {
-    resource.release();
-  }
+  void release() { resource.release(); }
 
  private:
-  std::pmr::unsynchronized_pool_resource resource;
+  L1CacheLineAlignedResource upStream;
+  std::pmr::unsynchronized_pool_resource resource{&upStream};
   std::pmr::polymorphic_allocator<T> allocator{&resource};
 };
 DAKKU_END

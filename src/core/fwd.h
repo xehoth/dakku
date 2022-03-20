@@ -38,6 +38,7 @@ static constexpr Float MAX_FLOAT = std::numeric_limits<Float>::max();
 static constexpr Float SHADOW_EPS = static_cast<Float>(0.0001);
 static constexpr Float PI = std::numbers::pi_v<Float>;
 static constexpr Float INV_PI = std::numbers::inv_pi_v<Float>;
+static constexpr size_t L1_CACHE_LINE_SIZE = 64;
 
 // abstraction & helpers
 template <typename T>
