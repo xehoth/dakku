@@ -1,11 +1,14 @@
 project(dakku-shapes LANGUAGES CXX)
 
+find_package(libigl CONFIG REQUIRED)
+
 file(GLOB SRC_FILES "*.cpp" "*.h")
 
 add_library(${PROJECT_NAME} SHARED ${SRC_FILES})
 target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_SOURCE_DIR}/src)
 target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_20)
 target_link_libraries(${PROJECT_NAME} PUBLIC dakku::core)
+target_link_libraries(${PROJECT_NAME} PRIVATE igl::common igl::core)
 add_library(dakku::shapes ALIAS ${PROJECT_NAME})
 
 set_target_properties(${PROJECT_NAME} PROPERTIES
