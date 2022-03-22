@@ -1,6 +1,7 @@
 #ifndef DAKKU_SRC_CORE_MEMORY_H_
 #define DAKKU_SRC_CORE_MEMORY_H_
 #include <core/fwd.h>
+#include <core/logger.h>
 #if __has_include(<malloc.h>)
 #include <malloc.h>
 #endif
@@ -16,14 +17,14 @@ DAKKU_BEGIN
 
 class L1CacheLineAlignedResource : public std::pmr::memory_resource {
  public:
-  void *do_allocate(size_t bytes, size_t) override {
+  void *do_allocate(size_t bytes, size_t align) override {
     DAKKU_DEBUG("allocate pool of {} bytes", bytes);
-    return upStream->allocate(bytes, L1_CACHE_LINE_SIZE);
+    return upStream->allocate(bytes, std::max(align, L1_CACHE_LINE_SIZE));
   }
 
-  void do_deallocate(void *ptr, size_t bytes, size_t) override {
+  void do_deallocate(void *ptr, size_t bytes, size_t align) override {
     DAKKU_DEBUG("deallocate pool of {} bytes", bytes);
-    upStream->deallocate(ptr, bytes, L1_CACHE_LINE_SIZE);
+    upStream->deallocate(ptr, bytes, std::max(align, L1_CACHE_LINE_SIZE));
   }
 
   [[nodiscard]] bool do_is_equal(
