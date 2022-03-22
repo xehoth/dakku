@@ -10,12 +10,16 @@
 
 DAKKU_BEGIN
 
-class DAKKU_EXPORT_CORE TransformCache final : Singleton<TransformCache> {
+class DAKKU_EXPORT_CORE TransformCache final
+    : public Singleton<TransformCache> {
  public:
   const Transform *lookUp(const Transform &t);
   void clear();
 
  private:
+  friend class Singleton<TransformCache>;
+
+  explicit TransformCache() = default;
   struct TransformCacheEqual {
     bool operator()(const Transform *a, const Transform *b) const noexcept {
       return a == b && *a == *b;
