@@ -112,6 +112,9 @@ class Filter;
 class Shape;
 struct Interaction;
 class SurfaceInteraction;
+class VisibilityTester;
+class Light;
+class AreaLight;
 class Primitive;
 
 class RenderState;
