@@ -1,24 +1,20 @@
 #ifndef DAKKU_SRC_CORE_RELATIVE_H_
 #define DAKKU_SRC_CORE_RELATIVE_H_
-#include <core/fwd.h>
+#include <core/singleton.h>
 #include <string>
 #include <filesystem>
 
 DAKKU_BEGIN
-struct RelativeRoot final {
+struct DAKKU_EXPORT_CORE RelativeRoot final : public Singleton<RelativeRoot> {
  public:
-  static const std::string &get() { return dir(); }
-  static void set(const std::filesystem::path &sceneFilePath) {
-    std::string path = sceneFilePath.parent_path().string();
-    if (!path.ends_with('/')) path += "/";
-    dir() = path;
-  }
+  [[nodiscard]] const std::string &get() const;
+  void set(const std::filesystem::path &sceneFilePath);
 
  private:
-  static std::string &dir() {
-    static std::string str;
-    return str;
-  }
+  explicit RelativeRoot() = default;
+  friend class Singleton<RelativeRoot>;
+
+  std::string dir;
 };
 DAKKU_END
 #endif  // DAKKU_SRC_CORE_RELATIVE_H_
