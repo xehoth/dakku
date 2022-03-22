@@ -50,7 +50,7 @@ class FileOutputStream : public OutputStream {
    * @param size the number of bytes
    * @return the actual number of bytes the stream writes
    */
-  size_t writeBytes(void *ptr, size_t size) override;
+  size_t writeBytes(const void *ptr, size_t size) override;
 
  protected:
   std::ofstream stream;

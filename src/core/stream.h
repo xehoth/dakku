@@ -37,7 +37,7 @@ class OutputStream {
    * @param size the size of bytes
    * @return the size actually write
    */
-  virtual size_t writeBytes(void *ptr, size_t size) = 0;
+  virtual size_t writeBytes(const void *ptr, size_t size) = 0;
 };
 DAKKU_END
 #endif  // DAKKU_SRC_CORE_STREAM_H_
