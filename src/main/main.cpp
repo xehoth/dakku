@@ -19,6 +19,8 @@ int main(int argc, const char *argv[]) {
 //  std::cout << a;
   renderState.load("../../../assets/scene.json");
 //  renderState.save("../../../assets/scene_bak.json");
+//  renderState.load("../../../assets/scene_bak.json");
+//  renderState.save("../../../assets/scene_bak_bak.json");
 //  auto state = RenderState::load("../../../assets/scene.json");
 //  state->save("../../../assets/scene_bak.json");
 //  std::cout << state->film.getSampleBounds();
