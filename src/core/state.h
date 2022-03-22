@@ -3,6 +3,7 @@
 #include <core/sobject.h>
 #include <core/film.h>
 #include <filesystem>
+#include <map>
 
 DAKKU_BEGIN
 class RenderState final : public SerializableObject {
@@ -16,6 +17,7 @@ class RenderState final : public SerializableObject {
   void unserialize(const Json &json, InputStream *stream) override;
 
   Film film;
+  std::map<std::string, std::unique_ptr<Shape>> shapes;
 };
 
 extern DAKKU_EXPORT_CORE RenderState renderState;
