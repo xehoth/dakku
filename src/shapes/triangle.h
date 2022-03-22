@@ -2,6 +2,7 @@
 #define DAKKU_SRC_SHAPES_TRIANGLE_H_
 #include <core/shape.h>
 #include <span>
+#include <string>
 
 DAKKU_BEGIN
 
@@ -29,9 +30,17 @@ class Triangle : public Shape {
 class TriangleMesh : public Shape {
  public:
   DAKKU_DECLARE_OBJECT(TriangleMesh);
+  Interaction sample(const Point2f &u, Float &pdf) const override;
+  [[nodiscard]] Float area() const override;
   void serialize(Json &json, OutputStream *stream) const override;
   void unserialize(const Json &json, InputStream *stream) override;
 
+  friend class Triangle;
+
+ private:
+  void loadMesh(const std::string &path);
+  void assign(std::span<const int> i, std::span<const Float> p,
+              std::span<const Float> n, std::span<const Float> uv);
   int nTriangles{};
   int nVertices{};
   std::unique_ptr<int[]> indices{};
@@ -39,7 +48,6 @@ class TriangleMesh : public Shape {
   std::unique_ptr<Normal3f[]> n{};
   std::unique_ptr<Point2f[]> uv{};
   std::unique_ptr<Triangle[]> triangles{};
-
 };
 
 inline void Triangle::getTexCoords(std::span<Point2f, 3> uv) {
