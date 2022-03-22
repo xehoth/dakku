@@ -14,7 +14,16 @@ class FileInputStream : public InputStream {
    * @param path the path of the file
    */
   explicit FileInputStream(const std::filesystem::path &path);
+  /**
+   * @return one byte read from the stream
+   */
   std::uint8_t readByte() override;
+  /**
+   * read [size] bytes into [ptr]
+   * @param ptr the address of the buffer
+   * @param size the number of bytes to read
+   * @return the actual number of bytes that the stream reads
+   */
   size_t readBytes(void *ptr, size_t size) override;
 
  protected:
@@ -30,7 +39,17 @@ class FileOutputStream : public OutputStream {
    * @param path the path of the file
    */
   explicit FileOutputStream(const std::filesystem::path &path);
+  /**
+   * write one byte
+   * @param value the byte to write
+   */
   void writeByte(std::uint8_t value) override;
+  /**
+   * write [size] bytes starting at [ptr]
+   * @param ptr the starting pointer (buffer address)
+   * @param size the number of bytes
+   * @return the actual number of bytes the stream writes
+   */
   size_t writeBytes(void *ptr, size_t size) override;
 
  protected:

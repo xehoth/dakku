@@ -4,6 +4,10 @@
 #include <iterator>
 
 DAKKU_BEGIN
+/**
+ * 2d bounding box
+ * @tparam T precision type
+ */
 template <ArithmeticType T>
 class Bounds2 {
  public:
@@ -11,14 +15,28 @@ class Bounds2 {
       : pMin(std::numeric_limits<T>::max()),
         pMax(std::numeric_limits<T>::lowest()) {}
   explicit Bounds2(const Point2<T> &p) : pMin(p), pMax(p) {}
+  /**
+   * construct a bounding box with two points
+   * take the min and max of the two points
+   */
   explicit Bounds2(const Point2<T> &p1, const Point2<T> &p2)
       : pMin(min(p1, p2)), pMax(max(p1, p2)) {}
+  /**
+   * explicit cast between different precisions
+   */
   template <ArithmeticType U>
   explicit operator Bounds2<U>() const {
     return Bounds2<U>(Point2<U>(pMin), Point2<U>(pMax));
   }
-  Vector2<T> diagonal() const { return pMax - pMin; }
-  T area() const {
+  /**
+   * get the diagonal of the bounding box
+   * @return the diagonal
+   */
+  [[nodiscard]] Vector2<T> diagonal() const { return pMax - pMin; }
+  /**
+   * @return the area of the bounding box
+   */
+  [[nodiscard]] T area() const {
     auto d = diagonal();
     return d.x() * d.y();
   }
@@ -35,6 +53,9 @@ class Bounds2 {
 using Bounds2i = Bounds2<int>;
 using Bounds2f = Bounds2<Float>;
 
+/**
+ * @return intersection between two bounding boxes
+ */
 template <ArithmeticType T>
 Bounds2<T> intersect(const Bounds2<T> &b1, const Bounds2<T> &b2) {
   // note: cannot direct use the constructor
@@ -45,12 +66,18 @@ Bounds2<T> intersect(const Bounds2<T> &b1, const Bounds2<T> &b2) {
   return ret;
 }
 
+/**
+ * @return check whether pt is inside b (exclusive)
+ */
 template <ArithmeticType T>
 bool insideExclusive(const Point2<T> &pt, const Bounds2<T> &b) {
   return (pt.x() >= b.pMin.x() && pt.x() < b.pMax.x() && pt.y() >= b.pMin.y() &&
           pt.y() < b.pMax.y());
 }
 
+/**
+ * an iterator which iterates all coordinates in the bounding box
+ */
 class Bounds2iIterator : public std::forward_iterator_tag {
  public:
   explicit Bounds2iIterator(const Bounds2i &b, const Point2i &pt)

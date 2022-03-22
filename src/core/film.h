@@ -9,11 +9,17 @@
 #include <mutex>
 
 DAKKU_BEGIN
+/**
+ * dakku film tile pixel
+ */
 struct FilmTilePixel {
   Spectrum contribSum;
   Float filterWeightSum{};
 };
 
+/**
+ * dakku Film
+ */
 class Film : public SerializableObject {
  public:
   DAKKU_DECLARE_OBJECT(Film);
