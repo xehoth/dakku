@@ -19,6 +19,8 @@ inline LightFlags operator|(const LightFlags &a, const LightFlags &b) {
 
 class Light : public SerializableObject {
  public:
+  DAKKU_DECLARE_OBJECT(Light);
+
   void construct(LightFlags flags, const Transform &lightToWorld,
                  int nSamples = 1);
 
@@ -58,6 +60,8 @@ class VisibilityTester {
 
 class AreaLight : public Light {
  public:
+  DAKKU_DECLARE_OBJECT(AreaLight);
+
   void construct(const Transform &lightToWorld, int nSamples);
   /**
    * evaluate the area light's emitted radiance given the light sample point and
