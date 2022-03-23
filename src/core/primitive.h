@@ -36,7 +36,7 @@ class GeometricPrimitive : public Primitive {
 
   friend class RenderState;
 
- private:
+ protected:
   const Shape *shape{};
   const Material *material{};
   const AreaLight *areaLight{};

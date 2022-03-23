@@ -48,10 +48,12 @@ const AreaLight *Aggregate::getAreaLight() const {
   DAKKU_ERR("use GeometricPrimitive::getAreaLight() instead!");
   return nullptr;
 }
+
 const Material *Aggregate::getMaterial() const {
   DAKKU_ERR("use GeometricPrimitive::getMaterial() instead!");
   return nullptr;
 }
+
 void Aggregate::computeScatteringFunctions(SurfaceInteraction &,
                                            MemoryArena &) const {
   DAKKU_ERR("use GeometricPrimitive::computeScatteringFunctions instead!");
