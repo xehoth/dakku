@@ -5,6 +5,7 @@
 #include <core/stream.h>
 #include <core/transform_cache.h>
 #include <core/relative.h>
+#include <core/state.h>
 #include <igl/readOBJ.h>
 #include <igl/per_vertex_normals.h>
 #include <filesystem>
@@ -182,5 +183,21 @@ Interaction TriangleMesh::sample(const Point2f &u, Float &pdf) const {
 Float TriangleMesh::area() const {
   DAKKU_ERR("cannot call area in triangle mesh, use triangle instead");
   return 0;
+}
+
+void TriangleMeshPrimitive::unserialize(const Json &json, InputStream *stream) {
+  std::string shapeName;
+  if (json.contains("shape")) {
+    json.at("shapes").get_to(shapeName);
+  } else {
+    DAKKU_ERR("no shape for primitive");
+  }
+  const Shape *_shape{};
+  if (auto it = renderState.shapes.find(shapeName); it != renderState.shapes.end()) {
+    _shape = it->second.get();
+  } else {
+    DAKKU_ERR("cannot find shape: {}", shapeName);
+  }
+  
 }
 DAKKU_END

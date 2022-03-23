@@ -1,6 +1,7 @@
 #ifndef DAKKU_SRC_SHAPES_TRIANGLE_H_
 #define DAKKU_SRC_SHAPES_TRIANGLE_H_
 #include <core/shape.h>
+#include <core/primitive.h>
 #include <span>
 #include <string>
 
@@ -20,7 +21,8 @@ class Triangle : public Shape {
   void unserialize(const Json &json, InputStream *stream) override;
   [[nodiscard]] Float area() const override;
   Interaction sample(const Point2f &u, Float &pdf) const override;
-  inline void getTexCoords(std::span<Point2f, 3> uv);
+  inline void getTexCoords(std::span<Point2f, 3> uv) const;
+  [[nodiscard]] inline Normal3f getShadingNormal(Float _u, Float _v) const;
 
  private:
   const int *v{};
@@ -34,7 +36,13 @@ class TriangleMesh : public Shape {
   [[nodiscard]] Float area() const override;
   void serialize(Json &json, OutputStream *stream) const override;
   void unserialize(const Json &json, InputStream *stream) override;
-
+  [[nodiscard]] const int *getIndices() const { return indices.get(); }
+  [[nodiscard]] const Point3f *getVertices() const { return p.get(); }
+  [[nodiscard]] int getNumTriangles() const { return nTriangles; }
+  [[nodiscard]] int getNumVertices() const { return nVertices; }
+  [[nodiscard]] const Triangle *getTriangle(size_t idx) const {
+    return &triangles[idx];
+  }
   friend class Triangle;
 
  private:
@@ -50,7 +58,7 @@ class TriangleMesh : public Shape {
   std::unique_ptr<Triangle[]> triangles{};
 };
 
-inline void Triangle::getTexCoords(std::span<Point2f, 3> uv) {
+inline void Triangle::getTexCoords(std::span<Point2f, 3> uv) const {
   if (mesh->uv) {
     uv[0] = mesh->uv[v[0]];
     uv[1] = mesh->uv[v[1]];
@@ -61,6 +69,27 @@ inline void Triangle::getTexCoords(std::span<Point2f, 3> uv) {
     uv[2] = Point2f(1, 1);
   }
 }
+
+Normal3f Triangle::getShadingNormal(Float _u, Float _v) const {
+  return barycentricInterpolate(mesh->n[v[1]], mesh->n[v[2]], mesh->n[v[0]],
+                                Point2f(_u, _v))
+      .normalized();
+}
+
+class TriangleMeshPrimitive : public GeometricPrimitive {
+ public:
+  DAKKU_DECLARE_OBJECT(TriangleMeshPrimitive);
+
+  void serialize(Json &json, OutputStream *stream) const override;
+  void unserialize(const Json &json, InputStream *stream) override;
+
+  const GeometricPrimitive *getTrianglePrimitive(size_t idx) const {
+    return &primTriangles[idx];
+  }
+
+ private:
+  std::unique_ptr<GeometricPrimitive[]> primTriangles;
+};
 
 DAKKU_END
 #endif  // DAKKU_SRC_SHAPES_TRIANGLE_H_
