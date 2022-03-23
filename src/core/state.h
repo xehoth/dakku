@@ -3,6 +3,7 @@
 #include <core/sobject.h>
 #include <core/film.h>
 #include <core/material.h>
+#include <core/texture.h>
 #include <filesystem>
 #include <map>
 
@@ -21,6 +22,8 @@ class RenderState final : public SerializableObject {
   std::map<std::string, std::unique_ptr<Shape>> shapes;
   std::map<std::string, std::unique_ptr<Primitive>> primitives;
   std::map<std::string, std::unique_ptr<Material>> materials;
+  std::map<std::string, std::unique_ptr<Texture<Float>>> floatTextures;
+  std::map<std::string, std::unique_ptr<Texture<Spectrum>>> spectrumTextures;
 };
 
 extern DAKKU_EXPORT_CORE RenderState renderState;

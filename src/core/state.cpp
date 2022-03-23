@@ -13,12 +13,23 @@ void RenderState::serialize(Json &json, OutputStream *stream) const {
   // shapes
   auto &jShape = json["shapes"];
   for (auto &[k, v] : shapes) v->serialize(jShape[k], stream);
+  // textures
+  auto &jTexture = json["textures"];
+  for (auto &[k, v] : floatTextures) {
+    jTexture[k]["float"] = true;
+    v->serialize(jTexture[k], stream);
+  }
+  for (auto &[k, v] : spectrumTextures) {
+    jTexture[k]["float"] = false;
+    v->serialize(jTexture[k], stream);
+  }
+
   // materials
-//  auto &jMaterial = json["materials"];
-//  for (auto &[k, v] : materials) v->serialize(jMaterial[k], stream);
+  auto &jMaterial = json["materials"];
+  for (auto &[k, v] : materials) v->serialize(jMaterial[k], stream);
   // primitives
-//  auto &jPrimitive = json["primitives"];
-//  for (auto &[k, v] : primitives) v->serialize(jPrimitive[k], stream);
+  auto &jPrimitive = json["primitives"];
+  for (auto &[k, v] : primitives) v->serialize(jPrimitive[k], stream);
 }
 
 void RenderState::unserialize(const Json &json, InputStream *stream) {
@@ -41,51 +52,71 @@ void RenderState::unserialize(const Json &json, InputStream *stream) {
   } else {
     DAKKU_WARN("no shapes in the scene");
   }
+  // textures
+  if (json.contains("textures")) {
+    const auto &jTexture = json["textures"];
+    for (auto it = jTexture.begin(); it != jTexture.end(); ++it) {
+      std::string type;
+      if (!it->contains("class")) {
+        DAKKU_ERR("texture type is unknown");
+      } else {
+        it->at("class").get_to(type);
+      }
+      bool isFloatTexture = false;
+      if (!it->contains("float")) {
+        DAKKU_WARN("float / spectrum texture is unknown, default use spectrum");
+      } else {
+        it->at("float").get_to(isFloatTexture);
+      }
+      if (isFloatTexture) {
+        std::unique_ptr<Texture<Float>> pTex{
+            dynamic_cast<Texture<Float> *>(Class::instance().create(type))};
+        pTex->unserialize(*it, stream);
+        this->floatTextures[it.key()] = std::move(pTex);
+      } else {
+        std::unique_ptr<Texture<Spectrum>> pTex{
+            dynamic_cast<Texture<Spectrum> *>(Class::instance().create(type))};
+        pTex->unserialize(*it, stream);
+        this->spectrumTextures[it.key()] = std::move(pTex);
+      }
+    }
+  } else {
+    DAKKU_WARN("no textures in the scene");
+  }
 
   // materials
+  if (json.contains("materials")) {
+    const auto &jMaterial = json["materials"];
+    for (auto it = jMaterial.begin(); it != jMaterial.end(); ++it) {
+      std::string type;
+      if (!it->contains("class")) {
+        DAKKU_ERR("material type is unknown");
+      } else {
+        it->at("class").get_to(type);
+      }
+      std::unique_ptr<Material> pMat{
+          dynamic_cast<Material *>(Class::instance().create(type))};
+      pMat->unserialize(*it, stream);
+      this->materials[it.key()] = std::move(pMat);
+    }
+  }
 
   // primitives
-//  if (json.contains("primitives")) {
-//    const auto &jPrimitive = json["primitives"];
-//    for (auto it = jPrimitive.begin(); it != jPrimitive.end(); ++it) {
-//      std::string type;
-//      if (!it->contains("class")) {
-//        DAKKU_ERR("primitive type is unknown");
-//      } else {
-//        it->at("class").get_to(type);
-//      }
-//      std::string shape, material;
-//      const Shape *pShape{};
-//      const Material *pMaterial{};
-//      if (!it->contains("shape")) {
-//        DAKKU_ERR("primitive does not have a shape");
-//      } else {
-//        it->at("shape").get_to(shape);
-//        if (auto shapeIt = this->shapes.find(shape);
-//            shapeIt != this->shapes.end()) {
-//          pShape = shapeIt->second.get();
-//        } else {
-//          DAKKU_WARN("cannot find shape {} in shape map, use nullptr", shape);
-//        }
-//      }
-//      if (!it->contains("material")) {
-//        DAKKU_ERR("primitive does not have a material");
-//      } else {
-//        it->at("material").get_to(material);
-//        if (auto matIt = this->materials.find(material);
-//            matIt != this->materials.end()) {
-//          pMaterial = matIt->second.get();
-//        } else {
-//          DAKKU_ERR("cannot find material {} in material map, use nullptr",
-//                    material);
-//        }
-//      }
-//      std::unique_ptr<Primitive> pPrimitive{
-//          dynamic_cast<Primitive *>(Class::instance().create(type))};
-//      pPrimitive->unserialize(*it, stream);
-//      this->primitives[it.key()] = std::move(pPrimitive);
-//    }
-//  }
+  if (json.contains("primitives")) {
+    const auto &jPrimitive = json["primitives"];
+    for (auto it = jPrimitive.begin(); it != jPrimitive.end(); ++it) {
+      std::string type;
+      if (!it->contains("class")) {
+        DAKKU_ERR("primitive type is unknown");
+      } else {
+        it->at("class").get_to(type);
+      }
+      std::unique_ptr<Primitive> pPrimitive{
+          dynamic_cast<Primitive *>(Class::instance().create(type))};
+      pPrimitive->unserialize(*it, stream);
+      this->primitives[it.key()] = std::move(pPrimitive);
+    }
+  }
 }
 
 void RenderState::load(const std::filesystem::path &path) {
