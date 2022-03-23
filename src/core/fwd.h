@@ -116,6 +116,11 @@ class VisibilityTester;
 class Light;
 class AreaLight;
 class Primitive;
+class Material;
+
+class MemoryArena;
+template <typename T>
+class TypedMemoryArena;
 
 class RenderState;
 DAKKU_END
