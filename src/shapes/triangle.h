@@ -83,7 +83,8 @@ class TriangleMeshPrimitive : public GeometricPrimitive {
   void serialize(Json &json, OutputStream *stream) const override;
   void unserialize(const Json &json, InputStream *stream) override;
 
-  const GeometricPrimitive *getTrianglePrimitive(size_t idx) const {
+  [[nodiscard]] const GeometricPrimitive *getTrianglePrimitive(
+      size_t idx) const {
     return &primTriangles[idx];
   }
 

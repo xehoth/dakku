@@ -127,6 +127,12 @@ void TriangleMesh::loadMesh(const std::string &fileName) {
     if (!igl::readOBJ(path.string(), V, TC, N, F, FTC, FN)) {
       DAKKU_ERR("failed to read obj: {}", path);
     }
+    if (N.rows() == 0) {
+      DAKKU_INFO(
+          "normal is not provided in the mesh, use calculated per vertex "
+          "normal instead!");
+      igl::per_vertex_normals(V, F, N);
+    }
 
     Eigen::Matrix<Float, Eigen::Dynamic, Eigen::Dynamic> f_V =
         V.cast<Float>().transpose();
@@ -188,16 +194,28 @@ Float TriangleMesh::area() const {
 void TriangleMeshPrimitive::unserialize(const Json &json, InputStream *stream) {
   std::string shapeName;
   if (json.contains("shape")) {
-    json.at("shapes").get_to(shapeName);
+    json.at("shape").get_to(shapeName);
   } else {
     DAKKU_ERR("no shape for primitive");
   }
   const Shape *_shape{};
-  if (auto it = renderState.shapes.find(shapeName); it != renderState.shapes.end()) {
+  if (auto it = renderState.shapes.find(shapeName);
+      it != renderState.shapes.end()) {
     _shape = it->second.get();
   } else {
     DAKKU_ERR("cannot find shape: {}", shapeName);
   }
-  
+}
+
+void TriangleMeshPrimitive::serialize(Json &json, OutputStream *stream) const {
+  std::string shapeName;
+  // TODO: optimize this
+  for (const auto &[k, v] : renderState.shapes) {
+    if (v.get() == this->shape) {
+      shapeName = k;
+      break;
+    }
+  }
+  json["shape"] = shapeName;
 }
 DAKKU_END
