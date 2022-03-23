@@ -1,6 +1,8 @@
 #include <core/api.h>
 #include <filters/api.h>
 #include <shapes/api.h>
+#include <textures/api.h>
+#include <materials/api.h>
 #include <core/transform.h>
 #include <cxxopts.hpp>
 #include <iostream>
@@ -10,6 +12,8 @@ int main(int argc, const char *argv[]) {
   core::init();
   filters::init();
   shapes::init();
+  textures::init();
+  materials::init();
 //  Json json = Json::parse("[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]");
 //  Matrix4x4 a = json;
 //  std::cout << a << std::endl;
