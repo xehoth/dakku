@@ -2,6 +2,7 @@
 #define DAKKU_SRC_CORE_STATE_H_
 #include <core/sobject.h>
 #include <core/film.h>
+#include <core/material.h>
 #include <filesystem>
 #include <map>
 
@@ -18,6 +19,8 @@ class RenderState final : public SerializableObject {
 
   Film film;
   std::map<std::string, std::unique_ptr<Shape>> shapes;
+  std::map<std::string, std::unique_ptr<Primitive>> primitives;
+  std::map<std::string, std::unique_ptr<Material>> materials;
 };
 
 extern DAKKU_EXPORT_CORE RenderState renderState;
