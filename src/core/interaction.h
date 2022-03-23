@@ -22,7 +22,12 @@ class SurfaceInteraction : public Interaction {
                               const Vector3f &wo, const Normal3f &n,
                               const Shape *shape)
       : Interaction(p, wo, n), uv(uv), shape(shape) {}
+  void setShadingGeometry(const Normal3f &n, bool orientationIsAuthoritative);
+
   Point2f uv;
+  struct {
+    Normal3f n;
+  } shading;
   const Shape *shape{};
   const Primitive *primitive{};
 };
