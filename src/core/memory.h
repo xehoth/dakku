@@ -50,5 +50,19 @@ class TypedMemoryArena {
   std::pmr::unsynchronized_pool_resource resource{&upStream};
   std::pmr::polymorphic_allocator<T> allocator{&resource};
 };
+
+class MemoryArena {
+ public:
+  template <typename T, typename... Args>
+  T *allocObject(Args &&...args) {
+    return std::pmr::polymorphic_allocator<T>{&resource}.template new_object<T>(
+        std::forward<Args>(args)...);
+  }
+  void release() { resource.release(); }
+
+ private:
+  L1CacheLineAlignedResource upStream;
+  std::pmr::unsynchronized_pool_resource resource{&upStream};
+};
 DAKKU_END
 #endif  // DAKKU_SRC_CORE_MEMORY_H_
