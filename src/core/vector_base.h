@@ -149,6 +149,10 @@ class VectorBase {
   }
   decltype(auto) squaredNorm() const { return _data.squaredNorm(); }
   decltype(auto) norm() const { return _data.norm(); }
+  template <typename OtherDerived>
+  Derived faceForward(const VectorBase<T, size, OtherDerived> &ref) const {
+    return dot(ref) < 0 ? -*this : *this;
+  }
 
   friend Derived min(const VectorBase &a, const VectorBase &b) {
     return VectorBase(a._data.cwiseMin(b._data));
@@ -179,9 +183,9 @@ class VectorBase {
   }
 
   friend inline Derived barycentricInterpolate(const VectorBase &a,
-                                                  const VectorBase &b,
-                                                  const VectorBase &c,
-                                                  const Point2f &u) {
+                                               const VectorBase &b,
+                                               const VectorBase &c,
+                                               const Point2f &u) {
     return b[0] * a + b[1] * b + (1 - b[0] - b[1]) * c;
   }
 
