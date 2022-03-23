@@ -30,6 +30,7 @@ class SurfaceInteraction : public Interaction {
   } shading;
   const Shape *shape{};
   const Primitive *primitive{};
+  BSDF *bsdf{};
 };
 DAKKU_END
 
