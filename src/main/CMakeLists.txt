@@ -8,7 +8,7 @@ target_include_directories(dakku PRIVATE ${CMAKE_SOURCE_DIR}/src)
 target_compile_features(dakku PRIVATE cxx_std_20)
 target_link_libraries(dakku PRIVATE cxxopts::cxxopts
         dakku::core dakku::filters dakku::shapes dakku::accelerators
-        dakku::textures dakku::materials dakku::lights
+        dakku::textures dakku::materials dakku::lights dakku::cameras
         )
 set_target_properties(dakku PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/$<CONFIG>/bin)
 if (WIN32)

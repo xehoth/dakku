@@ -109,4 +109,11 @@ bool EmbreeAccel::intersectP(const Ray &r) const {
   return rtcRay.tfar < 0;
 }
 
+void EmbreeAccel::serialize(Json &json, OutputStream *) const {
+  DAKKU_ERR("unimplemented");
+}
+void EmbreeAccel::unserialize(const Json &json, InputStream *) {
+  DAKKU_ERR("unimplemented");
+}
+
 DAKKU_END

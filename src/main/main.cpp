@@ -3,6 +3,9 @@
 #include <shapes/api.h>
 #include <textures/api.h>
 #include <materials/api.h>
+#include <cameras/api.h>
+#include <lights/api.h>
+#include <accelerators/api.h>
 #include <core/transform.h>
 #include <cxxopts.hpp>
 #include <iostream>
@@ -14,20 +17,21 @@ int main(int argc, const char *argv[]) {
   shapes::init();
   textures::init();
   materials::init();
-//  Json json = Json::parse("[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]");
-//  Matrix4x4 a = json;
-//  std::cout << a << std::endl;
-//  Json out = a;
-//  std::cout << out << std::endl;
-//  a = out;
-//  std::cout << a;
+  cameras::init();
+  lights::init();
+  accelerators::init();
+  //  Json json = Json::parse("[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
+  //  14, 15]"); Matrix4x4 a = json; std::cout << a << std::endl; Json out = a;
+  //  std::cout << out << std::endl;
+  //  a = out;
+  //  std::cout << a;
   renderState.load("../../../assets/scene.json");
-//  renderState.save("../../../assets/scene_bak.json");
-//  renderState.load("../../../assets/scene_bak.json");
-//  renderState.save("../../../assets/scene_bak_bak.json");
-//  auto state = RenderState::load("../../../assets/scene.json");
-//  state->save("../../../assets/scene_bak.json");
-//  std::cout << state->film.getSampleBounds();
+  //  renderState.save("../../../assets/scene_bak.json");
+  //  renderState.load("../../../assets/scene_bak.json");
+  //  renderState.save("../../../assets/scene_bak_bak.json");
+  //  auto state = RenderState::load("../../../assets/scene.json");
+  //  state->save("../../../assets/scene_bak.json");
+  //  std::cout << state->film.getSampleBounds();
   // Class a;
   //   cxxopts::Options options("dakku", "renderer");
   //   options.add_options()("s,scene", "scene file",

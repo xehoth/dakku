@@ -15,6 +15,10 @@ DAKKU_BEGIN
 class EmbreeAccel : public Aggregate {
  public:
   DAKKU_DECLARE_OBJECT(EmbreeAccel);
+
+  void serialize(Json &json, OutputStream *) const override;
+  void unserialize(const Json &json, InputStream *) override;
+
   explicit EmbreeAccel(std::span<const Primitive *> primitives);
   ~EmbreeAccel() override;
   bool intersect(const Ray &r, SurfaceInteraction &) const override;
