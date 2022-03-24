@@ -128,8 +128,12 @@ concept TextureDataType = std::is_same_v<T, Float> || std::is_same_v<T, Spectrum
 template <TextureDataType T>
 class Texture;
 class Scene;
+class RNG;
 class Sampler;
 class Integrator;
+struct CameraSample;
+class Camera;
+class ProjectiveCamera;
 
 class MemoryArena;
 template <typename T>
