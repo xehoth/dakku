@@ -15,6 +15,10 @@ inline bool isNaN(const int x) {
   return false;
 }
 
+inline Float radians(Float deg) { return PI / 180 * deg; }
+
+inline Float degrees(Float rad) { return 180 / PI * rad; }
+
 DAKKU_END
 
 #endif  // DAKKU_SRC_CORE_MATH_H_
