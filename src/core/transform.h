@@ -174,5 +174,15 @@ inline bool Transform::swapsHandedNess() const {
   return m._data.block<3, 3>(0, 0).determinant() < 0;
 }
 
+Transform translate(const Vector3f &delta);
+Transform scale(Float x, Float y, Float z);
+Transform rotateX(Float theta);
+Transform rotateY(Float theta);
+Transform rotateZ(Float theta);
+Transform rotate(Float theta, const Vector3f &axis);
+Transform lookAt(const Point3f &pos, const Point3f &look,
+                 const Vector3f &refUp);
+// the shorter edge mapped to [-1, 1], the longer [-ratio, ratio]
+Transform perspective(Float fov, Float znear, Float zfar);
 DAKKU_END
 #endif  // DAKKU_SRC_CORE_TRANSFORM_H_
