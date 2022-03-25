@@ -23,6 +23,8 @@ struct CameraSample {
 
 class ProjectiveCamera : public Camera {
  public:
+  DAKKU_DECLARE_OBJECT(ProjectiveCamera);
+
   void construct(const Transform &_cameraToWorld,
                  const Transform &_cameraToScreen, const Bounds2f &screenWindow,
                  Film *film) {

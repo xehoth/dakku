@@ -5,7 +5,7 @@ file(GLOB SRC_FILES "*.cpp" "*.h")
 add_library(${PROJECT_NAME} SHARED ${SRC_FILES})
 target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_SOURCE_DIR}/src)
 target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_20)
-target_link_libraries(${PROJECT_NAME} PUBLIC dakku::core)
+target_link_libraries(${PROJECT_NAME} PUBLIC dakku::core dakku::shapes)
 add_library(dakku::lights ALIAS ${PROJECT_NAME})
 
 set_target_properties(${PROJECT_NAME} PROPERTIES

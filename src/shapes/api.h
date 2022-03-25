@@ -10,6 +10,7 @@ namespace shapes {
 void init() {
   DAKKU_REGISTER_CLASS(Triangle);
   DAKKU_REGISTER_CLASS(TriangleMesh);
+  DAKKU_REGISTER_CLASS(TriangleMeshPrimitive);
 }
 }  // namespace shapes
 DAKKU_END

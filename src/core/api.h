@@ -13,7 +13,8 @@ namespace core {
  * initialize dakku::core
  */
 static void init() {
-  logger::init();
+  logger::init("log.txt");
+//  logger::init();
   DAKKU_REGISTER_CLASS(Object);
   DAKKU_REGISTER_CLASS(Film);
   DAKKU_REGISTER_CLASS(RenderState);

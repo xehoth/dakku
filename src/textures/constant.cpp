@@ -1,4 +1,6 @@
 #include <textures/constant.h>
+#include <core/spectrum.h>
+
 DAKKU_BEGIN
 
 void ConstantFloatTexture::serialize(Json &json, OutputStream *) const {

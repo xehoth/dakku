@@ -3,6 +3,7 @@ project(dakku-core LANGUAGES CXX)
 find_package(Eigen3 CONFIG REQUIRED)
 find_package(spdlog CONFIG REQUIRED)
 find_package(nlohmann_json CONFIG REQUIRED)
+find_package(OpenImageIO CONFIG REQUIRED)
 
 file(GLOB SRC_FILES "*.cpp" "*.h")
 
@@ -10,7 +11,7 @@ add_library(${PROJECT_NAME} SHARED ${SRC_FILES})
 target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_SOURCE_DIR}/src)
 target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_20)
 target_link_libraries(${PROJECT_NAME} PUBLIC Eigen3::Eigen spdlog::spdlog
-        nlohmann_json::nlohmann_json)
+        nlohmann_json::nlohmann_json OpenImageIO::OpenImageIO)
 target_compile_definitions(${PROJECT_NAME} PRIVATE DAKKU_BUILD_MODULE=${DAKKU_MODULE_CORE})
 add_library(dakku::core ALIAS ${PROJECT_NAME})
 
