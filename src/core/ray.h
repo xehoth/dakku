@@ -11,7 +11,9 @@ class Ray {
       : o(o), d(d), tMax(tMax) {}
   Point3f operator()(Float t) const { return o + d * t; }
   bool hasNaN() const { return o.hasNaN() || d.hasNaN() || isNaN(tMax); }
-
+  friend std::ostream &operator<<(std::ostream &os, const Ray &r) {
+    return os << "{o: " << r.o << ", d: " << r.d << ", tMax: " << r.tMax << "}";
+  }
   Point3f o;
   Vector3f d;
   mutable Float tMax{INF};
@@ -40,5 +42,13 @@ class RayDifferential : public Ray {
   Point3f rxOrigin, ryOrigin;
   Vector3f rxDirection, ryDirection;
 };
+
+inline Point3f offsetRayOrigin(const Point3f &p, const Normal3f &n,
+                               const Vector3f &w) {
+  Vector3f offset = Vector3f(n) * SHADOW_EPS;
+  if (w.dot(n) < 0) offset = -offset;
+  Point3f po = p + offset;
+  return po;
+}
 DAKKU_END
 #endif  // DAKKU_SRC_CORE_RAY_H_
