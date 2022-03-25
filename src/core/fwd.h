@@ -72,6 +72,7 @@ using Point3 = Point<T, 3>;
 template <ArithmeticType T>
 using Normal3 = Normal<T, 3>;
 
+using Vector2i = Vector2<int>;
 using Vector2f = Vector2<Float>;
 using Vector3f = Vector3<Float>;
 using Point2i = Point2<int>;
@@ -131,6 +132,7 @@ class Scene;
 class RNG;
 class Sampler;
 class Integrator;
+class SamplerIntegrator;
 struct CameraSample;
 class Camera;
 class ProjectiveCamera;
