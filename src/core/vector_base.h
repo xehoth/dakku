@@ -91,6 +91,13 @@ class VectorBase {
     _data *= static_cast<T>(f);
     return *this;
   }
+  Derived operator*(const VectorBase &rhs) const {
+    return VectorBase(_data.cwiseProduct(rhs._data));
+  }
+  VectorBase &operator*=(const VectorBase &rhs) {
+    _data.array() *= rhs._data.array();
+    return *this;
+  }
   template <ArithmeticType U>
   requires std::is_same_v<std::common_type_t<T, U>, T>
   friend Derived operator*(U f, const VectorBase &rhs) {
@@ -153,6 +160,7 @@ class VectorBase {
   Derived faceForward(const VectorBase<T, size, OtherDerived> &ref) const {
     return dot(ref) < 0 ? -*this : *this;
   }
+  T maxComponentValue() const { return _data.maxCoeff(); }
 
   friend Derived min(const VectorBase &a, const VectorBase &b) {
     return VectorBase(a._data.cwiseMin(b._data));
@@ -180,13 +188,6 @@ class VectorBase {
   }
   Derived cross(const VectorBase &rhs) const {
     return VectorBase(_data.cross(rhs._data));
-  }
-
-  friend inline Derived barycentricInterpolate(const VectorBase &a,
-                                               const VectorBase &b,
-                                               const VectorBase &c,
-                                               const Point2f &u) {
-    return b[0] * a + b[1] * b + (1 - b[0] - b[1]) * c;
   }
 
   friend void to_json(nlohmann::json &nlohmann_json_j,

@@ -6,6 +6,7 @@
 #include <core/transform_cache.h>
 #include <core/relative.h>
 #include <core/state.h>
+#include <core/light.h>
 #include <igl/readOBJ.h>
 #include <igl/per_vertex_normals.h>
 #include <filesystem>
@@ -42,13 +43,15 @@ Interaction Triangle::sample(const Point2f &u, Float &pdf) const {
   const Point3f &p2 = mesh->p[v[2]];
   Interaction it;
 
-  it.p = barycentricInterpolate(p0, p1, p2, b);
+  it.p = Point3f((1 - b[0] - b[1]) * p0 + b[0] * p1 + b[1] * p2);
   // compute surface normal for sampled point on triangle
   it.n = Normal3f((p1 - p0).cross(p2 - p0)).normalized();
   // ensure correct orientation of the geometric normal
   if (mesh->n) {
-    Normal3f ns =
-        barycentricInterpolate(mesh->n[v[0]], mesh->n[v[1]], mesh->n[v[2]], b);
+    Normal3f ns = Normal3f((1 - b[0] - b[1]) * Vector3f(mesh->n[v[0]]) +
+                           b[0] * Vector3f(mesh->n[v[1]]) +
+                           b[1] * Vector3f(mesh->n[v[2]]))
+                      .normalized();
     it.n = faceforward(it.n, ns);
   } else if (transformSwapsHandedness) {
     it.n = -it.n;
@@ -204,6 +207,29 @@ void TriangleMeshPrimitive::unserialize(const Json &json, InputStream *stream) {
     _shape = it->second.get();
   } else {
     DAKKU_ERR("cannot find shape: {}", shapeName);
+  }
+
+  std::string matName;
+  if (json.contains("material")) {
+    json.at("material").get_to(matName);
+  } else {
+    DAKKU_ERR("no material for primitive");
+  }
+  const Material *_material{};
+  if (auto it = renderState.materials.find(matName);
+      it != renderState.materials.end()) {
+    _material = it->second.get();
+  } else {
+    DAKKU_ERR("cannot find material: {}", matName);
+  }
+
+  GeometricPrimitive::construct(_shape, _material, nullptr);
+  const auto *triMesh = dynamic_cast<const TriangleMesh *>(this->shape);
+  primTriangles =
+      std::make_unique<GeometricPrimitive[]>(triMesh->getNumTriangles());
+  for (int i = 0; i < triMesh->getNumTriangles(); ++i) {
+    primTriangles[i].construct(triMesh->getTriangle(i), this->material,
+                               this->areaLight);
   }
 }
 

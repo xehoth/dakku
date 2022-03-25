@@ -71,8 +71,8 @@ inline void Triangle::getTexCoords(std::span<Point2f, 3> uv) const {
 }
 
 Normal3f Triangle::getShadingNormal(Float _u, Float _v) const {
-  return barycentricInterpolate(mesh->n[v[1]], mesh->n[v[2]], mesh->n[v[0]],
-                                Point2f(_u, _v))
+  return Normal3f((1 - _u - _v) * Vector3f(mesh->n[v[0]]) +
+                  _u * Vector3f(mesh->n[v[1]]) + _v * Vector3f(mesh->n[v[2]]))
       .normalized();
 }
 
@@ -88,7 +88,6 @@ class TriangleMeshPrimitive : public GeometricPrimitive {
     return &primTriangles[idx];
   }
 
- private:
   std::unique_ptr<GeometricPrimitive[]> primTriangles;
 };
 
