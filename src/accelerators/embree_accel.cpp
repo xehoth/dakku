@@ -4,41 +4,7 @@
 
 DAKKU_BEGIN
 EmbreeAccel::EmbreeAccel(std::span<const Primitive *> _primitives) {
-  primitives.resize(_primitives.size());
-  triangles.resize(primitives.size());
-  for (size_t i = 0; i < _primitives.size(); ++i) {
-    const auto *op = _primitives[i];
-    DAKKU_CHECK(
-        op->getClassName() == TriangleMeshPrimitive::getClassNameStatic(),
-        "embree accel only supports triangle mesh");
-    const auto *p = dynamic_cast<const TriangleMeshPrimitive *>(op);
-    DAKKU_CHECK(
-        p->getShape()->getClassName() == TriangleMesh::getClassNameStatic(),
-        "embree accel only supports triangle mesh");
-    const auto *tri = dynamic_cast<const TriangleMesh *>(p->getShape());
-    primitives[i] = p;
-    triangles[i] = tri;
-  }
-  if (!this->rtcDevice) this->rtcDevice = rtcNewDevice(nullptr);
-  if (!this->rtcScene) {
-    this->rtcScene = rtcNewScene(this->rtcDevice);
-    rtcSetSceneBuildQuality(this->rtcScene, RTC_BUILD_QUALITY_HIGH);
-    rtcSetSceneFlags(this->rtcScene, RTC_SCENE_FLAG_ROBUST);
-  }
-  int idx = 0;
-  for (const auto &tri : triangles) {
-    auto geom = rtcNewGeometry(this->rtcDevice, RTC_GEOMETRY_TYPE_TRIANGLE);
-    rtcSetSharedGeometryBuffer(geom, RTC_BUFFER_TYPE_VERTEX, 0,
-                               RTC_FORMAT_FLOAT3, tri->getVertices(), 0,
-                               sizeof(Point3f), tri->getNumVertices());
-    rtcSetSharedGeometryBuffer(geom, RTC_BUFFER_TYPE_INDEX, 0, RTC_FORMAT_UINT3,
-                               tri->getIndices(), 0, sizeof(int) * 3,
-                               tri->getNumTriangles());
-    rtcCommitGeometry(geom);
-    rtcAttachGeometryByID(this->rtcScene, geom, idx++);
-    rtcReleaseGeometry(geom);
-  }
-  rtcCommitScene(this->rtcScene);
+  build(_primitives);
 }
 
 EmbreeAccel::~EmbreeAccel() {
@@ -88,17 +54,18 @@ bool EmbreeAccel::intersect(const Ray &r, SurfaceInteraction &isect) const {
 
   Float u = rayHit.hit.u;
   Float v = rayHit.hit.v;
+  Float w = 1 - u - v;
   const Triangle *tri = mesh->getTriangle(rayHit.hit.primID);
   Point2f uvs[3];
   tri->getTexCoords(uvs);
-  Point2f uv = barycentricInterpolate(uvs[1], uvs[2], uvs[0], Point2f(u, v));
+  Point2f uv = w * uvs[0] + u * uvs[1] + v * uvs[2];
   Normal3f geomNormal(rayHit.hit.Ng_x, rayHit.hit.Ng_y, rayHit.hit.Ng_z);
-
+  geomNormal.normalize();
   isect = SurfaceInteraction(pHit, uv, -r.d, geomNormal, tri);
   Normal3f hitN = tri->getShadingNormal(u, v);
   isect.setShadingGeometry(hitN, true);
   isect.primitive = triP;
-  return false;
+  return true;
 }
 
 bool EmbreeAccel::intersectP(const Ray &r) const {
@@ -112,8 +79,47 @@ bool EmbreeAccel::intersectP(const Ray &r) const {
 void EmbreeAccel::serialize(Json &json, OutputStream *) const {
   DAKKU_ERR("unimplemented");
 }
+
 void EmbreeAccel::unserialize(const Json &json, InputStream *) {
   DAKKU_ERR("unimplemented");
+}
+
+void EmbreeAccel::build(std::span<const Primitive *> _primitives) {
+  primitives.resize(_primitives.size());
+  triangles.resize(primitives.size());
+  for (size_t i = 0; i < _primitives.size(); ++i) {
+    const auto *op = _primitives[i];
+    DAKKU_CHECK(
+        op->getClassName() == TriangleMeshPrimitive::getClassNameStatic(),
+        "embree accel only supports triangle mesh");
+    const auto *p = dynamic_cast<const TriangleMeshPrimitive *>(op);
+    DAKKU_CHECK(
+        p->getShape()->getClassName() == TriangleMesh::getClassNameStatic(),
+        "embree accel only supports triangle mesh");
+    const auto *tri = dynamic_cast<const TriangleMesh *>(p->getShape());
+    primitives[i] = p;
+    triangles[i] = tri;
+  }
+  if (!this->rtcDevice) this->rtcDevice = rtcNewDevice(nullptr);
+  if (!this->rtcScene) {
+    this->rtcScene = rtcNewScene(this->rtcDevice);
+    rtcSetSceneBuildQuality(this->rtcScene, RTC_BUILD_QUALITY_HIGH);
+    rtcSetSceneFlags(this->rtcScene, RTC_SCENE_FLAG_ROBUST);
+  }
+  int idx = 0;
+  for (const auto &tri : triangles) {
+    auto geom = rtcNewGeometry(this->rtcDevice, RTC_GEOMETRY_TYPE_TRIANGLE);
+    rtcSetSharedGeometryBuffer(geom, RTC_BUFFER_TYPE_VERTEX, 0,
+                               RTC_FORMAT_FLOAT3, tri->getVertices(), 0,
+                               sizeof(Point3f), tri->getNumVertices());
+    rtcSetSharedGeometryBuffer(geom, RTC_BUFFER_TYPE_INDEX, 0, RTC_FORMAT_UINT3,
+                               tri->getIndices(), 0, sizeof(int) * 3,
+                               tri->getNumTriangles());
+    rtcCommitGeometry(geom);
+    rtcAttachGeometryByID(this->rtcScene, geom, idx++);
+    rtcReleaseGeometry(geom);
+  }
+  rtcCommitScene(this->rtcScene);
 }
 
 DAKKU_END

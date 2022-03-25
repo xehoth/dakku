@@ -20,6 +20,7 @@ class EmbreeAccel : public Aggregate {
   void unserialize(const Json &json, InputStream *) override;
 
   explicit EmbreeAccel(std::span<const Primitive *> primitives);
+  void build(std::span<const Primitive *> primitives) override;
   ~EmbreeAccel() override;
   bool intersect(const Ray &r, SurfaceInteraction &) const override;
   [[nodiscard]] bool intersectP(const Ray &r) const override;
