@@ -17,6 +17,13 @@ inline LightFlags operator|(const LightFlags &a, const LightFlags &b) {
   return static_cast<LightFlags>(static_cast<int>(a) | static_cast<int>(b));
 }
 
+inline bool isDeltaLight(const LightFlags &flags) {
+  return static_cast<int>(flags) &
+             static_cast<int>(LightFlags::DELTA_POSITION) ||
+         static_cast<int>(flags) &
+             static_cast<int>(LightFlags::DELTA_DIRECTION);
+}
+
 class Light : public SerializableObject {
  public:
   DAKKU_DECLARE_OBJECT(Light);
@@ -38,6 +45,9 @@ class Light : public SerializableObject {
   virtual Spectrum sampleLi(const Interaction &ref, const Point2f &u,
                             Vector3f &wi, Float &pdf,
                             VisibilityTester &vis) const = 0;
+  [[nodiscard]] virtual Float pdfLi(const Interaction &ref,
+                                    const Interaction &lightIt, bool foundIt,
+                                    const Vector3f &wi) const = 0;
 
   LightFlags flags{};
   int nSamples{1};
@@ -53,6 +63,7 @@ class VisibilityTester {
       : _p0(p0), _p1(p1) {}
   [[nodiscard]] const Interaction &p0() const { return _p0; }
   [[nodiscard]] const Interaction &p1() const { return _p1; }
+  [[nodiscard]] bool unoccluded(const Scene &scene) const;
 
  private:
   Interaction _p0, _p1;
@@ -72,6 +83,8 @@ class AreaLight : public Light {
    */
   [[nodiscard]] virtual Spectrum emit(const Interaction &it,
                                       const Vector3f &w) const = 0;
+  virtual std::vector<Light *> getLightList() const = 0;
+  virtual std::vector<Primitive *> getPrimitiveList() const = 0;
 };
 
 DAKKU_END

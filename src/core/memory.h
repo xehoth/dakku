@@ -17,6 +17,10 @@ DAKKU_BEGIN
 
 class L1CacheLineAlignedResource : public std::pmr::memory_resource {
  public:
+  explicit L1CacheLineAlignedResource(
+      std::pmr::memory_resource *upStream = std::pmr::get_default_resource())
+      : upStream(upStream) {}
+
   void *do_allocate(size_t bytes, size_t align) override {
     DAKKU_DEBUG("allocate pool of {} bytes", bytes);
     return upStream->allocate(bytes, std::max(align, L1_CACHE_LINE_SIZE));
@@ -33,7 +37,7 @@ class L1CacheLineAlignedResource : public std::pmr::memory_resource {
   }
 
  private:
-  std::pmr::memory_resource *upStream = std::pmr::get_default_resource();
+  std::pmr::memory_resource *upStream;
 };
 
 template <typename T>
@@ -53,6 +57,9 @@ class TypedMemoryArena {
 
 class MemoryArena {
  public:
+  explicit MemoryArena() = default;
+  explicit MemoryArena(std::pmr::memory_resource *buffer)
+      : upStream(buffer), resource(&upStream) {}
   template <typename T, typename... Args>
   T *allocObject(Args &&...args) {
     return std::pmr::polymorphic_allocator<T>{&resource}.template new_object<T>(

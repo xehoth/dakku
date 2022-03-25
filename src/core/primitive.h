@@ -1,6 +1,7 @@
 #ifndef DAKKU_SRC_CORE_PRIMITIVE_H_
 #define DAKKU_SRC_CORE_PRIMITIVE_H_
 #include <core/sobject.h>
+#include <span>
 
 DAKKU_BEGIN
 class Primitive : public SerializableObject {
@@ -46,6 +47,7 @@ class Aggregate : public Primitive {
  public:
   DAKKU_DECLARE_OBJECT(Aggregate);
 
+  virtual void build(std::span<const Primitive *> primitives) = 0;
   [[nodiscard]] const AreaLight *getAreaLight() const override;
   [[nodiscard]] const Material *getMaterial() const override;
   void computeScatteringFunctions(SurfaceInteraction &si,
