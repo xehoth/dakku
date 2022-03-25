@@ -3,6 +3,7 @@
 #include <core/interaction.h>
 #include <core/shape.h>
 #include <core/state.h>
+#include <shapes/triangle.h>
 
 DAKKU_BEGIN
 
@@ -46,6 +47,40 @@ void DiffuseAreaLight::unserialize(const Json &json, InputStream *) {
   }
   // TODO: transform
   AreaLight::construct(Transform(), nSamples);
+  const Material *pMaterial{};
+  std::string materialName;
+  if (!json.contains("material")) {
+    DAKKU_ERR("diffuse area light requires a material!");
+  } else {
+    json.at("material").get_to(materialName);
+    if (auto it = renderState.materials.find(materialName);
+        it != renderState.materials.end()) {
+      pMaterial = it->second.get();
+    } else {
+      DAKKU_ERR("cannot find material {} in material map", materialName);
+    }
+  }
+  if (this->shape->getClassName() == "TriangleMesh") {
+    auto triPrim = std::make_unique<TriangleMeshPrimitive>();
+    triPrim->construct(this->shape, pMaterial, this);
+    const auto *triMesh = dynamic_cast<const TriangleMesh *>(this->shape);
+    splitLights.reserve(triMesh->getNumTriangles());
+    for (int i = 0; i < triMesh->getNumTriangles(); ++i) {
+      auto ptr = std::make_unique<DiffuseAreaLight>();
+      ptr->construct(this->lightToWorld, this->data, this->nSamples,
+                     triMesh->getTriangle(i), this->twoSided);
+      splitLights.emplace_back(std::move(ptr));
+    }
+    triPrim->primTriangles =
+        std::make_unique<GeometricPrimitive[]>(triMesh->getNumTriangles());
+    for (int i = 0; i < triMesh->getNumTriangles(); ++i) {
+      triPrim->primTriangles[i].construct(triMesh->getTriangle(i), pMaterial,
+                                          this->splitLights[i].get());
+    }
+    this->primitive = std::move(triPrim);
+  } else {
+    DAKKU_ERR("unimplemented other shapes");
+  }
 }
 
 Spectrum DiffuseAreaLight::sampleLi(const Interaction &ref, const Point2f &u,
@@ -59,6 +94,44 @@ Spectrum DiffuseAreaLight::sampleLi(const Interaction &ref, const Point2f &u,
   wi = (pShape.p - ref.p).normalized();
   vis = VisibilityTester(ref, pShape);
   return emit(pShape, -wi);
+}
+
+Float DiffuseAreaLight::pdfLi(const Interaction &ref,
+                              const Interaction &lightIt, bool foundIt,
+                              const Vector3f &wi) const {
+  if (!foundIt) return 0;
+  return shape->pdf(ref, lightIt, wi);
+}
+
+void DiffuseAreaLight::construct(const Transform &lightToWorld,
+                                 const Spectrum &_data, int nSamples,
+                                 const Shape *_shape, bool _twoSided) {
+  AreaLight::construct(lightToWorld, nSamples);
+  this->data = _data;
+  this->nSamples = nSamples;
+  this->shape = _shape;
+  this->twoSided = _twoSided;
+  this->area = shape->area();
+}
+
+std::vector<Light *> DiffuseAreaLight::getLightList() const {
+  std::vector<Light *> ret(splitLights.size());
+  for (size_t i = 0; i < splitLights.size(); ++i) ret[i] = splitLights[i].get();
+  return ret;
+}
+
+std::vector<Primitive *> DiffuseAreaLight::getPrimitiveList() const {
+  std::vector<Primitive *> ret;
+  if (primitive->getClassName() == "TriangleMeshPrimitive") {
+//    auto *prim = dynamic_cast<TriangleMeshPrimitive *>(primitive.get());
+//    const auto *tri = dynamic_cast<const TriangleMesh *>(this->shape);
+//    ret.resize(tri->getNumTriangles());
+//    for (size_t i = 0; i < ret.size(); ++i) ret[i] = &prim->primTriangles[i];
+    ret.push_back(primitive.get());
+  } else {
+    DAKKU_ERR("unimplemented");
+  }
+  return ret;
 }
 
 DAKKU_END
