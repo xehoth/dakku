@@ -24,4 +24,13 @@ Interaction Shape::sample(const Interaction &ref, const Point2f &u,
   return it;
 }
 
+Float Shape::pdf(const Interaction &ref, const Interaction &lightIt,
+                 const Vector3f &wi) const {
+  // convert light sample weight to solid angle measure
+  Float pdf =
+      (ref.p - lightIt.p).squaredNorm() / (lightIt.n.absDot(-wi) * area());
+  if (std::isinf(pdf)) pdf = 0;
+  return pdf;
+}
+
 DAKKU_END

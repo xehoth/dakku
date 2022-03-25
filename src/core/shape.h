@@ -23,6 +23,8 @@ class Shape : public SerializableObject {
   // return the PDF with respect to solid angle from |ref|.
   virtual Interaction sample(const Interaction &ref, const Point2f &u,
                              Float &pdf) const;
+  virtual Float pdf(const Interaction &ref, const Interaction &lightIt,
+                    const Vector3f &wi) const;
 
   const Transform *objectToWorld{};
   const Transform *worldToObject{};
