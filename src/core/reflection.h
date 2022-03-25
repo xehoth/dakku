@@ -118,7 +118,7 @@ class LambertianReflection : public BxDF {
  public:
   explicit LambertianReflection(const Spectrum &r)
       : BxDF(BxDFType::BSDF_REFLECTION | BxDFType::BSDF_DIFFUSE), r(r) {}
-  Spectrum f(const Vector3f &wo, const Vector3f &wi) const override;
+  [[nodiscard]] Spectrum f(const Vector3f &wo, const Vector3f &wi) const override;
 
  private:
   const Spectrum r;
