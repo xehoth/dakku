@@ -5,6 +5,9 @@
 #include <core/shape.h>
 #include <core/primitive.h>
 #include <core/material.h>
+#include <core/light.h>
+#include <core/scene.h>
+#include <core/integrator.h>
 
 DAKKU_BEGIN
 
@@ -116,6 +119,90 @@ void RenderState::unserialize(const Json &json, InputStream *stream) {
       pPrimitive->unserialize(*it, stream);
       this->primitives[it.key()] = std::move(pPrimitive);
     }
+  }
+
+  // lights
+  if (json.contains("lights")) {
+    const auto &jLight = json["lights"];
+    for (auto it = jLight.begin(); it != jLight.end(); ++it) {
+      std::string type;
+      if (!it->contains("class")) {
+        DAKKU_ERR("light type is unknown");
+      } else {
+        it->at("class").get_to(type);
+      }
+      std::unique_ptr<Light> pLight{
+          dynamic_cast<Light *>(Class::instance().create(type))};
+      pLight->unserialize(*it, stream);
+      const std::string &lightName = it.key();
+      this->lights[lightName] = std::move(pLight);
+    }
+  }
+
+  std::vector<Light *> allLights;
+  std::vector<const Primitive *> allPrimitives;
+  for (const auto &[_, p] : this->lights) {
+    if (p->getClassName() == "DiffuseAreaLight") {
+      auto lightList = dynamic_cast<AreaLight *>(p.get())->getLightList();
+      auto primList = dynamic_cast<AreaLight *>(p.get())->getPrimitiveList();
+      allLights.insert(allLights.end(), lightList.begin(), lightList.end());
+      allPrimitives.insert(allPrimitives.end(), primList.begin(),
+                           primList.end());
+    } else {
+      allLights.push_back(p.get());
+    }
+  }
+  // accelerator
+  for (const auto &[_, p] : this->primitives) allPrimitives.push_back(p.get());
+  aggregate = std::unique_ptr<Primitive>{
+      dynamic_cast<Primitive *>(Class::instance().create("EmbreeAccel"))};
+  dynamic_cast<Aggregate *>(aggregate.get())->build(allPrimitives);
+
+  // camera
+  if (json.contains("camera")) {
+    const auto &jCamera = json["camera"];
+    std::string type;
+    if (jCamera.contains("class")) {
+      jCamera.at("class").get_to(type);
+    } else {
+      DAKKU_ERR("unknown camera type");
+    }
+    camera = std::unique_ptr<Camera>{
+        dynamic_cast<Camera *>(Class::instance().create(type))};
+    camera->unserialize(jCamera, stream);
+  }
+
+  // sampler
+  if (json.contains("sampler")) {
+    const auto &jSampler = json["sampler"];
+    std::string type;
+    if (jSampler.contains("class")) {
+      jSampler.at("class").get_to(type);
+    } else {
+      DAKKU_ERR("unknown sampler type");
+    }
+    sampler = std::unique_ptr<Sampler>{
+        dynamic_cast<Sampler *>(Class::instance().create(type))};
+    sampler->unserialize(jSampler, stream);
+  }
+
+  // scene
+  scene = std::make_unique<Scene>(aggregate.get(), allLights);
+
+  // integrator
+  if (json.contains("integrator")) {
+    const auto &jIntegrator = json["integrator"];
+    std::string type;
+    if (!jIntegrator.contains("class")) {
+      DAKKU_ERR("light type is unknown");
+    } else {
+      jIntegrator.at("class").get_to(type);
+    }
+    integrator = std::unique_ptr<Integrator>{
+        dynamic_cast<Integrator *>(Class::instance().create(type))};
+    integrator->unserialize(jIntegrator, stream);
+  } else {
+    DAKKU_ERR("no integrator");
   }
 }
 

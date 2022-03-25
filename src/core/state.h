@@ -4,6 +4,9 @@
 #include <core/film.h>
 #include <core/material.h>
 #include <core/texture.h>
+#include <core/scene.h>
+#include <core/sampler.h>
+#include <core/camera.h>
 #include <filesystem>
 #include <map>
 
@@ -24,6 +27,13 @@ class RenderState final : public SerializableObject {
   std::map<std::string, std::unique_ptr<Material>> materials;
   std::map<std::string, std::unique_ptr<Texture<Float>>> floatTextures;
   std::map<std::string, std::unique_ptr<Texture<Spectrum>>> spectrumTextures;
+  std::map<std::string, std::unique_ptr<Light>> lights;
+
+  std::unique_ptr<Camera> camera{};
+  std::unique_ptr<Primitive> aggregate{};
+  std::unique_ptr<Scene> scene{};
+  std::unique_ptr<Integrator> integrator{};
+  std::unique_ptr<Sampler> sampler{};
 };
 
 extern DAKKU_EXPORT_CORE RenderState renderState;
