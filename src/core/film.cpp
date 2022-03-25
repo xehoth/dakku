@@ -1,6 +1,9 @@
 #include <core/film.h>
 #include <core/fstream.h>
 #include <core/class.h>
+#include <core/spectrum.h>
+#include <core/relative.h>
+#include <OpenImageIO/imageio.h>
 
 DAKKU_BEGIN
 
@@ -103,5 +106,41 @@ void Film::mergeFilmTile(std::unique_ptr<FilmTile> tile) {
     for (int i = 0; i < 3; ++i) mergePixel.xyz[i] += xyz[i];
     mergePixel.filterWeightSum += tilePixel.filterWeightSum;
   }
+}
+
+void Film::writeImage() {
+  auto rgb = std::make_unique<Float[]>(3 * croppedPixelBounds.area());
+  int offset = 0;
+  for (Point2i p : croppedPixelBounds) {
+    // convert pixel XYZ color to RGB
+    Pixel &pixel = getPixel(p);
+    xyzToRgb(pixel.xyz, std::span<Float, 3>{&rgb[3 * offset], 3});
+
+    // normalize pixel with weight sum
+    Float filterWeightSum = pixel.filterWeightSum;
+    if (filterWeightSum != 0) {
+      Float invWt = static_cast<Float>(1) / filterWeightSum;
+      rgb[3 * offset] =
+          std::max(static_cast<Float>(0), rgb[3 * offset] * invWt);
+      rgb[3 * offset + 1] =
+          std::max(static_cast<Float>(0), rgb[3 * offset + 1] * invWt);
+      rgb[3 * offset + 2] =
+          std::max(static_cast<Float>(0), rgb[3 * offset + 2] * invWt);
+    }
+
+    ++offset;
+  }
+
+  // write RGB image
+  std::string path = RelativeRoot::instance().get() + fileName;
+  DAKKU_INFO("writing image {} with bounds {}", path, croppedPixelBounds);
+  std::unique_ptr<OIIO::ImageOutput> out = OIIO::ImageOutput::create(path);
+  if (!out) return;
+  OIIO::ImageSpec spec(croppedPixelBounds.diagonal().x(),
+                       croppedPixelBounds.diagonal().y(), 3,
+                       OIIO::TypeDesc::FLOAT);
+  out->open(path, spec);
+  out->write_image(OIIO::TypeDesc::FLOAT, rgb.get());
+  out->close();
 }
 DAKKU_END

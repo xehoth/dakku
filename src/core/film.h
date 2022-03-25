@@ -30,7 +30,7 @@ class Film : public SerializableObject {
   [[nodiscard]] Bounds2i getSampleBounds() const;
   std::unique_ptr<FilmTile> getFilmTile(const Bounds2i &sampleBounds);
   void mergeFilmTile(std::unique_ptr<FilmTile> tile);
-
+  void writeImage();
   Point2i fullResolution;
   Float diagonal{0.35f};
   std::unique_ptr<Filter> filter{};
