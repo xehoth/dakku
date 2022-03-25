@@ -28,5 +28,9 @@ inline Vector3f cosineSampleHemisphere(const Point2f &u) {
   return Vector3f(d.x(), d.y(), z);
 }
 
+inline Float powerHeuristic(int nf, Float fPdf, int ng, Float gPdf) {
+  Float f = static_cast<Float>(nf) * fPdf, g = static_cast<Float>(ng) * gPdf;
+  return (f * f) / (f * f + g * g);
+}
 DAKKU_END
 #endif  // DAKKU_SRC_CORE_SAMPLING_H_

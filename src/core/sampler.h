@@ -13,9 +13,10 @@ class Sampler : public SerializableObject {
   virtual void startPixel(const Point2i &p);
   virtual Float get1D() = 0;
   virtual Point2f get2D() = 0;
+  CameraSample getCameraSample(const Point2i &pRaster);
   void requestArray1D(int n);
   void requestArray2D(int n);
-  virtual int roundCount(int n) const { return n; }
+  [[nodiscard]] virtual int roundCount(int n) const { return n; }
   const Float *getArray1D(int n);
   const Point2f *getArray2D(int n);
   virtual bool startNextSample();
@@ -41,6 +42,11 @@ class Sampler : public SerializableObject {
 class PixelSampler : public Sampler {
  public:
   DAKKU_DECLARE_OBJECT(PixelSampler);
+
+  bool startNextSample() override;
+  bool setSampleNumber(std::int64_t sampleNum) override;
+  Float get1D() override;
+  Point2f get2D() override;
 
  protected:
   std::vector<std::vector<Float>> samples1D;
