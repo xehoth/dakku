@@ -24,6 +24,8 @@ class CoefficientSpectrumT
   DAKKU_DECLARE_VECTOR_DERIVED(CoefficientSpectrumT, Float, size);
 
   using super::operator+=;
+  using super::operator+;
+  using super::operator-;
 
   [[nodiscard]] bool isBlack() const { return super::isZero(); }
 };

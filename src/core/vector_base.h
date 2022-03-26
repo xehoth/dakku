@@ -111,6 +111,9 @@ class VectorBase {
     _data /= static_cast<T>(f);
     return *this;
   }
+  Derived operator/(const VectorBase &rhs) const {
+    return VectorBase(_data.cwiseQuotient(rhs._data));
+  }
   Derived operator-() const { return VectorBase(-_data); }
   T operator[](int i) const {
     DAKKU_CHECK(0 <= i && i < size, "index out of range");
@@ -169,6 +172,9 @@ class VectorBase {
   }
   friend Derived ceil(const VectorBase &v) {
     return VectorBase(v._data.array().ceil());
+  }
+  friend Derived sqrt(const VectorBase &v) {
+    return VectorBase(v._data.cwiseSqrt());
   }
   template <typename OtherDerived>
   decltype(auto) dot(const VectorBase &rhs) const {

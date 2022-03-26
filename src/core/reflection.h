@@ -17,6 +17,26 @@ inline bool sameHemisphere(const Vector3f &w, const Normal3f &n) {
   return w.z() * n.z() > 0;
 }
 
+/**
+ * fresnel reflectance of dielectric
+ * @param cosThetaI incident cos theta
+ * @param etaI index of refraction (incident side)
+ * @param etaT index of refraction (transmit side)
+ * @return the fresnel reflectance f_r
+ */
+Float frDielectric(Float cosThetaI, Float etaI, Float etaT);
+
+/**
+ * fresnel reflectance of conductor
+ * * sin(thetaI) / sin(thetaT) = (etaT - i kT) / etaI
+ * eta = etaT / etaI
+ * etaK = kT / etaI
+ * @param cosThetaI incident cos theta
+ * @k kT
+ */
+Spectrum frConductor(Float cosThetaI, const Spectrum &etaI,
+                     const Spectrum &etaT, const Spectrum &k);
+
 // BSDF Declarations
 enum class BxDFType : int {
   BSDF_REFLECTION = 1 << 0,
@@ -118,6 +138,51 @@ class BxDF {
 };
 
 /**
+ * Fresnel base class
+ */
+class Fresnel {
+ public:
+  virtual ~Fresnel() = default;
+  [[nodiscard]] virtual Spectrum evaluate(Float cosThetaI) const = 0;
+};
+
+/**
+ * Fresnel conductor
+ */
+class FresnelConductor : public Fresnel {
+ public:
+  explicit FresnelConductor(const Spectrum &etaI, const Spectrum &etaT,
+                            const Spectrum &k)
+      : etaI(etaI), etaT(etaT), k(k) {}
+  [[nodiscard]] Spectrum evaluate(Float cosThetaI) const override;
+
+ private:
+  Spectrum etaI, etaT, k;
+};
+
+/**
+ * Fresnel dielectric
+ */
+class FresnelDielectric : public Fresnel {
+ public:
+  explicit FresnelDielectric(Float etaI, Float etaT) : etaI(etaI), etaT(etaT) {}
+  [[nodiscard]] Spectrum evaluate(Float cosThetaI) const override;
+
+ private:
+  Float etaI, etaT;
+};
+
+/**
+ * No fresnel
+ */
+class FresnelNoOperation : public Fresnel {
+ public:
+  [[nodiscard]] Spectrum evaluate(Float cosThetaI) const override {
+    return Spectrum{static_cast<Float>(1)};
+  }
+};
+
+/**
  * lambertian reflection
  */
 class LambertianReflection : public BxDF {
@@ -129,6 +194,31 @@ class LambertianReflection : public BxDF {
 
  private:
   const Spectrum r;
+};
+
+/**
+ * specular reflection
+ */
+class SpecularReflection : public BxDF {
+ public:
+  explicit SpecularReflection(const Spectrum &r, const Fresnel *fresnel)
+      : BxDF(BxDFType::BSDF_REFLECTION | BxDFType::BSDF_SPECULAR),
+        r(r),
+        fresnel(fresnel) {}
+  [[nodiscard]] Spectrum f(const Vector3f &wo,
+                           const Vector3f &wi) const override {
+    return Spectrum{0};
+  }
+  Spectrum sampleF(const Vector3f &wo, Vector3f &wi, const Point2f &sample,
+                   Float &pdf, BxDFType *sampledType) const override;
+  [[nodiscard]] Float pdf(const Vector3f &wo,
+                          const Vector3f &wi) const override {
+    return 0;
+  }
+
+ private:
+  const Spectrum r;
+  const Fresnel *fresnel;
 };
 DAKKU_END
 #endif  // DAKKU_SRC_CORE_REFLECTION_H_

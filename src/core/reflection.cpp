@@ -5,6 +5,54 @@
 
 DAKKU_BEGIN
 
+Float frDielectric(Float cosThetaI, Float etaI, Float etaT) {
+  cosThetaI = std::clamp<Float>(cosThetaI, -1, 1);
+  // potentially swap indices of refraction
+  if (bool entering = cosThetaI > 0; !entering) {
+    std::swap(etaI, etaT);
+    cosThetaI = -cosThetaI;
+  }
+  // Snell's law -> cosThetaT
+  Float sinThetaI =
+      std::sqrt(std::max(static_cast<Float>(0), 1 - cosThetaI * cosThetaI));
+  Float sinThetaT = etaI / etaT * sinThetaI;
+
+  // total internal reflection
+  if (sinThetaT >= 1) return 1;
+
+  Float cosThetaT =
+      std::sqrt(std::max(static_cast<Float>(0), 1 - sinThetaT * sinThetaT));
+  Float rParallel = ((etaT * cosThetaI) - (etaI * cosThetaT)) /
+                    ((etaT * cosThetaI) + (etaI * cosThetaT));
+  Float rPerp = ((etaI * cosThetaI) - (etaT * cosThetaT)) /
+                ((etaI * cosThetaI) + (etaT * cosThetaT));
+  return (rParallel * rParallel + rPerp * rPerp) / 2;
+}
+
+Spectrum frConductor(Float cosThetaI, const Spectrum &etaI,
+                     const Spectrum &etaT, const Spectrum &k) {
+  cosThetaI = std::clamp<Float>(cosThetaI, -1, 1);
+  Spectrum eta = etaT / etaI;
+  Spectrum etaK = k / etaI;
+  Float cosThetaI2 = cosThetaI * cosThetaI;
+  Float sinThetaI2 = 1 - cosThetaI2;
+  Spectrum eta2 = eta * eta;
+  Spectrum etaK2 = etaK * etaK;
+
+  Spectrum t0 = eta2 - etaK2 - Spectrum(sinThetaI2);
+  Spectrum a2plusb2 = sqrt(t0 * t0 + 4 * eta2 * etaK2);
+  Spectrum t1 = a2plusb2 + Spectrum(cosThetaI2);
+  Spectrum a = sqrt(0.5f * (a2plusb2 + t0));
+  Spectrum t2 = 2 * cosThetaI * a;
+  Spectrum Rs = (t1 - t2) / (t1 + t2);
+
+  Spectrum t3 = cosThetaI2 * a2plusb2 + Spectrum(sinThetaI2 * sinThetaI2);
+  Spectrum t4 = t2 * sinThetaI2;
+  Spectrum Rp = Rs * (t3 - t4) / (t3 + t4);
+
+  return static_cast<Float>(0.5) * (Rp + Rs);
+}
+
 BSDF::BSDF(const SurfaceInteraction &si, Float eta)
     : eta(eta), ns(si.shading.n), ng(si.n) {
   if (std::abs(ns.x()) > std::abs(ns.z())) {
@@ -147,7 +195,23 @@ Float BxDF::pdf(const Vector3f &wo, const Vector3f &wi) const {
   return sameHemisphere(wo, wi) ? absCosTheta(wi) * INV_PI : 0;
 }
 
+Spectrum FresnelConductor::evaluate(Float cosThetaI) const {
+  return frConductor(std::abs(cosThetaI), etaI, etaT, k);
+}
+
+Spectrum FresnelDielectric::evaluate(Float cosThetaI) const {
+  return Spectrum{frDielectric(cosThetaI, etaI, etaT)};
+}
+
 Spectrum LambertianReflection::f(const Vector3f &wo, const Vector3f &wi) const {
   return r * INV_PI;
+}
+
+Spectrum SpecularReflection::sampleF(const Vector3f &wo, Vector3f &wi,
+                                     const Point2f &sample, Float &pdf,
+                                     BxDFType *sampledType) const {
+  wi = Vector3f(-wo.x(), -wo.y(), wo.z());
+  pdf = 1;
+  return fresnel->evaluate(cosTheta(wi)) * r / absCosTheta(wi);
 }
 DAKKU_END
