@@ -2,7 +2,11 @@
   "$schema": "../schema.json",
   "film": {
     "fullResolution": [1024, 1024],
-    "fileName": "cornell_box.png"
+    "fileName": "cornell_box.png",
+    "filter": {
+      "class": "TriangleFilter",
+      "radius": [1.0, 1.0]
+    }
   },
   "textures": {
     "red_tex": {

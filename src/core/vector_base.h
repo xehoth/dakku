@@ -1,7 +1,3 @@
-//
-// Created by 82454 on 2022/3/14.
-//
-
 #ifndef DAKKU_SRC_CORE_VECTOR_BASE_H_
 #define DAKKU_SRC_CORE_VECTOR_BASE_H_
 #include <core/math.h>
