@@ -19,48 +19,9 @@ Then use [CMake](https://cmake.org/) to build the project.
 
 ## Scenes
 
-[Cornell Box](scenes/cornell_box/cornell_box.json)
+[Cornell Box](scenes/cornell_box/scene.json)
 ![Cornell Box](scenes/cornell_box/cornell_box.png)
 
-## Finished features
+### Description
 
-### Integrators
-
-- Path tracing
-
-### Materials
-
-- BSDFS
-  - Lambertian diffuse
-
-### Accleration Structures
-
-- [Embree](https://github.com/embree/embree)
-
-### Lights
-
-- Diffuse area light
-
-### Samplers
-
-- Random sampler
-
-### Cameras
-
-- Perspective camera
-
-## TODO Lists
-
-- Texture
-- File loaders
-- More materials
-- More integrators
-- More samplers
-- More camera models
-- BSSRDF
-- MIS
-- Volume rendering
-- Denoiser
-- GUI
-- Self-made math library
-- GPU (OptiX)
+The scene description schema can be found in [schema.json](scenes/schema.json).  
