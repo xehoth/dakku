@@ -22,14 +22,14 @@ jobs:
           - name: windows-latest
             os: windows-latest
             triplet: x64-windows
-#          - name: ubuntu-latest
+            vcpkgCommitId: '9ff4659a075d5f4f30aaca9f7c4e7f059ecc1d6d'
+    #          - name: ubuntu-latest
 #            os: ubuntu-latest
 #            triplet: x64-linux
 
     env:
       buildDir: '${{ github.workspace }}/build/'
       buildType: Release
-      vcpkgCommitId: '9ff4659a075d5f4f30aaca9f7c4e7f059ecc1d6d'
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -60,7 +60,7 @@ jobs:
           # If not using a submodule for vcpkg sources, this specifies which commit
           # id must be checkout from a Git repo. It must not set if using a submodule
           # for vcpkg.
-          vcpkgGitCommitId: '${{ env.vcpkgCommitId }}'
+          vcpkgGitCommitId: '${{ matrix.vcpkgCommitId }}'
 
           # This is the glob expression used to locate the vcpkg.json and add its
           # hash to the cache key. Change it to match a single manifest file you want
