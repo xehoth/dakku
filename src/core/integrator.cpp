@@ -7,6 +7,7 @@
 #include <core/light.h>
 #include <core/sampling.h>
 #include <core/primitive.h>
+#include <core/stream.h>
 #include <execution>
 #include <atomic>
 
@@ -115,13 +116,19 @@ void SamplerIntegrator::render(const Scene &scene) {
   Point2i nTiles((sampleExtent.x() + tileSize - 1) / tileSize,
                  (sampleExtent.y() + tileSize - 1) / tileSize);
   std::vector<Point2i> tileBuffer;
+  if (totalTiles == 0) {
+    totalTiles = nTiles.x() * nTiles.y();
+    finishedTiles.resize(totalTiles);
+  }
   tileBuffer.reserve(nTiles.x() * nTiles.y());
   for (int i = 0; i < nTiles.x(); ++i)
     for (int j = 0; j < nTiles.y(); ++j) tileBuffer.emplace_back(i, j);
-  std::atomic_int finishedTiles = 0;
+  std::atomic_int finishedTileCnt = static_cast<int>(
+      std::count(finishedTiles.begin(), finishedTiles.end(), 1));
   std::for_each(
       std::execution::par, tileBuffer.begin(), tileBuffer.end(),
       [&](const Point2i &tile) {
+        if (finishedTiles[tile.y() * nTiles.x() + tile.x()]) return;
         // memory arena for tile
         MemoryArena arena;
         // get sampler instance for tile
@@ -178,12 +185,32 @@ void SamplerIntegrator::render(const Scene &scene) {
         DAKKU_DEBUG("finish image tile: {}", tileBounds);
         // merge image tile into film
         camera->film->mergeFilmTile(std::move(filmTile));
-        ++finishedTiles;
-        printf(
-            "\r%5.2f%%",
-            finishedTiles / static_cast<double>(nTiles.x() * nTiles.y()) * 100);
+        finishedTiles[tile.y() * nTiles.x() + tile.x()] = 1;
+        ++finishedTileCnt;
+        printf("\r%5.2f%%", finishedTileCnt /
+                                static_cast<double>(nTiles.x() * nTiles.y()) *
+                                100);
       });
   DAKKU_INFO("render finished");
+}
+
+void SamplerIntegrator::serialize(Json &json, OutputStream *stream) const {
+  DAKKU_SER_J(totalTiles);
+  if (stream && stream->writeBytes(finishedTiles.data(),
+                                   finishedTiles.size()) != totalTiles) {
+    DAKKU_ERR("failed to serialize finished tiles");
+  }
+}
+
+void SamplerIntegrator::unserialize(const Json &json, InputStream *stream) {
+  if (json.contains("totalTiles")) {
+    DAKKU_UNSER_J(totalTiles);
+    finishedTiles.resize(totalTiles);
+    if (stream &&
+        stream->readBytes(finishedTiles.data(), totalTiles) != totalTiles) {
+      DAKKU_ERR("failed to unserialize finished tiles");
+    }
+  }
 }
 
 DAKKU_END

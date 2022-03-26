@@ -14,6 +14,7 @@ void SurfaceInteraction::setShadingGeometry(const Normal3f &_n,
     shading.n = shading.n.faceForward(n);
   }
 }
+
 Spectrum SurfaceInteraction::emit(const Vector3f &w) const {
   const AreaLight *areaLight = primitive->getAreaLight();
   return areaLight ? areaLight->emit(*this, w) : Spectrum(0);

@@ -28,6 +28,8 @@ class SamplerIntegrator : public Integrator {
     this->pixelBounds = _pixelBounds;
   }
 
+  void serialize(Json &json, OutputStream *stream) const override;
+  void unserialize(const Json &json, InputStream *stream) override;
   virtual void preprocess(const Scene &scene, Sampler &sampler) {}
   void render(const Scene &scene) override;
   virtual Spectrum radiance(const Ray &ray, const Scene &scene,
@@ -40,6 +42,8 @@ class SamplerIntegrator : public Integrator {
  private:
   Sampler *sampler{};
   Bounds2i pixelBounds;
+  int totalTiles{};
+  std::vector<char> finishedTiles;
 };
 DAKKU_END
 #endif  // DAKKU_SRC_CORE_INTEGRATOR_H_

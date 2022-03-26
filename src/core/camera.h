@@ -36,6 +36,7 @@ class ProjectiveCamera : public Camera {
               1 / (screenWindow.pMin.y() - screenWindow.pMax.y()), 1) *
         translate(Vector3f(-screenWindow.pMin.x(), -screenWindow.pMax.y(), 0));
     rasterToScreen = inverse(screenToRaster);
+    // raster -> screen -> camera
     rasterToCamera = inverse(cameraToScreen) * rasterToScreen;
   }
 

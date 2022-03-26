@@ -98,7 +98,8 @@ Spectrum PathIntegrator::radiance(const Ray &r, const Scene &scene,
   return L;
 }
 
-void PathIntegrator::unserialize(const Json &json, InputStream *) {
+void PathIntegrator::unserialize(const Json &json, InputStream *stream) {
+  SamplerIntegrator::unserialize(json, stream);
   DAKKU_UNSER_JIE(maxDepth, 10);
   Camera *camera = renderState.camera.get();
   Bounds2i pixelBounds = camera->film->getSampleBounds();
@@ -106,8 +107,9 @@ void PathIntegrator::unserialize(const Json &json, InputStream *) {
             rrThreshold);
 }
 
-void PathIntegrator::serialize(Json &json, OutputStream *) const {
-  DAKKU_ERR("unimplemented");
+void PathIntegrator::serialize(Json &json, OutputStream *stream) const {
+  SamplerIntegrator::serialize(json, stream);
+  DAKKU_SER_J(maxDepth);
 }
 
 DAKKU_END

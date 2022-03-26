@@ -33,6 +33,18 @@ void RenderState::serialize(Json &json, OutputStream *stream) const {
   // primitives
   auto &jPrimitive = json["primitives"];
   for (auto &[k, v] : primitives) v->serialize(jPrimitive[k], stream);
+  // lights
+  auto &jLight = json["lights"];
+  for (auto &[k, v] : lights) v->serialize(jLight[k], stream);
+  // camera
+  auto &jCamera = json["camera"];
+  camera->serialize(jCamera, stream);
+  // sampler
+  auto &jSampler = json["sampler"];
+  sampler->serialize(jSampler, stream);
+  // integrator
+  auto &jIntegrator = json["integrator"];
+  integrator->serialize(jIntegrator, stream);
 }
 
 void RenderState::unserialize(const Json &json, InputStream *stream) {
