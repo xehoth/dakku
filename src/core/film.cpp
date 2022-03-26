@@ -3,6 +3,8 @@
 #include <core/class.h>
 #include <core/spectrum.h>
 #include <core/relative.h>
+#include <algorithm>
+#include <execution>
 #include <OpenImageIO/imageio.h>
 
 DAKKU_BEGIN
@@ -48,13 +50,15 @@ void Film::unserialize(const Json &json, InputStream *stream) {
 
   croppedPixelBounds = Bounds2i(
       Point2i(
-          static_cast<int>(std::ceil(fullResolution.x() * cropWindow.pMin.x())),
-          static_cast<int>(
-              std::ceil(fullResolution.y() * cropWindow.pMin.y()))),
+          static_cast<int>(std::ceil(static_cast<Float>(fullResolution.x()) *
+                                     cropWindow.pMin.x())),
+          static_cast<int>(std::ceil(static_cast<Float>(fullResolution.y()) *
+                                     cropWindow.pMin.y()))),
       Point2i(
-          static_cast<int>(std::ceil(fullResolution.x() * cropWindow.pMax.x())),
-          static_cast<int>(
-              std::ceil(fullResolution.y() * cropWindow.pMax.y()))));
+          static_cast<int>(std::ceil(static_cast<Float>(fullResolution.x()) *
+                                     cropWindow.pMax.x())),
+          static_cast<int>(std::ceil(static_cast<Float>(fullResolution.y()) *
+                                     cropWindow.pMax.y()))));
   DAKKU_INFO("create film with full resolution {}", fullResolution);
   DAKKU_INFO("crop window of {})", cropWindow);
   DAKKU_INFO("-> croppedPixelBounds {}", croppedPixelBounds);
@@ -78,6 +82,7 @@ void Film::unserialize(const Json &json, InputStream *stream) {
 }
 
 Bounds2i Film::getSampleBounds() const {
+  // span with filter radius
   return Bounds2i(Bounds2f(floor(Point2f(croppedPixelBounds.pMin) +
                                  Vector2f(0.5f, 0.5f) - filter->radius),
                            ceil(Point2f(croppedPixelBounds.pMax) -
@@ -86,7 +91,7 @@ Bounds2i Film::getSampleBounds() const {
 
 std::unique_ptr<FilmTile> Film::getFilmTile(const Bounds2i &sampleBounds) {
   Vector2f halfPixel(0.5, 0.5);
-  Bounds2f floatBounds = Bounds2f(sampleBounds);
+  auto floatBounds = Bounds2f(sampleBounds);
   Point2i p0 = Point2i(ceil(floatBounds.pMin - halfPixel - filter->radius));
   Point2i p1 = Point2i(floor(floatBounds.pMax - halfPixel + filter->radius)) +
                Point2i(1, 1);
@@ -95,10 +100,11 @@ std::unique_ptr<FilmTile> Film::getFilmTile(const Bounds2i &sampleBounds) {
                                     filterTable, filterTableWidth,
                                     maxSampleLuminance);
 }
+
 void Film::mergeFilmTile(std::unique_ptr<FilmTile> tile) {
   DAKKU_DEBUG("merging film tile: {}", tile->pixelBounds);
   std::lock_guard<std::mutex> lock{mutex};
-  for (Point2i pixel : tile->getPixelBounds()) {
+  for (const Point2i &pixel : tile->getPixelBounds()) {
     const FilmTilePixel &tilePixel = tile->getPixel(pixel);
     Pixel &mergePixel = getPixel(pixel);
     Float xyz[3];
@@ -111,7 +117,7 @@ void Film::mergeFilmTile(std::unique_ptr<FilmTile> tile) {
 void Film::writeImage() {
   auto rgb = std::make_unique<Float[]>(3 * croppedPixelBounds.area());
   int offset = 0;
-  for (Point2i p : croppedPixelBounds) {
+  for (const Point2i &p : croppedPixelBounds) {
     // convert pixel XYZ color to RGB
     Pixel &pixel = getPixel(p);
     xyzToRgb(pixel.xyz, std::span<Float, 3>{&rgb[3 * offset], 3});
@@ -133,12 +139,25 @@ void Film::writeImage() {
 
   // write RGB image
   std::string path = RelativeRoot::instance().get() + fileName;
+  std::string extension = std::filesystem::path(path).extension().string();
+  if (extension == ".png" || extension == ".jpg") {
+    std::transform(
+        std::execution::par, rgb.get(), rgb.get() + 3 * croppedPixelBounds.area(),
+        rgb.get(),
+        [](Float v) { return std::clamp<Float>(gammaCorrect(v), 0, 1); });
+  }
   DAKKU_INFO("writing image {} with bounds {}", path, croppedPixelBounds);
   std::unique_ptr<OIIO::ImageOutput> out = OIIO::ImageOutput::create(path);
   if (!out) return;
   OIIO::ImageSpec spec(croppedPixelBounds.diagonal().x(),
                        croppedPixelBounds.diagonal().y(), 3,
                        OIIO::TypeDesc::FLOAT);
+  spec.full_x = 0;
+  spec.full_y = 0;
+  spec.full_width = fullResolution.x();
+  spec.full_height = fullResolution.y();
+  spec.x = croppedPixelBounds.pMin.x();
+  spec.y = croppedPixelBounds.pMin.y();
   out->open(path, spec);
   out->write_image(OIIO::TypeDesc::FLOAT, rgb.get());
   out->close();

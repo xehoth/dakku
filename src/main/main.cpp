@@ -8,7 +8,6 @@
 #include <accelerators/api.h>
 #include <samplers/api.h>
 #include <integrators/api.h>
-#include <core/transform.h>
 #include <cxxopts.hpp>
 #include <iostream>
 #include <chrono>

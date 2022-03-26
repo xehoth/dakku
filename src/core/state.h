@@ -11,11 +11,22 @@
 #include <map>
 
 DAKKU_BEGIN
+/**
+ * resources and render state
+ */
 class RenderState final : public SerializableObject {
  public:
   DAKKU_DECLARE_OBJECT(RenderState);
 
+  /**
+   * load scene/state from path
+   * @param path the scene file path
+   */
   void load(const std::filesystem::path &path);
+  /**
+   * save current state into path
+   * @param path the file path
+   */
   void save(const std::filesystem::path &path);
 
   void serialize(Json &json, OutputStream *stream) const override;
@@ -36,6 +47,9 @@ class RenderState final : public SerializableObject {
   std::unique_ptr<Sampler> sampler{};
 };
 
+/**
+ * global render state
+ */
 extern DAKKU_EXPORT_CORE RenderState renderState;
 DAKKU_END
 #endif  // DAKKU_SRC_CORE_STATE_H_

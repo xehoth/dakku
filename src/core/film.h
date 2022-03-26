@@ -26,10 +26,26 @@ class Film : public SerializableObject {
 
   void serialize(Json &json, OutputStream *stream) const override;
   void unserialize(const Json &json, InputStream *stream) override;
-
+  /**
+   * get the area to be sampled
+   * because the pixel reconstruction filter spans a number of pixels
+   * @return the sample bounds
+   */
   [[nodiscard]] Bounds2i getSampleBounds() const;
+  /**
+   * get the film tile according to the given sample bounds
+   * @param sampleBounds given region of the image
+   * @return the film tile
+   */
   std::unique_ptr<FilmTile> getFilmTile(const Bounds2i &sampleBounds);
+  /**
+   * merge a film tile into the film
+   * @param tile the given film tile
+   */
   void mergeFilmTile(std::unique_ptr<FilmTile> tile);
+  /**
+   * write image to [fileName]
+   */
   void writeImage();
   Point2i fullResolution;
   Float diagonal{0.35f};
@@ -58,6 +74,9 @@ class Film : public SerializableObject {
   }
 };
 
+/**
+ * dakku film tile
+ */
 class FilmTile {
  public:
   explicit FilmTile(const Bounds2i &pixelBounds, const Vector2f &filterRadius,
@@ -97,25 +116,27 @@ class FilmTile {
 
     // Loop over filter support and add sample to pixel arrays
 
-    // recompute $x$ and $y$ filter table offsets
+    // recompute x and y filter table offsets
     int *ifx = DAKKU_ALLOCA(int, p1.x() - p0.x());
 
     for (int x = p0.x(); x < p1.x(); ++x) {
-      Float fx = std::abs((x - pFilmDiscrete.x()) * invFilterRadius.x() *
-                          filterTableSize);
+      Float fx =
+          std::abs((static_cast<Float>(x) - pFilmDiscrete.x()) *
+                   invFilterRadius.x() * static_cast<Float>(filterTableSize));
       ifx[x - p0.x()] =
           std::min(static_cast<int>(std::floor(fx)), filterTableSize - 1);
     }
     int *ify = DAKKU_ALLOCA(int, p1.y() - p0.y());
     for (int y = p0.y(); y < p1.y(); ++y) {
-      Float fy = std::abs((y - pFilmDiscrete.y()) * invFilterRadius.y() *
-                          filterTableSize);
+      Float fy =
+          std::abs((static_cast<Float>(y) - pFilmDiscrete.y()) *
+                   invFilterRadius.y() * static_cast<Float>(filterTableSize));
       ify[y - p0.y()] =
           std::min(static_cast<int>(std::floor(fy)), filterTableSize - 1);
     }
     for (int y = p0.y(); y < p1.y(); ++y) {
       for (int x = p0.x(); x < p1.x(); ++x) {
-        // evaluate filter value at $(x, y)$ pixel
+        // evaluate filter value at (x, y) pixel
         int offset = ify[y - p0.y()] * filterTableSize + ifx[x - p0.x()];
         Float filterWeight = filterTable[offset];
 
