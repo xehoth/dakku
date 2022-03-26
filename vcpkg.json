@@ -3,12 +3,8 @@
   "version-semver": "0.0.1-alpha",
   "dependencies": [
     {
-      "name": "gtest",
-      "version>=": "1.11.0"
-    },
-    {
       "name": "eigen3",
-      "version>=": "3.3.9"
+      "version>=": "3.4.0"
     },
     {
       "name": "cxxopts",
@@ -19,6 +15,18 @@
       "version>=": "1.9.2"
     },
     {
+      "name": "embree3",
+      "version>=": "3.12.2"
+    },
+    {
+      "name": "nlohmann-json",
+      "version>=": "3.10.5"
+    },
+    {
+      "name": "openimageio",
+      "version>=": "2.3.10.1"
+    },
+    {
       "name": "glfw3",
       "version>=": "3.3.6"
     },
@@ -27,5 +35,5 @@
       "version>=": "2.2.0"
     }
   ],
-  "builtin-baseline": "1085a57da0725c19e19586025438e8c16f34c890"
+  "builtin-baseline": "9ff4659a075d5f4f30aaca9f7c4e7f059ecc1d6d"
 }
