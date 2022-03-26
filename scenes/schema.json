@@ -1,0 +1,165 @@
+{
+  "type": "object",
+  "properties": {
+    "film": {
+      "type": "object",
+      "properties": {
+        "fileName": {
+          "type": "string"
+        },
+        "fullResolution": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "diagonal": {
+          "type": "number"
+        },
+        "filter": {
+          "type": "object",
+          "properties": {
+            "class": {
+              "type": "string"
+            },
+            "radius": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              }
+            }
+          }
+        },
+        "maxSampleLuminance": {
+          "type": "number"
+        }
+      }
+    },
+    "shapes": {
+      "type": "object",
+      "patternProperties": {
+        ".*": {
+          "types": "object",
+          "properties": {
+            "class": {
+              "type": "string"
+            },
+            "data": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "primitives": {
+      "type": "object",
+      "patternProperties": {
+        ".*": {
+          "type": "object",
+          "properties": {
+            "class": {
+              "type": "string"
+            },
+            "shape": {
+              "type": "string"
+            },
+            "material": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "textures": {
+      "type": "object",
+      "patternProperties": {
+        ".*": {
+          "type": "object",
+          "properties": {
+            "class": {
+              "type": "string"
+            },
+            "data": {
+            }
+          }
+        }
+      }
+    },
+    "materials": {
+      "type": "object",
+      "patternProperties": {
+        ".*": {
+          "type": "object",
+          "properties": {
+            "class": {
+              "type": "string"
+            },
+            "texture": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "lights": {
+      "type": "object",
+      "patternProperties": {
+        ".*": {
+          "type": "object",
+          "properties": {
+            "class": {
+              "type": "string"
+            },
+            "data": {
+            },
+            "shape": {
+              "type": "string"
+            },
+            "material": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "sampler": {
+      "type": "object",
+      "properties": {
+        "class": {
+          "type": "string"
+        },
+        "nSamples": {
+          "type": "number"
+        }
+      }
+    },
+    "integrator": {
+      "type": "object",
+      "properties": {
+        "class": {
+          "type": "string"
+        }
+      }
+    },
+    "camera": {
+      "type": "object",
+      "properties": {
+        "class": {
+          "type": "string"
+        },
+        "fov": {
+          "type": "number"
+        },
+        "transform": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "serialized": {
+      "type": "string"
+    }
+  }
+}
