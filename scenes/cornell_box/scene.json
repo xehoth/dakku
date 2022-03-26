@@ -1,0 +1,135 @@
+{
+  "$schema": "../schema.json",
+  "film": {
+    "fullResolution": [1024, 1024],
+    "fileName": "cornell_box.png"
+  },
+  "textures": {
+    "red_tex": {
+      "class": "ConstantSpectrumTexture",
+      "data": [0.63, 0.065, 0.05]
+    },
+    "green_tex": {
+      "class": "ConstantSpectrumTexture",
+      "data": [0.14, 0.45, 0.091]
+    },
+    "ground_tex": {
+      "class": "ConstantSpectrumTexture",
+      "data": [0.725, 0.71, 0.68]
+    },
+    "light_tex": {
+      "class": "ConstantSpectrumTexture",
+      "data": [0, 0, 0]
+    }
+  },
+  "materials": {
+    "red_matte": {
+      "class": "MatteMaterial",
+      "texture": "red_tex"
+    },
+    "green_matte": {
+      "class": "MatteMaterial",
+      "texture": "green_tex"
+    },
+    "ground_matte": {
+      "class": "MatteMaterial",
+      "texture": "ground_tex"
+    },
+    "light_matte": {
+      "class": "MatteMaterial",
+      "texture": "light_tex"
+    }
+  },
+  "shapes": {
+    "back_wall_shape": {
+      "class": "TriangleMesh",
+      "data": "back_wall.obj"
+    },
+    "ceiling_shape": {
+      "class": "TriangleMesh",
+      "data": "ceiling.obj"
+    },
+    "floor_shape": {
+      "class": "TriangleMesh",
+      "data": "floor.obj"
+    },
+    "left_wall_shape": {
+      "class": "TriangleMesh",
+      "data": "left_wall.obj"
+    },
+    "light_shape": {
+      "class": "TriangleMesh",
+      "data": "light.obj"
+    },
+    "right_wall_shape": {
+      "class": "TriangleMesh",
+      "data": "right_wall.obj"
+    },
+    "shortbox_shape": {
+      "class": "TriangleMesh",
+      "data": "shortbox.obj"
+    },
+    "tallbox_shape": {
+      "class": "TriangleMesh",
+      "data": "tallbox.obj"
+    }
+  },
+  "primitives": {
+    "back_wall": {
+      "class": "TriangleMeshPrimitive",
+      "shape": "back_wall_shape",
+      "material": "ground_matte"
+    },
+    "ceiling": {
+      "class": "TriangleMeshPrimitive",
+      "shape": "ceiling_shape",
+      "material": "ground_matte"
+    },
+    "floor": {
+      "class": "TriangleMeshPrimitive",
+      "shape": "floor_shape",
+      "material": "ground_matte"
+    },
+    "left_wall": {
+      "class": "TriangleMeshPrimitive",
+      "shape": "left_wall_shape",
+      "material": "red_matte"
+    },
+    "right_wall": {
+      "class": "TriangleMeshPrimitive",
+      "shape": "right_wall_shape",
+      "material": "green_matte"
+    },
+    "shortbox": {
+      "class": "TriangleMeshPrimitive",
+      "shape": "shortbox_shape",
+      "material": "ground_matte"
+    },
+    "tallbox": {
+      "class": "TriangleMeshPrimitive",
+      "shape": "tallbox_shape",
+      "material": "ground_matte"
+    }
+  },
+  "lights": {
+    "light": {
+      "class": "DiffuseAreaLight",
+      "shape": "light_shape",
+      "data": [17, 12, 4],
+      "material": "light_matte"
+    }
+  },
+  "sampler": {
+    "class": "RandomSampler",
+    "nSamples": 64
+  },
+  "camera": {
+    "class": "PerspectiveCamera",
+    "fov": 19.5,
+    "transform": [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, -1, 0, 0, -1, 6.8, 1]
+  },
+  "integrator": {
+    "class": "PathIntegrator",
+    "maxDepth": 65
+  }
+}
