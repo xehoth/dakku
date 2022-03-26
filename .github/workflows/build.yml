@@ -56,6 +56,7 @@ jobs:
           # This is the default location of the directory containing vcpkg sources.
           # Change it to the right location if needed.
           # vcpkgDirectory: '${{ github.workspace }}/vcpkg'
+          vcpkgDirectory: '${{ runner.workspace }}/b/vcpkg'
 
           # If not using a submodule for vcpkg sources, this specifies which commit
           # id must be checkout from a Git repo. It must not set if using a submodule
