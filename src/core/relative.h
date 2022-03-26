@@ -5,6 +5,9 @@
 #include <filesystem>
 
 DAKKU_BEGIN
+/**
+ * utility to retrieve relative path (used for scene loading and saving)
+ */
 struct DAKKU_EXPORT_CORE RelativeRoot final : public Singleton<RelativeRoot> {
  public:
   [[nodiscard]] const std::string &get() const;

@@ -4,11 +4,22 @@
 #include <span>
 
 DAKKU_BEGIN
+/**
+ * dakku primitive
+ */
 class Primitive : public SerializableObject {
  public:
   DAKKU_DECLARE_OBJECT(Primitive);
-
+  /**
+   * get the intersection information between ray and primitive
+   * @param r the given ray
+   * @return whether there's intersection between r and this
+   */
   virtual bool intersect(const Ray &r, SurfaceInteraction &) const = 0;
+  /**
+   * only get whether r and this intersects
+   * @param r the given ray
+   */
   [[nodiscard]] virtual bool intersectP(const Ray &r) const = 0;
   virtual void computeScatteringFunctions(SurfaceInteraction &si,
                                           MemoryArena &arena) const = 0;
@@ -46,7 +57,9 @@ class GeometricPrimitive : public Primitive {
 class Aggregate : public Primitive {
  public:
   DAKKU_DECLARE_OBJECT(Aggregate);
-
+  /**
+   * some aggregate (accelerators) needs
+   */
   virtual void build(std::span<const Primitive *> primitives) = 0;
   [[nodiscard]] const AreaLight *getAreaLight() const override;
   [[nodiscard]] const Material *getMaterial() const override;

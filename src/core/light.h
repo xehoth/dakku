@@ -5,7 +5,9 @@
 #include <core/interaction.h>
 
 DAKKU_BEGIN
-
+/**
+ * light flags
+ */
 enum class LightFlags : int {
   DELTA_POSITION = 1 << 0,
   DELTA_DIRECTION = 1 << 1,
@@ -63,6 +65,9 @@ class VisibilityTester {
       : _p0(p0), _p1(p1) {}
   [[nodiscard]] const Interaction &p0() const { return _p0; }
   [[nodiscard]] const Interaction &p1() const { return _p1; }
+  /**
+   * determine whether p0 to p1 is unoccluded
+   */
   [[nodiscard]] bool unoccluded(const Scene &scene) const;
 
  private:
@@ -83,8 +88,14 @@ class AreaLight : public Light {
    */
   [[nodiscard]] virtual Spectrum emit(const Interaction &it,
                                       const Vector3f &w) const = 0;
-  virtual std::vector<Light *> getLightList() const = 0;
-  virtual std::vector<Primitive *> getPrimitiveList() const = 0;
+  /**
+   * some area lights (triangle mesh) needs to split into single triangles
+   */
+  [[nodiscard]] virtual std::vector<Light *> getLightList() const = 0;
+  /**
+   * corresponding primitive for lights
+   */
+  [[nodiscard]] virtual std::vector<Primitive *> getPrimitiveList() const = 0;
 };
 
 DAKKU_END

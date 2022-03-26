@@ -1,8 +1,11 @@
+/**
+ * the reflection use a local coordinate system, whether the normal is aligned
+ * with +z axis (left handed)
+ */
 #ifndef DAKKU_SRC_CORE_REFLECTION_H_
 #define DAKKU_SRC_CORE_REFLECTION_H_
 #include <core/vector.h>
 #include <core/spectrum.h>
-
 DAKKU_BEGIN
 
 inline Float cosTheta(const Vector3f &w) { return w.z(); }
@@ -114,11 +117,15 @@ class BxDF {
   const BxDFType type;
 };
 
+/**
+ * lambertian reflection
+ */
 class LambertianReflection : public BxDF {
  public:
   explicit LambertianReflection(const Spectrum &r)
       : BxDF(BxDFType::BSDF_REFLECTION | BxDFType::BSDF_DIFFUSE), r(r) {}
-  [[nodiscard]] Spectrum f(const Vector3f &wo, const Vector3f &wi) const override;
+  [[nodiscard]] Spectrum f(const Vector3f &wo,
+                           const Vector3f &wi) const override;
 
  private:
   const Spectrum r;

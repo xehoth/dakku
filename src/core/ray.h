@@ -15,7 +15,7 @@ class Ray {
     return os << "{o: " << r.o << ", d: " << r.d << ", tMax: " << r.tMax << "}";
   }
   Point3f o;
-  Vector3f d;
+  Vector3f d;  // direction, note: this may not be normalized
   mutable Float tMax{INF};
 };
 
@@ -43,6 +43,9 @@ class RayDifferential : public Ray {
   Vector3f rxDirection, ryDirection;
 };
 
+/**
+ * offset the ray origin accroding to SHADOW_EPS
+ */
 inline Point3f offsetRayOrigin(const Point3f &p, const Normal3f &n,
                                const Vector3f &w) {
   Vector3f offset = Vector3f(n) * SHADOW_EPS;

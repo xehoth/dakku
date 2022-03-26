@@ -11,10 +11,17 @@
 #include <memory_resource>
 
 DAKKU_BEGIN
-
+/**
+ * allocated memory from stack
+ * @param type type that needs to allocate
+ * @param count the number of [type]s
+ */
 #define DAKKU_ALLOCA(type, count) \
   (reinterpret_cast<type *>(alloca((count) * sizeof(type))))
 
+/**
+ * memory resource that at least aligned with L1 cache line size
+ */
 class L1CacheLineAlignedResource : public std::pmr::memory_resource {
  public:
   explicit L1CacheLineAlignedResource(

@@ -15,8 +15,18 @@ inline bool isNaN(const int x) {
   return false;
 }
 
+/**
+ * convert degrees to radians
+ * @param deg given degree
+ * @return the radian of deg
+ */
 inline Float radians(Float deg) { return PI / 180 * deg; }
 
+/**
+ * convert radians to degrees
+ * @param rad the given radian
+ * @return the degree of rad
+ */
 inline Float degrees(Float rad) { return 180 / PI * rad; }
 
 inline Float gammaCorrect(Float value) {

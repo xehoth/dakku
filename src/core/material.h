@@ -3,6 +3,9 @@
 #include <core/sobject.h>
 
 DAKKU_BEGIN
+/**
+ * dakku Material
+ */
 class Material : public SerializableObject {
  public:
   DAKKU_DECLARE_OBJECT(Material);

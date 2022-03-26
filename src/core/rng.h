@@ -16,7 +16,7 @@ class RNG {
   explicit RNG(std::uint64_t sequenceIndex) { setSequence(sequenceIndex); }
   inline void setSequence(std::uint64_t initseq);
   inline std::uint32_t uniformUInt32();
-  std::uint32_t UniformUInt32(std::uint32_t b) {
+  std::uint32_t uniformUInt32(std::uint32_t b) {
     std::uint32_t threshold = (~b + 1u) % b;
     for (;;) {
       std::uint32_t r = uniformUInt32();
