@@ -37,6 +37,28 @@ Float frDielectric(Float cosThetaI, Float etaI, Float etaT);
 Spectrum frConductor(Float cosThetaI, const Spectrum &etaI,
                      const Spectrum &etaT, const Spectrum &k);
 
+/**
+ * calculate the refraction ray
+ * @param wi incident direction
+ * @param n the normal
+ * @param eta etaI / etaT
+ * @param wt refraction direction
+ * @return whether it refracts
+ */
+inline bool refract(const Vector3f &wi, const Normal3f &n, Float eta,
+                    Vector3f &wt) {
+  // compute cosTheta using Snell's law
+  Float cosThetaI = n.dot(wi);
+  Float sin2ThetaI = std::max(static_cast<Float>(0), 1 - cosThetaI * cosThetaI);
+  Float sin2ThetaT = eta * eta * sin2ThetaI;
+
+  // handle total internal reflection for transmission
+  if (sin2ThetaT >= 1) return false;
+  Float cosThetaT = std::sqrt(1 - sin2ThetaT);
+  wt = eta * -wi + (eta * cosThetaI - cosThetaT) * Vector3f(n);
+  return true;
+}
+
 // BSDF Declarations
 enum class BxDFType : int {
   BSDF_REFLECTION = 1 << 0,
@@ -219,6 +241,36 @@ class SpecularReflection : public BxDF {
  private:
   const Spectrum r;
   const Fresnel *fresnel;
+};
+
+/**
+ * specular transmission
+ */
+class SpecularTransmission : public BxDF {
+ public:
+  explicit SpecularTransmission(const Spectrum &t, Float etaA, Float etaB)
+      : BxDF(BxDFType::BSDF_TRANSMISSION | BxDFType::BSDF_SPECULAR),
+        t(t),
+        etaA(etaA),
+        etaB(etaB),
+        fresnel(etaA, etaB) {}
+
+  [[nodiscard]] Spectrum f(const Vector3f &wo,
+                           const Vector3f &wi) const override {
+    return Spectrum{0};
+  }
+  [[nodiscard]] Float pdf(const Vector3f &wo,
+                          const Vector3f &wi) const override {
+    return 0;
+  }
+  Spectrum sampleF(const Vector3f &wo, Vector3f &wi, const Point2f &sample,
+                   Float &pdf, BxDFType *sampledType) const override;
+
+ private:
+  const Spectrum t;
+  const Float etaA;
+  const Float etaB;
+  const FresnelDielectric fresnel;
 };
 DAKKU_END
 #endif  // DAKKU_SRC_CORE_REFLECTION_H_
