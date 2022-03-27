@@ -230,4 +230,33 @@ Spectrum SpecularTransmission::sampleF(const Vector3f &wo, Vector3f &wi,
   ft *= (etaI * etaI) / (etaT * etaT);
   return ft / absCosTheta(wi);
 }
+
+Spectrum FresnelSpecular::sampleF(const Vector3f &wo, Vector3f &wi,
+                                  const Point2f &u, Float &pdf,
+                                  BxDFType *sampledType) const {
+  Float fr = frDielectric(cosTheta(wo), etaA, etaB);
+  if (u[0] < fr) {
+    // specular reflection
+    wi = Vector3f(-wo.x(), -wo.y(), wo.z());
+    if (sampledType)
+      *sampledType = BxDFType::BSDF_SPECULAR | BxDFType::BSDF_REFLECTION;
+    pdf = fr;
+    return fr * r / absCosTheta(wi);
+  } else {
+    // specular transmission
+    bool entering = cosTheta(wo) > 0;
+    Float etaI = entering ? etaA : etaB;
+    Float etaT = entering ? etaB : etaA;
+    // total internal reflection
+    if (!refract(wo, Normal3f(0, 0, 1).faceForward(wo), etaI / etaT, wi)) {
+      return Spectrum{0};
+    }
+    pdf = 1 - fr;
+    Spectrum ft = t * (1 - fr);
+    ft *= (etaI * etaI) / (etaT * etaT);
+    if (sampledType)
+      *sampledType = BxDFType::BSDF_SPECULAR | BxDFType::BSDF_TRANSMISSION;
+    return ft / absCosTheta(wi);
+  }
+}
 DAKKU_END

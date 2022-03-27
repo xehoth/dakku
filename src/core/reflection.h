@@ -272,5 +272,32 @@ class SpecularTransmission : public BxDF {
   const Float etaB;
   const FresnelDielectric fresnel;
 };
+
+/**
+ * Fresnel specular
+ * combine specular reflection and specular transmission together
+ */
+class FresnelSpecular : public BxDF {
+ public:
+  explicit FresnelSpecular(const Spectrum &r, const Spectrum &t, Float etaA,
+                           Float etaB)
+      : BxDF(BxDFType::BSDF_SPECULAR | BxDFType::BSDF_REFLECTION |
+             BxDFType::BSDF_TRANSMISSION),
+        r(r),
+        t(t),
+        etaA(etaA),
+        etaB(etaB) {}
+  [[nodiscard]] Spectrum f(const Vector3f &wo, const Vector3f &wi) const override {
+    return Spectrum{0};
+  }
+  [[nodiscard]] Float pdf(const Vector3f &wo, const Vector3f &wi) const override { return 0; }
+  Spectrum sampleF(const Vector3f &wo, Vector3f &wi, const Point2f &sample,
+                   Float &pdf, BxDFType *sampledType) const override;
+
+ private:
+  // reflection, transmission
+  const Spectrum r, t;
+  const Float etaA, etaB;
+};
 DAKKU_END
 #endif  // DAKKU_SRC_CORE_REFLECTION_H_
