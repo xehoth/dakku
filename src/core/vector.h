@@ -22,6 +22,8 @@ class Normal : public VectorBase<T, size, Normal<T, size>> {
   DAKKU_DECLARE_VECTOR_DERIVED(Normal, T, size);
 
   using super::operator=;
+  using super::operator-;
+  using super::operator+;
 };
 
 template <ArithmeticType T, size_t size>
@@ -60,6 +62,29 @@ inline Vector3<T> faceforward(const Vector3<T> &v, const Vector3<T> &v2) {
 template <typename T>
 inline Vector3<T> faceforward(const Vector3<T> &v, const Normal3<T> &n2) {
   return (v.dot(n2) < 0.f) ? -v : v;
+}
+
+inline Vector3f sphericalDirection(Float sinTheta, Float cosTheta, Float phi) {
+  return Vector3f(sinTheta * std::cos(phi), sinTheta * std::sin(phi), cosTheta);
+}
+
+/**
+ * construct a local coordinate system according to v1
+ */
+template <ArithmeticType T>
+inline void coordinateSystem(const Vector3<T> &v1, Vector3<T> &v2,
+                             Vector3<T> &v3) {
+  // choose larger one to get better precision
+  if (std::abs(v1.x()) > std::abs(v1.y())) {
+    // take v2 as (-z, 0, x), (-z, 0, x) \cdot (x, y, z) = 0
+    v2 = Vector3<T>(-v1.z(), 0, v1.x()) /
+         std::sqrt(v1.x() * v1.x() + v1.z() * v1.z());
+  } else {
+    // similar
+    v2 = Vector3<T>(0, v1.z(), -v1.y()) /
+         std::sqrt(v1.y() * v1.y() + v1.z() * v1.z());
+  }
+  v3 = v1.cross(v2);
 }
 
 DAKKU_END

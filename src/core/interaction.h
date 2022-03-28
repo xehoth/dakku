@@ -63,6 +63,9 @@ class SurfaceInteraction : public Interaction {
    * @param orientationIsAuthoritative whether the n is authoritative
    */
   void setShadingGeometry(const Normal3f &n, bool orientationIsAuthoritative);
+  void setShadingGeometry(const Vector3f &dpdu, const Vector3f &dpdv,
+                          const Normal3f &dndu, const Normal3f &dndv,
+                          bool orientationIsAuthoritative);
   /**
    * area light emission
    * @param w given emit direction
@@ -72,8 +75,12 @@ class SurfaceInteraction : public Interaction {
   void computeScatteringFunctions(const Ray &ray, MemoryArena &arena);
 
   Point2f uv;  // tex coords
+  Vector3f dpdu, dpdv;
+  Normal3f dndu, dndv;
   struct {
     Normal3f n;  // shading normal (interpolated)
+    Vector3f dpdu, dpdv;
+    Normal3f dndu, dndv;
   } shading;
   const Shape *shape{};
   const Primitive *primitive{};

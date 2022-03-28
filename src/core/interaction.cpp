@@ -15,6 +15,23 @@ void SurfaceInteraction::setShadingGeometry(const Normal3f &_n,
   }
 }
 
+void SurfaceInteraction::setShadingGeometry(const Vector3f &_dpdu,
+                                            const Vector3f &_dpdv,
+                                            const Normal3f &_dndu,
+                                            const Normal3f &_dndv,
+                                            bool orientationIsAuthoritative) {
+  shading.n = Normal3f(_dpdu.cross(_dpdv));
+  if (orientationIsAuthoritative) {
+    n = n.faceForward(shading.n);
+  } else {
+    shading.n = shading.n.faceForward(n);
+  }
+  shading.dpdu = _dpdu;
+  shading.dpdv = _dpdv;
+  shading.dndu = _dndu;
+  shading.dndv = _dndv;
+}
+
 Spectrum SurfaceInteraction::emit(const Vector3f &w) const {
   const AreaLight *areaLight = primitive->getAreaLight();
   return areaLight ? areaLight->emit(*this, w) : Spectrum(0);

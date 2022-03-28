@@ -8,6 +8,7 @@
 #include <core/state.h>
 #include <core/light.h>
 #include <igl/readOBJ.h>
+#include <igl/readPLY.h>
 #include <igl/per_vertex_normals.h>
 #include <filesystem>
 
@@ -58,6 +59,87 @@ Interaction Triangle::sample(const Point2f &u, Float &pdf) const {
   }
   pdf = 1 / area();
   return it;
+}
+
+void Triangle::computeInteraction(Float b0, Float b1, Float b2,
+                                  SurfaceInteraction &isect) const {
+  const Point3f &p0 = mesh->p[v[0]];
+  const Point3f &p1 = mesh->p[v[1]];
+  const Point3f &p2 = mesh->p[v[2]];
+  Point2f uv[3];
+  getTexCoords(uv);
+  Vector3f dpdu, dpdv;
+  {
+    // compute deltas for triangle partial derivatives
+    Vector2f duv02 = uv[0] - uv[2], duv12 = uv[1] - uv[2];
+    Vector3f dp02 = p0 - p2, dp12 = p1 - p2;
+    Float determinant = duv02[0] * duv12[1] - duv02[1] * duv12[0];
+    bool degenerateUV = std::abs(determinant) < 1e-8;
+    if (!degenerateUV) {
+      Float invDet = 1 / determinant;
+      dpdu = (duv12[1] * dp02 - duv02[1] * dp12) * invDet;
+      dpdv = (-duv12[0] * dp02 + duv02[0] * dp12) * invDet;
+    }
+    if (degenerateUV || dpdu.cross(dpdv).squaredNorm() == 0) {
+      // handle zero determinant for triangle partial derivative matrix
+      Vector3f ng = (p2 - p0).cross(p1 - p0);
+      coordinateSystem(ng.normalized(), dpdu, dpdv);
+    }
+  }
+  // interpolate (u, v) parametric coordinates and hit point
+  Point3f pHit = b0 * p0 + b1 * p1 + b2 * p2;
+  Point2f uvHit = b0 * uv[0] + b1 * uv[1] + b2 * uv[2];
+  isect.p = pHit;
+  isect.uv = uvHit;
+  isect.dpdu = dpdu;
+  isect.dpdv = dpdv;
+  if (isect.shape && isect.shape->transformSwapsHandedness) isect.n = -isect.n;
+  isect.shading.n = isect.n;
+  Normal3f ns = getShadingNormal(b1, b2);
+  // shading tangent
+  Vector3f ss = dpdu.normalized();
+  // shading bitangent
+  Vector3f ts = ss.cross(Vector3f(ns));
+  if (ts.squaredNorm() > 0) {
+    ts.normalize();
+    ss = ts.cross(Vector3f(ns));
+  } else {
+    coordinateSystem(Vector3f(ns), ss, ts);
+  }
+  // compute dndu, dndv
+  Normal3f dndu, dndv;
+  {
+    // compute deltas for triangle partial derivatives of normal
+    Vector2f duv02 = uv[0] - uv[2];
+    Vector2f duv12 = uv[1] - uv[2];
+    Normal3f dn1 = mesh->n[v[0]] - mesh->n[v[2]];
+    Normal3f dn2 = mesh->n[v[1]] - mesh->n[v[2]];
+    Float determinant = duv02[0] * duv12[1] - duv02[1] * duv12[0];
+    bool degenerateUV = std::abs(determinant) < 1e-8;
+    if (degenerateUV) {
+      // we can still compute dndu and dndv, with respect to the
+      // same arbitrary coordinate system we use to compute dpdu
+      // and dpdv when this happens. It's important to do this
+      // (rather than giving up) so that ray differentials for
+      // rays reflected from triangles with degenerate
+      // parameterizations are still reasonable.
+      Vector3f dn = Vector3f(mesh->n[v[2]] - mesh->n[v[0]])
+                        .cross(Vector3f(mesh->n[v[1]] - mesh->n[v[0]]));
+      if (dn.squaredNorm() == 0) {
+        dndu = dndv = Normal3f(0, 0, 0);
+      } else {
+        Vector3f dnu, dnv;
+        coordinateSystem(dn, dnu, dnv);
+        dndu = Normal3f(dnu);
+        dndv = Normal3f(dnv);
+      }
+    } else {
+      Float invDet = 1 / determinant;
+      dndu = (duv12[1] * dn1 - duv02[1] * dn2) * invDet;
+      dndv = (-duv12[0] * dn1 + duv02[0] * dn2) * invDet;
+    }
+  }
+  isect.setShadingGeometry(ss, ts, dndu, dndv, true);
 }
 
 void TriangleMesh::serialize(Json &json, OutputStream *stream) const {
@@ -137,6 +219,30 @@ void TriangleMesh::loadMesh(const std::string &fileName) {
       igl::per_vertex_normals(V, F, N);
     }
 
+    Eigen::Matrix<Float, Eigen::Dynamic, Eigen::Dynamic> f_V =
+        V.cast<Float>().transpose();
+    Eigen::Matrix<Float, Eigen::Dynamic, Eigen::Dynamic> f_N =
+        N.cast<Float>().transpose();
+    Eigen::Matrix<Float, Eigen::Dynamic, Eigen::Dynamic> f_TC =
+        TC.cast<Float>().transpose();
+    F.transposeInPlace();
+    assign(
+        std::span<const int>{F.data(), static_cast<size_t>(F.size())},
+        std::span<const Float>{f_V.data(), static_cast<size_t>(f_V.size())},
+        std::span<const Float>{f_N.data(), static_cast<size_t>(f_N.size())},
+        std::span<const Float>{f_TC.data(), static_cast<size_t>(f_TC.size())});
+  } else if (ext == ".ply") {
+    Eigen::MatrixXd V, N, TC;
+    Eigen::MatrixXi F;
+    if (!igl::readPLY(path.string(), V, F, N, TC)) {
+      DAKKU_ERR("failed to read ply: {}", path);
+    }
+    if (N.rows() == 0) {
+      DAKKU_INFO(
+          "normal is not provided in the mesh, use calculated per vertex "
+          "normal instead!");
+      igl::per_vertex_normals(V, F, N);
+    }
     Eigen::Matrix<Float, Eigen::Dynamic, Eigen::Dynamic> f_V =
         V.cast<Float>().transpose();
     Eigen::Matrix<Float, Eigen::Dynamic, Eigen::Dynamic> f_N =

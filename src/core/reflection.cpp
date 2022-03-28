@@ -54,19 +54,11 @@ Spectrum frConductor(Float cosThetaI, const Spectrum &etaI,
 }
 
 BSDF::BSDF(const SurfaceInteraction &si, Float eta)
-    : eta(eta), ns(si.shading.n), ng(si.n) {
-  if (std::abs(ns.x()) > std::abs(ns.z())) {
-    ss.x() = -ns.y();
-    ss.y() = ns.x();
-    ss.z() = 0;
-  } else {
-    ss.x() = 0;
-    ss.y() = -ns.z();
-    ss.z() = ns.y();
-  }
-  ss.normalize();
-  ts = Vector3f(ns).cross(ss);
-}
+    : eta(eta),
+      ns(si.shading.n),
+      ng(si.n),
+      ss(si.shading.dpdu.normalized()),
+      ts(Vector3f(ns).cross(ss)) {}
 
 Spectrum BSDF::f(const Vector3f &woW, const Vector3f &wiW,
                  BxDFType flags) const {
@@ -258,5 +250,51 @@ Spectrum FresnelSpecular::sampleF(const Vector3f &wo, Vector3f &wi,
       *sampledType = BxDFType::BSDF_SPECULAR | BxDFType::BSDF_TRANSMISSION;
     return ft / absCosTheta(wi);
   }
+}
+
+Spectrum MicrofacetReflection::f(const Vector3f &wo, const Vector3f &wi) const {
+  Float cosThetaO = absCosTheta(wo), cosThetaI = absCosTheta(wi);
+  Vector3f wh = wi + wo;
+  // handle degenerate cases for microfacet reflection
+  if (cosThetaI == 0 || cosThetaO == 0) return Spectrum{0};
+  if (wh.x() == 0 && wh.y() == 0 && wh.z() == 0) return Spectrum{0};
+  wh.normalize();
+  // for the Fresnel call, make sure that wh is in the same hemisphere
+  // as the surface normal, so that TIR is handled correctly.
+  Spectrum fr = fresnel->evaluate(wi.dot(wh.faceForward(Vector3f(0, 0, 1))));
+  return r * distribution->evalD(wh) * distribution->evalG(wo, wi) * fr /
+         (4 * cosThetaI * cosThetaO);
+}
+
+Float MicrofacetReflection::pdf(const Vector3f &wo, const Vector3f &wi) const {
+  if (!sameHemisphere(wo, wi)) return 0;
+  Vector3f wh = (wo + wi).normalized();
+  return distribution->pdf(wo, wh) / (4 * wo.dot(wh));
+}
+
+Spectrum MicrofacetTransmission::f(const Vector3f &wo,
+                                   const Vector3f &wi) const {
+  if (sameHemisphere(wo, wi)) return Spectrum{0};  // transmission only
+
+  Float cosThetaO = cosTheta(wo);
+  Float cosThetaI = cosTheta(wi);
+  if (cosThetaI == 0 || cosThetaO == 0) return Spectrum{0};
+
+  // compute wh from wo and wi for microfacet transmission
+  Float eta = cosTheta(wo) > 0 ? (etaB / etaA) : (etaA / etaB);
+  Vector3f wh = (wo + wi * eta).normalized();
+  if (wh.z() < 0) wh = -wh;
+
+  // check same side?
+  if (wo.dot(wh) * wi.dot(wh) > 0) return Spectrum{0};
+
+  Spectrum F = fresnel.evaluate(wo.dot(wh));
+
+  Float sqrtDenom = wo.dot(wh) + eta * wi.dot(wh);
+
+  return (Spectrum(1) - F) * t *
+         std::abs(distribution->evalD(wh) * distribution->evalG(wo, wi) *
+                  wi.absDot(wh) * wo.absDot(wh) /
+                  (cosThetaI * cosThetaO * sqrtDenom * sqrtDenom));
 }
 DAKKU_END

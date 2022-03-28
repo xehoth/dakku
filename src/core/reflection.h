@@ -6,10 +6,30 @@
 #define DAKKU_SRC_CORE_REFLECTION_H_
 #include <core/vector.h>
 #include <core/spectrum.h>
+#include <core/microfacet.h>
+
 DAKKU_BEGIN
 
 inline Float cosTheta(const Vector3f &w) { return w.z(); }
+inline Float cos2Theta(const Vector3f &w) { return w.z() * w.z(); }
 inline Float absCosTheta(const Vector3f &w) { return std::abs(w.z()); }
+inline Float sin2Theta(const Vector3f &w) {
+  return std::max(static_cast<Float>(0), 1 - cos2Theta(w));
+}
+inline Float sinTheta(const Vector3f &w) { return std::sqrt(sin2Theta(w)); }
+inline Float tan2Theta(const Vector3f &w) {
+  return sin2Theta(w) / cos2Theta(w);
+}
+inline Float cosPhi(const Vector3f &w) {
+  Float sinT = sinTheta(w);
+  return sinT == 0 ? 1 : std::clamp<Float>(w.x() / sinT, -1, 1);
+}
+inline Float sinPhi(const Vector3f &w) {
+  Float sinT = sinTheta(w);
+  return sinT == 0 ? 1 : std::clamp<Float>(w.y() / sinT, -1, 1);
+}
+inline Float cos2Phi(const Vector3f &w) { return cosPhi(w) * cosPhi(w); }
+inline Float sin2Phi(const Vector3f &w) { return sinPhi(w) * sinPhi(w); }
 inline bool sameHemisphere(const Vector3f &w, const Vector3f &n) {
   return w.z() * n.z() > 0;
 }
@@ -287,10 +307,14 @@ class FresnelSpecular : public BxDF {
         t(t),
         etaA(etaA),
         etaB(etaB) {}
-  [[nodiscard]] Spectrum f(const Vector3f &wo, const Vector3f &wi) const override {
+  [[nodiscard]] Spectrum f(const Vector3f &wo,
+                           const Vector3f &wi) const override {
     return Spectrum{0};
   }
-  [[nodiscard]] Float pdf(const Vector3f &wo, const Vector3f &wi) const override { return 0; }
+  [[nodiscard]] Float pdf(const Vector3f &wo,
+                          const Vector3f &wi) const override {
+    return 0;
+  }
   Spectrum sampleF(const Vector3f &wo, Vector3f &wi, const Point2f &sample,
                    Float &pdf, BxDFType *sampledType) const override;
 
@@ -298,6 +322,54 @@ class FresnelSpecular : public BxDF {
   // reflection, transmission
   const Spectrum r, t;
   const Float etaA, etaB;
+};
+
+/**
+ * microfacet reflection
+ */
+class MicrofacetReflection : public BxDF {
+ public:
+  explicit MicrofacetReflection(const Spectrum &r,
+                                const MicrofacetDistribution *distribution,
+                                const Fresnel *fresnel)
+      : BxDF(BxDFType::BSDF_REFLECTION | BxDFType::BSDF_GLOSSY),
+        r(r),
+        distribution(distribution),
+        fresnel(fresnel) {}
+  [[nodiscard]] Spectrum f(const Vector3f &wo,
+                           const Vector3f &wi) const override;
+  Spectrum sampleF(const Vector3f &wo, Vector3f &wi, const Point2f &sample,
+                   Float &pdf, BxDFType *sampledType) const override;
+  [[nodiscard]] Float pdf(const Vector3f &wo, const Vector3f &wi) const override;
+
+ private:
+  const Spectrum r;
+  const MicrofacetDistribution *distribution;
+  const Fresnel *fresnel;
+};
+
+/**
+ * microfacet transmission
+ */
+class MicrofacetTransmission : public BxDF {
+ public:
+  explicit MicrofacetTransmission(const Spectrum &t,
+                                  const MicrofacetDistribution *distribution,
+                                  Float etaA, Float etaB)
+      : BxDF(BxDFType::BSDF_TRANSMISSION | BxDFType::BSDF_GLOSSY),
+        t(t),
+        distribution(distribution),
+        etaA(etaA),
+        etaB(etaB),
+        fresnel(etaA, etaB) {}
+  [[nodiscard]] Spectrum f(const Vector3f &wo,
+                           const Vector3f &wi) const override;
+
+ private:
+  const Spectrum t;
+  const MicrofacetDistribution *distribution;
+  const Float etaA, etaB;
+  const FresnelDielectric fresnel;
 };
 DAKKU_END
 #endif  // DAKKU_SRC_CORE_REFLECTION_H_

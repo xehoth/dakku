@@ -56,14 +56,13 @@ bool EmbreeAccel::intersect(const Ray &r, SurfaceInteraction &isect) const {
   Float v = rayHit.hit.v;
   Float w = 1 - u - v;
   const Triangle *tri = mesh->getTriangle(rayHit.hit.primID);
-  Point2f uvs[3];
-  tri->getTexCoords(uvs);
-  Point2f uv = w * uvs[0] + u * uvs[1] + v * uvs[2];
+  isect = SurfaceInteraction();
   Normal3f geomNormal(rayHit.hit.Ng_x, rayHit.hit.Ng_y, rayHit.hit.Ng_z);
   geomNormal.normalize();
-  isect = SurfaceInteraction(pHit, uv, -r.d, geomNormal, tri);
-  Normal3f hitN = tri->getShadingNormal(u, v);
-  isect.setShadingGeometry(hitN, true);
+  isect.n = geomNormal;
+  isect.shape = tri;
+  isect.wo = -r.d;
+  tri->computeInteraction(w, u, v, isect);
   isect.primitive = triP;
   return true;
 }

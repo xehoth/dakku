@@ -23,6 +23,8 @@ class Triangle : public Shape {
   Interaction sample(const Point2f &u, Float &pdf) const override;
   inline void getTexCoords(std::span<Point2f, 3> uv) const;
   [[nodiscard]] inline Normal3f getShadingNormal(Float _u, Float _v) const;
+  void computeInteraction(Float b0, Float b1, Float b2,
+                          SurfaceInteraction &isect) const;
 
  private:
   const int *v{};
