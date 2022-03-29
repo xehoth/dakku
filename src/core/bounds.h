@@ -127,5 +127,30 @@ inline Bounds2iIterator end(const Bounds2i &b) {
   return Bounds2iIterator(b, pEnd);
 }
 
+/**
+ * 3d bounding box
+ * @tparam T precision type
+ */
+template <ArithmeticType T>
+class Bounds3 {
+ public:
+  void boundingSphere(Point3<T> &center, Float &radius) const;
+
+  Point3<T> pMin, pMax;
+};
+
+using Bounds3f = Bounds3<Float>;
+
+template <ArithmeticType T>
+inline bool inside(const Point3<T> &p, const Bounds3<T> &b) {
+  return (p.x() >= b.pMin.x() && p.x() <= b.pMax.x() && p.y() >= b.pMin.y() &&
+          p.y() <= b.pMax.y() && p.z() >= b.pMin.z() && p.z() <= b.pMax.z());
+}
+
+template <ArithmeticType T>
+void Bounds3<T>::boundingSphere(Point3<T> &center, Float &radius) const {
+  center = (pMin + pMax) / 2;
+  radius = inside(center, *this) ? (center - pMax).norm() : 0;
+}
 DAKKU_END
 #endif  // DAKKU_SRC_CORE_BOUNDS_H_

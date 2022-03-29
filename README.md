@@ -25,6 +25,9 @@ Then use [CMake](https://cmake.org/) to build the project.
 [Cornell Box Specular](scenes/cornell_box/scene_specular.json)
 ![Cornell Box Specular](scenes/cornell_box/cornell_box_specular.png)
 
+[Dragon](scenes/dragon/scene.json)
+![Dragon](scenes/dragon/dragon.png)
+
 ### Description
 
 The scene description schema can be found in [schema.json](scenes/schema.json).  

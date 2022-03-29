@@ -50,6 +50,7 @@ class Light : public SerializableObject {
   [[nodiscard]] virtual Float pdfLi(const Interaction &ref,
                                     const Interaction &lightIt, bool foundIt,
                                     const Vector3f &wi) const = 0;
+  virtual void preprocess(const Scene &scene) {}
 
   LightFlags flags{};
   int nSamples{1};

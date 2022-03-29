@@ -1,0 +1,255 @@
+{
+  "$schema": "../schema.json",
+  "film": {
+    "fullResolution": [1920, 1080],
+    "fileName": "dragon.png",
+    "filter": {
+      "class": "TriangleFilter",
+      "radius": [1.0, 1.0]
+    }
+  },
+  "textures": {
+    "GroundInner": {
+      "class": "ConstantSpectrumTexture",
+      "data": [0.456263, 0.456263, 0.456263]
+    },
+    "GroundOuter": {
+      "class": "ConstantSpectrumTexture",
+      "data": [0.456263, 0.456263, 0.456263]
+    },
+    "Cloth": {
+      "class": "ConstantSpectrumTexture",
+      "data": [0.456263, 0.456263, 0.456263]
+    },
+    "Dragon": {
+      "class": "ConstantSpectrumTexture",
+      "data": [0.793110, 0.793110, 0.793110]
+    },
+    "Blade": {
+      "class": "ConstantSpectrumTexture",
+      "data": [0.793110, 0.793110, 0.793110]
+    },
+    "Sword": {
+      "class": "ConstantSpectrumTexture",
+      "data": [0.793110, 0.793110, 0.793110]
+    },
+    "Deco": {
+      "class": "ConstantSpectrumTexture",
+      "data": [0.793110, 0.793110, 0.793110]
+    },
+    "Diamond": {
+      "class": "ConstantSpectrumTexture",
+      "data": [0.793110, 0.793110, 0.793110]
+    },
+    "Deco2": {
+      "class": "ConstantSpectrumTexture",
+      "data": [0.793110, 0.793110, 0.793110]
+    }
+  },
+  "materials": {
+    "GroundInner": {
+      "class": "MatteMaterial",
+      "texture": "GroundInner"
+    },
+    "GroundOuter": {
+      "class": "MatteMaterial",
+      "texture": "GroundOuter"
+    },
+    "Cloth": {
+      "class": "MatteMaterial",
+      "texture": "Cloth"
+    },
+    "Dragon": {
+      "class": "MatteMaterial",
+      "texture": "Dragon"
+    },
+    "Blade": {
+      "class": "MatteMaterial",
+      "texture": "Blade"
+    },
+    "Sword": {
+      "class": "MatteMaterial",
+      "texture": "Sword"
+    },
+    "Deco": {
+      "class": "MatteMaterial",
+      "texture": "Deco"
+    },
+    "Diamond": {
+      "class": "MatteMaterial",
+      "texture": "Diamond"
+    },
+    "Deco2": {
+      "class": "MatteMaterial",
+      "texture": "Deco2"
+    }
+  },
+  "shapes": {
+    "GroundOuter0": {
+      "class": "TriangleMesh",
+      "data": "models/Mesh011.ply"
+    },
+    "Cloth": {
+      "class": "TriangleMesh",
+      "data": "models/Mesh010.ply"
+    },
+    "GroundOuter1": {
+      "class": "TriangleMesh",
+      "data": "models/Mesh005.ply"
+    },
+    "GroundOuter2": {
+      "class": "TriangleMesh",
+      "data": "models/Mesh006.ply"
+    },
+    "GroundInner": {
+      "class": "TriangleMesh",
+      "data": "models/Mesh012.ply"
+    },
+    "GroundOuter3": {
+      "class": "TriangleMesh",
+      "data": "models/Mesh007.ply"
+    },
+    "Dragon0": {
+      "class": "TriangleMesh",
+      "data": "models/Mesh008.ply"
+    },
+    "Dragon1": {
+      "class": "TriangleMesh",
+      "data": "models/Mesh013.ply"
+    },
+    "Dragon2": {
+      "class": "TriangleMesh",
+      "data": "models/Mesh014.ply"
+    },
+    "Dragon3": {
+      "class": "TriangleMesh",
+      "data": "models/Mesh015.ply"
+    },
+    "Blade": {
+      "class": "TriangleMesh",
+      "data": "models/Mesh004.ply"
+    },
+    "Sword": {
+      "class": "TriangleMesh",
+      "data": "models/Mesh009.ply"
+    },
+    "Deco": {
+      "class": "TriangleMesh",
+      "data": "models/Mesh003.ply"
+    },
+    "Diamond": {
+      "class": "TriangleMesh",
+      "data": "models/Mesh002.ply"
+    },
+    "Deco20": {
+      "class": "TriangleMesh",
+      "data": "models/Mesh001.ply"
+    },
+    "Deco21": {
+      "class": "TriangleMesh",
+      "data": "models/Mesh000.ply"
+    }
+  },
+  "primitives": {
+    "GroundOuter0": {
+      "class": "TriangleMeshPrimitive",
+      "shape": "GroundOuter0",
+      "material": "GroundOuter"
+    },
+    "GroundOuter1": {
+      "class": "TriangleMeshPrimitive",
+      "shape": "GroundOuter1",
+      "material": "GroundOuter"
+    },
+    "GroundOuter2": {
+      "class": "TriangleMeshPrimitive",
+      "shape": "GroundOuter2",
+      "material": "GroundOuter"
+    },
+    "GroundOuter3": {
+      "class": "TriangleMeshPrimitive",
+      "shape": "GroundOuter3",
+      "material": "GroundOuter"
+    },
+    "Cloth": {
+      "class": "TriangleMeshPrimitive",
+      "shape": "Cloth",
+      "material": "Cloth"
+    },
+    "GroundInner": {
+      "class": "TriangleMeshPrimitive",
+      "shape": "GroundInner",
+      "material": "GroundInner"
+    },
+    "Dragon0": {
+      "class": "TriangleMeshPrimitive",
+      "shape": "Dragon0",
+      "material": "Dragon"
+    },
+    "Dragon1": {
+      "class": "TriangleMeshPrimitive",
+      "shape": "Dragon1",
+      "material": "Dragon"
+    },
+    "Dragon2": {
+      "class": "TriangleMeshPrimitive",
+      "shape": "Dragon2",
+      "material": "Dragon"
+    },
+    "Dragon3": {
+      "class": "TriangleMeshPrimitive",
+      "shape": "Dragon3",
+      "material": "Dragon"
+    },
+    "Blade": {
+      "class": "TriangleMeshPrimitive",
+      "shape": "Blade",
+      "material": "Blade"
+    },
+    "Sword": {
+      "class": "TriangleMeshPrimitive",
+      "shape": "Sword",
+      "material": "Sword"
+    },
+    "Deco": {
+      "class": "TriangleMeshPrimitive",
+      "shape": "Deco",
+      "material": "Deco"
+    },
+    "Diamond": {
+      "class": "TriangleMeshPrimitive",
+      "shape": "Diamond",
+      "material": "Diamond"
+    },
+    "Deco20": {
+      "class": "TriangleMeshPrimitive",
+      "shape": "Deco20",
+      "material": "Deco2"
+    },
+    "Deco21": {
+      "class": "TriangleMeshPrimitive",
+      "shape": "Deco21",
+      "material": "Deco2"
+    }
+  },
+  "lights": {
+    "light": {
+      "class": "DistantLight",
+      "data": [8, 8, 8],
+      "wLight": [-0.188620, 0.692312, 0.696510]
+    }
+  },
+  "sampler": {
+    "class": "RandomSampler",
+    "nSamples": 64
+  },
+  "camera": {
+    "class": "PerspectiveCamera",
+    "fov": 20.114292,
+    "transform": [0.678116, -0.167853, -0.715531, -0, -0, 0.973571, -0.228385, -0, -0.734955, -0.154871, -0.660194, -0, -0.554465, -6.29907, 82.2988, 1]
+  },
+  "integrator": {
+    "class": "PathIntegrator",
+    "maxDepth": 17
+  }
+}

@@ -1,6 +1,7 @@
 #ifndef DAKKU_SRC_CORE_PRIMITIVE_H_
 #define DAKKU_SRC_CORE_PRIMITIVE_H_
 #include <core/sobject.h>
+#include <core/bounds.h>
 #include <span>
 
 DAKKU_BEGIN
@@ -25,6 +26,11 @@ class Primitive : public SerializableObject {
                                           MemoryArena &arena) const = 0;
   [[nodiscard]] virtual const AreaLight *getAreaLight() const = 0;
   [[nodiscard]] virtual const Material *getMaterial() const = 0;
+
+  [[nodiscard]] virtual Bounds3f worldBound() const {
+    DAKKU_ERR("unimplemented");
+    return Bounds3f();
+  }
 };
 
 class GeometricPrimitive : public Primitive {

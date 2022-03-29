@@ -1,5 +1,6 @@
 #include <core/light.h>
 #include <core/scene.h>
+
 DAKKU_BEGIN
 
 void Light::construct(LightFlags _flags, const dakku::Transform &_lightToWorld,

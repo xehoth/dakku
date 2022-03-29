@@ -10,6 +10,7 @@ DAKKU_BEGIN
  */
 struct Interaction {
   explicit Interaction() = default;
+  explicit Interaction(const Point3f &p) : p(p) {}
   explicit Interaction(const Point3f &p, const Vector3f &wo) : p(p), wo(wo) {}
   explicit Interaction(const Point3f &p, const Vector3f &wo, const Normal3f &n)
       : p(p), wo(wo), n(n) {}

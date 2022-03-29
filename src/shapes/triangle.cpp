@@ -70,6 +70,10 @@ void Triangle::computeInteraction(Float b0, Float b1, Float b2,
   getTexCoords(uv);
   Vector3f dpdu, dpdv;
   {
+    // point in triangle can be described as p_o + u dpdu + v dpdv for some p_o
+    // p_i = p_o + u_i dpdu + v_i dpdv
+    // => p0 - p2 = (u0 - u2) dpdu + (v0 - v2)dpdv
+    // => p1 - p2 = (u1 - u2) dpdu + (v1 - v2)dpdv
     // compute deltas for triangle partial derivatives
     Vector2f duv02 = uv[0] - uv[2], duv12 = uv[1] - uv[2];
     Vector3f dp02 = p0 - p2, dp12 = p1 - p2;
@@ -109,6 +113,7 @@ void Triangle::computeInteraction(Float b0, Float b1, Float b2,
   // compute dndu, dndv
   Normal3f dndu, dndv;
   {
+    // similar to calculating dpdu and dpdv
     // compute deltas for triangle partial derivatives of normal
     Vector2f duv02 = uv[0] - uv[2];
     Vector2f duv12 = uv[1] - uv[2];

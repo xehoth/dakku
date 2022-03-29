@@ -121,4 +121,13 @@ void EmbreeAccel::build(std::span<const Primitive *> _primitives) {
   rtcCommitScene(this->rtcScene);
 }
 
+Bounds3f EmbreeAccel::worldBound() const {
+  RTCBounds bounds{};
+  rtcGetSceneBounds(this->rtcScene, &bounds);
+  Bounds3f ret;
+  ret.pMin = Point3f(bounds.lower_x, bounds.lower_y, bounds.lower_z);
+  ret.pMax = Point3f(bounds.upper_x, bounds.upper_y, bounds.upper_z);
+  return ret;
+}
+
 DAKKU_END

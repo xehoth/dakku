@@ -24,6 +24,7 @@ class EmbreeAccel : public Aggregate {
   ~EmbreeAccel() override;
   bool intersect(const Ray &r, SurfaceInteraction &) const override;
   [[nodiscard]] bool intersectP(const Ray &r) const override;
+  [[nodiscard]] Bounds3f worldBound() const override;
 
  private:
   RTCScene rtcScene{};
