@@ -8,7 +8,7 @@
 DAKKU_BEGIN
 class Sampler : public SerializableObject {
  public:
-  DAKKU_DECLARE_OBJECT(Sampler);
+  DAKKU_DECLARE_OBJECT(Sampler, SerializableObject);
 
   virtual void startPixel(const Point2i &p);
   virtual Float get1D() = 0;
@@ -41,7 +41,7 @@ class Sampler : public SerializableObject {
 
 class PixelSampler : public Sampler {
  public:
-  DAKKU_DECLARE_OBJECT(PixelSampler);
+  DAKKU_DECLARE_OBJECT(PixelSampler, Sampler);
 
   bool startNextSample() override;
   bool setSampleNumber(std::int64_t sampleNum) override;

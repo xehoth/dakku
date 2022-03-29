@@ -5,7 +5,7 @@
 DAKKU_BEGIN
 class MirrorMaterial : public Material {
  public:
-  DAKKU_DECLARE_OBJECT(MirrorMaterial);
+  DAKKU_DECLARE_OBJECT(MirrorMaterial, Material);
   void computeScatteringFunctions(SurfaceInteraction &si,
                                   MemoryArena &arena) const override;
   void serialize(Json &json, OutputStream *stream) const override;

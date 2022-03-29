@@ -32,8 +32,13 @@ class RayDifferential : public Ray {
                                  rxDirection.hasNaN() || ryDirection.hasNaN()));
   }
   void scaleDifferentials(Float s) {
+    // scale origin
+    // o'' = o + s * (o' - o)
     rxOrigin = o + (rxOrigin - o) * s;
     ryOrigin = o + (ryOrigin - o) * s;
+    // scale direction
+    // d' = d + (o' - o)
+    // d'' = d + s * (o' - o)
     rxDirection = d + (rxDirection - d) * s;
     ryDirection = d + (ryDirection - d) * s;
   }

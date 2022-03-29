@@ -9,7 +9,7 @@
 DAKKU_BEGIN
 class Camera : public SerializableObject {
  public:
-  DAKKU_DECLARE_OBJECT(Camera);
+  DAKKU_DECLARE_OBJECT(Camera, SerializableObject);
 
   void construct(const Transform &cameraToWorld, Film *film);
   virtual Float generateRay(const CameraSample &sample, Ray &ray) const = 0;
@@ -23,7 +23,7 @@ struct CameraSample {
 
 class ProjectiveCamera : public Camera {
  public:
-  DAKKU_DECLARE_OBJECT(ProjectiveCamera);
+  DAKKU_DECLARE_OBJECT(ProjectiveCamera, Camera);
 
   void construct(const Transform &_cameraToWorld,
                  const Transform &_cameraToScreen, const Bounds2f &screenWindow,

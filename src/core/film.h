@@ -22,7 +22,7 @@ struct FilmTilePixel {
  */
 class Film : public SerializableObject {
  public:
-  DAKKU_DECLARE_OBJECT(Film);
+  DAKKU_DECLARE_OBJECT(Film, SerializableObject);
 
   void serialize(Json &json, OutputStream *stream) const override;
   void unserialize(const Json &json, InputStream *stream) override;

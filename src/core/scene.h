@@ -7,7 +7,7 @@
 DAKKU_BEGIN
 class Scene : public Object {
  public:
-  DAKKU_DECLARE_OBJECT(Scene);
+  DAKKU_DECLARE_OBJECT(Scene, Object);
 
   explicit Scene(const Primitive *aggregate,
                  const std::vector<Light *> &lights);

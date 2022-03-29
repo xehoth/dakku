@@ -5,7 +5,7 @@
 DAKKU_BEGIN
 class RandomSampler : public Sampler {
  public:
-  DAKKU_DECLARE_OBJECT(RandomSampler);
+  DAKKU_DECLARE_OBJECT(RandomSampler, Sampler);
 
   void serialize(Json &json, OutputStream *stream) const override;
   void unserialize(const Json &json, InputStream *stream) override;

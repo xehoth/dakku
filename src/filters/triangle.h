@@ -5,7 +5,7 @@
 DAKKU_BEGIN
 class TriangleFilter : public Filter {
  public:
-  DAKKU_DECLARE_OBJECT(TriangleFilter);
+  DAKKU_DECLARE_OBJECT(TriangleFilter, Filter);
 
   void serialize(Json &json, OutputStream *stream) const override;
   void unserialize(const Json &json, InputStream *stream) override;

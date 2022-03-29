@@ -57,6 +57,10 @@ Float frDielectric(Float cosThetaI, Float etaI, Float etaT);
 Spectrum frConductor(Float cosThetaI, const Spectrum &etaI,
                      const Spectrum &etaT, const Spectrum &k);
 
+inline Vector3f reflect(const Vector3f &wo, const Vector3f &n) {
+  return -wo + 2 * wo.dot(n) * n;
+}
+
 /**
  * calculate the refraction ray
  * @param wi incident direction
@@ -340,7 +344,8 @@ class MicrofacetReflection : public BxDF {
                            const Vector3f &wi) const override;
   Spectrum sampleF(const Vector3f &wo, Vector3f &wi, const Point2f &sample,
                    Float &pdf, BxDFType *sampledType) const override;
-  [[nodiscard]] Float pdf(const Vector3f &wo, const Vector3f &wi) const override;
+  [[nodiscard]] Float pdf(const Vector3f &wo,
+                          const Vector3f &wi) const override;
 
  private:
   const Spectrum r;

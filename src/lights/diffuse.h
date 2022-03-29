@@ -7,7 +7,7 @@
 DAKKU_BEGIN
 class DiffuseAreaLight : public AreaLight {
  public:
-  DAKKU_DECLARE_OBJECT(DiffuseAreaLight);
+  DAKKU_DECLARE_OBJECT(DiffuseAreaLight, AreaLight);
 
   void construct(const Transform &lightToWorld, const Spectrum &_data,
                  int nSamples, const Shape *_shape, bool _twoSided);

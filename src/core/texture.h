@@ -6,7 +6,7 @@ DAKKU_BEGIN
 template <TextureDataType T>
 class Texture : public SerializableObject {
  public:
-  DAKKU_DECLARE_OBJECT(Texture);
+  DAKKU_DECLARE_OBJECT(Texture, SerializableObject);
 
   [[nodiscard]] virtual T evaluate(const SurfaceInteraction &) const = 0;
 

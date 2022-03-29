@@ -6,7 +6,7 @@
 DAKKU_BEGIN
 class PerspectiveCamera : public ProjectiveCamera {
  public:
-  DAKKU_DECLARE_OBJECT(PerspectiveCamera);
+  DAKKU_DECLARE_OBJECT(PerspectiveCamera, ProjectiveCamera);
 
   void serialize(Json &json, OutputStream *) const override;
   void unserialize(const Json &json, InputStream *) override;

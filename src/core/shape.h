@@ -8,6 +8,7 @@ DAKKU_BEGIN
 
 class Shape : public SerializableObject {
  public:
+  DAKKU_DECLARE_OBJECT(Shape, SerializableObject);
   void construct(const Transform *objectToWorld,
                  const Transform *worldToObject);
   [[nodiscard]] virtual Float area() const = 0;

@@ -10,7 +10,7 @@ DAKKU_BEGIN
  */
 class Primitive : public SerializableObject {
  public:
-  DAKKU_DECLARE_OBJECT(Primitive);
+  DAKKU_DECLARE_OBJECT(Primitive, SerializableObject);
   /**
    * get the intersection information between ray and primitive
    * @param r the given ray
@@ -35,7 +35,7 @@ class Primitive : public SerializableObject {
 
 class GeometricPrimitive : public Primitive {
  public:
-  DAKKU_DECLARE_OBJECT(GeometricPrimitive);
+  DAKKU_DECLARE_OBJECT(GeometricPrimitive, Primitive);
 
   void construct(const Shape *shape, const Material *material,
                  const AreaLight *areaLight);
@@ -62,7 +62,7 @@ class GeometricPrimitive : public Primitive {
 
 class Aggregate : public Primitive {
  public:
-  DAKKU_DECLARE_OBJECT(Aggregate);
+  DAKKU_DECLARE_OBJECT(Aggregate, Primitive);
   /**
    * some aggregate (accelerators) needs
    */

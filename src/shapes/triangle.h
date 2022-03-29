@@ -11,7 +11,7 @@ class TriangleMesh;
 
 class Triangle : public Shape {
  public:
-  DAKKU_DECLARE_OBJECT(Triangle);
+  DAKKU_DECLARE_OBJECT(Triangle, Shape);
 
   explicit Triangle(const Transform *objectToWorld,
                     const Transform *worldToObject, const TriangleMesh *mesh,
@@ -33,7 +33,7 @@ class Triangle : public Shape {
 
 class TriangleMesh : public Shape {
  public:
-  DAKKU_DECLARE_OBJECT(TriangleMesh);
+  DAKKU_DECLARE_OBJECT(TriangleMesh, Shape);
   Interaction sample(const Point2f &u, Float &pdf) const override;
   [[nodiscard]] Float area() const override;
   void serialize(Json &json, OutputStream *stream) const override;
@@ -80,7 +80,7 @@ Normal3f Triangle::getShadingNormal(Float _u, Float _v) const {
 
 class TriangleMeshPrimitive : public GeometricPrimitive {
  public:
-  DAKKU_DECLARE_OBJECT(TriangleMeshPrimitive);
+  DAKKU_DECLARE_OBJECT(TriangleMeshPrimitive, GeometricPrimitive);
 
   void serialize(Json &json, OutputStream *stream) const override;
   void unserialize(const Json &json, InputStream *stream) override;

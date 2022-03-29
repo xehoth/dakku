@@ -6,7 +6,7 @@
 DAKKU_BEGIN
 class Integrator : public SerializableObject {
  public:
-  DAKKU_DECLARE_OBJECT(Integrator);
+  DAKKU_DECLARE_OBJECT(Integrator, SerializableObject);
   virtual void render(const Scene &scene) = 0;
 };
 
@@ -19,7 +19,7 @@ Spectrum estimateDirect(const Interaction &it, const Point2f &uScattering,
 
 class SamplerIntegrator : public Integrator {
  public:
-  DAKKU_DECLARE_OBJECT(SamplerIntegrator);
+  DAKKU_DECLARE_OBJECT(SamplerIntegrator, Integrator);
 
   void construct(const Camera *_camera, Sampler *_sampler,
                  const Bounds2i &_pixelBounds) {

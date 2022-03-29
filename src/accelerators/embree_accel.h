@@ -14,7 +14,7 @@ DAKKU_BEGIN
  */
 class EmbreeAccel : public Aggregate {
  public:
-  DAKKU_DECLARE_OBJECT(EmbreeAccel);
+  DAKKU_DECLARE_OBJECT(EmbreeAccel, Aggregate);
 
   void serialize(Json &json, OutputStream *) const override;
   void unserialize(const Json &json, InputStream *) override;

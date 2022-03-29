@@ -19,7 +19,8 @@ class MicrofacetDistribution {
   [[nodiscard]] Float evalG1(const Vector3f &w) const {
     return 1 / (1 + evalLambda(w));
   }
-  [[nodiscard]] virtual Float evalG(const Vector3f &wo, const Vector3f &wi) const {
+  [[nodiscard]] virtual Float evalG(const Vector3f &wo,
+                                    const Vector3f &wi) const {
     return 1 / (1 + evalLambda(wo) + evalLambda(wi));
   }
   [[nodiscard]] virtual Vector3f sampleWh(const Vector3f &wo,
@@ -45,7 +46,9 @@ class TrowbridgeReitzDistribution : public MicrofacetDistribution {
         alphaY(std::max(static_cast<Float>(0.001), alphaY)) {}
   [[nodiscard]] Float evalD(const Vector3f &wh) const override;
   [[nodiscard]] Float evalLambda(const Vector3f &w) const override;
-  [[nodiscard]] Vector3f sampleWh(const Vector3f &wo, const Point2f &u) const override;
+  [[nodiscard]] Vector3f sampleWh(const Vector3f &wo,
+                                  const Point2f &u) const override;
+
  private:
   Float alphaX, alphaY;
 };

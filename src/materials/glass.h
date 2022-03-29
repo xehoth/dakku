@@ -5,7 +5,7 @@
 DAKKU_BEGIN
 class PerfectGlassMaterial : public Material {
  public:
-  DAKKU_DECLARE_OBJECT(PerfectGlassMaterial);
+  DAKKU_DECLARE_OBJECT(PerfectGlassMaterial, Material);
   void computeScatteringFunctions(SurfaceInteraction &si,
                                   MemoryArena &arena) const override;
   void serialize(Json &json, OutputStream *stream) const override;

@@ -9,7 +9,7 @@ DAKKU_BEGIN
  */
 class Filter : public SerializableObject {
  public:
-  DAKKU_DECLARE_OBJECT(Filter);
+  DAKKU_DECLARE_OBJECT(Filter, SerializableObject);
   /**
    * construct the filter with given radius
    * @param _radius the given radius of the filter

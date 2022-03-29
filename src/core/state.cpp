@@ -154,7 +154,7 @@ void RenderState::unserialize(const Json &json, InputStream *stream) {
   std::vector<Light *> allLights;
   std::vector<const Primitive *> allPrimitives;
   for (const auto &[_, p] : this->lights) {
-    if (p->getClassName() == "DiffuseAreaLight") {
+    if (p->isDerivedFrom("DiffuseAreaLight")) {
       auto lightList = dynamic_cast<AreaLight *>(p.get())->getLightList();
       auto primList = dynamic_cast<AreaLight *>(p.get())->getPrimitiveList();
       allLights.insert(allLights.end(), lightList.begin(), lightList.end());

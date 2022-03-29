@@ -272,6 +272,19 @@ Float MicrofacetReflection::pdf(const Vector3f &wo, const Vector3f &wi) const {
   return distribution->pdf(wo, wh) / (4 * wo.dot(wh));
 }
 
+Spectrum MicrofacetReflection::sampleF(const Vector3f &wo, Vector3f &wi,
+                                       const Point2f &u, Float &pdf,
+                                       BxDFType *sampledType) const {
+  // sample microfacet orientation wh and reflected direction wi
+  if (wo.z() == 0) return Spectrum{0};
+  Vector3f wh = distribution->sampleWh(wo, u);
+  if (wo.dot(wh) < 0) return Spectrum{0};
+  wi = reflect(wo, wh);
+  if (!sameHemisphere(wo, wi)) return Spectrum{0};
+  pdf = distribution->pdf(wo, wh) / (4 * wo.dot(wh));
+  return f(wo, wi);
+}
+
 Spectrum MicrofacetTransmission::f(const Vector3f &wo,
                                    const Vector3f &wi) const {
   if (sameHemisphere(wo, wi)) return Spectrum{0};  // transmission only

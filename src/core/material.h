@@ -8,7 +8,7 @@ DAKKU_BEGIN
  */
 class Material : public SerializableObject {
  public:
-  DAKKU_DECLARE_OBJECT(Material);
+  DAKKU_DECLARE_OBJECT(Material, SerializableObject);
   
   virtual void computeScatteringFunctions(SurfaceInteraction &si,
                                           MemoryArena &arena) const = 0;

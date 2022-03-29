@@ -16,7 +16,7 @@ DAKKU_BEGIN
  */
 class RenderState final : public SerializableObject {
  public:
-  DAKKU_DECLARE_OBJECT(RenderState);
+  DAKKU_DECLARE_OBJECT(RenderState, SerializableObject);
 
   /**
    * load scene/state from path

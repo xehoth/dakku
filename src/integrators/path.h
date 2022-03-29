@@ -5,7 +5,7 @@
 DAKKU_BEGIN
 class PathIntegrator : public SamplerIntegrator {
  public:
-  DAKKU_DECLARE_OBJECT(PathIntegrator);
+  DAKKU_DECLARE_OBJECT(PathIntegrator, SamplerIntegrator);
 
   void serialize(Json &json, OutputStream *) const override;
   void unserialize(const Json &json, InputStream *) override;

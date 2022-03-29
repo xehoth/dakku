@@ -7,7 +7,7 @@ DAKKU_BEGIN
 template <TextureDataType T>
 class ConstantTexture : public Texture<T> {
  public:
-  DAKKU_DECLARE_OBJECT(ConstantTexture);
+  DAKKU_DECLARE_OBJECT(ConstantTexture, Texture);
 
   void construct(const T &_data) { this->data = _data; }
   [[nodiscard]] T evaluate(const SurfaceInteraction &) const override { return data; }
@@ -18,7 +18,7 @@ class ConstantTexture : public Texture<T> {
 
 class ConstantFloatTexture : public ConstantTexture<Float> {
  public:
-  DAKKU_DECLARE_OBJECT(ConstantFloatTexture);
+  DAKKU_DECLARE_OBJECT(ConstantFloatTexture, ConstantTexture);
 
   void serialize(Json &json, OutputStream *stream) const override;
   void unserialize(const Json &json, InputStream *stream) override;
@@ -26,7 +26,7 @@ class ConstantFloatTexture : public ConstantTexture<Float> {
 
 class ConstantSpectrumTexture : public ConstantTexture<Spectrum> {
  public:
-  DAKKU_DECLARE_OBJECT(ConstantSpectrumTexture);
+  DAKKU_DECLARE_OBJECT(ConstantSpectrumTexture, ConstantTexture);
 
   void serialize(Json &json, OutputStream *stream) const override;
   void unserialize(const Json &json, InputStream *stream) override;

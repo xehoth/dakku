@@ -6,7 +6,7 @@
 DAKKU_BEGIN
 class DistantLight : public Light {
  public:
-  DAKKU_DECLARE_OBJECT(DistantLight);
+  DAKKU_DECLARE_OBJECT(DistantLight, Light);
 
   void construct(const Transform &lightToWorld, const Spectrum &_data,
                  const Vector3f &_wLight);

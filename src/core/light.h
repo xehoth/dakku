@@ -28,7 +28,7 @@ inline bool isDeltaLight(const LightFlags &flags) {
 
 class Light : public SerializableObject {
  public:
-  DAKKU_DECLARE_OBJECT(Light);
+  DAKKU_DECLARE_OBJECT(Light, SerializableObject);
 
   void construct(LightFlags flags, const Transform &lightToWorld,
                  int nSamples = 1);
@@ -77,7 +77,7 @@ class VisibilityTester {
 
 class AreaLight : public Light {
  public:
-  DAKKU_DECLARE_OBJECT(AreaLight);
+  DAKKU_DECLARE_OBJECT(AreaLight, Light);
 
   void construct(const Transform &lightToWorld, int nSamples);
   /**

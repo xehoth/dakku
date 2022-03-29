@@ -25,6 +25,8 @@ class DAKKU_EXPORT_CORE Class final : public Singleton<Class> {
    * @return the object instance
    */
   Object *create(std::string_view name);
+  [[nodiscard]] bool isDerivedFrom(std::string_view cur,
+                                   std::string_view from) const;
 
  private:
   friend class Singleton<Class>;
@@ -33,14 +35,21 @@ class DAKKU_EXPORT_CORE Class final : public Singleton<Class> {
   template <typename T>
   static Object *constructor();
 
-  std::map<std::string, std::add_pointer_t<Object *()>, std::less<>> _classMap;
+  struct Metadata {
+    std::add_pointer_t<Object *()> constructor;
+    std::string parent;
+  };
+
+  std::map<std::string, Metadata, std::less<>> _classMap;
 };
 
 template <ObjectType T>
 void Class::registerClass() {
   if (!_classMap.contains(T::getClassNameStatic())) {
-    DAKKU_INFO("register class: {}", T::getClassNameStatic());
-    _classMap[T::getClassNameStatic()] = &constructor<T>;
+    DAKKU_INFO("register class: {}, parent: {}", T::getClassNameStatic(),
+               T::getParentNameStatic());
+    _classMap[T::getClassNameStatic()] = {&constructor<T>,
+                                          T::getParentNameStatic()};
   } else {
     DAKKU_WARN("class {} has already been registered", T::getClassNameStatic());
   }
@@ -48,7 +57,12 @@ void Class::registerClass() {
 
 template <typename T>
 Object *Class::constructor() {
-  return new T;
+  if constexpr (std::is_default_constructible_v<T>) {
+    return new T;
+  } else {
+    DAKKU_ERR("cannot construct {}", T::getClassNameStatic());
+    return nullptr;
+  }
 }
 
 /**

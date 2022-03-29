@@ -5,7 +5,7 @@
 DAKKU_BEGIN
 class BoxFilter : public Filter {
  public:
-  DAKKU_DECLARE_OBJECT(BoxFilter);
+  DAKKU_DECLARE_OBJECT(BoxFilter, Filter);
 
   void serialize(Json &json, OutputStream *stream) const override;
   void unserialize(const Json &json, InputStream *stream) override;
