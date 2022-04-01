@@ -74,6 +74,7 @@ using Normal3 = Normal<T, 3>;
 
 using Vector2i = Vector2<int>;
 using Vector2f = Vector2<Float>;
+using Vector3i = Vector3<int>;
 using Vector3f = Vector3<Float>;
 using Point2i = Point2<int>;
 using Point2f = Point2<Float>;

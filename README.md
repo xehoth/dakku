@@ -28,6 +28,9 @@ Then use [CMake](https://cmake.org/) to build the project.
 [Dragon](scenes/dragon/scene.json)
 ![Dragon](scenes/dragon/dragon.png)
 
+[Veach, MIS](scenes/veach-mis/scene.json)
+![Veach, MIS](scenes/veach-mis/veach-mis.png)
+
 ### Description
 
 The scene description schema can be found in [schema.json](scenes/schema.json).  

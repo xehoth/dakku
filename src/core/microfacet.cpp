@@ -15,17 +15,18 @@ Float MicrofacetDistribution::pdf(const Vector3f &wo,
 Float TrowbridgeReitzDistribution::evalD(const Vector3f &wh) const {
   Float tan2 = tan2Theta(wh);
   if (std::isinf(tan2)) return 0;
-  return 1 / (PI * alphaX * alphaY * cos2Theta(wh) * cos2Theta(wh) *
-              (1 + tan2Theta(wh) * (cos2Phi(wh) / (alphaX * alphaX) +
-                                    sin2Phi(wh) / (alphaY * alphaY))));
+  Float e = tan2 *
+            (cos2Phi(wh) / (alphaX * alphaX) + sin2Phi(wh) / (alphaY * alphaY));
+  return 1 / (PI * alphaX * alphaY * cos2Theta(wh) * cos2Theta(wh) * (1 + e) *
+              (1 + e));
 }
 
 Float TrowbridgeReitzDistribution::evalLambda(const Vector3f &w) const {
-  Float tan2 = tan2Theta(w);
-  if (std::isinf(tan2)) return 0;
+  Float absTan = std::abs(tanTheta(w));
+  if (std::isinf(absTan)) return 0;
   Float alpha =
       std::sqrt(cos2Phi(w) * alphaX * alphaX + sin2Phi(w) * alphaY * alphaY);
-  return (-1 + std::sqrt(1 + alpha * alpha * tan2)) / 2;
+  return (-1 + std::sqrt(1 + alpha * absTan * alpha * absTan)) / 2;
 }
 
 // TODO: rewrite this

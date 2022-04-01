@@ -197,6 +197,11 @@ void TriangleMesh::unserialize(const Json &json, InputStream *stream) {
   this->construct(pToWorld, pToObject);
 
   // create triangles
+  createTriangles(pToWorld, pToObject);
+}
+
+void TriangleMesh::createTriangles(const Transform *pToWorld,
+                                   const Transform *pToObject) {
   triangles = std::make_unique<Triangle[]>(nTriangles);
   for (int i = 0; i < nTriangles; ++i)
     triangles[i] = Triangle(pToWorld, pToObject, this, i);
@@ -335,6 +340,10 @@ void TriangleMeshPrimitive::unserialize(const Json &json, InputStream *stream) {
   }
 
   GeometricPrimitive::construct(_shape, _material, nullptr);
+  if (!this->shape->isDerivedFrom("TriangleMesh")) {
+    DAKKU_ERR("invalid shape type: {}, expected: derives from TriangleMesh",
+              this->shape->getClassName());
+  }
   const auto *triMesh = dynamic_cast<const TriangleMesh *>(this->shape);
   primTriangles =
       std::make_unique<GeometricPrimitive[]>(triMesh->getNumTriangles());

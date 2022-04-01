@@ -47,10 +47,11 @@ class TriangleMesh : public Shape {
   }
   friend class Triangle;
 
- private:
+ protected:
   void loadMesh(const std::string &path);
   void assign(std::span<const int> i, std::span<const Float> p,
               std::span<const Float> n, std::span<const Float> uv);
+  void createTriangles(const Transform *pToWorld, const Transform *pToObject);
   int nTriangles{};
   int nVertices{};
   std::unique_ptr<int[]> indices{};

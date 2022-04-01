@@ -28,6 +28,12 @@ inline Vector3f cosineSampleHemisphere(const Point2f &u) {
   return Vector3f(d.x(), d.y(), z);
 }
 
+/**
+ * @param u 2d random number
+ * @return the sampled point
+ */
+Vector3f uniformSampleSphere(const Point2f &u);
+
 inline Float powerHeuristic(int nf, Float fPdf, int ng, Float gPdf) {
   Float f = static_cast<Float>(nf) * fPdf, g = static_cast<Float>(ng) * gPdf;
   return (f * f) / (f * f + g * g);

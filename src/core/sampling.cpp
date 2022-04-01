@@ -24,4 +24,11 @@ Point2f concentricSampleDisk(const Point2f &u) {
   }
   return r * Point2f(std::cos(theta), std::sin(theta));
 }
+
+Vector3f uniformSampleSphere(const Point2f &u) {
+  Float z = 1 - 2 * u[0];
+  Float r = std::sqrt(std::max(static_cast<Float>(0), 1 - z * z));
+  Float phi = 2 * PI * u[1];
+  return Vector3f{r * std::cos(phi), r * std::sin(phi), z};
+}
 DAKKU_END

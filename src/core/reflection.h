@@ -17,6 +17,7 @@ inline Float sin2Theta(const Vector3f &w) {
   return std::max(static_cast<Float>(0), 1 - cos2Theta(w));
 }
 inline Float sinTheta(const Vector3f &w) { return std::sqrt(sin2Theta(w)); }
+inline Float tanTheta(const Vector3f &w) { return sinTheta(w) / cosTheta(w); }
 inline Float tan2Theta(const Vector3f &w) {
   return sin2Theta(w) / cos2Theta(w);
 }

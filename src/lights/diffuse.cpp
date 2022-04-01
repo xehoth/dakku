@@ -78,6 +78,20 @@ void DiffuseAreaLight::unserialize(const Json &json, InputStream *) {
                                           this->splitLights[i].get());
     }
     this->primitive = std::move(triPrim);
+  } else if (this->shape->isDerivedFrom("TriangleMesh")) {
+    this->construct(this->lightToWorld, this->data, this->nSamples, this->shape,
+                    this->twoSided);
+    // use triangles to intersect but overrides sample
+    auto triPrim = std::make_unique<TriangleMeshPrimitive>();
+    triPrim->construct(this->shape, pMaterial, this);
+    const auto *triMesh = dynamic_cast<const TriangleMesh *>(this->shape);
+    triPrim->primTriangles =
+        std::make_unique<GeometricPrimitive[]>(triMesh->getNumTriangles());
+    for (int i = 0; i < triMesh->getNumTriangles(); ++i) {
+      triPrim->primTriangles[i].construct(triMesh->getTriangle(i), pMaterial,
+                                          this);
+    }
+    this->primitive = std::move(triPrim);
   } else {
     DAKKU_ERR("unimplemented other shapes");
   }
@@ -115,18 +129,25 @@ void DiffuseAreaLight::construct(const Transform &lightToWorld,
 }
 
 std::vector<Light *> DiffuseAreaLight::getLightList() const {
-  std::vector<Light *> ret(splitLights.size());
-  for (size_t i = 0; i < splitLights.size(); ++i) ret[i] = splitLights[i].get();
+  std::vector<Light *> ret;
+  if (!splitLights.empty()) {
+    ret.resize(splitLights.size());
+    for (size_t i = 0; i < splitLights.size(); ++i)
+      ret[i] = splitLights[i].get();
+  } else {
+    ret.push_back(const_cast<DiffuseAreaLight *>(this));
+  }
   return ret;
 }
 
 std::vector<Primitive *> DiffuseAreaLight::getPrimitiveList() const {
   std::vector<Primitive *> ret;
-  if (primitive->getClassName() == "TriangleMeshPrimitive") {
-//    auto *prim = dynamic_cast<TriangleMeshPrimitive *>(primitive.get());
-//    const auto *tri = dynamic_cast<const TriangleMesh *>(this->shape);
-//    ret.resize(tri->getNumTriangles());
-//    for (size_t i = 0; i < ret.size(); ++i) ret[i] = &prim->primTriangles[i];
+  if (primitive->isDerivedFrom("TriangleMeshPrimitive")) {
+    //    auto *prim = dynamic_cast<TriangleMeshPrimitive *>(primitive.get());
+    //    const auto *tri = dynamic_cast<const TriangleMesh *>(this->shape);
+    //    ret.resize(tri->getNumTriangles());
+    //    for (size_t i = 0; i < ret.size(); ++i) ret[i] =
+    //    &prim->primTriangles[i];
     ret.push_back(primitive.get());
   } else {
     DAKKU_ERR("unimplemented");
