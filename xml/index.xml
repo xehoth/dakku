@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.2" xml:lang="en-US">
+  <compound refid="core_2fwd_8h" kind="file"><name>fwd.h</name>
+    <member refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kind="define"><name>DAKKU_EXPORT_CORE</name></member>
+    <member refid="core_2fwd_8h_1ab21dcb4d6ee34c86c243efbb96e59425" kind="function"><name>test</name></member>
+  </compound>
+  <compound refid="math_2fwd_8h" kind="file"><name>fwd.h</name>
+    <member refid="math_2fwd_8h_1a09aeaf18740e6f4e3599e7c8061e159f" kind="variable"><name>INF</name></member>
+  </compound>
+  <compound refid="vector__base_8h" kind="file"><name>vector_base.h</name>
+  </compound>
+  <compound refid="platform_8h" kind="file"><name>platform.h</name>
+    <member refid="platform_8h_1afd0822d6f96b2720f8f04252075cf058" kind="define"><name>DAKKU_BEGIN</name></member>
+    <member refid="platform_8h_1a6778f1a9165fa1e6744b9129df1e3f24" kind="define"><name>DAKKU_END</name></member>
+    <member refid="platform_8h_1a7bc0107b6d161e4a712eee011c57792c" kind="define"><name>DAKKU_INLINE</name></member>
+    <member refid="platform_8h_1a5a852c25cfd1f921bfe140d4216a332f" kind="define"><name>DAKKU_EXPORT</name></member>
+    <member refid="platform_8h_1a4dc2ada1002dbe2abdfbc3ec4e1aee36" kind="define"><name>DAKKU_IMPORT</name></member>
+    <member refid="platform_8h_1a2e1ca478b62943837a33e7ffad5dc205" kind="define"><name>DAKKU_MATH_MODULE</name></member>
+    <member refid="platform_8h_1a727f841a8615f5ba2055132fb14a18ec" kind="define"><name>DAKKU_CORE_MODULE</name></member>
+    <member refid="platform_8h_1a09cd708407b8b153a1c5f21c764c142a" kind="define"><name>DAKKU_MAIN_MODULE</name></member>
+  </compound>
+  <compound refid="dir_aebb8dcc11953d78e620bbef0b9e2183" kind="dir"><name>src/core</name>
+  </compound>
+  <compound refid="dir_ae9a93452e2a84339148a16bcf2eb561" kind="dir"><name>src/math</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>
