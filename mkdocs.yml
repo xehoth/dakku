@@ -1,5 +1,6 @@
 site_name: dakku documentation
 site_url: https://xehoth.github.io/dakku/
+repo_url: https://github.com/xehoth/dakku/
 theme:
   name: material
 markdown_extensions:

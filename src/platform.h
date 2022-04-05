@@ -33,6 +33,8 @@ DAKKU_BEGIN
 
 /*! @mainpage dakku documentation
 This is the documentation of dakku renderer.
+
+![cornell_box](cornell_box.png)
 */
 
 DAKKU_END
