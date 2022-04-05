@@ -1,4 +1,6 @@
 target("dakku.math")
-  set_kind("headeronly")
+  set_kind("shared")
   add_defines("DAKKU_BUILD_MODULE=DAKKU_MATH_MODULE")
-  add_includedirs(os.projectdir() .. "/src", {interface = true})
+  add_includedirs(os.projectdir() .. "/src", {public = true})
+  add_files("*.cpp")
+  add_deps("dakku.logger")

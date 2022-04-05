@@ -5,10 +5,29 @@
 #include <limits>
 #include <numbers>
 
-DAKKU_BEGIN
+/**
+ * @brief dakku namespace
+ */
+namespace dakku {
 
-// global constants
+#if DAKKU_BUILD_MODULE != DAKKU_MATH_MODULE
+#define DAKKU_EXPORT_MATH DAKKU_IMPORT
+#else
+#define DAKKU_EXPORT_MATH DAKKU_EXPORT
+#endif
+
+/// infinity
 static constexpr float INF = std::numeric_limits<float>::infinity();
 
-DAKKU_END
+/**
+ * @brief concept: `T` is an arithemetic type
+ * 
+ * @tparam T typename
+ */
+template <typename T>
+concept ArithmeticType = std::is_arithmetic_v<std::decay_t<T>>;
+
+
+DAKKU_EXPORT_MATH void testMath();
+}  // namespace dakku
 #endif

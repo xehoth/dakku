@@ -6,16 +6,10 @@
 #endif
 #endif
 
-#if !defined(DAKKU_BEGIN)
-/// dakku namespace begin
-#define DAKKU_BEGIN namespace dakku {
-#endif
-
-#if !defined(DAKKU_END)
-#define DAKKU_END }
-#endif
-
-DAKKU_BEGIN
+/**
+ * @brief dakku namespace
+ */
+namespace dakku {
 
 #if defined(_MSC_VER)
 #define DAKKU_INLINE __forceinline
@@ -27,15 +21,21 @@ DAKKU_BEGIN
 #define DAKKU_IMPORT
 #endif
 
-#define DAKKU_MATH_MODULE 1
-#define DAKKU_CORE_MODULE 2
+/// dakku logger module
+#define DAKKU_LOGGER_MODULE 1
+/// dakku math module
+#define DAKKU_MATH_MODULE 2
+/// dakku core module
+#define DAKKU_CORE_MODULE 3
+/// dakku main module
 #define DAKKU_MAIN_MODULE 10
+
+
+}  // namespace dakku
 
 /*! @mainpage dakku documentation
 This is the documentation of dakku renderer.
 
 ![cornell_box](cornell_box.png)
 */
-
-DAKKU_END
 #endif
