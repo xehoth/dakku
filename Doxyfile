@@ -1,0 +1,24 @@
+DOXYFILE_ENCODING = UTF-8
+PROJECT_NAME = dakku
+OUTPUT_DIRECTORY = docs
+GENERATE_LATEX = NO
+
+# The necessary stuff!
+GENERATE_XML = YES
+XML_OUTPUT = xml
+INPUT = src
+RECURSIVE = YES
+FILE_PATTERNS = *.h *.hpp *.md *.inl
+EXAMPLE_PATH =
+EXAMPLE_PATTERNS = *
+
+SHOW_NAMESPACES = YES
+EXTRACT_ALL = YES
+GENERATE_HTML = NO
+
+# This is here just so we don't have to mess
+# with dot executable on continous integration.
+CALL_GRAPH = NO
+HAVE_DOT = NO
+
+IMAGE_PATH = images

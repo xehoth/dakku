@@ -1,0 +1,5 @@
+set_project("dakku")
+set_languages("c++20")
+add_rules("mode.debug", "mode.release")
+add_vectorexts("mmx", "sse", "sse2", "sse3", "ssse3", "avx", "avx2")
+includes("src")

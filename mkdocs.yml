@@ -1,0 +1,18 @@
+site_name: dakku documentation
+theme:
+  name: material
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences 
+
+nav:
+  - Home: /
+  - Classes: Classes/
+  - Namespaces: Namespaces/
+  - Modules: Modules/
+  - Files: Files/
+  - Related Pages: Pages/
+  - Examples: Examples/
+

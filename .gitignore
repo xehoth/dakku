@@ -39,3 +39,5 @@ build-*
 cmake-build-*
 src/defines.h
 !scenes/cornell_box/*.obj
+docs/xml/
+.xmake
