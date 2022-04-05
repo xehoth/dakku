@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="namespacedakku" kind="namespace" language="C++">
+    <compoundname>dakku</compoundname>
+    <innerclass refid="classdakku_1_1Logger" prot="public">dakku::Logger</innerclass>
+    <innerclass refid="classdakku_1_1VectorBase" prot="public">dakku::VectorBase</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacedakku_1aa5d538038f8e722b909be739b5828692" prot="public" static="no" mutable="no">
+        <type>class <ref refid="logger_2fwd_8h_1abccce192e40efefc3c932da87c29a2da" kindref="member">DAKKU_EXPORT_LOGGER</ref></type>
+        <definition>class DAKKU_EXPORT_LOGGER dakku::Logger</definition>
+        <argsstring></argsstring>
+        <name>Logger</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/logger/fwd.h" line="13" column="26" bodyfile="src/logger/fwd.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacedakku_1a53c476552ecb27caba955675d8efb680" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr float</type>
+        <definition>constexpr float dakku::INF</definition>
+        <argsstring></argsstring>
+        <name>INF</name>
+        <initializer>= std::numeric_limits&lt;float&gt;::infinity()</initializer>
+        <briefdescription>
+<para>infinity </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/math/fwd.h" line="20" column="24" bodyfile="src/math/fwd.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacedakku_1a3cfef85ab03bf9f46706e55c4f75c6ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="math_2fwd_8h_1a6d67e63908b9c1cb59f8176576612b05" kindref="member">DAKKU_EXPORT_MATH</ref> void</type>
+        <definition>DAKKU_EXPORT_MATH void dakku::testMath</definition>
+        <argsstring>()</argsstring>
+        <name>testMath</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/math/fwd.h" line="31" column="24" declfile="src/math/fwd.h" declline="31" declcolumn="24"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>dakku namespace </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/logger/fwd.h" line="5" column="1"/>
+  </compounddef>
+</doxygen>

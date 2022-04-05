@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://xehoth.github.io/dakku/Files/dir_aebb8dcc11953d78e620bbef0b9e2183/">
+        <link rel="canonical" href="https://xehoth.github.io/dakku/Classes/classdakku_1_1Logger/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.8">
     
     
       
-        <title>src/core - dakku documentation</title>
+        <title>dakku::Logger - dakku documentation</title>
       
     
     
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#srccore" class="md-skip">
+        <a href="#dakkulogger" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              src/core
+              dakku::Logger
             
           </span>
         </div>
@@ -328,9 +328,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#files" class="md-nav__link">
-    Files
+  <a href="#public-functions" class="md-nav__link">
+    Public Functions
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-functions-documentation" class="md-nav__link">
+    Public Functions Documentation
+  </a>
+  
+    <nav class="md-nav" aria-label="Public Functions Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-get" class="md-nav__link">
+    function get
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-handle" class="md-nav__link">
+    function handle
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -346,26 +373,45 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/xehoth/dakku/edit/master/docs/Files/dir_aebb8dcc11953d78e620bbef0b9e2183.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/xehoth/dakku/edit/master/docs/Classes/classdakku_1_1Logger.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
 
-<h1 id="srccore">src/core</h1>
-<h2 id="files">Files</h2>
+<h1 id="dakkulogger">dakku::Logger</h1>
+<p>logger class </p>
+<p><code>#include &lt;logger.h&gt;</code></p>
+<h2 id="public-functions">Public Functions</h2>
 <table>
 <thead>
 <tr>
+<th></th>
 <th>Name</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong><a href="/dakku/Files/core_2fwd_8h/#file-fwd.h">src/core/fwd.h</a></strong></td>
+<td>const <a href="/dakku/Classes/classdakku_1_1Logger/">Logger</a> &amp;</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Logger/#function-get">get</a></strong>()<br>get logger instance</td>
+</tr>
+<tr>
+<td>spdlog::logger *</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Logger/#function-handle">handle</a></strong>() const<br>get raw spdlog::logger handle</td>
 </tr>
 </tbody>
 </table>
+<h2 id="public-functions-documentation">Public Functions Documentation</h2>
+<h3 id="function-get">function get</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Logger</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">get</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<p>get logger instance </p>
+<p><strong>Return</strong>: the logger instance </p>
+<h3 id="function-handle">function handle</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kr">inline</span><span class="w"> </span><span class="n">spdlog</span><span class="o">::</span><span class="n">logger</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">handle</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+</code></pre></div>
+<p>get raw spdlog::logger handle </p>
+<p><strong>Return</strong>: the corresponding spdlog::logger </p>
 <hr />
 <p>Updated on 2022-04-05 at 16:20:06 +0000</p>
 

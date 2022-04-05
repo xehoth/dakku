@@ -3,7 +3,24 @@
   <compounddef id="vector__base_8h" kind="file" language="C++">
     <compoundname>vector_base.h</compoundname>
     <includes refid="math_2fwd_8h" local="no">math/fwd.h</includes>
+    <includes refid="logger_8h" local="no">logger/logger.h</includes>
     <incdepgraph>
+      <node id="8">
+        <label>logger/fwd.h</label>
+        <link refid="logger_2fwd_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>logger/logger.h</label>
+        <link refid="logger_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
       <node id="2">
         <label>math/fwd.h</label>
         <link refid="math_2fwd_8h"/>
@@ -21,10 +38,15 @@
         <link refid="vector__base_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
       </node>
       <node id="3">
         <label>platform.h</label>
         <link refid="platform_8h"/>
+      </node>
+      <node id="10">
+        <label>cstdlib</label>
       </node>
       <node id="5">
         <label>limits</label>
@@ -32,10 +54,15 @@
       <node id="6">
         <label>numbers</label>
       </node>
+      <node id="9">
+        <label>spdlog/spdlog.h</label>
+      </node>
       <node id="4">
         <label>type_traits</label>
       </node>
     </incdepgraph>
+    <innerclass refid="classdakku_1_1VectorBase" prot="public">dakku::VectorBase</innerclass>
+    <innernamespace refid="namespacedakku">dakku</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -44,11 +71,53 @@
 <codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>DAKKU_MATH_VECTOR_BASE_H_</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DAKKU_MATH_VECTOR_BASE_H_</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="math_2fwd_8h" kindref="compound">math/fwd.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"><ref refid="platform_8h_1afd0822d6f96b2720f8f04252075cf058" kindref="member">DAKKU_BEGIN</ref></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"><ref refid="platform_8h_1a6778f1a9165fa1e6744b9129df1e3f24" kindref="member">DAKKU_END</ref></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="logger_8h" kindref="compound">logger/logger.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacedakku" kindref="compound">dakku</ref><sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;ArithmeticType<sp/>T,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Derived&gt;</highlight></codeline>
+<codeline lineno="16" refid="classdakku_1_1VectorBase" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdakku_1_1VectorBase" kindref="compound">VectorBase</ref><sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="23" refid="classdakku_1_1VectorBase_1a8855aec2cf48f1c2ca9ec5df5e93e5f4" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1VectorBase_1a8855aec2cf48f1c2ca9ec5df5e93e5f4" kindref="member">VectorBase</ref>()<sp/>:<sp/><ref refid="classdakku_1_1VectorBase_1a5ef0c1fd61ec003109060a54e84221ec" kindref="member">_data</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;ArithmeticType<sp/>Arg&gt;</highlight></codeline>
+<codeline lineno="33" refid="classdakku_1_1VectorBase_1a208b0d22fe94b4a074b10837f51a645d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1VectorBase_1a208b0d22fe94b4a074b10837f51a645d" kindref="member">VectorBase</ref>(Arg<sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdakku_1_1VectorBase_1a3a8ec1b204363c61724b1ed5a026a8c0" kindref="member">set</ref>(value);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;<ref refid="conceptdakku_1_1ArithmeticType" kindref="compound">ArithmeticType</ref>...<sp/>Args&gt;</highlight></codeline>
+<codeline lineno="44" refid="classdakku_1_1VectorBase_1a51fe6bb6547a7226e210fbe9b61ea627" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">requires</highlight><highlight class="normal">(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">...(Args)<sp/>==<sp/>size)<sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1VectorBase_1a51fe6bb6547a7226e210fbe9b61ea627" kindref="member">VectorBase</ref>(Args<sp/>&amp;&amp;...args)<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdakku_1_1VectorBase_1a3a8ec1b204363c61724b1ed5a026a8c0" kindref="member">set</ref>(std::forward&lt;Args&gt;(args)...);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;ArithmeticType<sp/>Arg&gt;</highlight></codeline>
+<codeline lineno="55" refid="classdakku_1_1VectorBase_1a3a8ec1b204363c61724b1ed5a026a8c0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1VectorBase_1a3a8ec1b204363c61724b1ed5a026a8c0" kindref="member">set</ref>(Arg<sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>size;<sp/>++i)<sp/><ref refid="classdakku_1_1VectorBase_1a5ef0c1fd61ec003109060a54e84221ec" kindref="member">_data</ref>[i]<sp/>=<sp/>value;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;ArithmeticType<sp/>Arg&gt;</highlight></codeline>
+<codeline lineno="67" refid="classdakku_1_1VectorBase_1a17e623898ddaa2d60d4d4bbdca82482b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1VectorBase_1a17e623898ddaa2d60d4d4bbdca82482b" kindref="member">setByIndex</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index,<sp/>Arg<sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="logger_8h_1ad7e55cac030fb7ab38ebcfce264c1b3e" kindref="member">DAKKU_CHECK</ref>(0<sp/>&lt;=<sp/>index<sp/>&amp;&amp;<sp/>index<sp/>&lt;<sp/>size,<sp/></highlight><highlight class="stringliteral">&quot;index<sp/>out<sp/>of<sp/>range:<sp/>{}<sp/>&gt;=<sp/>{}&quot;</highlight><highlight class="normal">,<sp/>index,</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>size);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdakku_1_1VectorBase_1a5ef0c1fd61ec003109060a54e84221ec" kindref="member">_data</ref>[index]<sp/>=<sp/>value;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;<ref refid="conceptdakku_1_1ArithmeticType" kindref="compound">ArithmeticType</ref>...<sp/>Args,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">...<sp/>Is&gt;</highlight></codeline>
+<codeline lineno="81" refid="classdakku_1_1VectorBase_1a5681e19696665e93e8dac7fa3ed213a7" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">requires</highlight><highlight class="normal">(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">...(Args)<sp/>==<sp/>size)<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1VectorBase_1a5681e19696665e93e8dac7fa3ed213a7" kindref="member">set</ref>(std::index_sequence&lt;Is...&gt;,</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Args<sp/>&amp;&amp;...args)<sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="classdakku_1_1VectorBase_1a17e623898ddaa2d60d4d4bbdca82482b" kindref="member">setByIndex</ref>(Is,<sp/>std::forward&lt;Args&gt;(args)),<sp/>...);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;<ref refid="conceptdakku_1_1ArithmeticType" kindref="compound">ArithmeticType</ref>...<sp/>Args&gt;</highlight></codeline>
+<codeline lineno="93" refid="classdakku_1_1VectorBase_1a404fbffa968ef302d0c930255f16e585" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">requires</highlight><highlight class="normal">(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">...(Args)<sp/>==<sp/>size)<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1VectorBase_1a404fbffa968ef302d0c930255f16e585" kindref="member">set</ref>(Args<sp/>&amp;&amp;...args)<sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdakku_1_1VectorBase_1a3a8ec1b204363c61724b1ed5a026a8c0" kindref="member">set</ref>(std::index_sequence_for&lt;Args...&gt;{},<sp/>std::forward&lt;Args&gt;(args)...);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="99" refid="classdakku_1_1VectorBase_1a5ef0c1fd61ec003109060a54e84221ec" refkind="member"><highlight class="normal"><sp/><sp/>T<sp/><ref refid="classdakku_1_1VectorBase_1a5ef0c1fd61ec003109060a54e84221ec" kindref="member">_data</ref>[size];</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="101"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dakku</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="src/math/vector_base.h"/>
   </compounddef>

@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="classdakku_1_1Logger" kind="class" language="C++" prot="public">
+    <compoundname>dakku::Logger</compoundname>
+    <includes refid="logger_8h" local="no">logger.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdakku_1_1Logger_1aa6afc845ad6d0bcec3849515afc971cd" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; spdlog::logger &gt;</type>
+        <definition>std::shared_ptr&lt;spdlog::logger&gt; dakku::Logger::_logger</definition>
+        <argsstring></argsstring>
+        <name>_logger</name>
+        <briefdescription>
+<para>spdlog logger </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/logger/logger.h" line="38" column="19" bodyfile="src/logger/logger.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classdakku_1_1Logger_1a75e95ca57e099bb7992724feec106edf" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classdakku_1_1Logger" kindref="compound">Logger</ref> &amp;</type>
+        <definition>static const Logger &amp; dakku::Logger::get</definition>
+        <argsstring>()</argsstring>
+        <name>get</name>
+        <briefdescription>
+<para>get logger instance </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the logger instance </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/logger/logger.h" line="20" column="23"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdakku_1_1Logger_1a323f22b6d56d140abe5a41da4daff699" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>spdlog::logger *</type>
+        <definition>spdlog::logger * dakku::Logger::handle</definition>
+        <argsstring>() const</argsstring>
+        <name>handle</name>
+        <briefdescription>
+<para>get raw spdlog::logger handle </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the corresponding spdlog::logger </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/logger/logger.h" line="27" column="18" bodyfile="src/logger/logger.h" bodystart="27" bodyend="27"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classdakku_1_1Logger_1a25793d0b435146d8e4a813dd39a486e1" prot="private" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dakku::Logger::Logger</definition>
+        <argsstring>(std::shared_ptr&lt; spdlog::logger &gt; _logger)</argsstring>
+        <name>Logger</name>
+        <param>
+          <type>std::shared_ptr&lt; spdlog::logger &gt;</type>
+          <declname>_logger</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classdakku_1_1Logger" kindref="compound">Logger</ref> object with spdlog::logger. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_logger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>given spdlog::logger </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/logger/logger.h" line="35" column="12"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>logger class </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/logger/logger.h" line="13" column="1" bodyfile="src/logger/logger.h" bodystart="13" bodyend="39"/>
+    <listofallmembers>
+      <member refid="classdakku_1_1Logger_1aa6afc845ad6d0bcec3849515afc971cd" prot="private" virt="non-virtual"><scope>dakku::Logger</scope><name>_logger</name></member>
+      <member refid="classdakku_1_1Logger_1a75e95ca57e099bb7992724feec106edf" prot="public" virt="non-virtual"><scope>dakku::Logger</scope><name>get</name></member>
+      <member refid="classdakku_1_1Logger_1a323f22b6d56d140abe5a41da4daff699" prot="public" virt="non-virtual"><scope>dakku::Logger</scope><name>handle</name></member>
+      <member refid="classdakku_1_1Logger_1a25793d0b435146d8e4a813dd39a486e1" prot="private" virt="non-virtual"><scope>dakku::Logger</scope><name>Logger</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

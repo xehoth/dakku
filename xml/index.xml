@@ -1,25 +1,59 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.2" xml:lang="en-US">
+  <compound refid="classdakku_1_1Logger" kind="class"><name>dakku::Logger</name>
+    <member refid="classdakku_1_1Logger_1aa6afc845ad6d0bcec3849515afc971cd" kind="variable"><name>_logger</name></member>
+    <member refid="classdakku_1_1Logger_1a75e95ca57e099bb7992724feec106edf" kind="function"><name>get</name></member>
+    <member refid="classdakku_1_1Logger_1a323f22b6d56d140abe5a41da4daff699" kind="function"><name>handle</name></member>
+    <member refid="classdakku_1_1Logger_1a25793d0b435146d8e4a813dd39a486e1" kind="function"><name>Logger</name></member>
+  </compound>
+  <compound refid="classdakku_1_1VectorBase" kind="class"><name>dakku::VectorBase</name>
+    <member refid="classdakku_1_1VectorBase_1a5ef0c1fd61ec003109060a54e84221ec" kind="variable"><name>_data</name></member>
+    <member refid="classdakku_1_1VectorBase_1a8855aec2cf48f1c2ca9ec5df5e93e5f4" kind="function"><name>VectorBase</name></member>
+    <member refid="classdakku_1_1VectorBase_1a208b0d22fe94b4a074b10837f51a645d" kind="function"><name>VectorBase</name></member>
+    <member refid="classdakku_1_1VectorBase_1a51fe6bb6547a7226e210fbe9b61ea627" kind="function"><name>VectorBase</name></member>
+    <member refid="classdakku_1_1VectorBase_1a3a8ec1b204363c61724b1ed5a026a8c0" kind="function"><name>set</name></member>
+    <member refid="classdakku_1_1VectorBase_1a17e623898ddaa2d60d4d4bbdca82482b" kind="function"><name>setByIndex</name></member>
+    <member refid="classdakku_1_1VectorBase_1a5681e19696665e93e8dac7fa3ed213a7" kind="function"><name>set</name></member>
+    <member refid="classdakku_1_1VectorBase_1a404fbffa968ef302d0c930255f16e585" kind="function"><name>set</name></member>
+  </compound>
+  <compound refid="conceptdakku_1_1ArithmeticType" kind="concept"><name>dakku::ArithmeticType</name>
+  </compound>
+  <compound refid="namespacedakku" kind="namespace"><name>dakku</name>
+    <member refid="namespacedakku_1aa5d538038f8e722b909be739b5828692" kind="variable"><name>Logger</name></member>
+    <member refid="namespacedakku_1a53c476552ecb27caba955675d8efb680" kind="variable"><name>INF</name></member>
+    <member refid="namespacedakku_1a3cfef85ab03bf9f46706e55c4f75c6ed" kind="function"><name>testMath</name></member>
+  </compound>
   <compound refid="core_2fwd_8h" kind="file"><name>fwd.h</name>
     <member refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kind="define"><name>DAKKU_EXPORT_CORE</name></member>
     <member refid="core_2fwd_8h_1ab21dcb4d6ee34c86c243efbb96e59425" kind="function"><name>test</name></member>
   </compound>
+  <compound refid="logger_2fwd_8h" kind="file"><name>fwd.h</name>
+    <member refid="logger_2fwd_8h_1abccce192e40efefc3c932da87c29a2da" kind="define"><name>DAKKU_EXPORT_LOGGER</name></member>
+  </compound>
   <compound refid="math_2fwd_8h" kind="file"><name>fwd.h</name>
-    <member refid="math_2fwd_8h_1a09aeaf18740e6f4e3599e7c8061e159f" kind="variable"><name>INF</name></member>
+    <member refid="math_2fwd_8h_1a6d67e63908b9c1cb59f8176576612b05" kind="define"><name>DAKKU_EXPORT_MATH</name></member>
+  </compound>
+  <compound refid="logger_8h" kind="file"><name>logger.h</name>
+    <member refid="logger_8h_1a9edd762e54e3ce43a70ddfe81b6e2fc5" kind="define"><name>DAKKU_ERR</name></member>
+    <member refid="logger_8h_1a845073641399be84136c0143bedbde77" kind="define"><name>DAKKU_INFO</name></member>
+    <member refid="logger_8h_1a614d277e34773e7302c6a2cda6909867" kind="define"><name>DAKKU_WARN</name></member>
+    <member refid="logger_8h_1a9c5edb9052d4e1a515276aef0afef3e3" kind="define"><name>DAKKU_DEBUG</name></member>
+    <member refid="logger_8h_1ad7e55cac030fb7ab38ebcfce264c1b3e" kind="define"><name>DAKKU_CHECK</name></member>
   </compound>
   <compound refid="vector__base_8h" kind="file"><name>vector_base.h</name>
   </compound>
   <compound refid="platform_8h" kind="file"><name>platform.h</name>
-    <member refid="platform_8h_1afd0822d6f96b2720f8f04252075cf058" kind="define"><name>DAKKU_BEGIN</name></member>
-    <member refid="platform_8h_1a6778f1a9165fa1e6744b9129df1e3f24" kind="define"><name>DAKKU_END</name></member>
     <member refid="platform_8h_1a7bc0107b6d161e4a712eee011c57792c" kind="define"><name>DAKKU_INLINE</name></member>
     <member refid="platform_8h_1a5a852c25cfd1f921bfe140d4216a332f" kind="define"><name>DAKKU_EXPORT</name></member>
     <member refid="platform_8h_1a4dc2ada1002dbe2abdfbc3ec4e1aee36" kind="define"><name>DAKKU_IMPORT</name></member>
+    <member refid="platform_8h_1a43488577a7d4d290f1c8940eb324a619" kind="define"><name>DAKKU_LOGGER_MODULE</name></member>
     <member refid="platform_8h_1a2e1ca478b62943837a33e7ffad5dc205" kind="define"><name>DAKKU_MATH_MODULE</name></member>
     <member refid="platform_8h_1a727f841a8615f5ba2055132fb14a18ec" kind="define"><name>DAKKU_CORE_MODULE</name></member>
     <member refid="platform_8h_1a09cd708407b8b153a1c5f21c764c142a" kind="define"><name>DAKKU_MAIN_MODULE</name></member>
   </compound>
   <compound refid="dir_aebb8dcc11953d78e620bbef0b9e2183" kind="dir"><name>src/core</name>
+  </compound>
+  <compound refid="dir_ffde1fbcaa8d6b0d34e29c3bddf7a801" kind="dir"><name>src/logger</name>
   </compound>
   <compound refid="dir_ae9a93452e2a84339148a16bcf2eb561" kind="dir"><name>src/math</name>
   </compound>

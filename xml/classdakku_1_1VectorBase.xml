@@ -1,0 +1,403 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="classdakku_1_1VectorBase" kind="class" language="C++" prot="public">
+    <compoundname>dakku::VectorBase</compoundname>
+    <includes refid="vector__base_8h" local="no">vector_base.h</includes>
+    <templateparamlist>
+      <param>
+        <type>ArithmeticType</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+      <param>
+        <type>size_t</type>
+        <declname>size</declname>
+        <defname>size</defname>
+      </param>
+      <param>
+        <type>typename Derived</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classdakku_1_1VectorBase_1a5ef0c1fd61ec003109060a54e84221ec" prot="protected" static="no" mutable="no">
+        <type>T</type>
+        <definition>T dakku::VectorBase&lt; T, size, Derived &gt;::_data[size]</definition>
+        <argsstring>[size]</argsstring>
+        <name>_data</name>
+        <briefdescription>
+<para>vector base data </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/math/vector_base.h" line="99" column="5" bodyfile="src/math/vector_base.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdakku_1_1VectorBase_1a8855aec2cf48f1c2ca9ec5df5e93e5f4" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>dakku::VectorBase&lt; T, size, Derived &gt;::VectorBase</definition>
+        <argsstring>()</argsstring>
+        <name>VectorBase</name>
+        <briefdescription>
+<para>Construct a new Vector Base object with all components initialized to zero. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/math/vector_base.h" line="23" column="12" bodyfile="src/math/vector_base.h" bodystart="23" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1VectorBase_1a208b0d22fe94b4a074b10837f51a645d" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>ArithmeticType</type>
+            <declname>Arg</declname>
+            <defname>Arg</defname>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>dakku::VectorBase&lt; T, size, Derived &gt;::VectorBase</definition>
+        <argsstring>(Arg value)</argsstring>
+        <name>VectorBase</name>
+        <param>
+          <type>Arg</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new Vector Base object with all components initialized to <computeroutput>value</computeroutput> </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Arg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value type </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>init value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/math/vector_base.h" line="33" column="12" bodyfile="src/math/vector_base.h" bodystart="33" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1VectorBase_1a51fe6bb6547a7226e210fbe9b61ea627" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>ArithmeticType...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>dakku::VectorBase&lt; T, size, Derived &gt;::VectorBase</definition>
+        <argsstring>(Args &amp;&amp;...args)</argsstring>
+        <name>VectorBase</name>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+    <requiresclause>(sizeof...(Args) == size)    </requiresclause>
+        <briefdescription>
+<para>Construct a new Vector Base object with given values. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value types </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>init values </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/math/vector_base.h" line="44" column="13" bodyfile="src/math/vector_base.h" bodystart="44" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1VectorBase_1a3a8ec1b204363c61724b1ed5a026a8c0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>ArithmeticType</type>
+            <declname>Arg</declname>
+            <defname>Arg</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void dakku::VectorBase&lt; T, size, Derived &gt;::set</definition>
+        <argsstring>(Arg value)</argsstring>
+        <name>set</name>
+        <param>
+          <type>Arg</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>set all components to <computeroutput>value</computeroutput> </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Arg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value type </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the given value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/math/vector_base.h" line="55" column="8" bodyfile="src/math/vector_base.h" bodystart="55" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1VectorBase_1a17e623898ddaa2d60d4d4bbdca82482b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>ArithmeticType</type>
+            <declname>Arg</declname>
+            <defname>Arg</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void dakku::VectorBase&lt; T, size, Derived &gt;::setByIndex</definition>
+        <argsstring>(size_t index, Arg value)</argsstring>
+        <name>setByIndex</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>Arg</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>set data[index] to value </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Arg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value type </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the index of the component </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the given value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/math/vector_base.h" line="67" column="8" bodyfile="src/math/vector_base.h" bodystart="67" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1VectorBase_1a5681e19696665e93e8dac7fa3ed213a7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>ArithmeticType...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+          <param>
+            <type>size_t...</type>
+            <declname>Is</declname>
+            <defname>Is</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void dakku::VectorBase&lt; T, size, Derived &gt;::set</definition>
+        <argsstring>(std::index_sequence&lt; Is... &gt;, Args &amp;&amp;...args)</argsstring>
+        <name>set</name>
+        <param>
+          <type>std::index_sequence&lt; Is... &gt;</type>
+        </param>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+    <requiresclause>(sizeof...(Args) == size)    </requiresclause>
+        <briefdescription>
+<para>set data to args </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value types </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Is</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>indices (generated by std::index_sequence_for) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>values </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/math/vector_base.h" line="81" column="9" bodyfile="src/math/vector_base.h" bodystart="81" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1VectorBase_1a404fbffa968ef302d0c930255f16e585" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>ArithmeticType...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void dakku::VectorBase&lt; T, size, Derived &gt;::set</definition>
+        <argsstring>(Args &amp;&amp;...args)</argsstring>
+        <name>set</name>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+    <requiresclause>(sizeof...(Args) == size)    </requiresclause>
+        <briefdescription>
+<para>set data to args </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value typs </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>values </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/math/vector_base.h" line="93" column="9" bodyfile="src/math/vector_base.h" bodystart="93" bodyend="95"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>vector base class </para>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>dimension of the vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Derived</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>derived class type </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>T</label>
+      </node>
+      <node id="1">
+        <label>dakku::VectorBase&lt; T, size, Derived &gt;</label>
+        <link refid="classdakku_1_1VectorBase"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>_data</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/math/vector_base.h" line="16" column="1" bodyfile="src/math/vector_base.h" bodystart="16" bodyend="100"/>
+    <listofallmembers>
+      <member refid="classdakku_1_1VectorBase_1a5ef0c1fd61ec003109060a54e84221ec" prot="protected" virt="non-virtual"><scope>dakku::VectorBase</scope><name>_data</name></member>
+      <member refid="classdakku_1_1VectorBase_1a3a8ec1b204363c61724b1ed5a026a8c0" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>set</name></member>
+      <member refid="classdakku_1_1VectorBase_1a5681e19696665e93e8dac7fa3ed213a7" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>set</name></member>
+      <member refid="classdakku_1_1VectorBase_1a404fbffa968ef302d0c930255f16e585" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>set</name></member>
+      <member refid="classdakku_1_1VectorBase_1a17e623898ddaa2d60d4d4bbdca82482b" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>setByIndex</name></member>
+      <member refid="classdakku_1_1VectorBase_1a8855aec2cf48f1c2ca9ec5df5e93e5f4" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>VectorBase</name></member>
+      <member refid="classdakku_1_1VectorBase_1a208b0d22fe94b4a074b10837f51a645d" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>VectorBase</name></member>
+      <member refid="classdakku_1_1VectorBase_1a51fe6bb6547a7226e210fbe9b61ea627" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>VectorBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

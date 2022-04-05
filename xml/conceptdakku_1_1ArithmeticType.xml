@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="conceptdakku_1_1ArithmeticType" kind="concept">
+    <compoundname>dakku::ArithmeticType</compoundname>
+    <includes refid="math_2fwd_8h" local="no">fwd.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+    <initializer>template&lt;typename T&gt;
+concept <ref refid="conceptdakku_1_1ArithmeticType" kindref="compound">dakku::ArithmeticType</ref> =  std::is_arithmetic_v&lt;std::decay_t&lt;T&gt;&gt;    </initializer>
+    <briefdescription>
+<para>concept: <computeroutput>T</computeroutput> is an arithemetic type </para>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>typename </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <location file="src/math/fwd.h" line="28" column="1"/>
+  </compounddef>
+</doxygen>
