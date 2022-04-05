@@ -1,6 +1,7 @@
 # The Dakku Renderer
 
-[![CI](https://github.com/xehoth/dakku/actions/workflows/build.yml/badge.svg)](https://github.com/xehoth/dakku/actions/workflows/build.yml)
+[![CI](https://github.com/xehoth/dakku/actions/workflows/build.yml/badge.svg)](https://github.com/xehoth/dakku/actions/workflows/build.yml)  
+Documentation: [![doc](https://github.com/xehoth/dakku/actions/workflows/doc.yml/badge.svg)](https://github.com/xehoth/dakku/actions/workflows/doc.yml) [![pages-build-deployment](https://github.com/xehoth/dakku/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/xehoth/dakku/actions/workflows/pages/pages-build-deployment)
 
 **Warning: This project is currently under developing and does not guarantee any consistency.**  
 The main branch is being refactored, you can see [the old version here](https://github.com/xehoth/dakku/tree/old).
