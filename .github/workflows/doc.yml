@@ -39,7 +39,7 @@ jobs:
           args: unzip doxybook2.zip -d ./doxybook2
       
       - name: run doxybook2
-        run: ./doxybook2/bin/doxybook2 --input ./docs/xml --output ./docs --config doxybook-config.json
+        run: sudo ./doxybook2/bin/doxybook2 --input ./docs/xml --output ./docs --config doxybook-config.json
       
       - name: Setup Python
         uses: actions/setup-python@v3
