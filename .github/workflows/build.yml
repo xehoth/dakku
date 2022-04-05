@@ -1,4 +1,4 @@
-name: C/C++ CI
+name: build
 
 on:
   push:
@@ -30,7 +30,6 @@ jobs:
           xmake-version: latest
       - name: XMake Config for Clang
         if: matrix.os == 'ubuntu-latest'
-        run: 'xmake f --toolchain=clang -c'
+        run: 'xmake f --toolchain=clang -c -y'
       - name: Build
-        run: xmake build
-    
+        run: xmake build -y
