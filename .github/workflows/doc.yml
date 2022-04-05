@@ -38,11 +38,8 @@ jobs:
         with:
           args: unzip doxybook2.zip -d ./doxybook2
       
-      - name: mkdir
-        run: mkdir docs
-      
       - name: run doxybook2
-        run: ./doxybook2/bin/doxybook2 --input docs --output docs --config doxybook-config.json
+        run: ./doxybook2/bin/doxybook2 --input docs/xml --output docs --config doxybook-config.json
       
       - name: Setup Python
         uses: actions/setup-python@v3
