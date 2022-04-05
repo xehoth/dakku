@@ -36,10 +36,10 @@ jobs:
       - name: unzip doxybook2
         uses: montudor/action-zip@v1
         with:
-          args: unzip doxybook2.zip
+          args: unzip doxybook2.zip -d ./doxybook2
       
       - name: run doxybook2
-        run: doxybook2/bin/doxybook2 --input docs --output docs --config doxybook-config.json
+        run: ./doxybook2/bin/doxybook2 --input docs --output docs --config doxybook-config.json
       
       - name: Setup Python
         uses: actions/setup-python@v3
