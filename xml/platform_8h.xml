@@ -155,8 +155,8 @@
 <codeline lineno="31" refid="platform_8h_1a727f841a8615f5ba2055132fb14a18ec" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DAKKU_CORE_MODULE<sp/>2</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="32" refid="platform_8h_1a09cd708407b8b153a1c5f21c764c142a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DAKKU_MAIN_MODULE<sp/>10</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><ref refid="platform_8h_1a6778f1a9165fa1e6744b9129df1e3f24" kindref="member">DAKKU_END</ref></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><ref refid="platform_8h_1a6778f1a9165fa1e6744b9129df1e3f24" kindref="member">DAKKU_END</ref></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="src/platform.h"/>
   </compounddef>
