@@ -1,5 +1,5 @@
 {
-  "baseUrl": "/",
+  "baseUrl": "/dakku/",
   "indexInFolders": true,
   "linkSuffix": "/",
   "indexClassesName": "index",
