@@ -9,11 +9,11 @@ markdown_extensions:
   - pymdownx.superfences 
 
 nav:
-  - Home: /
-  - Classes: Classes/
-  - Namespaces: Namespaces/
-  - Modules: Modules/
-  - Files: Files/
-  - Related Pages: Pages/
-  - Examples: Examples/
+  - Home: /dakku/
+  - Classes: /dakku/Classes/
+  - Namespaces: /dakku/Namespaces/
+  - Modules: /dakku/Modules/
+  - Files: /dakku/Files/
+  - Related Pages: /dakku/Pages/
+  - Examples: /dakku/Examples/
 
