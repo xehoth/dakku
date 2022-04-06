@@ -1,5 +1,5 @@
-#ifndef DAKKU_MATH_VECTOR_BASE_H_
-#define DAKKU_MATH_VECTOR_BASE_H_
+#ifndef DAKKU_CORE_VECTOR_BASE_H_
+#define DAKKU_CORE_VECTOR_BASE_H_
 #include <core/logger.h>
 #include <array>
 #include <algorithm>
@@ -472,6 +472,29 @@ class VectorBase {
   template <ArithmeticType U>
   friend Derived operator/(const U &a, const Derived &b) {
     return Derived(a) / b;
+  }
+
+  /**
+   * @brief convert this to float vector (Property::VECTOR)
+   *
+   * @return the float vector
+   */
+  [[nodiscard]] std::vector<float> toFloatVector() const {
+    std::vector<float> ret(S);
+    for (size_t i = 0; i < S; ++i) ret[i] = static_cast<float>(_data[i]);
+    return ret;
+  }
+
+  /**
+   * @brief Construct a new Vector Base object with std::vector<float>
+   * (Property::VECTOR)
+   *
+   * @param v the float vector
+   */
+  VectorBase(const std::vector<float> &v) {
+    DAKKU_CHECK(v.size() == S, "invalid vector size: {}, expected: {}",
+                v.size(), S);
+    for (size_t i = 0; i < S; ++i) _data[i] = v[i];
   }
 
  protected:

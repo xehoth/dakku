@@ -46,6 +46,6 @@ requires std::is_floating_point_v<T> DAKKU_INLINE bool isNaN(T x) {
 template <typename T>
 requires std::is_integral_v<T> DAKKU_INLINE bool isNaN(T) { return false; }
 
-class DAKKU_EXPORT_CORE Logger;
+class Transform;
 }  // namespace dakku
 #endif

@@ -1,5 +1,5 @@
-#ifndef DAKKU_LOGGER_LOGGER_H_
-#define DAKKU_LOGGER_LOGGER_H_
+#ifndef DAKKU_CORE_LOGGER_H_
+#define DAKKU_CORE_LOGGER_H_
 #include <core/fwd.h>
 #include <spdlog/spdlog.h>
 #include <spdlog/fmt/ostr.h>

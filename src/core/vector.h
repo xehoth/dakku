@@ -1,12 +1,12 @@
-#ifndef DAKKU_MATH_VECTOR_H_
-#define DAKKU_MATH_VECTOR_H_
+#ifndef DAKKU_CORE_VECTOR_H_
+#define DAKKU_CORE_VECTOR_H_
 #include <core/vector_base.h>
 
 namespace dakku {
 
 /**
  * @brief vector
- * 
+ *
  * @tparam T data type
  * @tparam S size
  */
@@ -28,7 +28,7 @@ class Vector : public VectorBase<T, S, Vector<T, S>> {
 
 /**
  * @brief point
- * 
+ *
  * @tparam T data type
  * @tparam S size
  */
@@ -64,7 +64,7 @@ class Point : public VectorBase<T, S, Point<T, S>> {
 
 /**
  * @brief normal
- * 
+ *
  * @tparam T data type
  * @tparam S size
  */
@@ -86,7 +86,7 @@ class Normal : public VectorBase<T, S, Normal<T, S>> {
 
 /**
  * @brief 2d vectors
- * 
+ *
  * @tparam T data type
  */
 template <ArithmeticType T>
@@ -94,7 +94,7 @@ using Vector2 = Vector<T, 2>;
 
 /**
  * @brief 3d vectors
- * 
+ *
  * @tparam T data type
  */
 template <ArithmeticType T>
@@ -107,7 +107,7 @@ using Vector3f = Vector3<float>;
 
 /**
  * @brief 2d point
- * 
+ *
  * @tparam T data type
  */
 template <ArithmeticType T>
@@ -115,7 +115,7 @@ using Point2 = Point<T, 2>;
 
 /**
  * @brief 3d point
- * 
+ *
  * @tparam T data type
  */
 template <ArithmeticType T>
@@ -128,7 +128,7 @@ using Point3f = Point3<float>;
 
 /**
  * @brief 3d normal
- * 
+ *
  * @tparam T data type
  */
 template <ArithmeticType T>
