@@ -3,10 +3,61 @@
   <compounddef id="namespacedakku" kind="namespace" language="C++">
     <compoundname>dakku</compoundname>
     <innerclass refid="classdakku_1_1Logger" prot="public">dakku::Logger</innerclass>
+    <innerclass refid="structdakku_1_1Matrix4x4" prot="public">dakku::Matrix4x4</innerclass>
     <innerclass refid="classdakku_1_1Normal" prot="public">dakku::Normal</innerclass>
     <innerclass refid="classdakku_1_1Point" prot="public">dakku::Point</innerclass>
+    <innerclass refid="classdakku_1_1Property" prot="public">dakku::Property</innerclass>
     <innerclass refid="classdakku_1_1Vector" prot="public">dakku::Vector</innerclass>
     <innerclass refid="classdakku_1_1VectorBase" prot="public">dakku::VectorBase</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespacedakku_1a61a88f7b109506521f2be6050dc9bfca" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>PropertyType</name>
+        <enumvalue id="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaab50339a10e1de285ac99d4c3990b8693" prot="public">
+          <name>NONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaacb4fb1757fb37c43cded35d3eb857c43" prot="public">
+          <name>ARRAY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaa8eee8e217391199668cbac89472ace53" prot="public">
+          <name>OBJECT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaa34f55eca38e0605a84f169ff61a2a396" prot="public">
+          <name>NUMBER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaa87752381b583740610f1dfeb07fdad7e" prot="public">
+          <name>VECTOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>property type </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/property.h" line="13" column="1" bodyfile="src/core/property.h" bodystart="13" bodyend="13"/>
+      </memberdef>
+      </sectiondef>
       <sectiondef kind="typedef">
       <memberdef kind="typedef" id="namespacedakku_1ae7de7b89895e76d4a3f1c653393dde69" prot="public" static="no">
         <templateparamlist>
@@ -249,19 +300,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/core/fwd.h" line="18" column="24" bodyfile="src/core/fwd.h" bodystart="18" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="namespacedakku_1a11027d1862293f2ca3111d80ffe50415" prot="public" static="no" mutable="no">
-        <type>class <ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
-        <definition>class DAKKU_EXPORT_CORE dakku::Logger</definition>
-        <argsstring></argsstring>
-        <name>Logger</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/core/fwd.h" line="49" column="24" bodyfile="src/core/fwd.h" bodystart="49" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">

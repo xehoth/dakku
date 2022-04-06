@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="transform_8h" kind="file" language="C++">
+    <compoundname>transform.h</compoundname>
+    <includes refid="vector_8h" local="no">core/vector.h</includes>
+    <incdepgraph>
+      <node id="5">
+        <label>core/fwd.h</label>
+        <link refid="fwd_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>core/logger.h</label>
+        <link refid="logger_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/core/transform.h</label>
+        <link refid="transform_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>core/vector.h</label>
+        <link refid="vector_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>core/vector_base.h</label>
+        <link refid="vector__base_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>platform.h</label>
+        <link refid="platform_8h"/>
+      </node>
+      <node id="15">
+        <label>algorithm</label>
+      </node>
+      <node id="14">
+        <label>array</label>
+      </node>
+      <node id="10">
+        <label>cmath</label>
+      </node>
+      <node id="13">
+        <label>cstdlib</label>
+      </node>
+      <node id="8">
+        <label>limits</label>
+      </node>
+      <node id="9">
+        <label>numbers</label>
+      </node>
+      <node id="17">
+        <label>ostream</label>
+      </node>
+      <node id="12">
+        <label>spdlog/fmt/ostr.h</label>
+      </node>
+      <node id="11">
+        <label>spdlog/spdlog.h</label>
+      </node>
+      <node id="16">
+        <label>string</label>
+      </node>
+      <node id="7">
+        <label>type_traits</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structdakku_1_1Matrix4x4" prot="public">dakku::Matrix4x4</innerclass>
+    <innernamespace refid="namespacedakku">dakku</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>DAKKU_CORE_TRANSFORM_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DAKKU_CORE_TRANSFORM_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="vector_8h" kindref="compound">core/vector.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacedakku" kindref="compound">dakku</ref><sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="structdakku_1_1Matrix4x4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdakku_1_1Matrix4x4" kindref="compound">Matrix4x4</ref><sp/>{</highlight></codeline>
+<codeline lineno="16" refid="structdakku_1_1Matrix4x4_1a04ffa0470a01980b11bd71b15a698fa0" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structdakku_1_1Matrix4x4_1a04ffa0470a01980b11bd71b15a698fa0" kindref="member">Matrix4x4</ref>()<sp/>{<sp/><ref refid="structdakku_1_1Matrix4x4_1a23f75e2553126934f408f117eaed9849" kindref="member">setIdentity</ref>();<sp/>}</highlight></codeline>
+<codeline lineno="17" refid="structdakku_1_1Matrix4x4_1a9969de4e8ca980efbe5adde6d7f9b80c" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structdakku_1_1Matrix4x4_1a9969de4e8ca980efbe5adde6d7f9b80c" kindref="member">Matrix4x4</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>t00,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>t01,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>t02,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>t03,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>t10,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>t11,</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>t12,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>t13,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>t20,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>t21,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>t22,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>t23,</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>t30,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>t31,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>t32,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>t33)<sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structdakku_1_1Matrix4x4_1a3580dce7dc2c230e59203cecd2760635" kindref="member">m</ref>[0][0]<sp/>=<sp/>t00;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structdakku_1_1Matrix4x4_1a3580dce7dc2c230e59203cecd2760635" kindref="member">m</ref>[0][1]<sp/>=<sp/>t01;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structdakku_1_1Matrix4x4_1a3580dce7dc2c230e59203cecd2760635" kindref="member">m</ref>[0][2]<sp/>=<sp/>t02;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structdakku_1_1Matrix4x4_1a3580dce7dc2c230e59203cecd2760635" kindref="member">m</ref>[0][3]<sp/>=<sp/>t03;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structdakku_1_1Matrix4x4_1a3580dce7dc2c230e59203cecd2760635" kindref="member">m</ref>[1][0]<sp/>=<sp/>t10;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structdakku_1_1Matrix4x4_1a3580dce7dc2c230e59203cecd2760635" kindref="member">m</ref>[1][1]<sp/>=<sp/>t11;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structdakku_1_1Matrix4x4_1a3580dce7dc2c230e59203cecd2760635" kindref="member">m</ref>[1][2]<sp/>=<sp/>t12;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structdakku_1_1Matrix4x4_1a3580dce7dc2c230e59203cecd2760635" kindref="member">m</ref>[1][3]<sp/>=<sp/>t13;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structdakku_1_1Matrix4x4_1a3580dce7dc2c230e59203cecd2760635" kindref="member">m</ref>[2][0]<sp/>=<sp/>t20;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structdakku_1_1Matrix4x4_1a3580dce7dc2c230e59203cecd2760635" kindref="member">m</ref>[2][1]<sp/>=<sp/>t21;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structdakku_1_1Matrix4x4_1a3580dce7dc2c230e59203cecd2760635" kindref="member">m</ref>[2][2]<sp/>=<sp/>t22;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structdakku_1_1Matrix4x4_1a3580dce7dc2c230e59203cecd2760635" kindref="member">m</ref>[2][3]<sp/>=<sp/>t23;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structdakku_1_1Matrix4x4_1a3580dce7dc2c230e59203cecd2760635" kindref="member">m</ref>[3][0]<sp/>=<sp/>t30;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structdakku_1_1Matrix4x4_1a3580dce7dc2c230e59203cecd2760635" kindref="member">m</ref>[3][1]<sp/>=<sp/>t31;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structdakku_1_1Matrix4x4_1a3580dce7dc2c230e59203cecd2760635" kindref="member">m</ref>[3][2]<sp/>=<sp/>t32;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structdakku_1_1Matrix4x4_1a3580dce7dc2c230e59203cecd2760635" kindref="member">m</ref>[3][3]<sp/>=<sp/>t33;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="structdakku_1_1Matrix4x4_1ab093ee6d1551dec068d65a7298ce0daa" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="structdakku_1_1Matrix4x4" kindref="compound">Matrix4x4</ref><sp/><ref refid="structdakku_1_1Matrix4x4_1ab093ee6d1551dec068d65a7298ce0daa" kindref="member">transpose</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structdakku_1_1Matrix4x4" kindref="compound">Matrix4x4</ref><sp/>&amp;<ref refid="structdakku_1_1Matrix4x4_1a3580dce7dc2c230e59203cecd2760635" kindref="member">m</ref>);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="structdakku_1_1Matrix4x4_1afa2d87deca31076d5166d3c5335e8e22" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal">[](</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structdakku_1_1Matrix4x4_1a3580dce7dc2c230e59203cecd2760635" kindref="member">m</ref>[i];<sp/>}</highlight></codeline>
+<codeline lineno="41" refid="structdakku_1_1Matrix4x4_1adbd9aa389d5861cbb9961db9ea21b219" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal">[](</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structdakku_1_1Matrix4x4_1a3580dce7dc2c230e59203cecd2760635" kindref="member">m</ref>[i];<sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="structdakku_1_1Matrix4x4_1a23f75e2553126934f408f117eaed9849" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structdakku_1_1Matrix4x4_1a23f75e2553126934f408f117eaed9849" kindref="member">setIdentity</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structdakku_1_1Matrix4x4_1a3580dce7dc2c230e59203cecd2760635" kindref="member">m</ref>[0][1]<sp/>=<sp/><ref refid="structdakku_1_1Matrix4x4_1a3580dce7dc2c230e59203cecd2760635" kindref="member">m</ref>[0][2]<sp/>=<sp/><ref refid="structdakku_1_1Matrix4x4_1a3580dce7dc2c230e59203cecd2760635" kindref="member">m</ref>[0][3]<sp/>=<sp/><ref refid="structdakku_1_1Matrix4x4_1a3580dce7dc2c230e59203cecd2760635" kindref="member">m</ref>[1][0]<sp/>=<sp/><ref refid="structdakku_1_1Matrix4x4_1a3580dce7dc2c230e59203cecd2760635" kindref="member">m</ref>[1][2]<sp/>=<sp/><ref refid="structdakku_1_1Matrix4x4_1a3580dce7dc2c230e59203cecd2760635" kindref="member">m</ref>[1][3]<sp/>=<sp/><ref refid="structdakku_1_1Matrix4x4_1a3580dce7dc2c230e59203cecd2760635" kindref="member">m</ref>[2][0]<sp/>=</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structdakku_1_1Matrix4x4_1a3580dce7dc2c230e59203cecd2760635" kindref="member">m</ref>[2][1]<sp/>=<sp/><ref refid="structdakku_1_1Matrix4x4_1a3580dce7dc2c230e59203cecd2760635" kindref="member">m</ref>[2][3]<sp/>=<sp/><ref refid="structdakku_1_1Matrix4x4_1a3580dce7dc2c230e59203cecd2760635" kindref="member">m</ref>[3][0]<sp/>=<sp/><ref refid="structdakku_1_1Matrix4x4_1a3580dce7dc2c230e59203cecd2760635" kindref="member">m</ref>[3][1]<sp/>=<sp/><ref refid="structdakku_1_1Matrix4x4_1a3580dce7dc2c230e59203cecd2760635" kindref="member">m</ref>[3][2]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structdakku_1_1Matrix4x4_1a3580dce7dc2c230e59203cecd2760635" kindref="member">m</ref>[0][0]<sp/>=<sp/><ref refid="structdakku_1_1Matrix4x4_1a3580dce7dc2c230e59203cecd2760635" kindref="member">m</ref>[1][1]<sp/>=<sp/><ref refid="structdakku_1_1Matrix4x4_1a3580dce7dc2c230e59203cecd2760635" kindref="member">m</ref>[2][2]<sp/>=<sp/><ref refid="structdakku_1_1Matrix4x4_1a3580dce7dc2c230e59203cecd2760635" kindref="member">m</ref>[3][3]<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="structdakku_1_1Matrix4x4_1a3580dce7dc2c230e59203cecd2760635" refkind="member"><highlight class="normal"><sp/><sp/>std::array&lt;std::array&lt;float,<sp/>4&gt;,<sp/>4&gt;<sp/><ref refid="structdakku_1_1Matrix4x4_1a3580dce7dc2c230e59203cecd2760635" kindref="member">m</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dakku</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="src/core/transform.h"/>
+  </compounddef>
+</doxygen>

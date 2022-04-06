@@ -1,0 +1,196 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="structdakku_1_1Matrix4x4" kind="struct" language="C++" prot="public">
+    <compoundname>dakku::Matrix4x4</compoundname>
+    <includes refid="transform_8h" local="no">transform.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structdakku_1_1Matrix4x4_1a3580dce7dc2c230e59203cecd2760635" prot="public" static="no" mutable="no">
+        <type>std::array&lt; std::array&lt; float, 4 &gt;, 4 &gt;</type>
+        <definition>std::array&lt;std::array&lt;float, 4&gt;, 4&gt; dakku::Matrix4x4::m</definition>
+        <argsstring></argsstring>
+        <name>m</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/transform.h" line="49" column="14" bodyfile="src/core/transform.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structdakku_1_1Matrix4x4_1a04ffa0470a01980b11bd71b15a698fa0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>dakku::Matrix4x4::Matrix4x4</definition>
+        <argsstring>()</argsstring>
+        <name>Matrix4x4</name>
+        <briefdescription>
+<para>Construct a new Matrix 4x 4 object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/transform.h" line="16" column="3" bodyfile="src/core/transform.h" bodystart="16" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="structdakku_1_1Matrix4x4_1a9969de4e8ca980efbe5adde6d7f9b80c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>dakku::Matrix4x4::Matrix4x4</definition>
+        <argsstring>(float t00, float t01, float t02, float t03, float t10, float t11, float t12, float t13, float t20, float t21, float t22, float t23, float t30, float t31, float t32, float t33)</argsstring>
+        <name>Matrix4x4</name>
+        <param>
+          <type>float</type>
+          <declname>t00</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>t01</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>t02</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>t03</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>t10</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>t11</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>t12</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>t13</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>t20</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>t21</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>t22</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>t23</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>t30</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>t31</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>t32</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>t33</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/transform.h" line="17" column="3" bodyfile="src/core/transform.h" bodystart="17" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="structdakku_1_1Matrix4x4_1afa2d87deca31076d5166d3c5335e8e22" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>decltype(auto)</type>
+        <definition>decltype(auto) dakku::Matrix4x4::operator[]</definition>
+        <argsstring>(size_t i) const</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>size_t</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/transform.h" line="40" column="12" bodyfile="src/core/transform.h" bodystart="40" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="structdakku_1_1Matrix4x4_1adbd9aa389d5861cbb9961db9ea21b219" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>decltype(auto)</type>
+        <definition>decltype(auto) dakku::Matrix4x4::operator[]</definition>
+        <argsstring>(size_t i)</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>size_t</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/transform.h" line="41" column="12" bodyfile="src/core/transform.h" bodystart="41" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="structdakku_1_1Matrix4x4_1a23f75e2553126934f408f117eaed9849" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void dakku::Matrix4x4::setIdentity</definition>
+        <argsstring>()</argsstring>
+        <name>setIdentity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/transform.h" line="43" column="8" bodyfile="src/core/transform.h" bodystart="43" bodyend="47"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="structdakku_1_1Matrix4x4_1ab093ee6d1551dec068d65a7298ce0daa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structdakku_1_1Matrix4x4" kindref="compound">Matrix4x4</ref></type>
+        <definition>Matrix4x4 transpose</definition>
+        <argsstring>(const Matrix4x4 &amp;m)</argsstring>
+        <name>transpose</name>
+        <param>
+          <type>const <ref refid="structdakku_1_1Matrix4x4" kindref="compound">Matrix4x4</ref> &amp;</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/transform.h" line="38" column="20"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>4x4 matrix </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/core/transform.h" line="11" column="1" bodyfile="src/core/transform.h" bodystart="11" bodyend="50"/>
+    <listofallmembers>
+      <member refid="structdakku_1_1Matrix4x4_1a3580dce7dc2c230e59203cecd2760635" prot="public" virt="non-virtual"><scope>dakku::Matrix4x4</scope><name>m</name></member>
+      <member refid="structdakku_1_1Matrix4x4_1a04ffa0470a01980b11bd71b15a698fa0" prot="public" virt="non-virtual"><scope>dakku::Matrix4x4</scope><name>Matrix4x4</name></member>
+      <member refid="structdakku_1_1Matrix4x4_1a9969de4e8ca980efbe5adde6d7f9b80c" prot="public" virt="non-virtual"><scope>dakku::Matrix4x4</scope><name>Matrix4x4</name></member>
+      <member refid="structdakku_1_1Matrix4x4_1afa2d87deca31076d5166d3c5335e8e22" prot="public" virt="non-virtual"><scope>dakku::Matrix4x4</scope><name>operator[]</name></member>
+      <member refid="structdakku_1_1Matrix4x4_1adbd9aa389d5861cbb9961db9ea21b219" prot="public" virt="non-virtual"><scope>dakku::Matrix4x4</scope><name>operator[]</name></member>
+      <member refid="structdakku_1_1Matrix4x4_1a23f75e2553126934f408f117eaed9849" prot="public" virt="non-virtual"><scope>dakku::Matrix4x4</scope><name>setIdentity</name></member>
+      <member refid="structdakku_1_1Matrix4x4_1ab093ee6d1551dec068d65a7298ce0daa" prot="public" virt="non-virtual"><scope>dakku::Matrix4x4</scope><name>transpose</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -364,6 +364,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#enum-propertytype" class="md-nav__link">
+    enum PropertyType
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#using-vector2" class="md-nav__link">
     using Vector2
   </a>
@@ -480,13 +487,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#variable-logger" class="md-nav__link">
-    variable Logger
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -526,12 +526,20 @@
 <td><strong><a href="/dakku/Classes/classdakku_1_1Logger/">dakku::Logger</a></strong> <br>logger class</td>
 </tr>
 <tr>
+<td>struct</td>
+<td><strong><a href="/dakku/Classes/structdakku_1_1Matrix4x4/">dakku::Matrix4x4</a></strong> <br>4x4 matrix</td>
+</tr>
+<tr>
 <td>class</td>
 <td><strong><a href="/dakku/Classes/classdakku_1_1Normal/">dakku::Normal</a></strong> <br>normal</td>
 </tr>
 <tr>
 <td>class</td>
 <td><strong><a href="/dakku/Classes/classdakku_1_1Point/">dakku::Point</a></strong> <br>point</td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Property/">dakku::Property</a></strong> <br>property class, containing many data types, similar to json</td>
 </tr>
 <tr>
 <td>class</td>
@@ -552,6 +560,10 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>enum class</td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#enum-propertytype">PropertyType</a></strong> { NONE, ARRAY, OBJECT, NUMBER, VECTOR}<br>property type</td>
+</tr>
 <tr>
 <td>template &lt;ArithmeticType T> <br>using <a href="/dakku/Classes/classdakku_1_1Vector/">Vector</a>&lt; T, 2 &gt;</td>
 <td><strong><a href="/dakku/Namespaces/namespacedakku/#using-vector2">Vector2</a></strong> <br>2d vectors</td>
@@ -626,13 +638,47 @@
 <td>constexpr float</td>
 <td><strong><a href="/dakku/Namespaces/namespacedakku/#variable-inf">INF</a></strong> <br>infinity</td>
 </tr>
-<tr>
-<td>class <a href="/dakku/Files/fwd_8h/#define-dakku-export-core">DAKKU_EXPORT_CORE</a></td>
-<td><strong><a href="/dakku/Namespaces/namespacedakku/#variable-logger">Logger</a></strong></td>
-</tr>
 </tbody>
 </table>
 <h2 id="types-documentation">Types Documentation</h2>
+<h3 id="enum-propertytype">enum PropertyType</h3>
+<table>
+<thead>
+<tr>
+<th>Enumerator</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NONE</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ARRAY</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>OBJECT</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>NUMBER</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>VECTOR</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>property type </p>
 <h3 id="using-vector2">using Vector2</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="n">ArithmeticType</span><span class="w"> </span><span class="n">T</span><span class="o">&gt;</span><span class="w"></span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">using</span><span class="w"> </span><span class="n">dakku</span><span class="o">::</span><span class="n">Vector2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Vector</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
@@ -732,11 +778,8 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">INF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;::</span><span class="n">infinity</span><span class="p">();</span><span class="w"></span>
 </code></pre></div>
 <p>infinity </p>
-<h3 id="variable-logger">variable Logger</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">DAKKU_EXPORT_CORE</span><span class="w"> </span><span class="n">Logger</span><span class="p">;</span><span class="w"></span>
-</code></pre></div>
 <hr />
-<p>Updated on 2022-04-06 at 13:36:32 +0000</p>
+<p>Updated on 2022-04-06 at 15:28:16 +0000</p>
 
               
             </article>

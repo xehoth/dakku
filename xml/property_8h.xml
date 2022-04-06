@@ -1,0 +1,230 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="property_8h" kind="file" language="C++">
+    <compoundname>property.h</compoundname>
+    <includes refid="vector_8h" local="no">core/vector.h</includes>
+    <includes local="no">map</includes>
+    <includes local="no">string</includes>
+    <includes local="no">variant</includes>
+    <incdepgraph>
+      <node id="5">
+        <label>core/fwd.h</label>
+        <link refid="fwd_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>core/logger.h</label>
+        <link refid="logger_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/core/property.h</label>
+        <link refid="property_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>core/vector.h</label>
+        <link refid="vector_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>core/vector_base.h</label>
+        <link refid="vector__base_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>platform.h</label>
+        <link refid="platform_8h"/>
+      </node>
+      <node id="15">
+        <label>algorithm</label>
+      </node>
+      <node id="14">
+        <label>array</label>
+      </node>
+      <node id="10">
+        <label>cmath</label>
+      </node>
+      <node id="13">
+        <label>cstdlib</label>
+      </node>
+      <node id="8">
+        <label>limits</label>
+      </node>
+      <node id="18">
+        <label>map</label>
+      </node>
+      <node id="9">
+        <label>numbers</label>
+      </node>
+      <node id="17">
+        <label>ostream</label>
+      </node>
+      <node id="12">
+        <label>spdlog/fmt/ostr.h</label>
+      </node>
+      <node id="11">
+        <label>spdlog/spdlog.h</label>
+      </node>
+      <node id="16">
+        <label>string</label>
+      </node>
+      <node id="7">
+        <label>type_traits</label>
+      </node>
+      <node id="19">
+        <label>variant</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classdakku_1_1Property" prot="public">dakku::Property</innerclass>
+    <innernamespace refid="namespacedakku">dakku</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>DAKKU_CORE_PROPERTY_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DAKKU_CORE_PROPERTY_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="vector_8h" kindref="compound">core/vector.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;variant&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacedakku" kindref="compound">dakku</ref><sp/>{</highlight></codeline>
+<codeline lineno="13" refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfca" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfca" kindref="member">PropertyType</ref><sp/>{<sp/><ref refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaab50339a10e1de285ac99d4c3990b8693" kindref="member">NONE</ref>,<sp/><ref refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaacb4fb1757fb37c43cded35d3eb857c43" kindref="member">ARRAY</ref>,<sp/><ref refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaa8eee8e217391199668cbac89472ace53" kindref="member">OBJECT</ref>,<sp/><ref refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaa34f55eca38e0605a84f169ff61a2a396" kindref="member">NUMBER</ref>,<sp/><ref refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaa87752381b583740610f1dfeb07fdad7e" kindref="member">VECTOR</ref><sp/>};</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="classdakku_1_1Property" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref><sp/><ref refid="classdakku_1_1Property" kindref="compound">Property</ref><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="21" refid="classdakku_1_1Property_1a3572cc83d304fa13a828df071bc1530b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Property_1a3572cc83d304fa13a828df071bc1530b" kindref="member">ObjectType</ref><sp/>=<sp/>std::map&lt;std::string,<sp/>Property,<sp/>std::less&lt;&gt;&gt;;</highlight></codeline>
+<codeline lineno="22" refid="classdakku_1_1Property_1aa44ae47ef51fe042e4cdc2d558fd6c63" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Property_1aa44ae47ef51fe042e4cdc2d558fd6c63" kindref="member">ArrayType</ref><sp/>=<sp/>std::vector&lt;Property&gt;;</highlight></codeline>
+<codeline lineno="23" refid="classdakku_1_1Property_1a84633bc387b4d29044d4b05972899905" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Property_1a84633bc387b4d29044d4b05972899905" kindref="member">NumberType</ref><sp/>=<sp/>float;</highlight></codeline>
+<codeline lineno="24" refid="classdakku_1_1Property_1a24591b37ada180ec7c1d83a7d63dd2c5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Property_1a24591b37ada180ec7c1d83a7d63dd2c5" kindref="member">VectorType</ref><sp/>=<sp/>std::vector&lt;float&gt;;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="classdakku_1_1Property_1a8723ce4e4af1e43c638534da4df0359f" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classdakku_1_1Property_1a8723ce4e4af1e43c638534da4df0359f" kindref="member">Property</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;ArithmeticType<sp/>T&gt;</highlight></codeline>
+<codeline lineno="38" refid="classdakku_1_1Property_1a027a9fe4e51faa1849b99ebc276fa21e" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classdakku_1_1Property_1a027a9fe4e51faa1849b99ebc276fa21e" kindref="member">Property</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T<sp/>&amp;v)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>data(static_cast&lt;float&gt;(v)),<sp/>type(<ref refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfca" kindref="member">PropertyType</ref>::<ref refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaa34f55eca38e0605a84f169ff61a2a396" kindref="member">NUMBER</ref>)<sp/>{}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;ArithmeticType<sp/>T,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>S,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D&gt;</highlight></codeline>
+<codeline lineno="47" refid="classdakku_1_1Property_1a23b873f32fb76880cf62bf6088974141" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classdakku_1_1Property_1a23b873f32fb76880cf62bf6088974141" kindref="member">Property</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1VectorBase" kindref="compound">VectorBase&lt;T, S, D&gt;</ref><sp/>&amp;v)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>data(v.toFloatVector()),<sp/>type(<ref refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfca" kindref="member">PropertyType</ref>::<ref refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaa87752381b583740610f1dfeb07fdad7e" kindref="member">VECTOR</ref>)<sp/>{}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="classdakku_1_1Property_1a86d3f30da8f500e82852c0dd6a47d892" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">)<sp/><ref refid="classdakku_1_1Property_1a86d3f30da8f500e82852c0dd6a47d892" kindref="member">getPropertyType</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>type;<sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;PropertyType<sp/>type&gt;</highlight></codeline>
+<codeline lineno="64" refid="classdakku_1_1Property_1af7dd18be1dffb351f12b12c77467b2eb" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">)<sp/><ref refid="classdakku_1_1Property_1af7dd18be1dffb351f12b12c77467b2eb" kindref="member">get</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(type<sp/>==<sp/><ref refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaa8eee8e217391199668cbac89472ace53" kindref="member">PropertyType::OBJECT</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::get&lt;ObjectType&gt;(data);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(type<sp/>==<sp/><ref refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaacb4fb1757fb37c43cded35d3eb857c43" kindref="member">PropertyType::ARRAY</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::get&lt;ArrayType&gt;(data);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(type<sp/>==<sp/><ref refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaa34f55eca38e0605a84f169ff61a2a396" kindref="member">PropertyType::NUMBER</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::get&lt;NumberType&gt;(data);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(type<sp/>==<sp/><ref refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaa87752381b583740610f1dfeb07fdad7e" kindref="member">PropertyType::VECTOR</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::get&lt;VectorType&gt;(data);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(type<sp/>==<sp/><ref refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaab50339a10e1de285ac99d4c3990b8693" kindref="member">PropertyType::NONE</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="logger_8h_1a614d277e34773e7302c6a2cda6909867" kindref="member">DAKKU_WARN</ref>(</highlight><highlight class="stringliteral">&quot;none<sp/>property<sp/>type&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="logger_8h_1a614d277e34773e7302c6a2cda6909867" kindref="member">DAKKU_WARN</ref>(</highlight><highlight class="stringliteral">&quot;invalid<sp/>property<sp/>type:<sp/>{}&quot;</highlight><highlight class="normal">,<sp/>type);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="classdakku_1_1Property_1a880441e5235f7e4340436b2ec39d1632" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">)<sp/><ref refid="classdakku_1_1Property_1a880441e5235f7e4340436b2ec39d1632" kindref="member">getObject</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>get&lt;PropertyType::OBJECT&gt;();</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="classdakku_1_1Property_1a022f642f3be87c9323b2271391677e52" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">)<sp/><ref refid="classdakku_1_1Property_1a022f642f3be87c9323b2271391677e52" kindref="member">getArray</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>get&lt;PropertyType::ARRAY&gt;();<sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="classdakku_1_1Property_1a37f32d3f86e95035ce0ffd25dbe5e3ad" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">)<sp/><ref refid="classdakku_1_1Property_1a37f32d3f86e95035ce0ffd25dbe5e3ad" kindref="member">getNumber</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>get&lt;PropertyType::NUMBER&gt;();</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="classdakku_1_1Property_1a7a29d6659e52edb24d84cb05484dc2b8" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">)<sp/><ref refid="classdakku_1_1Property_1a7a29d6659e52edb24d84cb05484dc2b8" kindref="member">getVector</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>get&lt;PropertyType::VECTOR&gt;();</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117" refid="classdakku_1_1Property_1ac84d992765b5eefa36f4e91235f3a623" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Property_1ac84d992765b5eefa36f4e91235f3a623" kindref="member">isObjectType</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>type<sp/>==<sp/><ref refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaa8eee8e217391199668cbac89472ace53" kindref="member">PropertyType::OBJECT</ref>;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125" refid="classdakku_1_1Property_1ad45449f0a8525a9b1fc70e3753e4c199" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Property_1ad45449f0a8525a9b1fc70e3753e4c199" kindref="member">isArrayType</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>type<sp/>==<sp/><ref refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaacb4fb1757fb37c43cded35d3eb857c43" kindref="member">PropertyType::ARRAY</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131" refid="classdakku_1_1Property_1af34ece04b3a3225491e45d9b01237d97" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Property_1af34ece04b3a3225491e45d9b01237d97" kindref="member">isNumberType</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>type<sp/>==<sp/><ref refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaa34f55eca38e0605a84f169ff61a2a396" kindref="member">PropertyType::NUMBER</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137" refid="classdakku_1_1Property_1a8c5286cd48d768e4fcae6b01d820c32a" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Property_1a8c5286cd48d768e4fcae6b01d820c32a" kindref="member">isVectorType</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>type<sp/>==<sp/><ref refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaa87752381b583740610f1dfeb07fdad7e" kindref="member">PropertyType::VECTOR</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145" refid="classdakku_1_1Property_1a2bd84fd11bb5657b3ff18b1125fcd28e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal">[](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;key)<sp/>{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(type<sp/>==<sp/><ref refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaab50339a10e1de285ac99d4c3990b8693" kindref="member">PropertyType::NONE</ref>)<sp/>[[unlikely]]<sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>data<sp/>=<sp/><ref refid="classdakku_1_1Property_1a3572cc83d304fa13a828df071bc1530b" kindref="member">ObjectType</ref>{};</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>type<sp/>=<sp/><ref refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaa8eee8e217391199668cbac89472ace53" kindref="member">PropertyType::OBJECT</ref>;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="logger_8h_1ad7e55cac030fb7ab38ebcfce264c1b3e" kindref="member">DAKKU_CHECK</ref>(isObject(),<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>getObject()[key];</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160" refid="classdakku_1_1Property_1ae2b5340d7459e700639dfb4e7f596a70" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal">[](</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i)<sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(type<sp/>==<sp/><ref refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaab50339a10e1de285ac99d4c3990b8693" kindref="member">PropertyType::NONE</ref>)<sp/>[[unlikely]]<sp/>{</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>data<sp/>=<sp/><ref refid="classdakku_1_1Property_1aa44ae47ef51fe042e4cdc2d558fd6c63" kindref="member">ArrayType</ref>{};</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>type<sp/>=<sp/><ref refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaacb4fb1757fb37c43cded35d3eb857c43" kindref="member">PropertyType::ARRAY</ref>;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>getArray().reserve((i<sp/>+<sp/>1)<sp/>*<sp/>2);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;arr<sp/>=<sp/>getArray();</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i<sp/>&gt;=<sp/>arr.size())<sp/>{</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>arr.reserve((i<sp/>+<sp/>1)<sp/>*<sp/>2);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>arr.resize(i<sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>getArray()[i];</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178" refid="classdakku_1_1Property_1a98ec2192557128c57decc60656f2f019" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/>std::string<sp/><ref refid="classdakku_1_1Property_1a98ec2192557128c57decc60656f2f019" kindref="member">toString</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184" refid="classdakku_1_1Property_1ac83f11b8c568a198832de9754664be1d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/>std::ostream<sp/>&amp;<ref refid="classdakku_1_1Property_1ac83f11b8c568a198832de9754664be1d" kindref="member">operator&lt;&lt;</ref>(std::ostream<sp/>&amp;os,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Property" kindref="compound">Property</ref><sp/>&amp;property)<sp/>{</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>os<sp/>&lt;&lt;<sp/></highlight><highlight class="keyword">property</highlight><highlight class="normal">.toString();</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/>std::variant&lt;ObjectType,<sp/>ArrayType,<sp/>NumberType,<sp/>VectorType&gt;<sp/>data;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><ref refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfca" kindref="member">PropertyType</ref><sp/>type{<ref refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaab50339a10e1de285ac99d4c3990b8693" kindref="member">PropertyType::NONE</ref>};</highlight></codeline>
+<codeline lineno="193"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="194"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dakku</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="src/core/property.h"/>
+  </compounddef>
+</doxygen>

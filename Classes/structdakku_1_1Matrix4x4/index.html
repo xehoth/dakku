@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://xehoth.github.io/dakku/Files/platform_8h/">
+        <link rel="canonical" href="https://xehoth.github.io/dakku/Classes/structdakku_1_1Matrix4x4/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.8">
     
     
       
-        <title>src/platform.h - dakku documentation</title>
+        <title>dakku::Matrix4x4 - dakku documentation</title>
       
     
     
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#srcplatformh" class="md-skip">
+        <a href="#dakkumatrix4x4" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              src/platform.h
+              dakku::Matrix4x4
             
           </span>
         </div>
@@ -328,58 +328,65 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#namespaces" class="md-nav__link">
-    Namespaces
+  <a href="#public-functions" class="md-nav__link">
+    Public Functions
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#defines" class="md-nav__link">
-    Defines
+  <a href="#public-attributes" class="md-nav__link">
+    Public Attributes
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#macros-documentation" class="md-nav__link">
-    Macros Documentation
+  <a href="#friends" class="md-nav__link">
+    Friends
   </a>
   
-    <nav class="md-nav" aria-label="Macros Documentation">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-functions-documentation" class="md-nav__link">
+    Public Functions Documentation
+  </a>
+  
+    <nav class="md-nav" aria-label="Public Functions Documentation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#define-dakku_inline" class="md-nav__link">
-    define DAKKU_INLINE
+  <a href="#function-matrix4x4" class="md-nav__link">
+    function Matrix4x4
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#define-dakku_export" class="md-nav__link">
-    define DAKKU_EXPORT
+  <a href="#function-matrix4x4_1" class="md-nav__link">
+    function Matrix4x4
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#define-dakku_import" class="md-nav__link">
-    define DAKKU_IMPORT
+  <a href="#function-operator" class="md-nav__link">
+    function operator[]
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#define-dakku_core_module" class="md-nav__link">
-    define DAKKU_CORE_MODULE
+  <a href="#function-operator_1" class="md-nav__link">
+    function operator[]
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#define-dakku_main_module" class="md-nav__link">
-    define DAKKU_MAIN_MODULE
+  <a href="#function-setidentity" class="md-nav__link">
+    function setIdentity
   </a>
   
 </li>
@@ -390,9 +397,42 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#source-code" class="md-nav__link">
-    Source code
+  <a href="#public-attributes-documentation" class="md-nav__link">
+    Public Attributes Documentation
   </a>
+  
+    <nav class="md-nav" aria-label="Public Attributes Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variable-m" class="md-nav__link">
+    variable m
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#friends_1" class="md-nav__link">
+    Friends
+  </a>
+  
+    <nav class="md-nav" aria-label="Friends">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#friend-transpose" class="md-nav__link">
+    friend transpose
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -408,27 +448,16 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/xehoth/dakku/edit/master/docs/Files/platform_8h.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/xehoth/dakku/edit/master/docs/Classes/structdakku_1_1Matrix4x4.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
 
-<h1 id="srcplatformh">src/platform.h</h1>
-<h2 id="namespaces">Namespaces</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong><a href="/dakku/Namespaces/namespacedakku/">dakku</a></strong> <br>dakku namespace</td>
-</tr>
-</tbody>
-</table>
-<h2 id="defines">Defines</h2>
+<h1 id="dakkumatrix4x4">dakku::Matrix4x4</h1>
+<p>4x4 matrix </p>
+<p><code>#include &lt;transform.h&gt;</code></p>
+<h2 id="public-functions">Public Functions</h2>
 <table>
 <thead>
 <tr>
@@ -439,72 +468,103 @@
 <tbody>
 <tr>
 <td></td>
-<td><strong><a href="/dakku/Files/platform_8h/#define-dakku-inline">DAKKU_INLINE</a></strong></td>
+<td><strong><a href="/dakku/Classes/structdakku_1_1Matrix4x4/#function-matrix4x4">Matrix4x4</a></strong>()<br>Construct a new Matrix 4x 4 object.</td>
 </tr>
 <tr>
 <td></td>
-<td><strong><a href="/dakku/Files/platform_8h/#define-dakku-export">DAKKU_EXPORT</a></strong></td>
+<td><strong><a href="/dakku/Classes/structdakku_1_1Matrix4x4/#function-matrix4x4">Matrix4x4</a></strong>(float t00, float t01, float t02, float t03, float t10, float t11, float t12, float t13, float t20, float t21, float t22, float t23, float t30, float t31, float t32, float t33)</td>
 </tr>
 <tr>
-<td></td>
-<td><strong><a href="/dakku/Files/platform_8h/#define-dakku-import">DAKKU_IMPORT</a></strong></td>
+<td>decltype(auto)</td>
+<td><strong><a href="/dakku/Classes/structdakku_1_1Matrix4x4/#function-operator[]">operator[]</a></strong>(size_t i) const</td>
 </tr>
 <tr>
-<td></td>
-<td><strong><a href="/dakku/Files/platform_8h/#define-dakku-core-module">DAKKU_CORE_MODULE</a></strong> <br>dakku logger module</td>
+<td>decltype(auto)</td>
+<td><strong><a href="/dakku/Classes/structdakku_1_1Matrix4x4/#function-operator[]">operator[]</a></strong>(size_t i)</td>
 </tr>
 <tr>
-<td></td>
-<td><strong><a href="/dakku/Files/platform_8h/#define-dakku-main-module">DAKKU_MAIN_MODULE</a></strong> <br>dakku main module</td>
+<td>void</td>
+<td><strong><a href="/dakku/Classes/structdakku_1_1Matrix4x4/#function-setidentity">setIdentity</a></strong>()</td>
 </tr>
 </tbody>
 </table>
-<h2 id="macros-documentation">Macros Documentation</h2>
-<h3 id="define-dakku_inline">define DAKKU_INLINE</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#define DAKKU_INLINE __attribute__((always_inline)) inline</span>
+<h2 id="public-attributes">Public Attributes</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>std::array&lt; std::array&lt; float, 4 &gt;, 4 &gt;</td>
+<td><strong><a href="/dakku/Classes/structdakku_1_1Matrix4x4/#variable-m">m</a></strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="friends">Friends</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/dakku/Classes/structdakku_1_1Matrix4x4/">Matrix4x4</a></td>
+<td><strong><a href="/dakku/Classes/structdakku_1_1Matrix4x4/#friend-transpose">transpose</a></strong>(const <a href="/dakku/Classes/structdakku_1_1Matrix4x4/">Matrix4x4</a> &amp; m)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="public-functions-documentation">Public Functions Documentation</h2>
+<h3 id="function-matrix4x4">function Matrix4x4</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kr">inline</span><span class="w"> </span><span class="n">Matrix4x4</span><span class="p">()</span><span class="w"></span>
 </code></pre></div>
-<h3 id="define-dakku_export">define DAKKU_EXPORT</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cp">#define DAKKU_EXPORT __attribute__((visibility(&quot;default&quot;)))</span>
+<p>Construct a new Matrix 4x 4 object. </p>
+<h3 id="function-matrix4x4_1">function Matrix4x4</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kr">inline</span><span class="w"> </span><span class="n">Matrix4x4</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">t00</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">t01</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">t02</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">t03</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">t10</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">t11</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">t12</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">t13</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">t20</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">t21</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">t22</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">t23</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">t30</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">t31</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">t32</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">t33</span><span class="w"></span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
-<h3 id="define-dakku_import">define DAKKU_IMPORT</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="cp">#define DAKKU_IMPORT </span>
+<h3 id="function-operator">function operator[]</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kr">inline</span><span class="w"> </span><span class="k">decltype</span><span class="p">(</span><span class="k">auto</span><span class="p">)</span><span class="w"> </span><span class="k">operator</span><span class="p">[](</span><span class="w"></span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="w"></span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
 </code></pre></div>
-<h3 id="define-dakku_core_module">define DAKKU_CORE_MODULE</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="cp">#define DAKKU_CORE_MODULE 1</span>
+<h3 id="function-operator_1">function operator[]</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kr">inline</span><span class="w"> </span><span class="k">decltype</span><span class="p">(</span><span class="k">auto</span><span class="p">)</span><span class="w"> </span><span class="k">operator</span><span class="p">[](</span><span class="w"></span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="w"></span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
-<p>dakku logger module </p>
-<h3 id="define-dakku_main_module">define DAKKU_MAIN_MODULE</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="cp">#define DAKKU_MAIN_MODULE 10</span>
+<h3 id="function-setidentity">function setIdentity</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">setIdentity</span><span class="p">()</span><span class="w"></span>
 </code></pre></div>
-<p>dakku main module </p>
-<h2 id="source-code">Source code</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="cp">#ifndef DAKKU_PLATFORM_H_</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="cp">#define DAKKU_PLATFORM_H_</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="cp">#if defined(_MSC_VER)</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="cp">#if !defined(_USE_MATH_DEFINES)</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="cp">#define _USE_MATH_DEFINES</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="cp">#endif</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="cp">#endif</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">dakku</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="cp">#if defined(_MSC_VER)</span>
-<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="cp">#define DAKKU_INLINE __forceinline</span>
-<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="cp">#define DAKKU_EXPORT __declspec(dllexport)</span>
-<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="cp">#define DAKKU_IMPORT __declspec(dllimport)</span>
-<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="cp">#else</span>
-<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="cp">#define DAKKU_INLINE __attribute__((always_inline)) inline</span>
-<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="cp">#define DAKKU_EXPORT __attribute__((visibility(&quot;default&quot;)))</span>
-<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="cp">#define DAKKU_IMPORT</span>
-<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="cp">#endif</span>
-<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>
-<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="cp">#define DAKKU_CORE_MODULE 1</span>
-<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="cp">#define DAKKU_MAIN_MODULE 10</span>
-<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>
-<a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a>
-<a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a><span class="p">}</span><span class="w">  </span><span class="c1">// namespace dakku</span>
-<a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a>
-<a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a><span class="cp">#endif</span>
+<h2 id="public-attributes-documentation">Public Attributes Documentation</h2>
+<h3 id="variable-m">variable m</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="w"> </span><span class="kt">float</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">m</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h2 id="friends_1">Friends</h2>
+<h3 id="friend-transpose">friend transpose</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">friend</span><span class="w"> </span><span class="n">Matrix4x4</span><span class="w"> </span><span class="nf">transpose</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Matrix4x4</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">m</span><span class="w"></span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 <hr />
 <p>Updated on 2022-04-06 at 15:28:16 +0000</p>

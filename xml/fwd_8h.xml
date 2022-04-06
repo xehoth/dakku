@@ -53,9 +53,21 @@
         <childnode refid="3" relation="include">
         </childnode>
       </node>
+      <node id="5">
+        <label>src/core/property.h</label>
+        <link refid="property_8h"/>
+      </node>
+      <node id="6">
+        <label>src/core/transform.h</label>
+        <link refid="transform_8h"/>
+      </node>
       <node id="4">
         <label>src/core/vector.h</label>
         <link refid="vector_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
       </node>
       <node id="3">
         <label>src/core/vector_base.h</label>
@@ -112,7 +124,7 @@
 <codeline lineno="46"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
 <codeline lineno="47" refid="namespacedakku_1af703ca0ba560169d1daf114a07175bf4" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">requires</highlight><highlight class="normal"><sp/>std::is_integral_v&lt;T&gt;<sp/><ref refid="platform_8h_1a7bc0107b6d161e4a712eee011c57792c" kindref="member">DAKKU_INLINE</ref><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespacedakku_1af754e4967f947036a0c31c0dbb4bf6e1" kindref="member">isNaN</ref>(T)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
 <codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49" refid="namespacedakku_1a11027d1862293f2ca3111d80ffe50415" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref><sp/><ref refid="classdakku_1_1Logger" kindref="compound">Logger</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Transform;</highlight></codeline>
 <codeline lineno="50"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dakku</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
