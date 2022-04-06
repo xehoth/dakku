@@ -362,7 +362,7 @@
 <h1 id="dakkupoint">dakku::Point</h1>
 <p><a href="#detailed-description">More...</a></p>
 <p><code>#include &lt;vector.h&gt;</code></p>
-<p>Inherits from <a href="/dakku/Classes/classdakku_1_1VectorBase/">dakku::VectorBase&lt; T, S, Point&lt; T, S &gt; &gt;</a>, <a href="/dakku/Classes/structdakku_1_1VectorExpression/">dakku::VectorExpression&lt; T, S, Derived, Derived &gt;</a></p>
+<p>Inherits from <a href="/dakku/Classes/classdakku_1_1VectorBase/">dakku::VectorBase&lt; T, S, Point&lt; T, S &gt; &gt;</a></p>
 <h2 id="additional-inherited-members">Additional inherited members</h2>
 <p><strong>Public Functions inherited from <a href="/dakku/Classes/classdakku_1_1VectorBase/">dakku::VectorBase&lt; T, S, Point&lt; T, S &gt; &gt;</a></strong></p>
 <table>
@@ -382,12 +382,8 @@
 <td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-vectorbase">VectorBase</a></strong>(Arg value)<br>Construct a new <a href="/dakku/Classes/classdakku_1_1Vector/">Vector</a> Base object with all components initialized to <code>value</code></td>
 </tr>
 <tr>
-<td>template &lt;typename Expr > <br></td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-vectorbase">VectorBase</a></strong>(const <a href="/dakku/Classes/structdakku_1_1VectorExpression/">VectorExpression</a>&lt; T, S, Derived, Expr &gt; &amp; expr)<br>Construct a new <a href="/dakku/Classes/classdakku_1_1Vector/">Vector</a> Base object with a vector expression.</td>
-</tr>
-<tr>
-<td>template &lt;typename Other ,typename OtherDerived ,typename Expr > <br></td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-vectorbase">VectorBase</a></strong>(const <a href="/dakku/Classes/structdakku_1_1VectorExpression/">VectorExpression</a>&lt; Other, S, OtherDerived, Expr &gt; &amp; expr)<br>Construct a new <a href="/dakku/Classes/classdakku_1_1Vector/">Vector</a> Base object with a vector expression.</td>
+<td>template &lt;ArithmeticType Other,typename OtherDerived > <br></td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-vectorbase">VectorBase</a></strong>(const <a href="/dakku/Classes/classdakku_1_1VectorBase/">VectorBase</a>&lt; Other, S, OtherDerived &gt; &amp; other)<br>Construct a new <a href="/dakku/Classes/classdakku_1_1Vector/">Vector</a> Base object with a vector expression.</td>
 </tr>
 <tr>
 <td></td>
@@ -426,8 +422,8 @@
 <td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-set">set</a></strong>(Args &amp;&amp;... args)<br>set data to args</td>
 </tr>
 <tr>
-<td>template &lt;ArithmeticType Other,typename OtherDerived ,typename Expr > <br>void</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-set">set</a></strong>(const <a href="/dakku/Classes/structdakku_1_1VectorExpression/">VectorExpression</a>&lt; Other, S, OtherDerived, Expr &gt; &amp; rhs)<br>set data by <code>rhs</code>'s data</td>
+<td>template &lt;ArithmeticType Other,typename OtherDerived > <br>void</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-set">set</a></strong>(const <a href="/dakku/Classes/classdakku_1_1VectorBase/">VectorBase</a>&lt; Other, S, OtherDerived &gt; &amp; rhs)<br>set data by <code>rhs</code>'s data</td>
 </tr>
 <tr>
 <td>bool</td>
@@ -446,8 +442,28 @@
 <td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-size">size</a></strong>() const<br>size of the vector</td>
 </tr>
 <tr>
-<td>decltype(auto)</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-operator-">operator-</a></strong>() const</td>
+<td>const T &amp;</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-operator[]">operator[]</a></strong>(size_t i) const<br>get i'th value</td>
+</tr>
+<tr>
+<td>T &amp;</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-operator[]">operator[]</a></strong>(size_t i)<br>get i'th value</td>
+</tr>
+<tr>
+<td>Derived</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-operator-">operator-</a></strong>() const<br>negation of the vector</td>
+</tr>
+<tr>
+<td>const Derived &amp;</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-derived">derived</a></strong>() const<br>get derived class</td>
+</tr>
+<tr>
+<td>Derived &amp;</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-derived">derived</a></strong>()<br>get derived class</td>
+</tr>
+<tr>
+<td>Derived &amp;</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-operator+=">operator+=</a></strong>(const Derived &amp; rhs)<br>addition</td>
 </tr>
 </tbody>
 </table>
@@ -479,32 +495,17 @@
 <td>std::ostream &amp;</td>
 <td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-operator&lt;&lt;">operator&lt;&lt;</a></strong>(std::ostream &amp; os, const <a href="/dakku/Classes/classdakku_1_1VectorBase/">VectorBase</a> &amp; vec) <br>output the vector</td>
 </tr>
-</tbody>
-</table>
-<p><strong>Public Functions inherited from <a href="/dakku/Classes/structdakku_1_1VectorExpression/">dakku::VectorExpression&lt; T, S, Derived, Derived &gt;</a></strong></p>
-<table>
-<thead>
 <tr>
-<th></th>
-<th>Name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>decltype(auto)</td>
-<td><strong><a href="/dakku/Classes/structdakku_1_1VectorExpression/#function-operator[]">operator[]</a></strong>(size_t i)<br>get the i'th value</td>
+<td>Derived</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-operator+">operator+</a></strong>(const Derived &amp; a, const Derived &amp; b) <br>addition</td>
 </tr>
 <tr>
-<td>decltype(auto)</td>
-<td><strong><a href="/dakku/Classes/structdakku_1_1VectorExpression/#function-operator[]">operator[]</a></strong>(size_t i) const<br>get the i'th value</td>
+<td>Derived</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-operator+">operator+</a></strong>(const Derived &amp; a, const U &amp; b) <br>addition</td>
 </tr>
 <tr>
-<td>decltype(auto)</td>
-<td><strong><a href="/dakku/Classes/structdakku_1_1VectorExpression/#function-getexpression">getExpression</a></strong>() const<br>Get the derived expression.</td>
-</tr>
-<tr>
-<td>decltype(auto)</td>
-<td><strong><a href="/dakku/Classes/structdakku_1_1VectorExpression/#function-getexpression">getExpression</a></strong>()<br>Get the derived expression.</td>
+<td>Derived</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-operator+">operator+</a></strong>(const U &amp; a, const Derived &amp; b) <br>addition</td>
 </tr>
 </tbody>
 </table>
@@ -514,7 +515,7 @@
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">class</span><span class="w"> </span><span class="nc">dakku</span><span class="o">::</span><span class="n">Point</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <hr />
-<p>Updated on 2022-04-06 at 06:23:49 +0000</p>
+<p>Updated on 2022-04-06 at 09:34:10 +0000</p>
 
               
             </article>
