@@ -1,6 +1,6 @@
 #include <core/fwd.h>
-#include <logger/logger.h>
-#include <math/vector.h>
+#include <core/logger.h>
+#include <core/vector.h>
 #include <iostream>
 
 using namespace dakku;

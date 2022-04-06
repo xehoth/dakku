@@ -1,6 +1,6 @@
 #ifndef DAKKU_LOGGER_LOGGER_H_
 #define DAKKU_LOGGER_LOGGER_H_
-#include <logger/fwd.h>
+#include <core/fwd.h>
 #include <spdlog/spdlog.h>
 #include <spdlog/fmt/ostr.h>
 #include <cstdlib>
@@ -9,9 +9,9 @@ namespace dakku {
 
 /**
  * @brief logger class
- * 
+ *
  */
-class DAKKU_EXPORT_LOGGER Logger {
+class DAKKU_EXPORT_CORE Logger {
  public:
   /**
    * @brief get logger instance

@@ -22,11 +22,7 @@ namespace dakku {
 #endif
 
 /// dakku logger module
-#define DAKKU_LOGGER_MODULE 1
-/// dakku math module
-#define DAKKU_MATH_MODULE 2
-/// dakku core module
-#define DAKKU_CORE_MODULE 3
+#define DAKKU_CORE_MODULE 1
 /// dakku main module
 #define DAKKU_MAIN_MODULE 10
 

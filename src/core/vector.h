@@ -1,6 +1,6 @@
 #ifndef DAKKU_MATH_VECTOR_H_
 #define DAKKU_MATH_VECTOR_H_
-#include <math/vector_base.h>
+#include <core/vector_base.h>
 
 namespace dakku {
 

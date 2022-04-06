@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include <math/vector.h>
+#include <core/vector.h>
 #include <iostream>
 using namespace dakku;
 
