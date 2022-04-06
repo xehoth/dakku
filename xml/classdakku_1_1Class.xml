@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="classdakku_1_1Class" kind="class" language="C++" prot="public">
+    <compoundname>dakku::Class</compoundname>
+    <includes refid="class_8h" local="no">class.h</includes>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classdakku_1_1Class_1a38f609682794eb8644448c458c9679cb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdakku_1_1Class" kindref="compound">Class</ref> &amp;</type>
+        <definition>static Class &amp; dakku::Class::instance</definition>
+        <argsstring>()</argsstring>
+        <name>instance</name>
+        <briefdescription>
+<para>get the class instance (singleton) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the instance </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/class.h" line="18" column="16"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>RTTI support. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/core/class.h" line="11" column="1" bodyfile="src/core/class.h" bodystart="11" bodyend="21"/>
+    <listofallmembers>
+      <member refid="classdakku_1_1Class_1a38f609682794eb8644448c458c9679cb" prot="public" virt="non-virtual"><scope>dakku::Class</scope><name>instance</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

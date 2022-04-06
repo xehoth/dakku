@@ -2,6 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
   <compounddef id="namespacedakku" kind="namespace" language="C++">
     <compoundname>dakku</compoundname>
+    <innerclass refid="classdakku_1_1Class" prot="public">dakku::Class</innerclass>
     <innerclass refid="classdakku_1_1Logger" prot="public">dakku::Logger</innerclass>
     <innerclass refid="structdakku_1_1Matrix4x4" prot="public">dakku::Matrix4x4</innerclass>
     <innerclass refid="classdakku_1_1Normal" prot="public">dakku::Normal</innerclass>
@@ -389,6 +390,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/core/fwd.h" line="9" column="1"/>
+    <location file="src/core/class.h" line="5" column="1"/>
   </compounddef>
 </doxygen>

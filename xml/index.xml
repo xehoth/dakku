@@ -1,5 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.2" xml:lang="en-US">
+  <compound refid="classdakku_1_1Class" kind="class"><name>dakku::Class</name>
+    <member refid="classdakku_1_1Class_1a38f609682794eb8644448c458c9679cb" kind="function"><name>instance</name></member>
+  </compound>
   <compound refid="classdakku_1_1Logger" kind="class"><name>dakku::Logger</name>
     <member refid="classdakku_1_1Logger_1aa6afc845ad6d0bcec3849515afc971cd" kind="variable"><name>_logger</name></member>
     <member refid="classdakku_1_1Logger_1a75e95ca57e099bb7992724feec106edf" kind="function"><name>get</name></member>
@@ -120,6 +123,8 @@
     <member refid="namespacedakku_1a53c476552ecb27caba955675d8efb680" kind="variable"><name>INF</name></member>
     <member refid="namespacedakku_1af754e4967f947036a0c31c0dbb4bf6e1" kind="function"><name>isNaN</name></member>
     <member refid="namespacedakku_1af703ca0ba560169d1daf114a07175bf4" kind="function"><name>isNaN</name></member>
+  </compound>
+  <compound refid="class_8h" kind="file"><name>class.h</name>
   </compound>
   <compound refid="fwd_8h" kind="file"><name>fwd.h</name>
     <member refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kind="define"><name>DAKKU_EXPORT_CORE</name></member>

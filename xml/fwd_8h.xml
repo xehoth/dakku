@@ -7,6 +7,7 @@
     <includes local="no">limits</includes>
     <includes local="no">numbers</includes>
     <includes local="no">cmath</includes>
+    <includedby refid="class_8h" local="no">src/core/class.h</includedby>
     <includedby refid="logger_8h" local="no">src/core/logger.h</includedby>
     <incdepgraph>
       <node id="1">
@@ -41,38 +42,44 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
+      <node id="2">
+        <label>src/core/class.h</label>
+        <link refid="class_8h"/>
+      </node>
       <node id="1">
         <label>src/core/fwd.h</label>
         <link refid="fwd_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-      </node>
-      <node id="2">
-        <label>src/core/logger.h</label>
-        <link refid="logger_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
-      <node id="5">
+      <node id="3">
+        <label>src/core/logger.h</label>
+        <link refid="logger_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
         <label>src/core/property.h</label>
         <link refid="property_8h"/>
       </node>
-      <node id="6">
+      <node id="7">
         <label>src/core/transform.h</label>
         <link refid="transform_8h"/>
       </node>
-      <node id="4">
+      <node id="5">
         <label>src/core/vector.h</label>
         <link refid="vector_8h"/>
-        <childnode refid="5" relation="include">
-        </childnode>
         <childnode refid="6" relation="include">
         </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
       </node>
-      <node id="3">
+      <node id="4">
         <label>src/core/vector_base.h</label>
         <link refid="vector__base_8h"/>
-        <childnode refid="4" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -103,7 +110,7 @@
 <codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;numbers&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight></codeline>
-<codeline lineno="9" refid="namespacedakku" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacedakku" kindref="compound">dakku</ref><sp/>{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacedakku" kindref="compound">dakku</ref><sp/>{</highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>DAKKU_BUILD_MODULE<sp/>!=<sp/>DAKKU_CORE_MODULE</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DAKKU_EXPORT_CORE<sp/>DAKKU_IMPORT</highlight><highlight class="normal"></highlight></codeline>
