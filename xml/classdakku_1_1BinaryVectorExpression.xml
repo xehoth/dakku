@@ -40,7 +40,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/math/vector_base.h" line="326" column="12" bodyfile="src/math/vector_base.h" bodystart="326" bodyend="-1"/>
+        <location file="src/math/vector_base.h" line="122" column="12" bodyfile="src/math/vector_base.h" bodystart="122" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classdakku_1_1BinaryVectorExpression_1afaa096b42b476374f04f339da8b0a481" prot="protected" static="no" mutable="no">
         <type>const E2 &amp;</type>
@@ -53,7 +53,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/math/vector_base.h" line="327" column="12" bodyfile="src/math/vector_base.h" bodystart="327" bodyend="-1"/>
+        <location file="src/math/vector_base.h" line="123" column="12" bodyfile="src/math/vector_base.h" bodystart="123" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -76,7 +76,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/math/vector_base.h" line="323" column="12" bodyfile="src/math/vector_base.h" bodystart="323" bodyend="323"/>
+        <location file="src/math/vector_base.h" line="119" column="12" bodyfile="src/math/vector_base.h" bodystart="119" bodyend="119"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -158,7 +158,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/math/vector_base.h" line="321" column="1" bodyfile="src/math/vector_base.h" bodystart="321" bodyend="328"/>
+    <location file="src/math/vector_base.h" line="117" column="1" bodyfile="src/math/vector_base.h" bodystart="117" bodyend="124"/>
     <listofallmembers>
       <member refid="classdakku_1_1BinaryVectorExpression_1aa711f97ec35354685683535259a98f55" prot="public" virt="non-virtual"><scope>dakku::BinaryVectorExpression</scope><name>BinaryVectorExpression</name></member>
       <member refid="structdakku_1_1VectorExpression_1aa6bb9e06a874dc4d2d53e7afeab2d776" prot="public" virt="non-virtual"><scope>dakku::BinaryVectorExpression</scope><name>getExpression</name></member>

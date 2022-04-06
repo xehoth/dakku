@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/math/vector_base.h" line="500" column="12" bodyfile="src/math/vector_base.h" bodystart="500" bodyend="500"/>
+        <location file="src/math/vector_base.h" line="314" column="12" bodyfile="src/math/vector_base.h" bodystart="314" bodyend="314"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -127,7 +127,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/math/vector_base.h" line="492" column="1" bodyfile="src/math/vector_base.h" bodystart="494" bodyend="501"/>
+    <location file="src/math/vector_base.h" line="306" column="1" bodyfile="src/math/vector_base.h" bodystart="308" bodyend="315"/>
     <listofallmembers>
       <member refid="classdakku_1_1BinaryVectorExpression_1aa711f97ec35354685683535259a98f55" prot="public" virt="non-virtual"><scope>dakku::VectorMulExpression</scope><name>BinaryVectorExpression</name></member>
       <member refid="classdakku_1_1VectorMulExpression_1a17806d0cd19961e88d715a2b476b91d4" prot="public" virt="non-virtual"><scope>dakku::VectorMulExpression</scope><name>get</name></member>

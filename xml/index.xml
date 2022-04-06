@@ -15,6 +15,10 @@
   </compound>
   <compound refid="classdakku_1_1Point" kind="class"><name>dakku::Point</name>
   </compound>
+  <compound refid="classdakku_1_1UnaryVectorExpression" kind="class"><name>dakku::UnaryVectorExpression</name>
+    <member refid="classdakku_1_1UnaryVectorExpression_1a2b3dc6dda82a4d8aaa555ab50fd876ff" kind="variable"><name>e</name></member>
+    <member refid="classdakku_1_1UnaryVectorExpression_1a2d9dab98b5cd2c5d824a716a1f20c84a" kind="function"><name>UnaryVectorExpression</name></member>
+  </compound>
   <compound refid="classdakku_1_1Vector" kind="class"><name>dakku::Vector</name>
   </compound>
   <compound refid="classdakku_1_1VectorAddExpression" kind="class"><name>dakku::VectorAddExpression</name>
@@ -40,6 +44,7 @@
     <member refid="classdakku_1_1VectorBase_1ae498067d7973072d02c9417b8b677e83" kind="function"><name>get</name></member>
     <member refid="classdakku_1_1VectorBase_1ad762f525bce13332abbd4b9157287ecd" kind="function"><name>toString</name></member>
     <member refid="classdakku_1_1VectorBase_1acc8e8a5aa7749125a4f6aa11b92f9dae" kind="function"><name>size</name></member>
+    <member refid="classdakku_1_1VectorBase_1ab9954806a25b9c220bb0f9266b215654" kind="function"><name>operator-</name></member>
     <member refid="classdakku_1_1VectorBase_1a531ed133257631916fc3384392b2ab7f" kind="friend"><name>operator&lt;&lt;</name></member>
   </compound>
   <compound refid="classdakku_1_1VectorCastExpression" kind="class"><name>dakku::VectorCastExpression</name>
@@ -57,8 +62,14 @@
     <member refid="structdakku_1_1VectorExpression_1aa6bb9e06a874dc4d2d53e7afeab2d776" kind="function"><name>getExpression</name></member>
     <member refid="structdakku_1_1VectorExpression_1a7c820895f26d8747183a52f908912ba8" kind="function"><name>getExpression</name></member>
   </compound>
+  <compound refid="classdakku_1_1VectorInverseExpression" kind="class"><name>dakku::VectorInverseExpression</name>
+    <member refid="classdakku_1_1VectorInverseExpression_1ab685f9d0151722089f98fd4f8c0ddb33" kind="function"><name>get</name></member>
+  </compound>
   <compound refid="classdakku_1_1VectorMulExpression" kind="class"><name>dakku::VectorMulExpression</name>
     <member refid="classdakku_1_1VectorMulExpression_1a17806d0cd19961e88d715a2b476b91d4" kind="function"><name>get</name></member>
+  </compound>
+  <compound refid="classdakku_1_1VectorNegateExpression" kind="class"><name>dakku::VectorNegateExpression</name>
+    <member refid="classdakku_1_1VectorNegateExpression_1a2528e069b8f8285d67b56adf3074cee5" kind="function"><name>get</name></member>
   </compound>
   <compound refid="classdakku_1_1VectorScalarExpression" kind="class"><name>dakku::VectorScalarExpression</name>
     <member refid="classdakku_1_1VectorScalarExpression_1aed3ddf6bbbadee775d99b9a1547b7a5b" kind="variable"><name>value</name></member>
@@ -97,6 +108,11 @@
     <member refid="namespacedakku_1a97c821f06ad1184d07d00eb0b431390d" kind="function"><name>operator*</name></member>
     <member refid="namespacedakku_1aff2b84e0667f3bd979839701507fb1a9" kind="function"><name>operator/</name></member>
     <member refid="namespacedakku_1a85464f4b6a2b1eb4229fb2d45412ef1f" kind="function"><name>operator/</name></member>
+    <member refid="namespacedakku_1a6cbf87dd3de16523da703a86fe96ce22" kind="function"><name>dot</name></member>
+    <member refid="namespacedakku_1ae368b81abb3cac444ba039a7f74fddd4" kind="function"><name>squaredNorm</name></member>
+    <member refid="namespacedakku_1a946bf2cb3142acf290bdb230b5757db7" kind="function"><name>norm</name></member>
+    <member refid="namespacedakku_1a22eef6d5337f9aa57d7e32b865e184d0" kind="function"><name>inverse</name></member>
+    <member refid="namespacedakku_1adb43899ec1c3c87f5630fe520b2b64e8" kind="function"><name>negate</name></member>
   </compound>
   <compound refid="core_2fwd_8h" kind="file"><name>fwd.h</name>
     <member refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kind="define"><name>DAKKU_EXPORT_CORE</name></member>

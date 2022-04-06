@@ -6,13 +6,16 @@
     <innerclass refid="classdakku_1_1Logger" prot="public">dakku::Logger</innerclass>
     <innerclass refid="classdakku_1_1Normal" prot="public">dakku::Normal</innerclass>
     <innerclass refid="classdakku_1_1Point" prot="public">dakku::Point</innerclass>
+    <innerclass refid="classdakku_1_1UnaryVectorExpression" prot="public">dakku::UnaryVectorExpression</innerclass>
     <innerclass refid="classdakku_1_1Vector" prot="public">dakku::Vector</innerclass>
     <innerclass refid="classdakku_1_1VectorAddExpression" prot="public">dakku::VectorAddExpression</innerclass>
     <innerclass refid="classdakku_1_1VectorBase" prot="public">dakku::VectorBase</innerclass>
     <innerclass refid="classdakku_1_1VectorCastExpression" prot="public">dakku::VectorCastExpression</innerclass>
     <innerclass refid="classdakku_1_1VectorDivExpression" prot="public">dakku::VectorDivExpression</innerclass>
     <innerclass refid="structdakku_1_1VectorExpression" prot="public">dakku::VectorExpression</innerclass>
+    <innerclass refid="classdakku_1_1VectorInverseExpression" prot="public">dakku::VectorInverseExpression</innerclass>
     <innerclass refid="classdakku_1_1VectorMulExpression" prot="public">dakku::VectorMulExpression</innerclass>
+    <innerclass refid="classdakku_1_1VectorNegateExpression" prot="public">dakku::VectorNegateExpression</innerclass>
     <innerclass refid="classdakku_1_1VectorScalarExpression" prot="public">dakku::VectorScalarExpression</innerclass>
     <innerclass refid="classdakku_1_1VectorSubExpression" prot="public">dakku::VectorSubExpression</innerclass>
       <sectiondef kind="typedef">
@@ -408,7 +411,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/math/vector_base.h" line="364" column="28" bodyfile="src/math/vector_base.h" bodystart="364" bodyend="369"/>
+        <location file="src/math/vector_base.h" line="178" column="28" bodyfile="src/math/vector_base.h" bodystart="178" bodyend="183"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1a69f5544cd2f2b30dfdaf22f66eef9192" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -514,7 +517,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/math/vector_base.h" line="386" column="1" bodyfile="src/math/vector_base.h" bodystart="386" bodyend="393"/>
+        <location file="src/math/vector_base.h" line="200" column="1" bodyfile="src/math/vector_base.h" bodystart="200" bodyend="207"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1a14f899c028c71e38fe5d4a957c256108" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -620,7 +623,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/math/vector_base.h" line="410" column="1" bodyfile="src/math/vector_base.h" bodystart="410" bodyend="416"/>
+        <location file="src/math/vector_base.h" line="224" column="1" bodyfile="src/math/vector_base.h" bodystart="224" bodyend="230"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1a0941530b21fc4f469f76775fccb3842f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -724,7 +727,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/math/vector_base.h" line="452" column="28" bodyfile="src/math/vector_base.h" bodystart="452" bodyend="457"/>
+        <location file="src/math/vector_base.h" line="266" column="28" bodyfile="src/math/vector_base.h" bodystart="266" bodyend="271"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1a2ba6b2cccead840f210517e17362d113" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -768,7 +771,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/math/vector_base.h" line="462" column="1" bodyfile="src/math/vector_base.h" bodystart="462" bodyend="469"/>
+        <location file="src/math/vector_base.h" line="276" column="1" bodyfile="src/math/vector_base.h" bodystart="276" bodyend="283"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1ab7a7d0aaacbaff7ef207df29d2823d17" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -812,7 +815,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/math/vector_base.h" line="474" column="1" bodyfile="src/math/vector_base.h" bodystart="474" bodyend="480"/>
+        <location file="src/math/vector_base.h" line="288" column="1" bodyfile="src/math/vector_base.h" bodystart="288" bodyend="294"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1ab3f3816e505972c2da65c15749862185" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -916,7 +919,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/math/vector_base.h" line="516" column="28" bodyfile="src/math/vector_base.h" bodystart="516" bodyend="521"/>
+        <location file="src/math/vector_base.h" line="330" column="28" bodyfile="src/math/vector_base.h" bodystart="330" bodyend="335"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1afdce7a08d5d5af7a67c1ab4d50bf8d58" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -960,7 +963,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/math/vector_base.h" line="526" column="1" bodyfile="src/math/vector_base.h" bodystart="526" bodyend="533"/>
+        <location file="src/math/vector_base.h" line="340" column="1" bodyfile="src/math/vector_base.h" bodystart="340" bodyend="347"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1a97c821f06ad1184d07d00eb0b431390d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -1004,7 +1007,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/math/vector_base.h" line="538" column="1" bodyfile="src/math/vector_base.h" bodystart="538" bodyend="544"/>
+        <location file="src/math/vector_base.h" line="352" column="1" bodyfile="src/math/vector_base.h" bodystart="352" bodyend="358"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1aff2b84e0667f3bd979839701507fb1a9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -1108,7 +1111,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/math/vector_base.h" line="580" column="28" bodyfile="src/math/vector_base.h" bodystart="580" bodyend="585"/>
+        <location file="src/math/vector_base.h" line="394" column="28" bodyfile="src/math/vector_base.h" bodystart="394" bodyend="399"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1a85464f4b6a2b1eb4229fb2d45412ef1f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -1152,7 +1155,331 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/math/vector_base.h" line="588" column="17" bodyfile="src/math/vector_base.h" bodystart="588" bodyend="591"/>
+        <location file="src/math/vector_base.h" line="402" column="17" bodyfile="src/math/vector_base.h" bodystart="402" bodyend="405"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1a6cbf87dd3de16523da703a86fe96ce22" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>ArithmeticType</type>
+            <declname>T</declname>
+            <defname>T</defname>
+          </param>
+          <param>
+            <type>size_t</type>
+            <declname>S</declname>
+            <defname>S</defname>
+          </param>
+          <param>
+            <type>typename D1</type>
+          </param>
+          <param>
+            <type>typename E1</type>
+          </param>
+          <param>
+            <type>typename D2</type>
+          </param>
+          <param>
+            <type>typename E2</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T dakku::dot</definition>
+        <argsstring>(const VectorExpression&lt; T, S, D1, E1 &gt; &amp;a, const VectorExpression&lt; T, S, D2, E2 &gt; &amp;b)</argsstring>
+        <name>dot</name>
+        <param>
+          <type>const <ref refid="structdakku_1_1VectorExpression" kindref="compound">VectorExpression</ref>&lt; T, S, D1, E1 &gt; &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structdakku_1_1VectorExpression" kindref="compound">VectorExpression</ref>&lt; T, S, D2, E2 &gt; &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>dot product of two vectors </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector <computeroutput>a</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector <computeroutput>b</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>$\vec a \cdot \vec b$ </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/math/vector_base.h" line="416" column="10" bodyfile="src/math/vector_base.h" bodystart="416" bodyend="421"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1ae368b81abb3cac444ba039a7f74fddd4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>ArithmeticType</type>
+            <declname>T</declname>
+            <defname>T</defname>
+          </param>
+          <param>
+            <type>size_t</type>
+            <declname>S</declname>
+            <defname>S</defname>
+          </param>
+          <param>
+            <type>typename D</type>
+          </param>
+          <param>
+            <type>typename E</type>
+          </param>
+        </templateparamlist>
+        <type>decltype(auto)</type>
+        <definition>decltype(auto) dakku::squaredNorm</definition>
+        <argsstring>(const VectorExpression&lt; T, S, D, E &gt; &amp;v)</argsstring>
+        <name>squaredNorm</name>
+        <param>
+          <type>const <ref refid="structdakku_1_1VectorExpression" kindref="compound">VectorExpression</ref>&lt; T, S, D, E &gt; &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>the squared norm of the vector </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the vector </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>$||\vec v|| ^ 2$ </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/math/vector_base.h" line="430" column="17" bodyfile="src/math/vector_base.h" bodystart="430" bodyend="432"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1a946bf2cb3142acf290bdb230b5757db7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>ArithmeticType</type>
+            <declname>T</declname>
+            <defname>T</defname>
+          </param>
+          <param>
+            <type>size_t</type>
+            <declname>S</declname>
+            <defname>S</defname>
+          </param>
+          <param>
+            <type>typename D</type>
+          </param>
+          <param>
+            <type>typename E</type>
+          </param>
+        </templateparamlist>
+        <type>decltype(auto)</type>
+        <definition>decltype(auto) dakku::norm</definition>
+        <argsstring>(const VectorExpression&lt; T, S, D, E &gt; &amp;v)</argsstring>
+        <name>norm</name>
+        <param>
+          <type>const <ref refid="structdakku_1_1VectorExpression" kindref="compound">VectorExpression</ref>&lt; T, S, D, E &gt; &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>the norm of the vector </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the vector </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>$||v||$ </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/math/vector_base.h" line="441" column="17" bodyfile="src/math/vector_base.h" bodystart="441" bodyend="443"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1a22eef6d5337f9aa57d7e32b865e184d0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>ArithmeticType</type>
+            <declname>T</declname>
+            <defname>T</defname>
+          </param>
+          <param>
+            <type>size_t</type>
+            <declname>S</declname>
+            <defname>S</defname>
+          </param>
+          <param>
+            <type>typename D</type>
+          </param>
+          <param>
+            <type>typename E</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classdakku_1_1VectorInverseExpression" kindref="compound">VectorInverseExpression</ref>&lt; T, S, D, E &gt;</type>
+        <definition>VectorInverseExpression&lt; T, S, D, E &gt; dakku::inverse</definition>
+        <argsstring>(const VectorExpression&lt; T, S, D, E &gt; &amp;v)</argsstring>
+        <name>inverse</name>
+        <param>
+          <type>const <ref refid="structdakku_1_1VectorExpression" kindref="compound">VectorExpression</ref>&lt; T, S, D, E &gt; &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>inverse the vector </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>S</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>D</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>derived type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>E</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>expr </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the inversion </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/math/vector_base.h" line="475" column="32" bodyfile="src/math/vector_base.h" bodystart="475" bodyend="478"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1adb43899ec1c3c87f5630fe520b2b64e8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>ArithmeticType</type>
+            <declname>T</declname>
+            <defname>T</defname>
+          </param>
+          <param>
+            <type>size_t</type>
+            <declname>S</declname>
+            <defname>S</defname>
+          </param>
+          <param>
+            <type>typename D</type>
+          </param>
+          <param>
+            <type>typename E</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classdakku_1_1VectorNegateExpression" kindref="compound">VectorNegateExpression</ref>&lt; T, S, D, E &gt;</type>
+        <definition>VectorNegateExpression&lt; T, S, D, E &gt; dakku::negate</definition>
+        <argsstring>(const VectorExpression&lt; T, S, D, E &gt; &amp;v)</argsstring>
+        <name>negate</name>
+        <param>
+          <type>const <ref refid="structdakku_1_1VectorExpression" kindref="compound">VectorExpression</ref>&lt; T, S, D, E &gt; &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>inverse the vector </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>S</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>D</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>derived type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>E</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>expr </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the inversion </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/math/vector_base.h" line="510" column="31" bodyfile="src/math/vector_base.h" bodystart="510" bodyend="513"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

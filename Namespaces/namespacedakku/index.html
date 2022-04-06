@@ -544,6 +544,41 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#function-dot" class="md-nav__link">
+    function dot
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-squarednorm" class="md-nav__link">
+    function squaredNorm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-norm" class="md-nav__link">
+    function norm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-inverse" class="md-nav__link">
+    function inverse
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-negate" class="md-nav__link">
+    function negate
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -623,6 +658,10 @@
 </tr>
 <tr>
 <td>class</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1UnaryVectorExpression/">dakku::UnaryVectorExpression</a></strong> <br>unary expression</td>
+</tr>
+<tr>
+<td>class</td>
 <td><strong><a href="/dakku/Classes/classdakku_1_1Vector/">dakku::Vector</a></strong></td>
 </tr>
 <tr>
@@ -647,7 +686,15 @@
 </tr>
 <tr>
 <td>class</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorInverseExpression/">dakku::VectorInverseExpression</a></strong> <br>inverse the vector</td>
+</tr>
+<tr>
+<td>class</td>
 <td><strong><a href="/dakku/Classes/classdakku_1_1VectorMulExpression/">dakku::VectorMulExpression</a></strong> <br>vector mul expression</td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorNegateExpression/">dakku::VectorNegateExpression</a></strong> <br>negate the vector</td>
 </tr>
 <tr>
 <td>class</td>
@@ -774,6 +821,26 @@
 <tr>
 <td>template &lt;ArithmeticType T,size_t S,typename D ,typename E1 ,ArithmeticType V> <br>decltype(auto)</td>
 <td><strong><a href="/dakku/Namespaces/namespacedakku/#function-operator/">operator/</a></strong>(const <a href="/dakku/Classes/structdakku_1_1VectorExpression/">VectorExpression</a>&lt; T, S, D, E1 &gt; &amp; u, const V &amp; v)</td>
+</tr>
+<tr>
+<td>template &lt;ArithmeticType T,size_t S,typename D1 ,typename E1 ,typename D2 ,typename E2 > <br>T</td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#function-dot">dot</a></strong>(const <a href="/dakku/Classes/structdakku_1_1VectorExpression/">VectorExpression</a>&lt; T, S, D1, E1 &gt; &amp; a, const <a href="/dakku/Classes/structdakku_1_1VectorExpression/">VectorExpression</a>&lt; T, S, D2, E2 &gt; &amp; b)<br>dot product of two vectors</td>
+</tr>
+<tr>
+<td>template &lt;ArithmeticType T,size_t S,typename D ,typename E > <br>decltype(auto)</td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#function-squarednorm">squaredNorm</a></strong>(const <a href="/dakku/Classes/structdakku_1_1VectorExpression/">VectorExpression</a>&lt; T, S, D, E &gt; &amp; v)<br>the squared norm of the vector</td>
+</tr>
+<tr>
+<td>template &lt;ArithmeticType T,size_t S,typename D ,typename E > <br>decltype(auto)</td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#function-norm">norm</a></strong>(const <a href="/dakku/Classes/structdakku_1_1VectorExpression/">VectorExpression</a>&lt; T, S, D, E &gt; &amp; v)<br>the norm of the vector</td>
+</tr>
+<tr>
+<td>template &lt;ArithmeticType T,size_t S,typename D ,typename E > <br><a href="/dakku/Classes/classdakku_1_1VectorInverseExpression/">VectorInverseExpression</a>&lt; T, S, D, E &gt;</td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#function-inverse">inverse</a></strong>(const <a href="/dakku/Classes/structdakku_1_1VectorExpression/">VectorExpression</a>&lt; T, S, D, E &gt; &amp; v)<br>inverse the vector</td>
+</tr>
+<tr>
+<td>template &lt;ArithmeticType T,size_t S,typename D ,typename E > <br><a href="/dakku/Classes/classdakku_1_1VectorNegateExpression/">VectorNegateExpression</a>&lt; T, S, D, E &gt;</td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#function-negate">negate</a></strong>(const <a href="/dakku/Classes/structdakku_1_1VectorExpression/">VectorExpression</a>&lt; T, S, D, E &gt; &amp; v)<br>inverse the vector</td>
 </tr>
 </tbody>
 </table>
@@ -1075,16 +1142,109 @@
 <a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">v</span><span class="w"></span>
 <a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
+<h3 id="function-dot">function dot</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="n">ArithmeticType</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="kt">size_t</span><span class="w"> </span><span class="n">S</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="k">typename</span><span class="w"> </span><span class="nc">D1</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="k">typename</span><span class="w"> </span><span class="nc">E1</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="k">typename</span><span class="w"> </span><span class="nc">D2</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a><span class="k">typename</span><span class="w"> </span><span class="nc">E2</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a><span class="kr">inline</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">dot</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">VectorExpression</span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">S</span><span class="p">,</span><span class="w"> </span><span class="n">D1</span><span class="p">,</span><span class="w"> </span><span class="n">E1</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">VectorExpression</span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">S</span><span class="p">,</span><span class="w"> </span><span class="n">D2</span><span class="p">,</span><span class="w"> </span><span class="n">E2</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">b</span><span class="w"></span>
+<a id="__codelineno-24-10" name="__codelineno-24-10" href="#__codelineno-24-10"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>dot product of two vectors </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>a</strong> vector <code>a</code></li>
+<li><strong>b</strong> vector <code>b</code></li>
+</ul>
+<p><strong>Return</strong>: <span class="arithmatex">\(\vec a \cdot \vec b\)</span> </p>
+<h3 id="function-squarednorm">function squaredNorm</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="n">ArithmeticType</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="kt">size_t</span><span class="w"> </span><span class="n">S</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="k">typename</span><span class="w"> </span><span class="nc">D</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="k">typename</span><span class="w"> </span><span class="nc">E</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a><span class="kr">inline</span><span class="w"> </span><span class="k">decltype</span><span class="p">(</span><span class="k">auto</span><span class="p">)</span><span class="w"> </span><span class="n">squaredNorm</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">VectorExpression</span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">S</span><span class="p">,</span><span class="w"> </span><span class="n">D</span><span class="p">,</span><span class="w"> </span><span class="n">E</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">v</span><span class="w"></span>
+<a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>the squared norm of the vector </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>v</strong> the vector </li>
+</ul>
+<p><strong>Return</strong>: <span class="arithmatex">\(||\vec v|| ^ 2\)</span> </p>
+<h3 id="function-norm">function norm</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="n">ArithmeticType</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="kt">size_t</span><span class="w"> </span><span class="n">S</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="k">typename</span><span class="w"> </span><span class="nc">D</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a><span class="k">typename</span><span class="w"> </span><span class="nc">E</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a><span class="kr">inline</span><span class="w"> </span><span class="k">decltype</span><span class="p">(</span><span class="k">auto</span><span class="p">)</span><span class="w"> </span><span class="n">norm</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">VectorExpression</span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">S</span><span class="p">,</span><span class="w"> </span><span class="n">D</span><span class="p">,</span><span class="w"> </span><span class="n">E</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">v</span><span class="w"></span>
+<a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>the norm of the vector </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>v</strong> the vector </li>
+</ul>
+<p><strong>Return</strong>: <span class="arithmatex">\(||v||\)</span> </p>
+<h3 id="function-inverse">function inverse</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="n">ArithmeticType</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="kt">size_t</span><span class="w"> </span><span class="n">S</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="k">typename</span><span class="w"> </span><span class="nc">D</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a><span class="k">typename</span><span class="w"> </span><span class="nc">E</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a><span class="kr">inline</span><span class="w"> </span><span class="n">VectorInverseExpression</span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">S</span><span class="p">,</span><span class="w"> </span><span class="n">D</span><span class="p">,</span><span class="w"> </span><span class="n">E</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">inverse</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">VectorExpression</span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">S</span><span class="p">,</span><span class="w"> </span><span class="n">D</span><span class="p">,</span><span class="w"> </span><span class="n">E</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">v</span><span class="w"></span>
+<a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>inverse the vector </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>v</strong> vector </li>
+</ul>
+<p><strong>Template Parameters</strong>: </p>
+<ul>
+<li><strong>T</strong> type </li>
+<li><strong>S</strong> size </li>
+<li><strong>D</strong> derived type </li>
+<li><strong>E</strong> expr </li>
+</ul>
+<p><strong>Return</strong>: the inversion </p>
+<h3 id="function-negate">function negate</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="n">ArithmeticType</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="kt">size_t</span><span class="w"> </span><span class="n">S</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="k">typename</span><span class="w"> </span><span class="nc">D</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a><span class="k">typename</span><span class="w"> </span><span class="nc">E</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a><span class="kr">inline</span><span class="w"> </span><span class="n">VectorNegateExpression</span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">S</span><span class="p">,</span><span class="w"> </span><span class="n">D</span><span class="p">,</span><span class="w"> </span><span class="n">E</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">negate</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">VectorExpression</span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">S</span><span class="p">,</span><span class="w"> </span><span class="n">D</span><span class="p">,</span><span class="w"> </span><span class="n">E</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">v</span><span class="w"></span>
+<a id="__codelineno-28-7" name="__codelineno-28-7" href="#__codelineno-28-7"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>inverse the vector </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>v</strong> vector </li>
+</ul>
+<p><strong>Template Parameters</strong>: </p>
+<ul>
+<li><strong>T</strong> type </li>
+<li><strong>S</strong> size </li>
+<li><strong>D</strong> derived type </li>
+<li><strong>E</strong> expr </li>
+</ul>
+<p><strong>Return</strong>: the inversion </p>
 <h2 id="attributes-documentation">Attributes Documentation</h2>
 <h3 id="variable-logger">variable Logger</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">DAKKU_EXPORT_LOGGER</span><span class="w"> </span><span class="n">Logger</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">DAKKU_EXPORT_LOGGER</span><span class="w"> </span><span class="n">Logger</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <h3 id="variable-inf">variable INF</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">INF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;::</span><span class="n">infinity</span><span class="p">();</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">INF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;::</span><span class="n">infinity</span><span class="p">();</span><span class="w"></span>
 </code></pre></div>
 <p>infinity </p>
 <hr />
-<p>Updated on 2022-04-06 at 05:55:30 +0000</p>
+<p>Updated on 2022-04-06 at 06:23:49 +0000</p>
 
               
             </article>

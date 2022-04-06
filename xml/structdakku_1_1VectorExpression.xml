@@ -6,6 +6,8 @@
     <derivedcompoundref refid="classdakku_1_1BinaryVectorExpression" prot="public" virt="non-virtual">dakku::BinaryVectorExpression&lt; T, S, D, E1, E2, VectorDivExpression&lt; T, S, D, E1, E2 &gt; &gt;</derivedcompoundref>
     <derivedcompoundref refid="classdakku_1_1BinaryVectorExpression" prot="public" virt="non-virtual">dakku::BinaryVectorExpression&lt; T, S, D, E1, E2, VectorMulExpression&lt; T, S, D, E1, E2 &gt; &gt;</derivedcompoundref>
     <derivedcompoundref refid="classdakku_1_1BinaryVectorExpression" prot="public" virt="non-virtual">dakku::BinaryVectorExpression&lt; T, S, D, E1, E2, VectorSubExpression&lt; T, S, D, E1, E2 &gt; &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classdakku_1_1UnaryVectorExpression" prot="public" virt="non-virtual">dakku::UnaryVectorExpression&lt; T, S, D, E, VectorInverseExpression&lt; T, S, D, E &gt; &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classdakku_1_1UnaryVectorExpression" prot="public" virt="non-virtual">dakku::UnaryVectorExpression&lt; T, S, D, E, VectorNegateExpression&lt; T, S, D, E &gt; &gt;</derivedcompoundref>
     <derivedcompoundref refid="classdakku_1_1VectorBase" prot="public" virt="non-virtual">dakku::VectorBase&lt; T, S, Normal&lt; T, S &gt; &gt;</derivedcompoundref>
     <derivedcompoundref refid="classdakku_1_1VectorBase" prot="public" virt="non-virtual">dakku::VectorBase&lt; T, S, Point&lt; T, S &gt; &gt;</derivedcompoundref>
     <derivedcompoundref refid="classdakku_1_1VectorBase" prot="public" virt="non-virtual">dakku::VectorBase&lt; T, S, Vector&lt; T, S &gt; &gt;</derivedcompoundref>
@@ -189,39 +191,51 @@
         </childnode>
       </node>
       <node id="10">
+        <label>dakku::UnaryVectorExpression&lt; T, S, D, E, VectorInverseExpression&lt; T, S, D, E &gt; &gt;</label>
+        <link refid="classdakku_1_1UnaryVectorExpression"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>dakku::UnaryVectorExpression&lt; T, S, D, E, VectorNegateExpression&lt; T, S, D, E &gt; &gt;</label>
+        <link refid="classdakku_1_1UnaryVectorExpression"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14">
         <label>dakku::VectorBase&lt; T, S, Normal&lt; T, S &gt; &gt;</label>
         <link refid="classdakku_1_1VectorBase"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="12">
+      <node id="16">
         <label>dakku::VectorBase&lt; T, S, Point&lt; T, S &gt; &gt;</label>
         <link refid="classdakku_1_1VectorBase"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="14">
+      <node id="18">
         <label>dakku::VectorBase&lt; T, S, Vector&lt; T, S &gt; &gt;</label>
         <link refid="classdakku_1_1VectorBase"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11">
+      <node id="15">
         <label>dakku::Normal&lt; T, S &gt;</label>
         <link refid="classdakku_1_1Normal"/>
-        <childnode refid="10" relation="public-inheritance">
+        <childnode refid="14" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="13">
+      <node id="17">
         <label>dakku::Point&lt; T, S &gt;</label>
         <link refid="classdakku_1_1Point"/>
-        <childnode refid="12" relation="public-inheritance">
+        <childnode refid="16" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="15">
+      <node id="19">
         <label>dakku::Vector&lt; T, S &gt;</label>
         <link refid="classdakku_1_1Vector"/>
-        <childnode refid="14" relation="public-inheritance">
+        <childnode refid="18" relation="public-inheritance">
         </childnode>
       </node>
       <node id="3">
@@ -240,10 +254,22 @@
         <label>dakku::VectorExpression&lt; T, S, Derived, Expr &gt;</label>
         <link refid="structdakku_1_1VectorExpression"/>
       </node>
+      <node id="11">
+        <label>dakku::VectorInverseExpression&lt; T, S, D, E &gt;</label>
+        <link refid="classdakku_1_1VectorInverseExpression"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
       <node id="7">
         <label>dakku::VectorMulExpression&lt; T, S, D, E1, E2 &gt;</label>
         <link refid="classdakku_1_1VectorMulExpression"/>
         <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>dakku::VectorNegateExpression&lt; T, S, D, E &gt;</label>
+        <link refid="classdakku_1_1VectorNegateExpression"/>
+        <childnode refid="12" relation="public-inheritance">
         </childnode>
       </node>
       <node id="9">
