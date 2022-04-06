@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="vector_base" kind="page">
+    <compoundname>vector_base</compoundname>
+    <title>Vector Base</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>dakku currently use <ulink url="https://en.wikipedia.org/wiki/Expression_templates">expression template</ulink> to implement vectors. </para>
+    </detaileddescription>
+    <location file="src/math/vector_base.h"/>
+  </compounddef>
+</doxygen>

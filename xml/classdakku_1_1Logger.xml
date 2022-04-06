@@ -54,7 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/logger/logger.h" line="27" column="18" bodyfile="src/logger/logger.h" bodystart="27" bodyend="27"/>
+        <location file="src/logger/logger.h" line="27" column="19" bodyfile="src/logger/logger.h" bodystart="27" bodyend="27"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">

@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="classdakku_1_1BinaryVectorExpression" kind="class" language="C++" prot="public">
+    <compoundname>dakku::BinaryVectorExpression</compoundname>
+    <basecompoundref refid="structdakku_1_1VectorExpression" prot="public" virt="non-virtual">dakku::VectorExpression&lt; T, S, D, Expr &gt;</basecompoundref>
+    <includes refid="vector__base_8h" local="no">vector_base.h</includes>
+    <templateparamlist>
+      <param>
+        <type>ArithmeticType</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+      <param>
+        <type>size_t</type>
+        <declname>S</declname>
+        <defname>S</defname>
+      </param>
+      <param>
+        <type>typename D</type>
+      </param>
+      <param>
+        <type>typename E1</type>
+      </param>
+      <param>
+        <type>typename E2</type>
+      </param>
+      <param>
+        <type>typename Expr</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classdakku_1_1BinaryVectorExpression_1a445888f91ca5086b6086af33c15a4dbd" prot="protected" static="no" mutable="no">
+        <type>const E1 &amp;</type>
+        <definition>const E1&amp; dakku::BinaryVectorExpression&lt; T, S, D, E1, E2, Expr &gt;::u</definition>
+        <argsstring></argsstring>
+        <name>u</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/math/vector_base.h" line="324" column="12" bodyfile="src/math/vector_base.h" bodystart="324" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdakku_1_1BinaryVectorExpression_1afaa096b42b476374f04f339da8b0a481" prot="protected" static="no" mutable="no">
+        <type>const E2 &amp;</type>
+        <definition>const E2&amp; dakku::BinaryVectorExpression&lt; T, S, D, E1, E2, Expr &gt;::v</definition>
+        <argsstring></argsstring>
+        <name>v</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/math/vector_base.h" line="325" column="12" bodyfile="src/math/vector_base.h" bodystart="325" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdakku_1_1BinaryVectorExpression_1aa711f97ec35354685683535259a98f55" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>dakku::BinaryVectorExpression&lt; T, S, D, E1, E2, Expr &gt;::BinaryVectorExpression</definition>
+        <argsstring>(const E1 &amp;u, const E2 &amp;v)</argsstring>
+        <name>BinaryVectorExpression</name>
+        <param>
+          <type>const E1 &amp;</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type>const E2 &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/math/vector_base.h" line="321" column="12" bodyfile="src/math/vector_base.h" bodystart="321" bodyend="321"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>binary expression </para>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>S</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>D</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>derived type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>E1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>expression 1 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>E2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>expression 2 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Expr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>derived binary expressions </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>dakku::VectorExpression&lt; T, S, D, Expr &gt;</label>
+        <link refid="structdakku_1_1VectorExpression"/>
+      </node>
+      <node id="1">
+        <label>dakku::BinaryVectorExpression&lt; T, S, D, E1, E2, Expr &gt;</label>
+        <link refid="classdakku_1_1BinaryVectorExpression"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>dakku::VectorExpression&lt; T, S, D, Expr &gt;</label>
+        <link refid="structdakku_1_1VectorExpression"/>
+      </node>
+      <node id="1">
+        <label>dakku::BinaryVectorExpression&lt; T, S, D, E1, E2, Expr &gt;</label>
+        <link refid="classdakku_1_1BinaryVectorExpression"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/math/vector_base.h" line="319" column="1" bodyfile="src/math/vector_base.h" bodystart="319" bodyend="326"/>
+    <listofallmembers>
+      <member refid="classdakku_1_1BinaryVectorExpression_1aa711f97ec35354685683535259a98f55" prot="public" virt="non-virtual"><scope>dakku::BinaryVectorExpression</scope><name>BinaryVectorExpression</name></member>
+      <member refid="structdakku_1_1VectorExpression_1aa6bb9e06a874dc4d2d53e7afeab2d776" prot="public" virt="non-virtual"><scope>dakku::BinaryVectorExpression</scope><name>getExpression</name></member>
+      <member refid="structdakku_1_1VectorExpression_1a7c820895f26d8747183a52f908912ba8" prot="public" virt="non-virtual"><scope>dakku::BinaryVectorExpression</scope><name>getExpression</name></member>
+      <member refid="structdakku_1_1VectorExpression_1a134ba684029ca2e266660634597cdaa6" prot="public" virt="non-virtual"><scope>dakku::BinaryVectorExpression</scope><name>operator[]</name></member>
+      <member refid="structdakku_1_1VectorExpression_1a65239ca3cdad0963bd8364c9bf4c51f8" prot="public" virt="non-virtual"><scope>dakku::BinaryVectorExpression</scope><name>operator[]</name></member>
+      <member refid="classdakku_1_1BinaryVectorExpression_1a445888f91ca5086b6086af33c15a4dbd" prot="protected" virt="non-virtual"><scope>dakku::BinaryVectorExpression</scope><name>u</name></member>
+      <member refid="classdakku_1_1BinaryVectorExpression_1afaa096b42b476374f04f339da8b0a481" prot="protected" virt="non-virtual"><scope>dakku::BinaryVectorExpression</scope><name>v</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -342,6 +342,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#friends" class="md-nav__link">
+    Friends
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-inherited-members" class="md-nav__link">
+    Additional inherited members
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#detailed-description" class="md-nav__link">
     Detailed Description
   </a>
@@ -378,6 +392,48 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#function-vectorbase_3" class="md-nav__link">
+    function VectorBase
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-vectorbase_4" class="md-nav__link">
+    function VectorBase
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-vectorbase_5" class="md-nav__link">
+    function VectorBase
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-operator" class="md-nav__link">
+    function operator=
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-operator_1" class="md-nav__link">
+    function operator=
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-vectorbase_6" class="md-nav__link">
+    function VectorBase
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#function-set" class="md-nav__link">
     function set
   </a>
@@ -405,6 +461,41 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#function-set_3" class="md-nav__link">
+    function set
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-hasnans" class="md-nav__link">
+    function hasNaNs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-get" class="md-nav__link">
+    function get
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-tostring" class="md-nav__link">
+    function toString
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-size" class="md-nav__link">
+    function size
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -421,6 +512,26 @@
           <li class="md-nav__item">
   <a href="#variable-_data" class="md-nav__link">
     variable _data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#friends_1" class="md-nav__link">
+    Friends
+  </a>
+  
+    <nav class="md-nav" aria-label="Friends">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#friend-operator" class="md-nav__link">
+    friend operator&lt;&lt;
   </a>
   
 </li>
@@ -451,6 +562,7 @@
 <h1 id="dakkuvectorbase">dakku::VectorBase</h1>
 <p>vector base class  <a href="#detailed-description">More...</a></p>
 <p><code>#include &lt;vector_base.h&gt;</code></p>
+<p>Inherits from <a href="/dakku/Classes/structdakku_1_1VectorExpression/">dakku::VectorExpression&lt; T, S, Derived, VectorBase&lt; T, S, Derived &gt; &gt;</a></p>
 <h2 id="public-functions">Public Functions</h2>
 <table>
 <thead>
@@ -467,6 +579,30 @@
 <tr>
 <td>template &lt;ArithmeticType Arg> <br></td>
 <td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-vectorbase">VectorBase</a></strong>(Arg value)<br>Construct a new Vector Base object with all components initialized to <code>value</code></td>
+</tr>
+<tr>
+<td>template &lt;typename Expr > <br></td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-vectorbase">VectorBase</a></strong>(const <a href="/dakku/Classes/structdakku_1_1VectorExpression/">VectorExpression</a>&lt; T, S, Derived, Expr &gt; &amp; expr)<br>Construct a new Vector Base object with a vector expression.</td>
+</tr>
+<tr>
+<td>template &lt;typename Other ,typename OtherDerived ,typename Expr > <br></td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-vectorbase">VectorBase</a></strong>(const <a href="/dakku/Classes/structdakku_1_1VectorExpression/">VectorExpression</a>&lt; Other, S, OtherDerived, Expr &gt; &amp; expr)<br>Construct a new Vector Base object with a vector expression.</td>
+</tr>
+<tr>
+<td></td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-vectorbase">VectorBase</a></strong>(const <a href="/dakku/Classes/classdakku_1_1VectorBase/">VectorBase</a> &amp; other)</td>
+</tr>
+<tr>
+<td></td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-vectorbase">VectorBase</a></strong>(<a href="/dakku/Classes/classdakku_1_1VectorBase/">VectorBase</a> &amp;&amp; other)</td>
+</tr>
+<tr>
+<td><a href="/dakku/Classes/classdakku_1_1VectorBase/">VectorBase</a> &amp;</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-operator=">operator=</a></strong>(const <a href="/dakku/Classes/classdakku_1_1VectorBase/">VectorBase</a> &amp; other)</td>
+</tr>
+<tr>
+<td><a href="/dakku/Classes/classdakku_1_1VectorBase/">VectorBase</a> &amp;</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-operator=">operator=</a></strong>(<a href="/dakku/Classes/classdakku_1_1VectorBase/">VectorBase</a> &amp;&amp; other)</td>
 </tr>
 <tr>
 <td>template &lt;ArithmeticType... Args> <br></td>
@@ -488,6 +624,26 @@
 <td>template &lt;ArithmeticType... Args> <br>void</td>
 <td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-set">set</a></strong>(Args &amp;&amp;... args)<br>set data to args</td>
 </tr>
+<tr>
+<td>template &lt;ArithmeticType Other,typename OtherDerived ,typename Expr > <br>void</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-set">set</a></strong>(const <a href="/dakku/Classes/structdakku_1_1VectorExpression/">VectorExpression</a>&lt; Other, S, OtherDerived, Expr &gt; &amp; rhs)<br>set data by <code>rhs</code>'s data</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-hasnans">hasNaNs</a></strong>() const<br>check whether there are nan components</td>
+</tr>
+<tr>
+<td>const T &amp;</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-get">get</a></strong>(size_t i) const<br>get i'th component</td>
+</tr>
+<tr>
+<td>std::string</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-tostring">toString</a></strong>() const<br>convert vector to string</td>
+</tr>
+<tr>
+<td>size_t</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-size">size</a></strong>() const<br>size of the vector</td>
+</tr>
 </tbody>
 </table>
 <h2 id="protected-attributes">Protected Attributes</h2>
@@ -500,14 +656,57 @@
 </thead>
 <tbody>
 <tr>
-<td>T</td>
+<td>std::array&lt; T, S &gt;</td>
 <td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#variable--data">_data</a></strong> <br>vector base data</td>
+</tr>
+</tbody>
+</table>
+<h2 id="friends">Friends</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>std::ostream &amp;</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-operator&lt;&lt;">operator&lt;&lt;</a></strong>(std::ostream &amp; os, const <a href="/dakku/Classes/classdakku_1_1VectorBase/">VectorBase</a> &amp; vec) <br>output the vector</td>
+</tr>
+</tbody>
+</table>
+<h2 id="additional-inherited-members">Additional inherited members</h2>
+<p><strong>Public Functions inherited from <a href="/dakku/Classes/structdakku_1_1VectorExpression/">dakku::VectorExpression&lt; T, S, Derived, VectorBase&lt; T, S, Derived &gt; &gt;</a></strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>decltype(auto)</td>
+<td><strong><a href="/dakku/Classes/structdakku_1_1VectorExpression/#function-operator[]">operator[]</a></strong>(size_t i)<br>get the i'th value</td>
+</tr>
+<tr>
+<td>decltype(auto)</td>
+<td><strong><a href="/dakku/Classes/structdakku_1_1VectorExpression/#function-operator[]">operator[]</a></strong>(size_t i) const<br>get the i'th value</td>
+</tr>
+<tr>
+<td>decltype(auto)</td>
+<td><strong><a href="/dakku/Classes/structdakku_1_1VectorExpression/#function-getexpression">getExpression</a></strong>() const<br>Get the derived expression.</td>
+</tr>
+<tr>
+<td>decltype(auto)</td>
+<td><strong><a href="/dakku/Classes/structdakku_1_1VectorExpression/#function-getexpression">getExpression</a></strong>()<br>Get the derived expression.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="detailed-description">Detailed Description</h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="n">ArithmeticType</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kt">size_t</span><span class="w"> </span><span class="n">size</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kt">size_t</span><span class="w"> </span><span class="n">S</span><span class="p">,</span><span class="w"></span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">typename</span><span class="w"> </span><span class="nc">Derived</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">class</span><span class="w"> </span><span class="nc">dakku</span><span class="o">::</span><span class="n">VectorBase</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
@@ -539,10 +738,64 @@
 <li><strong>Arg</strong> value type </li>
 </ul>
 <h3 id="function-vectorbase_2">function VectorBase</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="n">ArithmeticType</span><span class="p">...</span><span class="w"> </span><span class="n">Args</span><span class="o">&gt;</span><span class="w"></span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kr">inline</span><span class="w"> </span><span class="k">explicit</span><span class="w"> </span><span class="n">VectorBase</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="n">Args</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="p">...</span><span class="w"> </span><span class="n">args</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">Expr</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kr">inline</span><span class="w"> </span><span class="n">VectorBase</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">VectorExpression</span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">S</span><span class="p">,</span><span class="w"> </span><span class="n">Derived</span><span class="p">,</span><span class="w"> </span><span class="n">Expr</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">expr</span><span class="w"></span>
 <a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>Construct a new Vector Base object with a vector expression. </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>expr</strong> the given expression </li>
+</ul>
+<p><strong>Template Parameters</strong>: </p>
+<ul>
+<li><strong>Expr</strong> expression type </li>
+</ul>
+<h3 id="function-vectorbase_3">function VectorBase</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">Other</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">typename</span><span class="w"> </span><span class="nc">OtherDerived</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">typename</span><span class="w"> </span><span class="nc">Expr</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="kr">inline</span><span class="w"> </span><span class="k">explicit</span><span class="w"> </span><span class="n">VectorBase</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">VectorExpression</span><span class="o">&lt;</span><span class="w"> </span><span class="n">Other</span><span class="p">,</span><span class="w"> </span><span class="n">S</span><span class="p">,</span><span class="w"> </span><span class="n">OtherDerived</span><span class="p">,</span><span class="w"> </span><span class="n">Expr</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">expr</span><span class="w"></span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>Construct a new Vector Base object with a vector expression. </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>expr</strong> the given expression </li>
+</ul>
+<p><strong>Template Parameters</strong>: </p>
+<ul>
+<li><strong>Other</strong> </li>
+<li><strong>OtherDerived</strong> </li>
+<li><strong>Expr</strong> </li>
+</ul>
+<h3 id="function-vectorbase_4">function VectorBase</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kr">inline</span><span class="w"> </span><span class="n">VectorBase</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">VectorBase</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">other</span><span class="w"></span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-vectorbase_5">function VectorBase</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kr">inline</span><span class="w"> </span><span class="n">VectorBase</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="n">VectorBase</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">other</span><span class="w"></span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-operator">function operator=</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kr">inline</span><span class="w"> </span><span class="n">VectorBase</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">VectorBase</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">other</span><span class="w"></span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-operator_1">function operator=</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kr">inline</span><span class="w"> </span><span class="n">VectorBase</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="n">VectorBase</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">other</span><span class="w"></span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-vectorbase_6">function VectorBase</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="n">ArithmeticType</span><span class="p">...</span><span class="w"> </span><span class="n">Args</span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="kr">inline</span><span class="w"> </span><span class="k">explicit</span><span class="w"> </span><span class="n">VectorBase</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="n">Args</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="p">...</span><span class="w"> </span><span class="n">args</span><span class="w"></span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 <p>Construct a new Vector Base object with given values. </p>
 <p><strong>Parameters</strong>: </p>
@@ -554,10 +807,10 @@
 <li><strong>Args</strong> value types </li>
 </ul>
 <h3 id="function-set">function set</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="n">ArithmeticType</span><span class="w"> </span><span class="n">Arg</span><span class="o">&gt;</span><span class="w"></span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">set</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="n">Arg</span><span class="w"> </span><span class="n">value</span><span class="w"></span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="n">ArithmeticType</span><span class="w"> </span><span class="n">Arg</span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">set</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="n">Arg</span><span class="w"> </span><span class="n">value</span><span class="w"></span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 <p>set all components to <code>value</code></p>
 <p><strong>Parameters</strong>: </p>
@@ -569,11 +822,11 @@
 <li><strong>Arg</strong> value type </li>
 </ul>
 <h3 id="function-setbyindex">function setByIndex</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="n">ArithmeticType</span><span class="w"> </span><span class="n">Arg</span><span class="o">&gt;</span><span class="w"></span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">setByIndex</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">index</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="n">Arg</span><span class="w"> </span><span class="n">value</span><span class="w"></span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="n">ArithmeticType</span><span class="w"> </span><span class="n">Arg</span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">setByIndex</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">index</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">    </span><span class="n">Arg</span><span class="w"> </span><span class="n">value</span><span class="w"></span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 <p>set data[index] to value </p>
 <p><strong>Parameters</strong>: </p>
@@ -586,12 +839,12 @@
 <li><strong>Arg</strong> value type </li>
 </ul>
 <h3 id="function-set_1">function set</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="n">ArithmeticType</span><span class="p">...</span><span class="w"> </span><span class="n">Args</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="kt">size_t</span><span class="p">...</span><span class="w"> </span><span class="n">Is</span><span class="o">&gt;</span><span class="w"></span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">set</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">index_sequence</span><span class="o">&lt;</span><span class="w"> </span><span class="n">Is</span><span class="p">...</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="n">Args</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="p">...</span><span class="w"> </span><span class="n">args</span><span class="w"></span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="n">ArithmeticType</span><span class="p">...</span><span class="w"> </span><span class="n">Args</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="kt">size_t</span><span class="p">...</span><span class="w"> </span><span class="n">Is</span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">set</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">index_sequence</span><span class="o">&lt;</span><span class="w"> </span><span class="n">Is</span><span class="p">...</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">    </span><span class="n">Args</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="p">...</span><span class="w"> </span><span class="n">args</span><span class="w"></span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 <p>set data to args </p>
 <p><strong>Parameters</strong>: </p>
@@ -604,10 +857,10 @@
 <li><strong>Is</strong> indices (generated by std::index_sequence_for) </li>
 </ul>
 <h3 id="function-set_2">function set</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="n">ArithmeticType</span><span class="p">...</span><span class="w"> </span><span class="n">Args</span><span class="o">&gt;</span><span class="w"></span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">set</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="n">Args</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="p">...</span><span class="w"> </span><span class="n">args</span><span class="w"></span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="n">ArithmeticType</span><span class="p">...</span><span class="w"> </span><span class="n">Args</span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">set</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span><span class="n">Args</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="p">...</span><span class="w"> </span><span class="n">args</span><span class="w"></span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 <p>set data to args </p>
 <p><strong>Parameters</strong>: </p>
@@ -616,15 +869,78 @@
 </ul>
 <p><strong>Template Parameters</strong>: </p>
 <ul>
-<li><strong>Args</strong> value typs </li>
+<li><strong>Args</strong> value types </li>
 </ul>
+<h3 id="function-set_3">function set</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="n">ArithmeticType</span><span class="w"> </span><span class="n">Other</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="k">typename</span><span class="w"> </span><span class="nc">OtherDerived</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="k">typename</span><span class="w"> </span><span class="nc">Expr</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">set</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">VectorExpression</span><span class="o">&lt;</span><span class="w"> </span><span class="n">Other</span><span class="p">,</span><span class="w"> </span><span class="n">S</span><span class="p">,</span><span class="w"> </span><span class="n">OtherDerived</span><span class="p">,</span><span class="w"> </span><span class="n">Expr</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">rhs</span><span class="w"></span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>set data by <code>rhs</code>'s data </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>rhs</strong> the given vector </li>
+</ul>
+<p><strong>Template Parameters</strong>: </p>
+<ul>
+<li><strong>Other</strong> <code>rhs</code> type </li>
+<li><strong>OtherDerived</strong> <code>rhs</code> derived type </li>
+</ul>
+<h3 id="function-hasnans">function hasNaNs</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kr">inline</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">hasNaNs</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+</code></pre></div>
+<p>check whether there are nan components </p>
+<p><strong>Return</strong>: </p>
+<ul>
+<li>true vector contains nan </li>
+<li>false vector does not contain nans </li>
+</ul>
+<h3 id="function-get">function get</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kr">inline</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">get</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="w"></span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+</code></pre></div>
+<p>get i'th component </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>i</strong> the index </li>
+</ul>
+<p><strong>Return</strong>: the value </p>
+<h3 id="function-tostring">function toString</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kr">inline</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">toString</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+</code></pre></div>
+<p>convert vector to string </p>
+<p><strong>Return</strong>: the converted string </p>
+<h3 id="function-size">function size</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kr">inline</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+</code></pre></div>
+<p>size of the vector </p>
+<p><strong>Return</strong>: size </p>
 <h2 id="protected-attributes-documentation">Protected Attributes Documentation</h2>
 <h3 id="variable-_data">variable _data</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">T</span><span class="w"> </span><span class="n">_data</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">_data</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <p>vector base data </p>
+<h2 id="friends_1">Friends</h2>
+<h3 id="friend-operator">friend operator&lt;&lt;</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">friend</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">os</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">VectorBase</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">vec</span><span class="w"></span>
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p>output the vector </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>os</strong> ostream </li>
+<li><strong>vec</strong> the vector to output </li>
+</ul>
+<p><strong>Return</strong>: ostream </p>
 <hr />
-<p>Updated on 2022-04-05 at 16:25:00 +0000</p>
+<p>Updated on 2022-04-06 at 04:12:28 +0000</p>
 
               
             </article>

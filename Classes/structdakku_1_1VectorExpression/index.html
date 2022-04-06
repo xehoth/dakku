@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://xehoth.github.io/dakku/Files/dir_ae9a93452e2a84339148a16bcf2eb561/">
+        <link rel="canonical" href="https://xehoth.github.io/dakku/Classes/structdakku_1_1VectorExpression/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.8">
     
     
       
-        <title>src/math - dakku documentation</title>
+        <title>dakku::VectorExpression - dakku documentation</title>
       
     
     
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#srcmath" class="md-skip">
+        <a href="#dakkuvectorexpression" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              src/math
+              dakku::VectorExpression
             
           </span>
         </div>
@@ -328,9 +328,57 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#files" class="md-nav__link">
-    Files
+  <a href="#public-functions" class="md-nav__link">
+    Public Functions
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detailed-description" class="md-nav__link">
+    Detailed Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-functions-documentation" class="md-nav__link">
+    Public Functions Documentation
+  </a>
+  
+    <nav class="md-nav" aria-label="Public Functions Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-operator" class="md-nav__link">
+    function operator[]
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-operator_1" class="md-nav__link">
+    function operator[]
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-getexpression" class="md-nav__link">
+    function getExpression
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-getexpression_1" class="md-nav__link">
+    function getExpression
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -346,29 +394,91 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/xehoth/dakku/edit/master/docs/Files/dir_ae9a93452e2a84339148a16bcf2eb561.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/xehoth/dakku/edit/master/docs/Classes/structdakku_1_1VectorExpression.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
 
-<h1 id="srcmath">src/math</h1>
-<h2 id="files">Files</h2>
+<h1 id="dakkuvectorexpression">dakku::VectorExpression</h1>
+<p>expression template for vector operations  <a href="#detailed-description">More...</a></p>
+<p><code>#include &lt;vector_base.h&gt;</code></p>
+<p>Inherited by <a href="/dakku/Classes/classdakku_1_1BinaryVectorExpression/">dakku::BinaryVectorExpression&lt; T, S, D, E1, E2, VectorAddExpression&lt; T, S, D, E1, E2 &gt; &gt;</a></p>
+<h2 id="public-functions">Public Functions</h2>
 <table>
 <thead>
 <tr>
+<th></th>
 <th>Name</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong><a href="/dakku/Files/math_2fwd_8h/#file-fwd.h">src/math/fwd.h</a></strong></td>
+<td>decltype(auto)</td>
+<td><strong><a href="/dakku/Classes/structdakku_1_1VectorExpression/#function-operator[]">operator[]</a></strong>(size_t i)<br>get the i'th value</td>
 </tr>
 <tr>
-<td><strong><a href="/dakku/Files/vector__base_8h/#file-vector-base.h">src/math/vector_base.h</a></strong></td>
+<td>decltype(auto)</td>
+<td><strong><a href="/dakku/Classes/structdakku_1_1VectorExpression/#function-operator[]">operator[]</a></strong>(size_t i) const<br>get the i'th value</td>
+</tr>
+<tr>
+<td>decltype(auto)</td>
+<td><strong><a href="/dakku/Classes/structdakku_1_1VectorExpression/#function-getexpression">getExpression</a></strong>() const<br>Get the derived expression.</td>
+</tr>
+<tr>
+<td>decltype(auto)</td>
+<td><strong><a href="/dakku/Classes/structdakku_1_1VectorExpression/#function-getexpression">getExpression</a></strong>()<br>Get the derived expression.</td>
 </tr>
 </tbody>
 </table>
+<h2 id="detailed-description">Detailed Description</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="n">ArithmeticType</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kt">size_t</span><span class="w"> </span><span class="n">S</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">typename</span><span class="w"> </span><span class="nc">Derived</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">typename</span><span class="w"> </span><span class="nc">Expr</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">struct</span><span class="w"> </span><span class="nc">dakku</span><span class="o">::</span><span class="n">VectorExpression</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>expression template for vector operations </p>
+<p><strong>Template Parameters</strong>: </p>
+<ul>
+<li><strong>T</strong> data type </li>
+<li><strong>S</strong> size of the vector </li>
+<li><strong>Derived</strong> final vector type (point/vector/normal) </li>
+<li><strong>Expr</strong> vector expression </li>
+</ul>
+<h2 id="public-functions-documentation">Public Functions Documentation</h2>
+<h3 id="function-operator">function operator[]</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kr">inline</span><span class="w"> </span><span class="k">decltype</span><span class="p">(</span><span class="k">auto</span><span class="p">)</span><span class="w"> </span><span class="k">operator</span><span class="p">[](</span><span class="w"></span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="w"></span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>get the i'th value </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>i</strong> the index </li>
+</ul>
+<p><strong>Return</strong>: the value </p>
+<h3 id="function-operator_1">function operator[]</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kr">inline</span><span class="w"> </span><span class="k">decltype</span><span class="p">(</span><span class="k">auto</span><span class="p">)</span><span class="w"> </span><span class="k">operator</span><span class="p">[](</span><span class="w"></span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="w"></span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+</code></pre></div>
+<p>get the i'th value </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>i</strong> the index </li>
+</ul>
+<p><strong>Return</strong>: the value </p>
+<h3 id="function-getexpression">function getExpression</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kr">inline</span><span class="w"> </span><span class="k">decltype</span><span class="p">(</span><span class="k">auto</span><span class="p">)</span><span class="w"> </span><span class="n">getExpression</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+</code></pre></div>
+<p>Get the derived expression. </p>
+<p><strong>Return</strong>: the derived expression </p>
+<h3 id="function-getexpression_1">function getExpression</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kr">inline</span><span class="w"> </span><span class="k">decltype</span><span class="p">(</span><span class="k">auto</span><span class="p">)</span><span class="w"> </span><span class="n">getExpression</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<p>Get the derived expression. </p>
+<p><strong>Return</strong>: the derived expression </p>
 <hr />
 <p>Updated on 2022-04-06 at 04:12:28 +0000</p>
 

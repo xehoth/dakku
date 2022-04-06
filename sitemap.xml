@@ -2,102 +2,132 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://xehoth.github.io/dakku/</loc>
-         <lastmod>2022-04-05</lastmod>
+         <lastmod>2022-04-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/</loc>
-         <lastmod>2022-04-05</lastmod>
+         <lastmod>2022-04-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1BinaryVectorExpression/</loc>
+         <lastmod>2022-04-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1Logger/</loc>
-         <lastmod>2022-04-05</lastmod>
+         <lastmod>2022-04-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1VectorAddExpression/</loc>
+         <lastmod>2022-04-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1VectorBase/</loc>
-         <lastmod>2022-04-05</lastmod>
+         <lastmod>2022-04-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1VectorCastExpression/</loc>
+         <lastmod>2022-04-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1VectorScalarExpression/</loc>
+         <lastmod>2022-04-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Classes/structdakku_1_1VectorExpression/</loc>
+         <lastmod>2022-04-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Examples/</loc>
-         <lastmod>2022-04-05</lastmod>
+         <lastmod>2022-04-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/</loc>
-         <lastmod>2022-04-05</lastmod>
+         <lastmod>2022-04-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/core_2fwd_8h/</loc>
-         <lastmod>2022-04-05</lastmod>
+         <lastmod>2022-04-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/dir_68267d1309a1af8e8297ef4c3efbcdba/</loc>
-         <lastmod>2022-04-05</lastmod>
+         <lastmod>2022-04-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/dir_ae9a93452e2a84339148a16bcf2eb561/</loc>
-         <lastmod>2022-04-05</lastmod>
+         <lastmod>2022-04-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/dir_aebb8dcc11953d78e620bbef0b9e2183/</loc>
-         <lastmod>2022-04-05</lastmod>
+         <lastmod>2022-04-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/dir_ffde1fbcaa8d6b0d34e29c3bddf7a801/</loc>
-         <lastmod>2022-04-05</lastmod>
+         <lastmod>2022-04-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/logger_2fwd_8h/</loc>
-         <lastmod>2022-04-05</lastmod>
+         <lastmod>2022-04-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/logger_8h/</loc>
-         <lastmod>2022-04-05</lastmod>
+         <lastmod>2022-04-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/math_2fwd_8h/</loc>
-         <lastmod>2022-04-05</lastmod>
+         <lastmod>2022-04-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/platform_8h/</loc>
-         <lastmod>2022-04-05</lastmod>
+         <lastmod>2022-04-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/vector__base_8h/</loc>
-         <lastmod>2022-04-05</lastmod>
+         <lastmod>2022-04-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Modules/</loc>
-         <lastmod>2022-04-05</lastmod>
+         <lastmod>2022-04-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Namespaces/</loc>
-         <lastmod>2022-04-05</lastmod>
+         <lastmod>2022-04-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Namespaces/namespacedakku/</loc>
-         <lastmod>2022-04-05</lastmod>
+         <lastmod>2022-04-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Pages/</loc>
-         <lastmod>2022-04-05</lastmod>
+         <lastmod>2022-04-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Pages/vector_base/</loc>
+         <lastmod>2022-04-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

@@ -3,12 +3,14 @@
   <compounddef id="indexpage" kind="page">
     <compoundname>index</compoundname>
     <title>dakku documentation</title>
+    <innerpage refid="vector_base">Vector Base</innerpage>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
 <para>This is the documentation of dakku renderer.</para>
 <para><image type="html" name="cornell_box.png" alt="cornell_box" inline="yes"></image>
- </para>
+</para>
+<para><ref refid="vector_base" kindref="compound">Vector Base</ref> </para>
     </detaileddescription>
     <location file="src/platform.h"/>
   </compounddef>

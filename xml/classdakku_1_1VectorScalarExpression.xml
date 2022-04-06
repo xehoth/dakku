@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="classdakku_1_1VectorScalarExpression" kind="class" language="C++" prot="public">
+    <compoundname>dakku::VectorScalarExpression</compoundname>
+    <basecompoundref refid="structdakku_1_1VectorExpression" prot="private" virt="non-virtual">dakku::VectorExpression&lt; T, S, Derived, VectorScalarExpression&lt; T, S, Derived &gt; &gt;</basecompoundref>
+    <includes refid="vector__base_8h" local="no">vector_base.h</includes>
+    <templateparamlist>
+      <param>
+        <type>ArithmeticType</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+      <param>
+        <type>size_t</type>
+        <declname>S</declname>
+        <defname>S</defname>
+      </param>
+      <param>
+        <type>typename Derived</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdakku_1_1VectorScalarExpression_1a52fabfd54ae0c616c9540590309f3a95" prot="private" static="no" mutable="no">
+        <type>T</type>
+        <definition>T dakku::VectorScalarExpression&lt; T, S, Derived &gt;::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/math/vector_base.h" line="80" column="5" bodyfile="src/math/vector_base.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdakku_1_1VectorScalarExpression_1a7f9fd9a9c34034ccaa5eba393f9f913f" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>dakku::VectorScalarExpression&lt; T, S, Derived &gt;::VectorScalarExpression</definition>
+        <argsstring>(const T &amp;value)</argsstring>
+        <name>VectorScalarExpression</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/math/vector_base.h" line="76" column="12" bodyfile="src/math/vector_base.h" bodystart="76" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1VectorScalarExpression_1a3f2a63050624379585c738b53f5e989d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>decltype(auto)</type>
+        <definition>decltype(auto) dakku::VectorScalarExpression&lt; T, S, Derived &gt;::get</definition>
+        <argsstring>(size_t) const</argsstring>
+        <name>get</name>
+        <param>
+          <type>size_t</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/math/vector_base.h" line="77" column="12" bodyfile="src/math/vector_base.h" bodystart="77" bodyend="77"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>scalar expression </para>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>S</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Derived</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>derived type </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>dakku::VectorExpression&lt; T, S, Derived, VectorScalarExpression&lt; T, S, Derived &gt; &gt;</label>
+        <link refid="structdakku_1_1VectorExpression"/>
+      </node>
+      <node id="1">
+        <label>dakku::VectorScalarExpression&lt; T, S, Derived &gt;</label>
+        <link refid="classdakku_1_1VectorScalarExpression"/>
+        <childnode refid="2" relation="private-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>dakku::VectorExpression&lt; T, S, Derived, VectorScalarExpression&lt; T, S, Derived &gt; &gt;</label>
+        <link refid="structdakku_1_1VectorExpression"/>
+      </node>
+      <node id="1">
+        <label>dakku::VectorScalarExpression&lt; T, S, Derived &gt;</label>
+        <link refid="classdakku_1_1VectorScalarExpression"/>
+        <childnode refid="2" relation="private-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/math/vector_base.h" line="73" column="1" bodyfile="src/math/vector_base.h" bodystart="74" bodyend="81"/>
+    <listofallmembers>
+      <member refid="classdakku_1_1VectorScalarExpression_1a3f2a63050624379585c738b53f5e989d" prot="public" virt="non-virtual"><scope>dakku::VectorScalarExpression</scope><name>get</name></member>
+      <member refid="classdakku_1_1VectorScalarExpression_1a52fabfd54ae0c616c9540590309f3a95" prot="private" virt="non-virtual"><scope>dakku::VectorScalarExpression</scope><name>value</name></member>
+      <member refid="classdakku_1_1VectorScalarExpression_1a7f9fd9a9c34034ccaa5eba393f9f913f" prot="public" virt="non-virtual"><scope>dakku::VectorScalarExpression</scope><name>VectorScalarExpression</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
