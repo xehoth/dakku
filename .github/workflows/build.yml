@@ -30,9 +30,10 @@ jobs:
           xmake-version: latest
       - name: XMake Config for Clang
         if: matrix.os == 'ubuntu-latest'
-        run: 'xmake f --toolchain=clang -c -y'
-      - name: Build Test
-        run: 'xmake f --build_test=y -y'
+        run: 'xmake f --toolchain=clang --build_test=y -c -y'
+      - name: Build Test Windows
+        if: matrix.os != 'ubuntu-latest'
+        run: 'xmake f --build_test=y -c -y'
       - name: Build
         run: xmake build -y
       - name: Run Test
