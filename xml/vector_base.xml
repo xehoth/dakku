@@ -8,6 +8,6 @@
     <detaileddescription>
 <para>dakku currently use naive implementation, may use intrinsics and expression templates later. </para>
     </detaileddescription>
-    <location file="src/math/vector_base.h"/>
+    <location file="src/core/vector_base.h"/>
   </compounddef>
 </doxygen>

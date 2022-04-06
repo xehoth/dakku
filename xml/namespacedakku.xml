@@ -37,7 +37,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/math/vector.h" line="93" column="1" bodyfile="src/math/vector.h" bodystart="93" bodyend="-1"/>
+        <location file="src/core/vector.h" line="93" column="1" bodyfile="src/core/vector.h" bodystart="93" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespacedakku_1a3109ad27ee688fdd3462458714d7f1e7" prot="public" static="no">
         <templateparamlist>
@@ -68,7 +68,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/math/vector.h" line="101" column="1" bodyfile="src/math/vector.h" bodystart="101" bodyend="-1"/>
+        <location file="src/core/vector.h" line="101" column="1" bodyfile="src/core/vector.h" bodystart="101" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespacedakku_1abfd5a177365f8ffec7ab23d6cb6db8c0" prot="public" static="no">
         <type><ref refid="namespacedakku_1ae7de7b89895e76d4a3f1c653393dde69" kindref="member">Vector2</ref>&lt; float &gt;</type>
@@ -82,7 +82,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/math/vector.h" line="104" column="1" bodyfile="src/math/vector.h" bodystart="104" bodyend="-1"/>
+        <location file="src/core/vector.h" line="104" column="1" bodyfile="src/core/vector.h" bodystart="104" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespacedakku_1aa12b2f1fc9684bf8ba7fbf5b600685c6" prot="public" static="no">
         <type><ref refid="namespacedakku_1a3109ad27ee688fdd3462458714d7f1e7" kindref="member">Vector3</ref>&lt; float &gt;</type>
@@ -96,7 +96,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/math/vector.h" line="106" column="1" bodyfile="src/math/vector.h" bodystart="106" bodyend="-1"/>
+        <location file="src/core/vector.h" line="106" column="1" bodyfile="src/core/vector.h" bodystart="106" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespacedakku_1a56669db36360e52f7c7113768c7b35aa" prot="public" static="no">
         <templateparamlist>
@@ -127,7 +127,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/math/vector.h" line="114" column="1" bodyfile="src/math/vector.h" bodystart="114" bodyend="-1"/>
+        <location file="src/core/vector.h" line="114" column="1" bodyfile="src/core/vector.h" bodystart="114" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespacedakku_1aace4734db951234de5eb4567db0d1737" prot="public" static="no">
         <templateparamlist>
@@ -158,7 +158,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/math/vector.h" line="122" column="1" bodyfile="src/math/vector.h" bodystart="122" bodyend="-1"/>
+        <location file="src/core/vector.h" line="122" column="1" bodyfile="src/core/vector.h" bodystart="122" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespacedakku_1a9910f23501fd2ef5e9a829cdab0992be" prot="public" static="no">
         <type><ref refid="namespacedakku_1a56669db36360e52f7c7113768c7b35aa" kindref="member">Point2</ref>&lt; float &gt;</type>
@@ -172,7 +172,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/math/vector.h" line="125" column="1" bodyfile="src/math/vector.h" bodystart="125" bodyend="-1"/>
+        <location file="src/core/vector.h" line="125" column="1" bodyfile="src/core/vector.h" bodystart="125" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespacedakku_1a8323b90fda75af310a40a4e0d6bdb3f0" prot="public" static="no">
         <type><ref refid="namespacedakku_1aace4734db951234de5eb4567db0d1737" kindref="member">Point3</ref>&lt; float &gt;</type>
@@ -186,7 +186,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/math/vector.h" line="127" column="1" bodyfile="src/math/vector.h" bodystart="127" bodyend="-1"/>
+        <location file="src/core/vector.h" line="127" column="1" bodyfile="src/core/vector.h" bodystart="127" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespacedakku_1ade3699e7ff88bf28ae0ea31baafab11c" prot="public" static="no">
         <templateparamlist>
@@ -217,7 +217,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/math/vector.h" line="135" column="1" bodyfile="src/math/vector.h" bodystart="135" bodyend="-1"/>
+        <location file="src/core/vector.h" line="135" column="1" bodyfile="src/core/vector.h" bodystart="135" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespacedakku_1a9b64e14dceffe6ac84029f1d40d6ec41" prot="public" static="no">
         <type><ref refid="namespacedakku_1ade3699e7ff88bf28ae0ea31baafab11c" kindref="member">Normal3</ref>&lt; float &gt;</type>
@@ -231,23 +231,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/math/vector.h" line="137" column="1" bodyfile="src/math/vector.h" bodystart="137" bodyend="-1"/>
+        <location file="src/core/vector.h" line="137" column="1" bodyfile="src/core/vector.h" bodystart="137" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="var">
-      <memberdef kind="variable" id="namespacedakku_1aa5d538038f8e722b909be739b5828692" prot="public" static="no" mutable="no">
-        <type>class <ref refid="logger_2fwd_8h_1abccce192e40efefc3c932da87c29a2da" kindref="member">DAKKU_EXPORT_LOGGER</ref></type>
-        <definition>class DAKKU_EXPORT_LOGGER dakku::Logger</definition>
-        <argsstring></argsstring>
-        <name>Logger</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/logger/fwd.h" line="13" column="26" bodyfile="src/logger/fwd.h" bodystart="13" bodyend="-1"/>
-      </memberdef>
       <memberdef kind="variable" id="namespacedakku_1a53c476552ecb27caba955675d8efb680" prot="public" static="yes" constexpr="yes" mutable="no">
         <type>constexpr float</type>
         <definition>constexpr float dakku::INF</definition>
@@ -261,7 +248,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/math/fwd.h" line="21" column="24" bodyfile="src/math/fwd.h" bodystart="21" bodyend="-1"/>
+        <location file="src/core/fwd.h" line="18" column="24" bodyfile="src/core/fwd.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacedakku_1a11027d1862293f2ca3111d80ffe50415" prot="public" static="no" mutable="no">
+        <type>class <ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
+        <definition>class DAKKU_EXPORT_CORE dakku::Logger</definition>
+        <argsstring></argsstring>
+        <name>Logger</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/fwd.h" line="49" column="24" bodyfile="src/core/fwd.h" bodystart="49" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -308,7 +308,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/math/fwd.h" line="39" column="21" bodyfile="src/math/fwd.h" bodystart="39" bodyend="41"/>
+        <location file="src/core/fwd.h" line="36" column="21" bodyfile="src/core/fwd.h" bodystart="36" bodyend="38"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1af703ca0ba560169d1daf114a07175bf4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -343,20 +343,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/math/fwd.h" line="50" column="21" bodyfile="src/math/fwd.h" bodystart="50" bodyend="50"/>
-      </memberdef>
-      <memberdef kind="function" id="namespacedakku_1a3cfef85ab03bf9f46706e55c4f75c6ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="math_2fwd_8h_1a6d67e63908b9c1cb59f8176576612b05" kindref="member">DAKKU_EXPORT_MATH</ref> void</type>
-        <definition>DAKKU_EXPORT_MATH void dakku::testMath</definition>
-        <argsstring>()</argsstring>
-        <name>testMath</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/math/fwd.h" line="52" column="24" declfile="src/math/fwd.h" declline="52" declcolumn="24"/>
+        <location file="src/core/fwd.h" line="47" column="21" bodyfile="src/core/fwd.h" bodystart="47" bodyend="47"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -364,6 +351,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/logger/fwd.h" line="5" column="1"/>
+    <location file="src/core/fwd.h" line="9" column="1"/>
   </compounddef>
 </doxygen>

@@ -75,21 +75,13 @@
     <member refid="namespacedakku_1a8323b90fda75af310a40a4e0d6bdb3f0" kind="typedef"><name>Point3f</name></member>
     <member refid="namespacedakku_1ade3699e7ff88bf28ae0ea31baafab11c" kind="typedef"><name>Normal3</name></member>
     <member refid="namespacedakku_1a9b64e14dceffe6ac84029f1d40d6ec41" kind="typedef"><name>Normal3f</name></member>
-    <member refid="namespacedakku_1aa5d538038f8e722b909be739b5828692" kind="variable"><name>Logger</name></member>
     <member refid="namespacedakku_1a53c476552ecb27caba955675d8efb680" kind="variable"><name>INF</name></member>
+    <member refid="namespacedakku_1a11027d1862293f2ca3111d80ffe50415" kind="variable"><name>Logger</name></member>
     <member refid="namespacedakku_1af754e4967f947036a0c31c0dbb4bf6e1" kind="function"><name>isNaN</name></member>
     <member refid="namespacedakku_1af703ca0ba560169d1daf114a07175bf4" kind="function"><name>isNaN</name></member>
-    <member refid="namespacedakku_1a3cfef85ab03bf9f46706e55c4f75c6ed" kind="function"><name>testMath</name></member>
   </compound>
-  <compound refid="core_2fwd_8h" kind="file"><name>fwd.h</name>
-    <member refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kind="define"><name>DAKKU_EXPORT_CORE</name></member>
-    <member refid="core_2fwd_8h_1ab21dcb4d6ee34c86c243efbb96e59425" kind="function"><name>test</name></member>
-  </compound>
-  <compound refid="logger_2fwd_8h" kind="file"><name>fwd.h</name>
-    <member refid="logger_2fwd_8h_1abccce192e40efefc3c932da87c29a2da" kind="define"><name>DAKKU_EXPORT_LOGGER</name></member>
-  </compound>
-  <compound refid="math_2fwd_8h" kind="file"><name>fwd.h</name>
-    <member refid="math_2fwd_8h_1a6d67e63908b9c1cb59f8176576612b05" kind="define"><name>DAKKU_EXPORT_MATH</name></member>
+  <compound refid="fwd_8h" kind="file"><name>fwd.h</name>
+    <member refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kind="define"><name>DAKKU_EXPORT_CORE</name></member>
   </compound>
   <compound refid="logger_8h" kind="file"><name>logger.h</name>
     <member refid="logger_8h_1a9edd762e54e3ce43a70ddfe81b6e2fc5" kind="define"><name>DAKKU_ERR</name></member>
@@ -106,18 +98,12 @@
     <member refid="platform_8h_1a7bc0107b6d161e4a712eee011c57792c" kind="define"><name>DAKKU_INLINE</name></member>
     <member refid="platform_8h_1a5a852c25cfd1f921bfe140d4216a332f" kind="define"><name>DAKKU_EXPORT</name></member>
     <member refid="platform_8h_1a4dc2ada1002dbe2abdfbc3ec4e1aee36" kind="define"><name>DAKKU_IMPORT</name></member>
-    <member refid="platform_8h_1a43488577a7d4d290f1c8940eb324a619" kind="define"><name>DAKKU_LOGGER_MODULE</name></member>
-    <member refid="platform_8h_1a2e1ca478b62943837a33e7ffad5dc205" kind="define"><name>DAKKU_MATH_MODULE</name></member>
     <member refid="platform_8h_1a727f841a8615f5ba2055132fb14a18ec" kind="define"><name>DAKKU_CORE_MODULE</name></member>
     <member refid="platform_8h_1a09cd708407b8b153a1c5f21c764c142a" kind="define"><name>DAKKU_MAIN_MODULE</name></member>
   </compound>
   <compound refid="vector_base" kind="page"><name>vector_base</name>
   </compound>
   <compound refid="dir_aebb8dcc11953d78e620bbef0b9e2183" kind="dir"><name>src/core</name>
-  </compound>
-  <compound refid="dir_ffde1fbcaa8d6b0d34e29c3bddf7a801" kind="dir"><name>src/logger</name>
-  </compound>
-  <compound refid="dir_ae9a93452e2a84339148a16bcf2eb561" kind="dir"><name>src/math</name>
   </compound>
   <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
   </compound>

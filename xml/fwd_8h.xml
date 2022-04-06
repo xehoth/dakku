@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="fwd_8h" kind="file" language="C++">
+    <compoundname>fwd.h</compoundname>
+    <includes refid="platform_8h" local="no">platform.h</includes>
+    <includes local="no">type_traits</includes>
+    <includes local="no">limits</includes>
+    <includes local="no">numbers</includes>
+    <includes local="no">cmath</includes>
+    <includedby refid="logger_8h" local="no">src/core/logger.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>src/core/fwd.h</label>
+        <link refid="fwd_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>platform.h</label>
+        <link refid="platform_8h"/>
+      </node>
+      <node id="6">
+        <label>cmath</label>
+      </node>
+      <node id="4">
+        <label>limits</label>
+      </node>
+      <node id="5">
+        <label>numbers</label>
+      </node>
+      <node id="3">
+        <label>type_traits</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>src/core/fwd.h</label>
+        <link refid="fwd_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>src/core/logger.h</label>
+        <link refid="logger_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>src/core/vector.h</label>
+        <link refid="vector_8h"/>
+      </node>
+      <node id="3">
+        <label>src/core/vector_base.h</label>
+        <link refid="vector__base_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespacedakku">dakku</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" prot="public" static="no">
+        <name>DAKKU_EXPORT_CORE</name>
+        <initializer><ref refid="platform_8h_1a5a852c25cfd1f921bfe140d4216a332f" kindref="member">DAKKU_EXPORT</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/fwd.h" line="14" column="10" bodyfile="src/core/fwd.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>DAKKU_CORE_FWD_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DAKKU_CORE_FWD_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="platform_8h" kindref="compound">platform.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;type_traits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;limits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;numbers&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="namespacedakku" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacedakku" kindref="compound">dakku</ref><sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>DAKKU_BUILD_MODULE<sp/>!=<sp/>DAKKU_CORE_MODULE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DAKKU_EXPORT_CORE<sp/>DAKKU_IMPORT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DAKKU_EXPORT_CORE<sp/>DAKKU_EXPORT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>INF<sp/>=<sp/>std::numeric_limits&lt;float&gt;::infinity();</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="26" refid="conceptdakku_1_1ArithmeticType" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">concept<sp/></highlight><highlight class="normal"><ref refid="conceptdakku_1_1ArithmeticType" kindref="compound">ArithmeticType</ref><sp/>=<sp/>std::is_arithmetic_v&lt;std::decay_t&lt;T&gt;&gt;;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="36" refid="namespacedakku_1af754e4967f947036a0c31c0dbb4bf6e1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">requires</highlight><highlight class="normal"><sp/>std::is_floating_point_v&lt;T&gt;<sp/><ref refid="platform_8h_1a7bc0107b6d161e4a712eee011c57792c" kindref="member">DAKKU_INLINE</ref><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespacedakku_1af754e4967f947036a0c31c0dbb4bf6e1" kindref="member">isNaN</ref>(T<sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::isnan(x);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="47" refid="namespacedakku_1af703ca0ba560169d1daf114a07175bf4" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">requires</highlight><highlight class="normal"><sp/>std::is_integral_v&lt;T&gt;<sp/><ref refid="platform_8h_1a7bc0107b6d161e4a712eee011c57792c" kindref="member">DAKKU_INLINE</ref><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespacedakku_1af754e4967f947036a0c31c0dbb4bf6e1" kindref="member">isNaN</ref>(T)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="namespacedakku_1a11027d1862293f2ca3111d80ffe50415" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref><sp/><ref refid="classdakku_1_1Logger" kindref="compound">Logger</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dakku</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="src/core/fwd.h"/>
+  </compounddef>
+</doxygen>

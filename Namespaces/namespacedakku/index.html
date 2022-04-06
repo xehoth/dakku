@@ -460,13 +460,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#function-testmath" class="md-nav__link">
-    function testMath
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -481,15 +474,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#variable-logger" class="md-nav__link">
-    variable Logger
+  <a href="#variable-inf" class="md-nav__link">
+    variable INF
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#variable-inf" class="md-nav__link">
-    variable INF
+  <a href="#variable-logger" class="md-nav__link">
+    variable Logger
   </a>
   
 </li>
@@ -618,10 +611,6 @@
 <td>template &lt;typename T > <br><a href="/dakku/Files/platform_8h/#define-dakku-inline">DAKKU_INLINE</a> bool</td>
 <td><strong><a href="/dakku/Namespaces/namespacedakku/#function-isnan">isNaN</a></strong>(T )<br>check whether <code>x</code> is not a number</td>
 </tr>
-<tr>
-<td><a href="/dakku/Files/math_2fwd_8h/#define-dakku-export-math">DAKKU_EXPORT_MATH</a> void</td>
-<td><strong><a href="/dakku/Namespaces/namespacedakku/#function-testmath">testMath</a></strong>()</td>
-</tr>
 </tbody>
 </table>
 <h2 id="attributes">Attributes</h2>
@@ -634,12 +623,12 @@
 </thead>
 <tbody>
 <tr>
-<td>class <a href="/dakku/Files/logger_2fwd_8h/#define-dakku-export-logger">DAKKU_EXPORT_LOGGER</a></td>
-<td><strong><a href="/dakku/Namespaces/namespacedakku/#variable-logger">Logger</a></strong></td>
-</tr>
-<tr>
 <td>constexpr float</td>
 <td><strong><a href="/dakku/Namespaces/namespacedakku/#variable-inf">INF</a></strong> <br>infinity</td>
+</tr>
+<tr>
+<td>class <a href="/dakku/Files/fwd_8h/#define-dakku-export-core">DAKKU_EXPORT_CORE</a></td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#variable-logger">Logger</a></strong></td>
 </tr>
 </tbody>
 </table>
@@ -738,19 +727,16 @@
 <li><strong>T</strong> type (integer) </li>
 </ul>
 <p><strong>Return</strong>: false (all integers are not nans) </p>
-<h3 id="function-testmath">function testMath</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">DAKKU_EXPORT_MATH</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">testMath</span><span class="p">()</span><span class="w"></span>
-</code></pre></div>
 <h2 id="attributes-documentation">Attributes Documentation</h2>
-<h3 id="variable-logger">variable Logger</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">DAKKU_EXPORT_LOGGER</span><span class="w"> </span><span class="n">Logger</span><span class="p">;</span><span class="w"></span>
-</code></pre></div>
 <h3 id="variable-inf">variable INF</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">INF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;::</span><span class="n">infinity</span><span class="p">();</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">INF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;::</span><span class="n">infinity</span><span class="p">();</span><span class="w"></span>
 </code></pre></div>
 <p>infinity </p>
+<h3 id="variable-logger">variable Logger</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">DAKKU_EXPORT_CORE</span><span class="w"> </span><span class="n">Logger</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
 <hr />
-<p>Updated on 2022-04-06 at 13:29:13 +0000</p>
+<p>Updated on 2022-04-06 at 13:36:32 +0000</p>
 
               
             </article>

@@ -3,8 +3,6 @@
   <compounddef id="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir">
     <compoundname>src</compoundname>
     <innerdir refid="dir_aebb8dcc11953d78e620bbef0b9e2183">src/core</innerdir>
-    <innerdir refid="dir_ffde1fbcaa8d6b0d34e29c3bddf7a801">src/logger</innerdir>
-    <innerdir refid="dir_ae9a93452e2a84339148a16bcf2eb561">src/math</innerdir>
     <innerfile refid="platform_8h">platform.h</innerfile>
     <briefdescription>
     </briefdescription>

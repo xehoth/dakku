@@ -37,7 +37,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/math/vector.h" line="44" column="17" bodyfile="src/math/vector.h" bodystart="44" bodyend="46"/>
+        <location file="src/core/vector.h" line="44" column="17" bodyfile="src/core/vector.h" bodystart="44" bodyend="46"/>
       </memberdef>
       <memberdef kind="friend" id="classdakku_1_1Point_1a8f79a28ee6306ace7ac3e4d7dbee3e22" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classdakku_1_1Point" kindref="compound">Point</ref></type>
@@ -59,7 +59,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/math/vector.h" line="52" column="16" bodyfile="src/math/vector.h" bodystart="52" bodyend="54"/>
+        <location file="src/core/vector.h" line="52" column="16" bodyfile="src/core/vector.h" bodystart="52" bodyend="54"/>
       </memberdef>
       <memberdef kind="friend" id="classdakku_1_1Point_1aa42db7f4fcc358dda0322ad91b45b7e7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classdakku_1_1Point" kindref="compound">Point</ref></type>
@@ -81,7 +81,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/math/vector.h" line="60" column="16" bodyfile="src/math/vector.h" bodystart="60" bodyend="62"/>
+        <location file="src/core/vector.h" line="60" column="16" bodyfile="src/core/vector.h" bodystart="60" bodyend="62"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -131,7 +131,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/math/vector.h" line="36" column="1" bodyfile="src/math/vector.h" bodystart="36" bodyend="63"/>
+    <location file="src/core/vector.h" line="36" column="1" bodyfile="src/core/vector.h" bodystart="36" bodyend="63"/>
     <listofallmembers>
       <member refid="classdakku_1_1VectorBase_1adfeaa30c58620f0e4e8cbc9bc911c60c" prot="protected" virt="non-virtual"><scope>dakku::Point</scope><name>_data</name></member>
       <member refid="classdakku_1_1VectorBase_1a164c7c788c4967c1c6ebcf7ae8466ba8" prot="public" virt="non-virtual"><scope>dakku::Point</scope><name>derived</name></member>
