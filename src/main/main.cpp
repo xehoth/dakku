@@ -7,9 +7,16 @@ using namespace dakku;
 
 int main(int argc, const char *argv[]) {
   std::cout << "Hello World!" << std::endl;
-  VectorBase<float, 2, float> a;
-  a.setByIndex(2, 2);
-  
-  test();
+  VectorBase<float, 2, float> a(1, 2);
+  VectorBase<float, 2, float> b(3, 4);
+  const auto &c = a;
+  c[2];
+  std::cout << a << " " << b << std::endl;
+  a.set(b);
+  VectorBase<float, 2, float> d(a);
+  std::cout << d << std::endl;
+  a = a + b;
+  std::cout << a << std::endl;
+  // test();
   return 0;
 }

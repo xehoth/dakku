@@ -24,7 +24,7 @@ class DAKKU_EXPORT_LOGGER Logger {
    *
    * @return the corresponding spdlog::logger
    */
-  spdlog::logger *handle() const { return _logger.get(); }
+  [[nodiscard]] spdlog::logger *handle() const { return _logger.get(); }
 
  private:
   /**

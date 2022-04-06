@@ -37,5 +37,7 @@ namespace dakku {
 This is the documentation of dakku renderer.
 
 ![cornell_box](cornell_box.png)
+
+@subpage vector_base
 */
 #endif

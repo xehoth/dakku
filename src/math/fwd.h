@@ -4,6 +4,7 @@
 #include <type_traits>
 #include <limits>
 #include <numbers>
+#include <cmath>
 
 /**
  * @brief dakku namespace
@@ -21,12 +22,32 @@ static constexpr float INF = std::numeric_limits<float>::infinity();
 
 /**
  * @brief concept: `T` is an arithemetic type
- * 
+ *
  * @tparam T typename
  */
 template <typename T>
 concept ArithmeticType = std::is_arithmetic_v<std::decay_t<T>>;
 
+/**
+ * @brief check whether `x` is not a number
+ *
+ * @tparam T type (floating point)
+ * @param x given value
+ * @return whether `x` is nan
+ */
+template <typename T>
+requires std::is_floating_point_v<T> DAKKU_INLINE bool isNaN(T x) {
+  return std::isnan(x);
+}
+
+/**
+ * @brief check whether `x` is not a number
+ *
+ * @tparam T type (integer)
+ * @return false (all integers are not nans)
+ */
+template <typename T>
+requires std::is_integral_v<T> DAKKU_INLINE bool isNaN(T) { return false; }
 
 DAKKU_EXPORT_MATH void testMath();
 }  // namespace dakku

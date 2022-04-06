@@ -4,7 +4,8 @@
 
 namespace dakku {
 
-Logger::Logger(std::shared_ptr<spdlog::logger> logger) : _logger(logger) {
+Logger::Logger(std::shared_ptr<spdlog::logger> logger)
+    : _logger(std::move(logger)) {
 #ifdef DAKKU_BUILD_DEBUG
   _logger->set_level(spdlog::level::debug);
 #endif
