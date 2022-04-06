@@ -11,6 +11,8 @@
   </compound>
   <compound refid="classdakku_1_1Point" kind="class"><name>dakku::Point</name>
     <member refid="classdakku_1_1Point_1ad8e485617ec76d5775ae2efd79522e29" kind="friend"><name>operator-</name></member>
+    <member refid="classdakku_1_1Point_1a8f79a28ee6306ace7ac3e4d7dbee3e22" kind="friend"><name>operator-</name></member>
+    <member refid="classdakku_1_1Point_1aa42db7f4fcc358dda0322ad91b45b7e7" kind="friend"><name>operator+</name></member>
   </compound>
   <compound refid="classdakku_1_1Vector" kind="class"><name>dakku::Vector</name>
     <member refid="classdakku_1_1Vector_1a316d381a8ae7de1d299f2131a042a349" kind="friend"><name>operator-</name></member>

@@ -21,12 +21,23 @@
         <argsstring></argsstring>
         <name>Vector2</name>
         <briefdescription>
+<para>2d vectors </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>data type </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/math/vector.h" line="42" column="1" bodyfile="src/math/vector.h" bodystart="42" bodyend="-1"/>
+        <location file="src/math/vector.h" line="93" column="1" bodyfile="src/math/vector.h" bodystart="93" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespacedakku_1a3109ad27ee688fdd3462458714d7f1e7" prot="public" static="no">
         <templateparamlist>
@@ -41,12 +52,23 @@
         <argsstring></argsstring>
         <name>Vector3</name>
         <briefdescription>
+<para>3d vectors </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>data type </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/math/vector.h" line="44" column="1" bodyfile="src/math/vector.h" bodystart="44" bodyend="-1"/>
+        <location file="src/math/vector.h" line="101" column="1" bodyfile="src/math/vector.h" bodystart="101" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespacedakku_1abfd5a177365f8ffec7ab23d6cb6db8c0" prot="public" static="no">
         <type><ref refid="namespacedakku_1ae7de7b89895e76d4a3f1c653393dde69" kindref="member">Vector2</ref>&lt; float &gt;</type>
@@ -54,12 +76,13 @@
         <argsstring></argsstring>
         <name>Vector2f</name>
         <briefdescription>
+<para>2d float vector </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/math/vector.h" line="45" column="1" bodyfile="src/math/vector.h" bodystart="45" bodyend="-1"/>
+        <location file="src/math/vector.h" line="104" column="1" bodyfile="src/math/vector.h" bodystart="104" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespacedakku_1aa12b2f1fc9684bf8ba7fbf5b600685c6" prot="public" static="no">
         <type><ref refid="namespacedakku_1a3109ad27ee688fdd3462458714d7f1e7" kindref="member">Vector3</ref>&lt; float &gt;</type>
@@ -67,12 +90,13 @@
         <argsstring></argsstring>
         <name>Vector3f</name>
         <briefdescription>
+<para>3d float vector </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/math/vector.h" line="46" column="1" bodyfile="src/math/vector.h" bodystart="46" bodyend="-1"/>
+        <location file="src/math/vector.h" line="106" column="1" bodyfile="src/math/vector.h" bodystart="106" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespacedakku_1a56669db36360e52f7c7113768c7b35aa" prot="public" static="no">
         <templateparamlist>
@@ -87,12 +111,23 @@
         <argsstring></argsstring>
         <name>Point2</name>
         <briefdescription>
+<para>2d point </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>data type </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/math/vector.h" line="49" column="1" bodyfile="src/math/vector.h" bodystart="49" bodyend="-1"/>
+        <location file="src/math/vector.h" line="114" column="1" bodyfile="src/math/vector.h" bodystart="114" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespacedakku_1aace4734db951234de5eb4567db0d1737" prot="public" static="no">
         <templateparamlist>
@@ -107,12 +142,23 @@
         <argsstring></argsstring>
         <name>Point3</name>
         <briefdescription>
+<para>3d point </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>data type </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/math/vector.h" line="51" column="1" bodyfile="src/math/vector.h" bodystart="51" bodyend="-1"/>
+        <location file="src/math/vector.h" line="122" column="1" bodyfile="src/math/vector.h" bodystart="122" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespacedakku_1a9910f23501fd2ef5e9a829cdab0992be" prot="public" static="no">
         <type><ref refid="namespacedakku_1a56669db36360e52f7c7113768c7b35aa" kindref="member">Point2</ref>&lt; float &gt;</type>
@@ -120,12 +166,13 @@
         <argsstring></argsstring>
         <name>Point2f</name>
         <briefdescription>
+<para>2d float point </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/math/vector.h" line="52" column="1" bodyfile="src/math/vector.h" bodystart="52" bodyend="-1"/>
+        <location file="src/math/vector.h" line="125" column="1" bodyfile="src/math/vector.h" bodystart="125" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespacedakku_1a8323b90fda75af310a40a4e0d6bdb3f0" prot="public" static="no">
         <type><ref refid="namespacedakku_1aace4734db951234de5eb4567db0d1737" kindref="member">Point3</ref>&lt; float &gt;</type>
@@ -133,12 +180,13 @@
         <argsstring></argsstring>
         <name>Point3f</name>
         <briefdescription>
+<para>3d float point </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/math/vector.h" line="53" column="1" bodyfile="src/math/vector.h" bodystart="53" bodyend="-1"/>
+        <location file="src/math/vector.h" line="127" column="1" bodyfile="src/math/vector.h" bodystart="127" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespacedakku_1ade3699e7ff88bf28ae0ea31baafab11c" prot="public" static="no">
         <templateparamlist>
@@ -153,12 +201,23 @@
         <argsstring></argsstring>
         <name>Normal3</name>
         <briefdescription>
+<para>3d normal </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>data type </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/math/vector.h" line="56" column="1" bodyfile="src/math/vector.h" bodystart="56" bodyend="-1"/>
+        <location file="src/math/vector.h" line="135" column="1" bodyfile="src/math/vector.h" bodystart="135" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespacedakku_1a9b64e14dceffe6ac84029f1d40d6ec41" prot="public" static="no">
         <type><ref refid="namespacedakku_1ade3699e7ff88bf28ae0ea31baafab11c" kindref="member">Normal3</ref>&lt; float &gt;</type>
@@ -166,12 +225,13 @@
         <argsstring></argsstring>
         <name>Normal3f</name>
         <briefdescription>
+<para>3d float normal </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/math/vector.h" line="57" column="1" bodyfile="src/math/vector.h" bodystart="57" bodyend="-1"/>
+        <location file="src/math/vector.h" line="137" column="1" bodyfile="src/math/vector.h" bodystart="137" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="var">

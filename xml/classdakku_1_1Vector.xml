@@ -31,17 +31,37 @@
           <declname>b</declname>
         </param>
         <briefdescription>
+<para>subtraction between vectors </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/math/vector.h" line="12" column="17" bodyfile="src/math/vector.h" bodystart="12" bodyend="16"/>
+        <location file="src/math/vector.h" line="22" column="17" bodyfile="src/math/vector.h" bodystart="22" bodyend="26"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
+<para>vector </para>
     </briefdescription>
     <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>data type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>S</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
     </detaileddescription>
     <inheritancegraph>
       <node id="2">
@@ -67,7 +87,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/math/vector.h" line="8" column="1" bodyfile="src/math/vector.h" bodystart="8" bodyend="17"/>
+    <location file="src/math/vector.h" line="14" column="1" bodyfile="src/math/vector.h" bodystart="14" bodyend="27"/>
     <listofallmembers>
       <member refid="classdakku_1_1VectorBase_1adfeaa30c58620f0e4e8cbc9bc911c60c" prot="protected" virt="non-virtual"><scope>dakku::Vector</scope><name>_data</name></member>
       <member refid="classdakku_1_1VectorBase_1a164c7c788c4967c1c6ebcf7ae8466ba8" prot="public" virt="non-virtual"><scope>dakku::Vector</scope><name>derived</name></member>

@@ -31,17 +31,81 @@
           <declname>b</declname>
         </param>
         <briefdescription>
+<para>subtraction between two points yields vectors </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/math/vector.h" line="24" column="17" bodyfile="src/math/vector.h" bodystart="24" bodyend="26"/>
+        <location file="src/math/vector.h" line="44" column="17" bodyfile="src/math/vector.h" bodystart="44" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="friend" id="classdakku_1_1Point_1a8f79a28ee6306ace7ac3e4d7dbee3e22" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classdakku_1_1Point" kindref="compound">Point</ref></type>
+        <definition>Point operator-</definition>
+        <argsstring>(const Point &amp;a, const Vector&lt; T, S &gt; &amp;b)</argsstring>
+        <name>operator-</name>
+        <param>
+          <type>const <ref refid="classdakku_1_1Point" kindref="compound">Point</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classdakku_1_1Vector" kindref="compound">Vector</ref>&lt; T, S &gt; &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>point - vector =&gt; point </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/math/vector.h" line="52" column="16" bodyfile="src/math/vector.h" bodystart="52" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="friend" id="classdakku_1_1Point_1aa42db7f4fcc358dda0322ad91b45b7e7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classdakku_1_1Point" kindref="compound">Point</ref></type>
+        <definition>Point operator+</definition>
+        <argsstring>(const Point &amp;a, const Vector&lt; T, S &gt; &amp;b)</argsstring>
+        <name>operator+</name>
+        <param>
+          <type>const <ref refid="classdakku_1_1Point" kindref="compound">Point</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classdakku_1_1Vector" kindref="compound">Vector</ref>&lt; T, S &gt; &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>point + vector =&gt; point </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/math/vector.h" line="60" column="16" bodyfile="src/math/vector.h" bodystart="60" bodyend="62"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
+<para>point </para>
     </briefdescription>
     <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>data type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>S</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
     </detaileddescription>
     <inheritancegraph>
       <node id="2">
@@ -67,7 +131,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/math/vector.h" line="20" column="1" bodyfile="src/math/vector.h" bodystart="20" bodyend="27"/>
+    <location file="src/math/vector.h" line="36" column="1" bodyfile="src/math/vector.h" bodystart="36" bodyend="63"/>
     <listofallmembers>
       <member refid="classdakku_1_1VectorBase_1adfeaa30c58620f0e4e8cbc9bc911c60c" prot="protected" virt="non-virtual"><scope>dakku::Point</scope><name>_data</name></member>
       <member refid="classdakku_1_1VectorBase_1a164c7c788c4967c1c6ebcf7ae8466ba8" prot="public" virt="non-virtual"><scope>dakku::Point</scope><name>derived</name></member>
@@ -76,9 +140,11 @@
       <member refid="classdakku_1_1VectorBase_1a24b199ecb70deba0853e9532b888a183" prot="public" virt="non-virtual"><scope>dakku::Point</scope><name>hasNaNs</name></member>
       <member refid="classdakku_1_1VectorBase_1a5353b2617ac5343efeee0f325632d772" prot="public" virt="non-virtual"><scope>dakku::Point</scope><name>operator*=</name></member>
       <member refid="classdakku_1_1VectorBase_1ad4136ad736840507f9fc902d9d6c6dfd" prot="public" virt="non-virtual"><scope>dakku::Point</scope><name>operator*=</name></member>
+      <member refid="classdakku_1_1Point_1aa42db7f4fcc358dda0322ad91b45b7e7" prot="public" virt="non-virtual"><scope>dakku::Point</scope><name>operator+</name></member>
       <member refid="classdakku_1_1VectorBase_1ae64bc6bd658a94d08f3b407fcb0e7fba" prot="public" virt="non-virtual"><scope>dakku::Point</scope><name>operator+=</name></member>
       <member refid="classdakku_1_1VectorBase_1a3351845012fbb55d54623d8af9c44a79" prot="public" virt="non-virtual"><scope>dakku::Point</scope><name>operator+=</name></member>
       <member refid="classdakku_1_1Point_1ad8e485617ec76d5775ae2efd79522e29" prot="public" virt="non-virtual"><scope>dakku::Point</scope><name>operator-</name></member>
+      <member refid="classdakku_1_1Point_1a8f79a28ee6306ace7ac3e4d7dbee3e22" prot="public" virt="non-virtual"><scope>dakku::Point</scope><name>operator-</name></member>
       <member refid="classdakku_1_1VectorBase_1a838ade15abc3b13923aa49d191c1b796" prot="public" virt="non-virtual" ambiguityscope="VectorBase&lt; T, S, Point&lt; T, S &gt; &gt;::"><scope>dakku::Point</scope><name>operator-</name></member>
       <member refid="classdakku_1_1VectorBase_1ad6e6b4c4275de701f79d952ed56fe9ff" prot="public" virt="non-virtual"><scope>dakku::Point</scope><name>operator-=</name></member>
       <member refid="classdakku_1_1VectorBase_1a846dad82a5cd66baba195846d3da7c9d" prot="public" virt="non-virtual"><scope>dakku::Point</scope><name>operator-=</name></member>
