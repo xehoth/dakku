@@ -11,8 +11,10 @@ int main(int argc, const char *argv[]) {
   Point3f b(1, 2, 3);
   a = (1 + a - 1) * 2;
   a = a / 2.0;
-
+  a = -a;
   std::cout << a << std::endl;
+
+  // std::cout << inverse(a) << std::endl;
 
   // VectorBase<float, 3, Vector<float, 3>> c = b;
   // std::cout << a + b << std::endl;
