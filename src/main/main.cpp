@@ -1,22 +1,21 @@
 #include <core/fwd.h>
 #include <logger/logger.h>
-#include <math/vector_base.h>
+#include <math/vector.h>
 #include <iostream>
 
 using namespace dakku;
 
 int main(int argc, const char *argv[]) {
   std::cout << "Hello World!" << std::endl;
-  VectorBase<float, 2, float> a(1, 2);
-  VectorBase<float, 2, float> b(3, 4);
-  const auto &c = a;
-  c[2];
-  std::cout << a << " " << b << std::endl;
-  a.set(b);
-  VectorBase<float, 2, float> d(a);
-  std::cout << d << std::endl;
-  a = a + b;
+  Vector3f a(1, 2, 3);
+  Point3f b(1, 2, 3);
+  a = (1 + a - 1) * 2;
+  a = a / 2.0;
+
   std::cout << a << std::endl;
+
+  // VectorBase<float, 3, Vector<float, 3>> c = b;
+  // std::cout << a + b << std::endl;
   // test();
   return 0;
 }

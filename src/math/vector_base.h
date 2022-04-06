@@ -11,7 +11,7 @@ namespace dakku {
 
 /**
  * @brief expression template for vector operations
- * 
+ *
  * @tparam T data type
  * @tparam S size of the vector
  * @tparam Derived final vector type (point/vector/normal)
@@ -21,7 +21,7 @@ template <ArithmeticType T, size_t S, typename Derived, typename Expr>
 struct VectorExpression {
   /**
    * @brief get the i'th value
-   * 
+   *
    * @param i the index
    * @return the value
    */
@@ -34,7 +34,7 @@ struct VectorExpression {
 
   /**
    * @brief get the i'th value
-   * 
+   *
    * @param i the index
    * @return the value
    */
@@ -44,7 +44,7 @@ struct VectorExpression {
 
   /**
    * @brief Get the derived expression
-   * 
+   *
    * @return the derived expression
    */
   decltype(auto) getExpression() const {
@@ -53,7 +53,7 @@ struct VectorExpression {
 
   /**
    * @brief Get the derived expression
-   * 
+   *
    * @return the derived expression
    */
   decltype(auto) getExpression() {
@@ -64,25 +64,26 @@ struct VectorExpression {
 
 /**
  * @brief scalar expression
- * 
+ *
  * @tparam T type
  * @tparam S size
  * @tparam Derived derived type
  */
 template <ArithmeticType T, size_t S, typename Derived>
 class VectorScalarExpression
-    : VectorExpression<T, S, Derived, VectorScalarExpression<T, S, Derived>> {
+    : public VectorExpression<T, S, Derived,
+                              VectorScalarExpression<T, S, Derived>> {
  public:
   explicit VectorScalarExpression(const T &value) : value(value) {}
   decltype(auto) get(size_t) const { return value; }
 
  private:
-  T value;
+  const T &value;
 };
 
 /**
  * @brief cast expression
- * 
+ *
  * @tparam T type
  * @tparam S size
  * @tparam Derived derived type
@@ -93,6 +94,8 @@ class VectorCastExpression
     : public VectorExpression<T, S, Derived,
                               VectorCastExpression<T, S, Derived, Expr>> {
  public:
+  explicit VectorCastExpression(const Expr &_e) : e(_e) {}
+  explicit VectorCastExpression(Expr &&_e) : e(std::move(_e)) {}
   decltype(auto) get(size_t i) const { return static_cast<T>(e[i]); }
 
  private:
@@ -107,8 +110,7 @@ class VectorCastExpression
  * @tparam Derived derived class type
  */
 template <ArithmeticType T, size_t S, typename Derived>
-class VectorBase
-    : public VectorExpression<T, S, Derived, VectorBase<T, S, Derived>> {
+class VectorBase : public VectorExpression<T, S, Derived, Derived> {
  public:
   /**
    * @brief Construct a new Vector Base object with
@@ -306,7 +308,7 @@ class VectorBase
 
 /**
  * @brief binary expression
- * 
+ *
  * @tparam T type
  * @tparam S size
  * @tparam D derived type
@@ -327,7 +329,7 @@ class BinaryVectorExpression : public VectorExpression<T, S, D, Expr> {
 
 /**
  * @brief vector add expression
- * 
+ *
  * @tparam T type
  * @tparam S size
  * @tparam D derived type
@@ -346,6 +348,18 @@ class VectorAddExpression
   decltype(auto) get(size_t i) const { return this->u[i] + this->v[i]; }
 };
 
+/**
+ * @brief operator + between vectors
+ *
+ * @tparam T type
+ * @tparam S size
+ * @tparam D derived type
+ * @tparam E1 expr 1 type
+ * @tparam E2 expr 2 type
+ * @param u expr 1
+ * @param v expr 2
+ * @return add expr
+ */
 template <ArithmeticType T, size_t S, typename D, typename E1, typename E2>
 inline VectorAddExpression<T, S, D, E1, E2> operator+(
     const VectorExpression<T, S, D, E1> &u,
@@ -354,10 +368,233 @@ inline VectorAddExpression<T, S, D, E1, E2> operator+(
                                               v.getExpression()};
 }
 
+/**
+ * @brief operator + (vector, scalar)
+ *
+ * @tparam T type
+ * @tparam S size
+ * @tparam D derived type
+ * @tparam E1 expr type
+ * @tparam V scalar type
+ * @param u expr
+ * @param v scalar
+ * @return add expr
+ */
+template <ArithmeticType T, size_t S, typename D, typename E1, ArithmeticType V>
+inline VectorAddExpression<
+    T, S, D, E1, VectorCastExpression<T, S, D, VectorScalarExpression<V, S, D>>>
+operator+(const VectorExpression<T, S, D, E1> &u, const V &v) {
+  return VectorAddExpression<
+      T, S, D, E1,
+      VectorCastExpression<T, S, D, VectorScalarExpression<V, S, D>>>{
+      u.getExpression(),
+      VectorCastExpression<T, S, D, VectorScalarExpression<V, S, D>>{
+          VectorScalarExpression<V, S, D>{v}}};
+}
+
+/**
+ * @brief operator + (scalar, vector)
+ *
+ * @tparam T type
+ * @tparam S size
+ * @tparam D derived type
+ * @tparam E1 expr type
+ * @tparam V scalar type
+ * @param v scalar
+ * @param u expr
+ * @return add expr
+ */
+template <ArithmeticType T, size_t S, typename D, typename E1, ArithmeticType V>
+inline VectorAddExpression<
+    T, S, D, VectorCastExpression<T, S, D, VectorScalarExpression<V, S, D>>, E1>
+operator+(const V &v, const VectorExpression<T, S, D, E1> &u) {
+  return VectorAddExpression<
+      T, S, D, VectorCastExpression<T, S, D, VectorScalarExpression<V, S, D>>,
+      E1>{VectorCastExpression<T, S, D, VectorScalarExpression<V, S, D>>{
+              VectorScalarExpression<V, S, D>{v}},
+          u.getExpression()};
+}
+
+/**
+ * @brief vector sub expression
+ *
+ * @tparam T type
+ * @tparam S size
+ * @tparam D derived type
+ * @tparam E1 expression 1
+ * @tparam E2 expression 2
+ */
+template <ArithmeticType T, size_t S, typename D, typename E1, typename E2>
+class VectorSubExpression
+    : public BinaryVectorExpression<T, S, D, E1, E2,
+                                    VectorSubExpression<T, S, D, E1, E2>> {
+ public:
+  using BinaryVectorExpression<
+      T, S, D, E1, E2,
+      VectorSubExpression<T, S, D, E1, E2>>::BinaryVectorExpression;
+
+  decltype(auto) get(size_t i) const { return this->u[i] - this->v[i]; }
+};
+
+/**
+ * @brief operator - between vectors
+ *
+ * @tparam T type
+ * @tparam S size
+ * @tparam D derived type
+ * @tparam E1 expr 1 type
+ * @tparam E2 expr 2 type
+ * @param u expr 1
+ * @param v expr 2
+ * @return add expr
+ */
+template <ArithmeticType T, size_t S, typename D, typename E1, typename E2>
+inline VectorSubExpression<T, S, D, E1, E2> operator-(
+    const VectorExpression<T, S, D, E1> &u,
+    const VectorExpression<T, S, D, E2> &v) {
+  return VectorSubExpression<T, S, D, E1, E2>{u.getExpression(),
+                                              v.getExpression()};
+}
+
+template <ArithmeticType T, size_t S, typename D, typename E1, ArithmeticType V>
+inline VectorSubExpression<
+    T, S, D, E1, VectorCastExpression<T, S, D, VectorScalarExpression<V, S, D>>>
+operator-(const VectorExpression<T, S, D, E1> &u, const V &v) {
+  return VectorSubExpression<
+      T, S, D, E1,
+      VectorCastExpression<T, S, D, VectorScalarExpression<V, S, D>>>{
+      u.getExpression(),
+      VectorCastExpression<T, S, D, VectorScalarExpression<V, S, D>>{
+          VectorScalarExpression<V, S, D>{v}}};
+}
+
+template <ArithmeticType T, size_t S, typename D, typename E1, ArithmeticType V>
+inline VectorSubExpression<
+    T, S, D, VectorCastExpression<T, S, D, VectorScalarExpression<V, S, D>>, E1>
+operator-(const V &v, const VectorExpression<T, S, D, E1> &u) {
+  return VectorSubExpression<
+      T, S, D, VectorCastExpression<T, S, D, VectorScalarExpression<V, S, D>>,
+      E1>{VectorCastExpression<T, S, D, VectorScalarExpression<V, S, D>>{
+              VectorScalarExpression<V, S, D>{v}},
+          u.getExpression()};
+}
+
+/**
+ * @brief vector mul expression
+ *
+ * @tparam T type
+ * @tparam S size
+ * @tparam D derived type
+ * @tparam E1 expression 1
+ * @tparam E2 expression 2
+ */
+template <ArithmeticType T, size_t S, typename D, typename E1, typename E2>
+class VectorMulExpression
+    : public BinaryVectorExpression<T, S, D, E1, E2,
+                                    VectorMulExpression<T, S, D, E1, E2>> {
+ public:
+  using BinaryVectorExpression<
+      T, S, D, E1, E2,
+      VectorMulExpression<T, S, D, E1, E2>>::BinaryVectorExpression;
+
+  decltype(auto) get(size_t i) const { return this->u[i] * this->v[i]; }
+};
+
+/**
+ * @brief operator * between vectors
+ *
+ * @tparam T type
+ * @tparam S size
+ * @tparam D derived type
+ * @tparam E1 expr 1 type
+ * @tparam E2 expr 2 type
+ * @param u expr 1
+ * @param v expr 2
+ * @return add expr
+ */
+template <ArithmeticType T, size_t S, typename D, typename E1, typename E2>
+inline VectorMulExpression<T, S, D, E1, E2> operator*(
+    const VectorExpression<T, S, D, E1> &u,
+    const VectorExpression<T, S, D, E2> &v) {
+  return VectorMulExpression<T, S, D, E1, E2>{u.getExpression(),
+                                              v.getExpression()};
+}
+
+template <ArithmeticType T, size_t S, typename D, typename E1, ArithmeticType V>
+inline VectorMulExpression<
+    T, S, D, E1, VectorCastExpression<T, S, D, VectorScalarExpression<V, S, D>>>
+operator*(const VectorExpression<T, S, D, E1> &u, const V &v) {
+  return VectorMulExpression<
+      T, S, D, E1,
+      VectorCastExpression<T, S, D, VectorScalarExpression<V, S, D>>>{
+      u.getExpression(),
+      VectorCastExpression<T, S, D, VectorScalarExpression<V, S, D>>{
+          VectorScalarExpression<V, S, D>{v}}};
+}
+
+template <ArithmeticType T, size_t S, typename D, typename E1, ArithmeticType V>
+inline VectorMulExpression<
+    T, S, D, VectorCastExpression<T, S, D, VectorScalarExpression<V, S, D>>, E1>
+operator*(const V &v, const VectorExpression<T, S, D, E1> &u) {
+  return VectorMulExpression<
+      T, S, D, VectorCastExpression<T, S, D, VectorScalarExpression<V, S, D>>,
+      E1>{VectorCastExpression<T, S, D, VectorScalarExpression<V, S, D>>{
+              VectorScalarExpression<V, S, D>{v}},
+          u.getExpression()};
+}
+
+/**
+ * @brief vector div expression
+ *
+ * @tparam T type
+ * @tparam S size
+ * @tparam D derived type
+ * @tparam E1 expression 1
+ * @tparam E2 expression 2
+ */
+template <ArithmeticType T, size_t S, typename D, typename E1, typename E2>
+class VectorDivExpression
+    : public BinaryVectorExpression<T, S, D, E1, E2,
+                                    VectorDivExpression<T, S, D, E1, E2>> {
+ public:
+  using BinaryVectorExpression<
+      T, S, D, E1, E2,
+      VectorDivExpression<T, S, D, E1, E2>>::BinaryVectorExpression;
+
+  decltype(auto) get(size_t i) const { return this->u[i] / this->v[i]; }
+};
+
+/**
+ * @brief operator / between vectors
+ *
+ * @tparam T type
+ * @tparam S size
+ * @tparam D derived type
+ * @tparam E1 expr 1 type
+ * @tparam E2 expr 2 type
+ * @param u expr 1
+ * @param v expr 2
+ * @return add expr
+ */
+template <ArithmeticType T, size_t S, typename D, typename E1, typename E2>
+inline VectorDivExpression<T, S, D, E1, E2> operator/(
+    const VectorExpression<T, S, D, E1> &u,
+    const VectorExpression<T, S, D, E2> &v) {
+  return VectorDivExpression<T, S, D, E1, E2>{u.getExpression(),
+                                              v.getExpression()};
+}
+
+template <ArithmeticType T, size_t S, typename D, typename E1, ArithmeticType V>
+inline decltype(auto) operator/(const VectorExpression<T, S, D, E1> &u,
+                                const V &v) {
+  return u * static_cast<T>(T{1} / v);
+}
 
 /*! @page vector_base Vector Base
 
-dakku currently use [expression template](https://en.wikipedia.org/wiki/Expression_templates) to implement vectors.
+dakku currently uses [expression
+template](https://en.wikipedia.org/wiki/Expression_templates) to implement
+vectors.
 */
 }  // namespace dakku
 #endif
