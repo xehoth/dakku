@@ -7,10 +7,13 @@
     <member refid="classdakku_1_1Logger_1a25793d0b435146d8e4a813dd39a486e1" kind="function"><name>Logger</name></member>
   </compound>
   <compound refid="classdakku_1_1Normal" kind="class"><name>dakku::Normal</name>
+    <member refid="classdakku_1_1Normal_1a5028bef9666f97b23bb23f11e3f4af7e" kind="friend"><name>operator-</name></member>
   </compound>
   <compound refid="classdakku_1_1Point" kind="class"><name>dakku::Point</name>
+    <member refid="classdakku_1_1Point_1ad8e485617ec76d5775ae2efd79522e29" kind="friend"><name>operator-</name></member>
   </compound>
   <compound refid="classdakku_1_1Vector" kind="class"><name>dakku::Vector</name>
+    <member refid="classdakku_1_1Vector_1a316d381a8ae7de1d299f2131a042a349" kind="friend"><name>operator-</name></member>
   </compound>
   <compound refid="classdakku_1_1VectorBase" kind="class"><name>dakku::VectorBase</name>
     <member refid="classdakku_1_1VectorBase_1adfeaa30c58620f0e4e8cbc9bc911c60c" kind="variable"><name>_data</name></member>
@@ -37,10 +40,25 @@
     <member refid="classdakku_1_1VectorBase_1a164c7c788c4967c1c6ebcf7ae8466ba8" kind="function"><name>derived</name></member>
     <member refid="classdakku_1_1VectorBase_1abb0f3e3fa71aaf063c3a5a6002fcbf1f" kind="function"><name>derived</name></member>
     <member refid="classdakku_1_1VectorBase_1ae64bc6bd658a94d08f3b407fcb0e7fba" kind="function"><name>operator+=</name></member>
+    <member refid="classdakku_1_1VectorBase_1a3351845012fbb55d54623d8af9c44a79" kind="function"><name>operator+=</name></member>
+    <member refid="classdakku_1_1VectorBase_1ad6e6b4c4275de701f79d952ed56fe9ff" kind="function"><name>operator-=</name></member>
+    <member refid="classdakku_1_1VectorBase_1a846dad82a5cd66baba195846d3da7c9d" kind="function"><name>operator-=</name></member>
+    <member refid="classdakku_1_1VectorBase_1a5353b2617ac5343efeee0f325632d772" kind="function"><name>operator*=</name></member>
+    <member refid="classdakku_1_1VectorBase_1ad4136ad736840507f9fc902d9d6c6dfd" kind="function"><name>operator*=</name></member>
+    <member refid="classdakku_1_1VectorBase_1add8d1fe3254c662f2c6bfc6beb541c9e" kind="function"><name>operator/=</name></member>
+    <member refid="classdakku_1_1VectorBase_1ad5b06200c617ca92964ad3d81787848f" kind="function"><name>operator/=</name></member>
     <member refid="classdakku_1_1VectorBase_1a531ed133257631916fc3384392b2ab7f" kind="friend"><name>operator&lt;&lt;</name></member>
     <member refid="classdakku_1_1VectorBase_1a6a604c24b1049ff1e9c3c12e9a26fff9" kind="friend"><name>operator+</name></member>
     <member refid="classdakku_1_1VectorBase_1aaeb63fd4c52bae59b7e867829e8b1025" kind="friend"><name>operator+</name></member>
     <member refid="classdakku_1_1VectorBase_1a5de1f00d31ab772c98c21a49c30dc9f8" kind="friend"><name>operator+</name></member>
+    <member refid="classdakku_1_1VectorBase_1a6a6648d452714192c0f8183c3dbfa55f" kind="friend"><name>operator-</name></member>
+    <member refid="classdakku_1_1VectorBase_1ae0aaf7fd6e1e306948150d83050aff99" kind="friend"><name>operator-</name></member>
+    <member refid="classdakku_1_1VectorBase_1a0c6afadb59bcfa664f49854936d20346" kind="friend"><name>operator*</name></member>
+    <member refid="classdakku_1_1VectorBase_1ad0aaef0a09d0762e9337d9646ef5fa21" kind="friend"><name>operator*</name></member>
+    <member refid="classdakku_1_1VectorBase_1a0cad9fc72b0af9e62bcdfa8867e72568" kind="friend"><name>operator*</name></member>
+    <member refid="classdakku_1_1VectorBase_1ab9d87c9943039f3db32f3a6c703400b0" kind="friend"><name>operator/</name></member>
+    <member refid="classdakku_1_1VectorBase_1aa48350ae3efe11576023da906438f0c8" kind="friend"><name>operator/</name></member>
+    <member refid="classdakku_1_1VectorBase_1ab4cd237f595d4bfe30fe64074eccd277" kind="friend"><name>operator/</name></member>
   </compound>
   <compound refid="conceptdakku_1_1ArithmeticType" kind="concept"><name>dakku::ArithmeticType</name>
   </compound>
