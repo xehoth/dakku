@@ -1,4 +1,4 @@
-name: build
+name: build & test
 
 on:
   push:
@@ -31,5 +31,9 @@ jobs:
       - name: XMake Config for Clang
         if: matrix.os == 'ubuntu-latest'
         run: 'xmake f --toolchain=clang -c -y'
+      - name: Build Test
+        run: 'xmake f --build_test=y -y'
       - name: Build
         run: xmake build -y
+      - name: Run Test
+        run: xmake run test

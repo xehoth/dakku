@@ -9,9 +9,7 @@ int main(int argc, const char *argv[]) {
   std::cout << "Hello World!" << std::endl;
   Vector3f a(1, 2, 3);
   Point3f b(1, 2, 3);
-  a = (1 + a - 1) * 2;
-  a = a / 2.0;
-  a = -a;
+  
   std::cout << a << std::endl;
 
   // std::cout << inverse(a) << std::endl;

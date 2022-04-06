@@ -2,6 +2,7 @@
 #define DAKKU_LOGGER_LOGGER_H_
 #include <logger/fwd.h>
 #include <spdlog/spdlog.h>
+#include <spdlog/fmt/ostr.h>
 #include <cstdlib>
 
 namespace dakku {
