@@ -8,18 +8,34 @@ template <ArithmeticType T, size_t S>
 class Vector : public VectorBase<T, S, Vector<T, S>> {
  public:
   using VectorBase<T, S, Vector<T, S>>::VectorBase;
+
+  friend Vector operator-(const Vector &a, const Vector &b) {
+    Vector ret = a;
+    ret -= b;
+    return ret;
+  }
 };
 
 template <ArithmeticType T, size_t S>
 class Point : public VectorBase<T, S, Point<T, S>> {
  public:
   using VectorBase<T, S, Point<T, S>>::VectorBase;
+
+  friend Vector<T, S> operator-(const Point &a, const Point &b) {
+    return Vector<T, S>(a) - Vector<T, S>(b);
+  }
 };
 
 template <ArithmeticType T, size_t S>
 class Normal : public VectorBase<T, S, Normal<T, S>> {
  public:
   using VectorBase<T, S, Normal<T, S>>::VectorBase;
+  
+   friend Normal operator-(const Normal &a, const Normal &b) {
+    Normal ret = a;
+    ret -= b;
+    return ret;
+  }
 };
 
 template <ArithmeticType T>

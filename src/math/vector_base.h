@@ -219,7 +219,7 @@ class VectorBase {
    * @return $-\vec v$
    */
   Derived operator-() const {
-    Derived ret = *this;
+    Derived ret = derived();
     for (size_t i = 0; i < S; ++i) ret[i] = -ret[i];
     return ret;
   }
@@ -253,6 +253,18 @@ class VectorBase {
   /**
    * @brief addition
    *
+   * @param rhs scalar
+   * @return this
+   */
+  template <ArithmeticType V>
+  Derived &operator+=(const V &rhs) {
+    for (size_t i = 0; i < S; ++i) _data[i] += rhs;
+    return derived();
+  }
+
+  /**
+   * @brief addition
+   *
    * @param a vector $\vec a$
    * @param b vector $\vec b$
    * @return $\vec a + \vec b$
@@ -272,7 +284,9 @@ class VectorBase {
    */
   template <ArithmeticType U>
   friend Derived operator+(const Derived &a, const U &b) {
-    return a + Derived(b);
+    Derived ret = a;
+    ret += b;
+    return ret;
   }
 
   /**
@@ -284,7 +298,181 @@ class VectorBase {
    */
   template <ArithmeticType U>
   friend Derived operator+(const U &a, const Derived &b) {
-    return Derived(a) + b;
+    return b + a;
+  }
+
+  /**
+   * @brief subtraction
+   *
+   * @param rhs another vector
+   * @return this
+   */
+  Derived &operator-=(const Derived &rhs) {
+    for (size_t i = 0; i < S; ++i) _data[i] -= rhs[i];
+    return derived();
+  }
+
+  /**
+   * @brief subtraction
+   *
+   * @param rhs scalar
+   * @return this
+   */
+  template <ArithmeticType V>
+  Derived &operator-=(const V &rhs) {
+    for (size_t i = 0; i < S; ++i) _data[i] -= rhs;
+    return derived();
+  }
+
+  /**
+   * @brief subtraction
+   *
+   * @param a $\vec a$
+   * @param b $b$
+   * @return elementwise sub
+   */
+  template <ArithmeticType U>
+  friend Derived operator-(const Derived &a, const U &b) {
+    Derived ret = a;
+    ret -= b;
+    return ret;
+  }
+
+  /**
+   * @brief subtraction
+   *
+   * @param a $a$
+   * @param b $\vec b$
+   * @return elementwise sub
+   */
+  template <ArithmeticType U>
+  friend Derived operator-(const U &a, const Derived &b) {
+    Derived ret = -b;
+    ret += a;
+    return ret;
+  }
+
+  /**
+   * @brief multiplication
+   *
+   * @param rhs another vector
+   * @return this
+   */
+  Derived &operator*=(const Derived &rhs) {
+    for (size_t i = 0; i < S; ++i) _data[i] *= rhs[i];
+    return derived();
+  }
+
+  /**
+   * @brief multiplication
+   *
+   * @param rhs scalar
+   * @return this
+   */
+  template <ArithmeticType V>
+  Derived &operator*=(const V &rhs) {
+    for (size_t i = 0; i < S; ++i) _data[i] *= rhs;
+    return derived();
+  }
+
+  /**
+   * @brief multiplication
+   *
+   * @param a vector $\vec a$
+   * @param b vector $\vec b$
+   * @return elementwise mul
+   */
+  friend Derived operator*(const Derived &a, const Derived &b) {
+    Derived ret = a;
+    ret *= b;
+    return ret;
+  }
+
+  /**
+   * @brief multiplication
+   *
+   * @param a $\vec a$
+   * @param b $b$
+   * @return $b\vec a$
+   */
+  template <ArithmeticType U>
+  friend Derived operator*(const Derived &a, const U &b) {
+    Derived ret = a;
+    ret *= b;
+    return ret;
+  }
+
+  /**
+   * @brief multiplication
+   *
+   * @param a $a$
+   * @param b $\vec b$
+   * @return elementwise mul
+   */
+  template <ArithmeticType U>
+  friend Derived operator*(const U &a, const Derived &b) {
+    return b * a;
+  }
+
+  /**
+   * @brief division
+   *
+   * @param rhs another vector
+   * @return this
+   */
+  Derived &operator/=(const Derived &rhs) {
+    for (size_t i = 0; i < S; ++i) _data[i] /= rhs[i];
+    return derived();
+  }
+
+  /**
+   * @brief division
+   *
+   * @param rhs scalar
+   * @return this
+   */
+  template <ArithmeticType V>
+  Derived &operator/=(const V &rhs) {
+    return derived() *= static_cast<T>(T{1} / rhs);
+  }
+
+  /**
+   * @brief division
+   *
+   * @param a vector $\vec a$
+   * @param b vector $\vec b$
+   * @return elementwise div
+   */
+  friend Derived operator/(const Derived &a, const Derived &b) {
+    Derived ret = a;
+    ret /= b;
+    return ret;
+  }
+
+  /**
+   * @brief division
+   *
+   * @param a $\vec a$
+   * @param b $b$
+   * @return $\vec a / b$
+   */
+  template <ArithmeticType U>
+  friend Derived operator/(const Derived &a, const U &b) {
+    Derived ret = a;
+    ret /= b;
+    return ret;
+  }
+
+  /**
+   * @brief division
+   *
+   * @param a $a$
+   * @param b $\vec b$
+   * @return elementwise div (broad cast $a$)
+   */
+  template <ArithmeticType U>
+  friend Derived operator/(const U &a, const Derived &b) {
+    return Derived(a) / b;
   }
 
  protected:
