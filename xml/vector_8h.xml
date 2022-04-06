@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="vector_8h" kind="file" language="C++">
+    <compoundname>vector.h</compoundname>
+    <includes refid="vector__base_8h" local="no">math/vector_base.h</includes>
+    <incdepgraph>
+      <node id="10">
+        <label>logger/fwd.h</label>
+        <link refid="logger_2fwd_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>logger/logger.h</label>
+        <link refid="logger_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>math/fwd.h</label>
+        <link refid="math_2fwd_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/math/vector.h</label>
+        <link refid="vector_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>math/vector_base.h</label>
+        <link refid="vector__base_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>platform.h</label>
+        <link refid="platform_8h"/>
+      </node>
+      <node id="14">
+        <label>algorithm</label>
+      </node>
+      <node id="13">
+        <label>array</label>
+      </node>
+      <node id="8">
+        <label>cmath</label>
+      </node>
+      <node id="12">
+        <label>cstdlib</label>
+      </node>
+      <node id="6">
+        <label>limits</label>
+      </node>
+      <node id="7">
+        <label>numbers</label>
+      </node>
+      <node id="16">
+        <label>ostream</label>
+      </node>
+      <node id="11">
+        <label>spdlog/spdlog.h</label>
+      </node>
+      <node id="15">
+        <label>string</label>
+      </node>
+      <node id="5">
+        <label>type_traits</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classdakku_1_1Vector" prot="public">dakku::Vector</innerclass>
+    <innerclass refid="classdakku_1_1Point" prot="public">dakku::Point</innerclass>
+    <innerclass refid="classdakku_1_1Normal" prot="public">dakku::Normal</innerclass>
+    <innernamespace refid="namespacedakku">dakku</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>DAKKU_MATH_VECTOR_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DAKKU_MATH_VECTOR_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="vector__base_8h" kindref="compound">math/vector_base.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacedakku" kindref="compound">dakku</ref><sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;ArithmeticType<sp/>T,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>S&gt;</highlight></codeline>
+<codeline lineno="8" refid="classdakku_1_1Vector" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdakku_1_1Vector" kindref="compound">Vector</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1VectorBase" kindref="compound">VectorBase</ref>&lt;T,<sp/>S,<sp/>Vector&lt;T,<sp/>S&gt;&gt;<sp/>{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1VectorBase" kindref="compound">VectorBase&lt;T, S, Vector&lt;T, S&gt;</ref>&gt;<ref refid="classdakku_1_1VectorBase_1acae6683bc17650d9ff87aafa8cfb6b18" kindref="member">::VectorBase</ref>;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;ArithmeticType<sp/>T,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>S&gt;</highlight></codeline>
+<codeline lineno="14" refid="classdakku_1_1Point" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdakku_1_1Point" kindref="compound">Point</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1VectorBase" kindref="compound">VectorBase</ref>&lt;T,<sp/>S,<sp/>Point&lt;T,<sp/>S&gt;&gt;<sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1VectorBase" kindref="compound">VectorBase&lt;T, S, Point&lt;T, S&gt;</ref>&gt;<ref refid="classdakku_1_1VectorBase_1acae6683bc17650d9ff87aafa8cfb6b18" kindref="member">::VectorBase</ref>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;ArithmeticType<sp/>T,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>S&gt;</highlight></codeline>
+<codeline lineno="20" refid="classdakku_1_1Normal" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdakku_1_1Normal" kindref="compound">Normal</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1VectorBase" kindref="compound">VectorBase</ref>&lt;T,<sp/>S,<sp/>Normal&lt;T,<sp/>S&gt;&gt;<sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1VectorBase" kindref="compound">VectorBase&lt;T, S, Normal&lt;T, S&gt;</ref>&gt;<ref refid="classdakku_1_1VectorBase_1acae6683bc17650d9ff87aafa8cfb6b18" kindref="member">::VectorBase</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;ArithmeticType<sp/>T&gt;</highlight></codeline>
+<codeline lineno="26" refid="namespacedakku_1ae7de7b89895e76d4a3f1c653393dde69" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Vector" kindref="compound">Vector2</ref><sp/>=<sp/><ref refid="classdakku_1_1Vector" kindref="compound">Vector&lt;T, 2&gt;</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;ArithmeticType<sp/>T&gt;</highlight></codeline>
+<codeline lineno="28" refid="namespacedakku_1a3109ad27ee688fdd3462458714d7f1e7" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Vector" kindref="compound">Vector3</ref><sp/>=<sp/><ref refid="classdakku_1_1Vector" kindref="compound">Vector&lt;T, 3&gt;</ref>;</highlight></codeline>
+<codeline lineno="29" refid="namespacedakku_1abfd5a177365f8ffec7ab23d6cb6db8c0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Vector" kindref="compound">Vector2f</ref><sp/>=<sp/><ref refid="classdakku_1_1Vector" kindref="compound">Vector2&lt;float&gt;</ref>;</highlight></codeline>
+<codeline lineno="30" refid="namespacedakku_1aa12b2f1fc9684bf8ba7fbf5b600685c6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Vector" kindref="compound">Vector3f</ref><sp/>=<sp/><ref refid="classdakku_1_1Vector" kindref="compound">Vector3&lt;float&gt;</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;ArithmeticType<sp/>T&gt;</highlight></codeline>
+<codeline lineno="33" refid="namespacedakku_1a56669db36360e52f7c7113768c7b35aa" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Point" kindref="compound">Point2</ref><sp/>=<sp/><ref refid="classdakku_1_1Point" kindref="compound">Point&lt;T, 2&gt;</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;ArithmeticType<sp/>T&gt;</highlight></codeline>
+<codeline lineno="35" refid="namespacedakku_1aace4734db951234de5eb4567db0d1737" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Point" kindref="compound">Point3</ref><sp/>=<sp/><ref refid="classdakku_1_1Point" kindref="compound">Point&lt;T, 3&gt;</ref>;</highlight></codeline>
+<codeline lineno="36" refid="namespacedakku_1a9910f23501fd2ef5e9a829cdab0992be" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Point" kindref="compound">Point2f</ref><sp/>=<sp/><ref refid="classdakku_1_1Point" kindref="compound">Point2&lt;float&gt;</ref>;</highlight></codeline>
+<codeline lineno="37" refid="namespacedakku_1a8323b90fda75af310a40a4e0d6bdb3f0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Point" kindref="compound">Point3f</ref><sp/>=<sp/><ref refid="classdakku_1_1Point" kindref="compound">Point3&lt;float&gt;</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;ArithmeticType<sp/>T&gt;</highlight></codeline>
+<codeline lineno="40" refid="namespacedakku_1ade3699e7ff88bf28ae0ea31baafab11c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Normal" kindref="compound">Normal3</ref><sp/>=<sp/><ref refid="classdakku_1_1Normal" kindref="compound">Normal&lt;T, 3&gt;</ref>;</highlight></codeline>
+<codeline lineno="41" refid="namespacedakku_1a9b64e14dceffe6ac84029f1d40d6ec41" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Normal" kindref="compound">Normal3f</ref><sp/>=<sp/><ref refid="classdakku_1_1Normal" kindref="compound">Normal3&lt;float&gt;</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dakku</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="src/math/vector.h"/>
+  </compounddef>
+</doxygen>

@@ -21,6 +21,21 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1Normal/</loc>
+         <lastmod>2022-04-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1Point/</loc>
+         <lastmod>2022-04-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1Vector/</loc>
+         <lastmod>2022-04-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1VectorAddExpression/</loc>
          <lastmod>2022-04-06</lastmod>
          <changefreq>daily</changefreq>
@@ -36,7 +51,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1VectorDivExpression/</loc>
+         <lastmod>2022-04-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1VectorMulExpression/</loc>
+         <lastmod>2022-04-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1VectorScalarExpression/</loc>
+         <lastmod>2022-04-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1VectorSubExpression/</loc>
          <lastmod>2022-04-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -97,6 +127,11 @@
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/platform_8h/</loc>
+         <lastmod>2022-04-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Files/vector_8h/</loc>
          <lastmod>2022-04-06</lastmod>
          <changefreq>daily</changefreq>
     </url>

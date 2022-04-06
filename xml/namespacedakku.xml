@@ -4,11 +4,184 @@
     <compoundname>dakku</compoundname>
     <innerclass refid="classdakku_1_1BinaryVectorExpression" prot="public">dakku::BinaryVectorExpression</innerclass>
     <innerclass refid="classdakku_1_1Logger" prot="public">dakku::Logger</innerclass>
+    <innerclass refid="classdakku_1_1Normal" prot="public">dakku::Normal</innerclass>
+    <innerclass refid="classdakku_1_1Point" prot="public">dakku::Point</innerclass>
+    <innerclass refid="classdakku_1_1Vector" prot="public">dakku::Vector</innerclass>
     <innerclass refid="classdakku_1_1VectorAddExpression" prot="public">dakku::VectorAddExpression</innerclass>
     <innerclass refid="classdakku_1_1VectorBase" prot="public">dakku::VectorBase</innerclass>
     <innerclass refid="classdakku_1_1VectorCastExpression" prot="public">dakku::VectorCastExpression</innerclass>
+    <innerclass refid="classdakku_1_1VectorDivExpression" prot="public">dakku::VectorDivExpression</innerclass>
     <innerclass refid="structdakku_1_1VectorExpression" prot="public">dakku::VectorExpression</innerclass>
+    <innerclass refid="classdakku_1_1VectorMulExpression" prot="public">dakku::VectorMulExpression</innerclass>
     <innerclass refid="classdakku_1_1VectorScalarExpression" prot="public">dakku::VectorScalarExpression</innerclass>
+    <innerclass refid="classdakku_1_1VectorSubExpression" prot="public">dakku::VectorSubExpression</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespacedakku_1ae7de7b89895e76d4a3f1c653393dde69" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>ArithmeticType</type>
+            <declname>T</declname>
+            <defname>T</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classdakku_1_1Vector" kindref="compound">Vector</ref>&lt; T, 2 &gt;</type>
+        <definition>using dakku::Vector2 = typedef Vector&lt;T, 2&gt;</definition>
+        <argsstring></argsstring>
+        <name>Vector2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/math/vector.h" line="26" column="1" bodyfile="src/math/vector.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacedakku_1a3109ad27ee688fdd3462458714d7f1e7" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>ArithmeticType</type>
+            <declname>T</declname>
+            <defname>T</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classdakku_1_1Vector" kindref="compound">Vector</ref>&lt; T, 3 &gt;</type>
+        <definition>using dakku::Vector3 = typedef Vector&lt;T, 3&gt;</definition>
+        <argsstring></argsstring>
+        <name>Vector3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/math/vector.h" line="28" column="1" bodyfile="src/math/vector.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacedakku_1abfd5a177365f8ffec7ab23d6cb6db8c0" prot="public" static="no">
+        <type><ref refid="namespacedakku_1ae7de7b89895e76d4a3f1c653393dde69" kindref="member">Vector2</ref>&lt; float &gt;</type>
+        <definition>using dakku::Vector2f = typedef Vector2&lt;float&gt;</definition>
+        <argsstring></argsstring>
+        <name>Vector2f</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/math/vector.h" line="29" column="1" bodyfile="src/math/vector.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacedakku_1aa12b2f1fc9684bf8ba7fbf5b600685c6" prot="public" static="no">
+        <type><ref refid="namespacedakku_1a3109ad27ee688fdd3462458714d7f1e7" kindref="member">Vector3</ref>&lt; float &gt;</type>
+        <definition>using dakku::Vector3f = typedef Vector3&lt;float&gt;</definition>
+        <argsstring></argsstring>
+        <name>Vector3f</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/math/vector.h" line="30" column="1" bodyfile="src/math/vector.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacedakku_1a56669db36360e52f7c7113768c7b35aa" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>ArithmeticType</type>
+            <declname>T</declname>
+            <defname>T</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classdakku_1_1Point" kindref="compound">Point</ref>&lt; T, 2 &gt;</type>
+        <definition>using dakku::Point2 = typedef Point&lt;T, 2&gt;</definition>
+        <argsstring></argsstring>
+        <name>Point2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/math/vector.h" line="33" column="1" bodyfile="src/math/vector.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacedakku_1aace4734db951234de5eb4567db0d1737" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>ArithmeticType</type>
+            <declname>T</declname>
+            <defname>T</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classdakku_1_1Point" kindref="compound">Point</ref>&lt; T, 3 &gt;</type>
+        <definition>using dakku::Point3 = typedef Point&lt;T, 3&gt;</definition>
+        <argsstring></argsstring>
+        <name>Point3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/math/vector.h" line="35" column="1" bodyfile="src/math/vector.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacedakku_1a9910f23501fd2ef5e9a829cdab0992be" prot="public" static="no">
+        <type><ref refid="namespacedakku_1a56669db36360e52f7c7113768c7b35aa" kindref="member">Point2</ref>&lt; float &gt;</type>
+        <definition>using dakku::Point2f = typedef Point2&lt;float&gt;</definition>
+        <argsstring></argsstring>
+        <name>Point2f</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/math/vector.h" line="36" column="1" bodyfile="src/math/vector.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacedakku_1a8323b90fda75af310a40a4e0d6bdb3f0" prot="public" static="no">
+        <type><ref refid="namespacedakku_1aace4734db951234de5eb4567db0d1737" kindref="member">Point3</ref>&lt; float &gt;</type>
+        <definition>using dakku::Point3f = typedef Point3&lt;float&gt;</definition>
+        <argsstring></argsstring>
+        <name>Point3f</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/math/vector.h" line="37" column="1" bodyfile="src/math/vector.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacedakku_1ade3699e7ff88bf28ae0ea31baafab11c" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>ArithmeticType</type>
+            <declname>T</declname>
+            <defname>T</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classdakku_1_1Normal" kindref="compound">Normal</ref>&lt; T, 3 &gt;</type>
+        <definition>using dakku::Normal3 = typedef Normal&lt;T, 3&gt;</definition>
+        <argsstring></argsstring>
+        <name>Normal3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/math/vector.h" line="40" column="1" bodyfile="src/math/vector.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacedakku_1a9b64e14dceffe6ac84029f1d40d6ec41" prot="public" static="no">
+        <type><ref refid="namespacedakku_1ade3699e7ff88bf28ae0ea31baafab11c" kindref="member">Normal3</ref>&lt; float &gt;</type>
+        <definition>using dakku::Normal3f = typedef Normal3&lt;float&gt;</definition>
+        <argsstring></argsstring>
+        <name>Normal3f</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/math/vector.h" line="41" column="1" bodyfile="src/math/vector.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
       <sectiondef kind="var">
       <memberdef kind="variable" id="namespacedakku_1aa5d538038f8e722b909be739b5828692" prot="public" static="no" mutable="no">
         <type>class <ref refid="logger_2fwd_8h_1abccce192e40efefc3c932da87c29a2da" kindref="member">DAKKU_EXPORT_LOGGER</ref></type>
@@ -168,12 +341,818 @@
           <declname>v</declname>
         </param>
         <briefdescription>
+<para>operator + between vectors </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>S</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>D</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>derived type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>E1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>expr 1 type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>E2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>expr 2 type </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>u</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>expr 1 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>expr 2 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>add expr </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/math/vector_base.h" line="364" column="28" bodyfile="src/math/vector_base.h" bodystart="364" bodyend="369"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1a69f5544cd2f2b30dfdaf22f66eef9192" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>ArithmeticType</type>
+            <declname>T</declname>
+            <defname>T</defname>
+          </param>
+          <param>
+            <type>size_t</type>
+            <declname>S</declname>
+            <defname>S</defname>
+          </param>
+          <param>
+            <type>typename D</type>
+          </param>
+          <param>
+            <type>typename E1</type>
+          </param>
+          <param>
+            <type>ArithmeticType</type>
+            <declname>V</declname>
+            <defname>V</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classdakku_1_1VectorAddExpression" kindref="compound">VectorAddExpression</ref>&lt; T, S, D, E1, <ref refid="classdakku_1_1VectorCastExpression" kindref="compound">VectorCastExpression</ref>&lt; T, S, D, <ref refid="classdakku_1_1VectorScalarExpression" kindref="compound">VectorScalarExpression</ref>&lt; V, S, D &gt; &gt; &gt;</type>
+        <definition>VectorAddExpression&lt; T, S, D, E1, VectorCastExpression&lt; T, S, D, VectorScalarExpression&lt; V, S, D &gt; &gt; &gt; dakku::operator+</definition>
+        <argsstring>(const VectorExpression&lt; T, S, D, E1 &gt; &amp;u, const V &amp;v)</argsstring>
+        <name>operator+</name>
+        <param>
+          <type>const <ref refid="structdakku_1_1VectorExpression" kindref="compound">VectorExpression</ref>&lt; T, S, D, E1 &gt; &amp;</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type>const V &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>operator + (vector, scalar) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>S</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>D</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>derived type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>E1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>expr type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>V</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>scalar type </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>u</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>expr </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>scalar </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>add expr </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/math/vector_base.h" line="386" column="1" bodyfile="src/math/vector_base.h" bodystart="386" bodyend="393"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1a14f899c028c71e38fe5d4a957c256108" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>ArithmeticType</type>
+            <declname>T</declname>
+            <defname>T</defname>
+          </param>
+          <param>
+            <type>size_t</type>
+            <declname>S</declname>
+            <defname>S</defname>
+          </param>
+          <param>
+            <type>typename D</type>
+          </param>
+          <param>
+            <type>typename E1</type>
+          </param>
+          <param>
+            <type>ArithmeticType</type>
+            <declname>V</declname>
+            <defname>V</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classdakku_1_1VectorAddExpression" kindref="compound">VectorAddExpression</ref>&lt; T, S, D, <ref refid="classdakku_1_1VectorCastExpression" kindref="compound">VectorCastExpression</ref>&lt; T, S, D, <ref refid="classdakku_1_1VectorScalarExpression" kindref="compound">VectorScalarExpression</ref>&lt; V, S, D &gt; &gt;, E1 &gt;</type>
+        <definition>VectorAddExpression&lt; T, S, D, VectorCastExpression&lt; T, S, D, VectorScalarExpression&lt; V, S, D &gt; &gt;, E1 &gt; dakku::operator+</definition>
+        <argsstring>(const V &amp;v, const VectorExpression&lt; T, S, D, E1 &gt; &amp;u)</argsstring>
+        <name>operator+</name>
+        <param>
+          <type>const V &amp;</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structdakku_1_1VectorExpression" kindref="compound">VectorExpression</ref>&lt; T, S, D, E1 &gt; &amp;</type>
+          <declname>u</declname>
+        </param>
+        <briefdescription>
+<para>operator + (scalar, vector) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>S</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>D</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>derived type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>E1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>expr type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>V</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>scalar type </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>scalar </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>u</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>expr </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>add expr </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/math/vector_base.h" line="410" column="1" bodyfile="src/math/vector_base.h" bodystart="410" bodyend="416"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1a0941530b21fc4f469f76775fccb3842f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>ArithmeticType</type>
+            <declname>T</declname>
+            <defname>T</defname>
+          </param>
+          <param>
+            <type>size_t</type>
+            <declname>S</declname>
+            <defname>S</defname>
+          </param>
+          <param>
+            <type>typename D</type>
+          </param>
+          <param>
+            <type>typename E1</type>
+          </param>
+          <param>
+            <type>typename E2</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classdakku_1_1VectorSubExpression" kindref="compound">VectorSubExpression</ref>&lt; T, S, D, E1, E2 &gt;</type>
+        <definition>VectorSubExpression&lt; T, S, D, E1, E2 &gt; dakku::operator-</definition>
+        <argsstring>(const VectorExpression&lt; T, S, D, E1 &gt; &amp;u, const VectorExpression&lt; T, S, D, E2 &gt; &amp;v)</argsstring>
+        <name>operator-</name>
+        <param>
+          <type>const <ref refid="structdakku_1_1VectorExpression" kindref="compound">VectorExpression</ref>&lt; T, S, D, E1 &gt; &amp;</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structdakku_1_1VectorExpression" kindref="compound">VectorExpression</ref>&lt; T, S, D, E2 &gt; &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>operator - between vectors </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>S</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>D</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>derived type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>E1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>expr 1 type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>E2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>expr 2 type </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>u</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>expr 1 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>expr 2 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>add expr </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/math/vector_base.h" line="452" column="28" bodyfile="src/math/vector_base.h" bodystart="452" bodyend="457"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1a2ba6b2cccead840f210517e17362d113" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>ArithmeticType</type>
+            <declname>T</declname>
+            <defname>T</defname>
+          </param>
+          <param>
+            <type>size_t</type>
+            <declname>S</declname>
+            <defname>S</defname>
+          </param>
+          <param>
+            <type>typename D</type>
+          </param>
+          <param>
+            <type>typename E1</type>
+          </param>
+          <param>
+            <type>ArithmeticType</type>
+            <declname>V</declname>
+            <defname>V</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classdakku_1_1VectorSubExpression" kindref="compound">VectorSubExpression</ref>&lt; T, S, D, E1, <ref refid="classdakku_1_1VectorCastExpression" kindref="compound">VectorCastExpression</ref>&lt; T, S, D, <ref refid="classdakku_1_1VectorScalarExpression" kindref="compound">VectorScalarExpression</ref>&lt; V, S, D &gt; &gt; &gt;</type>
+        <definition>VectorSubExpression&lt; T, S, D, E1, VectorCastExpression&lt; T, S, D, VectorScalarExpression&lt; V, S, D &gt; &gt; &gt; dakku::operator-</definition>
+        <argsstring>(const VectorExpression&lt; T, S, D, E1 &gt; &amp;u, const V &amp;v)</argsstring>
+        <name>operator-</name>
+        <param>
+          <type>const <ref refid="structdakku_1_1VectorExpression" kindref="compound">VectorExpression</ref>&lt; T, S, D, E1 &gt; &amp;</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type>const V &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/math/vector_base.h" line="350" column="28" bodyfile="src/math/vector_base.h" bodystart="350" bodyend="355"/>
+        <location file="src/math/vector_base.h" line="462" column="1" bodyfile="src/math/vector_base.h" bodystart="462" bodyend="469"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1ab7a7d0aaacbaff7ef207df29d2823d17" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>ArithmeticType</type>
+            <declname>T</declname>
+            <defname>T</defname>
+          </param>
+          <param>
+            <type>size_t</type>
+            <declname>S</declname>
+            <defname>S</defname>
+          </param>
+          <param>
+            <type>typename D</type>
+          </param>
+          <param>
+            <type>typename E1</type>
+          </param>
+          <param>
+            <type>ArithmeticType</type>
+            <declname>V</declname>
+            <defname>V</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classdakku_1_1VectorSubExpression" kindref="compound">VectorSubExpression</ref>&lt; T, S, D, <ref refid="classdakku_1_1VectorCastExpression" kindref="compound">VectorCastExpression</ref>&lt; T, S, D, <ref refid="classdakku_1_1VectorScalarExpression" kindref="compound">VectorScalarExpression</ref>&lt; V, S, D &gt; &gt;, E1 &gt;</type>
+        <definition>VectorSubExpression&lt; T, S, D, VectorCastExpression&lt; T, S, D, VectorScalarExpression&lt; V, S, D &gt; &gt;, E1 &gt; dakku::operator-</definition>
+        <argsstring>(const V &amp;v, const VectorExpression&lt; T, S, D, E1 &gt; &amp;u)</argsstring>
+        <name>operator-</name>
+        <param>
+          <type>const V &amp;</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structdakku_1_1VectorExpression" kindref="compound">VectorExpression</ref>&lt; T, S, D, E1 &gt; &amp;</type>
+          <declname>u</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/math/vector_base.h" line="474" column="1" bodyfile="src/math/vector_base.h" bodystart="474" bodyend="480"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1ab3f3816e505972c2da65c15749862185" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>ArithmeticType</type>
+            <declname>T</declname>
+            <defname>T</defname>
+          </param>
+          <param>
+            <type>size_t</type>
+            <declname>S</declname>
+            <defname>S</defname>
+          </param>
+          <param>
+            <type>typename D</type>
+          </param>
+          <param>
+            <type>typename E1</type>
+          </param>
+          <param>
+            <type>typename E2</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classdakku_1_1VectorMulExpression" kindref="compound">VectorMulExpression</ref>&lt; T, S, D, E1, E2 &gt;</type>
+        <definition>VectorMulExpression&lt; T, S, D, E1, E2 &gt; dakku::operator*</definition>
+        <argsstring>(const VectorExpression&lt; T, S, D, E1 &gt; &amp;u, const VectorExpression&lt; T, S, D, E2 &gt; &amp;v)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const <ref refid="structdakku_1_1VectorExpression" kindref="compound">VectorExpression</ref>&lt; T, S, D, E1 &gt; &amp;</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structdakku_1_1VectorExpression" kindref="compound">VectorExpression</ref>&lt; T, S, D, E2 &gt; &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>operator * between vectors </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>S</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>D</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>derived type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>E1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>expr 1 type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>E2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>expr 2 type </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>u</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>expr 1 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>expr 2 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>add expr </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/math/vector_base.h" line="516" column="28" bodyfile="src/math/vector_base.h" bodystart="516" bodyend="521"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1afdce7a08d5d5af7a67c1ab4d50bf8d58" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>ArithmeticType</type>
+            <declname>T</declname>
+            <defname>T</defname>
+          </param>
+          <param>
+            <type>size_t</type>
+            <declname>S</declname>
+            <defname>S</defname>
+          </param>
+          <param>
+            <type>typename D</type>
+          </param>
+          <param>
+            <type>typename E1</type>
+          </param>
+          <param>
+            <type>ArithmeticType</type>
+            <declname>V</declname>
+            <defname>V</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classdakku_1_1VectorMulExpression" kindref="compound">VectorMulExpression</ref>&lt; T, S, D, E1, <ref refid="classdakku_1_1VectorCastExpression" kindref="compound">VectorCastExpression</ref>&lt; T, S, D, <ref refid="classdakku_1_1VectorScalarExpression" kindref="compound">VectorScalarExpression</ref>&lt; V, S, D &gt; &gt; &gt;</type>
+        <definition>VectorMulExpression&lt; T, S, D, E1, VectorCastExpression&lt; T, S, D, VectorScalarExpression&lt; V, S, D &gt; &gt; &gt; dakku::operator*</definition>
+        <argsstring>(const VectorExpression&lt; T, S, D, E1 &gt; &amp;u, const V &amp;v)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const <ref refid="structdakku_1_1VectorExpression" kindref="compound">VectorExpression</ref>&lt; T, S, D, E1 &gt; &amp;</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type>const V &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/math/vector_base.h" line="526" column="1" bodyfile="src/math/vector_base.h" bodystart="526" bodyend="533"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1a97c821f06ad1184d07d00eb0b431390d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>ArithmeticType</type>
+            <declname>T</declname>
+            <defname>T</defname>
+          </param>
+          <param>
+            <type>size_t</type>
+            <declname>S</declname>
+            <defname>S</defname>
+          </param>
+          <param>
+            <type>typename D</type>
+          </param>
+          <param>
+            <type>typename E1</type>
+          </param>
+          <param>
+            <type>ArithmeticType</type>
+            <declname>V</declname>
+            <defname>V</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classdakku_1_1VectorMulExpression" kindref="compound">VectorMulExpression</ref>&lt; T, S, D, <ref refid="classdakku_1_1VectorCastExpression" kindref="compound">VectorCastExpression</ref>&lt; T, S, D, <ref refid="classdakku_1_1VectorScalarExpression" kindref="compound">VectorScalarExpression</ref>&lt; V, S, D &gt; &gt;, E1 &gt;</type>
+        <definition>VectorMulExpression&lt; T, S, D, VectorCastExpression&lt; T, S, D, VectorScalarExpression&lt; V, S, D &gt; &gt;, E1 &gt; dakku::operator*</definition>
+        <argsstring>(const V &amp;v, const VectorExpression&lt; T, S, D, E1 &gt; &amp;u)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const V &amp;</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structdakku_1_1VectorExpression" kindref="compound">VectorExpression</ref>&lt; T, S, D, E1 &gt; &amp;</type>
+          <declname>u</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/math/vector_base.h" line="538" column="1" bodyfile="src/math/vector_base.h" bodystart="538" bodyend="544"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1aff2b84e0667f3bd979839701507fb1a9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>ArithmeticType</type>
+            <declname>T</declname>
+            <defname>T</defname>
+          </param>
+          <param>
+            <type>size_t</type>
+            <declname>S</declname>
+            <defname>S</defname>
+          </param>
+          <param>
+            <type>typename D</type>
+          </param>
+          <param>
+            <type>typename E1</type>
+          </param>
+          <param>
+            <type>typename E2</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classdakku_1_1VectorDivExpression" kindref="compound">VectorDivExpression</ref>&lt; T, S, D, E1, E2 &gt;</type>
+        <definition>VectorDivExpression&lt; T, S, D, E1, E2 &gt; dakku::operator/</definition>
+        <argsstring>(const VectorExpression&lt; T, S, D, E1 &gt; &amp;u, const VectorExpression&lt; T, S, D, E2 &gt; &amp;v)</argsstring>
+        <name>operator/</name>
+        <param>
+          <type>const <ref refid="structdakku_1_1VectorExpression" kindref="compound">VectorExpression</ref>&lt; T, S, D, E1 &gt; &amp;</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structdakku_1_1VectorExpression" kindref="compound">VectorExpression</ref>&lt; T, S, D, E2 &gt; &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>operator / between vectors </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>S</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>D</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>derived type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>E1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>expr 1 type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>E2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>expr 2 type </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>u</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>expr 1 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>expr 2 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>add expr </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/math/vector_base.h" line="580" column="28" bodyfile="src/math/vector_base.h" bodystart="580" bodyend="585"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1a85464f4b6a2b1eb4229fb2d45412ef1f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>ArithmeticType</type>
+            <declname>T</declname>
+            <defname>T</defname>
+          </param>
+          <param>
+            <type>size_t</type>
+            <declname>S</declname>
+            <defname>S</defname>
+          </param>
+          <param>
+            <type>typename D</type>
+          </param>
+          <param>
+            <type>typename E1</type>
+          </param>
+          <param>
+            <type>ArithmeticType</type>
+            <declname>V</declname>
+            <defname>V</defname>
+          </param>
+        </templateparamlist>
+        <type>decltype(auto)</type>
+        <definition>decltype(auto) dakku::operator/</definition>
+        <argsstring>(const VectorExpression&lt; T, S, D, E1 &gt; &amp;u, const V &amp;v)</argsstring>
+        <name>operator/</name>
+        <param>
+          <type>const <ref refid="structdakku_1_1VectorExpression" kindref="compound">VectorExpression</ref>&lt; T, S, D, E1 &gt; &amp;</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type>const V &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/math/vector_base.h" line="588" column="17" bodyfile="src/math/vector_base.h" bodystart="588" bodyend="591"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

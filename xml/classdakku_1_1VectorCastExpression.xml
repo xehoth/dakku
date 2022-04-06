@@ -34,10 +34,44 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/math/vector_base.h" line="99" column="14" bodyfile="src/math/vector_base.h" bodystart="99" bodyend="-1"/>
+        <location file="src/math/vector_base.h" line="102" column="14" bodyfile="src/math/vector_base.h" bodystart="102" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdakku_1_1VectorCastExpression_1aede616bba10fc2b6394d0dc3b1da9541" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>dakku::VectorCastExpression&lt; T, S, Derived, Expr &gt;::VectorCastExpression</definition>
+        <argsstring>(const Expr &amp;_e)</argsstring>
+        <name>VectorCastExpression</name>
+        <param>
+          <type>const Expr &amp;</type>
+          <declname>_e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/math/vector_base.h" line="97" column="12" bodyfile="src/math/vector_base.h" bodystart="97" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1VectorCastExpression_1a424c60140bcd0a365136884fc398279d" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>dakku::VectorCastExpression&lt; T, S, Derived, Expr &gt;::VectorCastExpression</definition>
+        <argsstring>(Expr &amp;&amp;_e)</argsstring>
+        <name>VectorCastExpression</name>
+        <param>
+          <type>Expr &amp;&amp;</type>
+          <declname>_e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/math/vector_base.h" line="98" column="12" bodyfile="src/math/vector_base.h" bodystart="98" bodyend="98"/>
+      </memberdef>
       <memberdef kind="function" id="classdakku_1_1VectorCastExpression_1a7471c0160b8708a2af839f1f54af30e7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>decltype(auto)</type>
         <definition>decltype(auto) dakku::VectorCastExpression&lt; T, S, Derived, Expr &gt;::get</definition>
@@ -53,7 +87,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/math/vector_base.h" line="96" column="12" bodyfile="src/math/vector_base.h" bodystart="96" bodyend="96"/>
+        <location file="src/math/vector_base.h" line="99" column="12" bodyfile="src/math/vector_base.h" bodystart="99" bodyend="99"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -119,7 +153,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/math/vector_base.h" line="92" column="1" bodyfile="src/math/vector_base.h" bodystart="94" bodyend="100"/>
+    <location file="src/math/vector_base.h" line="93" column="1" bodyfile="src/math/vector_base.h" bodystart="95" bodyend="103"/>
     <listofallmembers>
       <member refid="classdakku_1_1VectorCastExpression_1a0739e59f7e05cba2c53dfa763b23f908" prot="private" virt="non-virtual"><scope>dakku::VectorCastExpression</scope><name>e</name></member>
       <member refid="classdakku_1_1VectorCastExpression_1a7471c0160b8708a2af839f1f54af30e7" prot="public" virt="non-virtual"><scope>dakku::VectorCastExpression</scope><name>get</name></member>
@@ -127,6 +161,8 @@
       <member refid="structdakku_1_1VectorExpression_1a7c820895f26d8747183a52f908912ba8" prot="public" virt="non-virtual"><scope>dakku::VectorCastExpression</scope><name>getExpression</name></member>
       <member refid="structdakku_1_1VectorExpression_1a134ba684029ca2e266660634597cdaa6" prot="public" virt="non-virtual"><scope>dakku::VectorCastExpression</scope><name>operator[]</name></member>
       <member refid="structdakku_1_1VectorExpression_1a65239ca3cdad0963bd8364c9bf4c51f8" prot="public" virt="non-virtual"><scope>dakku::VectorCastExpression</scope><name>operator[]</name></member>
+      <member refid="classdakku_1_1VectorCastExpression_1aede616bba10fc2b6394d0dc3b1da9541" prot="public" virt="non-virtual"><scope>dakku::VectorCastExpression</scope><name>VectorCastExpression</name></member>
+      <member refid="classdakku_1_1VectorCastExpression_1a424c60140bcd0a365136884fc398279d" prot="public" virt="non-virtual"><scope>dakku::VectorCastExpression</scope><name>VectorCastExpression</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

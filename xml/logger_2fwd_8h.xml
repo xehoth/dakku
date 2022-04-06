@@ -29,9 +29,15 @@
         <childnode refid="3" relation="include">
         </childnode>
       </node>
+      <node id="4">
+        <label>src/math/vector.h</label>
+        <link refid="vector_8h"/>
+      </node>
       <node id="3">
         <label>src/math/vector_base.h</label>
         <link refid="vector__base_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
       </node>
     </invincdepgraph>
     <innernamespace refid="namespacedakku">dakku</innernamespace>

@@ -6,7 +6,7 @@
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para>dakku currently use <ulink url="https://en.wikipedia.org/wiki/Expression_templates">expression template</ulink> to implement vectors. </para>
+<para>dakku currently uses <ulink url="https://en.wikipedia.org/wiki/Expression_templates">expression template</ulink> to implement vectors. </para>
     </detaileddescription>
     <location file="src/math/vector_base.h"/>
   </compounddef>

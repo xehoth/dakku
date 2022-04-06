@@ -562,7 +562,7 @@
 <h1 id="dakkuvectorbase">dakku::VectorBase</h1>
 <p>vector base class  <a href="#detailed-description">More...</a></p>
 <p><code>#include &lt;vector_base.h&gt;</code></p>
-<p>Inherits from <a href="/dakku/Classes/structdakku_1_1VectorExpression/">dakku::VectorExpression&lt; T, S, Derived, VectorBase&lt; T, S, Derived &gt; &gt;</a></p>
+<p>Inherits from <a href="/dakku/Classes/structdakku_1_1VectorExpression/">dakku::VectorExpression&lt; T, S, Derived, Derived &gt;</a></p>
 <h2 id="public-functions">Public Functions</h2>
 <table>
 <thead>
@@ -574,19 +574,19 @@
 <tbody>
 <tr>
 <td></td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-vectorbase">VectorBase</a></strong>()<br>Construct a new Vector Base object with all components initialized to zero.</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-vectorbase">VectorBase</a></strong>()<br>Construct a new <a href="/dakku/Classes/classdakku_1_1Vector/">Vector</a> Base object with all components initialized to zero.</td>
 </tr>
 <tr>
 <td>template &lt;ArithmeticType Arg> <br></td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-vectorbase">VectorBase</a></strong>(Arg value)<br>Construct a new Vector Base object with all components initialized to <code>value</code></td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-vectorbase">VectorBase</a></strong>(Arg value)<br>Construct a new <a href="/dakku/Classes/classdakku_1_1Vector/">Vector</a> Base object with all components initialized to <code>value</code></td>
 </tr>
 <tr>
 <td>template &lt;typename Expr > <br></td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-vectorbase">VectorBase</a></strong>(const <a href="/dakku/Classes/structdakku_1_1VectorExpression/">VectorExpression</a>&lt; T, S, Derived, Expr &gt; &amp; expr)<br>Construct a new Vector Base object with a vector expression.</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-vectorbase">VectorBase</a></strong>(const <a href="/dakku/Classes/structdakku_1_1VectorExpression/">VectorExpression</a>&lt; T, S, Derived, Expr &gt; &amp; expr)<br>Construct a new <a href="/dakku/Classes/classdakku_1_1Vector/">Vector</a> Base object with a vector expression.</td>
 </tr>
 <tr>
 <td>template &lt;typename Other ,typename OtherDerived ,typename Expr > <br></td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-vectorbase">VectorBase</a></strong>(const <a href="/dakku/Classes/structdakku_1_1VectorExpression/">VectorExpression</a>&lt; Other, S, OtherDerived, Expr &gt; &amp; expr)<br>Construct a new Vector Base object with a vector expression.</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-vectorbase">VectorBase</a></strong>(const <a href="/dakku/Classes/structdakku_1_1VectorExpression/">VectorExpression</a>&lt; Other, S, OtherDerived, Expr &gt; &amp; expr)<br>Construct a new <a href="/dakku/Classes/classdakku_1_1Vector/">Vector</a> Base object with a vector expression.</td>
 </tr>
 <tr>
 <td></td>
@@ -606,7 +606,7 @@
 </tr>
 <tr>
 <td>template &lt;ArithmeticType... Args> <br></td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-vectorbase">VectorBase</a></strong>(Args &amp;&amp;... args)<br>Construct a new Vector Base object with given values.</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-vectorbase">VectorBase</a></strong>(Args &amp;&amp;... args)<br>Construct a new <a href="/dakku/Classes/classdakku_1_1Vector/">Vector</a> Base object with given values.</td>
 </tr>
 <tr>
 <td>template &lt;ArithmeticType Arg> <br>void</td>
@@ -677,7 +677,7 @@
 </tbody>
 </table>
 <h2 id="additional-inherited-members">Additional inherited members</h2>
-<p><strong>Public Functions inherited from <a href="/dakku/Classes/structdakku_1_1VectorExpression/">dakku::VectorExpression&lt; T, S, Derived, VectorBase&lt; T, S, Derived &gt; &gt;</a></strong></p>
+<p><strong>Public Functions inherited from <a href="/dakku/Classes/structdakku_1_1VectorExpression/">dakku::VectorExpression&lt; T, S, Derived, Derived &gt;</a></strong></p>
 <table>
 <thead>
 <tr>
@@ -721,14 +721,14 @@
 <h3 id="function-vectorbase">function VectorBase</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kr">inline</span><span class="w"> </span><span class="k">explicit</span><span class="w"> </span><span class="n">VectorBase</span><span class="p">()</span><span class="w"></span>
 </code></pre></div>
-<p>Construct a new Vector Base object with all components initialized to zero. </p>
+<p>Construct a new <a href="/dakku/Classes/classdakku_1_1Vector/">Vector</a> Base object with all components initialized to zero. </p>
 <h3 id="function-vectorbase_1">function VectorBase</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="n">ArithmeticType</span><span class="w"> </span><span class="n">Arg</span><span class="o">&gt;</span><span class="w"></span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kr">inline</span><span class="w"> </span><span class="k">explicit</span><span class="w"> </span><span class="n">VectorBase</span><span class="p">(</span><span class="w"></span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="n">Arg</span><span class="w"> </span><span class="n">value</span><span class="w"></span>
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
-<p>Construct a new Vector Base object with all components initialized to <code>value</code></p>
+<p>Construct a new <a href="/dakku/Classes/classdakku_1_1Vector/">Vector</a> Base object with all components initialized to <code>value</code></p>
 <p><strong>Parameters</strong>: </p>
 <ul>
 <li><strong>value</strong> init value </li>
@@ -743,7 +743,7 @@
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">VectorExpression</span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">S</span><span class="p">,</span><span class="w"> </span><span class="n">Derived</span><span class="p">,</span><span class="w"> </span><span class="n">Expr</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">expr</span><span class="w"></span>
 <a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
-<p>Construct a new Vector Base object with a vector expression. </p>
+<p>Construct a new <a href="/dakku/Classes/classdakku_1_1Vector/">Vector</a> Base object with a vector expression. </p>
 <p><strong>Parameters</strong>: </p>
 <ul>
 <li><strong>expr</strong> the given expression </li>
@@ -760,7 +760,7 @@
 <a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">VectorExpression</span><span class="o">&lt;</span><span class="w"> </span><span class="n">Other</span><span class="p">,</span><span class="w"> </span><span class="n">S</span><span class="p">,</span><span class="w"> </span><span class="n">OtherDerived</span><span class="p">,</span><span class="w"> </span><span class="n">Expr</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">expr</span><span class="w"></span>
 <a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
-<p>Construct a new Vector Base object with a vector expression. </p>
+<p>Construct a new <a href="/dakku/Classes/classdakku_1_1Vector/">Vector</a> Base object with a vector expression. </p>
 <p><strong>Parameters</strong>: </p>
 <ul>
 <li><strong>expr</strong> the given expression </li>
@@ -797,7 +797,7 @@
 <a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="n">Args</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="p">...</span><span class="w"> </span><span class="n">args</span><span class="w"></span>
 <a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
-<p>Construct a new Vector Base object with given values. </p>
+<p>Construct a new <a href="/dakku/Classes/classdakku_1_1Vector/">Vector</a> Base object with given values. </p>
 <p><strong>Parameters</strong>: </p>
 <ul>
 <li><strong>args</strong> init values </li>
@@ -940,7 +940,7 @@
 </ul>
 <p><strong>Return</strong>: ostream </p>
 <hr />
-<p>Updated on 2022-04-06 at 04:12:28 +0000</p>
+<p>Updated on 2022-04-06 at 05:55:30 +0000</p>
 
               
             </article>

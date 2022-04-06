@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="classdakku_1_1Normal" kind="class" language="C++" prot="public">
+    <compoundname>dakku::Normal</compoundname>
+    <basecompoundref refid="classdakku_1_1VectorBase" prot="public" virt="non-virtual">dakku::VectorBase&lt; T, S, Normal&lt; T, S &gt; &gt;</basecompoundref>
+    <includes refid="vector_8h" local="no">vector.h</includes>
+    <templateparamlist>
+      <param>
+        <type>ArithmeticType</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+      <param>
+        <type>size_t</type>
+        <declname>S</declname>
+        <defname>S</defname>
+      </param>
+    </templateparamlist>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>dakku::VectorBase&lt; T, S, Normal&lt; T, S &gt; &gt;</label>
+        <link refid="classdakku_1_1VectorBase"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>dakku::Normal&lt; T, S &gt;</label>
+        <link refid="classdakku_1_1Normal"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>dakku::VectorExpression&lt; T, S, Derived, Expr &gt;</label>
+        <link refid="structdakku_1_1VectorExpression"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>dakku::VectorBase&lt; T, S, Normal&lt; T, S &gt; &gt;</label>
+        <link refid="classdakku_1_1VectorBase"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>dakku::Normal&lt; T, S &gt;</label>
+        <link refid="classdakku_1_1Normal"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>dakku::VectorExpression&lt; T, S, Derived, Expr &gt;</label>
+        <link refid="structdakku_1_1VectorExpression"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/math/vector.h" line="20" column="1" bodyfile="src/math/vector.h" bodystart="20" bodyend="23"/>
+    <listofallmembers>
+      <member refid="classdakku_1_1VectorBase_1adfeaa30c58620f0e4e8cbc9bc911c60c" prot="protected" virt="non-virtual"><scope>dakku::Normal</scope><name>_data</name></member>
+      <member refid="classdakku_1_1VectorBase_1ae498067d7973072d02c9417b8b677e83" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>get</name></member>
+      <member refid="structdakku_1_1VectorExpression_1aa6bb9e06a874dc4d2d53e7afeab2d776" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>getExpression</name></member>
+      <member refid="structdakku_1_1VectorExpression_1a7c820895f26d8747183a52f908912ba8" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>getExpression</name></member>
+      <member refid="classdakku_1_1VectorBase_1a24b199ecb70deba0853e9532b888a183" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>hasNaNs</name></member>
+      <member refid="classdakku_1_1VectorBase_1afe4959c7c80f7ae0297325ca971cc97a" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>operator=</name></member>
+      <member refid="classdakku_1_1VectorBase_1a9a1f1574000785aa4037f604a4fa21e2" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>operator=</name></member>
+      <member refid="structdakku_1_1VectorExpression_1a134ba684029ca2e266660634597cdaa6" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>operator[]</name></member>
+      <member refid="structdakku_1_1VectorExpression_1a65239ca3cdad0963bd8364c9bf4c51f8" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>operator[]</name></member>
+      <member refid="classdakku_1_1VectorBase_1a21d3d5772ff3cf0e424968a63557ddb4" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>set</name></member>
+      <member refid="classdakku_1_1VectorBase_1a47ce308974d85dac95130bc829603e52" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>set</name></member>
+      <member refid="classdakku_1_1VectorBase_1a9ff0cd03971a94292507a01ba8852557" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>set</name></member>
+      <member refid="classdakku_1_1VectorBase_1aec26469867c376f51419b2773513d6ed" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>set</name></member>
+      <member refid="classdakku_1_1VectorBase_1aa040165f6c4711d6ac753670e76e868e" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>setByIndex</name></member>
+      <member refid="classdakku_1_1VectorBase_1acc8e8a5aa7749125a4f6aa11b92f9dae" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>size</name></member>
+      <member refid="classdakku_1_1VectorBase_1ad762f525bce13332abbd4b9157287ecd" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>toString</name></member>
+      <member refid="classdakku_1_1VectorBase_1acae6683bc17650d9ff87aafa8cfb6b18" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>VectorBase</name></member>
+      <member refid="classdakku_1_1VectorBase_1aee90251abb9484a6886f76d79091b96e" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>VectorBase</name></member>
+      <member refid="classdakku_1_1VectorBase_1a2eecaeb5c185651191a663c224a0ee54" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>VectorBase</name></member>
+      <member refid="classdakku_1_1VectorBase_1a7d990e500ae3123ea20af7194bfd2337" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>VectorBase</name></member>
+      <member refid="classdakku_1_1VectorBase_1acb37abb2d3484b94e77ce4db959e4aa5" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>VectorBase</name></member>
+      <member refid="classdakku_1_1VectorBase_1a707acaad663a7d8c53b0f31db60ad21f" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>VectorBase</name></member>
+      <member refid="classdakku_1_1VectorBase_1ae369ed90f69f60064f053c5846820c6b" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>VectorBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
