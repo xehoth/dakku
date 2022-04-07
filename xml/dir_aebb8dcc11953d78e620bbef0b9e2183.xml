@@ -2,6 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
   <compounddef id="dir_aebb8dcc11953d78e620bbef0b9e2183" kind="dir">
     <compoundname>src/core</compoundname>
+    <innerfile refid="bounds_8h">bounds.h</innerfile>
     <innerfile refid="class_8h">class.h</innerfile>
     <innerfile refid="fwd_8h">fwd.h</innerfile>
     <innerfile refid="logger_8h">logger.h</innerfile>

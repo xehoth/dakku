@@ -61,17 +61,21 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
+      <node id="4">
+        <label>src/core/bounds.h</label>
+        <link refid="bounds_8h"/>
+      </node>
       <node id="1">
         <label>src/core/logger.h</label>
         <link refid="logger_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="4">
+      <node id="5">
         <label>src/core/property.h</label>
         <link refid="property_8h"/>
       </node>
-      <node id="5">
+      <node id="6">
         <label>src/core/transform.h</label>
         <link refid="transform_8h"/>
       </node>
@@ -81,6 +85,8 @@
         <childnode refid="4" relation="include">
         </childnode>
         <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
         </childnode>
       </node>
       <node id="2">

@@ -70,7 +70,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/property.h" line="190" column="16" bodyfile="src/core/property.h" bodystart="190" bodyend="-1"/>
+        <location file="src/core/property.h" line="195" column="16" bodyfile="src/core/property.h" bodystart="195" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classdakku_1_1Property_1aced3169c7b9d2a24ee8853660fb9ac54" prot="private" static="no" mutable="no">
         <type><ref refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfca" kindref="member">PropertyType</ref></type>
@@ -85,7 +85,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/property.h" line="192" column="16" bodyfile="src/core/property.h" bodystart="192" bodyend="-1"/>
+        <location file="src/core/property.h" line="197" column="16" bodyfile="src/core/property.h" bodystart="197" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -327,7 +327,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/property.h" line="131" column="9" bodyfile="src/core/property.h" bodystart="131" bodyend="131"/>
+        <location file="src/core/property.h" line="131" column="9" bodyfile="src/core/property.h" bodystart="131" bodyend="133"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Property_1a8c5286cd48d768e4fcae6b01d820c32a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -341,7 +341,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/property.h" line="137" column="9" bodyfile="src/core/property.h" bodystart="137" bodyend="137"/>
+        <location file="src/core/property.h" line="139" column="9" bodyfile="src/core/property.h" bodystart="139" bodyend="141"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Property_1a2bd84fd11bb5657b3ff18b1125fcd28e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>decltype(auto)</type>
@@ -371,7 +371,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/property.h" line="145" column="12" bodyfile="src/core/property.h" bodystart="145" bodyend="152"/>
+        <location file="src/core/property.h" line="149" column="12" bodyfile="src/core/property.h" bodystart="149" bodyend="156"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Property_1ae2b5340d7459e700639dfb4e7f596a70" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>decltype(auto)</type>
@@ -401,7 +401,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/property.h" line="160" column="12" bodyfile="src/core/property.h" bodystart="160" bodyend="172"/>
+        <location file="src/core/property.h" line="164" column="12" bodyfile="src/core/property.h" bodystart="164" bodyend="177"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Property_1a98ec2192557128c57decc60656f2f019" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -415,7 +415,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/property.h" line="178" column="16"/>
+        <location file="src/core/property.h" line="183" column="16"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="friend">
@@ -439,7 +439,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/property.h" line="184" column="10" bodyfile="src/core/property.h" bodystart="184" bodyend="186"/>
+        <location file="src/core/property.h" line="189" column="10" bodyfile="src/core/property.h" bodystart="189" bodyend="191"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -447,7 +447,7 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/core/property.h" line="19" column="1" bodyfile="src/core/property.h" bodystart="19" bodyend="193"/>
+    <location file="src/core/property.h" line="19" column="1" bodyfile="src/core/property.h" bodystart="19" bodyend="198"/>
     <listofallmembers>
       <member refid="classdakku_1_1Property_1aa44ae47ef51fe042e4cdc2d558fd6c63" prot="public" virt="non-virtual"><scope>dakku::Property</scope><name>ArrayType</name></member>
       <member refid="classdakku_1_1Property_1a069cd3da27aa6c1de524acb3af0b1cf6" prot="private" virt="non-virtual"><scope>dakku::Property</scope><name>data</name></member>

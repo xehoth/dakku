@@ -371,6 +371,20 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#using-bounds2f" class="md-nav__link">
+    using Bounds2f
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-bounds2i" class="md-nav__link">
+    using Bounds2i
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#using-vector2" class="md-nav__link">
     using Vector2
   </a>
@@ -420,6 +434,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#using-point2i" class="md-nav__link">
+    using Point2i
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#using-point3f" class="md-nav__link">
     using Point3f
   </a>
@@ -454,6 +475,20 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#function-begin" class="md-nav__link">
+    function begin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-end" class="md-nav__link">
+    function end
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#function-isnan" class="md-nav__link">
     function isNaN
   </a>
@@ -463,6 +498,13 @@
           <li class="md-nav__item">
   <a href="#function-isnan_1" class="md-nav__link">
     function isNaN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-dot" class="md-nav__link">
+    function dot
   </a>
   
 </li>
@@ -523,6 +565,22 @@
 <tbody>
 <tr>
 <td>class</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Bounds2/">dakku::Bounds2</a></strong> <br>2d bounding box</td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Bounds2iIterator/">dakku::Bounds2iIterator</a></strong> <br>2d integer bounds iterator, iterate all pixels inside</td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Bounds3/">dakku::Bounds3</a></strong> <br>3d bounding box</td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1BoundsBase/">dakku::BoundsBase</a></strong> <br>bounding box base</td>
+</tr>
+<tr>
+<td>class</td>
 <td><strong><a href="/dakku/Classes/classdakku_1_1Class/">dakku::Class</a></strong> <br>RTTI support.</td>
 </tr>
 <tr>
@@ -569,6 +627,14 @@
 <td><strong><a href="/dakku/Namespaces/namespacedakku/#enum-propertytype">PropertyType</a></strong> { NONE, ARRAY, OBJECT, NUMBER, VECTOR}<br>property type</td>
 </tr>
 <tr>
+<td>using <a href="/dakku/Classes/classdakku_1_1Bounds2/">Bounds2</a>&lt; float &gt;</td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#using-bounds2f">Bounds2f</a></strong></td>
+</tr>
+<tr>
+<td>using <a href="/dakku/Classes/classdakku_1_1Bounds2/">Bounds2</a>&lt; int &gt;</td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#using-bounds2i">Bounds2i</a></strong></td>
+</tr>
+<tr>
 <td>template &lt;ArithmeticType T> <br>using <a href="/dakku/Classes/classdakku_1_1Vector/">Vector</a>&lt; T, 2 &gt;</td>
 <td><strong><a href="/dakku/Namespaces/namespacedakku/#using-vector2">Vector2</a></strong> <br>2d vectors</td>
 </tr>
@@ -597,6 +663,10 @@
 <td><strong><a href="/dakku/Namespaces/namespacedakku/#using-point2f">Point2f</a></strong> <br>2d float point</td>
 </tr>
 <tr>
+<td>using <a href="/dakku/Namespaces/namespacedakku/#using-point2">Point2</a>&lt; int &gt;</td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#using-point2i">Point2i</a></strong> <br>2d int point</td>
+</tr>
+<tr>
 <td>using <a href="/dakku/Namespaces/namespacedakku/#using-point3">Point3</a>&lt; float &gt;</td>
 <td><strong><a href="/dakku/Namespaces/namespacedakku/#using-point3f">Point3f</a></strong> <br>3d float point</td>
 </tr>
@@ -620,12 +690,24 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="/dakku/Classes/classdakku_1_1Bounds2iIterator/">Bounds2iIterator</a></td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#function-begin">begin</a></strong>(const <a href="/dakku/Namespaces/namespacedakku/#using-bounds2i">Bounds2i</a> &amp; b)<br>begin of the bounds2i iteration</td>
+</tr>
+<tr>
+<td><a href="/dakku/Classes/classdakku_1_1Bounds2iIterator/">Bounds2iIterator</a></td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#function-end">end</a></strong>(const <a href="/dakku/Namespaces/namespacedakku/#using-bounds2i">Bounds2i</a> &amp; b)<br>end of the bounds2i iteration</td>
+</tr>
+<tr>
 <td>template &lt;typename T > <br><a href="/dakku/Files/platform_8h/#define-dakku-inline">DAKKU_INLINE</a> bool</td>
 <td><strong><a href="/dakku/Namespaces/namespacedakku/#function-isnan">isNaN</a></strong>(T x)<br>check whether <code>x</code> is not a number</td>
 </tr>
 <tr>
 <td>template &lt;typename T > <br><a href="/dakku/Files/platform_8h/#define-dakku-inline">DAKKU_INLINE</a> bool</td>
 <td><strong><a href="/dakku/Namespaces/namespacedakku/#function-isnan">isNaN</a></strong>(T )<br>check whether <code>x</code> is not a number</td>
+</tr>
+<tr>
+<td>template &lt;ArithmeticType T,size_t S,typename D1 ,typename D2 > <br>decltype(auto)</td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#function-dot">dot</a></strong>(const <a href="/dakku/Classes/classdakku_1_1VectorBase/">VectorBase</a>&lt; T, S, D1 &gt; &amp; a, const <a href="/dakku/Classes/classdakku_1_1VectorBase/">VectorBase</a>&lt; T, S, D2 &gt; &amp; b)<br>dot product between two vectors</td>
 </tr>
 </tbody>
 </table>
@@ -683,9 +765,15 @@
 </tbody>
 </table>
 <p>property type </p>
+<h3 id="using-bounds2f">using Bounds2f</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">using</span><span class="w"> </span><span class="n">dakku</span><span class="o">::</span><span class="n">Bounds2f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Bounds2</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h3 id="using-bounds2i">using Bounds2i</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">using</span><span class="w"> </span><span class="n">dakku</span><span class="o">::</span><span class="n">Bounds2i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Bounds2</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
 <h3 id="using-vector2">using Vector2</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="n">ArithmeticType</span><span class="w"> </span><span class="n">T</span><span class="o">&gt;</span><span class="w"></span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">using</span><span class="w"> </span><span class="n">dakku</span><span class="o">::</span><span class="n">Vector2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Vector</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="n">ArithmeticType</span><span class="w"> </span><span class="n">T</span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">using</span><span class="w"> </span><span class="n">dakku</span><span class="o">::</span><span class="n">Vector2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Vector</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <p>2d vectors </p>
 <p><strong>Template Parameters</strong>: </p>
@@ -693,8 +781,8 @@
 <li><strong>T</strong> data type </li>
 </ul>
 <h3 id="using-vector3">using Vector3</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="n">ArithmeticType</span><span class="w"> </span><span class="n">T</span><span class="o">&gt;</span><span class="w"></span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">using</span><span class="w"> </span><span class="n">dakku</span><span class="o">::</span><span class="n">Vector3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Vector</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="n">ArithmeticType</span><span class="w"> </span><span class="n">T</span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">using</span><span class="w"> </span><span class="n">dakku</span><span class="o">::</span><span class="n">Vector3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Vector</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <p>3d vectors </p>
 <p><strong>Template Parameters</strong>: </p>
@@ -702,16 +790,16 @@
 <li><strong>T</strong> data type </li>
 </ul>
 <h3 id="using-vector2f">using Vector2f</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">using</span><span class="w"> </span><span class="n">dakku</span><span class="o">::</span><span class="n">Vector2f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Vector2</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">using</span><span class="w"> </span><span class="n">dakku</span><span class="o">::</span><span class="n">Vector2f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Vector2</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <p>2d float vector </p>
 <h3 id="using-vector3f">using Vector3f</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">using</span><span class="w"> </span><span class="n">dakku</span><span class="o">::</span><span class="n">Vector3f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Vector3</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">using</span><span class="w"> </span><span class="n">dakku</span><span class="o">::</span><span class="n">Vector3f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Vector3</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <p>3d float vector </p>
 <h3 id="using-point2">using Point2</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="n">ArithmeticType</span><span class="w"> </span><span class="n">T</span><span class="o">&gt;</span><span class="w"></span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">using</span><span class="w"> </span><span class="n">dakku</span><span class="o">::</span><span class="n">Point2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Point</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="n">ArithmeticType</span><span class="w"> </span><span class="n">T</span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">using</span><span class="w"> </span><span class="n">dakku</span><span class="o">::</span><span class="n">Point2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Point</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <p>2d point </p>
 <p><strong>Template Parameters</strong>: </p>
@@ -719,8 +807,8 @@
 <li><strong>T</strong> data type </li>
 </ul>
 <h3 id="using-point3">using Point3</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="n">ArithmeticType</span><span class="w"> </span><span class="n">T</span><span class="o">&gt;</span><span class="w"></span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">using</span><span class="w"> </span><span class="n">dakku</span><span class="o">::</span><span class="n">Point3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Point</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="n">ArithmeticType</span><span class="w"> </span><span class="n">T</span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">using</span><span class="w"> </span><span class="n">dakku</span><span class="o">::</span><span class="n">Point3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Point</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <p>3d point </p>
 <p><strong>Template Parameters</strong>: </p>
@@ -728,16 +816,20 @@
 <li><strong>T</strong> data type </li>
 </ul>
 <h3 id="using-point2f">using Point2f</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">using</span><span class="w"> </span><span class="n">dakku</span><span class="o">::</span><span class="n">Point2f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Point2</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">using</span><span class="w"> </span><span class="n">dakku</span><span class="o">::</span><span class="n">Point2f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Point2</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <p>2d float point </p>
+<h3 id="using-point2i">using Point2i</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">using</span><span class="w"> </span><span class="n">dakku</span><span class="o">::</span><span class="n">Point2i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Point2</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>2d int point </p>
 <h3 id="using-point3f">using Point3f</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">using</span><span class="w"> </span><span class="n">dakku</span><span class="o">::</span><span class="n">Point3f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Point3</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">using</span><span class="w"> </span><span class="n">dakku</span><span class="o">::</span><span class="n">Point3f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Point3</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <p>3d float point </p>
 <h3 id="using-normal3">using Normal3</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="n">ArithmeticType</span><span class="w"> </span><span class="n">T</span><span class="o">&gt;</span><span class="w"></span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="k">using</span><span class="w"> </span><span class="n">dakku</span><span class="o">::</span><span class="n">Normal3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Normal</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="n">ArithmeticType</span><span class="w"> </span><span class="n">T</span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="k">using</span><span class="w"> </span><span class="n">dakku</span><span class="o">::</span><span class="n">Normal3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Normal</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <p>3d normal </p>
 <p><strong>Template Parameters</strong>: </p>
@@ -745,15 +837,27 @@
 <li><strong>T</strong> data type </li>
 </ul>
 <h3 id="using-normal3f">using Normal3f</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">using</span><span class="w"> </span><span class="n">dakku</span><span class="o">::</span><span class="n">Normal3f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Normal3</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">using</span><span class="w"> </span><span class="n">dakku</span><span class="o">::</span><span class="n">Normal3f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Normal3</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <p>3d float normal </p>
 <h2 id="functions-documentation">Functions Documentation</h2>
+<h3 id="function-begin">function begin</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kr">inline</span><span class="w"> </span><span class="n">Bounds2iIterator</span><span class="w"> </span><span class="n">begin</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Bounds2i</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">b</span><span class="w"></span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>begin of the bounds2i iteration </p>
+<h3 id="function-end">function end</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kr">inline</span><span class="w"> </span><span class="n">Bounds2iIterator</span><span class="w"> </span><span class="n">end</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Bounds2i</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">b</span><span class="w"></span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>end of the bounds2i iteration </p>
 <h3 id="function-isnan">function isNaN</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="n">DAKKU_INLINE</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">isNaN</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="n">T</span><span class="w"> </span><span class="n">x</span><span class="w"></span>
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="n">DAKKU_INLINE</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">isNaN</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">    </span><span class="n">T</span><span class="w"> </span><span class="n">x</span><span class="w"></span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 <p>check whether <code>x</code> is not a number </p>
 <p><strong>Parameters</strong>: </p>
@@ -766,10 +870,10 @@
 </ul>
 <p><strong>Return</strong>: whether <code>x</code> is nan </p>
 <h3 id="function-isnan_1">function isNaN</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="n">DAKKU_INLINE</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">isNaN</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="n">T</span><span class="w"> </span>
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="n">DAKKU_INLINE</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">isNaN</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">    </span><span class="n">T</span><span class="w"> </span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 <p>check whether <code>x</code> is not a number </p>
 <p><strong>Template Parameters</strong>: </p>
@@ -777,13 +881,30 @@
 <li><strong>T</strong> type (integer) </li>
 </ul>
 <p><strong>Return</strong>: false (all integers are not nans) </p>
+<h3 id="function-dot">function dot</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="n">ArithmeticType</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="kt">size_t</span><span class="w"> </span><span class="n">S</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="k">typename</span><span class="w"> </span><span class="nc">D1</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="k">typename</span><span class="w"> </span><span class="nc">D2</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="kr">inline</span><span class="w"> </span><span class="k">decltype</span><span class="p">(</span><span class="k">auto</span><span class="p">)</span><span class="w"> </span><span class="n">dot</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">VectorBase</span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">S</span><span class="p">,</span><span class="w"> </span><span class="n">D1</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">VectorBase</span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">S</span><span class="p">,</span><span class="w"> </span><span class="n">D2</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">b</span><span class="w"></span>
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>dot product between two vectors </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>a</strong> <span class="arithmatex">\(\vec a\)</span> </li>
+<li><strong>b</strong> <span class="arithmatex">\(\vec b\)</span> </li>
+</ul>
+<p><strong>Return</strong>: <span class="arithmatex">\(\vec a \cdot \vec b\)</span> </p>
 <h2 id="attributes-documentation">Attributes Documentation</h2>
 <h3 id="variable-inf">variable INF</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">INF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;::</span><span class="n">infinity</span><span class="p">();</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">INF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;::</span><span class="n">infinity</span><span class="p">();</span><span class="w"></span>
 </code></pre></div>
 <p>infinity </p>
 <hr />
-<p>Updated on 2022-04-06 at 15:53:46 +0000</p>
+<p>Updated on 2022-04-07 at 06:53:17 +0000</p>
 
               
             </article>

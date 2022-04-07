@@ -444,12 +444,8 @@
 <td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-operator=">operator=</a></strong>(<a href="/dakku/Classes/classdakku_1_1VectorBase/">VectorBase</a> &amp;&amp; other)</td>
 </tr>
 <tr>
-<td>template &lt;ArithmeticType... Args> <br></td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-vectorbase">VectorBase</a></strong>(Args &amp;&amp;... args)<br>Construct a new <a href="/dakku/Classes/classdakku_1_1Vector/">Vector</a> Base object with given values.</td>
-</tr>
-<tr>
 <td>template &lt;ArithmeticType Arg> <br>void</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-set">set</a></strong>(Arg value)<br>set all components to <code>value</code></td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-set">set</a></strong>(Arg value)<br>Construct a new <a href="/dakku/Classes/classdakku_1_1Vector/">Vector</a> Base object with given values.</td>
 </tr>
 <tr>
 <td>template &lt;ArithmeticType Arg> <br>void</td>
@@ -539,6 +535,78 @@
 <td></td>
 <td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-vectorbase">VectorBase</a></strong>(const std::vector&lt; float &gt; &amp; v)<br>Construct a new <a href="/dakku/Classes/classdakku_1_1Vector/">Vector</a> Base object with std::vector<float> (Property::VECTOR)</td>
 </tr>
+<tr>
+<td>decltype(auto)</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-x">x</a></strong>() const<br>get the first element</td>
+</tr>
+<tr>
+<td>decltype(auto)</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-x">x</a></strong>()<br>get the first element</td>
+</tr>
+<tr>
+<td>decltype(auto)</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-y">y</a></strong>() const<br>get the second element</td>
+</tr>
+<tr>
+<td>decltype(auto)</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-y">y</a></strong>()<br>get the second element</td>
+</tr>
+<tr>
+<td>decltype(auto)</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-z">z</a></strong>() const<br>get the third element</td>
+</tr>
+<tr>
+<td>decltype(auto)</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-z">z</a></strong>()<br>get the fourth element</td>
+</tr>
+<tr>
+<td>decltype(auto)</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-w">w</a></strong>() const<br>get the fourth element</td>
+</tr>
+<tr>
+<td>decltype(auto)</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-w">w</a></strong>()<br>get the third element</td>
+</tr>
+<tr>
+<td>size_t</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-maxelementindex">maxElementIndex</a></strong>() const<br>get the index of the max element</td>
+</tr>
+<tr>
+<td>decltype(auto)</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-maxelement">maxElement</a></strong>() const<br>get the max element in the vector</td>
+</tr>
+<tr>
+<td>decltype(auto)</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-begin">begin</a></strong>()</td>
+</tr>
+<tr>
+<td>decltype(auto)</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-begin">begin</a></strong>() const</td>
+</tr>
+<tr>
+<td>decltype(auto)</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-end">end</a></strong>()</td>
+</tr>
+<tr>
+<td>decltype(auto)</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-end">end</a></strong>() const</td>
+</tr>
+<tr>
+<td>template &lt;typename OtherDerived > <br>decltype(auto)</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-dot">dot</a></strong>(const <a href="/dakku/Classes/classdakku_1_1VectorBase/">VectorBase</a>&lt; T, S, OtherDerived &gt; &amp; rhs) const<br>dot product between two vectors</td>
+</tr>
+<tr>
+<td>decltype(auto)</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-squarednorm">squaredNorm</a></strong>() const<br>squared norm</td>
+</tr>
+<tr>
+<td>decltype(auto)</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-norm">norm</a></strong>() const<br>norm</td>
+</tr>
+<tr>
+<td>decltype(auto)</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-length">length</a></strong>() const<br>length</td>
+</tr>
 </tbody>
 </table>
 <p><strong>Protected Attributes inherited from <a href="/dakku/Classes/classdakku_1_1VectorBase/">dakku::VectorBase&lt; T, S, Normal&lt; T, S &gt; &gt;</a></strong></p>
@@ -605,6 +673,26 @@
 <td>Derived</td>
 <td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-operator/">operator/</a></strong>(const U &amp; a, const Derived &amp; b) <br>division</td>
 </tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-operator==">operator==</a></strong>(const Derived &amp; a, const Derived &amp; b) <br>a == b (element wise)</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-operator!=">operator!=</a></strong>(const Derived &amp; a, const Derived &amp; b) <br>a != b (element wise)</td>
+</tr>
+<tr>
+<td>Derived</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-max">max</a></strong>(const Derived &amp; a, const Derived &amp; b) <br>element wise max</td>
+</tr>
+<tr>
+<td>Derived</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-min">min</a></strong>(const Derived &amp; a, const Derived &amp; b) <br>element wise min</td>
+</tr>
+<tr>
+<td>decltype(auto)</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-distance">distance</a></strong>(const Derived &amp; a, const Derived &amp; b) <br>the distance</td>
+</tr>
 </tbody>
 </table>
 <h2 id="detailed-description">Detailed Description</h2>
@@ -628,7 +716,7 @@
 </code></pre></div>
 <p>subtraction between two normals </p>
 <hr />
-<p>Updated on 2022-04-06 at 15:53:46 +0000</p>
+<p>Updated on 2022-04-07 at 06:53:17 +0000</p>
 
               
             </article>

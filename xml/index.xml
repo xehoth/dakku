@@ -1,5 +1,41 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.2" xml:lang="en-US">
+  <compound refid="classdakku_1_1Bounds2" kind="class"><name>dakku::Bounds2</name>
+    <member refid="classdakku_1_1Bounds2_1ae986c4aae4bed669564ea89613984356" kind="function"><name>area</name></member>
+  </compound>
+  <compound refid="classdakku_1_1Bounds2iIterator" kind="class"><name>dakku::Bounds2iIterator</name>
+    <member refid="classdakku_1_1Bounds2iIterator_1a25db7490f2d16d4ce72ad2701535ffae" kind="variable"><name>b</name></member>
+    <member refid="classdakku_1_1Bounds2iIterator_1a03a906289f14103e080bc463642aeba3" kind="variable"><name>p</name></member>
+    <member refid="classdakku_1_1Bounds2iIterator_1a95130c6902beb884ee28da0e632ca660" kind="function"><name>Bounds2iIterator</name></member>
+    <member refid="classdakku_1_1Bounds2iIterator_1ad19c79cc44f5407ffedd8fee2e74b873" kind="function"><name>operator++</name></member>
+    <member refid="classdakku_1_1Bounds2iIterator_1abba748bffd9de14381de7393279e0ab1" kind="function"><name>operator++</name></member>
+    <member refid="classdakku_1_1Bounds2iIterator_1aabbc42d3b83e2b025e1a8540ff62314b" kind="function"><name>operator==</name></member>
+    <member refid="classdakku_1_1Bounds2iIterator_1aec365c1c605c7f12c463b13668a6fa5b" kind="function"><name>operator!=</name></member>
+    <member refid="classdakku_1_1Bounds2iIterator_1a6b917d1a9e146470819a369ee789c65d" kind="function"><name>operator*</name></member>
+    <member refid="classdakku_1_1Bounds2iIterator_1aa30d8017ae278532454b1dacf52d1807" kind="function"><name>advance</name></member>
+  </compound>
+  <compound refid="classdakku_1_1Bounds3" kind="class"><name>dakku::Bounds3</name>
+  </compound>
+  <compound refid="classdakku_1_1BoundsBase" kind="class"><name>dakku::BoundsBase</name>
+    <member refid="classdakku_1_1BoundsBase_1abd7c34bec0f05f1dfb494b76eed47622" kind="variable"><name>pMin</name></member>
+    <member refid="classdakku_1_1BoundsBase_1a1df49abc60c6cee7febd54aa46d04aa8" kind="variable"><name>pMax</name></member>
+    <member refid="classdakku_1_1BoundsBase_1a4dea00502d665d2f3e6657507a9b03fb" kind="function"><name>BoundsBase</name></member>
+    <member refid="classdakku_1_1BoundsBase_1a4707e959360ddbc591c0645854575ad9" kind="function"><name>BoundsBase</name></member>
+    <member refid="classdakku_1_1BoundsBase_1ac2e934c9361722edb8bb081686feff62" kind="function"><name>BoundsBase</name></member>
+    <member refid="classdakku_1_1BoundsBase_1ae578a4e99b038d678ceef58b0acde222" kind="function"><name>operator BoundsBase&lt; U, S &gt;</name></member>
+    <member refid="classdakku_1_1BoundsBase_1a07b1800b4e56f7f2daf1f59785215aee" kind="function"><name>diagonal</name></member>
+    <member refid="classdakku_1_1BoundsBase_1acaa8ef9b9991109e049d9409a1216518" kind="function"><name>maxExtent</name></member>
+    <member refid="classdakku_1_1BoundsBase_1acd1339c39870cd9bac4a0c2ee3726d20" kind="function"><name>operator==</name></member>
+    <member refid="classdakku_1_1BoundsBase_1a06fb31654a6571636ccab3b28d4edbaf" kind="function"><name>operator!=</name></member>
+    <member refid="classdakku_1_1BoundsBase_1ac3a04d4a5ba9884d9ab2734c5c94248f" kind="function"><name>lerp</name></member>
+    <member refid="classdakku_1_1BoundsBase_1a91d113dc02fe1d57163f8b2cee408ed1" kind="function"><name>offset</name></member>
+    <member refid="classdakku_1_1BoundsBase_1a1533ac65725aee5fa771b9e068f1050d" kind="function"><name>boundingSphere</name></member>
+    <member refid="classdakku_1_1BoundsBase_1a354b7ef9e0dc908b9eca0a47f64cd37c" kind="friend"><name>overlaps</name></member>
+    <member refid="classdakku_1_1BoundsBase_1a4ba0780dc5fab304376d54affb497ae8" kind="friend"><name>inside</name></member>
+    <member refid="classdakku_1_1BoundsBase_1aaac97265d9f25e86e8a992a5bf5a96d4" kind="friend"><name>insideExclusive</name></member>
+    <member refid="classdakku_1_1BoundsBase_1abfbe6e5a21f265e66a85a4ac6abb9083" kind="friend"><name>distanceSquared</name></member>
+    <member refid="classdakku_1_1BoundsBase_1aaa212d5e2487285c3fa01207563498c8" kind="friend"><name>distance</name></member>
+  </compound>
   <compound refid="classdakku_1_1Class" kind="class"><name>dakku::Class</name>
     <member refid="classdakku_1_1Class_1a38f609682794eb8644448c458c9679cb" kind="function"><name>instance</name></member>
   </compound>
@@ -63,8 +99,7 @@
     <member refid="classdakku_1_1VectorBase_1a707acaad663a7d8c53b0f31db60ad21f" kind="function"><name>VectorBase</name></member>
     <member refid="classdakku_1_1VectorBase_1afe4959c7c80f7ae0297325ca971cc97a" kind="function"><name>operator=</name></member>
     <member refid="classdakku_1_1VectorBase_1a9a1f1574000785aa4037f604a4fa21e2" kind="function"><name>operator=</name></member>
-    <member refid="classdakku_1_1VectorBase_1ae369ed90f69f60064f053c5846820c6b" kind="function"><name>VectorBase</name></member>
-    <member refid="classdakku_1_1VectorBase_1a21d3d5772ff3cf0e424968a63557ddb4" kind="function"><name>set</name></member>
+    <member refid="classdakku_1_1VectorBase_1afa4cd455e4e2f12a88695122e221ca13" kind="function"><name>set</name></member>
     <member refid="classdakku_1_1VectorBase_1aa040165f6c4711d6ac753670e76e868e" kind="function"><name>setByIndex</name></member>
     <member refid="classdakku_1_1VectorBase_1a47ce308974d85dac95130bc829603e52" kind="function"><name>set</name></member>
     <member refid="classdakku_1_1VectorBase_1a9ff0cd03971a94292507a01ba8852557" kind="function"><name>set</name></member>
@@ -88,6 +123,24 @@
     <member refid="classdakku_1_1VectorBase_1ad5b06200c617ca92964ad3d81787848f" kind="function"><name>operator/=</name></member>
     <member refid="classdakku_1_1VectorBase_1a0efbe333b29373696a0fbb9cf0f11af2" kind="function"><name>toFloatVector</name></member>
     <member refid="classdakku_1_1VectorBase_1a3cfd9b2142d1366bc105463b24fd5149" kind="function"><name>VectorBase</name></member>
+    <member refid="classdakku_1_1VectorBase_1aad720931a9787a87375de3f8d545567d" kind="function"><name>x</name></member>
+    <member refid="classdakku_1_1VectorBase_1ab937f5988070397cab4b236cda690356" kind="function"><name>x</name></member>
+    <member refid="classdakku_1_1VectorBase_1a14b6216fd55dc1cd2f321c834f6121ca" kind="function"><name>y</name></member>
+    <member refid="classdakku_1_1VectorBase_1a4c537c79e56ad3b82ac56711dc774dc7" kind="function"><name>y</name></member>
+    <member refid="classdakku_1_1VectorBase_1a207d3b94f85366aeb9e7773785a498ea" kind="function"><name>z</name></member>
+    <member refid="classdakku_1_1VectorBase_1ad4683c184e26c7879ed8359c34162f9b" kind="function"><name>z</name></member>
+    <member refid="classdakku_1_1VectorBase_1a70ef47d449743bb4e68dba7e93a56488" kind="function"><name>w</name></member>
+    <member refid="classdakku_1_1VectorBase_1a0abbcce49a53783f902e49b81b20b097" kind="function"><name>w</name></member>
+    <member refid="classdakku_1_1VectorBase_1a41e30926cb56189a7378f339bc175ccc" kind="function"><name>maxElementIndex</name></member>
+    <member refid="classdakku_1_1VectorBase_1ae42082956c30a3e7f611e421427a785f" kind="function"><name>maxElement</name></member>
+    <member refid="classdakku_1_1VectorBase_1ae4f16b45f3696a2c75abcbe8c09120df" kind="function"><name>begin</name></member>
+    <member refid="classdakku_1_1VectorBase_1abf676422e4f35272f97d5a9d286002b3" kind="function"><name>begin</name></member>
+    <member refid="classdakku_1_1VectorBase_1a77b079ddc174893319dbdb3bc1eb37ee" kind="function"><name>end</name></member>
+    <member refid="classdakku_1_1VectorBase_1a3b54e311208a4d3d90763cad329d1759" kind="function"><name>end</name></member>
+    <member refid="classdakku_1_1VectorBase_1ab55fd8f1a9e9835b5383189560c86973" kind="function"><name>dot</name></member>
+    <member refid="classdakku_1_1VectorBase_1a407486b0eb23a07bb98e2d5a50910695" kind="function"><name>squaredNorm</name></member>
+    <member refid="classdakku_1_1VectorBase_1a3de0043db1772cb93312cc158d00df03" kind="function"><name>norm</name></member>
+    <member refid="classdakku_1_1VectorBase_1a8cc945684d6dca638d46a32ca403048d" kind="function"><name>length</name></member>
     <member refid="classdakku_1_1VectorBase_1a531ed133257631916fc3384392b2ab7f" kind="friend"><name>operator&lt;&lt;</name></member>
     <member refid="classdakku_1_1VectorBase_1a6a604c24b1049ff1e9c3c12e9a26fff9" kind="friend"><name>operator+</name></member>
     <member refid="classdakku_1_1VectorBase_1aaeb63fd4c52bae59b7e867829e8b1025" kind="friend"><name>operator+</name></member>
@@ -100,6 +153,11 @@
     <member refid="classdakku_1_1VectorBase_1ab9d87c9943039f3db32f3a6c703400b0" kind="friend"><name>operator/</name></member>
     <member refid="classdakku_1_1VectorBase_1aa48350ae3efe11576023da906438f0c8" kind="friend"><name>operator/</name></member>
     <member refid="classdakku_1_1VectorBase_1ab4cd237f595d4bfe30fe64074eccd277" kind="friend"><name>operator/</name></member>
+    <member refid="classdakku_1_1VectorBase_1ab4e667ac24d41b5ddcbe5cdad3698336" kind="friend"><name>operator==</name></member>
+    <member refid="classdakku_1_1VectorBase_1aa26d1cd14931c869845edd5b7471b498" kind="friend"><name>operator!=</name></member>
+    <member refid="classdakku_1_1VectorBase_1af040c2a4524919abe391573fe05221fb" kind="friend"><name>max</name></member>
+    <member refid="classdakku_1_1VectorBase_1aa73dc46636127e4b34b912cad9a3e04a" kind="friend"><name>min</name></member>
+    <member refid="classdakku_1_1VectorBase_1a9ed3b83465f89ef9e216e6f70a3be3c9" kind="friend"><name>distance</name></member>
   </compound>
   <compound refid="conceptdakku_1_1ArithmeticType" kind="concept"><name>dakku::ArithmeticType</name>
   </compound>
@@ -110,6 +168,8 @@
     <member refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaa8eee8e217391199668cbac89472ace53" kind="enumvalue"><name>OBJECT</name></member>
     <member refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaa34f55eca38e0605a84f169ff61a2a396" kind="enumvalue"><name>NUMBER</name></member>
     <member refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaa87752381b583740610f1dfeb07fdad7e" kind="enumvalue"><name>VECTOR</name></member>
+    <member refid="namespacedakku_1abcc743bdeb62068a56f14ac3ef9963b7" kind="typedef"><name>Bounds2f</name></member>
+    <member refid="namespacedakku_1ae2cd423e1acf2fd91f4cdf3cc5ad50c6" kind="typedef"><name>Bounds2i</name></member>
     <member refid="namespacedakku_1ae7de7b89895e76d4a3f1c653393dde69" kind="typedef"><name>Vector2</name></member>
     <member refid="namespacedakku_1a3109ad27ee688fdd3462458714d7f1e7" kind="typedef"><name>Vector3</name></member>
     <member refid="namespacedakku_1abfd5a177365f8ffec7ab23d6cb6db8c0" kind="typedef"><name>Vector2f</name></member>
@@ -117,12 +177,20 @@
     <member refid="namespacedakku_1a56669db36360e52f7c7113768c7b35aa" kind="typedef"><name>Point2</name></member>
     <member refid="namespacedakku_1aace4734db951234de5eb4567db0d1737" kind="typedef"><name>Point3</name></member>
     <member refid="namespacedakku_1a9910f23501fd2ef5e9a829cdab0992be" kind="typedef"><name>Point2f</name></member>
+    <member refid="namespacedakku_1a059653c441fcfa28e3b00de3709176e9" kind="typedef"><name>Point2i</name></member>
     <member refid="namespacedakku_1a8323b90fda75af310a40a4e0d6bdb3f0" kind="typedef"><name>Point3f</name></member>
     <member refid="namespacedakku_1ade3699e7ff88bf28ae0ea31baafab11c" kind="typedef"><name>Normal3</name></member>
     <member refid="namespacedakku_1a9b64e14dceffe6ac84029f1d40d6ec41" kind="typedef"><name>Normal3f</name></member>
     <member refid="namespacedakku_1a53c476552ecb27caba955675d8efb680" kind="variable"><name>INF</name></member>
+    <member refid="namespacedakku_1af0a2453f8db3eb948901c7a0aed18434" kind="function"><name>begin</name></member>
+    <member refid="namespacedakku_1a41ae9fcb2290e6ea6f7d4b0fbca86d17" kind="function"><name>end</name></member>
     <member refid="namespacedakku_1af754e4967f947036a0c31c0dbb4bf6e1" kind="function"><name>isNaN</name></member>
     <member refid="namespacedakku_1af703ca0ba560169d1daf114a07175bf4" kind="function"><name>isNaN</name></member>
+    <member refid="namespacedakku_1a2016f3c3a16c069a055a7017eacb0e66" kind="function"><name>dot</name></member>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="bounds_8h" kind="file"><name>bounds.h</name>
   </compound>
   <compound refid="class_8h" kind="file"><name>class.h</name>
   </compound>

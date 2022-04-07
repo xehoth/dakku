@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector_base.h" line="502" column="14" bodyfile="src/core/vector_base.h" bodystart="502" bodyend="-1"/>
+        <location file="src/core/vector_base.h" line="671" column="14" bodyfile="src/core/vector_base.h" bodystart="671" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -47,9 +47,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector_base.h" line="26" column="12" bodyfile="src/core/vector_base.h" bodystart="26" bodyend="26"/>
+        <location file="src/core/vector_base.h" line="27" column="12" bodyfile="src/core/vector_base.h" bodystart="27" bodyend="27"/>
       </memberdef>
-      <memberdef kind="function" id="classdakku_1_1VectorBase_1aee90251abb9484a6886f76d79091b96e" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classdakku_1_1VectorBase_1aee90251abb9484a6886f76d79091b96e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>ArithmeticType</type>
@@ -91,7 +91,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector_base.h" line="36" column="12" bodyfile="src/core/vector_base.h" bodystart="36" bodyend="39"/>
+        <location file="src/core/vector_base.h" line="37" column="3" bodyfile="src/core/vector_base.h" bodystart="37" bodyend="40"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1VectorBase_1a3992f122fe320723d8a2b08aa0f0b658" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -154,7 +154,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector_base.h" line="50" column="12" bodyfile="src/core/vector_base.h" bodystart="50" bodyend="53"/>
+        <location file="src/core/vector_base.h" line="51" column="12" bodyfile="src/core/vector_base.h" bodystart="51" bodyend="54"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1VectorBase_1acb37abb2d3484b94e77ce4db959e4aa5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -171,7 +171,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector_base.h" line="55" column="3" bodyfile="src/core/vector_base.h" bodystart="55" bodyend="57"/>
+        <location file="src/core/vector_base.h" line="56" column="3" bodyfile="src/core/vector_base.h" bodystart="56" bodyend="58"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1VectorBase_1a707acaad663a7d8c53b0f31db60ad21f" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type></type>
@@ -188,7 +188,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector_base.h" line="58" column="3" bodyfile="src/core/vector_base.h" bodystart="58" bodyend="60"/>
+        <location file="src/core/vector_base.h" line="59" column="3" bodyfile="src/core/vector_base.h" bodystart="59" bodyend="61"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1VectorBase_1afe4959c7c80f7ae0297325ca971cc97a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classdakku_1_1VectorBase" kindref="compound">VectorBase</ref> &amp;</type>
@@ -205,7 +205,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector_base.h" line="61" column="14" bodyfile="src/core/vector_base.h" bodystart="61" bodyend="66"/>
+        <location file="src/core/vector_base.h" line="62" column="14" bodyfile="src/core/vector_base.h" bodystart="62" bodyend="67"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1VectorBase_1a9a1f1574000785aa4037f604a4fa21e2" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type><ref refid="classdakku_1_1VectorBase" kindref="compound">VectorBase</ref> &amp;</type>
@@ -222,25 +222,25 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector_base.h" line="67" column="14" bodyfile="src/core/vector_base.h" bodystart="67" bodyend="72"/>
+        <location file="src/core/vector_base.h" line="68" column="14" bodyfile="src/core/vector_base.h" bodystart="68" bodyend="73"/>
       </memberdef>
-      <memberdef kind="function" id="classdakku_1_1VectorBase_1ae369ed90f69f60064f053c5846820c6b" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classdakku_1_1VectorBase_1afa4cd455e4e2f12a88695122e221ca13" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
           <param>
-            <type>ArithmeticType...</type>
-            <declname>Args</declname>
-            <defname>Args</defname>
+            <type>ArithmeticType</type>
+            <declname>Arg</declname>
+            <defname>Arg</defname>
           </param>
         </templateparamlist>
-        <type></type>
-        <definition>dakku::VectorBase&lt; T, S, Derived &gt;::VectorBase</definition>
-        <argsstring>(Args &amp;&amp;...args)</argsstring>
-        <name>VectorBase</name>
+        <type>void</type>
+        <definition>void dakku::VectorBase&lt; T, S, Derived &gt;::set</definition>
+        <argsstring>(Arg value)</argsstring>
+        <name>set</name>
         <param>
-          <type>Args &amp;&amp;...</type>
-          <declname>args</declname>
+          <type>Arg</type>
+          <declname>value</declname>
         </param>
-    <requiresclause>(sizeof...(Args) == S)    </requiresclause>
+    <requiresclause>(sizeof...(Args) == S) VectorBase(Args &amp;&amp;...args)    </requiresclause>
         <briefdescription>
 <para>Construct a new <ref refid="classdakku_1_1Vector" kindref="compound">Vector</ref> Base object with given values. </para>
         </briefdescription>
@@ -259,36 +259,11 @@
 <parametername>args</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>init values </para>
+<para>init values</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/core/vector_base.h" line="81" column="13" bodyfile="src/core/vector_base.h" bodystart="81" bodyend="83"/>
-      </memberdef>
-      <memberdef kind="function" id="classdakku_1_1VectorBase_1a21d3d5772ff3cf0e424968a63557ddb4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <templateparamlist>
-          <param>
-            <type>ArithmeticType</type>
-            <declname>Arg</declname>
-            <defname>Arg</defname>
-          </param>
-        </templateparamlist>
-        <type>void</type>
-        <definition>void dakku::VectorBase&lt; T, S, Derived &gt;::set</definition>
-        <argsstring>(Arg value)</argsstring>
-        <name>set</name>
-        <param>
-          <type>Arg</type>
-          <declname>value</declname>
-        </param>
-        <briefdescription>
-<para>set all components to <computeroutput>value</computeroutput> </para>
-        </briefdescription>
-        <detaileddescription>
+set all components to <computeroutput>value</computeroutput></para>
 <para><parameterlist kind="templateparam"><parameteritem>
 <parameternamelist>
 <parametername>Arg</parametername>
@@ -311,7 +286,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector_base.h" line="92" column="8" bodyfile="src/core/vector_base.h" bodystart="92" bodyend="94"/>
+        <location file="src/core/vector_base.h" line="93" column="8" bodyfile="src/core/vector_base.h" bodystart="93" bodyend="95"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1VectorBase_1aa040165f6c4711d6ac753670e76e868e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -367,7 +342,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector_base.h" line="104" column="8" bodyfile="src/core/vector_base.h" bodystart="104" bodyend="108"/>
+        <location file="src/core/vector_base.h" line="105" column="8" bodyfile="src/core/vector_base.h" bodystart="105" bodyend="109"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1VectorBase_1a47ce308974d85dac95130bc829603e52" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -428,7 +403,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector_base.h" line="118" column="9" bodyfile="src/core/vector_base.h" bodystart="118" bodyend="121"/>
+        <location file="src/core/vector_base.h" line="119" column="9" bodyfile="src/core/vector_base.h" bodystart="119" bodyend="122"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1VectorBase_1a9ff0cd03971a94292507a01ba8852557" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -473,7 +448,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector_base.h" line="130" column="9" bodyfile="src/core/vector_base.h" bodystart="130" bodyend="132"/>
+        <location file="src/core/vector_base.h" line="131" column="9" bodyfile="src/core/vector_base.h" bodystart="131" bodyend="133"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1VectorBase_1a490cefc87b4becdd6a938140e2f8e533" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -528,7 +503,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector_base.h" line="142" column="8" bodyfile="src/core/vector_base.h" bodystart="142" bodyend="144"/>
+        <location file="src/core/vector_base.h" line="143" column="8" bodyfile="src/core/vector_base.h" bodystart="143" bodyend="145"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1VectorBase_1a24b199ecb70deba0853e9532b888a183" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -547,7 +522,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector_base.h" line="152" column="9" bodyfile="src/core/vector_base.h" bodystart="152" bodyend="155"/>
+        <location file="src/core/vector_base.h" line="153" column="9" bodyfile="src/core/vector_base.h" bodystart="153" bodyend="156"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1VectorBase_1ae498067d7973072d02c9417b8b677e83" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const T &amp;</type>
@@ -577,7 +552,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector_base.h" line="163" column="11" bodyfile="src/core/vector_base.h" bodystart="163" bodyend="163"/>
+        <location file="src/core/vector_base.h" line="164" column="11" bodyfile="src/core/vector_base.h" bodystart="164" bodyend="164"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1VectorBase_1ad762f525bce13332abbd4b9157287ecd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>std::string</type>
@@ -594,7 +569,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector_base.h" line="170" column="16" bodyfile="src/core/vector_base.h" bodystart="170" bodyend="177"/>
+        <location file="src/core/vector_base.h" line="171" column="16" bodyfile="src/core/vector_base.h" bodystart="171" bodyend="178"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1VectorBase_1acc8e8a5aa7749125a4f6aa11b92f9dae" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>size_t</type>
@@ -611,7 +586,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector_base.h" line="195" column="11" bodyfile="src/core/vector_base.h" bodystart="195" bodyend="195"/>
+        <location file="src/core/vector_base.h" line="196" column="11" bodyfile="src/core/vector_base.h" bodystart="196" bodyend="196"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1VectorBase_1ada05b4cd2b9838400f490961dc3ac825" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const T &amp;</type>
@@ -641,7 +616,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector_base.h" line="203" column="11" bodyfile="src/core/vector_base.h" bodystart="203" bodyend="203"/>
+        <location file="src/core/vector_base.h" line="204" column="11" bodyfile="src/core/vector_base.h" bodystart="204" bodyend="204"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1VectorBase_1a619efcd85e3a91770ccae7f80031e55e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>T &amp;</type>
@@ -671,7 +646,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector_base.h" line="211" column="5" bodyfile="src/core/vector_base.h" bodystart="211" bodyend="213"/>
+        <location file="src/core/vector_base.h" line="212" column="5" bodyfile="src/core/vector_base.h" bodystart="212" bodyend="214"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1VectorBase_1a838ade15abc3b13923aa49d191c1b796" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>Derived</type>
@@ -688,7 +663,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector_base.h" line="220" column="11" bodyfile="src/core/vector_base.h" bodystart="220" bodyend="224"/>
+        <location file="src/core/vector_base.h" line="221" column="11" bodyfile="src/core/vector_base.h" bodystart="221" bodyend="225"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1VectorBase_1a164c7c788c4967c1c6ebcf7ae8466ba8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const Derived &amp;</type>
@@ -702,7 +677,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector_base.h" line="230" column="17" bodyfile="src/core/vector_base.h" bodystart="230" bodyend="230"/>
+        <location file="src/core/vector_base.h" line="231" column="17" bodyfile="src/core/vector_base.h" bodystart="231" bodyend="231"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1VectorBase_1abb0f3e3fa71aaf063c3a5a6002fcbf1f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>Derived &amp;</type>
@@ -716,7 +691,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector_base.h" line="236" column="11" bodyfile="src/core/vector_base.h" bodystart="236" bodyend="239"/>
+        <location file="src/core/vector_base.h" line="237" column="11" bodyfile="src/core/vector_base.h" bodystart="237" bodyend="240"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1VectorBase_1ae64bc6bd658a94d08f3b407fcb0e7fba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>Derived &amp;</type>
@@ -746,7 +721,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector_base.h" line="247" column="11" bodyfile="src/core/vector_base.h" bodystart="247" bodyend="250"/>
+        <location file="src/core/vector_base.h" line="248" column="11" bodyfile="src/core/vector_base.h" bodystart="248" bodyend="251"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1VectorBase_1a3351845012fbb55d54623d8af9c44a79" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -783,7 +758,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector_base.h" line="259" column="11" bodyfile="src/core/vector_base.h" bodystart="259" bodyend="262"/>
+        <location file="src/core/vector_base.h" line="260" column="11" bodyfile="src/core/vector_base.h" bodystart="260" bodyend="263"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1VectorBase_1ad6e6b4c4275de701f79d952ed56fe9ff" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>Derived &amp;</type>
@@ -813,7 +788,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector_base.h" line="309" column="11" bodyfile="src/core/vector_base.h" bodystart="309" bodyend="312"/>
+        <location file="src/core/vector_base.h" line="310" column="11" bodyfile="src/core/vector_base.h" bodystart="310" bodyend="313"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1VectorBase_1a846dad82a5cd66baba195846d3da7c9d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -850,7 +825,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector_base.h" line="321" column="11" bodyfile="src/core/vector_base.h" bodystart="321" bodyend="324"/>
+        <location file="src/core/vector_base.h" line="322" column="11" bodyfile="src/core/vector_base.h" bodystart="322" bodyend="325"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1VectorBase_1a5353b2617ac5343efeee0f325632d772" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>Derived &amp;</type>
@@ -880,7 +855,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector_base.h" line="360" column="11" bodyfile="src/core/vector_base.h" bodystart="360" bodyend="363"/>
+        <location file="src/core/vector_base.h" line="361" column="11" bodyfile="src/core/vector_base.h" bodystart="361" bodyend="364"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1VectorBase_1ad4136ad736840507f9fc902d9d6c6dfd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -917,7 +892,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector_base.h" line="372" column="11" bodyfile="src/core/vector_base.h" bodystart="372" bodyend="375"/>
+        <location file="src/core/vector_base.h" line="373" column="11" bodyfile="src/core/vector_base.h" bodystart="373" bodyend="376"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1VectorBase_1add8d1fe3254c662f2c6bfc6beb541c9e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>Derived &amp;</type>
@@ -947,7 +922,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector_base.h" line="422" column="11" bodyfile="src/core/vector_base.h" bodystart="422" bodyend="425"/>
+        <location file="src/core/vector_base.h" line="423" column="11" bodyfile="src/core/vector_base.h" bodystart="423" bodyend="426"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1VectorBase_1ad5b06200c617ca92964ad3d81787848f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -984,7 +959,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector_base.h" line="434" column="11" bodyfile="src/core/vector_base.h" bodystart="434" bodyend="436"/>
+        <location file="src/core/vector_base.h" line="435" column="11" bodyfile="src/core/vector_base.h" bodystart="435" bodyend="437"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1VectorBase_1a0efbe333b29373696a0fbb9cf0f11af2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>std::vector&lt; float &gt;</type>
@@ -1001,7 +976,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector_base.h" line="482" column="16" bodyfile="src/core/vector_base.h" bodystart="482" bodyend="486"/>
+        <location file="src/core/vector_base.h" line="483" column="16" bodyfile="src/core/vector_base.h" bodystart="483" bodyend="487"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1VectorBase_1a3cfd9b2142d1366bc105463b24fd5149" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -1029,7 +1004,282 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector_base.h" line="494" column="3" bodyfile="src/core/vector_base.h" bodystart="494" bodyend="498"/>
+        <location file="src/core/vector_base.h" line="495" column="3" bodyfile="src/core/vector_base.h" bodystart="495" bodyend="499"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1VectorBase_1aad720931a9787a87375de3f8d545567d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>decltype(auto)</type>
+        <definition>decltype(auto) dakku::VectorBase&lt; T, S, Derived &gt;::x</definition>
+        <argsstring>() const</argsstring>
+        <name>x</name>
+        <briefdescription>
+<para>get the first element </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/vector_base.h" line="505" column="12" bodyfile="src/core/vector_base.h" bodystart="505" bodyend="508"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1VectorBase_1ab937f5988070397cab4b236cda690356" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>decltype(auto)</type>
+        <definition>decltype(auto) dakku::VectorBase&lt; T, S, Derived &gt;::x</definition>
+        <argsstring>()</argsstring>
+        <name>x</name>
+        <briefdescription>
+<para>get the first element </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/vector_base.h" line="514" column="12" bodyfile="src/core/vector_base.h" bodystart="514" bodyend="517"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1VectorBase_1a14b6216fd55dc1cd2f321c834f6121ca" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>decltype(auto)</type>
+        <definition>decltype(auto) dakku::VectorBase&lt; T, S, Derived &gt;::y</definition>
+        <argsstring>() const</argsstring>
+        <name>y</name>
+        <briefdescription>
+<para>get the second element </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/vector_base.h" line="523" column="12" bodyfile="src/core/vector_base.h" bodystart="523" bodyend="526"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1VectorBase_1a4c537c79e56ad3b82ac56711dc774dc7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>decltype(auto)</type>
+        <definition>decltype(auto) dakku::VectorBase&lt; T, S, Derived &gt;::y</definition>
+        <argsstring>()</argsstring>
+        <name>y</name>
+        <briefdescription>
+<para>get the second element </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/vector_base.h" line="532" column="12" bodyfile="src/core/vector_base.h" bodystart="532" bodyend="535"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1VectorBase_1a207d3b94f85366aeb9e7773785a498ea" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>decltype(auto)</type>
+        <definition>decltype(auto) dakku::VectorBase&lt; T, S, Derived &gt;::z</definition>
+        <argsstring>() const</argsstring>
+        <name>z</name>
+        <briefdescription>
+<para>get the third element </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/vector_base.h" line="541" column="12" bodyfile="src/core/vector_base.h" bodystart="541" bodyend="544"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1VectorBase_1ad4683c184e26c7879ed8359c34162f9b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>decltype(auto)</type>
+        <definition>decltype(auto) dakku::VectorBase&lt; T, S, Derived &gt;::z</definition>
+        <argsstring>()</argsstring>
+        <name>z</name>
+        <briefdescription>
+<para>get the fourth element </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/vector_base.h" line="550" column="12" bodyfile="src/core/vector_base.h" bodystart="550" bodyend="553"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1VectorBase_1a70ef47d449743bb4e68dba7e93a56488" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>decltype(auto)</type>
+        <definition>decltype(auto) dakku::VectorBase&lt; T, S, Derived &gt;::w</definition>
+        <argsstring>() const</argsstring>
+        <name>w</name>
+        <briefdescription>
+<para>get the fourth element </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/vector_base.h" line="559" column="12" bodyfile="src/core/vector_base.h" bodystart="559" bodyend="562"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1VectorBase_1a0abbcce49a53783f902e49b81b20b097" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>decltype(auto)</type>
+        <definition>decltype(auto) dakku::VectorBase&lt; T, S, Derived &gt;::w</definition>
+        <argsstring>()</argsstring>
+        <name>w</name>
+        <briefdescription>
+<para>get the third element </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/vector_base.h" line="568" column="12" bodyfile="src/core/vector_base.h" bodystart="568" bodyend="571"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1VectorBase_1a41e30926cb56189a7378f339bc175ccc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t dakku::VectorBase&lt; T, S, Derived &gt;::maxElementIndex</definition>
+        <argsstring>() const</argsstring>
+        <name>maxElementIndex</name>
+        <briefdescription>
+<para>get the index of the max element </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the index </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/vector_base.h" line="578" column="11" bodyfile="src/core/vector_base.h" bodystart="578" bodyend="580"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1VectorBase_1ae42082956c30a3e7f611e421427a785f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>decltype(auto)</type>
+        <definition>decltype(auto) dakku::VectorBase&lt; T, S, Derived &gt;::maxElement</definition>
+        <argsstring>() const</argsstring>
+        <name>maxElement</name>
+        <briefdescription>
+<para>get the max element in the vector </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the max value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/vector_base.h" line="587" column="12" bodyfile="src/core/vector_base.h" bodystart="587" bodyend="587"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1VectorBase_1ae4f16b45f3696a2c75abcbe8c09120df" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>decltype(auto)</type>
+        <definition>decltype(auto) dakku::VectorBase&lt; T, S, Derived &gt;::begin</definition>
+        <argsstring>()</argsstring>
+        <name>begin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/vector_base.h" line="589" column="12" bodyfile="src/core/vector_base.h" bodystart="589" bodyend="589"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1VectorBase_1abf676422e4f35272f97d5a9d286002b3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>decltype(auto)</type>
+        <definition>decltype(auto) dakku::VectorBase&lt; T, S, Derived &gt;::begin</definition>
+        <argsstring>() const</argsstring>
+        <name>begin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/vector_base.h" line="590" column="12" bodyfile="src/core/vector_base.h" bodystart="590" bodyend="590"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1VectorBase_1a77b079ddc174893319dbdb3bc1eb37ee" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>decltype(auto)</type>
+        <definition>decltype(auto) dakku::VectorBase&lt; T, S, Derived &gt;::end</definition>
+        <argsstring>()</argsstring>
+        <name>end</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/vector_base.h" line="591" column="12" bodyfile="src/core/vector_base.h" bodystart="591" bodyend="591"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1VectorBase_1a3b54e311208a4d3d90763cad329d1759" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>decltype(auto)</type>
+        <definition>decltype(auto) dakku::VectorBase&lt; T, S, Derived &gt;::end</definition>
+        <argsstring>() const</argsstring>
+        <name>end</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/vector_base.h" line="592" column="12" bodyfile="src/core/vector_base.h" bodystart="592" bodyend="592"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1VectorBase_1ab55fd8f1a9e9835b5383189560c86973" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename OtherDerived</type>
+          </param>
+        </templateparamlist>
+        <type>decltype(auto)</type>
+        <definition>decltype(auto) dakku::VectorBase&lt; T, S, Derived &gt;::dot</definition>
+        <argsstring>(const VectorBase&lt; T, S, OtherDerived &gt; &amp;rhs) const</argsstring>
+        <name>dot</name>
+        <param>
+          <type>const <ref refid="classdakku_1_1VectorBase" kindref="compound">VectorBase</ref>&lt; T, S, OtherDerived &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>dot product between two vectors </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>$\vec a \cdot \vec b$ </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/vector_base.h" line="636" column="12" bodyfile="src/core/vector_base.h" bodystart="636" bodyend="638"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1VectorBase_1a407486b0eb23a07bb98e2d5a50910695" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>decltype(auto)</type>
+        <definition>decltype(auto) dakku::VectorBase&lt; T, S, Derived &gt;::squaredNorm</definition>
+        <argsstring>() const</argsstring>
+        <name>squaredNorm</name>
+        <briefdescription>
+<para>squared norm </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>$||v|| ^ 2$ </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/vector_base.h" line="645" column="12" bodyfile="src/core/vector_base.h" bodystart="645" bodyend="645"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1VectorBase_1a3de0043db1772cb93312cc158d00df03" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>decltype(auto)</type>
+        <definition>decltype(auto) dakku::VectorBase&lt; T, S, Derived &gt;::norm</definition>
+        <argsstring>() const</argsstring>
+        <name>norm</name>
+        <briefdescription>
+<para>norm </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>$||v||$ </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/vector_base.h" line="652" column="12" bodyfile="src/core/vector_base.h" bodystart="652" bodyend="652"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1VectorBase_1a8cc945684d6dca638d46a32ca403048d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>decltype(auto)</type>
+        <definition>decltype(auto) dakku::VectorBase&lt; T, S, Derived &gt;::length</definition>
+        <argsstring>() const</argsstring>
+        <name>length</name>
+        <briefdescription>
+<para>length </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>$||v||$ </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/vector_base.h" line="659" column="12" bodyfile="src/core/vector_base.h" bodystart="659" bodyend="659"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="friend">
@@ -1073,7 +1323,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector_base.h" line="186" column="10" bodyfile="src/core/vector_base.h" bodystart="186" bodyend="188"/>
+        <location file="src/core/vector_base.h" line="187" column="10" bodyfile="src/core/vector_base.h" bodystart="187" bodyend="189"/>
       </memberdef>
       <memberdef kind="friend" id="classdakku_1_1VectorBase_1a6a604c24b1049ff1e9c3c12e9a26fff9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>Derived</type>
@@ -1115,7 +1365,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector_base.h" line="271" column="18" bodyfile="src/core/vector_base.h" bodystart="271" bodyend="275"/>
+        <location file="src/core/vector_base.h" line="272" column="18" bodyfile="src/core/vector_base.h" bodystart="272" bodyend="276"/>
       </memberdef>
       <memberdef kind="friend" id="classdakku_1_1VectorBase_1aaeb63fd4c52bae59b7e867829e8b1025" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -1167,7 +1417,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector_base.h" line="285" column="18" bodyfile="src/core/vector_base.h" bodystart="285" bodyend="289"/>
+        <location file="src/core/vector_base.h" line="286" column="18" bodyfile="src/core/vector_base.h" bodystart="286" bodyend="290"/>
       </memberdef>
       <memberdef kind="friend" id="classdakku_1_1VectorBase_1a5de1f00d31ab772c98c21a49c30dc9f8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -1219,7 +1469,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector_base.h" line="299" column="18" bodyfile="src/core/vector_base.h" bodystart="299" bodyend="301"/>
+        <location file="src/core/vector_base.h" line="300" column="18" bodyfile="src/core/vector_base.h" bodystart="300" bodyend="302"/>
       </memberdef>
       <memberdef kind="friend" id="classdakku_1_1VectorBase_1a6a6648d452714192c0f8183c3dbfa55f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -1271,7 +1521,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector_base.h" line="334" column="18" bodyfile="src/core/vector_base.h" bodystart="334" bodyend="338"/>
+        <location file="src/core/vector_base.h" line="335" column="18" bodyfile="src/core/vector_base.h" bodystart="335" bodyend="339"/>
       </memberdef>
       <memberdef kind="friend" id="classdakku_1_1VectorBase_1ae0aaf7fd6e1e306948150d83050aff99" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -1323,7 +1573,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector_base.h" line="348" column="18" bodyfile="src/core/vector_base.h" bodystart="348" bodyend="352"/>
+        <location file="src/core/vector_base.h" line="349" column="18" bodyfile="src/core/vector_base.h" bodystart="349" bodyend="353"/>
       </memberdef>
       <memberdef kind="friend" id="classdakku_1_1VectorBase_1a0c6afadb59bcfa664f49854936d20346" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>Derived</type>
@@ -1365,7 +1615,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector_base.h" line="384" column="18" bodyfile="src/core/vector_base.h" bodystart="384" bodyend="388"/>
+        <location file="src/core/vector_base.h" line="385" column="18" bodyfile="src/core/vector_base.h" bodystart="385" bodyend="389"/>
       </memberdef>
       <memberdef kind="friend" id="classdakku_1_1VectorBase_1ad0aaef0a09d0762e9337d9646ef5fa21" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -1417,7 +1667,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector_base.h" line="398" column="18" bodyfile="src/core/vector_base.h" bodystart="398" bodyend="402"/>
+        <location file="src/core/vector_base.h" line="399" column="18" bodyfile="src/core/vector_base.h" bodystart="399" bodyend="403"/>
       </memberdef>
       <memberdef kind="friend" id="classdakku_1_1VectorBase_1a0cad9fc72b0af9e62bcdfa8867e72568" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -1469,7 +1719,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector_base.h" line="412" column="18" bodyfile="src/core/vector_base.h" bodystart="412" bodyend="414"/>
+        <location file="src/core/vector_base.h" line="413" column="18" bodyfile="src/core/vector_base.h" bodystart="413" bodyend="415"/>
       </memberdef>
       <memberdef kind="friend" id="classdakku_1_1VectorBase_1ab9d87c9943039f3db32f3a6c703400b0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>Derived</type>
@@ -1511,7 +1761,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector_base.h" line="445" column="18" bodyfile="src/core/vector_base.h" bodystart="445" bodyend="449"/>
+        <location file="src/core/vector_base.h" line="446" column="18" bodyfile="src/core/vector_base.h" bodystart="446" bodyend="450"/>
       </memberdef>
       <memberdef kind="friend" id="classdakku_1_1VectorBase_1aa48350ae3efe11576023da906438f0c8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -1563,7 +1813,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector_base.h" line="459" column="18" bodyfile="src/core/vector_base.h" bodystart="459" bodyend="463"/>
+        <location file="src/core/vector_base.h" line="460" column="18" bodyfile="src/core/vector_base.h" bodystart="460" bodyend="464"/>
       </memberdef>
       <memberdef kind="friend" id="classdakku_1_1VectorBase_1ab4cd237f595d4bfe30fe64074eccd277" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -1615,7 +1865,117 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector_base.h" line="473" column="18" bodyfile="src/core/vector_base.h" bodystart="473" bodyend="475"/>
+        <location file="src/core/vector_base.h" line="474" column="18" bodyfile="src/core/vector_base.h" bodystart="474" bodyend="476"/>
+      </memberdef>
+      <memberdef kind="friend" id="classdakku_1_1VectorBase_1ab4e667ac24d41b5ddcbe5cdad3698336" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator==</definition>
+        <argsstring>(const Derived &amp;a, const Derived &amp;b)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const Derived &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const Derived &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>a == b (element wise) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/vector_base.h" line="598" column="15" bodyfile="src/core/vector_base.h" bodystart="598" bodyend="600"/>
+      </memberdef>
+      <memberdef kind="friend" id="classdakku_1_1VectorBase_1aa26d1cd14931c869845edd5b7471b498" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator!=</definition>
+        <argsstring>(const Derived &amp;a, const Derived &amp;b)</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const Derived &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const Derived &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>a != b (element wise) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/vector_base.h" line="606" column="15" bodyfile="src/core/vector_base.h" bodystart="606" bodyend="608"/>
+      </memberdef>
+      <memberdef kind="friend" id="classdakku_1_1VectorBase_1af040c2a4524919abe391573fe05221fb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Derived</type>
+        <definition>Derived max</definition>
+        <argsstring>(const Derived &amp;a, const Derived &amp;b)</argsstring>
+        <name>max</name>
+        <param>
+          <type>const Derived &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const Derived &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>element wise max </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/vector_base.h" line="614" column="18" bodyfile="src/core/vector_base.h" bodystart="614" bodyend="618"/>
+      </memberdef>
+      <memberdef kind="friend" id="classdakku_1_1VectorBase_1aa73dc46636127e4b34b912cad9a3e04a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Derived</type>
+        <definition>Derived min</definition>
+        <argsstring>(const Derived &amp;a, const Derived &amp;b)</argsstring>
+        <name>min</name>
+        <param>
+          <type>const Derived &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const Derived &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>element wise min </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/vector_base.h" line="624" column="18" bodyfile="src/core/vector_base.h" bodystart="624" bodyend="628"/>
+      </memberdef>
+      <memberdef kind="friend" id="classdakku_1_1VectorBase_1a9ed3b83465f89ef9e216e6f70a3be3c9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>decltype(auto)</type>
+        <definition>decltype(auto) distance</definition>
+        <argsstring>(const Derived &amp;a, const Derived &amp;b)</argsstring>
+        <name>distance</name>
+        <param>
+          <type>const Derived &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const Derived &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>the distance </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/vector_base.h" line="665" column="19" bodyfile="src/core/vector_base.h" bodystart="665" bodyend="667"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -1649,13 +2009,26 @@
 </parameterlist>
 </para>
     </detaileddescription>
-    <location file="src/core/vector_base.h" line="19" column="1" bodyfile="src/core/vector_base.h" bodystart="19" bodyend="503"/>
+    <location file="src/core/vector_base.h" line="20" column="1" bodyfile="src/core/vector_base.h" bodystart="20" bodyend="672"/>
     <listofallmembers>
       <member refid="classdakku_1_1VectorBase_1adfeaa30c58620f0e4e8cbc9bc911c60c" prot="protected" virt="non-virtual"><scope>dakku::VectorBase</scope><name>_data</name></member>
+      <member refid="classdakku_1_1VectorBase_1ae4f16b45f3696a2c75abcbe8c09120df" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>begin</name></member>
+      <member refid="classdakku_1_1VectorBase_1abf676422e4f35272f97d5a9d286002b3" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>begin</name></member>
       <member refid="classdakku_1_1VectorBase_1a164c7c788c4967c1c6ebcf7ae8466ba8" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>derived</name></member>
       <member refid="classdakku_1_1VectorBase_1abb0f3e3fa71aaf063c3a5a6002fcbf1f" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>derived</name></member>
+      <member refid="classdakku_1_1VectorBase_1a9ed3b83465f89ef9e216e6f70a3be3c9" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>distance</name></member>
+      <member refid="classdakku_1_1VectorBase_1ab55fd8f1a9e9835b5383189560c86973" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>dot</name></member>
+      <member refid="classdakku_1_1VectorBase_1a77b079ddc174893319dbdb3bc1eb37ee" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>end</name></member>
+      <member refid="classdakku_1_1VectorBase_1a3b54e311208a4d3d90763cad329d1759" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>end</name></member>
       <member refid="classdakku_1_1VectorBase_1ae498067d7973072d02c9417b8b677e83" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>get</name></member>
       <member refid="classdakku_1_1VectorBase_1a24b199ecb70deba0853e9532b888a183" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>hasNaNs</name></member>
+      <member refid="classdakku_1_1VectorBase_1a8cc945684d6dca638d46a32ca403048d" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>length</name></member>
+      <member refid="classdakku_1_1VectorBase_1af040c2a4524919abe391573fe05221fb" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>max</name></member>
+      <member refid="classdakku_1_1VectorBase_1ae42082956c30a3e7f611e421427a785f" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>maxElement</name></member>
+      <member refid="classdakku_1_1VectorBase_1a41e30926cb56189a7378f339bc175ccc" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>maxElementIndex</name></member>
+      <member refid="classdakku_1_1VectorBase_1aa73dc46636127e4b34b912cad9a3e04a" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>min</name></member>
+      <member refid="classdakku_1_1VectorBase_1a3de0043db1772cb93312cc158d00df03" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>norm</name></member>
+      <member refid="classdakku_1_1VectorBase_1aa26d1cd14931c869845edd5b7471b498" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>operator!=</name></member>
       <member refid="classdakku_1_1VectorBase_1a0c6afadb59bcfa664f49854936d20346" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>operator*</name></member>
       <member refid="classdakku_1_1VectorBase_1ad0aaef0a09d0762e9337d9646ef5fa21" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>operator*</name></member>
       <member refid="classdakku_1_1VectorBase_1a0cad9fc72b0af9e62bcdfa8867e72568" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>operator*</name></member>
@@ -1679,14 +2052,16 @@
       <member refid="classdakku_1_1VectorBase_1a531ed133257631916fc3384392b2ab7f" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>operator&lt;&lt;</name></member>
       <member refid="classdakku_1_1VectorBase_1afe4959c7c80f7ae0297325ca971cc97a" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>operator=</name></member>
       <member refid="classdakku_1_1VectorBase_1a9a1f1574000785aa4037f604a4fa21e2" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>operator=</name></member>
+      <member refid="classdakku_1_1VectorBase_1ab4e667ac24d41b5ddcbe5cdad3698336" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>operator==</name></member>
       <member refid="classdakku_1_1VectorBase_1ada05b4cd2b9838400f490961dc3ac825" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>operator[]</name></member>
       <member refid="classdakku_1_1VectorBase_1a619efcd85e3a91770ccae7f80031e55e" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>operator[]</name></member>
-      <member refid="classdakku_1_1VectorBase_1a21d3d5772ff3cf0e424968a63557ddb4" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>set</name></member>
+      <member refid="classdakku_1_1VectorBase_1afa4cd455e4e2f12a88695122e221ca13" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>set</name></member>
       <member refid="classdakku_1_1VectorBase_1a47ce308974d85dac95130bc829603e52" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>set</name></member>
       <member refid="classdakku_1_1VectorBase_1a9ff0cd03971a94292507a01ba8852557" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>set</name></member>
       <member refid="classdakku_1_1VectorBase_1a490cefc87b4becdd6a938140e2f8e533" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>set</name></member>
       <member refid="classdakku_1_1VectorBase_1aa040165f6c4711d6ac753670e76e868e" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>setByIndex</name></member>
       <member refid="classdakku_1_1VectorBase_1acc8e8a5aa7749125a4f6aa11b92f9dae" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>size</name></member>
+      <member refid="classdakku_1_1VectorBase_1a407486b0eb23a07bb98e2d5a50910695" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>squaredNorm</name></member>
       <member refid="classdakku_1_1VectorBase_1a0efbe333b29373696a0fbb9cf0f11af2" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>toFloatVector</name></member>
       <member refid="classdakku_1_1VectorBase_1ad762f525bce13332abbd4b9157287ecd" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>toString</name></member>
       <member refid="classdakku_1_1VectorBase_1acae6683bc17650d9ff87aafa8cfb6b18" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>VectorBase</name></member>
@@ -1694,8 +2069,15 @@
       <member refid="classdakku_1_1VectorBase_1a3992f122fe320723d8a2b08aa0f0b658" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>VectorBase</name></member>
       <member refid="classdakku_1_1VectorBase_1acb37abb2d3484b94e77ce4db959e4aa5" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>VectorBase</name></member>
       <member refid="classdakku_1_1VectorBase_1a707acaad663a7d8c53b0f31db60ad21f" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>VectorBase</name></member>
-      <member refid="classdakku_1_1VectorBase_1ae369ed90f69f60064f053c5846820c6b" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>VectorBase</name></member>
       <member refid="classdakku_1_1VectorBase_1a3cfd9b2142d1366bc105463b24fd5149" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>VectorBase</name></member>
+      <member refid="classdakku_1_1VectorBase_1a70ef47d449743bb4e68dba7e93a56488" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>w</name></member>
+      <member refid="classdakku_1_1VectorBase_1a0abbcce49a53783f902e49b81b20b097" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>w</name></member>
+      <member refid="classdakku_1_1VectorBase_1aad720931a9787a87375de3f8d545567d" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>x</name></member>
+      <member refid="classdakku_1_1VectorBase_1ab937f5988070397cab4b236cda690356" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>x</name></member>
+      <member refid="classdakku_1_1VectorBase_1a14b6216fd55dc1cd2f321c834f6121ca" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>y</name></member>
+      <member refid="classdakku_1_1VectorBase_1a4c537c79e56ad3b82ac56711dc774dc7" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>y</name></member>
+      <member refid="classdakku_1_1VectorBase_1a207d3b94f85366aeb9e7773785a498ea" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>z</name></member>
+      <member refid="classdakku_1_1VectorBase_1ad4683c184e26c7879ed8359c34162f9b" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>z</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

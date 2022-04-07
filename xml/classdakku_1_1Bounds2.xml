@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="classdakku_1_1Bounds2" kind="class" language="C++" prot="public">
+    <compoundname>dakku::Bounds2</compoundname>
+    <basecompoundref refid="classdakku_1_1BoundsBase" prot="public" virt="non-virtual">dakku::BoundsBase&lt; T, 2 &gt;</basecompoundref>
+    <includes refid="bounds_8h" local="no">bounds.h</includes>
+    <templateparamlist>
+      <param>
+        <type>ArithmeticType</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdakku_1_1Bounds2_1ae986c4aae4bed669564ea89613984356" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>decltype(auto)</type>
+        <definition>decltype(auto) dakku::Bounds2&lt; T &gt;::area</definition>
+        <argsstring>() const</argsstring>
+        <name>area</name>
+        <briefdescription>
+<para>get the area of bounds </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the area </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/bounds.h" line="183" column="13" bodyfile="src/core/bounds.h" bodystart="183" bodyend="186"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>2d bounding box </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>dakku::BoundsBase&lt; T, 2 &gt;</label>
+        <link refid="classdakku_1_1BoundsBase"/>
+      </node>
+      <node id="1">
+        <label>dakku::Bounds2&lt; T &gt;</label>
+        <link refid="classdakku_1_1Bounds2"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>dakku::BoundsBase&lt; T, 2 &gt;</label>
+        <link refid="classdakku_1_1BoundsBase"/>
+      </node>
+      <node id="1">
+        <label>dakku::Bounds2&lt; T &gt;</label>
+        <link refid="classdakku_1_1Bounds2"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/core/bounds.h" line="174" column="1" bodyfile="src/core/bounds.h" bodystart="174" bodyend="187"/>
+    <listofallmembers>
+      <member refid="classdakku_1_1Bounds2_1ae986c4aae4bed669564ea89613984356" prot="public" virt="non-virtual"><scope>dakku::Bounds2</scope><name>area</name></member>
+      <member refid="classdakku_1_1BoundsBase_1a1533ac65725aee5fa771b9e068f1050d" prot="public" virt="non-virtual"><scope>dakku::Bounds2</scope><name>boundingSphere</name></member>
+      <member refid="classdakku_1_1BoundsBase_1a4dea00502d665d2f3e6657507a9b03fb" prot="public" virt="non-virtual"><scope>dakku::Bounds2</scope><name>BoundsBase</name></member>
+      <member refid="classdakku_1_1BoundsBase_1a4707e959360ddbc591c0645854575ad9" prot="public" virt="non-virtual"><scope>dakku::Bounds2</scope><name>BoundsBase</name></member>
+      <member refid="classdakku_1_1BoundsBase_1ac2e934c9361722edb8bb081686feff62" prot="public" virt="non-virtual"><scope>dakku::Bounds2</scope><name>BoundsBase</name></member>
+      <member refid="classdakku_1_1BoundsBase_1a07b1800b4e56f7f2daf1f59785215aee" prot="public" virt="non-virtual"><scope>dakku::Bounds2</scope><name>diagonal</name></member>
+      <member refid="classdakku_1_1BoundsBase_1ac3a04d4a5ba9884d9ab2734c5c94248f" prot="public" virt="non-virtual"><scope>dakku::Bounds2</scope><name>lerp</name></member>
+      <member refid="classdakku_1_1BoundsBase_1acaa8ef9b9991109e049d9409a1216518" prot="public" virt="non-virtual"><scope>dakku::Bounds2</scope><name>maxExtent</name></member>
+      <member refid="classdakku_1_1BoundsBase_1a91d113dc02fe1d57163f8b2cee408ed1" prot="public" virt="non-virtual"><scope>dakku::Bounds2</scope><name>offset</name></member>
+      <member refid="classdakku_1_1BoundsBase_1ae578a4e99b038d678ceef58b0acde222" prot="public" virt="non-virtual"><scope>dakku::Bounds2</scope><name>operator BoundsBase&lt; U, S &gt;</name></member>
+      <member refid="classdakku_1_1BoundsBase_1a06fb31654a6571636ccab3b28d4edbaf" prot="public" virt="non-virtual"><scope>dakku::Bounds2</scope><name>operator!=</name></member>
+      <member refid="classdakku_1_1BoundsBase_1acd1339c39870cd9bac4a0c2ee3726d20" prot="public" virt="non-virtual"><scope>dakku::Bounds2</scope><name>operator==</name></member>
+      <member refid="classdakku_1_1BoundsBase_1a1df49abc60c6cee7febd54aa46d04aa8" prot="public" virt="non-virtual"><scope>dakku::Bounds2</scope><name>pMax</name></member>
+      <member refid="classdakku_1_1BoundsBase_1abd7c34bec0f05f1dfb494b76eed47622" prot="public" virt="non-virtual"><scope>dakku::Bounds2</scope><name>pMin</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
