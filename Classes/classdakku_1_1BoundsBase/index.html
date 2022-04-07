@@ -515,6 +515,27 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#friend-operator" class="md-nav__link">
+    friend operator|
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#friend-operator_1" class="md-nav__link">
+    friend operator|
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#friend-operator_2" class="md-nav__link">
+    friend operator&amp;
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -643,6 +664,18 @@
 <tr>
 <td>decltype(auto)</td>
 <td><strong><a href="/dakku/Classes/classdakku_1_1BoundsBase/#friend-distance">distance</a></strong>(const <a href="/dakku/Classes/classdakku_1_1Point/">Point</a>&lt; T, S &gt; &amp; p, const <a href="/dakku/Classes/classdakku_1_1BoundsBase/">BoundsBase</a> &amp; b) <br>minimum distance between point and bounds, if inside return 0</td>
+</tr>
+<tr>
+<td><a href="/dakku/Classes/classdakku_1_1BoundsBase/">BoundsBase</a></td>
+<td>**[operator</td>
+</tr>
+<tr>
+<td><a href="/dakku/Classes/classdakku_1_1BoundsBase/">BoundsBase</a></td>
+<td>**[operator</td>
+</tr>
+<tr>
+<td><a href="/dakku/Classes/classdakku_1_1BoundsBase/">BoundsBase</a></td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1BoundsBase/#friend-operator&amp;">operator&amp;</a></strong>(const <a href="/dakku/Classes/classdakku_1_1BoundsBase/">BoundsBase</a> &amp; a, const <a href="/dakku/Classes/classdakku_1_1BoundsBase/">BoundsBase</a> &amp; b) <br>take the intersect between two bounds</td>
 </tr>
 </tbody>
 </table>
@@ -808,8 +841,32 @@
 <li><strong>b</strong> the bounds </li>
 </ul>
 <p><strong>Return</strong>: the distance </p>
+<h3 id="friend-operator">friend operator|</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">friend</span><span class="w"> </span><span class="n">BoundsBase</span><span class="w"> </span><span class="k">operator</span><span class="o">|</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">BoundsBase</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">BoundsBase</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">b</span><span class="w"></span>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p>take the union of the two bounds </p>
+<h3 id="friend-operator_1">friend operator|</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">friend</span><span class="w"> </span><span class="n">BoundsBase</span><span class="w"> </span><span class="k">operator</span><span class="o">|</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">BoundsBase</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Point</span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">p</span><span class="w"></span>
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p>take the union between bounds and a point </p>
+<h3 id="friend-operator_2">friend operator&amp;</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="k">friend</span><span class="w"> </span><span class="n">BoundsBase</span><span class="w"> </span><span class="k">operator</span><span class="o">&amp;</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">BoundsBase</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">BoundsBase</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">b</span><span class="w"></span>
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p>take the intersect between two bounds </p>
 <hr />
-<p>Updated on 2022-04-07 at 06:53:17 +0000</p>
+<p>Updated on 2022-04-07 at 10:45:56 +0000</p>
 
               
             </article>

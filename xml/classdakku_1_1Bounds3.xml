@@ -11,6 +11,25 @@
         <defname>T</defname>
       </param>
     </templateparamlist>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdakku_1_1Bounds3_1a46c718e38bed601047044a6f1c1b7d7c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>dakku::Bounds3&lt; T &gt;::Bounds3</definition>
+        <argsstring>(const BoundsBase&lt; T, 3 &gt; &amp;base)</argsstring>
+        <name>Bounds3</name>
+        <param>
+          <type>const <ref refid="classdakku_1_1BoundsBase" kindref="compound">BoundsBase</ref>&lt; T, 3 &gt; &amp;</type>
+          <declname>base</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/bounds.h" line="243" column="3" bodyfile="src/core/bounds.h" bodystart="243" bodyend="243"/>
+      </memberdef>
+      </sectiondef>
     <briefdescription>
 <para>3d bounding box </para>
     </briefdescription>
@@ -40,9 +59,10 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/core/bounds.h" line="197" column="1" bodyfile="src/core/bounds.h" bodystart="197" bodyend="200"/>
+    <location file="src/core/bounds.h" line="239" column="1" bodyfile="src/core/bounds.h" bodystart="239" bodyend="244"/>
     <listofallmembers>
       <member refid="classdakku_1_1BoundsBase_1a1533ac65725aee5fa771b9e068f1050d" prot="public" virt="non-virtual"><scope>dakku::Bounds3</scope><name>boundingSphere</name></member>
+      <member refid="classdakku_1_1Bounds3_1a46c718e38bed601047044a6f1c1b7d7c" prot="public" virt="non-virtual"><scope>dakku::Bounds3</scope><name>Bounds3</name></member>
       <member refid="classdakku_1_1BoundsBase_1a4dea00502d665d2f3e6657507a9b03fb" prot="public" virt="non-virtual"><scope>dakku::Bounds3</scope><name>BoundsBase</name></member>
       <member refid="classdakku_1_1BoundsBase_1a4707e959360ddbc591c0645854575ad9" prot="public" virt="non-virtual"><scope>dakku::Bounds3</scope><name>BoundsBase</name></member>
       <member refid="classdakku_1_1BoundsBase_1ac2e934c9361722edb8bb081686feff62" prot="public" virt="non-virtual"><scope>dakku::Bounds3</scope><name>BoundsBase</name></member>

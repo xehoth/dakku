@@ -1,12 +1,13 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.2" xml:lang="en-US">
   <compound refid="classdakku_1_1Bounds2" kind="class"><name>dakku::Bounds2</name>
+    <member refid="classdakku_1_1Bounds2_1a6ae823c1ed9889a5ac8ca8a0af4da79e" kind="function"><name>Bounds2</name></member>
     <member refid="classdakku_1_1Bounds2_1ae986c4aae4bed669564ea89613984356" kind="function"><name>area</name></member>
   </compound>
   <compound refid="classdakku_1_1Bounds2iIterator" kind="class"><name>dakku::Bounds2iIterator</name>
     <member refid="classdakku_1_1Bounds2iIterator_1a25db7490f2d16d4ce72ad2701535ffae" kind="variable"><name>b</name></member>
     <member refid="classdakku_1_1Bounds2iIterator_1a03a906289f14103e080bc463642aeba3" kind="variable"><name>p</name></member>
-    <member refid="classdakku_1_1Bounds2iIterator_1a95130c6902beb884ee28da0e632ca660" kind="function"><name>Bounds2iIterator</name></member>
+    <member refid="classdakku_1_1Bounds2iIterator_1a5c7da4004ef177e5726790240a2191aa" kind="function"><name>Bounds2iIterator</name></member>
     <member refid="classdakku_1_1Bounds2iIterator_1ad19c79cc44f5407ffedd8fee2e74b873" kind="function"><name>operator++</name></member>
     <member refid="classdakku_1_1Bounds2iIterator_1abba748bffd9de14381de7393279e0ab1" kind="function"><name>operator++</name></member>
     <member refid="classdakku_1_1Bounds2iIterator_1aabbc42d3b83e2b025e1a8540ff62314b" kind="function"><name>operator==</name></member>
@@ -15,6 +16,7 @@
     <member refid="classdakku_1_1Bounds2iIterator_1aa30d8017ae278532454b1dacf52d1807" kind="function"><name>advance</name></member>
   </compound>
   <compound refid="classdakku_1_1Bounds3" kind="class"><name>dakku::Bounds3</name>
+    <member refid="classdakku_1_1Bounds3_1a46c718e38bed601047044a6f1c1b7d7c" kind="function"><name>Bounds3</name></member>
   </compound>
   <compound refid="classdakku_1_1BoundsBase" kind="class"><name>dakku::BoundsBase</name>
     <member refid="classdakku_1_1BoundsBase_1abd7c34bec0f05f1dfb494b76eed47622" kind="variable"><name>pMin</name></member>
@@ -35,6 +37,9 @@
     <member refid="classdakku_1_1BoundsBase_1aaac97265d9f25e86e8a992a5bf5a96d4" kind="friend"><name>insideExclusive</name></member>
     <member refid="classdakku_1_1BoundsBase_1abfbe6e5a21f265e66a85a4ac6abb9083" kind="friend"><name>distanceSquared</name></member>
     <member refid="classdakku_1_1BoundsBase_1aaa212d5e2487285c3fa01207563498c8" kind="friend"><name>distance</name></member>
+    <member refid="classdakku_1_1BoundsBase_1a911ebeb367646117e45b81b7c3fceb02" kind="friend"><name>operator|</name></member>
+    <member refid="classdakku_1_1BoundsBase_1a775827382a4cfcd6d7e18741bb7236f8" kind="friend"><name>operator|</name></member>
+    <member refid="classdakku_1_1BoundsBase_1aabca5f08125e27d64b79bcb2cd1e7704" kind="friend"><name>operator&amp;</name></member>
   </compound>
   <compound refid="classdakku_1_1Class" kind="class"><name>dakku::Class</name>
     <member refid="classdakku_1_1Class_1a38f609682794eb8644448c458c9679cb" kind="function"><name>instance</name></member>
@@ -155,8 +160,8 @@
     <member refid="classdakku_1_1VectorBase_1ab4cd237f595d4bfe30fe64074eccd277" kind="friend"><name>operator/</name></member>
     <member refid="classdakku_1_1VectorBase_1ab4e667ac24d41b5ddcbe5cdad3698336" kind="friend"><name>operator==</name></member>
     <member refid="classdakku_1_1VectorBase_1aa26d1cd14931c869845edd5b7471b498" kind="friend"><name>operator!=</name></member>
-    <member refid="classdakku_1_1VectorBase_1af040c2a4524919abe391573fe05221fb" kind="friend"><name>max</name></member>
-    <member refid="classdakku_1_1VectorBase_1aa73dc46636127e4b34b912cad9a3e04a" kind="friend"><name>min</name></member>
+    <member refid="classdakku_1_1VectorBase_1a20d678a0f44b6e403a5a874227e6ee89" kind="friend"><name>max</name></member>
+    <member refid="classdakku_1_1VectorBase_1a0937015e2554ad069369c9f8b1697b06" kind="friend"><name>min</name></member>
     <member refid="classdakku_1_1VectorBase_1a9ed3b83465f89ef9e216e6f70a3be3c9" kind="friend"><name>distance</name></member>
   </compound>
   <compound refid="conceptdakku_1_1ArithmeticType" kind="concept"><name>dakku::ArithmeticType</name>
@@ -170,6 +175,7 @@
     <member refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaa87752381b583740610f1dfeb07fdad7e" kind="enumvalue"><name>VECTOR</name></member>
     <member refid="namespacedakku_1abcc743bdeb62068a56f14ac3ef9963b7" kind="typedef"><name>Bounds2f</name></member>
     <member refid="namespacedakku_1ae2cd423e1acf2fd91f4cdf3cc5ad50c6" kind="typedef"><name>Bounds2i</name></member>
+    <member refid="namespacedakku_1a19129587abbff965c2c15bab5723e208" kind="typedef"><name>Bounds3f</name></member>
     <member refid="namespacedakku_1ae7de7b89895e76d4a3f1c653393dde69" kind="typedef"><name>Vector2</name></member>
     <member refid="namespacedakku_1a3109ad27ee688fdd3462458714d7f1e7" kind="typedef"><name>Vector3</name></member>
     <member refid="namespacedakku_1abfd5a177365f8ffec7ab23d6cb6db8c0" kind="typedef"><name>Vector2f</name></member>

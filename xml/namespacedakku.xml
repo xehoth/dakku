@@ -70,12 +70,13 @@
         <argsstring></argsstring>
         <name>Bounds2f</name>
         <briefdescription>
+<para>2d float bounds </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/bounds.h" line="189" column="1" bodyfile="src/core/bounds.h" bodystart="189" bodyend="-1"/>
+        <location file="src/core/bounds.h" line="230" column="1" bodyfile="src/core/bounds.h" bodystart="230" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespacedakku_1ae2cd423e1acf2fd91f4cdf3cc5ad50c6" prot="public" static="no">
         <type><ref refid="classdakku_1_1Bounds2" kindref="compound">Bounds2</ref>&lt; int &gt;</type>
@@ -83,12 +84,27 @@
         <argsstring></argsstring>
         <name>Bounds2i</name>
         <briefdescription>
+<para>2d int bounds </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/bounds.h" line="190" column="1" bodyfile="src/core/bounds.h" bodystart="190" bodyend="-1"/>
+        <location file="src/core/bounds.h" line="232" column="1" bodyfile="src/core/bounds.h" bodystart="232" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacedakku_1a19129587abbff965c2c15bab5723e208" prot="public" static="no">
+        <type><ref refid="classdakku_1_1Bounds3" kindref="compound">Bounds3</ref>&lt; float &gt;</type>
+        <definition>using dakku::Bounds3f = typedef Bounds3&lt;float&gt;</definition>
+        <argsstring></argsstring>
+        <name>Bounds3f</name>
+        <briefdescription>
+<para>3d float bounds </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/bounds.h" line="247" column="1" bodyfile="src/core/bounds.h" bodystart="247" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespacedakku_1ae7de7b89895e76d4a3f1c653393dde69" prot="public" static="no">
         <templateparamlist>
@@ -364,7 +380,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/bounds.h" line="248" column="25" bodyfile="src/core/bounds.h" bodystart="248" bodyend="250"/>
+        <location file="src/core/bounds.h" line="296" column="25" bodyfile="src/core/bounds.h" bodystart="296" bodyend="298"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1a41ae9fcb2290e6ea6f7d4b0fbca86d17" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classdakku_1_1Bounds2iIterator" kindref="compound">Bounds2iIterator</ref></type>
@@ -382,7 +398,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/bounds.h" line="256" column="25" bodyfile="src/core/bounds.h" bodystart="256" bodyend="265"/>
+        <location file="src/core/bounds.h" line="304" column="25" bodyfile="src/core/bounds.h" bodystart="304" bodyend="313"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1af754e4967f947036a0c31c0dbb4bf6e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -530,6 +546,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/core/bounds.h" line="6" column="1"/>
+    <location file="src/core/bounds.h" line="7" column="1"/>
   </compounddef>
 </doxygen>

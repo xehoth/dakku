@@ -12,6 +12,23 @@
       </param>
     </templateparamlist>
       <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdakku_1_1Bounds2_1a6ae823c1ed9889a5ac8ca8a0af4da79e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>dakku::Bounds2&lt; T &gt;::Bounds2</definition>
+        <argsstring>(const BoundsBase&lt; T, 2 &gt; &amp;base)</argsstring>
+        <name>Bounds2</name>
+        <param>
+          <type>const <ref refid="classdakku_1_1BoundsBase" kindref="compound">BoundsBase</ref>&lt; T, 2 &gt; &amp;</type>
+          <declname>base</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/bounds.h" line="216" column="3" bodyfile="src/core/bounds.h" bodystart="216" bodyend="216"/>
+      </memberdef>
       <memberdef kind="function" id="classdakku_1_1Bounds2_1ae986c4aae4bed669564ea89613984356" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>decltype(auto)</type>
         <definition>decltype(auto) dakku::Bounds2&lt; T &gt;::area</definition>
@@ -27,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/bounds.h" line="183" column="13" bodyfile="src/core/bounds.h" bodystart="183" bodyend="186"/>
+        <location file="src/core/bounds.h" line="223" column="13" bodyfile="src/core/bounds.h" bodystart="223" bodyend="226"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -59,10 +76,11 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/core/bounds.h" line="174" column="1" bodyfile="src/core/bounds.h" bodystart="174" bodyend="187"/>
+    <location file="src/core/bounds.h" line="212" column="1" bodyfile="src/core/bounds.h" bodystart="212" bodyend="227"/>
     <listofallmembers>
       <member refid="classdakku_1_1Bounds2_1ae986c4aae4bed669564ea89613984356" prot="public" virt="non-virtual"><scope>dakku::Bounds2</scope><name>area</name></member>
       <member refid="classdakku_1_1BoundsBase_1a1533ac65725aee5fa771b9e068f1050d" prot="public" virt="non-virtual"><scope>dakku::Bounds2</scope><name>boundingSphere</name></member>
+      <member refid="classdakku_1_1Bounds2_1a6ae823c1ed9889a5ac8ca8a0af4da79e" prot="public" virt="non-virtual"><scope>dakku::Bounds2</scope><name>Bounds2</name></member>
       <member refid="classdakku_1_1BoundsBase_1a4dea00502d665d2f3e6657507a9b03fb" prot="public" virt="non-virtual"><scope>dakku::Bounds2</scope><name>BoundsBase</name></member>
       <member refid="classdakku_1_1BoundsBase_1a4707e959360ddbc591c0645854575ad9" prot="public" virt="non-virtual"><scope>dakku::Bounds2</scope><name>BoundsBase</name></member>
       <member refid="classdakku_1_1BoundsBase_1ac2e934c9361722edb8bb081686feff62" prot="public" virt="non-virtual"><scope>dakku::Bounds2</scope><name>BoundsBase</name></member>
