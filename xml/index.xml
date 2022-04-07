@@ -77,8 +77,8 @@
     <member refid="classdakku_1_1Object_1a543f734268f7be81badecee6cf7245cc" kind="function"><name>getClassName</name></member>
     <member refid="classdakku_1_1Object_1accec0632e79097564677055bef4220bd" kind="function"><name>getParentName</name></member>
     <member refid="classdakku_1_1Object_1a65d91c04e480b827fa495df96af2826b" kind="function"><name>toString</name></member>
-    <member refid="classdakku_1_1Object_1a11984365e11ffee9d344b717ac3b3e75" kind="function"><name>getClassNameStatic</name></member>
-    <member refid="classdakku_1_1Object_1a98d3ff97783ef9e278c424432dccea7c" kind="function"><name>getParentNameStatic</name></member>
+    <member refid="classdakku_1_1Object_1a247ed68865f464d511b7fdb85467c354" kind="function"><name>getClassNameStatic</name></member>
+    <member refid="classdakku_1_1Object_1a08ec83c660afb1850455ef30c43fa29c" kind="function"><name>getParentNameStatic</name></member>
   </compound>
   <compound refid="classdakku_1_1Point" kind="class"><name>dakku::Point</name>
     <member refid="classdakku_1_1Point_1ad8e485617ec76d5775ae2efd79522e29" kind="friend"><name>operator-</name></member>

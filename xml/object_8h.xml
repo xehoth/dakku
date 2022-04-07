@@ -92,14 +92,14 @@
         <name>DAKKU_DECLARE_OBJECT</name>
         <param><defname>name</defname></param>
         <param><defname>parent</defname></param>
-        <initializer>  static constexpr std::string getClassNameStatic() { return #name; }    \
-  [[nodiscard]] std::string getClassName() const override {              \
-    return getClassNameStatic();                                         \
-  }                                                                      \
-  static constexpr std::string getParentNameStatic() { return #parent; } \
-  [[nodiscard]] std::string getParentName() const override {             \
-    return getParentNameStatic();                                        \
-  }                                                                      \
+        <initializer>  static std::string getClassNameStatic() { return #name; }    \
+  [[nodiscard]] std::string getClassName() const override {    \
+    return getClassNameStatic();                               \
+  }                                                            \
+  static std::string getParentNameStatic() { return #parent; } \
+  [[nodiscard]] std::string getParentName() const override {   \
+    return getParentNameStatic();                              \
+  }                                                            \
   explicit name() = default</initializer>
         <briefdescription>
 <para>declare a dakku object </para>
@@ -113,9 +113,9 @@
       <memberdef kind="define" id="object_8h_1ad22224dfe962b66f1809b5ce2543c605" prot="public" static="no">
         <name>DAKKU_EXPORT_OBJECT</name>
         <param><defname>name</defname></param>
-        <initializer>  int _register##name = [] {                                                 \
-    Class::instance().registerClass&lt;name&gt;();                                 \
-    return 0;                                                                \
+        <initializer>  int _register##name = [] {                 \
+    Class::instance().registerClass&lt;name&gt;(); \
+    return 0;                                \
   }()</initializer>
         <briefdescription>
 <para>export a object (register the class) </para>
@@ -148,25 +148,25 @@
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
 <codeline lineno="28" refid="classdakku_1_1Object_1a65d91c04e480b827fa495df96af2826b" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classdakku_1_1Object_1a65d91c04e480b827fa495df96af2826b" kindref="member">toString</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="29"><highlight class="normal"></highlight></codeline>
-<codeline lineno="33" refid="classdakku_1_1Object_1a11984365e11ffee9d344b717ac3b3e75" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classdakku_1_1Object_1a11984365e11ffee9d344b717ac3b3e75" kindref="member">getClassNameStatic</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;Object&quot;</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
-<codeline lineno="37" refid="classdakku_1_1Object_1a98d3ff97783ef9e278c424432dccea7c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classdakku_1_1Object_1a98d3ff97783ef9e278c424432dccea7c" kindref="member">getParentNameStatic</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="33" refid="classdakku_1_1Object_1a247ed68865f464d511b7fdb85467c354" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classdakku_1_1Object_1a247ed68865f464d511b7fdb85467c354" kindref="member">getClassNameStatic</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;Object&quot;</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="37" refid="classdakku_1_1Object_1a08ec83c660afb1850455ef30c43fa29c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classdakku_1_1Object_1a08ec83c660afb1850455ef30c43fa29c" kindref="member">getParentNameStatic</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
 <codeline lineno="38"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="43" refid="object_8h_1adebe9d6b28624419b368ed9d52f52f2f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DAKKU_DECLARE_OBJECT(name,<sp/>parent)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="44"><highlight class="preprocessor"><sp/><sp/>static<sp/>constexpr<sp/>std::string<sp/>getClassNameStatic()<sp/>{<sp/>return<sp/>#name;<sp/>}<sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="45"><highlight class="preprocessor"><sp/><sp/>[[nodiscard]]<sp/>std::string<sp/>getClassName()<sp/>const<sp/>override<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="46"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>return<sp/>getClassNameStatic();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="47"><highlight class="preprocessor"><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="48"><highlight class="preprocessor"><sp/><sp/>static<sp/>constexpr<sp/>std::string<sp/>getParentNameStatic()<sp/>{<sp/>return<sp/>#parent;<sp/>}<sp/>\</highlight></codeline>
-<codeline lineno="49"><highlight class="preprocessor"><sp/><sp/>[[nodiscard]]<sp/>std::string<sp/>getParentName()<sp/>const<sp/>override<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="50"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>return<sp/>getParentNameStatic();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="51"><highlight class="preprocessor"><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="43" refid="object_8h_1adebe9d6b28624419b368ed9d52f52f2f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DAKKU_DECLARE_OBJECT(name,<sp/>parent)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="44"><highlight class="preprocessor"><sp/><sp/>static<sp/>std::string<sp/>getClassNameStatic()<sp/>{<sp/>return<sp/>#name;<sp/>}<sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="45"><highlight class="preprocessor"><sp/><sp/>[[nodiscard]]<sp/>std::string<sp/>getClassName()<sp/>const<sp/>override<sp/>{<sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="46"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>return<sp/>getClassNameStatic();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="47"><highlight class="preprocessor"><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="48"><highlight class="preprocessor"><sp/><sp/>static<sp/>std::string<sp/>getParentNameStatic()<sp/>{<sp/>return<sp/>#parent;<sp/>}<sp/>\</highlight></codeline>
+<codeline lineno="49"><highlight class="preprocessor"><sp/><sp/>[[nodiscard]]<sp/>std::string<sp/>getParentName()<sp/>const<sp/>override<sp/>{<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="50"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>return<sp/>getParentNameStatic();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="51"><highlight class="preprocessor"><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
 <codeline lineno="52"><highlight class="preprocessor"><sp/><sp/>explicit<sp/>name()<sp/>=<sp/>default</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="53"><highlight class="normal"></highlight></codeline>
-<codeline lineno="58" refid="object_8h_1ad22224dfe962b66f1809b5ce2543c605" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DAKKU_EXPORT_OBJECT(name)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="59"><highlight class="preprocessor"><sp/><sp/>int<sp/>_register##name<sp/>=<sp/>[]<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="60"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>Class::instance().registerClass&lt;name&gt;();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="61"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>return<sp/>0;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="58" refid="object_8h_1ad22224dfe962b66f1809b5ce2543c605" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DAKKU_EXPORT_OBJECT(name)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="59"><highlight class="preprocessor"><sp/><sp/>int<sp/>_register##name<sp/>=<sp/>[]<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="60"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>Class::instance().registerClass&lt;name&gt;();<sp/>\</highlight></codeline>
+<codeline lineno="61"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>return<sp/>0;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
 <codeline lineno="62"><highlight class="preprocessor"><sp/><sp/>}()</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="63"><highlight class="normal"></highlight></codeline>
 <codeline lineno="64"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dakku</highlight><highlight class="normal"></highlight></codeline>
