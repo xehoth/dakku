@@ -2,6 +2,7 @@
 #define DAKKU_CORE_BOUNDS_H_
 #include <core/vector.h>
 #include <iterator>
+#include <utility>
 
 namespace dakku {
 
@@ -160,6 +161,43 @@ class BoundsBase {
     rad = inside(center, *this) ? distance(center, pMax) : 0;
   }
 
+  /**
+   * @brief take the union of the two bounds
+   *
+   */
+  friend BoundsBase operator|(const BoundsBase &a, const BoundsBase &b) {
+    BoundsBase ret;
+    ret.pMin = min(a.pMin, b.pMin);
+    ret.pMax = max(a.pMax, b.pMax);
+    return ret;
+  }
+
+  /**
+   * @brief take the union between bounds and a point
+   *
+   */
+  friend BoundsBase operator|(const BoundsBase &b, const Point<T, S> &p) {
+    BoundsBase ret;
+    ret.pMin = min(b.pMin, p);
+    ret.pMax = max(b.Pmax, p);
+    return ret;
+  }
+
+  /**
+   * @brief take the intersect between two bounds
+   *
+   */
+  friend BoundsBase operator&(const BoundsBase &a, const BoundsBase &b) {
+    BoundsBase ret;
+    // important: assign to pMin/pMax directly and don't run the BoundsBase()
+    // constructor, since it takes min/max of the points passed to it.  In
+    // turn, that breaks returning an invalid bound for the case where we
+    // intersect non-overlapping bounds (as we'd like to happen).
+    ret.pMin = max(a.pMin, b.pMin);
+    ret.pMax = min(a.pMax, b.pMax);
+    return ret;
+  }
+
   /// left bottom corner of the bounds
   Point<T, S> pMin{std::numeric_limits<T>::max()};
   /// right top corner of the bounds
@@ -175,6 +213,8 @@ class Bounds2 : public BoundsBase<T, 2> {
  public:
   using BoundsBase<T, 2>::BoundsBase;
 
+  Bounds2(const BoundsBase<T, 2> &base) : BoundsBase<T, 2>(base) {}
+
   /**
    * @brief get the area of bounds
    *
@@ -186,7 +226,9 @@ class Bounds2 : public BoundsBase<T, 2> {
   }
 };
 
+/// 2d float bounds
 using Bounds2f = Bounds2<float>;
+/// 2d int bounds
 using Bounds2i = Bounds2<int>;
 
 /**
@@ -197,7 +239,12 @@ template <ArithmeticType T>
 class Bounds3 : public BoundsBase<T, 3> {
  public:
   using BoundsBase<T, 3>::BoundsBase;
+
+  Bounds3(const BoundsBase<T, 3> &base) : BoundsBase<T, 3>(base) {}
 };
+
+/// 3d float bounds
+using Bounds3f = Bounds3<float>;
 
 /**
  * @brief 2d integer bounds iterator, iterate all pixels inside
@@ -205,7 +252,8 @@ class Bounds3 : public BoundsBase<T, 3> {
  */
 class Bounds2iIterator : public std::forward_iterator_tag {
  public:
-  explicit Bounds2iIterator(const Bounds2i &b, const Point2i &p) : b(b), p(p) {}
+  explicit Bounds2iIterator(const Bounds2i &b, Point2i p)
+      : b(b), p(std::move(p)) {}
 
   Bounds2iIterator operator++() {
     advance();

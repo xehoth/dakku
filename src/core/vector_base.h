@@ -611,9 +611,9 @@ class VectorBase {
    * @brief element wise max
    *
    */
-  friend Derived max(const Derived &a, const Derived &b) {
-    Derived ret = a;
-    for (size_t i = 0; i < S; ++i) ret[i] = std::max(ret[i], b[i]);
+  friend Derived max(const Derived &v1, const Derived &v2) {
+    Derived ret = v1;
+    for (size_t i = 0; i < S; ++i) ret[i] = std::max(ret[i], v2[i]);
     return ret;
   }
 
@@ -621,9 +621,9 @@ class VectorBase {
    * @brief element wise min
    *
    */
-  friend Derived min(const Derived &a, const Derived &b) {
-    Derived ret = a;
-    for (size_t i = 0; i < S; ++i) ret[i] = std::min(ret[i], b[i]);
+  friend Derived min(const Derived &v1, const Derived &v2) {
+    Derived ret = v1;
+    for (size_t i = 0; i < S; ++i) ret[i] = std::min(ret[i], v2[i]);
     return ret;
   }
 
