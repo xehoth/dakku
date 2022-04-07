@@ -47,5 +47,7 @@ template <typename T>
 requires std::is_integral_v<T> DAKKU_INLINE bool isNaN(T) { return false; }
 
 class Transform;
+class Ray;
+class RayDifferential;
 }  // namespace dakku
 #endif
