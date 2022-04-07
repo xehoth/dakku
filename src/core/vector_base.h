@@ -666,6 +666,16 @@ class VectorBase {
     return (a - b).length();
   }
 
+  /**
+   * @brief abs
+   * 
+   */
+  friend decltype(auto) abs(const Derived &v) {
+    Derived ret = v;
+    for (size_t i = 0; i < S; ++i) ret[i] = std::abs(ret[i]);
+    return ret;
+  }
+
  protected:
   /// vector base data
   std::array<T, S> _data;
