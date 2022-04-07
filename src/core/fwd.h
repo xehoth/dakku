@@ -46,6 +46,14 @@ requires std::is_floating_point_v<T> DAKKU_INLINE bool isNaN(T x) {
 template <typename T>
 requires std::is_integral_v<T> DAKKU_INLINE bool isNaN(T) { return false; }
 
+class Class;
+class Object;
+/**
+ * @brief object type concept
+ *
+ */
+template <typename T>
+concept ObjectType = std::is_base_of_v<Object, T>;
 class Transform;
 class Ray;
 class RayDifferential;
