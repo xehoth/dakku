@@ -42,7 +42,13 @@
     <member refid="classdakku_1_1BoundsBase_1aabca5f08125e27d64b79bcb2cd1e7704" kind="friend"><name>operator&amp;</name></member>
   </compound>
   <compound refid="classdakku_1_1Class" kind="class"><name>dakku::Class</name>
+    <member refid="classdakku_1_1Class_1a5ca387aebcee4d1363ac17e25749098a" kind="variable"><name>_classMap</name></member>
     <member refid="classdakku_1_1Class_1a38f609682794eb8644448c458c9679cb" kind="function"><name>instance</name></member>
+    <member refid="classdakku_1_1Class_1abfdf06dcdc49b01551130b41358cb93d" kind="function"><name>registerClass</name></member>
+    <member refid="classdakku_1_1Class_1a09814cebf82067a31d3a25bcc7afe28a" kind="function"><name>isDerivedFrom</name></member>
+    <member refid="classdakku_1_1Class_1af4dcc1c45a0cc7ffed866abe23c55440" kind="function"><name>contains</name></member>
+    <member refid="classdakku_1_1Class_1af64deeeb68dfef5d6d4db8401df6281b" kind="function"><name>Class</name></member>
+    <member refid="classdakku_1_1Class_1a21fa567936b0130c57ebf47c3f143ef6" kind="function"><name>constructor</name></member>
   </compound>
   <compound refid="classdakku_1_1Logger" kind="class"><name>dakku::Logger</name>
     <member refid="classdakku_1_1Logger_1aa6afc845ad6d0bcec3849515afc971cd" kind="variable"><name>_logger</name></member>
@@ -59,8 +65,20 @@
     <member refid="structdakku_1_1Matrix4x4_1a23f75e2553126934f408f117eaed9849" kind="function"><name>setIdentity</name></member>
     <member refid="structdakku_1_1Matrix4x4_1ab093ee6d1551dec068d65a7298ce0daa" kind="friend"><name>transpose</name></member>
   </compound>
+  <compound refid="structdakku_1_1Class_1_1Metadata" kind="struct"><name>dakku::Class::Metadata</name>
+    <member refid="structdakku_1_1Class_1_1Metadata_1a9e6d887f2ccc024b4ef24c56dd92efed" kind="variable"><name>constructor</name></member>
+    <member refid="structdakku_1_1Class_1_1Metadata_1a8d7762b1bbefa76e48624868d987c871" kind="variable"><name>parent</name></member>
+  </compound>
   <compound refid="classdakku_1_1Normal" kind="class"><name>dakku::Normal</name>
     <member refid="classdakku_1_1Normal_1a5028bef9666f97b23bb23f11e3f4af7e" kind="friend"><name>operator-</name></member>
+  </compound>
+  <compound refid="classdakku_1_1Object" kind="class"><name>dakku::Object</name>
+    <member refid="classdakku_1_1Object_1a0c792f089351caf3fa7a704c86ce903d" kind="function"><name>~Object</name></member>
+    <member refid="classdakku_1_1Object_1a543f734268f7be81badecee6cf7245cc" kind="function"><name>getClassName</name></member>
+    <member refid="classdakku_1_1Object_1accec0632e79097564677055bef4220bd" kind="function"><name>getParentName</name></member>
+    <member refid="classdakku_1_1Object_1a65d91c04e480b827fa495df96af2826b" kind="function"><name>toString</name></member>
+    <member refid="classdakku_1_1Object_1a11984365e11ffee9d344b717ac3b3e75" kind="function"><name>getClassNameStatic</name></member>
+    <member refid="classdakku_1_1Object_1a98d3ff97783ef9e278c424432dccea7c" kind="function"><name>getParentNameStatic</name></member>
   </compound>
   <compound refid="classdakku_1_1Point" kind="class"><name>dakku::Point</name>
     <member refid="classdakku_1_1Point_1ad8e485617ec76d5775ae2efd79522e29" kind="friend"><name>operator-</name></member>
@@ -187,6 +205,8 @@
   </compound>
   <compound refid="conceptdakku_1_1ArithmeticType" kind="concept"><name>dakku::ArithmeticType</name>
   </compound>
+  <compound refid="conceptdakku_1_1ObjectType" kind="concept"><name>dakku::ObjectType</name>
+  </compound>
   <compound refid="namespacedakku" kind="namespace"><name>dakku</name>
     <member refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfca" kind="enum"><name>PropertyType</name></member>
     <member refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaab50339a10e1de285ac99d4c3990b8693" kind="enumvalue"><name>NONE</name></member>
@@ -230,6 +250,10 @@
     <member refid="logger_8h_1a614d277e34773e7302c6a2cda6909867" kind="define"><name>DAKKU_WARN</name></member>
     <member refid="logger_8h_1a9c5edb9052d4e1a515276aef0afef3e3" kind="define"><name>DAKKU_DEBUG</name></member>
     <member refid="logger_8h_1ad7e55cac030fb7ab38ebcfce264c1b3e" kind="define"><name>DAKKU_CHECK</name></member>
+  </compound>
+  <compound refid="object_8h" kind="file"><name>object.h</name>
+    <member refid="object_8h_1adebe9d6b28624419b368ed9d52f52f2f" kind="define"><name>DAKKU_DECLARE_OBJECT</name></member>
+    <member refid="object_8h_1ad22224dfe962b66f1809b5ce2543c605" kind="define"><name>DAKKU_EXPORT_OBJECT</name></member>
   </compound>
   <compound refid="property_8h" kind="file"><name>property.h</name>
   </compound>

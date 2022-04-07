@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="conceptdakku_1_1ObjectType" kind="concept">
+    <compoundname>dakku::ObjectType</compoundname>
+    <includes refid="fwd_8h" local="no">fwd.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+    <initializer>template&lt;typename T&gt;
+concept <ref refid="conceptdakku_1_1ObjectType" kindref="compound">dakku::ObjectType</ref> =  std::is_base_of_v&lt;Object, T&gt;    </initializer>
+    <briefdescription>
+<para>object type concept </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/core/fwd.h" line="56" column="1"/>
+  </compounddef>
+</doxygen>

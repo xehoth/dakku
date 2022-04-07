@@ -46,6 +46,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1Object/</loc>
+         <lastmod>2022-04-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1Point/</loc>
          <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
@@ -72,6 +77,11 @@
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1VectorBase/</loc>
+         <lastmod>2022-04-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Classes/structdakku_1_1Class_1_1Metadata/</loc>
          <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -117,6 +127,11 @@
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/logger_8h/</loc>
+         <lastmod>2022-04-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Files/object_8h/</loc>
          <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>

@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://xehoth.github.io/dakku/Files/dir_aebb8dcc11953d78e620bbef0b9e2183/">
+        <link rel="canonical" href="https://xehoth.github.io/dakku/Classes/classdakku_1_1Object/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.8">
     
     
       
-        <title>src/core - dakku documentation</title>
+        <title>dakku::Object - dakku documentation</title>
       
     
     
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#srccore" class="md-skip">
+        <a href="#dakkuobject" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              src/core
+              dakku::Object
             
           </span>
         </div>
@@ -328,9 +328,64 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#files" class="md-nav__link">
-    Files
+  <a href="#public-functions" class="md-nav__link">
+    Public Functions
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-functions-documentation" class="md-nav__link">
+    Public Functions Documentation
+  </a>
+  
+    <nav class="md-nav" aria-label="Public Functions Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-object" class="md-nav__link">
+    function ~Object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-getclassname" class="md-nav__link">
+    function getClassName
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-getparentname" class="md-nav__link">
+    function getParentName
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-tostring" class="md-nav__link">
+    function toString
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-getclassnamestatic" class="md-nav__link">
+    function getClassNameStatic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-getparentnamestatic" class="md-nav__link">
+    function getParentNameStatic
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -346,53 +401,74 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/xehoth/dakku/edit/master/docs/Files/dir_aebb8dcc11953d78e620bbef0b9e2183.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/xehoth/dakku/edit/master/docs/Classes/classdakku_1_1Object.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
 
-<h1 id="srccore">src/core</h1>
-<h2 id="files">Files</h2>
+<h1 id="dakkuobject">dakku::Object</h1>
+<p><a href="">Object</a> class, RTTI support. </p>
+<p><code>#include &lt;object.h&gt;</code></p>
+<h2 id="public-functions">Public Functions</h2>
 <table>
 <thead>
 <tr>
+<th></th>
 <th>Name</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong><a href="/dakku/Files/bounds_8h/#file-bounds.h">src/core/bounds.h</a></strong></td>
+<td>virtual</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Object/#function-~object">~Object</a></strong>() =default</td>
 </tr>
 <tr>
-<td><strong><a href="/dakku/Files/class_8h/#file-class.h">src/core/class.h</a></strong></td>
+<td>virtual std::string</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Object/#function-getclassname">getClassName</a></strong>() const</td>
 </tr>
 <tr>
-<td><strong><a href="/dakku/Files/fwd_8h/#file-fwd.h">src/core/fwd.h</a></strong></td>
+<td>virtual std::string</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Object/#function-getparentname">getParentName</a></strong>() const</td>
 </tr>
 <tr>
-<td><strong><a href="/dakku/Files/logger_8h/#file-logger.h">src/core/logger.h</a></strong></td>
+<td>virtual std::string</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Object/#function-tostring">toString</a></strong>() const</td>
 </tr>
 <tr>
-<td><strong><a href="/dakku/Files/object_8h/#file-object.h">src/core/object.h</a></strong></td>
+<td>constexpr std::string</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Object/#function-getclassnamestatic">getClassNameStatic</a></strong>()</td>
 </tr>
 <tr>
-<td><strong><a href="/dakku/Files/property_8h/#file-property.h">src/core/property.h</a></strong></td>
-</tr>
-<tr>
-<td><strong><a href="/dakku/Files/ray_8h/#file-ray.h">src/core/ray.h</a></strong></td>
-</tr>
-<tr>
-<td><strong><a href="/dakku/Files/transform_8h/#file-transform.h">src/core/transform.h</a></strong></td>
-</tr>
-<tr>
-<td><strong><a href="/dakku/Files/vector_8h/#file-vector.h">src/core/vector.h</a></strong></td>
-</tr>
-<tr>
-<td><strong><a href="/dakku/Files/vector__base_8h/#file-vector-base.h">src/core/vector_base.h</a></strong></td>
+<td>constexpr std::string</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Object/#function-getparentnamestatic">getParentNameStatic</a></strong>()</td>
 </tr>
 </tbody>
 </table>
+<h2 id="public-functions-documentation">Public Functions Documentation</h2>
+<h3 id="function-object">function ~Object</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">virtual</span><span class="w"> </span><span class="o">~</span><span class="n">Object</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="k">default</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-getclassname">function getClassName</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">getClassName</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+</code></pre></div>
+<p><strong>Return</strong>: the class name of the object </p>
+<h3 id="function-getparentname">function getParentName</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">getParentName</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+</code></pre></div>
+<p><strong>Return</strong>: the class name of the parent of the object </p>
+<h3 id="function-tostring">function toString</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">toString</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+</code></pre></div>
+<p><strong>Return</strong>: object to string (default: class name) </p>
+<h3 id="function-getclassnamestatic">function getClassNameStatic</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">getClassNameStatic</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<p><strong>Return</strong>: the class name of the object </p>
+<h3 id="function-getparentnamestatic">function getParentNameStatic</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">getParentNameStatic</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<p><strong>Return</strong>: the class name of the parent of the object </p>
 <hr />
 <p>Updated on 2022-04-07 at 16:25:42 +0000</p>
 

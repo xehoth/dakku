@@ -6,6 +6,7 @@
     <innerfile refid="class_8h">class.h</innerfile>
     <innerfile refid="fwd_8h">fwd.h</innerfile>
     <innerfile refid="logger_8h">logger.h</innerfile>
+    <innerfile refid="object_8h">object.h</innerfile>
     <innerfile refid="property_8h">property.h</innerfile>
     <innerfile refid="ray_8h">ray.h</innerfile>
     <innerfile refid="transform_8h">transform.h</innerfile>

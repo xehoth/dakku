@@ -349,6 +349,27 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#function-registerclass" class="md-nav__link">
+    function registerClass
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-isderivedfrom" class="md-nav__link">
+    function isDerivedFrom
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-contains" class="md-nav__link">
+    function contains
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -388,6 +409,18 @@
 <td><a href="/dakku/Classes/classdakku_1_1Class/">Class</a> &amp;</td>
 <td><strong><a href="/dakku/Classes/classdakku_1_1Class/#function-instance">instance</a></strong>()<br>get the class instance (singleton)</td>
 </tr>
+<tr>
+<td>template &lt;ObjectType T> <br>void</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Class/#function-registerclass">registerClass</a></strong>()<br>register an object class</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Class/#function-isderivedfrom">isDerivedFrom</a></strong>(std::string_view cur, std::string_view from) const<br>check whether <code>cur</code> dervies from <code>from</code></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Class/#function-contains">contains</a></strong>(std::string_view name) const<br>check whether <code>name</code> is registered</td>
+</tr>
 </tbody>
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
@@ -396,8 +429,30 @@
 </code></pre></div>
 <p>get the class instance (singleton) </p>
 <p><strong>Return</strong>: the instance </p>
+<h3 id="function-registerclass">function registerClass</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="n">ObjectType</span><span class="w"> </span><span class="n">T</span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kt">void</span><span class="w"> </span><span class="n">registerClass</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<p>register an object class </p>
+<p><strong>Template Parameters</strong>: </p>
+<ul>
+<li><strong>T</strong> object type </li>
+</ul>
+<h3 id="function-isderivedfrom">function isDerivedFrom</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">isDerivedFrom</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">cur</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">from</span><span class="w"></span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+</code></pre></div>
+<p>check whether <code>cur</code> dervies from <code>from</code></p>
+<h3 id="function-contains">function contains</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">contains</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">name</span><span class="w"></span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+</code></pre></div>
+<p>check whether <code>name</code> is registered </p>
 <hr />
-<p>Updated on 2022-04-07 at 15:45:52 +0000</p>
+<p>Updated on 2022-04-07 at 16:25:42 +0000</p>
 
               
             </article>

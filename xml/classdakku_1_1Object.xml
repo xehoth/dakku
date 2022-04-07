@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="classdakku_1_1Object" kind="class" language="C++" prot="public">
+    <compoundname>dakku::Object</compoundname>
+    <includes refid="object_8h" local="no">object.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdakku_1_1Object_1a0c792f089351caf3fa7a704c86ce903d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual dakku::Object::~Object</definition>
+        <argsstring>()=default</argsstring>
+        <name>~Object</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/object.h" line="13" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1Object_1a543f734268f7be81badecee6cf7245cc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::string</type>
+        <definition>virtual std::string dakku::Object::getClassName</definition>
+        <argsstring>() const</argsstring>
+        <name>getClassName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the class name of the object </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/object.h" line="18" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1Object_1accec0632e79097564677055bef4220bd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::string</type>
+        <definition>virtual std::string dakku::Object::getParentName</definition>
+        <argsstring>() const</argsstring>
+        <name>getParentName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the class name of the parent of the object </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/object.h" line="23" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1Object_1a65d91c04e480b827fa495df96af2826b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::string</type>
+        <definition>virtual std::string dakku::Object::toString</definition>
+        <argsstring>() const</argsstring>
+        <name>toString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>object to string (default: class name) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/object.h" line="28" column="24"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classdakku_1_1Object_1a11984365e11ffee9d344b717ac3b3e75" prot="public" static="yes" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr std::string</type>
+        <definition>static constexpr std::string dakku::Object::getClassNameStatic</definition>
+        <argsstring>()</argsstring>
+        <name>getClassNameStatic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the class name of the object </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/object.h" line="33" column="32" bodyfile="src/core/object.h" bodystart="33" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1Object_1a98d3ff97783ef9e278c424432dccea7c" prot="public" static="yes" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr std::string</type>
+        <definition>static constexpr std::string dakku::Object::getParentNameStatic</definition>
+        <argsstring>()</argsstring>
+        <name>getParentNameStatic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the class name of the parent of the object </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/object.h" line="37" column="32" bodyfile="src/core/object.h" bodystart="37" bodyend="37"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classdakku_1_1Object" kindref="compound">Object</ref> class, RTTI support. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/core/object.h" line="11" column="1" bodyfile="src/core/object.h" bodystart="11" bodyend="38"/>
+    <listofallmembers>
+      <member refid="classdakku_1_1Object_1a543f734268f7be81badecee6cf7245cc" prot="public" virt="virtual"><scope>dakku::Object</scope><name>getClassName</name></member>
+      <member refid="classdakku_1_1Object_1a11984365e11ffee9d344b717ac3b3e75" prot="public" virt="non-virtual"><scope>dakku::Object</scope><name>getClassNameStatic</name></member>
+      <member refid="classdakku_1_1Object_1accec0632e79097564677055bef4220bd" prot="public" virt="virtual"><scope>dakku::Object</scope><name>getParentName</name></member>
+      <member refid="classdakku_1_1Object_1a98d3ff97783ef9e278c424432dccea7c" prot="public" virt="non-virtual"><scope>dakku::Object</scope><name>getParentNameStatic</name></member>
+      <member refid="classdakku_1_1Object_1a65d91c04e480b827fa495df96af2826b" prot="public" virt="virtual"><scope>dakku::Object</scope><name>toString</name></member>
+      <member refid="classdakku_1_1Object_1a0c792f089351caf3fa7a704c86ce903d" prot="public" virt="virtual"><scope>dakku::Object</scope><name>~Object</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
