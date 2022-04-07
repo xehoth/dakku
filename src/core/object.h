@@ -30,35 +30,35 @@ class DAKKU_EXPORT_CORE Object {
   /**
    * @return the class name of the object
    */
-  static constexpr std::string getClassNameStatic() { return "Object"; }
+  static std::string getClassNameStatic() { return "Object"; }
   /**
    * @return the class name of the parent of the object
    */
-  static constexpr std::string getParentNameStatic() { return ""; }
+  static std::string getParentNameStatic() { return ""; }
 };
 
 /**
  * @brief declare a dakku object
  */
-#define DAKKU_DECLARE_OBJECT(name, parent)                               \
-  static constexpr std::string getClassNameStatic() { return #name; }    \
-  [[nodiscard]] std::string getClassName() const override {              \
-    return getClassNameStatic();                                         \
-  }                                                                      \
-  static constexpr std::string getParentNameStatic() { return #parent; } \
-  [[nodiscard]] std::string getParentName() const override {             \
-    return getParentNameStatic();                                        \
-  }                                                                      \
+#define DAKKU_DECLARE_OBJECT(name, parent)                     \
+  static std::string getClassNameStatic() { return #name; }    \
+  [[nodiscard]] std::string getClassName() const override {    \
+    return getClassNameStatic();                               \
+  }                                                            \
+  static std::string getParentNameStatic() { return #parent; } \
+  [[nodiscard]] std::string getParentName() const override {   \
+    return getParentNameStatic();                              \
+  }                                                            \
   explicit name() = default
 
 /**
  * @brief export a object (register the class)
  *
  */
-#define DAKKU_EXPORT_OBJECT(name)                                            \
-  int _register##name = [] {                                                 \
-    Class::instance().registerClass<name>();                                 \
-    return 0;                                                                \
+#define DAKKU_EXPORT_OBJECT(name)            \
+  int _register##name = [] {                 \
+    Class::instance().registerClass<name>(); \
+    return 0;                                \
   }()
 
 }  // namespace dakku
