@@ -123,6 +123,8 @@ using Point3 = Point<T, 3>;
 
 /// 2d float point
 using Point2f = Point2<float>;
+/// 2d int point
+using Point2i = Point2<int>;
 /// 3d float point
 using Point3f = Point3<float>;
 

@@ -5,6 +5,7 @@
 #include <algorithm>
 #include <string>
 #include <ostream>
+#include <numeric>
 
 namespace dakku {
 
@@ -33,7 +34,7 @@ class VectorBase {
    * @param value init value
    */
   template <ArithmeticType Arg>
-  explicit VectorBase(Arg value) {
+  VectorBase(Arg value) {
     set(value);
     DAKKU_CHECK(!hasNaNs(), "has nan");
   }
@@ -78,7 +79,7 @@ class VectorBase {
    * @param args init values
    */
   template <ArithmeticType... Args>
-  requires(sizeof...(Args) == S) explicit VectorBase(Args &&...args) {
+  requires(sizeof...(Args) == S) VectorBase(Args &&...args) {
     set(std::forward<Args>(args)...);
   }
 
@@ -497,10 +498,191 @@ class VectorBase {
     for (size_t i = 0; i < S; ++i) _data[i] = v[i];
   }
 
+  /**
+   * @brief get the first element
+   *
+   */
+  decltype(auto) x() const {
+    static_assert(S >= 1, "not enough size to get x");
+    return _data[0];
+  }
+
+  /**
+   * @brief get the first element
+   *
+   */
+  decltype(auto) x() {
+    static_assert(S >= 1, "not enough size to get x");
+    return _data[0];
+  }
+
+  /**
+   * @brief get the second element
+   *
+   */
+  decltype(auto) y() const {
+    static_assert(S >= 2, "not enough size to get y");
+    return _data[1];
+  }
+
+  /**
+   * @brief get the second element
+   *
+   */
+  decltype(auto) y() {
+    static_assert(S >= 2, "not enough size to get y");
+    return _data[1];
+  }
+
+  /**
+   * @brief get the third element
+   *
+   */
+  decltype(auto) z() const {
+    static_assert(S >= 3, "not enough size to get z");
+    return _data[2];
+  }
+
+  /**
+   * @brief get the fourth element
+   *
+   */
+  decltype(auto) z() {
+    static_assert(S >= 4, "not enough size to get w");
+    return _data[3];
+  }
+
+  /**
+   * @brief get the fourth element
+   *
+   */
+  decltype(auto) w() const {
+    static_assert(S >= 4, "not enough size to get w");
+    return _data[3];
+  }
+
+  /**
+   * @brief get the third element
+   *
+   */
+  decltype(auto) w() {
+    static_assert(S >= 3, "not enough size to get z");
+    return _data[2];
+  }
+
+  /**
+   * @brief get the index of the max element
+   *
+   * @return the index
+   */
+  [[nodiscard]] size_t maxElementIndex() const {
+    return std::distance(begin(), std::max_element(begin(), end()));
+  }
+
+  /**
+   * @brief get the max element in the vector
+   *
+   * @return the max value
+   */
+  decltype(auto) maxElement() const { return _data[maxElementIndex()]; }
+
+  decltype(auto) begin() { return _data.begin(); }
+  decltype(auto) begin() const { return _data.begin(); }
+  decltype(auto) end() { return _data.end(); }
+  decltype(auto) end() const { return _data.end(); }
+
+  /**
+   * @brief a == b (element wise)
+   *
+   */
+  friend bool operator==(const Derived &a, const Derived &b) {
+    return a._data == b._data;
+  }
+
+  /**
+   * @brief a != b (element wise)
+   *
+   */
+  friend bool operator!=(const Derived &a, const Derived &b) {
+    return a._data != b._data;
+  }
+
+  /**
+   * @brief element wise max
+   *
+   */
+  friend Derived max(const Derived &a, const Derived &b) {
+    Derived ret = a;
+    for (size_t i = 0; i < S; ++i) ret[i] = std::max(ret[i], b[i]);
+    return ret;
+  }
+
+  /**
+   * @brief element wise min
+   *
+   */
+  friend Derived min(const Derived &a, const Derived &b) {
+    Derived ret = a;
+    for (size_t i = 0; i < S; ++i) ret[i] = std::min(ret[i], b[i]);
+    return ret;
+  }
+
+  /**
+   * @brief dot product between two vectors
+   *
+   * @return $\vec a \cdot \vec b$
+   */
+  template <typename OtherDerived>
+  decltype(auto) dot(const VectorBase<T, S, OtherDerived> &rhs) const {
+    return std::inner_product(begin(), end(), rhs.begin(), T{});
+  }
+
+  /**
+   * @brief squared norm
+   *
+   * @return $||v|| ^ 2$
+   */
+  decltype(auto) squaredNorm() const { return this->dot(*this); }
+
+  /**
+   * @brief norm
+   *
+   * @return $||v||$
+   */
+  decltype(auto) norm() const { return std::sqrt(squaredNorm()); }
+
+  /**
+   * @brief length
+   *
+   * @return $||v||$
+   */
+  decltype(auto) length() const { return norm(); }
+
+  /**
+   * @brief the distance
+   *
+   */
+  friend decltype(auto) distance(const Derived &a, const Derived &b) {
+    return (a - b).length();
+  }
+
  protected:
   /// vector base data
   std::array<T, S> _data;
 };
+
+/**
+ * @brief dot product between two vectors
+ *
+ * @param a $\vec a$
+ * @param b $\vec b$
+ * @return $\vec a \cdot \vec b$
+ */
+template <ArithmeticType T, size_t S, typename D1, typename D2>
+inline decltype(auto) dot(const VectorBase<T, S, D1> &a,
+                          const VectorBase<T, S, D2> &b) {
+  return a.dot(b);
+}
 
 /*! @page vector_base Vector Base
 

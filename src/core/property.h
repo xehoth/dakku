@@ -112,7 +112,7 @@ class DAKKU_EXPORT_CORE Property {
 
   /**
    * @brief is this an object
-   * 
+   *
    */
   [[nodiscard]] bool isObjectType() const {
     return type == PropertyType::OBJECT;
@@ -120,21 +120,25 @@ class DAKKU_EXPORT_CORE Property {
 
   /**
    * @brief is this an array
-   * 
+   *
    */
   [[nodiscard]] bool isArrayType() const { return type == PropertyType::ARRAY; }
 
   /**
    * @brief is this a number
-   * 
+   *
    */
-  [[nodiscard]] bool isNumberType() const { return type == PropertyType::NUMBER; }
+  [[nodiscard]] bool isNumberType() const {
+    return type == PropertyType::NUMBER;
+  }
 
   /**
    * @brief is this a vector
-   * 
+   *
    */
-  [[nodiscard]] bool isVectorType() const { return type == PropertyType::VECTOR; }
+  [[nodiscard]] bool isVectorType() const {
+    return type == PropertyType::VECTOR;
+  }
 
   /**
    * @brief index `key`, if this is NONE, then => OBJECT
@@ -147,7 +151,7 @@ class DAKKU_EXPORT_CORE Property {
       data = ObjectType{};
       type = PropertyType::OBJECT;
     }
-    DAKKU_CHECK(isObject(), "");
+    DAKKU_CHECK(isObjectType(), "looking up {} in a non-object property", key);
     return getObject()[key];
   }
 
@@ -163,6 +167,7 @@ class DAKKU_EXPORT_CORE Property {
       type = PropertyType::ARRAY;
       getArray().reserve((i + 1) * 2);
     }
+    DAKKU_CHECK(isArrayType(), "index {} in a non-array property", i);
     auto &arr = getArray();
     if (i >= arr.size()) {
       arr.reserve((i + 1) * 2);
@@ -173,13 +178,13 @@ class DAKKU_EXPORT_CORE Property {
 
   /**
    * @brief to string
-   * 
+   *
    */
   [[nodiscard]] std::string toString() const;
 
   /**
    * @brief output the property
-   * 
+   *
    */
   friend std::ostream &operator<<(std::ostream &os, const Property &property) {
     return os << property.toString();

@@ -4,6 +4,7 @@
 #include <core/property.h>
 #include <core/transform.h>
 #include <core/class.h>
+#include <core/bounds.h>
 #include <iostream>
 
 using namespace dakku;
