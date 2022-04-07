@@ -12,6 +12,8 @@
     <innerclass refid="classdakku_1_1Normal" prot="public">dakku::Normal</innerclass>
     <innerclass refid="classdakku_1_1Point" prot="public">dakku::Point</innerclass>
     <innerclass refid="classdakku_1_1Property" prot="public">dakku::Property</innerclass>
+    <innerclass refid="classdakku_1_1Ray" prot="public">dakku::Ray</innerclass>
+    <innerclass refid="classdakku_1_1RayDifferential" prot="public">dakku::RayDifferential</innerclass>
     <innerclass refid="classdakku_1_1Vector" prot="public">dakku::Vector</innerclass>
     <innerclass refid="classdakku_1_1VectorBase" prot="public">dakku::VectorBase</innerclass>
       <sectiondef kind="enum">
@@ -538,7 +540,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector_base.h" line="682" column="17" bodyfile="src/core/vector_base.h" bodystart="682" bodyend="685"/>
+        <location file="src/core/vector_base.h" line="692" column="17" bodyfile="src/core/vector_base.h" bodystart="692" bodyend="695"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

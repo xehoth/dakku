@@ -56,6 +56,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1Ray/</loc>
+         <lastmod>2022-04-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1RayDifferential/</loc>
+         <lastmod>2022-04-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1Vector/</loc>
          <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
@@ -117,6 +127,11 @@
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/property_8h/</loc>
+         <lastmod>2022-04-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Files/ray_8h/</loc>
          <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>

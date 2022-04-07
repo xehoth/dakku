@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector_base.h" line="671" column="14" bodyfile="src/core/vector_base.h" bodystart="671" bodyend="-1"/>
+        <location file="src/core/vector_base.h" line="681" column="14" bodyfile="src/core/vector_base.h" bodystart="681" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -1977,6 +1977,24 @@ set all components to <computeroutput>value</computeroutput></para>
         </inbodydescription>
         <location file="src/core/vector_base.h" line="665" column="19" bodyfile="src/core/vector_base.h" bodystart="665" bodyend="667"/>
       </memberdef>
+      <memberdef kind="friend" id="classdakku_1_1VectorBase_1a0edf71c48dff606bc0173b7a8f55cf4a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>decltype(auto)</type>
+        <definition>decltype(auto) abs</definition>
+        <argsstring>(const Derived &amp;v)</argsstring>
+        <name>abs</name>
+        <param>
+          <type>const Derived &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>abs </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/vector_base.h" line="673" column="19" bodyfile="src/core/vector_base.h" bodystart="673" bodyend="677"/>
+      </memberdef>
       </sectiondef>
     <briefdescription>
 <para>vector base class </para>
@@ -2009,9 +2027,10 @@ set all components to <computeroutput>value</computeroutput></para>
 </parameterlist>
 </para>
     </detaileddescription>
-    <location file="src/core/vector_base.h" line="20" column="1" bodyfile="src/core/vector_base.h" bodystart="20" bodyend="672"/>
+    <location file="src/core/vector_base.h" line="20" column="1" bodyfile="src/core/vector_base.h" bodystart="20" bodyend="682"/>
     <listofallmembers>
       <member refid="classdakku_1_1VectorBase_1adfeaa30c58620f0e4e8cbc9bc911c60c" prot="protected" virt="non-virtual"><scope>dakku::VectorBase</scope><name>_data</name></member>
+      <member refid="classdakku_1_1VectorBase_1a0edf71c48dff606bc0173b7a8f55cf4a" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>abs</name></member>
       <member refid="classdakku_1_1VectorBase_1ae4f16b45f3696a2c75abcbe8c09120df" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>begin</name></member>
       <member refid="classdakku_1_1VectorBase_1abf676422e4f35272f97d5a9d286002b3" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>begin</name></member>
       <member refid="classdakku_1_1VectorBase_1a164c7c788c4967c1c6ebcf7ae8466ba8" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>derived</name></member>

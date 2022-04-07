@@ -103,6 +103,10 @@
         <link refid="property_8h"/>
       </node>
       <node id="5">
+        <label>src/core/ray.h</label>
+        <link refid="ray_8h"/>
+      </node>
+      <node id="6">
         <label>src/core/transform.h</label>
         <link refid="transform_8h"/>
       </node>
@@ -114,6 +118,8 @@
         <childnode refid="4" relation="include">
         </childnode>
         <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -460,18 +466,24 @@
 <codeline lineno="666"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(a<sp/>-<sp/>b).length();</highlight></codeline>
 <codeline lineno="667"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="668"><highlight class="normal"></highlight></codeline>
-<codeline lineno="669"><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="671" refid="classdakku_1_1VectorBase_1adfeaa30c58620f0e4e8cbc9bc911c60c" refkind="member"><highlight class="normal"><sp/><sp/>std::array&lt;T,<sp/>S&gt;<sp/><ref refid="classdakku_1_1VectorBase_1adfeaa30c58620f0e4e8cbc9bc911c60c" kindref="member">_data</ref>;</highlight></codeline>
-<codeline lineno="672"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="673"><highlight class="normal"></highlight></codeline>
-<codeline lineno="681"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;ArithmeticType<sp/>T,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>S,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D1,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D2&gt;</highlight></codeline>
-<codeline lineno="682" refid="namespacedakku_1a2016f3c3a16c069a055a7017eacb0e66" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">)<sp/><ref refid="namespacedakku_1a2016f3c3a16c069a055a7017eacb0e66" kindref="member">dot</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1VectorBase" kindref="compound">VectorBase&lt;T, S, D1&gt;</ref><sp/>&amp;a,</highlight></codeline>
-<codeline lineno="683"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1VectorBase" kindref="compound">VectorBase&lt;T, S, D2&gt;</ref><sp/>&amp;b)<sp/>{</highlight></codeline>
-<codeline lineno="684"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>a.<ref refid="classdakku_1_1VectorBase_1ab55fd8f1a9e9835b5383189560c86973" kindref="member">dot</ref>(b);</highlight></codeline>
-<codeline lineno="685"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="686"><highlight class="normal"></highlight></codeline>
-<codeline lineno="692"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dakku</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="693"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="673" refid="classdakku_1_1VectorBase_1a0edf71c48dff606bc0173b7a8f55cf4a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">)<sp/><ref refid="classdakku_1_1VectorBase_1a0edf71c48dff606bc0173b7a8f55cf4a" kindref="member">abs</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Derived<sp/>&amp;v)<sp/>{</highlight></codeline>
+<codeline lineno="674"><highlight class="normal"><sp/><sp/><sp/><sp/>Derived<sp/>ret<sp/>=<sp/>v;</highlight></codeline>
+<codeline lineno="675"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>S;<sp/>++i)<sp/>ret[i]<sp/>=<sp/>std::abs(ret[i]);</highlight></codeline>
+<codeline lineno="676"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="677"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="678"><highlight class="normal"></highlight></codeline>
+<codeline lineno="679"><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="681" refid="classdakku_1_1VectorBase_1adfeaa30c58620f0e4e8cbc9bc911c60c" refkind="member"><highlight class="normal"><sp/><sp/>std::array&lt;T,<sp/>S&gt;<sp/><ref refid="classdakku_1_1VectorBase_1adfeaa30c58620f0e4e8cbc9bc911c60c" kindref="member">_data</ref>;</highlight></codeline>
+<codeline lineno="682"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="683"><highlight class="normal"></highlight></codeline>
+<codeline lineno="691"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;ArithmeticType<sp/>T,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>S,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D1,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D2&gt;</highlight></codeline>
+<codeline lineno="692" refid="namespacedakku_1a2016f3c3a16c069a055a7017eacb0e66" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">)<sp/><ref refid="namespacedakku_1a2016f3c3a16c069a055a7017eacb0e66" kindref="member">dot</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1VectorBase" kindref="compound">VectorBase&lt;T, S, D1&gt;</ref><sp/>&amp;a,</highlight></codeline>
+<codeline lineno="693"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1VectorBase" kindref="compound">VectorBase&lt;T, S, D2&gt;</ref><sp/>&amp;b)<sp/>{</highlight></codeline>
+<codeline lineno="694"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>a.<ref refid="classdakku_1_1VectorBase_1ab55fd8f1a9e9835b5383189560c86973" kindref="member">dot</ref>(b);</highlight></codeline>
+<codeline lineno="695"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="696"><highlight class="normal"></highlight></codeline>
+<codeline lineno="702"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dakku</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="703"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="src/core/vector_base.h"/>
   </compounddef>
