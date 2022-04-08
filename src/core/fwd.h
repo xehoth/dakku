@@ -17,6 +17,9 @@ namespace dakku {
 /// infinity
 static constexpr float INF = std::numeric_limits<float>::infinity();
 
+/// PI
+static constexpr float PI = std::numbers::pi_v<float>;
+
 /**
  * @brief concept: `T` is an arithemetic type
  *
@@ -45,6 +48,22 @@ requires std::is_floating_point_v<T> DAKKU_INLINE bool isNaN(T x) {
  */
 template <typename T>
 requires std::is_integral_v<T> DAKKU_INLINE bool isNaN(T) { return false; }
+
+/**
+ * @brief convert degrees to radians
+ *
+ * @param deg given degree
+ * @return the radian of deg
+ */
+inline float radians(float deg) { return PI / 180.0f * deg; }
+
+/**
+ * @brief convert radians to degrees
+ *
+ * @param rad the given radian
+ * @return the degree of rad
+ */
+inline float degrees(float rad) { return 180.0f / PI * rad; }
 
 enum class PropertyType;
 class Property;

@@ -548,8 +548,8 @@ class VectorBase {
    *
    */
   decltype(auto) z() {
-    static_assert(S >= 4, "not enough size to get w");
-    return _data[3];
+    static_assert(S >= 3, "not enough size to get w");
+    return _data[2];
   }
 
   /**
@@ -566,8 +566,8 @@ class VectorBase {
    *
    */
   decltype(auto) w() {
-    static_assert(S >= 3, "not enough size to get z");
-    return _data[2];
+    static_assert(S >= 4, "not enough size to get z");
+    return _data[3];
   }
 
   /**
@@ -628,6 +628,27 @@ class VectorBase {
   }
 
   /**
+   * @brief normalized vector
+   *
+   */
+  friend Derived normalize(const Derived &v) { return v.normalized(); }
+
+  /**
+   * @brief normalized vector
+   *
+   */
+  decltype(auto) normalized() const { return derived() / norm(); }
+
+  /**
+   * @brief normalize this
+   *
+   */
+  Derived &normalize() {
+    derived() = normalized();
+    return derived();
+  }
+
+  /**
    * @brief dot product between two vectors
    *
    * @return $\vec a \cdot \vec b$
@@ -668,12 +689,23 @@ class VectorBase {
 
   /**
    * @brief abs
-   * 
+   *
    */
   friend decltype(auto) abs(const Derived &v) {
     Derived ret = v;
     for (size_t i = 0; i < S; ++i) ret[i] = std::abs(ret[i]);
     return ret;
+  }
+
+  /**
+   * @brief cross product
+   *
+   */
+  Derived cross(const Derived &rhs) const {
+    static_assert(S == 3, "only 3d vector support cross product");
+    return Derived{(y() * rhs.z()) - (z() * rhs.y()),
+                   (z() * rhs.x()) - (x() * rhs.z()),
+                   (x() * rhs.y()) - (y() * rhs.x())};
   }
 
  protected:
