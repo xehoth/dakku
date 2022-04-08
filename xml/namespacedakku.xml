@@ -365,6 +365,45 @@
         </inbodydescription>
         <location file="src/core/fwd.h" line="18" column="24" bodyfile="src/core/fwd.h" bodystart="18" bodyend="-1"/>
       </memberdef>
+      <memberdef kind="variable" id="namespacedakku_1a96416914fd138a9ad1724211806eaadc" prot="public" static="no" mutable="no">
+        <type>class <ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
+        <definition>class DAKKU_EXPORT_CORE dakku::Property</definition>
+        <argsstring></argsstring>
+        <name>Property</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/fwd.h" line="50" column="24" bodyfile="src/core/fwd.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacedakku_1a5e92e662fd955a5d5e138ec343496ecb" prot="public" static="no" mutable="no">
+        <type>class <ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
+        <definition>class DAKKU_EXPORT_CORE dakku::Class</definition>
+        <argsstring></argsstring>
+        <name>Class</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/fwd.h" line="51" column="24" bodyfile="src/core/fwd.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacedakku_1a814749a6cf3cd7575912f5119a5be6ad" prot="public" static="no" mutable="no">
+        <type>class <ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
+        <definition>class DAKKU_EXPORT_CORE dakku::Object</definition>
+        <argsstring></argsstring>
+        <name>Object</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/fwd.h" line="52" column="24" bodyfile="src/core/fwd.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
       </sectiondef>
       <sectiondef kind="func">
       <memberdef kind="function" id="namespacedakku_1af0a2453f8db3eb948901c7a0aed18434" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">

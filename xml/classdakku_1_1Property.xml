@@ -58,9 +58,9 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="classdakku_1_1Property_1a069cd3da27aa6c1de524acb3af0b1cf6" prot="private" static="no" mutable="no">
-        <type>std::variant&lt; <ref refid="classdakku_1_1Property_1a3572cc83d304fa13a828df071bc1530b" kindref="member">ObjectType</ref>, <ref refid="classdakku_1_1Property_1aa44ae47ef51fe042e4cdc2d558fd6c63" kindref="member">ArrayType</ref>, <ref refid="classdakku_1_1Property_1a84633bc387b4d29044d4b05972899905" kindref="member">NumberType</ref>, <ref refid="classdakku_1_1Property_1a24591b37ada180ec7c1d83a7d63dd2c5" kindref="member">VectorType</ref> &gt;</type>
-        <definition>std::variant&lt;ObjectType, ArrayType, NumberType, VectorType&gt; dakku::Property::data</definition>
+      <memberdef kind="variable" id="classdakku_1_1Property_1ac868b8487e571de9a9b91e651dab408e" prot="private" static="no" mutable="no">
+        <type>std::variant&lt; <ref refid="classdakku_1_1Property_1a3572cc83d304fa13a828df071bc1530b" kindref="member">ObjectType</ref>, <ref refid="classdakku_1_1Property_1aa44ae47ef51fe042e4cdc2d558fd6c63" kindref="member">ArrayType</ref>, <ref refid="classdakku_1_1Property_1a84633bc387b4d29044d4b05972899905" kindref="member">NumberType</ref>, <ref refid="classdakku_1_1Property_1a24591b37ada180ec7c1d83a7d63dd2c5" kindref="member">VectorType</ref>, std::nullptr_t &gt;</type>
+        <definition>std::variant&lt;ObjectType, ArrayType, NumberType, VectorType, std::nullptr_t&gt; dakku::Property::data</definition>
         <argsstring></argsstring>
         <name>data</name>
         <briefdescription>
@@ -70,7 +70,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/property.h" line="195" column="16" bodyfile="src/core/property.h" bodystart="195" bodyend="-1"/>
+        <location file="src/core/property.h" line="279" column="7" bodyfile="src/core/property.h" bodystart="279" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classdakku_1_1Property_1aced3169c7b9d2a24ee8853660fb9ac54" prot="private" static="no" mutable="no">
         <type><ref refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfca" kindref="member">PropertyType</ref></type>
@@ -85,7 +85,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/property.h" line="197" column="16" bodyfile="src/core/property.h" bodystart="197" bodyend="-1"/>
+        <location file="src/core/property.h" line="281" column="16" bodyfile="src/core/property.h" bodystart="281" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -229,7 +229,46 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/property.h" line="64" column="13" bodyfile="src/core/property.h" bodystart="64" bodyend="81"/>
+        <location file="src/core/property.h" line="64" column="13" bodyfile="src/core/property.h" bodystart="64" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1Property_1a8cea54fddb8c1929675b801af12ff87b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type><ref refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfca" kindref="member">PropertyType</ref></type>
+            <declname>type</declname>
+            <defname>type</defname>
+          </param>
+          <param>
+            <type>bool</type>
+            <declname>required</declname>
+            <defname>required</defname>
+            <defval>false</defval>
+          </param>
+        </templateparamlist>
+        <type>decltype(auto)</type>
+        <definition>decltype(auto) dakku::Property::get</definition>
+        <argsstring>() const</argsstring>
+        <name>get</name>
+        <briefdescription>
+<para>get the property data according to given type (const) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the type to get </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the data </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/property.h" line="77" column="13" bodyfile="src/core/property.h" bodystart="77" bodyend="94"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Property_1a880441e5235f7e4340436b2ec39d1632" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>decltype(auto)</type>
@@ -243,7 +282,21 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/property.h" line="87" column="13" bodyfile="src/core/property.h" bodystart="87" bodyend="89"/>
+        <location file="src/core/property.h" line="100" column="13" bodyfile="src/core/property.h" bodystart="100" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1Property_1ac7a7d43961dbcd4a963290b7d054de5b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>decltype(auto)</type>
+        <definition>decltype(auto) dakku::Property::getObject</definition>
+        <argsstring>() const</argsstring>
+        <name>getObject</name>
+        <briefdescription>
+<para>get object </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/property.h" line="108" column="13" bodyfile="src/core/property.h" bodystart="108" bodyend="110"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Property_1a022f642f3be87c9323b2271391677e52" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>decltype(auto)</type>
@@ -257,7 +310,21 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/property.h" line="95" column="13" bodyfile="src/core/property.h" bodystart="95" bodyend="95"/>
+        <location file="src/core/property.h" line="116" column="13" bodyfile="src/core/property.h" bodystart="116" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1Property_1aa0d85401103f48282137e7114a355718" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>decltype(auto)</type>
+        <definition>decltype(auto) dakku::Property::getArray</definition>
+        <argsstring>() const</argsstring>
+        <name>getArray</name>
+        <briefdescription>
+<para>get array </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/property.h" line="122" column="13" bodyfile="src/core/property.h" bodystart="122" bodyend="124"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Property_1a37f32d3f86e95035ce0ffd25dbe5e3ad" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>decltype(auto)</type>
@@ -271,7 +338,21 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/property.h" line="101" column="13" bodyfile="src/core/property.h" bodystart="101" bodyend="103"/>
+        <location file="src/core/property.h" line="130" column="13" bodyfile="src/core/property.h" bodystart="130" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1Property_1af57cda896c0b9c10cc5f255592085f47" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>decltype(auto)</type>
+        <definition>decltype(auto) dakku::Property::getNumber</definition>
+        <argsstring>() const</argsstring>
+        <name>getNumber</name>
+        <briefdescription>
+<para>get number </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/property.h" line="138" column="13" bodyfile="src/core/property.h" bodystart="138" bodyend="140"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Property_1a7a29d6659e52edb24d84cb05484dc2b8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>decltype(auto)</type>
@@ -285,7 +366,21 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/property.h" line="109" column="13" bodyfile="src/core/property.h" bodystart="109" bodyend="111"/>
+        <location file="src/core/property.h" line="146" column="13" bodyfile="src/core/property.h" bodystart="146" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1Property_1a1c56218b57ba11993787e415c42b7ee4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>decltype(auto)</type>
+        <definition>decltype(auto) dakku::Property::getVector</definition>
+        <argsstring>() const</argsstring>
+        <name>getVector</name>
+        <briefdescription>
+<para>get vector </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/property.h" line="154" column="13" bodyfile="src/core/property.h" bodystart="154" bodyend="156"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Property_1ac84d992765b5eefa36f4e91235f3a623" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -299,7 +394,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/property.h" line="117" column="9" bodyfile="src/core/property.h" bodystart="117" bodyend="119"/>
+        <location file="src/core/property.h" line="162" column="9" bodyfile="src/core/property.h" bodystart="162" bodyend="164"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Property_1ad45449f0a8525a9b1fc70e3753e4c199" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -313,7 +408,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/property.h" line="125" column="9" bodyfile="src/core/property.h" bodystart="125" bodyend="125"/>
+        <location file="src/core/property.h" line="170" column="9" bodyfile="src/core/property.h" bodystart="170" bodyend="170"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Property_1af34ece04b3a3225491e45d9b01237d97" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -327,7 +422,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/property.h" line="131" column="9" bodyfile="src/core/property.h" bodystart="131" bodyend="133"/>
+        <location file="src/core/property.h" line="176" column="9" bodyfile="src/core/property.h" bodystart="176" bodyend="178"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Property_1a8c5286cd48d768e4fcae6b01d820c32a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -341,7 +436,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/property.h" line="139" column="9" bodyfile="src/core/property.h" bodystart="139" bodyend="141"/>
+        <location file="src/core/property.h" line="184" column="9" bodyfile="src/core/property.h" bodystart="184" bodyend="186"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Property_1a2bd84fd11bb5657b3ff18b1125fcd28e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>decltype(auto)</type>
@@ -371,7 +466,37 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/property.h" line="149" column="12" bodyfile="src/core/property.h" bodystart="149" bodyend="156"/>
+        <location file="src/core/property.h" line="194" column="12" bodyfile="src/core/property.h" bodystart="194" bodyend="201"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1Property_1acfb003fa35dbddb453c8881e0d65c4d2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>decltype(auto)</type>
+        <definition>decltype(auto) dakku::Property::operator[]</definition>
+        <argsstring>(const std::string &amp;key) const</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>index <computeroutput>key</computeroutput> (const), key must exists </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>key to index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/property.h" line="209" column="12" bodyfile="src/core/property.h" bodystart="209" bodyend="220"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Property_1ae2b5340d7459e700639dfb4e7f596a70" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>decltype(auto)</type>
@@ -401,7 +526,37 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/property.h" line="164" column="12" bodyfile="src/core/property.h" bodystart="164" bodyend="177"/>
+        <location file="src/core/property.h" line="228" column="12" bodyfile="src/core/property.h" bodystart="228" bodyend="241"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1Property_1a064f14a56b1525c7c0fdb246d5105ce1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>decltype(auto)</type>
+        <definition>decltype(auto) dakku::Property::operator[]</definition>
+        <argsstring>(size_t i) const</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>size_t</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>index i, if this is NONE, then =&gt; ARRAY if i &gt;= size, it will grow automatically </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the data </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/property.h" line="249" column="12" bodyfile="src/core/property.h" bodystart="249" bodyend="260"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Property_1a98ec2192557128c57decc60656f2f019" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -415,7 +570,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/property.h" line="183" column="16"/>
+        <location file="src/core/property.h" line="266" column="16"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="friend">
@@ -439,7 +594,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/property.h" line="189" column="10" bodyfile="src/core/property.h" bodystart="189" bodyend="191"/>
+        <location file="src/core/property.h" line="272" column="10" bodyfile="src/core/property.h" bodystart="272" bodyend="274"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -447,16 +602,21 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/core/property.h" line="19" column="1" bodyfile="src/core/property.h" bodystart="19" bodyend="198"/>
+    <location file="src/core/property.h" line="19" column="1" bodyfile="src/core/property.h" bodystart="19" bodyend="282"/>
     <listofallmembers>
       <member refid="classdakku_1_1Property_1aa44ae47ef51fe042e4cdc2d558fd6c63" prot="public" virt="non-virtual"><scope>dakku::Property</scope><name>ArrayType</name></member>
-      <member refid="classdakku_1_1Property_1a069cd3da27aa6c1de524acb3af0b1cf6" prot="private" virt="non-virtual"><scope>dakku::Property</scope><name>data</name></member>
+      <member refid="classdakku_1_1Property_1ac868b8487e571de9a9b91e651dab408e" prot="private" virt="non-virtual"><scope>dakku::Property</scope><name>data</name></member>
       <member refid="classdakku_1_1Property_1af7dd18be1dffb351f12b12c77467b2eb" prot="public" virt="non-virtual"><scope>dakku::Property</scope><name>get</name></member>
+      <member refid="classdakku_1_1Property_1a8cea54fddb8c1929675b801af12ff87b" prot="public" virt="non-virtual"><scope>dakku::Property</scope><name>get</name></member>
       <member refid="classdakku_1_1Property_1a022f642f3be87c9323b2271391677e52" prot="public" virt="non-virtual"><scope>dakku::Property</scope><name>getArray</name></member>
+      <member refid="classdakku_1_1Property_1aa0d85401103f48282137e7114a355718" prot="public" virt="non-virtual"><scope>dakku::Property</scope><name>getArray</name></member>
       <member refid="classdakku_1_1Property_1a37f32d3f86e95035ce0ffd25dbe5e3ad" prot="public" virt="non-virtual"><scope>dakku::Property</scope><name>getNumber</name></member>
+      <member refid="classdakku_1_1Property_1af57cda896c0b9c10cc5f255592085f47" prot="public" virt="non-virtual"><scope>dakku::Property</scope><name>getNumber</name></member>
       <member refid="classdakku_1_1Property_1a880441e5235f7e4340436b2ec39d1632" prot="public" virt="non-virtual"><scope>dakku::Property</scope><name>getObject</name></member>
+      <member refid="classdakku_1_1Property_1ac7a7d43961dbcd4a963290b7d054de5b" prot="public" virt="non-virtual"><scope>dakku::Property</scope><name>getObject</name></member>
       <member refid="classdakku_1_1Property_1a86d3f30da8f500e82852c0dd6a47d892" prot="public" virt="non-virtual"><scope>dakku::Property</scope><name>getPropertyType</name></member>
       <member refid="classdakku_1_1Property_1a7a29d6659e52edb24d84cb05484dc2b8" prot="public" virt="non-virtual"><scope>dakku::Property</scope><name>getVector</name></member>
+      <member refid="classdakku_1_1Property_1a1c56218b57ba11993787e415c42b7ee4" prot="public" virt="non-virtual"><scope>dakku::Property</scope><name>getVector</name></member>
       <member refid="classdakku_1_1Property_1ad45449f0a8525a9b1fc70e3753e4c199" prot="public" virt="non-virtual"><scope>dakku::Property</scope><name>isArrayType</name></member>
       <member refid="classdakku_1_1Property_1af34ece04b3a3225491e45d9b01237d97" prot="public" virt="non-virtual"><scope>dakku::Property</scope><name>isNumberType</name></member>
       <member refid="classdakku_1_1Property_1ac84d992765b5eefa36f4e91235f3a623" prot="public" virt="non-virtual"><scope>dakku::Property</scope><name>isObjectType</name></member>
@@ -465,7 +625,9 @@
       <member refid="classdakku_1_1Property_1a3572cc83d304fa13a828df071bc1530b" prot="public" virt="non-virtual"><scope>dakku::Property</scope><name>ObjectType</name></member>
       <member refid="classdakku_1_1Property_1ac83f11b8c568a198832de9754664be1d" prot="public" virt="non-virtual"><scope>dakku::Property</scope><name>operator&lt;&lt;</name></member>
       <member refid="classdakku_1_1Property_1a2bd84fd11bb5657b3ff18b1125fcd28e" prot="public" virt="non-virtual"><scope>dakku::Property</scope><name>operator[]</name></member>
+      <member refid="classdakku_1_1Property_1acfb003fa35dbddb453c8881e0d65c4d2" prot="public" virt="non-virtual"><scope>dakku::Property</scope><name>operator[]</name></member>
       <member refid="classdakku_1_1Property_1ae2b5340d7459e700639dfb4e7f596a70" prot="public" virt="non-virtual"><scope>dakku::Property</scope><name>operator[]</name></member>
+      <member refid="classdakku_1_1Property_1a064f14a56b1525c7c0fdb246d5105ce1" prot="public" virt="non-virtual"><scope>dakku::Property</scope><name>operator[]</name></member>
       <member refid="classdakku_1_1Property_1a8723ce4e4af1e43c638534da4df0359f" prot="public" virt="non-virtual"><scope>dakku::Property</scope><name>Property</name></member>
       <member refid="classdakku_1_1Property_1a027a9fe4e51faa1849b99ebc276fa21e" prot="public" virt="non-virtual"><scope>dakku::Property</scope><name>Property</name></member>
       <member refid="classdakku_1_1Property_1a23b873f32fb76880cf62bf6088974141" prot="public" virt="non-virtual"><scope>dakku::Property</scope><name>Property</name></member>

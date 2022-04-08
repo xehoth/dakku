@@ -350,6 +350,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#function-object_1" class="md-nav__link">
+    function Object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#function-getclassname" class="md-nav__link">
     function getClassName
   </a>
@@ -366,6 +373,20 @@
           <li class="md-nav__item">
   <a href="#function-tostring" class="md-nav__link">
     function toString
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-isderivedfrom" class="md-nav__link">
+    function isDerivedFrom
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-isbaseof" class="md-nav__link">
+    function isBaseOf
   </a>
   
 </li>
@@ -424,6 +445,10 @@
 <td><strong><a href="/dakku/Classes/classdakku_1_1Object/#function-~object">~Object</a></strong>() =default</td>
 </tr>
 <tr>
+<td></td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Object/#function-object">Object</a></strong>(const <a href="/dakku/Classes/classdakku_1_1Property/">Property</a> &amp;  ={})</td>
+</tr>
+<tr>
 <td>virtual std::string</td>
 <td><strong><a href="/dakku/Classes/classdakku_1_1Object/#function-getclassname">getClassName</a></strong>() const</td>
 </tr>
@@ -434,6 +459,14 @@
 <tr>
 <td>virtual std::string</td>
 <td><strong><a href="/dakku/Classes/classdakku_1_1Object/#function-tostring">toString</a></strong>() const</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Object/#function-isderivedfrom">isDerivedFrom</a></strong>(std::string_view name) const<br>whther the object is derived from <code>name</code> (inclusive)</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Object/#function-isbaseof">isBaseOf</a></strong>(std::string_view name) const<br>whether the object is base of <code>name</code> (inclusive)</td>
 </tr>
 <tr>
 <td>std::string</td>
@@ -449,28 +482,45 @@
 <h3 id="function-object">function ~Object</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">virtual</span><span class="w"> </span><span class="o">~</span><span class="n">Object</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="k">default</span><span class="w"></span>
 </code></pre></div>
+<h3 id="function-object_1">function Object</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">explicit</span><span class="w"> </span><span class="n">Object</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Property</span><span class="w"> </span><span class="o">&amp;</span><span class="w">  </span><span class="o">=</span><span class="p">{}</span><span class="w"></span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
 <h3 id="function-getclassname">function getClassName</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">getClassName</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">getClassName</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
 </code></pre></div>
 <p><strong>Return</strong>: the class name of the object </p>
 <h3 id="function-getparentname">function getParentName</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">getParentName</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">getParentName</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
 </code></pre></div>
 <p><strong>Return</strong>: the class name of the parent of the object </p>
 <h3 id="function-tostring">function toString</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">toString</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">toString</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
 </code></pre></div>
 <p><strong>Return</strong>: object to string (default: class name) </p>
+<h3 id="function-isderivedfrom">function isDerivedFrom</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">isDerivedFrom</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">name</span><span class="w"></span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+</code></pre></div>
+<p>whther the object is derived from <code>name</code> (inclusive) </p>
+<h3 id="function-isbaseof">function isBaseOf</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">isBaseOf</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">name</span><span class="w"></span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+</code></pre></div>
+<p>whether the object is base of <code>name</code> (inclusive) </p>
 <h3 id="function-getclassnamestatic">function getClassNameStatic</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">getClassNameStatic</span><span class="p">()</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">getClassNameStatic</span><span class="p">()</span><span class="w"></span>
 </code></pre></div>
 <p><strong>Return</strong>: the class name of the object </p>
 <h3 id="function-getparentnamestatic">function getParentNameStatic</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">getParentNameStatic</span><span class="p">()</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">getParentNameStatic</span><span class="p">()</span><span class="w"></span>
 </code></pre></div>
 <p><strong>Return</strong>: the class name of the parent of the object </p>
 <hr />
-<p>Updated on 2022-04-07 at 16:31:37 +0000</p>
+<p>Updated on 2022-04-08 at 02:02:13 +0000</p>
 
               
             </article>

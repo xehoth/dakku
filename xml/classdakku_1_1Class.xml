@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/class.h" line="60" column="12" bodyfile="src/core/class.h" bodystart="60" bodyend="-1"/>
+        <location file="src/core/class.h" line="76" column="12" bodyfile="src/core/class.h" bodystart="76" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -35,7 +35,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/class.h" line="22" column="16"/>
+        <location file="src/core/class.h" line="23" column="16"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -68,7 +68,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/class.h" line="30" column="8" bodyfile="src/core/class.h" bodystart="64" bodyend="73"/>
+        <location file="src/core/class.h" line="31" column="8" bodyfile="src/core/class.h" bodystart="80" bodyend="89"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Class_1a09814cebf82067a31d3a25bcc7afe28a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -90,7 +90,29 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/class.h" line="36" column="9"/>
+        <location file="src/core/class.h" line="37" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1Class_1ad6be1cb702527b1d888254a7a7769c37" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool dakku::Class::isBaseof</definition>
+        <argsstring>(std::string_view cur, std::string_view other) const</argsstring>
+        <name>isBaseof</name>
+        <param>
+          <type>std::string_view</type>
+          <declname>cur</declname>
+        </param>
+        <param>
+          <type>std::string_view</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>check whether <computeroutput>cur</computeroutput> is base of <computeroutput>other</computeroutput> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/class.h" line="44" column="9"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Class_1af4dcc1c45a0cc7ffed866abe23c55440" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -108,7 +130,41 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/class.h" line="43" column="9"/>
+        <location file="src/core/class.h" line="51" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1Class_1a2660e682570378b72183207e1a7fa636" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdakku_1_1Object" kindref="compound">Object</ref> *</type>
+        <definition>Object * dakku::Class::create</definition>
+        <argsstring>(std::string_view name, const Property &amp;={})</argsstring>
+        <name>create</name>
+        <param>
+          <type>std::string_view</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classdakku_1_1Property" kindref="compound">Property</ref> &amp;</type>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+<para>create an object instance and construct with property </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>object name </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the object </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/class.h" line="59" column="10"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -123,11 +179,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/class.h" line="46" column="12"/>
+        <location file="src/core/class.h" line="62" column="12"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-static-func">
-      <memberdef kind="function" id="classdakku_1_1Class_1a21fa567936b0130c57ebf47c3f143ef6" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classdakku_1_1Class_1a055cb7eb3d914e2a1242d0d39f12f39d" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename T</type>
@@ -135,8 +191,12 @@
         </templateparamlist>
         <type><ref refid="classdakku_1_1Object" kindref="compound">Object</ref> *</type>
         <definition>Object * dakku::Class::constructor</definition>
-        <argsstring>()</argsstring>
+        <argsstring>(const Property &amp;)</argsstring>
         <name>constructor</name>
+        <param>
+          <type>const <ref refid="classdakku_1_1Property" kindref="compound">Property</ref> &amp;</type>
+          <defname>property</defname>
+        </param>
         <briefdescription>
 <para>constructor helper </para>
         </briefdescription>
@@ -144,7 +204,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/class.h" line="53" column="17" bodyfile="src/core/class.h" bodystart="76" bodyend="83"/>
+        <location file="src/core/class.h" line="69" column="17" bodyfile="src/core/class.h" bodystart="92" bodyend="99"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -152,13 +212,15 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/core/class.h" line="15" column="1" bodyfile="src/core/class.h" bodystart="15" bodyend="61"/>
+    <location file="src/core/class.h" line="16" column="1" bodyfile="src/core/class.h" bodystart="16" bodyend="77"/>
     <listofallmembers>
       <member refid="classdakku_1_1Class_1a5ca387aebcee4d1363ac17e25749098a" prot="private" virt="non-virtual"><scope>dakku::Class</scope><name>_classMap</name></member>
       <member refid="classdakku_1_1Class_1af64deeeb68dfef5d6d4db8401df6281b" prot="private" virt="non-virtual"><scope>dakku::Class</scope><name>Class</name></member>
-      <member refid="classdakku_1_1Class_1a21fa567936b0130c57ebf47c3f143ef6" prot="private" virt="non-virtual"><scope>dakku::Class</scope><name>constructor</name></member>
+      <member refid="classdakku_1_1Class_1a055cb7eb3d914e2a1242d0d39f12f39d" prot="private" virt="non-virtual"><scope>dakku::Class</scope><name>constructor</name></member>
       <member refid="classdakku_1_1Class_1af4dcc1c45a0cc7ffed866abe23c55440" prot="public" virt="non-virtual"><scope>dakku::Class</scope><name>contains</name></member>
+      <member refid="classdakku_1_1Class_1a2660e682570378b72183207e1a7fa636" prot="public" virt="non-virtual"><scope>dakku::Class</scope><name>create</name></member>
       <member refid="classdakku_1_1Class_1a38f609682794eb8644448c458c9679cb" prot="public" virt="non-virtual"><scope>dakku::Class</scope><name>instance</name></member>
+      <member refid="classdakku_1_1Class_1ad6be1cb702527b1d888254a7a7769c37" prot="public" virt="non-virtual"><scope>dakku::Class</scope><name>isBaseof</name></member>
       <member refid="classdakku_1_1Class_1a09814cebf82067a31d3a25bcc7afe28a" prot="public" virt="non-virtual"><scope>dakku::Class</scope><name>isDerivedFrom</name></member>
       <member refid="classdakku_1_1Class_1abfdf06dcdc49b01551130b41358cb93d" prot="public" virt="non-virtual"><scope>dakku::Class</scope><name>registerClass</name></member>
     </listofallmembers>

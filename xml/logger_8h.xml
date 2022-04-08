@@ -87,6 +87,8 @@
       <node id="7">
         <label>src/core/property.h</label>
         <link refid="property_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
       </node>
       <node id="8">
         <label>src/core/ray.h</label>

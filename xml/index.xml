@@ -46,9 +46,11 @@
     <member refid="classdakku_1_1Class_1a38f609682794eb8644448c458c9679cb" kind="function"><name>instance</name></member>
     <member refid="classdakku_1_1Class_1abfdf06dcdc49b01551130b41358cb93d" kind="function"><name>registerClass</name></member>
     <member refid="classdakku_1_1Class_1a09814cebf82067a31d3a25bcc7afe28a" kind="function"><name>isDerivedFrom</name></member>
+    <member refid="classdakku_1_1Class_1ad6be1cb702527b1d888254a7a7769c37" kind="function"><name>isBaseof</name></member>
     <member refid="classdakku_1_1Class_1af4dcc1c45a0cc7ffed866abe23c55440" kind="function"><name>contains</name></member>
+    <member refid="classdakku_1_1Class_1a2660e682570378b72183207e1a7fa636" kind="function"><name>create</name></member>
     <member refid="classdakku_1_1Class_1af64deeeb68dfef5d6d4db8401df6281b" kind="function"><name>Class</name></member>
-    <member refid="classdakku_1_1Class_1a21fa567936b0130c57ebf47c3f143ef6" kind="function"><name>constructor</name></member>
+    <member refid="classdakku_1_1Class_1a055cb7eb3d914e2a1242d0d39f12f39d" kind="function"><name>constructor</name></member>
   </compound>
   <compound refid="classdakku_1_1Logger" kind="class"><name>dakku::Logger</name>
     <member refid="classdakku_1_1Logger_1aa6afc845ad6d0bcec3849515afc971cd" kind="variable"><name>_logger</name></member>
@@ -66,7 +68,7 @@
     <member refid="structdakku_1_1Matrix4x4_1ab093ee6d1551dec068d65a7298ce0daa" kind="friend"><name>transpose</name></member>
   </compound>
   <compound refid="structdakku_1_1Class_1_1Metadata" kind="struct"><name>dakku::Class::Metadata</name>
-    <member refid="structdakku_1_1Class_1_1Metadata_1a9e6d887f2ccc024b4ef24c56dd92efed" kind="variable"><name>constructor</name></member>
+    <member refid="structdakku_1_1Class_1_1Metadata_1a6a92c14c8c88f4c3345dcde94bb7dd64" kind="variable"><name>constructor</name></member>
     <member refid="structdakku_1_1Class_1_1Metadata_1a8d7762b1bbefa76e48624868d987c871" kind="variable"><name>parent</name></member>
   </compound>
   <compound refid="classdakku_1_1Normal" kind="class"><name>dakku::Normal</name>
@@ -74,9 +76,12 @@
   </compound>
   <compound refid="classdakku_1_1Object" kind="class"><name>dakku::Object</name>
     <member refid="classdakku_1_1Object_1a0c792f089351caf3fa7a704c86ce903d" kind="function"><name>~Object</name></member>
+    <member refid="classdakku_1_1Object_1a20e78d46fa11d575d63e048279150eac" kind="function"><name>Object</name></member>
     <member refid="classdakku_1_1Object_1a543f734268f7be81badecee6cf7245cc" kind="function"><name>getClassName</name></member>
     <member refid="classdakku_1_1Object_1accec0632e79097564677055bef4220bd" kind="function"><name>getParentName</name></member>
     <member refid="classdakku_1_1Object_1a65d91c04e480b827fa495df96af2826b" kind="function"><name>toString</name></member>
+    <member refid="classdakku_1_1Object_1add47b28fc1878f008bb6664a83faad72" kind="function"><name>isDerivedFrom</name></member>
+    <member refid="classdakku_1_1Object_1a055e32b0624d9a96fc2014fe5d9d0c81" kind="function"><name>isBaseOf</name></member>
     <member refid="classdakku_1_1Object_1a247ed68865f464d511b7fdb85467c354" kind="function"><name>getClassNameStatic</name></member>
     <member refid="classdakku_1_1Object_1a08ec83c660afb1850455ef30c43fa29c" kind="function"><name>getParentNameStatic</name></member>
   </compound>
@@ -90,23 +95,30 @@
     <member refid="classdakku_1_1Property_1aa44ae47ef51fe042e4cdc2d558fd6c63" kind="typedef"><name>ArrayType</name></member>
     <member refid="classdakku_1_1Property_1a84633bc387b4d29044d4b05972899905" kind="typedef"><name>NumberType</name></member>
     <member refid="classdakku_1_1Property_1a24591b37ada180ec7c1d83a7d63dd2c5" kind="typedef"><name>VectorType</name></member>
-    <member refid="classdakku_1_1Property_1a069cd3da27aa6c1de524acb3af0b1cf6" kind="variable"><name>data</name></member>
+    <member refid="classdakku_1_1Property_1ac868b8487e571de9a9b91e651dab408e" kind="variable"><name>data</name></member>
     <member refid="classdakku_1_1Property_1aced3169c7b9d2a24ee8853660fb9ac54" kind="variable"><name>type</name></member>
     <member refid="classdakku_1_1Property_1a8723ce4e4af1e43c638534da4df0359f" kind="function"><name>Property</name></member>
     <member refid="classdakku_1_1Property_1a027a9fe4e51faa1849b99ebc276fa21e" kind="function"><name>Property</name></member>
     <member refid="classdakku_1_1Property_1a23b873f32fb76880cf62bf6088974141" kind="function"><name>Property</name></member>
     <member refid="classdakku_1_1Property_1a86d3f30da8f500e82852c0dd6a47d892" kind="function"><name>getPropertyType</name></member>
     <member refid="classdakku_1_1Property_1af7dd18be1dffb351f12b12c77467b2eb" kind="function"><name>get</name></member>
+    <member refid="classdakku_1_1Property_1a8cea54fddb8c1929675b801af12ff87b" kind="function"><name>get</name></member>
     <member refid="classdakku_1_1Property_1a880441e5235f7e4340436b2ec39d1632" kind="function"><name>getObject</name></member>
+    <member refid="classdakku_1_1Property_1ac7a7d43961dbcd4a963290b7d054de5b" kind="function"><name>getObject</name></member>
     <member refid="classdakku_1_1Property_1a022f642f3be87c9323b2271391677e52" kind="function"><name>getArray</name></member>
+    <member refid="classdakku_1_1Property_1aa0d85401103f48282137e7114a355718" kind="function"><name>getArray</name></member>
     <member refid="classdakku_1_1Property_1a37f32d3f86e95035ce0ffd25dbe5e3ad" kind="function"><name>getNumber</name></member>
+    <member refid="classdakku_1_1Property_1af57cda896c0b9c10cc5f255592085f47" kind="function"><name>getNumber</name></member>
     <member refid="classdakku_1_1Property_1a7a29d6659e52edb24d84cb05484dc2b8" kind="function"><name>getVector</name></member>
+    <member refid="classdakku_1_1Property_1a1c56218b57ba11993787e415c42b7ee4" kind="function"><name>getVector</name></member>
     <member refid="classdakku_1_1Property_1ac84d992765b5eefa36f4e91235f3a623" kind="function"><name>isObjectType</name></member>
     <member refid="classdakku_1_1Property_1ad45449f0a8525a9b1fc70e3753e4c199" kind="function"><name>isArrayType</name></member>
     <member refid="classdakku_1_1Property_1af34ece04b3a3225491e45d9b01237d97" kind="function"><name>isNumberType</name></member>
     <member refid="classdakku_1_1Property_1a8c5286cd48d768e4fcae6b01d820c32a" kind="function"><name>isVectorType</name></member>
     <member refid="classdakku_1_1Property_1a2bd84fd11bb5657b3ff18b1125fcd28e" kind="function"><name>operator[]</name></member>
+    <member refid="classdakku_1_1Property_1acfb003fa35dbddb453c8881e0d65c4d2" kind="function"><name>operator[]</name></member>
     <member refid="classdakku_1_1Property_1ae2b5340d7459e700639dfb4e7f596a70" kind="function"><name>operator[]</name></member>
+    <member refid="classdakku_1_1Property_1a064f14a56b1525c7c0fdb246d5105ce1" kind="function"><name>operator[]</name></member>
     <member refid="classdakku_1_1Property_1a98ec2192557128c57decc60656f2f019" kind="function"><name>toString</name></member>
     <member refid="classdakku_1_1Property_1ac83f11b8c568a198832de9754664be1d" kind="friend"><name>operator&lt;&lt;</name></member>
   </compound>
@@ -229,6 +241,9 @@
     <member refid="namespacedakku_1ade3699e7ff88bf28ae0ea31baafab11c" kind="typedef"><name>Normal3</name></member>
     <member refid="namespacedakku_1a9b64e14dceffe6ac84029f1d40d6ec41" kind="typedef"><name>Normal3f</name></member>
     <member refid="namespacedakku_1a53c476552ecb27caba955675d8efb680" kind="variable"><name>INF</name></member>
+    <member refid="namespacedakku_1a96416914fd138a9ad1724211806eaadc" kind="variable"><name>Property</name></member>
+    <member refid="namespacedakku_1a5e92e662fd955a5d5e138ec343496ecb" kind="variable"><name>Class</name></member>
+    <member refid="namespacedakku_1a814749a6cf3cd7575912f5119a5be6ad" kind="variable"><name>Object</name></member>
     <member refid="namespacedakku_1af0a2453f8db3eb948901c7a0aed18434" kind="function"><name>begin</name></member>
     <member refid="namespacedakku_1a41ae9fcb2290e6ea6f7d4b0fbca86d17" kind="function"><name>end</name></member>
     <member refid="namespacedakku_1af754e4967f947036a0c31c0dbb4bf6e1" kind="function"><name>isNaN</name></member>

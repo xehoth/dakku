@@ -364,8 +364,22 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#function-isbaseof" class="md-nav__link">
+    function isBaseof
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#function-contains" class="md-nav__link">
     function contains
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-create" class="md-nav__link">
+    function create
   </a>
   
 </li>
@@ -419,7 +433,15 @@
 </tr>
 <tr>
 <td>bool</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Class/#function-isbaseof">isBaseof</a></strong>(std::string_view cur, std::string_view other) const<br>check whether <code>cur</code> is base of <code>other</code></td>
+</tr>
+<tr>
+<td>bool</td>
 <td><strong><a href="/dakku/Classes/classdakku_1_1Class/#function-contains">contains</a></strong>(std::string_view name) const<br>check whether <code>name</code> is registered</td>
+</tr>
+<tr>
+<td><a href="/dakku/Classes/classdakku_1_1Object/">Object</a> *</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Class/#function-create">create</a></strong>(std::string_view name, const <a href="/dakku/Classes/classdakku_1_1Property/">Property</a> &amp;  ={})<br>create an object instance and construct with property</td>
 </tr>
 </tbody>
 </table>
@@ -445,14 +467,33 @@
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
 </code></pre></div>
 <p>check whether <code>cur</code> dervies from <code>from</code></p>
+<h3 id="function-isbaseof">function isBaseof</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">isBaseof</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">cur</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">other</span><span class="w"></span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+</code></pre></div>
+<p>check whether <code>cur</code> is base of <code>other</code></p>
 <h3 id="function-contains">function contains</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">contains</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">name</span><span class="w"></span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">contains</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">name</span><span class="w"></span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
 </code></pre></div>
 <p>check whether <code>name</code> is registered </p>
+<h3 id="function-create">function create</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">Object</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">create</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Property</span><span class="w"> </span><span class="o">&amp;</span><span class="w">  </span><span class="o">=</span><span class="p">{}</span><span class="w"></span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>create an object instance and construct with property </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>name</strong> object name </li>
+</ul>
+<p><strong>Return</strong>: the object </p>
 <hr />
-<p>Updated on 2022-04-07 at 16:31:37 +0000</p>
+<p>Updated on 2022-04-08 at 02:02:13 +0000</p>
 
               
             </article>
