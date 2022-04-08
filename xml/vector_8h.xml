@@ -121,6 +121,8 @@
       <node id="6">
         <label>src/core/ray.h</label>
         <link refid="ray_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
       </node>
       <node id="7">
         <label>src/core/transform.h</label>

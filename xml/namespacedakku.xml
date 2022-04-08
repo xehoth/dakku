@@ -15,6 +15,7 @@
     <innerclass refid="classdakku_1_1Property" prot="public">dakku::Property</innerclass>
     <innerclass refid="classdakku_1_1Ray" prot="public">dakku::Ray</innerclass>
     <innerclass refid="classdakku_1_1RayDifferential" prot="public">dakku::RayDifferential</innerclass>
+    <innerclass refid="classdakku_1_1Transform" prot="public">dakku::Transform</innerclass>
     <innerclass refid="classdakku_1_1Vector" prot="public">dakku::Vector</innerclass>
     <innerclass refid="classdakku_1_1VectorBase" prot="public">dakku::VectorBase</innerclass>
       <sectiondef kind="enum">
@@ -365,6 +366,21 @@
         </inbodydescription>
         <location file="src/core/fwd.h" line="18" column="24" bodyfile="src/core/fwd.h" bodystart="18" bodyend="-1"/>
       </memberdef>
+      <memberdef kind="variable" id="namespacedakku_1af7aa9dc8532b3506d50b84f932560eb0" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr float</type>
+        <definition>constexpr float dakku::PI</definition>
+        <argsstring></argsstring>
+        <name>PI</name>
+        <initializer>= std::numbers::pi_v&lt;float&gt;</initializer>
+        <briefdescription>
+<para>PI. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/fwd.h" line="21" column="24" bodyfile="src/core/fwd.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
       </sectiondef>
       <sectiondef kind="func">
       <memberdef kind="function" id="namespacedakku_1af0a2453f8db3eb948901c7a0aed18434" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
@@ -446,7 +462,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="36" column="21" bodyfile="src/core/fwd.h" bodystart="36" bodyend="38"/>
+        <location file="src/core/fwd.h" line="39" column="21" bodyfile="src/core/fwd.h" bodystart="39" bodyend="41"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1af703ca0ba560169d1daf114a07175bf4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -481,7 +497,333 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="47" column="21" bodyfile="src/core/fwd.h" bodystart="47" bodyend="47"/>
+        <location file="src/core/fwd.h" line="50" column="21" bodyfile="src/core/fwd.h" bodystart="50" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1a2a53414d45143151128b45997c42d7af" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float dakku::radians</definition>
+        <argsstring>(float deg)</argsstring>
+        <name>radians</name>
+        <param>
+          <type>float</type>
+          <declname>deg</declname>
+        </param>
+        <briefdescription>
+<para>convert degrees to radians </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>deg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>given degree </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the radian of deg </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/fwd.h" line="58" column="14" bodyfile="src/core/fwd.h" bodystart="58" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1a3d1bddf363d9216df7df7c148f917cd4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float dakku::degrees</definition>
+        <argsstring>(float rad)</argsstring>
+        <name>degrees</name>
+        <param>
+          <type>float</type>
+          <declname>rad</declname>
+        </param>
+        <briefdescription>
+<para>convert radians to degrees </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rad</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the given radian </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the degree of rad </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/fwd.h" line="66" column="14" bodyfile="src/core/fwd.h" bodystart="66" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1a1e461427d5e700eff84e148509b7fcba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref> <ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref></type>
+        <definition>DAKKU_EXPORT_CORE Transform dakku::translate</definition>
+        <argsstring>(const Vector3f &amp;delta)</argsstring>
+        <name>translate</name>
+        <param>
+          <type>const <ref refid="namespacedakku_1aa12b2f1fc9684bf8ba7fbf5b600685c6" kindref="member">Vector3f</ref> &amp;</type>
+          <declname>delta</declname>
+        </param>
+        <briefdescription>
+<para>translate </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/transform.h" line="266" column="29" declfile="src/core/transform.h" declline="266" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1a7acbd19453bccf5b94cfa1133df02981" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref> <ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref></type>
+        <definition>DAKKU_EXPORT_CORE Transform dakku::scale</definition>
+        <argsstring>(float x, float y, float z)</argsstring>
+        <name>scale</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+<para>scale </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/transform.h" line="272" column="29" declfile="src/core/transform.h" declline="272" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1a9a343fe7cec03ad3c562a926fc052f6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref> <ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref></type>
+        <definition>DAKKU_EXPORT_CORE Transform dakku::rotateX</definition>
+        <argsstring>(float theta)</argsstring>
+        <name>rotateX</name>
+        <param>
+          <type>float</type>
+          <declname>theta</declname>
+        </param>
+        <briefdescription>
+<para>rotate through x axis </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/transform.h" line="278" column="29" declfile="src/core/transform.h" declline="278" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1a6ddc73eb8238f15d8c1016069962e8c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref> <ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref></type>
+        <definition>DAKKU_EXPORT_CORE Transform dakku::rotateY</definition>
+        <argsstring>(float theta)</argsstring>
+        <name>rotateY</name>
+        <param>
+          <type>float</type>
+          <declname>theta</declname>
+        </param>
+        <briefdescription>
+<para>rotate through y axis </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>theta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>DAKKU_EXPORT_CORE </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/transform.h" line="286" column="29" declfile="src/core/transform.h" declline="286" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1a2bbb040f4ba3ff426a543ad8129195de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref> <ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref></type>
+        <definition>DAKKU_EXPORT_CORE Transform dakku::rotateZ</definition>
+        <argsstring>(float theta)</argsstring>
+        <name>rotateZ</name>
+        <param>
+          <type>float</type>
+          <declname>theta</declname>
+        </param>
+        <briefdescription>
+<para>rotate through z axis </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>theta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>DAKKU_EXPORT_CORE </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/transform.h" line="294" column="29" declfile="src/core/transform.h" declline="294" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1a5158202b82b35e77f9fc61285161488a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref> <ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref></type>
+        <definition>DAKKU_EXPORT_CORE Transform dakku::rotate</definition>
+        <argsstring>(float theta, const Vector3f &amp;axis)</argsstring>
+        <name>rotate</name>
+        <param>
+          <type>float</type>
+          <declname>theta</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacedakku_1aa12b2f1fc9684bf8ba7fbf5b600685c6" kindref="member">Vector3f</ref> &amp;</type>
+          <declname>axis</declname>
+        </param>
+        <briefdescription>
+<para>rotate through <computeroutput>axis</computeroutput> </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>theta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>angle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>axis</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>given axis </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/transform.h" line="302" column="29" declfile="src/core/transform.h" declline="302" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1aaa536865ee7be0b7a4ed6109f261eeb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref> <ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref></type>
+        <definition>DAKKU_EXPORT_CORE Transform dakku::lookAt</definition>
+        <argsstring>(const Point3f &amp;pos, const Point3f &amp;look, const Vector3f &amp;refUp)</argsstring>
+        <name>lookAt</name>
+        <param>
+          <type>const <ref refid="namespacedakku_1a8323b90fda75af310a40a4e0d6bdb3f0" kindref="member">Point3f</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacedakku_1a8323b90fda75af310a40a4e0d6bdb3f0" kindref="member">Point3f</ref> &amp;</type>
+          <declname>look</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacedakku_1aa12b2f1fc9684bf8ba7fbf5b600685c6" kindref="member">Vector3f</ref> &amp;</type>
+          <declname>refUp</declname>
+        </param>
+        <briefdescription>
+<para>look at </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>camera position </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>look</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>camera look direction </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>refUp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>reference up vector </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/transform.h" line="311" column="29" declfile="src/core/transform.h" declline="311" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1a027a77f92f8ae36b091ef409ec0b4c6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref> <ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref></type>
+        <definition>DAKKU_EXPORT_CORE Transform dakku::perspective</definition>
+        <argsstring>(float fov, float znear, float zfar)</argsstring>
+        <name>perspective</name>
+        <param>
+          <type>float</type>
+          <declname>fov</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>znear</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>zfar</declname>
+        </param>
+        <briefdescription>
+<para>perspective transform </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fov</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>field of view </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>znear</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>far plane z </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>zfar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>near plane z</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+the shorter edge mapped to [-1, 1], the longer [-ratio, ratio] left handed </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/transform.h" line="324" column="29" declfile="src/core/transform.h" declline="324" declcolumn="29"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1a2016f3c3a16c069a055a7017eacb0e66" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -541,7 +883,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector_base.h" line="692" column="17" bodyfile="src/core/vector_base.h" bodystart="692" bodyend="695"/>
+        <location file="src/core/vector_base.h" line="724" column="17" bodyfile="src/core/vector_base.h" bodystart="724" bodyend="727"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

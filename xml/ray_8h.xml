@@ -4,6 +4,7 @@
     <compoundname>ray.h</compoundname>
     <includes refid="vector_8h" local="no">core/vector.h</includes>
     <includes local="no">utility</includes>
+    <includedby refid="transform_8h" local="no">src/core/transform.h</includedby>
     <incdepgraph>
       <node id="5">
         <label>core/fwd.h</label>
@@ -105,6 +106,18 @@
         <label>utility</label>
       </node>
     </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>src/core/ray.h</label>
+        <link refid="ray_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>src/core/transform.h</label>
+        <link refid="transform_8h"/>
+      </node>
+    </invincdepgraph>
     <innerclass refid="classdakku_1_1Ray" prot="public">dakku::Ray</innerclass>
     <innerclass refid="classdakku_1_1RayDifferential" prot="public">dakku::RayDifferential</innerclass>
     <innernamespace refid="namespacedakku">dakku</innernamespace>

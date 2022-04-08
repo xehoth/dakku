@@ -92,6 +92,7 @@
       <member refid="classdakku_1_1VectorBase_1adfeaa30c58620f0e4e8cbc9bc911c60c" prot="protected" virt="non-virtual"><scope>dakku::Normal</scope><name>_data</name></member>
       <member refid="classdakku_1_1VectorBase_1ae4f16b45f3696a2c75abcbe8c09120df" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>begin</name></member>
       <member refid="classdakku_1_1VectorBase_1abf676422e4f35272f97d5a9d286002b3" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>begin</name></member>
+      <member refid="classdakku_1_1VectorBase_1acb5565956ec02b69198a23c5e4046aa6" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>cross</name></member>
       <member refid="classdakku_1_1VectorBase_1a164c7c788c4967c1c6ebcf7ae8466ba8" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>derived</name></member>
       <member refid="classdakku_1_1VectorBase_1abb0f3e3fa71aaf063c3a5a6002fcbf1f" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>derived</name></member>
       <member refid="classdakku_1_1VectorBase_1ab55fd8f1a9e9835b5383189560c86973" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>dot</name></member>
@@ -103,6 +104,8 @@
       <member refid="classdakku_1_1VectorBase_1ae42082956c30a3e7f611e421427a785f" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>maxElement</name></member>
       <member refid="classdakku_1_1VectorBase_1a41e30926cb56189a7378f339bc175ccc" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>maxElementIndex</name></member>
       <member refid="classdakku_1_1VectorBase_1a3de0043db1772cb93312cc158d00df03" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>norm</name></member>
+      <member refid="classdakku_1_1VectorBase_1aa7d5096dec8ced27b8637c43f689096c" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>normalize</name></member>
+      <member refid="classdakku_1_1VectorBase_1a3c58e3c4dff9ad3a3a021c63ee8a7dfe" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>normalized</name></member>
       <member refid="classdakku_1_1VectorBase_1a5353b2617ac5343efeee0f325632d772" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>operator*=</name></member>
       <member refid="classdakku_1_1VectorBase_1ad4136ad736840507f9fc902d9d6c6dfd" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>operator*=</name></member>
       <member refid="classdakku_1_1VectorBase_1ae64bc6bd658a94d08f3b407fcb0e7fba" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>operator+=</name></member>

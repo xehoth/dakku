@@ -1,0 +1,388 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="classdakku_1_1Transform" kind="class" language="C++" prot="public">
+    <compoundname>dakku::Transform</compoundname>
+    <includes refid="transform_8h" local="no">transform.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdakku_1_1Transform_1ae48463c594e04791689e017baa5478ea" prot="private" static="no" mutable="no">
+        <type><ref refid="structdakku_1_1Matrix4x4" kindref="compound">Matrix4x4</ref></type>
+        <definition>Matrix4x4 dakku::Transform::m</definition>
+        <argsstring></argsstring>
+        <name>m</name>
+        <briefdescription>
+<para>transform data </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/transform.h" line="212" column="13" bodyfile="src/core/transform.h" bodystart="212" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdakku_1_1Transform_1aca0318c51a88c3abee67e5d749b47d44" prot="private" static="no" mutable="no">
+        <type><ref refid="structdakku_1_1Matrix4x4" kindref="compound">Matrix4x4</ref></type>
+        <definition>Matrix4x4 dakku::Transform::mInv</definition>
+        <argsstring></argsstring>
+        <name>mInv</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/transform.h" line="212" column="15" bodyfile="src/core/transform.h" bodystart="212" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdakku_1_1Transform_1a6a18809585d933e89bece05fd4fad20f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dakku::Transform::Transform</definition>
+        <argsstring>()=default</argsstring>
+        <name>Transform</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/transform.h" line="112" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1Transform_1a7809d4e7b8bffafdffe6667903333f2c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>dakku::Transform::Transform</definition>
+        <argsstring>(const Matrix4x4 &amp;m)</argsstring>
+        <name>Transform</name>
+        <param>
+          <type>const <ref refid="structdakku_1_1Matrix4x4" kindref="compound">Matrix4x4</ref> &amp;</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/transform.h" line="113" column="3" bodyfile="src/core/transform.h" bodystart="113" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1Transform_1a8102c7b4c288d853ef0f7084f9e2a607" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>dakku::Transform::Transform</definition>
+        <argsstring>(const Matrix4x4 &amp;m, const Matrix4x4 &amp;mInv)</argsstring>
+        <name>Transform</name>
+        <param>
+          <type>const <ref refid="structdakku_1_1Matrix4x4" kindref="compound">Matrix4x4</ref> &amp;</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structdakku_1_1Matrix4x4" kindref="compound">Matrix4x4</ref> &amp;</type>
+          <declname>mInv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/transform.h" line="114" column="3" bodyfile="src/core/transform.h" bodystart="114" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1Transform_1ac0970a3fb0e2e6beefdd501784ece9ab" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool dakku::Transform::operator==</definition>
+        <argsstring>(const Transform &amp;rhs) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/transform.h" line="126" column="8" bodyfile="src/core/transform.h" bodystart="126" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1Transform_1a7f9b98863c921918467d5350b50c7fac" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool dakku::Transform::operator!=</definition>
+        <argsstring>(const Transform &amp;rhs) const</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/transform.h" line="130" column="8" bodyfile="src/core/transform.h" bodystart="130" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1Transform_1aa23268759b85043f746f63d587b23c14" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool dakku::Transform::operator&lt;</definition>
+        <argsstring>(const Transform &amp;rhs) const</argsstring>
+        <name>operator&lt;</name>
+        <param>
+          <type>const <ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/transform.h" line="134" column="3" bodyfile="src/core/transform.h" bodystart="134" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1Transform_1ab26be3dac928e072b2450cf295f728f0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool dakku::Transform::isIdentity</definition>
+        <argsstring>() const</argsstring>
+        <name>isIdentity</name>
+        <briefdescription>
+<para>whether this is an identity transform </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/transform.h" line="148" column="9" bodyfile="src/core/transform.h" bodystart="148" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1Transform_1a16c268ca0de61e5592ae2a2189888a9a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="structdakku_1_1Matrix4x4" kindref="compound">Matrix4x4</ref> &amp;</type>
+        <definition>const Matrix4x4 &amp; dakku::Transform::getMatrix</definition>
+        <argsstring>() const</argsstring>
+        <name>getMatrix</name>
+        <briefdescription>
+<para>Get the Matrix object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/transform.h" line="154" column="20" bodyfile="src/core/transform.h" bodystart="154" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1Transform_1a0c00a8d967a8533934201d31f8395170" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="structdakku_1_1Matrix4x4" kindref="compound">Matrix4x4</ref> &amp;</type>
+        <definition>const Matrix4x4 &amp; dakku::Transform::getInverseMatrix</definition>
+        <argsstring>() const</argsstring>
+        <name>getInverseMatrix</name>
+        <briefdescription>
+<para>Get the Inverse Matrix object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/transform.h" line="160" column="20" bodyfile="src/core/transform.h" bodystart="160" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1Transform_1a7140b660a56fb533cceebcbedd6d4fab" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>ArithmeticType</type>
+            <declname>T</declname>
+            <defname>T</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespacedakku_1aace4734db951234de5eb4567db0d1737" kindref="member">Point3</ref>&lt; T &gt;</type>
+        <definition>Point3&lt; T &gt; dakku::Transform::operator()</definition>
+        <argsstring>(const Point3&lt; T &gt; &amp;p) const</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="namespacedakku_1aace4734db951234de5eb4567db0d1737" kindref="member">Point3</ref>&lt; T &gt; &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>transform a point </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/transform.h" line="167" column="17" bodyfile="src/core/transform.h" bodystart="216" bodyend="227"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1Transform_1aa0b6d3baf3d84b715395a232a615c73f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>ArithmeticType</type>
+            <declname>T</declname>
+            <defname>T</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespacedakku_1a3109ad27ee688fdd3462458714d7f1e7" kindref="member">Vector3</ref>&lt; T &gt;</type>
+        <definition>Vector3&lt; T &gt; dakku::Transform::operator()</definition>
+        <argsstring>(const Vector3&lt; T &gt; &amp;v) const</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="namespacedakku_1a3109ad27ee688fdd3462458714d7f1e7" kindref="member">Vector3</ref>&lt; T &gt; &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>transform a vector </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/transform.h" line="174" column="18" bodyfile="src/core/transform.h" bodystart="230" bodyend="235"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1Transform_1a17520267cbc3c89b0aef0943596dc3a2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>ArithmeticType</type>
+            <declname>T</declname>
+            <defname>T</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespacedakku_1ade3699e7ff88bf28ae0ea31baafab11c" kindref="member">Normal3</ref>&lt; T &gt;</type>
+        <definition>Normal3&lt; T &gt; dakku::Transform::operator()</definition>
+        <argsstring>(const Normal3&lt; T &gt; &amp;n) const</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="namespacedakku_1ade3699e7ff88bf28ae0ea31baafab11c" kindref="member">Normal3</ref>&lt; T &gt; &amp;</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>transform a normal </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/transform.h" line="181" column="18" bodyfile="src/core/transform.h" bodystart="238" bodyend="243"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1Transform_1a78da0df5b5d2b335d7c71346cdc727de" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classdakku_1_1Ray" kindref="compound">Ray</ref></type>
+        <definition>Ray dakku::Transform::operator()</definition>
+        <argsstring>(const Ray &amp;r) const</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="classdakku_1_1Ray" kindref="compound">Ray</ref> &amp;</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+<para>transform a ray </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/transform.h" line="187" column="14" bodyfile="src/core/transform.h" bodystart="245" bodyend="249"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1Transform_1af1de7e6eabb7e21d00d2d424979f93d6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classdakku_1_1RayDifferential" kindref="compound">RayDifferential</ref></type>
+        <definition>RayDifferential dakku::Transform::operator()</definition>
+        <argsstring>(const RayDifferential &amp;r) const</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="classdakku_1_1RayDifferential" kindref="compound">RayDifferential</ref> &amp;</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+<para>transform a ray differential </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/transform.h" line="193" column="26" bodyfile="src/core/transform.h" bodystart="251" bodyend="260"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1Transform_1ac37fe5a9c1d271ad939d813cf6862043" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref></type>
+        <definition>Transform dakku::Transform::operator*</definition>
+        <argsstring>(const Transform &amp;rhs) const</argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const <ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/transform.h" line="195" column="13" bodyfile="src/core/transform.h" bodystart="195" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1Transform_1a5bc005e21588a6ae9f81eadbd312a38c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool dakku::Transform::swapsHandedNess</definition>
+        <argsstring>() const</argsstring>
+        <name>swapsHandedNess</name>
+        <briefdescription>
+<para>whether the transform swaps handedness </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/transform.h" line="203" column="9" bodyfile="src/core/transform.h" bodystart="203" bodyend="208"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classdakku_1_1Transform_1aa2b52f8ec5f9c6049e79d35e0b9e3716" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref></type>
+        <definition>Transform inverse</definition>
+        <argsstring>(Transform &amp;t)</argsstring>
+        <name>inverse</name>
+        <param>
+          <type><ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref> &amp;</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>transform inverse </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/transform.h" line="120" column="20" bodyfile="src/core/transform.h" bodystart="120" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="friend" id="classdakku_1_1Transform_1a3f1c4a4501cc53bf76979899c6da9498" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref></type>
+        <definition>Transform transpose</definition>
+        <argsstring>(Transform &amp;t)</argsstring>
+        <name>transpose</name>
+        <param>
+          <type><ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref> &amp;</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/transform.h" line="122" column="20" bodyfile="src/core/transform.h" bodystart="122" bodyend="124"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/core/transform.h" line="110" column="1" bodyfile="src/core/transform.h" bodystart="110" bodyend="213"/>
+    <listofallmembers>
+      <member refid="classdakku_1_1Transform_1a0c00a8d967a8533934201d31f8395170" prot="public" virt="non-virtual"><scope>dakku::Transform</scope><name>getInverseMatrix</name></member>
+      <member refid="classdakku_1_1Transform_1a16c268ca0de61e5592ae2a2189888a9a" prot="public" virt="non-virtual"><scope>dakku::Transform</scope><name>getMatrix</name></member>
+      <member refid="classdakku_1_1Transform_1aa2b52f8ec5f9c6049e79d35e0b9e3716" prot="public" virt="non-virtual"><scope>dakku::Transform</scope><name>inverse</name></member>
+      <member refid="classdakku_1_1Transform_1ab26be3dac928e072b2450cf295f728f0" prot="public" virt="non-virtual"><scope>dakku::Transform</scope><name>isIdentity</name></member>
+      <member refid="classdakku_1_1Transform_1ae48463c594e04791689e017baa5478ea" prot="private" virt="non-virtual"><scope>dakku::Transform</scope><name>m</name></member>
+      <member refid="classdakku_1_1Transform_1aca0318c51a88c3abee67e5d749b47d44" prot="private" virt="non-virtual"><scope>dakku::Transform</scope><name>mInv</name></member>
+      <member refid="classdakku_1_1Transform_1a7f9b98863c921918467d5350b50c7fac" prot="public" virt="non-virtual"><scope>dakku::Transform</scope><name>operator!=</name></member>
+      <member refid="classdakku_1_1Transform_1a7140b660a56fb533cceebcbedd6d4fab" prot="public" virt="non-virtual"><scope>dakku::Transform</scope><name>operator()</name></member>
+      <member refid="classdakku_1_1Transform_1aa0b6d3baf3d84b715395a232a615c73f" prot="public" virt="non-virtual"><scope>dakku::Transform</scope><name>operator()</name></member>
+      <member refid="classdakku_1_1Transform_1a17520267cbc3c89b0aef0943596dc3a2" prot="public" virt="non-virtual"><scope>dakku::Transform</scope><name>operator()</name></member>
+      <member refid="classdakku_1_1Transform_1a78da0df5b5d2b335d7c71346cdc727de" prot="public" virt="non-virtual"><scope>dakku::Transform</scope><name>operator()</name></member>
+      <member refid="classdakku_1_1Transform_1af1de7e6eabb7e21d00d2d424979f93d6" prot="public" virt="non-virtual"><scope>dakku::Transform</scope><name>operator()</name></member>
+      <member refid="classdakku_1_1Transform_1ac37fe5a9c1d271ad939d813cf6862043" prot="public" virt="non-virtual"><scope>dakku::Transform</scope><name>operator*</name></member>
+      <member refid="classdakku_1_1Transform_1aa23268759b85043f746f63d587b23c14" prot="public" virt="non-virtual"><scope>dakku::Transform</scope><name>operator&lt;</name></member>
+      <member refid="classdakku_1_1Transform_1ac0970a3fb0e2e6beefdd501784ece9ab" prot="public" virt="non-virtual"><scope>dakku::Transform</scope><name>operator==</name></member>
+      <member refid="classdakku_1_1Transform_1a5bc005e21588a6ae9f81eadbd312a38c" prot="public" virt="non-virtual"><scope>dakku::Transform</scope><name>swapsHandedNess</name></member>
+      <member refid="classdakku_1_1Transform_1a6a18809585d933e89bece05fd4fad20f" prot="public" virt="non-virtual"><scope>dakku::Transform</scope><name>Transform</name></member>
+      <member refid="classdakku_1_1Transform_1a7809d4e7b8bffafdffe6667903333f2c" prot="public" virt="non-virtual"><scope>dakku::Transform</scope><name>Transform</name></member>
+      <member refid="classdakku_1_1Transform_1a8102c7b4c288d853ef0f7084f9e2a607" prot="public" virt="non-virtual"><scope>dakku::Transform</scope><name>Transform</name></member>
+      <member refid="classdakku_1_1Transform_1a3f1c4a4501cc53bf76979899c6da9498" prot="public" virt="non-virtual"><scope>dakku::Transform</scope><name>transpose</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

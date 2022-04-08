@@ -43,6 +43,8 @@
       <node id="10">
         <label>src/core/ray.h</label>
         <link refid="ray_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
       </node>
       <node id="11">
         <label>src/core/transform.h</label>

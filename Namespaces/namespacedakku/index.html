@@ -510,6 +510,76 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#function-radians" class="md-nav__link">
+    function radians
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-degrees" class="md-nav__link">
+    function degrees
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-translate" class="md-nav__link">
+    function translate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-scale" class="md-nav__link">
+    function scale
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-rotatex" class="md-nav__link">
+    function rotateX
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-rotatey" class="md-nav__link">
+    function rotateY
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-rotatez" class="md-nav__link">
+    function rotateZ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-rotate" class="md-nav__link">
+    function rotate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-lookat" class="md-nav__link">
+    function lookAt
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-perspective" class="md-nav__link">
+    function perspective
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#function-dot" class="md-nav__link">
     function dot
   </a>
@@ -532,6 +602,13 @@
           <li class="md-nav__item">
   <a href="#variable-inf" class="md-nav__link">
     variable INF
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-pi" class="md-nav__link">
+    variable PI
   </a>
   
 </li>
@@ -621,6 +698,10 @@
 <tr>
 <td>class</td>
 <td><strong><a href="/dakku/Classes/classdakku_1_1RayDifferential/">dakku::RayDifferential</a></strong> <br>differential ray</td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Transform/">dakku::Transform</a></strong></td>
 </tr>
 <tr>
 <td>class</td>
@@ -729,6 +810,46 @@
 <td><strong><a href="/dakku/Namespaces/namespacedakku/#function-isnan">isNaN</a></strong>(T )<br>check whether <code>x</code> is not a number</td>
 </tr>
 <tr>
+<td>float</td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#function-radians">radians</a></strong>(float deg)<br>convert degrees to radians</td>
+</tr>
+<tr>
+<td>float</td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#function-degrees">degrees</a></strong>(float rad)<br>convert radians to degrees</td>
+</tr>
+<tr>
+<td><a href="/dakku/Files/fwd_8h/#define-dakku-export-core">DAKKU_EXPORT_CORE</a><a href="/dakku/Classes/classdakku_1_1Transform/">Transform</a></td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#function-translate">translate</a></strong>(const <a href="/dakku/Namespaces/namespacedakku/#using-vector3f">Vector3f</a> &amp; delta)<br>translate</td>
+</tr>
+<tr>
+<td><a href="/dakku/Files/fwd_8h/#define-dakku-export-core">DAKKU_EXPORT_CORE</a><a href="/dakku/Classes/classdakku_1_1Transform/">Transform</a></td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#function-scale">scale</a></strong>(float x, float y, float z)<br>scale</td>
+</tr>
+<tr>
+<td><a href="/dakku/Files/fwd_8h/#define-dakku-export-core">DAKKU_EXPORT_CORE</a><a href="/dakku/Classes/classdakku_1_1Transform/">Transform</a></td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#function-rotatex">rotateX</a></strong>(float theta)<br>rotate through x axis</td>
+</tr>
+<tr>
+<td><a href="/dakku/Files/fwd_8h/#define-dakku-export-core">DAKKU_EXPORT_CORE</a><a href="/dakku/Classes/classdakku_1_1Transform/">Transform</a></td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#function-rotatey">rotateY</a></strong>(float theta)<br>rotate through y axis</td>
+</tr>
+<tr>
+<td><a href="/dakku/Files/fwd_8h/#define-dakku-export-core">DAKKU_EXPORT_CORE</a><a href="/dakku/Classes/classdakku_1_1Transform/">Transform</a></td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#function-rotatez">rotateZ</a></strong>(float theta)<br>rotate through z axis</td>
+</tr>
+<tr>
+<td><a href="/dakku/Files/fwd_8h/#define-dakku-export-core">DAKKU_EXPORT_CORE</a><a href="/dakku/Classes/classdakku_1_1Transform/">Transform</a></td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#function-rotate">rotate</a></strong>(float theta, const <a href="/dakku/Namespaces/namespacedakku/#using-vector3f">Vector3f</a> &amp; axis)<br>rotate through <code>axis</code></td>
+</tr>
+<tr>
+<td><a href="/dakku/Files/fwd_8h/#define-dakku-export-core">DAKKU_EXPORT_CORE</a><a href="/dakku/Classes/classdakku_1_1Transform/">Transform</a></td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#function-lookat">lookAt</a></strong>(const <a href="/dakku/Namespaces/namespacedakku/#using-point3f">Point3f</a> &amp; pos, const <a href="/dakku/Namespaces/namespacedakku/#using-point3f">Point3f</a> &amp; look, const <a href="/dakku/Namespaces/namespacedakku/#using-vector3f">Vector3f</a> &amp; refUp)<br>look at</td>
+</tr>
+<tr>
+<td><a href="/dakku/Files/fwd_8h/#define-dakku-export-core">DAKKU_EXPORT_CORE</a><a href="/dakku/Classes/classdakku_1_1Transform/">Transform</a></td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#function-perspective">perspective</a></strong>(float fov, float znear, float zfar)<br>perspective transform</td>
+</tr>
+<tr>
 <td>template &lt;ArithmeticType T,size_t S,typename D1 ,typename D2 > <br>decltype(auto)</td>
 <td><strong><a href="/dakku/Namespaces/namespacedakku/#function-dot">dot</a></strong>(const <a href="/dakku/Classes/classdakku_1_1VectorBase/">VectorBase</a>&lt; T, S, D1 &gt; &amp; a, const <a href="/dakku/Classes/classdakku_1_1VectorBase/">VectorBase</a>&lt; T, S, D2 &gt; &amp; b)<br>dot product between two vectors</td>
 </tr>
@@ -746,6 +867,10 @@
 <tr>
 <td>constexpr float</td>
 <td><strong><a href="/dakku/Namespaces/namespacedakku/#variable-inf">INF</a></strong> <br>infinity</td>
+</tr>
+<tr>
+<td>constexpr float</td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#variable-pi">PI</a></strong> <br>PI.</td>
 </tr>
 </tbody>
 </table>
@@ -910,15 +1035,120 @@
 <li><strong>T</strong> type (integer) </li>
 </ul>
 <p><strong>Return</strong>: false (all integers are not nans) </p>
+<h3 id="function-radians">function radians</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kr">inline</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">radians</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">deg</span><span class="w"></span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>convert degrees to radians </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>deg</strong> given degree </li>
+</ul>
+<p><strong>Return</strong>: the radian of deg </p>
+<h3 id="function-degrees">function degrees</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="kr">inline</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">degrees</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">rad</span><span class="w"></span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>convert radians to degrees </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>rad</strong> the given radian </li>
+</ul>
+<p><strong>Return</strong>: the degree of rad </p>
+<h3 id="function-translate">function translate</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="n">DAKKU_EXPORT_CORETransform</span><span class="w"> </span><span class="n">translate</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3f</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">delta</span><span class="w"></span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>translate </p>
+<h3 id="function-scale">function scale</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="n">DAKKU_EXPORT_CORETransform</span><span class="w"> </span><span class="n">scale</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">z</span><span class="w"></span>
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>scale </p>
+<h3 id="function-rotatex">function rotateX</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="n">DAKKU_EXPORT_CORETransform</span><span class="w"> </span><span class="n">rotateX</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">theta</span><span class="w"></span>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>rotate through x axis </p>
+<h3 id="function-rotatey">function rotateY</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="n">DAKKU_EXPORT_CORETransform</span><span class="w"> </span><span class="n">rotateY</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">theta</span><span class="w"></span>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>rotate through y axis </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>theta</strong> </li>
+</ul>
+<p><strong>Return</strong>: DAKKU_EXPORT_CORE </p>
+<h3 id="function-rotatez">function rotateZ</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="n">DAKKU_EXPORT_CORETransform</span><span class="w"> </span><span class="n">rotateZ</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">theta</span><span class="w"></span>
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>rotate through z axis </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>theta</strong> </li>
+</ul>
+<p><strong>Return</strong>: DAKKU_EXPORT_CORE </p>
+<h3 id="function-rotate">function rotate</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="n">DAKKU_EXPORT_CORETransform</span><span class="w"> </span><span class="n">rotate</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">theta</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3f</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">axis</span><span class="w"></span>
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>rotate through <code>axis</code></p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>theta</strong> angle </li>
+<li><strong>axis</strong> given axis </li>
+</ul>
+<h3 id="function-lookat">function lookAt</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="n">DAKKU_EXPORT_CORETransform</span><span class="w"> </span><span class="n">lookAt</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Point3f</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">pos</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Point3f</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">look</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3f</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">refUp</span><span class="w"></span>
+<a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>look at </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>pos</strong> camera position </li>
+<li><strong>look</strong> camera look direction </li>
+<li><strong>refUp</strong> reference up vector </li>
+</ul>
+<h3 id="function-perspective">function perspective</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="n">DAKKU_EXPORT_CORETransform</span><span class="w"> </span><span class="n">perspective</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">fov</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">znear</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">zfar</span><span class="w"></span>
+<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>perspective transform </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>fov</strong> field of view </li>
+<li><strong>znear</strong> far plane z </li>
+<li><strong>zfar</strong> near plane z</li>
+</ul>
+<p>the shorter edge mapped to [-1, 1], the longer [-ratio, ratio] left handed </p>
 <h3 id="function-dot">function dot</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="n">ArithmeticType</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="kt">size_t</span><span class="w"> </span><span class="n">S</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="k">typename</span><span class="w"> </span><span class="nc">D1</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="k">typename</span><span class="w"> </span><span class="nc">D2</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
-<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="kr">inline</span><span class="w"> </span><span class="k">decltype</span><span class="p">(</span><span class="k">auto</span><span class="p">)</span><span class="w"> </span><span class="n">dot</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">VectorBase</span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">S</span><span class="p">,</span><span class="w"> </span><span class="n">D1</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">VectorBase</span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">S</span><span class="p">,</span><span class="w"> </span><span class="n">D2</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">b</span><span class="w"></span>
-<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="n">ArithmeticType</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="kt">size_t</span><span class="w"> </span><span class="n">S</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="k">typename</span><span class="w"> </span><span class="nc">D1</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a><span class="k">typename</span><span class="w"> </span><span class="nc">D2</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a><span class="kr">inline</span><span class="w"> </span><span class="k">decltype</span><span class="p">(</span><span class="k">auto</span><span class="p">)</span><span class="w"> </span><span class="n">dot</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">VectorBase</span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">S</span><span class="p">,</span><span class="w"> </span><span class="n">D1</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-28-7" name="__codelineno-28-7" href="#__codelineno-28-7"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">VectorBase</span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">S</span><span class="p">,</span><span class="w"> </span><span class="n">D2</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">b</span><span class="w"></span>
+<a id="__codelineno-28-8" name="__codelineno-28-8" href="#__codelineno-28-8"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 <p>dot product between two vectors </p>
 <p><strong>Parameters</strong>: </p>
@@ -929,11 +1159,15 @@
 <p><strong>Return</strong>: <span class="arithmatex">\(\vec a \cdot \vec b\)</span> </p>
 <h2 id="attributes-documentation">Attributes Documentation</h2>
 <h3 id="variable-inf">variable INF</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">INF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;::</span><span class="n">infinity</span><span class="p">();</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">INF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;::</span><span class="n">infinity</span><span class="p">();</span><span class="w"></span>
 </code></pre></div>
 <p>infinity </p>
+<h3 id="variable-pi">variable PI</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">PI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">numbers</span><span class="o">::</span><span class="n">pi_v</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>PI. </p>
 <hr />
-<p>Updated on 2022-04-08 at 02:49:59 +0000</p>
+<p>Updated on 2022-04-08 at 03:36:34 +0000</p>
 
               
             </article>
