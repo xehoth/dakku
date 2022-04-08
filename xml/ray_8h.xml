@@ -107,6 +107,22 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
+      <node id="4">
+        <label>src/core/class.h</label>
+        <link refid="class_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>src/core/object.h</label>
+        <link refid="object_8h"/>
+      </node>
+      <node id="3">
+        <label>src/core/property.h</label>
+        <link refid="property_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
       <node id="1">
         <label>src/core/ray.h</label>
         <link refid="ray_8h"/>
@@ -116,6 +132,8 @@
       <node id="2">
         <label>src/core/transform.h</label>
         <link refid="transform_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
       </node>
     </invincdepgraph>
     <innerclass refid="classdakku_1_1Ray" prot="public">dakku::Ray</innerclass>

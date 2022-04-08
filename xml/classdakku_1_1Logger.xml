@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/logger.h" line="39" column="19" bodyfile="src/core/logger.h" bodystart="39" bodyend="-1"/>
+        <location file="src/core/logger.h" line="44" column="19" bodyfile="src/core/logger.h" bodystart="44" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -92,7 +92,7 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/core/logger.h" line="14" column="1" bodyfile="src/core/logger.h" bodystart="14" bodyend="40"/>
+    <location file="src/core/logger.h" line="14" column="1" bodyfile="src/core/logger.h" bodystart="14" bodyend="49"/>
     <listofallmembers>
       <member refid="classdakku_1_1Logger_1aa6afc845ad6d0bcec3849515afc971cd" prot="private" virt="non-virtual"><scope>dakku::Logger</scope><name>_logger</name></member>
       <member refid="classdakku_1_1Logger_1a75e95ca57e099bb7992724feec106edf" prot="public" virt="non-virtual"><scope>dakku::Logger</scope><name>get</name></member>

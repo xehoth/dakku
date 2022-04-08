@@ -50,8 +50,22 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
+        <enumvalue id="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaa63b588d5559f64f89a416e656880b949" prot="public">
+          <name>STRING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
         <enumvalue id="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaa87752381b583740610f1dfeb07fdad7e" prot="public">
           <name>VECTOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaadceae9409e3ff24c6c0af99860ba44ac" prot="public">
+          <name>TRANSFORM</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
@@ -64,7 +78,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/property.h" line="13" column="1" bodyfile="src/core/property.h" bodystart="13" bodyend="13"/>
+        <location file="src/core/property.h" line="15" column="1" bodyfile="src/core/property.h" bodystart="15" bodyend="23"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="typedef">
@@ -381,6 +395,58 @@
         </inbodydescription>
         <location file="src/core/fwd.h" line="21" column="24" bodyfile="src/core/fwd.h" bodystart="21" bodyend="-1"/>
       </memberdef>
+      <memberdef kind="variable" id="namespacedakku_1a96416914fd138a9ad1724211806eaadc" prot="public" static="no" mutable="no">
+        <type>class <ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
+        <definition>class DAKKU_EXPORT_CORE dakku::Property</definition>
+        <argsstring></argsstring>
+        <name>Property</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/fwd.h" line="69" column="24" bodyfile="src/core/fwd.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacedakku_1a5e92e662fd955a5d5e138ec343496ecb" prot="public" static="no" mutable="no">
+        <type>class <ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
+        <definition>class DAKKU_EXPORT_CORE dakku::Class</definition>
+        <argsstring></argsstring>
+        <name>Class</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/fwd.h" line="70" column="24" bodyfile="src/core/fwd.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacedakku_1a814749a6cf3cd7575912f5119a5be6ad" prot="public" static="no" mutable="no">
+        <type>class <ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
+        <definition>class DAKKU_EXPORT_CORE dakku::Object</definition>
+        <argsstring></argsstring>
+        <name>Object</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/fwd.h" line="71" column="24" bodyfile="src/core/fwd.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacedakku_1afb9578030bac745ae0282d66d44df22c" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
+        <definition>struct DAKKU_EXPORT_CORE dakku::Matrix4x4</definition>
+        <argsstring></argsstring>
+        <name>Matrix4x4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/fwd.h" line="72" column="24" bodyfile="src/core/fwd.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
       </sectiondef>
       <sectiondef kind="func">
       <memberdef kind="function" id="namespacedakku_1af0a2453f8db3eb948901c7a0aed18434" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
@@ -575,7 +641,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/transform.h" line="266" column="29" declfile="src/core/transform.h" declline="266" declcolumn="29"/>
+        <location file="src/core/transform.h" line="286" column="29" declfile="src/core/transform.h" declline="286" declcolumn="29"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1a7acbd19453bccf5b94cfa1133df02981" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref> <ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref></type>
@@ -601,7 +667,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/transform.h" line="272" column="29" declfile="src/core/transform.h" declline="272" declcolumn="29"/>
+        <location file="src/core/transform.h" line="292" column="29" declfile="src/core/transform.h" declline="292" declcolumn="29"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1a9a343fe7cec03ad3c562a926fc052f6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref> <ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref></type>
@@ -619,7 +685,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/transform.h" line="278" column="29" declfile="src/core/transform.h" declline="278" declcolumn="29"/>
+        <location file="src/core/transform.h" line="298" column="29" declfile="src/core/transform.h" declline="298" declcolumn="29"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1a6ddc73eb8238f15d8c1016069962e8c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref> <ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref></type>
@@ -649,7 +715,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/transform.h" line="286" column="29" declfile="src/core/transform.h" declline="286" declcolumn="29"/>
+        <location file="src/core/transform.h" line="306" column="29" declfile="src/core/transform.h" declline="306" declcolumn="29"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1a2bbb040f4ba3ff426a543ad8129195de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref> <ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref></type>
@@ -679,7 +745,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/transform.h" line="294" column="29" declfile="src/core/transform.h" declline="294" declcolumn="29"/>
+        <location file="src/core/transform.h" line="314" column="29" declfile="src/core/transform.h" declline="314" declcolumn="29"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1a5158202b82b35e77f9fc61285161488a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref> <ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref></type>
@@ -719,7 +785,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/transform.h" line="302" column="29" declfile="src/core/transform.h" declline="302" declcolumn="29"/>
+        <location file="src/core/transform.h" line="322" column="29" declfile="src/core/transform.h" declline="322" declcolumn="29"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1aaa536865ee7be0b7a4ed6109f261eeb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref> <ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref></type>
@@ -771,7 +837,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/transform.h" line="311" column="29" declfile="src/core/transform.h" declline="311" declcolumn="29"/>
+        <location file="src/core/transform.h" line="331" column="29" declfile="src/core/transform.h" declline="331" declcolumn="29"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1a027a77f92f8ae36b091ef409ec0b4c6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref> <ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref></type>
@@ -823,7 +889,7 @@ the shorter edge mapped to [-1, 1], the longer [-ratio, ratio] left handed </par
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/transform.h" line="324" column="29" declfile="src/core/transform.h" declline="324" declcolumn="29"/>
+        <location file="src/core/transform.h" line="344" column="29" declfile="src/core/transform.h" declline="344" declcolumn="29"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1a2016f3c3a16c069a055a7017eacb0e66" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>

@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/transform.h" line="107" column="14" bodyfile="src/core/transform.h" bodystart="107" bodyend="-1"/>
+        <location file="src/core/transform.h" line="127" column="14" bodyfile="src/core/transform.h" bodystart="127" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -112,6 +112,24 @@
         </inbodydescription>
         <location file="src/core/transform.h" line="23" column="3" bodyfile="src/core/transform.h" bodystart="23" bodyend="42"/>
       </memberdef>
+      <memberdef kind="function" id="structdakku_1_1Matrix4x4_1aa057e26fddc7b42656ae8425d48a5b20" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>dakku::Matrix4x4::Matrix4x4</definition>
+        <argsstring>(const std::vector&lt; float &gt; &amp;v)</argsstring>
+        <name>Matrix4x4</name>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new Matrix 4 x 4 object with row major float vector. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/transform.h" line="48" column="3" bodyfile="src/core/transform.h" bodystart="48" bodyend="51"/>
+      </memberdef>
       <memberdef kind="function" id="structdakku_1_1Matrix4x4_1afa2d87deca31076d5166d3c5335e8e22" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>decltype(auto)</type>
         <definition>decltype(auto) dakku::Matrix4x4::operator[]</definition>
@@ -127,7 +145,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/transform.h" line="44" column="12" bodyfile="src/core/transform.h" bodystart="44" bodyend="44"/>
+        <location file="src/core/transform.h" line="53" column="12" bodyfile="src/core/transform.h" bodystart="53" bodyend="53"/>
       </memberdef>
       <memberdef kind="function" id="structdakku_1_1Matrix4x4_1adbd9aa389d5861cbb9961db9ea21b219" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>decltype(auto)</type>
@@ -144,7 +162,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/transform.h" line="45" column="12" bodyfile="src/core/transform.h" bodystart="45" bodyend="45"/>
+        <location file="src/core/transform.h" line="54" column="12" bodyfile="src/core/transform.h" bodystart="54" bodyend="54"/>
       </memberdef>
       <memberdef kind="function" id="structdakku_1_1Matrix4x4_1a283f29f1cb3aa1bdeeb929a0896a5835" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>decltype(auto)</type>
@@ -165,7 +183,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/transform.h" line="46" column="12" bodyfile="src/core/transform.h" bodystart="46" bodyend="46"/>
+        <location file="src/core/transform.h" line="55" column="12" bodyfile="src/core/transform.h" bodystart="55" bodyend="55"/>
       </memberdef>
       <memberdef kind="function" id="structdakku_1_1Matrix4x4_1a00d3970084edf324f911eb2bf3b29936" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>decltype(auto)</type>
@@ -186,7 +204,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/transform.h" line="47" column="12" bodyfile="src/core/transform.h" bodystart="47" bodyend="47"/>
+        <location file="src/core/transform.h" line="56" column="12" bodyfile="src/core/transform.h" bodystart="56" bodyend="56"/>
       </memberdef>
       <memberdef kind="function" id="structdakku_1_1Matrix4x4_1a23f75e2553126934f408f117eaed9849" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -200,7 +218,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/transform.h" line="53" column="8" bodyfile="src/core/transform.h" bodystart="53" bodyend="57"/>
+        <location file="src/core/transform.h" line="62" column="8" bodyfile="src/core/transform.h" bodystart="62" bodyend="66"/>
       </memberdef>
       <memberdef kind="function" id="structdakku_1_1Matrix4x4_1aa440eb3fd11ed3003aad440b17e84e5c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -217,7 +235,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/transform.h" line="59" column="8" bodyfile="src/core/transform.h" bodystart="59" bodyend="59"/>
+        <location file="src/core/transform.h" line="68" column="8" bodyfile="src/core/transform.h" bodystart="68" bodyend="68"/>
       </memberdef>
       <memberdef kind="function" id="structdakku_1_1Matrix4x4_1a5b55b6346b398a8dac63fbcb0f873375" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -234,7 +252,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/transform.h" line="61" column="8" bodyfile="src/core/transform.h" bodystart="61" bodyend="61"/>
+        <location file="src/core/transform.h" line="70" column="8" bodyfile="src/core/transform.h" bodystart="70" bodyend="70"/>
       </memberdef>
       <memberdef kind="function" id="structdakku_1_1Matrix4x4_1a0a2e0854eec31d6d12a8c3757cd1a7c0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="structdakku_1_1Matrix4x4" kindref="compound">Matrix4x4</ref></type>
@@ -251,7 +269,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/transform.h" line="65" column="13" bodyfile="src/core/transform.h" bodystart="65" bodyend="65"/>
+        <location file="src/core/transform.h" line="74" column="13" bodyfile="src/core/transform.h" bodystart="74" bodyend="74"/>
       </memberdef>
       <memberdef kind="function" id="structdakku_1_1Matrix4x4_1a1f503531ba9a7dc39f0fc8124aa2d778" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="structdakku_1_1Matrix4x4" kindref="compound">Matrix4x4</ref></type>
@@ -268,7 +286,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/transform.h" line="67" column="13" bodyfile="src/core/transform.h" bodystart="67" bodyend="70"/>
+        <location file="src/core/transform.h" line="76" column="13" bodyfile="src/core/transform.h" bodystart="76" bodyend="79"/>
       </memberdef>
       <memberdef kind="function" id="structdakku_1_1Matrix4x4_1ad229acdd4f70387d3fd3b3df3dad8854" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -282,7 +300,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/transform.h" line="88" column="9" bodyfile="src/core/transform.h" bodystart="88" bodyend="88"/>
+        <location file="src/core/transform.h" line="97" column="9" bodyfile="src/core/transform.h" bodystart="97" bodyend="97"/>
       </memberdef>
       <memberdef kind="function" id="structdakku_1_1Matrix4x4_1af28df8d5712634ebdec64eebcc804bde" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>std::string</type>
@@ -295,7 +313,21 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/transform.h" line="90" column="16" bodyfile="src/core/transform.h" bodystart="90" bodyend="100"/>
+        <location file="src/core/transform.h" line="99" column="16" bodyfile="src/core/transform.h" bodystart="99" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="structdakku_1_1Matrix4x4_1acf7c461dc9d1d64ef7cac56f038e07b3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt; float &gt; dakku::Matrix4x4::toFloatVector</definition>
+        <argsstring>() const</argsstring>
+        <name>toFloatVector</name>
+        <briefdescription>
+<para>row major float vector </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/transform.h" line="119" column="16" bodyfile="src/core/transform.h" bodystart="119" bodyend="124"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -318,7 +350,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/transform.h" line="63" column="20"/>
+        <location file="src/core/transform.h" line="72" column="20"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="friend">
@@ -338,7 +370,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/transform.h" line="76" column="38"/>
+        <location file="src/core/transform.h" line="85" column="38"/>
       </memberdef>
       <memberdef kind="friend" id="structdakku_1_1Matrix4x4_1ac742caf08472cdfeda8fce5abf75c6a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structdakku_1_1Matrix4x4" kindref="compound">Matrix4x4</ref> <ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
@@ -356,7 +388,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/transform.h" line="82" column="38"/>
+        <location file="src/core/transform.h" line="91" column="38"/>
       </memberdef>
       <memberdef kind="friend" id="structdakku_1_1Matrix4x4_1a014300d3c91b6eea30d2c2e20f5d08ab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::ostream &amp;</type>
@@ -377,7 +409,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/transform.h" line="102" column="10" bodyfile="src/core/transform.h" bodystart="102" bodyend="104"/>
+        <location file="src/core/transform.h" line="111" column="10" bodyfile="src/core/transform.h" bodystart="111" bodyend="113"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -385,13 +417,14 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/core/transform.h" line="12" column="1" bodyfile="src/core/transform.h" bodystart="12" bodyend="108"/>
+    <location file="src/core/transform.h" line="12" column="1" bodyfile="src/core/transform.h" bodystart="12" bodyend="128"/>
     <listofallmembers>
       <member refid="structdakku_1_1Matrix4x4_1ac742caf08472cdfeda8fce5abf75c6a9" prot="public" virt="non-virtual"><scope>dakku::Matrix4x4</scope><name>inverse</name></member>
       <member refid="structdakku_1_1Matrix4x4_1ad229acdd4f70387d3fd3b3df3dad8854" prot="public" virt="non-virtual"><scope>dakku::Matrix4x4</scope><name>isIdentity</name></member>
       <member refid="structdakku_1_1Matrix4x4_1a3580dce7dc2c230e59203cecd2760635" prot="public" virt="non-virtual"><scope>dakku::Matrix4x4</scope><name>m</name></member>
       <member refid="structdakku_1_1Matrix4x4_1a04ffa0470a01980b11bd71b15a698fa0" prot="public" virt="non-virtual"><scope>dakku::Matrix4x4</scope><name>Matrix4x4</name></member>
       <member refid="structdakku_1_1Matrix4x4_1a9969de4e8ca980efbe5adde6d7f9b80c" prot="public" virt="non-virtual"><scope>dakku::Matrix4x4</scope><name>Matrix4x4</name></member>
+      <member refid="structdakku_1_1Matrix4x4_1aa057e26fddc7b42656ae8425d48a5b20" prot="public" virt="non-virtual"><scope>dakku::Matrix4x4</scope><name>Matrix4x4</name></member>
       <member refid="structdakku_1_1Matrix4x4_1a842b9884e102b87cb20746608fb04aa2" prot="public" virt="non-virtual"><scope>dakku::Matrix4x4</scope><name>mul</name></member>
       <member refid="structdakku_1_1Matrix4x4_1a5b55b6346b398a8dac63fbcb0f873375" prot="public" virt="non-virtual"><scope>dakku::Matrix4x4</scope><name>operator!=</name></member>
       <member refid="structdakku_1_1Matrix4x4_1a283f29f1cb3aa1bdeeb929a0896a5835" prot="public" virt="non-virtual"><scope>dakku::Matrix4x4</scope><name>operator()</name></member>
@@ -403,6 +436,7 @@
       <member refid="structdakku_1_1Matrix4x4_1afa2d87deca31076d5166d3c5335e8e22" prot="public" virt="non-virtual"><scope>dakku::Matrix4x4</scope><name>operator[]</name></member>
       <member refid="structdakku_1_1Matrix4x4_1adbd9aa389d5861cbb9961db9ea21b219" prot="public" virt="non-virtual"><scope>dakku::Matrix4x4</scope><name>operator[]</name></member>
       <member refid="structdakku_1_1Matrix4x4_1a23f75e2553126934f408f117eaed9849" prot="public" virt="non-virtual"><scope>dakku::Matrix4x4</scope><name>setIdentity</name></member>
+      <member refid="structdakku_1_1Matrix4x4_1acf7c461dc9d1d64ef7cac56f038e07b3" prot="public" virt="non-virtual"><scope>dakku::Matrix4x4</scope><name>toFloatVector</name></member>
       <member refid="structdakku_1_1Matrix4x4_1af28df8d5712634ebdec64eebcc804bde" prot="public" virt="non-virtual"><scope>dakku::Matrix4x4</scope><name>toString</name></member>
       <member refid="structdakku_1_1Matrix4x4_1ad9179852977de8383c0ae1683f12fc5f" prot="public" virt="non-virtual"><scope>dakku::Matrix4x4</scope><name>transpose</name></member>
     </listofallmembers>

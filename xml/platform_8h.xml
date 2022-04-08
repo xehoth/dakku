@@ -49,6 +49,8 @@
       <node id="11">
         <label>src/core/transform.h</label>
         <link refid="transform_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
       </node>
       <node id="7">
         <label>src/core/vector.h</label>

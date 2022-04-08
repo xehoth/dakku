@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/transform.h" line="212" column="13" bodyfile="src/core/transform.h" bodystart="212" bodyend="-1"/>
+        <location file="src/core/transform.h" line="232" column="13" bodyfile="src/core/transform.h" bodystart="232" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classdakku_1_1Transform_1aca0318c51a88c3abee67e5d749b47d44" prot="private" static="no" mutable="no">
         <type><ref refid="structdakku_1_1Matrix4x4" kindref="compound">Matrix4x4</ref></type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/transform.h" line="212" column="15" bodyfile="src/core/transform.h" bodystart="212" bodyend="-1"/>
+        <location file="src/core/transform.h" line="232" column="15" bodyfile="src/core/transform.h" bodystart="232" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/transform.h" line="112" column="3"/>
+        <location file="src/core/transform.h" line="132" column="3"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Transform_1a7809d4e7b8bffafdffe6667903333f2c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -61,7 +61,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/transform.h" line="113" column="3" bodyfile="src/core/transform.h" bodystart="113" bodyend="113"/>
+        <location file="src/core/transform.h" line="133" column="3" bodyfile="src/core/transform.h" bodystart="133" bodyend="133"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Transform_1a8102c7b4c288d853ef0f7084f9e2a607" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -82,7 +82,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/transform.h" line="114" column="3" bodyfile="src/core/transform.h" bodystart="114" bodyend="114"/>
+        <location file="src/core/transform.h" line="134" column="3" bodyfile="src/core/transform.h" bodystart="134" bodyend="134"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Transform_1ac0970a3fb0e2e6beefdd501784ece9ab" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -99,7 +99,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/transform.h" line="126" column="8" bodyfile="src/core/transform.h" bodystart="126" bodyend="128"/>
+        <location file="src/core/transform.h" line="146" column="8" bodyfile="src/core/transform.h" bodystart="146" bodyend="148"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Transform_1a7f9b98863c921918467d5350b50c7fac" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -116,7 +116,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/transform.h" line="130" column="8" bodyfile="src/core/transform.h" bodystart="130" bodyend="132"/>
+        <location file="src/core/transform.h" line="150" column="8" bodyfile="src/core/transform.h" bodystart="150" bodyend="152"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Transform_1aa23268759b85043f746f63d587b23c14" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -133,7 +133,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/transform.h" line="134" column="3" bodyfile="src/core/transform.h" bodystart="134" bodyend="142"/>
+        <location file="src/core/transform.h" line="154" column="3" bodyfile="src/core/transform.h" bodystart="154" bodyend="162"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Transform_1ab26be3dac928e072b2450cf295f728f0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -147,7 +147,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/transform.h" line="148" column="9" bodyfile="src/core/transform.h" bodystart="148" bodyend="148"/>
+        <location file="src/core/transform.h" line="168" column="9" bodyfile="src/core/transform.h" bodystart="168" bodyend="168"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Transform_1a16c268ca0de61e5592ae2a2189888a9a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const <ref refid="structdakku_1_1Matrix4x4" kindref="compound">Matrix4x4</ref> &amp;</type>
@@ -161,7 +161,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/transform.h" line="154" column="20" bodyfile="src/core/transform.h" bodystart="154" bodyend="154"/>
+        <location file="src/core/transform.h" line="174" column="20" bodyfile="src/core/transform.h" bodystart="174" bodyend="174"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Transform_1a0c00a8d967a8533934201d31f8395170" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const <ref refid="structdakku_1_1Matrix4x4" kindref="compound">Matrix4x4</ref> &amp;</type>
@@ -175,7 +175,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/transform.h" line="160" column="20" bodyfile="src/core/transform.h" bodystart="160" bodyend="160"/>
+        <location file="src/core/transform.h" line="180" column="20" bodyfile="src/core/transform.h" bodystart="180" bodyend="180"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Transform_1a7140b660a56fb533cceebcbedd6d4fab" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -200,7 +200,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/transform.h" line="167" column="17" bodyfile="src/core/transform.h" bodystart="216" bodyend="227"/>
+        <location file="src/core/transform.h" line="187" column="17" bodyfile="src/core/transform.h" bodystart="236" bodyend="247"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Transform_1aa0b6d3baf3d84b715395a232a615c73f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -225,7 +225,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/transform.h" line="174" column="18" bodyfile="src/core/transform.h" bodystart="230" bodyend="235"/>
+        <location file="src/core/transform.h" line="194" column="18" bodyfile="src/core/transform.h" bodystart="250" bodyend="255"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Transform_1a17520267cbc3c89b0aef0943596dc3a2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -250,7 +250,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/transform.h" line="181" column="18" bodyfile="src/core/transform.h" bodystart="238" bodyend="243"/>
+        <location file="src/core/transform.h" line="201" column="18" bodyfile="src/core/transform.h" bodystart="258" bodyend="263"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Transform_1a78da0df5b5d2b335d7c71346cdc727de" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classdakku_1_1Ray" kindref="compound">Ray</ref></type>
@@ -268,7 +268,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/transform.h" line="187" column="14" bodyfile="src/core/transform.h" bodystart="245" bodyend="249"/>
+        <location file="src/core/transform.h" line="207" column="14" bodyfile="src/core/transform.h" bodystart="265" bodyend="269"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Transform_1af1de7e6eabb7e21d00d2d424979f93d6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classdakku_1_1RayDifferential" kindref="compound">RayDifferential</ref></type>
@@ -286,7 +286,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/transform.h" line="193" column="26" bodyfile="src/core/transform.h" bodystart="251" bodyend="260"/>
+        <location file="src/core/transform.h" line="213" column="26" bodyfile="src/core/transform.h" bodystart="271" bodyend="280"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Transform_1ac37fe5a9c1d271ad939d813cf6862043" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref></type>
@@ -303,7 +303,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/transform.h" line="195" column="13" bodyfile="src/core/transform.h" bodystart="195" bodyend="197"/>
+        <location file="src/core/transform.h" line="215" column="13" bodyfile="src/core/transform.h" bodystart="215" bodyend="217"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Transform_1a5bc005e21588a6ae9f81eadbd312a38c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -317,7 +317,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/transform.h" line="203" column="9" bodyfile="src/core/transform.h" bodystart="203" bodyend="208"/>
+        <location file="src/core/transform.h" line="223" column="9" bodyfile="src/core/transform.h" bodystart="223" bodyend="228"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="friend">
@@ -337,7 +337,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/transform.h" line="120" column="20" bodyfile="src/core/transform.h" bodystart="120" bodyend="120"/>
+        <location file="src/core/transform.h" line="140" column="20" bodyfile="src/core/transform.h" bodystart="140" bodyend="140"/>
       </memberdef>
       <memberdef kind="friend" id="classdakku_1_1Transform_1a3f1c4a4501cc53bf76979899c6da9498" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref></type>
@@ -354,14 +354,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/transform.h" line="122" column="20" bodyfile="src/core/transform.h" bodystart="122" bodyend="124"/>
+        <location file="src/core/transform.h" line="142" column="20" bodyfile="src/core/transform.h" bodystart="142" bodyend="144"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/core/transform.h" line="110" column="1" bodyfile="src/core/transform.h" bodystart="110" bodyend="213"/>
+    <location file="src/core/transform.h" line="130" column="1" bodyfile="src/core/transform.h" bodystart="130" bodyend="233"/>
     <listofallmembers>
       <member refid="classdakku_1_1Transform_1a0c00a8d967a8533934201d31f8395170" prot="public" virt="non-virtual"><scope>dakku::Transform</scope><name>getInverseMatrix</name></member>
       <member refid="classdakku_1_1Transform_1a16c268ca0de61e5592ae2a2189888a9a" prot="public" virt="non-virtual"><scope>dakku::Transform</scope><name>getMatrix</name></member>

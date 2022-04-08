@@ -123,6 +123,8 @@
       <node id="8">
         <label>src/core/transform.h</label>
         <link refid="transform_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
       </node>
       <node id="2">
         <label>src/core/vector.h</label>

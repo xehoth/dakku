@@ -62,6 +62,7 @@
     <member refid="structdakku_1_1Matrix4x4_1a3580dce7dc2c230e59203cecd2760635" kind="variable"><name>m</name></member>
     <member refid="structdakku_1_1Matrix4x4_1a04ffa0470a01980b11bd71b15a698fa0" kind="function"><name>Matrix4x4</name></member>
     <member refid="structdakku_1_1Matrix4x4_1a9969de4e8ca980efbe5adde6d7f9b80c" kind="function"><name>Matrix4x4</name></member>
+    <member refid="structdakku_1_1Matrix4x4_1aa057e26fddc7b42656ae8425d48a5b20" kind="function"><name>Matrix4x4</name></member>
     <member refid="structdakku_1_1Matrix4x4_1afa2d87deca31076d5166d3c5335e8e22" kind="function"><name>operator[]</name></member>
     <member refid="structdakku_1_1Matrix4x4_1adbd9aa389d5861cbb9961db9ea21b219" kind="function"><name>operator[]</name></member>
     <member refid="structdakku_1_1Matrix4x4_1a283f29f1cb3aa1bdeeb929a0896a5835" kind="function"><name>operator()</name></member>
@@ -73,6 +74,7 @@
     <member refid="structdakku_1_1Matrix4x4_1a1f503531ba9a7dc39f0fc8124aa2d778" kind="function"><name>operator*=</name></member>
     <member refid="structdakku_1_1Matrix4x4_1ad229acdd4f70387d3fd3b3df3dad8854" kind="function"><name>isIdentity</name></member>
     <member refid="structdakku_1_1Matrix4x4_1af28df8d5712634ebdec64eebcc804bde" kind="function"><name>toString</name></member>
+    <member refid="structdakku_1_1Matrix4x4_1acf7c461dc9d1d64ef7cac56f038e07b3" kind="function"><name>toFloatVector</name></member>
     <member refid="structdakku_1_1Matrix4x4_1a842b9884e102b87cb20746608fb04aa2" kind="function"><name>mul</name></member>
     <member refid="structdakku_1_1Matrix4x4_1ad9179852977de8383c0ae1683f12fc5f" kind="friend"><name>transpose</name></member>
     <member refid="structdakku_1_1Matrix4x4_1ac742caf08472cdfeda8fce5abf75c6a9" kind="friend"><name>inverse</name></member>
@@ -106,11 +108,16 @@
     <member refid="classdakku_1_1Property_1aa44ae47ef51fe042e4cdc2d558fd6c63" kind="typedef"><name>ArrayType</name></member>
     <member refid="classdakku_1_1Property_1a84633bc387b4d29044d4b05972899905" kind="typedef"><name>NumberType</name></member>
     <member refid="classdakku_1_1Property_1a24591b37ada180ec7c1d83a7d63dd2c5" kind="typedef"><name>VectorType</name></member>
-    <member refid="classdakku_1_1Property_1ac868b8487e571de9a9b91e651dab408e" kind="variable"><name>data</name></member>
+    <member refid="classdakku_1_1Property_1a1729c26b8c4e6cdb59801447bb2c8b1e" kind="typedef"><name>StringType</name></member>
+    <member refid="classdakku_1_1Property_1ac202831633c79a143333cebe0bbf704b" kind="typedef"><name>TransformType</name></member>
+    <member refid="classdakku_1_1Property_1ae83c9705acea5d552705a45e06328408" kind="variable"><name>data</name></member>
     <member refid="classdakku_1_1Property_1aced3169c7b9d2a24ee8853660fb9ac54" kind="variable"><name>type</name></member>
     <member refid="classdakku_1_1Property_1a8723ce4e4af1e43c638534da4df0359f" kind="function"><name>Property</name></member>
     <member refid="classdakku_1_1Property_1a027a9fe4e51faa1849b99ebc276fa21e" kind="function"><name>Property</name></member>
+    <member refid="classdakku_1_1Property_1aaeaa4bdbeb0845bfa5ad94ad9e9bfb1c" kind="function"><name>Property</name></member>
     <member refid="classdakku_1_1Property_1a23b873f32fb76880cf62bf6088974141" kind="function"><name>Property</name></member>
+    <member refid="classdakku_1_1Property_1a9ce8614e008659828c3a4bf2a4ca22d2" kind="function"><name>Property</name></member>
+    <member refid="classdakku_1_1Property_1a6190fd86132ce537fe5d9401a3deae13" kind="function"><name>Property</name></member>
     <member refid="classdakku_1_1Property_1a86d3f30da8f500e82852c0dd6a47d892" kind="function"><name>getPropertyType</name></member>
     <member refid="classdakku_1_1Property_1af7dd18be1dffb351f12b12c77467b2eb" kind="function"><name>get</name></member>
     <member refid="classdakku_1_1Property_1a8cea54fddb8c1929675b801af12ff87b" kind="function"><name>get</name></member>
@@ -120,18 +127,26 @@
     <member refid="classdakku_1_1Property_1aa0d85401103f48282137e7114a355718" kind="function"><name>getArray</name></member>
     <member refid="classdakku_1_1Property_1a37f32d3f86e95035ce0ffd25dbe5e3ad" kind="function"><name>getNumber</name></member>
     <member refid="classdakku_1_1Property_1af57cda896c0b9c10cc5f255592085f47" kind="function"><name>getNumber</name></member>
+    <member refid="classdakku_1_1Property_1ae6c51d63bf9638a751d7f0d0fdc8552d" kind="function"><name>getString</name></member>
+    <member refid="classdakku_1_1Property_1ab781c77819cd814717db2fff5f5cad83" kind="function"><name>getString</name></member>
     <member refid="classdakku_1_1Property_1a7a29d6659e52edb24d84cb05484dc2b8" kind="function"><name>getVector</name></member>
     <member refid="classdakku_1_1Property_1a1c56218b57ba11993787e415c42b7ee4" kind="function"><name>getVector</name></member>
+    <member refid="classdakku_1_1Property_1a8cf3044bb0e4278868f4d9561f01dd08" kind="function"><name>getTransform</name></member>
+    <member refid="classdakku_1_1Property_1afe9d1b89c27dd11be2408cd7de9dec39" kind="function"><name>getTransform</name></member>
     <member refid="classdakku_1_1Property_1ac84d992765b5eefa36f4e91235f3a623" kind="function"><name>isObjectType</name></member>
     <member refid="classdakku_1_1Property_1ad45449f0a8525a9b1fc70e3753e4c199" kind="function"><name>isArrayType</name></member>
     <member refid="classdakku_1_1Property_1af34ece04b3a3225491e45d9b01237d97" kind="function"><name>isNumberType</name></member>
+    <member refid="classdakku_1_1Property_1a5f2653af041f944970b87daf31cc59f0" kind="function"><name>isStringType</name></member>
     <member refid="classdakku_1_1Property_1a8c5286cd48d768e4fcae6b01d820c32a" kind="function"><name>isVectorType</name></member>
+    <member refid="classdakku_1_1Property_1a7cbd3a02acea9f94e8305289c588bc4e" kind="function"><name>isTransformType</name></member>
     <member refid="classdakku_1_1Property_1a2bd84fd11bb5657b3ff18b1125fcd28e" kind="function"><name>operator[]</name></member>
     <member refid="classdakku_1_1Property_1acfb003fa35dbddb453c8881e0d65c4d2" kind="function"><name>operator[]</name></member>
     <member refid="classdakku_1_1Property_1ae2b5340d7459e700639dfb4e7f596a70" kind="function"><name>operator[]</name></member>
     <member refid="classdakku_1_1Property_1a064f14a56b1525c7c0fdb246d5105ce1" kind="function"><name>operator[]</name></member>
     <member refid="classdakku_1_1Property_1a98ec2192557128c57decc60656f2f019" kind="function"><name>toString</name></member>
     <member refid="classdakku_1_1Property_1ac83f11b8c568a198832de9754664be1d" kind="friend"><name>operator&lt;&lt;</name></member>
+    <member refid="classdakku_1_1Property_1adc0d617576e2a4f4c1a52bc6d553972d" kind="friend"><name>to_json</name></member>
+    <member refid="classdakku_1_1Property_1a23f4e939c57b1d95484c7ef925893aa2" kind="friend"><name>from_json</name></member>
   </compound>
   <compound refid="classdakku_1_1Ray" kind="class"><name>dakku::Ray</name>
     <member refid="classdakku_1_1Ray_1ad3f89d04f0328c3efbb29d031d6ce88f" kind="variable"><name>o</name></member>
@@ -262,7 +277,9 @@
     <member refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaacb4fb1757fb37c43cded35d3eb857c43" kind="enumvalue"><name>ARRAY</name></member>
     <member refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaa8eee8e217391199668cbac89472ace53" kind="enumvalue"><name>OBJECT</name></member>
     <member refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaa34f55eca38e0605a84f169ff61a2a396" kind="enumvalue"><name>NUMBER</name></member>
+    <member refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaa63b588d5559f64f89a416e656880b949" kind="enumvalue"><name>STRING</name></member>
     <member refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaa87752381b583740610f1dfeb07fdad7e" kind="enumvalue"><name>VECTOR</name></member>
+    <member refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaadceae9409e3ff24c6c0af99860ba44ac" kind="enumvalue"><name>TRANSFORM</name></member>
     <member refid="namespacedakku_1abcc743bdeb62068a56f14ac3ef9963b7" kind="typedef"><name>Bounds2f</name></member>
     <member refid="namespacedakku_1ae2cd423e1acf2fd91f4cdf3cc5ad50c6" kind="typedef"><name>Bounds2i</name></member>
     <member refid="namespacedakku_1a19129587abbff965c2c15bab5723e208" kind="typedef"><name>Bounds3f</name></member>
@@ -279,6 +296,10 @@
     <member refid="namespacedakku_1a9b64e14dceffe6ac84029f1d40d6ec41" kind="typedef"><name>Normal3f</name></member>
     <member refid="namespacedakku_1a53c476552ecb27caba955675d8efb680" kind="variable"><name>INF</name></member>
     <member refid="namespacedakku_1af7aa9dc8532b3506d50b84f932560eb0" kind="variable"><name>PI</name></member>
+    <member refid="namespacedakku_1a96416914fd138a9ad1724211806eaadc" kind="variable"><name>Property</name></member>
+    <member refid="namespacedakku_1a5e92e662fd955a5d5e138ec343496ecb" kind="variable"><name>Class</name></member>
+    <member refid="namespacedakku_1a814749a6cf3cd7575912f5119a5be6ad" kind="variable"><name>Object</name></member>
+    <member refid="namespacedakku_1afb9578030bac745ae0282d66d44df22c" kind="variable"><name>Matrix4x4</name></member>
     <member refid="namespacedakku_1af0a2453f8db3eb948901c7a0aed18434" kind="function"><name>begin</name></member>
     <member refid="namespacedakku_1a41ae9fcb2290e6ea6f7d4b0fbca86d17" kind="function"><name>end</name></member>
     <member refid="namespacedakku_1af754e4967f947036a0c31c0dbb4bf6e1" kind="function"><name>isNaN</name></member>
