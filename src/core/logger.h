@@ -35,8 +35,17 @@ class DAKKU_EXPORT_CORE Logger {
    */
   explicit Logger(std::shared_ptr<spdlog::logger> _logger);
 
+#if defined(_MSC_VER)
+#pragma warning(push)
+#pragma warning(disable : 4251)
+#endif
+
   /// spdlog logger
   std::shared_ptr<spdlog::logger> _logger;
+
+#if defined(_MSC_VER)
+#pragma warning(pop)
+#endif
 };
 
 /// log error message

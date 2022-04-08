@@ -41,6 +41,15 @@ struct DAKKU_EXPORT_CORE Matrix4x4 {
     m[3][3] = t33;
   }
 
+  /**
+   * @brief Construct a new Matrix 4 x 4 object with row major float vector
+   *
+   */
+  Matrix4x4(const std::vector<float> &v) {
+    for (int i = 0; i < 4; ++i)
+      for (int j = 0; j < 4; ++j) m[i][j] = v[j * 4 + i];
+  }
+
   decltype(auto) operator[](size_t i) const { return m[i]; }
   decltype(auto) operator[](size_t i) { return m[i]; }
   decltype(auto) operator()(size_t i, size_t j) { return m[i][j]; }
@@ -101,6 +110,17 @@ struct DAKKU_EXPORT_CORE Matrix4x4 {
 
   friend std::ostream &operator<<(std::ostream &os, const Matrix4x4 &m) {
     return os << m.toString();
+  }
+
+  /**
+   * @brief row major float vector
+   *
+   */
+  [[nodiscard]] std::vector<float> toFloatVector() const {
+    std::vector<float> ret(16);
+    for (int i = 0; i < 4; ++i)
+      for (int j = 0; j < 4; ++j) ret[j * 4 + i] = m[i][j];
+    return ret;
   }
 
   /// matrix data

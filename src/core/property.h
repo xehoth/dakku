@@ -1,6 +1,8 @@
 #ifndef DAKKU_CORE_PROPERTY_H_
 #define DAKKU_CORE_PROPERTY_H_
 #include <core/vector.h>
+#include <core/transform.h>
+#include <nlohmann/json.hpp>
 #include <map>
 #include <string>
 #include <variant>
@@ -10,7 +12,15 @@ namespace dakku {
  * @brief property type
  *
  */
-enum class PropertyType { NONE, ARRAY, OBJECT, NUMBER, VECTOR };
+enum class PropertyType {
+  NONE,
+  ARRAY,
+  OBJECT,
+  NUMBER,
+  STRING,
+  VECTOR,
+  TRANSFORM
+};
 
 /**
  * @brief property class, containing many data types, similar to json
@@ -22,6 +32,8 @@ class DAKKU_EXPORT_CORE Property {
   using ArrayType = std::vector<Property>;
   using NumberType = float;
   using VectorType = std::vector<float>;
+  using StringType = std::string;
+  using TransformType = Transform;
 
   /**
    * @brief Construct a new empty Property object
@@ -38,6 +50,8 @@ class DAKKU_EXPORT_CORE Property {
   Property(const T &v)
       : data(static_cast<float>(v)), type(PropertyType::NUMBER) {}
 
+  Property(const std::string &s) : data(s), type(PropertyType::STRING) {}
+
   /**
    * @brief Construct a new Property object with a vector
    *
@@ -46,6 +60,33 @@ class DAKKU_EXPORT_CORE Property {
   template <ArithmeticType T, size_t S, typename D>
   Property(const VectorBase<T, S, D> &v)
       : data(v.toFloatVector()), type(PropertyType::VECTOR) {}
+
+  /**
+   * @brief Construct a new Property object with a float vector
+   *
+   */
+  Property(const std::vector<float> &v) {
+    if (v.size() <= 3) {
+      data = v;
+      type = PropertyType::VECTOR;
+    } else if (v.size() == 16) {
+      data = Transform{v};
+      type = PropertyType::TRANSFORM;
+    } else {
+      std::vector<Property> tmp;
+      tmp.reserve(v.size());
+      for (float i : v) tmp.emplace_back(i);
+      data = std::move(tmp);
+      type = PropertyType::ARRAY;
+    }
+  }
+
+  /**
+   * @brief Construct a new Property object with a transform
+   *
+   * @param t transform
+   */
+  Property(const Transform &t) : data(t), type(PropertyType::TRANSFORM) {}
 
   /**
    * @brief get the type of current property
@@ -81,8 +122,12 @@ class DAKKU_EXPORT_CORE Property {
       return std::get<ArrayType>(data);
     } else if constexpr (type == PropertyType::NUMBER) {
       return std::get<NumberType>(data);
+    } else if constexpr (type == PropertyType::STRING) {
+      return std::get<StringType>(data);
     } else if constexpr (type == PropertyType::VECTOR) {
       return std::get<VectorType>(data);
+    } else if constexpr (type == PropertyType::TRANSFORM) {
+      return std::get<TransformType>(data);
     } else {
       if constexpr (type == PropertyType::NONE) {
         DAKKU_WARN("none property type");
@@ -140,6 +185,22 @@ class DAKKU_EXPORT_CORE Property {
   }
 
   /**
+   * @brief get string
+   *
+   */
+  [[nodiscard]] decltype(auto) getString() {
+    return get<PropertyType::STRING>();
+  }
+
+  /**
+   * @brief get string
+   *
+   */
+  [[nodiscard]] decltype(auto) getString() const {
+    return get<PropertyType::STRING>();
+  }
+
+  /**
    * @brief get vector
    *
    */
@@ -153,6 +214,22 @@ class DAKKU_EXPORT_CORE Property {
    */
   [[nodiscard]] decltype(auto) getVector() const {
     return get<PropertyType::VECTOR>();
+  }
+
+  /**
+   * @brief get transform
+   *
+   */
+  [[nodiscard]] decltype(auto) getTransform() {
+    return get<PropertyType::TRANSFORM>();
+  }
+
+  /**
+   * @brief get transform
+   *
+   */
+  [[nodiscard]] decltype(auto) getTransform() const {
+    return get<PropertyType::TRANSFORM>();
   }
 
   /**
@@ -178,11 +255,27 @@ class DAKKU_EXPORT_CORE Property {
   }
 
   /**
+   * @brief is this a string
+   *
+   */
+  [[nodiscard]] bool isStringType() const {
+    return type == PropertyType::STRING;
+  }
+
+  /**
    * @brief is this a vector
    *
    */
   [[nodiscard]] bool isVectorType() const {
     return type == PropertyType::VECTOR;
+  }
+
+  /**
+   * @brief is this a transform
+   *
+   */
+  [[nodiscard]] bool isTransformType() const {
+    return type == PropertyType::TRANSFORM;
   }
 
   /**
@@ -273,10 +366,89 @@ class DAKKU_EXPORT_CORE Property {
     return os << property.toString();
   }
 
+  friend void to_json(nlohmann::json &j, const Property &p) {
+    switch (p.type) {
+      case PropertyType::OBJECT: {
+        for (const auto &[k, v] : p.getObject()) {
+          to_json(j[k], v);
+        }
+        break;
+      }
+      case PropertyType::ARRAY: {
+        j = nlohmann::json::array();
+        for (const auto &v : p.getArray()) {
+          j.push_back(nlohmann::json{});
+          to_json(j.back(), v);
+        }
+        break;
+      }
+      case PropertyType::NUMBER: {
+        j = p.getNumber();
+        break;
+      }
+      case PropertyType::STRING: {
+        j = p.getString();
+        break;
+      }
+      case PropertyType::VECTOR: {
+        j = p.getVector();
+        break;
+      }
+      case PropertyType::TRANSFORM: {
+        j = p.getTransform().getMatrix().toFloatVector();
+        break;
+      }
+      case PropertyType::NONE: {
+        DAKKU_ERR("none property type");
+        break;
+      }
+      default: {
+        DAKKU_ERR("invalid property type: {}", p.type);
+        break;
+      }
+    }
+  }
+
+  friend void from_json(const nlohmann::json &j, Property &p) {
+    if (j.is_object()) {
+      for (auto it = j.begin(); it != j.end(); ++it)
+        from_json(*it, p[it.key()]);
+    } else if (j.is_array()) {
+      auto isFloatVector = [&] {
+        for (const auto &v : j)
+          if (!v.is_number()) return false;
+        return true;
+      };
+      if (isFloatVector()) {
+        VectorType tmp;
+        j.get_to(tmp);
+        p = tmp;
+      } else {
+        for (size_t i = 0; i < j.size(); ++i) from_json(j[i], p[i]);
+      }
+    } else if (j.is_number()) {
+      p = j.get<float>();
+    } else if (j.is_string()) {
+      p = j.get<std::string>();
+    } else {
+      DAKKU_ERR("unknown type in json: {}", j.type_name());
+      std::exit(-1);
+    }
+  }
+
  private:
+#if defined(_MSC_VER)
+#pragma warning(push)
+#pragma warning(disable : 4251)
+#endif
   /// property data
-  std::variant<ObjectType, ArrayType, NumberType, VectorType, std::nullptr_t>
+  std::variant<std::nullptr_t, ObjectType, ArrayType, NumberType, StringType,
+               VectorType, TransformType>
       data;
+
+#if defined(_MSC_VER)
+#pragma warning(pop)
+#endif
   /// property type
   PropertyType type{PropertyType::NONE};
 };

@@ -73,7 +73,14 @@ class DAKKU_EXPORT_CORE Class final {
     std::string parent;
   };
 
+#if defined(_MSC_VER)
+#pragma warning(push)
+#pragma warning(disable : 4251)
+#endif
   std::map<std::string, Metadata, std::less<>> _classMap;
+#if defined(_MSC_VER)
+#pragma warning(pop)
+#endif
 };
 
 template <ObjectType T>

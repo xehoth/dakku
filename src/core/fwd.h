@@ -66,10 +66,10 @@ inline float radians(float deg) { return PI / 180.0f * deg; }
 inline float degrees(float rad) { return 180.0f / PI * rad; }
 
 enum class PropertyType;
-class Property;
-class Class;
-class Object;
-struct Matrix4x4;
+class DAKKU_EXPORT_CORE Property;
+class DAKKU_EXPORT_CORE Class;
+class DAKKU_EXPORT_CORE Object;
+struct DAKKU_EXPORT_CORE Matrix4x4;
 /**
  * @brief object type concept
  *
