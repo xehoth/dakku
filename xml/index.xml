@@ -65,7 +65,15 @@
     <member refid="structdakku_1_1Matrix4x4_1afa2d87deca31076d5166d3c5335e8e22" kind="function"><name>operator[]</name></member>
     <member refid="structdakku_1_1Matrix4x4_1adbd9aa389d5861cbb9961db9ea21b219" kind="function"><name>operator[]</name></member>
     <member refid="structdakku_1_1Matrix4x4_1a23f75e2553126934f408f117eaed9849" kind="function"><name>setIdentity</name></member>
-    <member refid="structdakku_1_1Matrix4x4_1ab093ee6d1551dec068d65a7298ce0daa" kind="friend"><name>transpose</name></member>
+    <member refid="structdakku_1_1Matrix4x4_1aa440eb3fd11ed3003aad440b17e84e5c" kind="function"><name>operator==</name></member>
+    <member refid="structdakku_1_1Matrix4x4_1a5b55b6346b398a8dac63fbcb0f873375" kind="function"><name>operator!=</name></member>
+    <member refid="structdakku_1_1Matrix4x4_1a0a2e0854eec31d6d12a8c3757cd1a7c0" kind="function"><name>operator*</name></member>
+    <member refid="structdakku_1_1Matrix4x4_1a1f503531ba9a7dc39f0fc8124aa2d778" kind="function"><name>operator*=</name></member>
+    <member refid="structdakku_1_1Matrix4x4_1af28df8d5712634ebdec64eebcc804bde" kind="function"><name>toString</name></member>
+    <member refid="structdakku_1_1Matrix4x4_1a842b9884e102b87cb20746608fb04aa2" kind="function"><name>mul</name></member>
+    <member refid="structdakku_1_1Matrix4x4_1ad9179852977de8383c0ae1683f12fc5f" kind="friend"><name>transpose</name></member>
+    <member refid="structdakku_1_1Matrix4x4_1ac742caf08472cdfeda8fce5abf75c6a9" kind="friend"><name>inverse</name></member>
+    <member refid="structdakku_1_1Matrix4x4_1a014300d3c91b6eea30d2c2e20f5d08ab" kind="friend"><name>operator&lt;&lt;</name></member>
   </compound>
   <compound refid="structdakku_1_1Class_1_1Metadata" kind="struct"><name>dakku::Class::Metadata</name>
     <member refid="structdakku_1_1Class_1_1Metadata_1a6a92c14c8c88f4c3345dcde94bb7dd64" kind="variable"><name>constructor</name></member>
@@ -241,9 +249,6 @@
     <member refid="namespacedakku_1ade3699e7ff88bf28ae0ea31baafab11c" kind="typedef"><name>Normal3</name></member>
     <member refid="namespacedakku_1a9b64e14dceffe6ac84029f1d40d6ec41" kind="typedef"><name>Normal3f</name></member>
     <member refid="namespacedakku_1a53c476552ecb27caba955675d8efb680" kind="variable"><name>INF</name></member>
-    <member refid="namespacedakku_1a96416914fd138a9ad1724211806eaadc" kind="variable"><name>Property</name></member>
-    <member refid="namespacedakku_1a5e92e662fd955a5d5e138ec343496ecb" kind="variable"><name>Class</name></member>
-    <member refid="namespacedakku_1a814749a6cf3cd7575912f5119a5be6ad" kind="variable"><name>Object</name></member>
     <member refid="namespacedakku_1af0a2453f8db3eb948901c7a0aed18434" kind="function"><name>begin</name></member>
     <member refid="namespacedakku_1a41ae9fcb2290e6ea6f7d4b0fbca86d17" kind="function"><name>end</name></member>
     <member refid="namespacedakku_1af754e4967f947036a0c31c0dbb4bf6e1" kind="function"><name>isNaN</name></member>
