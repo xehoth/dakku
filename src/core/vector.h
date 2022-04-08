@@ -50,7 +50,7 @@ class Point : public VectorBase<T, S, Point<T, S>> {
    *
    */
   friend Point operator-(const Point &a, const Vector<T, S> &b) {
-    return a - Point(b);
+    return Point(Vector<T, S>(a) - b);
   }
 
   /**
@@ -58,7 +58,7 @@ class Point : public VectorBase<T, S, Point<T, S>> {
    *
    */
   friend Point operator+(const Point &a, const Vector<T, S> &b) {
-    return a + Point(b);
+    return Point(Vector<T, S>(a) + b);
   }
 };
 

@@ -4,7 +4,7 @@
 using namespace dakku;
 
 TEST(Vector, Basic) {
-  std::array<float, 3> b{1.5, -2.3, 3.4};
+  std::array<float, 3> b{1.5f, -2.3f, 3.4f};
   Vector3f a(b[0], b[1], b[2]);
   auto eq = [&] { return a[0] == b[0] && a[1] == b[1] && a[2] == b[2]; };
   EXPECT_TRUE(eq());

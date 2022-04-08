@@ -1,3 +1,4 @@
+includes("imageio")
 includes("core")
 includes("stream")
 includes("filters")

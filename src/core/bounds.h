@@ -29,21 +29,20 @@ class BoundsBase {
   explicit BoundsBase(const Point<T, S> &p) : pMin(p), pMax(p) {}
 
   /**
+   * @brief type conversion
+   *
+   */
+  template <ArithmeticType U>
+  explicit BoundsBase(const BoundsBase<U, S> &b)
+      : pMin(Point<T, S>(b.pMin)), pMax(Point<T, S>(b.pMax)) {}
+
+  /**
    * @brief Construct a new Bounds Base object with two points
    * (take min/max of them to pMin and pMax)
    *
    */
   BoundsBase(const Point<T, S> &p1, const Point<T, S> &p2)
       : pMin(min(p1, p2)), pMax(max(p1, p2)) {}
-
-  /**
-   * @brief cast data type of bounds
-   *
-   */
-  template <ArithmeticType U>
-  explicit operator BoundsBase<U, S>() const {
-    return BoundsBase<U, S>(Point<U, S>(pMin), Point<U, S>(pMax));
-  }
 
   /**
    * @brief get the diagonal of the bounding box

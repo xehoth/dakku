@@ -496,7 +496,7 @@ class VectorBase {
   VectorBase(const std::vector<float> &v) {
     DAKKU_CHECK(v.size() == S, "invalid vector size: {}, expected: {}",
                 v.size(), S);
-    for (size_t i = 0; i < S; ++i) _data[i] = v[i];
+    for (size_t i = 0; i < S; ++i) _data[i] = static_cast<T>(v[i]);
   }
 
   /**
@@ -745,6 +745,26 @@ class VectorBase {
   friend Derived exp(const Derived &v) {
     Derived ret = v;
     for (size_t i = 0; i < S; ++i) ret[i] = static_cast<T>(std::exp(ret[i]));
+    return ret;
+  }
+
+  /**
+   * @brief element-wise floor
+   * 
+   */
+  friend Derived floor(const Derived &v) {
+    Derived ret = v;
+    for (size_t i = 0; i < S; ++i) ret[i] = std::floor(ret[i]);
+    return ret;
+  }
+
+  /**
+   * @brief element-wise ceil
+   * 
+   */
+  friend Derived ceil(const Derived &v) {
+    Derived ret = v;
+    for (size_t i = 0; i < S; ++i) ret[i] = std::ceil(ret[i]);
     return ret;
   }
 

@@ -89,6 +89,7 @@ class RayDifferential;
 
 class DAKKU_EXPORT_CORE Filter;
 class DAKKU_EXPORT_CORE Film;
+class FilmTile;
 template <size_t S, typename Derived>
 class CoefficientSpectrum;
 class RgbSpectrum;

@@ -1,0 +1,8 @@
+add_requires("vcpkg::openimageio", {alias = "openimageio", system = false, configs = {languages = "c++17", shared = true, debug = true}})
+target("dakku.imageio")
+  set_languages("c++17")
+  set_kind("shared")
+  add_defines("DAKKU_BUILD_MODULE=DAKKU_IMAGEIO_MODULE")
+  add_includedirs(os.projectdir() .. "/src", {public = true})
+  add_packages("openimageio")
+  add_files("*.cpp")

@@ -11,7 +11,8 @@ Diagnostics:
       [
         modernize-use-trailing-return-type,
         bugprone-easily-swappable-parameters,
-        modernize-avoid-c-arrays
+        modernize-avoid-c-arrays,
+        bugprone-implicit-widening-of-multiplication-result
       ]
     CheckOptions:
       WarnOnFloatingPointNarrowingConversion: false
