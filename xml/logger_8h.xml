@@ -2,7 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
   <compounddef id="logger_8h" kind="file" language="C++">
     <compoundname>logger.h</compoundname>
-    <includes refid="fwd_8h" local="no">core/fwd.h</includes>
+    <includes refid="core_2fwd_8h" local="no">core/fwd.h</includes>
     <includes local="no">spdlog/spdlog.h</includes>
     <includes local="no">spdlog/fmt/ostr.h</includes>
     <includes local="no">cstdlib</includes>
@@ -11,7 +11,7 @@
     <incdepgraph>
       <node id="2">
         <label>core/fwd.h</label>
-        <link refid="fwd_8h"/>
+        <link refid="core_2fwd_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
@@ -62,7 +62,11 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="6">
+      <node id="4">
+        <label>src/core/api.h</label>
+        <link refid="core_2api_8h"/>
+      </node>
+      <node id="11">
         <label>src/core/bounds.h</label>
         <link refid="bounds_8h"/>
       </node>
@@ -77,47 +81,75 @@
         <link refid="logger_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="4" relation="include">
+        <childnode refid="9" relation="include">
         </childnode>
       </node>
       <node id="3">
         <label>src/core/object.h</label>
         <link refid="object_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
       </node>
-      <node id="7">
+      <node id="12">
         <label>src/core/property.h</label>
         <link refid="property_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="8">
+      <node id="13">
         <label>src/core/ray.h</label>
         <link refid="ray_8h"/>
-        <childnode refid="9" relation="include">
-        </childnode>
-      </node>
-      <node id="9">
-        <label>src/core/transform.h</label>
-        <link refid="transform_8h"/>
-        <childnode refid="7" relation="include">
+        <childnode refid="14" relation="include">
         </childnode>
       </node>
       <node id="5">
-        <label>src/core/vector.h</label>
-        <link refid="vector_8h"/>
+        <label>src/core/serialization.h</label>
+        <link refid="serialization_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
         <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
+      </node>
+      <node id="14">
+        <label>src/core/transform.h</label>
+        <link refid="transform_8h"/>
+        <childnode refid="12" relation="include">
         </childnode>
       </node>
-      <node id="4">
+      <node id="10">
+        <label>src/core/vector.h</label>
+        <link refid="vector_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
         <label>src/core/vector_base.h</label>
         <link refid="vector__base_8h"/>
-        <childnode refid="5" relation="include">
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>src/stream/api.h</label>
+        <link refid="stream_2api_8h"/>
+      </node>
+      <node id="7">
+        <label>src/stream/fstream.h</label>
+        <link refid="fstream_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>src/stream/fwd.h</label>
+        <link refid="stream_2fwd_8h"/>
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -197,14 +229,14 @@
     <programlisting>
 <codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>DAKKU_CORE_LOGGER_H_</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DAKKU_CORE_LOGGER_H_</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="fwd_8h" kindref="compound">core/fwd.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="core_2fwd_8h" kindref="compound">core/fwd.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;spdlog/spdlog.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;spdlog/fmt/ostr.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdlib&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacedakku" kindref="compound">dakku</ref><sp/>{</highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight></codeline>
-<codeline lineno="14" refid="classdakku_1_1Logger" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref><sp/><ref refid="classdakku_1_1Logger" kindref="compound">Logger</ref><sp/>{</highlight></codeline>
+<codeline lineno="14" refid="classdakku_1_1Logger" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref><sp/><ref refid="classdakku_1_1Logger" kindref="compound">Logger</ref><sp/>{</highlight></codeline>
 <codeline lineno="15"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="21" refid="classdakku_1_1Logger_1a75e95ca57e099bb7992724feec106edf" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Logger" kindref="compound">Logger</ref><sp/>&amp;<ref refid="classdakku_1_1Logger_1a75e95ca57e099bb7992724feec106edf" kindref="member">get</ref>();</highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight></codeline>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="dir_090521d29e73b40f7fc0a63254d8965e" kind="dir">
+    <compoundname>src/stream</compoundname>
+    <innerfile refid="stream_2api_8h">api.h</innerfile>
+    <innerfile refid="fstream_8h">fstream.h</innerfile>
+    <innerfile refid="stream_2fwd_8h">fwd.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/stream/"/>
+  </compounddef>
+</doxygen>

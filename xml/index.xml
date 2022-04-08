@@ -52,6 +52,25 @@
     <member refid="classdakku_1_1Class_1af64deeeb68dfef5d6d4db8401df6281b" kind="function"><name>Class</name></member>
     <member refid="classdakku_1_1Class_1a055cb7eb3d914e2a1242d0d39f12f39d" kind="function"><name>constructor</name></member>
   </compound>
+  <compound refid="classdakku_1_1FileInputStream" kind="class"><name>dakku::FileInputStream</name>
+    <member refid="classdakku_1_1FileInputStream_1ad64d091dae724af7202e76219a7eb59e" kind="variable"><name>stream</name></member>
+    <member refid="classdakku_1_1FileInputStream_1a78fcbd9bd3066af2b2d91e9f07f3b2d6" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
+    <member refid="classdakku_1_1FileInputStream_1a061b083cd03658c4a594d1d30d4d0b1b" kind="function"><name>FileInputStream</name></member>
+    <member refid="classdakku_1_1FileInputStream_1a0bca053c299098766dc46f947ea35c52" kind="function"><name>readByte</name></member>
+    <member refid="classdakku_1_1FileInputStream_1a157681cafffcb6adadd5de64d8bc918d" kind="function"><name>readBytes</name></member>
+  </compound>
+  <compound refid="classdakku_1_1FileOutputStream" kind="class"><name>dakku::FileOutputStream</name>
+    <member refid="classdakku_1_1FileOutputStream_1a1c607c36adc63bb83817516964c6e72e" kind="variable"><name>stream</name></member>
+    <member refid="classdakku_1_1FileOutputStream_1af0bdc8b8c2e04c6602cc9d4048a4d281" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
+    <member refid="classdakku_1_1FileOutputStream_1a7a11c66c8938371d28c8f9ddce222f0c" kind="function"><name>FileOutputStream</name></member>
+    <member refid="classdakku_1_1FileOutputStream_1ac793da8372c702f923a5a3f3306367ae" kind="function"><name>writeByte</name></member>
+    <member refid="classdakku_1_1FileOutputStream_1a239a3e78d06f170d29b0e0db74e55c8c" kind="function"><name>writeBytes</name></member>
+  </compound>
+  <compound refid="classdakku_1_1InputStream" kind="class"><name>dakku::InputStream</name>
+    <member refid="classdakku_1_1InputStream_1a72f97ed2ffd8176e418dc962de184ade" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
+    <member refid="classdakku_1_1InputStream_1a2740268624ee2642cc70b419831153cd" kind="function"><name>readByte</name></member>
+    <member refid="classdakku_1_1InputStream_1a38473aafb15173995f837b818903ad47" kind="function"><name>readBytes</name></member>
+  </compound>
   <compound refid="classdakku_1_1Logger" kind="class"><name>dakku::Logger</name>
     <member refid="classdakku_1_1Logger_1aa6afc845ad6d0bcec3849515afc971cd" kind="variable"><name>_logger</name></member>
     <member refid="classdakku_1_1Logger_1a75e95ca57e099bb7992724feec106edf" kind="function"><name>get</name></member>
@@ -97,6 +116,11 @@
     <member refid="classdakku_1_1Object_1a055e32b0624d9a96fc2014fe5d9d0c81" kind="function"><name>isBaseOf</name></member>
     <member refid="classdakku_1_1Object_1a247ed68865f464d511b7fdb85467c354" kind="function"><name>getClassNameStatic</name></member>
     <member refid="classdakku_1_1Object_1a08ec83c660afb1850455ef30c43fa29c" kind="function"><name>getParentNameStatic</name></member>
+  </compound>
+  <compound refid="classdakku_1_1OutputStream" kind="class"><name>dakku::OutputStream</name>
+    <member refid="classdakku_1_1OutputStream_1ac311e62efb5df496e544f8253d016852" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
+    <member refid="classdakku_1_1OutputStream_1aa806da54971824033daaa468f630eb80" kind="function"><name>writeByte</name></member>
+    <member refid="classdakku_1_1OutputStream_1aefc5fac8303fab5bd3c05aa1b7e26f90" kind="function"><name>writeBytes</name></member>
   </compound>
   <compound refid="classdakku_1_1Point" kind="class"><name>dakku::Point</name>
     <member refid="classdakku_1_1Point_1ad8e485617ec76d5775ae2efd79522e29" kind="friend"><name>operator-</name></member>
@@ -144,6 +168,7 @@
     <member refid="classdakku_1_1Property_1ae2b5340d7459e700639dfb4e7f596a70" kind="function"><name>operator[]</name></member>
     <member refid="classdakku_1_1Property_1a064f14a56b1525c7c0fdb246d5105ce1" kind="function"><name>operator[]</name></member>
     <member refid="classdakku_1_1Property_1a98ec2192557128c57decc60656f2f019" kind="function"><name>toString</name></member>
+    <member refid="classdakku_1_1Property_1aed6c0ab5f44b13d225b82a40fed74911" kind="function"><name>mergeTransform</name></member>
     <member refid="classdakku_1_1Property_1ac83f11b8c568a198832de9754664be1d" kind="friend"><name>operator&lt;&lt;</name></member>
     <member refid="classdakku_1_1Property_1adc0d617576e2a4f4c1a52bc6d553972d" kind="friend"><name>to_json</name></member>
     <member refid="classdakku_1_1Property_1a23f4e939c57b1d95484c7ef925893aa2" kind="friend"><name>from_json</name></member>
@@ -167,6 +192,18 @@
     <member refid="classdakku_1_1RayDifferential_1a01c55686a54607a7e6a704ca84e86e6c" kind="function"><name>RayDifferential</name></member>
     <member refid="classdakku_1_1RayDifferential_1af1dfdf49c2455d6ccda29e08bee4e6fa" kind="function"><name>hasNaNs</name></member>
     <member refid="classdakku_1_1RayDifferential_1ad3b24f662902d6cff19067165ede3d24" kind="function"><name>scaleDifferentials</name></member>
+  </compound>
+  <compound refid="classdakku_1_1RelativeRoot" kind="class"><name>dakku::RelativeRoot</name>
+    <member refid="classdakku_1_1RelativeRoot_1a8e175836d965eef03467aeeb8367eee1" kind="variable"><name>dir</name></member>
+    <member refid="classdakku_1_1RelativeRoot_1aa6dd627bb9ec1a72dc72ac5f0646b52e" kind="function"><name>instance</name></member>
+    <member refid="classdakku_1_1RelativeRoot_1a29dea2b4e909cbb018c9cab5c3fa3c9f" kind="function"><name>get</name></member>
+    <member refid="classdakku_1_1RelativeRoot_1a808e9343f1b0aaec20fbf0b41d1738d6" kind="function"><name>set</name></member>
+    <member refid="classdakku_1_1RelativeRoot_1a6dec67b72433b4d4a169fd0006792c61" kind="function"><name>RelativeRoot</name></member>
+  </compound>
+  <compound refid="classdakku_1_1SerializableObject" kind="class"><name>dakku::SerializableObject</name>
+    <member refid="classdakku_1_1SerializableObject_1a20425307e474662b2825ca6fe0c3e1fc" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
+    <member refid="classdakku_1_1SerializableObject_1afbd8e48383b89c71132d091c9cd8b023" kind="function"><name>serialize</name></member>
+    <member refid="classdakku_1_1SerializableObject_1ae947f98ea5fdc86500b0f09a3cbd0d41" kind="function"><name>deserialize</name></member>
   </compound>
   <compound refid="classdakku_1_1Transform" kind="class"><name>dakku::Transform</name>
     <member refid="classdakku_1_1Transform_1ae48463c594e04791689e017baa5478ea" kind="variable"><name>m</name></member>
@@ -296,16 +333,21 @@
     <member refid="namespacedakku_1a9b64e14dceffe6ac84029f1d40d6ec41" kind="typedef"><name>Normal3f</name></member>
     <member refid="namespacedakku_1a53c476552ecb27caba955675d8efb680" kind="variable"><name>INF</name></member>
     <member refid="namespacedakku_1af7aa9dc8532b3506d50b84f932560eb0" kind="variable"><name>PI</name></member>
+    <member refid="namespacedakku_1ab81d04f25c58c43667816d47b70f4734" kind="variable"><name>RelativeRoot</name></member>
+    <member refid="namespacedakku_1a60d80eeb1de44e0299e91a45d8f94446" kind="variable"><name>InputStream</name></member>
+    <member refid="namespacedakku_1a04dac11edaf26a2e58c8d00f31e6fa29" kind="variable"><name>OutputStream</name></member>
     <member refid="namespacedakku_1a96416914fd138a9ad1724211806eaadc" kind="variable"><name>Property</name></member>
     <member refid="namespacedakku_1a5e92e662fd955a5d5e138ec343496ecb" kind="variable"><name>Class</name></member>
     <member refid="namespacedakku_1a814749a6cf3cd7575912f5119a5be6ad" kind="variable"><name>Object</name></member>
     <member refid="namespacedakku_1afb9578030bac745ae0282d66d44df22c" kind="variable"><name>Matrix4x4</name></member>
+    <member refid="namespacedakku_1a44beae0957b26c547b6a4f0a7d60166e" kind="function"><name>DAKKU_EXPORT_OBJECTS</name></member>
     <member refid="namespacedakku_1af0a2453f8db3eb948901c7a0aed18434" kind="function"><name>begin</name></member>
     <member refid="namespacedakku_1a41ae9fcb2290e6ea6f7d4b0fbca86d17" kind="function"><name>end</name></member>
     <member refid="namespacedakku_1af754e4967f947036a0c31c0dbb4bf6e1" kind="function"><name>isNaN</name></member>
     <member refid="namespacedakku_1af703ca0ba560169d1daf114a07175bf4" kind="function"><name>isNaN</name></member>
     <member refid="namespacedakku_1a2a53414d45143151128b45997c42d7af" kind="function"><name>radians</name></member>
     <member refid="namespacedakku_1a3d1bddf363d9216df7df7c148f917cd4" kind="function"><name>degrees</name></member>
+    <member refid="namespacedakku_1ac5c65853b3b4155436da5b4402bebcad" kind="function"><name>registerObjects</name></member>
     <member refid="namespacedakku_1a1e461427d5e700eff84e148509b7fcba" kind="function"><name>translate</name></member>
     <member refid="namespacedakku_1a7acbd19453bccf5b94cfa1133df02981" kind="function"><name>scale</name></member>
     <member refid="namespacedakku_1a9a343fe7cec03ad3c562a926fc052f6d" kind="function"><name>rotateX</name></member>
@@ -315,15 +357,13 @@
     <member refid="namespacedakku_1aaa536865ee7be0b7a4ed6109f261eeb7" kind="function"><name>lookAt</name></member>
     <member refid="namespacedakku_1a027a77f92f8ae36b091ef409ec0b4c6e" kind="function"><name>perspective</name></member>
     <member refid="namespacedakku_1a2016f3c3a16c069a055a7017eacb0e66" kind="function"><name>dot</name></member>
+    <member refid="namespacedakku_1a56ee8590ffd24bd3f70b555372fa4697" kind="function"><name>DAKKU_EXPORT_OBJECTS</name></member>
   </compound>
   <compound refid="namespacestd" kind="namespace"><name>std</name>
   </compound>
   <compound refid="bounds_8h" kind="file"><name>bounds.h</name>
   </compound>
   <compound refid="class_8h" kind="file"><name>class.h</name>
-  </compound>
-  <compound refid="fwd_8h" kind="file"><name>fwd.h</name>
-    <member refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kind="define"><name>DAKKU_EXPORT_CORE</name></member>
   </compound>
   <compound refid="logger_8h" kind="file"><name>logger.h</name>
     <member refid="logger_8h_1a9edd762e54e3ce43a70ddfe81b6e2fc5" kind="define"><name>DAKKU_ERR</name></member>
@@ -334,11 +374,17 @@
   </compound>
   <compound refid="object_8h" kind="file"><name>object.h</name>
     <member refid="object_8h_1adebe9d6b28624419b368ed9d52f52f2f" kind="define"><name>DAKKU_DECLARE_OBJECT</name></member>
-    <member refid="object_8h_1ad22224dfe962b66f1809b5ce2543c605" kind="define"><name>DAKKU_EXPORT_OBJECT</name></member>
+    <member refid="object_8h_1a76ec8c7fb191261eda93e2d1b5a3e9be" kind="define"><name>DAKKU_EXPORT_OBJECTS</name></member>
   </compound>
   <compound refid="property_8h" kind="file"><name>property.h</name>
   </compound>
   <compound refid="ray_8h" kind="file"><name>ray.h</name>
+  </compound>
+  <compound refid="relative_8h" kind="file"><name>relative.h</name>
+  </compound>
+  <compound refid="serialization_8h" kind="file"><name>serialization.h</name>
+  </compound>
+  <compound refid="stream_8h" kind="file"><name>stream.h</name>
   </compound>
   <compound refid="transform_8h" kind="file"><name>transform.h</name>
   </compound>
@@ -351,13 +397,28 @@
     <member refid="platform_8h_1a5a852c25cfd1f921bfe140d4216a332f" kind="define"><name>DAKKU_EXPORT</name></member>
     <member refid="platform_8h_1a4dc2ada1002dbe2abdfbc3ec4e1aee36" kind="define"><name>DAKKU_IMPORT</name></member>
     <member refid="platform_8h_1a727f841a8615f5ba2055132fb14a18ec" kind="define"><name>DAKKU_CORE_MODULE</name></member>
+    <member refid="platform_8h_1a6a1a04663120344778813d08185b6edb" kind="define"><name>DAKKU_STREAM_MODULE</name></member>
     <member refid="platform_8h_1a09cd708407b8b153a1c5f21c764c142a" kind="define"><name>DAKKU_MAIN_MODULE</name></member>
+  </compound>
+  <compound refid="core_2api_8h" kind="file"><name>api.h</name>
+  </compound>
+  <compound refid="stream_2api_8h" kind="file"><name>api.h</name>
+  </compound>
+  <compound refid="fstream_8h" kind="file"><name>fstream.h</name>
+  </compound>
+  <compound refid="core_2fwd_8h" kind="file"><name>fwd.h</name>
+    <member refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kind="define"><name>DAKKU_EXPORT_CORE</name></member>
+  </compound>
+  <compound refid="stream_2fwd_8h" kind="file"><name>fwd.h</name>
+    <member refid="stream_2fwd_8h_1aaa6b0e6f6a552de3f9f6bb40ed162e36" kind="define"><name>DAKKU_EXPORT_STREAM</name></member>
   </compound>
   <compound refid="vector_base" kind="page"><name>vector_base</name>
   </compound>
   <compound refid="dir_aebb8dcc11953d78e620bbef0b9e2183" kind="dir"><name>src/core</name>
   </compound>
   <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+  <compound refid="dir_090521d29e73b40f7fc0a63254d8965e" kind="dir"><name>src/stream</name>
   </compound>
   <compound refid="indexpage" kind="page"><name>index</name>
   </compound>

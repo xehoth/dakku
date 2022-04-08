@@ -1,0 +1,200 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="classdakku_1_1FileOutputStream" kind="class" language="C++" prot="public">
+    <compoundname>dakku::FileOutputStream</compoundname>
+    <basecompoundref refid="classdakku_1_1OutputStream" prot="public" virt="non-virtual">dakku::OutputStream</basecompoundref>
+    <includes refid="fstream_8h" local="no">fstream.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classdakku_1_1FileOutputStream_1a1c607c36adc63bb83817516964c6e72e" prot="protected" static="no" mutable="no">
+        <type>std::ofstream</type>
+        <definition>std::ofstream dakku::FileOutputStream::stream</definition>
+        <argsstring></argsstring>
+        <name>stream</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/stream/fstream.h" line="62" column="17" bodyfile="src/stream/fstream.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdakku_1_1FileOutputStream_1af0bdc8b8c2e04c6602cc9d4048a4d281" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dakku::FileOutputStream::DAKKU_DECLARE_OBJECT</definition>
+        <argsstring>(FileOutputStream, OutputStream)</argsstring>
+        <name>DAKKU_DECLARE_OBJECT</name>
+        <param>
+          <type><ref refid="classdakku_1_1FileOutputStream" kindref="compound">FileOutputStream</ref></type>
+        </param>
+        <param>
+          <type><ref refid="classdakku_1_1OutputStream" kindref="compound">OutputStream</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/stream/fstream.h" line="41" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1FileOutputStream_1a7a11c66c8938371d28c8f9ddce222f0c" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dakku::FileOutputStream::FileOutputStream</definition>
+        <argsstring>(const std::filesystem::path &amp;path)</argsstring>
+        <name>FileOutputStream</name>
+        <param>
+          <type>const std::filesystem::path &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the path of the file </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/stream/fstream.h" line="46" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1FileOutputStream_1ac793da8372c702f923a5a3f3306367ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void dakku::FileOutputStream::writeByte</definition>
+        <argsstring>(std::uint8_t value) override</argsstring>
+        <name>writeByte</name>
+        <reimplements refid="classdakku_1_1OutputStream_1aa806da54971824033daaa468f630eb80">writeByte</reimplements>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>write one byte <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the byte to write </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/stream/fstream.h" line="51" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1FileOutputStream_1a239a3e78d06f170d29b0e0db74e55c8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>size_t</type>
+        <definition>size_t dakku::FileOutputStream::writeBytes</definition>
+        <argsstring>(const void *ptr, size_t size) override</argsstring>
+        <name>writeBytes</name>
+        <reimplements refid="classdakku_1_1OutputStream_1aefc5fac8303fab5bd3c05aa1b7e26f90">writeBytes</reimplements>
+        <param>
+          <type>const void *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>write [size] bytes starting at [ptr] <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the starting pointer (buffer address) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the number of bytes </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the actual number of bytes the stream writes </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/stream/fstream.h" line="59" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>dakku file output stream </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>dakku::FileOutputStream</label>
+        <link refid="classdakku_1_1FileOutputStream"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>dakku::Object</label>
+        <link refid="classdakku_1_1Object"/>
+      </node>
+      <node id="2">
+        <label>dakku::OutputStream</label>
+        <link refid="classdakku_1_1OutputStream"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>dakku::FileOutputStream</label>
+        <link refid="classdakku_1_1FileOutputStream"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>dakku::Object</label>
+        <link refid="classdakku_1_1Object"/>
+      </node>
+      <node id="2">
+        <label>dakku::OutputStream</label>
+        <link refid="classdakku_1_1OutputStream"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/stream/fstream.h" line="39" column="1" bodyfile="src/stream/fstream.h" bodystart="39" bodyend="63"/>
+    <listofallmembers>
+      <member refid="classdakku_1_1FileOutputStream_1af0bdc8b8c2e04c6602cc9d4048a4d281" prot="public" virt="non-virtual"><scope>dakku::FileOutputStream</scope><name>DAKKU_DECLARE_OBJECT</name></member>
+      <member refid="classdakku_1_1OutputStream_1ac311e62efb5df496e544f8253d016852" prot="public" virt="non-virtual" ambiguityscope="dakku::OutputStream::"><scope>dakku::FileOutputStream</scope><name>DAKKU_DECLARE_OBJECT</name></member>
+      <member refid="classdakku_1_1FileOutputStream_1a7a11c66c8938371d28c8f9ddce222f0c" prot="public" virt="non-virtual"><scope>dakku::FileOutputStream</scope><name>FileOutputStream</name></member>
+      <member refid="classdakku_1_1Object_1a543f734268f7be81badecee6cf7245cc" prot="public" virt="virtual"><scope>dakku::FileOutputStream</scope><name>getClassName</name></member>
+      <member refid="classdakku_1_1Object_1a247ed68865f464d511b7fdb85467c354" prot="public" virt="non-virtual"><scope>dakku::FileOutputStream</scope><name>getClassNameStatic</name></member>
+      <member refid="classdakku_1_1Object_1accec0632e79097564677055bef4220bd" prot="public" virt="virtual"><scope>dakku::FileOutputStream</scope><name>getParentName</name></member>
+      <member refid="classdakku_1_1Object_1a08ec83c660afb1850455ef30c43fa29c" prot="public" virt="non-virtual"><scope>dakku::FileOutputStream</scope><name>getParentNameStatic</name></member>
+      <member refid="classdakku_1_1Object_1a055e32b0624d9a96fc2014fe5d9d0c81" prot="public" virt="non-virtual"><scope>dakku::FileOutputStream</scope><name>isBaseOf</name></member>
+      <member refid="classdakku_1_1Object_1add47b28fc1878f008bb6664a83faad72" prot="public" virt="non-virtual"><scope>dakku::FileOutputStream</scope><name>isDerivedFrom</name></member>
+      <member refid="classdakku_1_1Object_1a20e78d46fa11d575d63e048279150eac" prot="public" virt="non-virtual"><scope>dakku::FileOutputStream</scope><name>Object</name></member>
+      <member refid="classdakku_1_1FileOutputStream_1a1c607c36adc63bb83817516964c6e72e" prot="protected" virt="non-virtual"><scope>dakku::FileOutputStream</scope><name>stream</name></member>
+      <member refid="classdakku_1_1Object_1a65d91c04e480b827fa495df96af2826b" prot="public" virt="virtual"><scope>dakku::FileOutputStream</scope><name>toString</name></member>
+      <member refid="classdakku_1_1FileOutputStream_1ac793da8372c702f923a5a3f3306367ae" prot="public" virt="virtual"><scope>dakku::FileOutputStream</scope><name>writeByte</name></member>
+      <member refid="classdakku_1_1FileOutputStream_1a239a3e78d06f170d29b0e0db74e55c8c" prot="public" virt="virtual"><scope>dakku::FileOutputStream</scope><name>writeBytes</name></member>
+      <member refid="classdakku_1_1Object_1a0c792f089351caf3fa7a704c86ce903d" prot="public" virt="virtual"><scope>dakku::FileOutputStream</scope><name>~Object</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -96,7 +96,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/property.h" line="447" column="7" bodyfile="src/core/property.h" bodystart="447" bodyend="-1"/>
+        <location file="src/core/property.h" line="513" column="7" bodyfile="src/core/property.h" bodystart="513" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classdakku_1_1Property_1aced3169c7b9d2a24ee8853660fb9ac54" prot="private" static="no" mutable="no">
         <type><ref refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfca" kindref="member">PropertyType</ref></type>
@@ -111,7 +111,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/property.h" line="453" column="16" bodyfile="src/core/property.h" bodystart="453" bodyend="-1"/>
+        <location file="src/core/property.h" line="519" column="16" bodyfile="src/core/property.h" bodystart="519" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -745,6 +745,23 @@
         </inbodydescription>
         <location file="src/core/property.h" line="359" column="16"/>
       </memberdef>
+      <memberdef kind="function" id="classdakku_1_1Property_1aed6c0ab5f44b13d225b82a40fed74911" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref></type>
+        <definition>Transform dakku::Property::mergeTransform</definition>
+        <argsstring>() const</argsstring>
+        <name>mergeTransform</name>
+        <briefdescription>
+<para>special case, merge transforms (e.g., lookat, rotate, translate) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="classdakku_1_1Property" kindref="compound">Property</ref>&amp; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/property.h" line="444" column="14" bodyfile="src/core/property.h" bodystart="444" bodyend="503"/>
+      </memberdef>
       </sectiondef>
       <sectiondef kind="friend">
       <memberdef kind="friend" id="classdakku_1_1Property_1ac83f11b8c568a198832de9754664be1d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
@@ -817,7 +834,7 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/core/property.h" line="29" column="1" bodyfile="src/core/property.h" bodystart="29" bodyend="454"/>
+    <location file="src/core/property.h" line="29" column="1" bodyfile="src/core/property.h" bodystart="29" bodyend="520"/>
     <listofallmembers>
       <member refid="classdakku_1_1Property_1aa44ae47ef51fe042e4cdc2d558fd6c63" prot="public" virt="non-virtual"><scope>dakku::Property</scope><name>ArrayType</name></member>
       <member refid="classdakku_1_1Property_1ae83c9705acea5d552705a45e06328408" prot="private" virt="non-virtual"><scope>dakku::Property</scope><name>data</name></member>
@@ -843,6 +860,7 @@
       <member refid="classdakku_1_1Property_1a5f2653af041f944970b87daf31cc59f0" prot="public" virt="non-virtual"><scope>dakku::Property</scope><name>isStringType</name></member>
       <member refid="classdakku_1_1Property_1a7cbd3a02acea9f94e8305289c588bc4e" prot="public" virt="non-virtual"><scope>dakku::Property</scope><name>isTransformType</name></member>
       <member refid="classdakku_1_1Property_1a8c5286cd48d768e4fcae6b01d820c32a" prot="public" virt="non-virtual"><scope>dakku::Property</scope><name>isVectorType</name></member>
+      <member refid="classdakku_1_1Property_1aed6c0ab5f44b13d225b82a40fed74911" prot="public" virt="non-virtual"><scope>dakku::Property</scope><name>mergeTransform</name></member>
       <member refid="classdakku_1_1Property_1a84633bc387b4d29044d4b05972899905" prot="public" virt="non-virtual"><scope>dakku::Property</scope><name>NumberType</name></member>
       <member refid="classdakku_1_1Property_1a3572cc83d304fa13a828df071bc1530b" prot="public" virt="non-virtual"><scope>dakku::Property</scope><name>ObjectType</name></member>
       <member refid="classdakku_1_1Property_1ac83f11b8c568a198832de9754664be1d" prot="public" virt="non-virtual"><scope>dakku::Property</scope><name>operator&lt;&lt;</name></member>

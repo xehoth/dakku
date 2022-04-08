@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="classdakku_1_1SerializableObject" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>dakku::SerializableObject</compoundname>
+    <basecompoundref refid="classdakku_1_1Object" prot="public" virt="non-virtual">dakku::Object</basecompoundref>
+    <includes refid="serialization_8h" local="no">serialization.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdakku_1_1SerializableObject_1a20425307e474662b2825ca6fe0c3e1fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dakku::SerializableObject::DAKKU_DECLARE_OBJECT</definition>
+        <argsstring>(SerializableObject, Object)</argsstring>
+        <name>DAKKU_DECLARE_OBJECT</name>
+        <param>
+          <type><ref refid="classdakku_1_1SerializableObject" kindref="compound">SerializableObject</ref></type>
+        </param>
+        <param>
+          <type><ref refid="classdakku_1_1Object" kindref="compound">Object</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/serialization.h" line="54" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1SerializableObject_1afbd8e48383b89c71132d091c9cd8b023" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dakku::SerializableObject::serialize</definition>
+        <argsstring>(OutputStream *stream) const =0</argsstring>
+        <name>serialize</name>
+        <param>
+          <type><ref refid="classdakku_1_1OutputStream" kindref="compound">OutputStream</ref> *</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+<para>serialize the object (do not include the property part) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/serialization.h" line="61" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1SerializableObject_1ae947f98ea5fdc86500b0f09a3cbd0d41" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dakku::SerializableObject::deserialize</definition>
+        <argsstring>(InputStream *stream) const =0</argsstring>
+        <name>deserialize</name>
+        <param>
+          <type><ref refid="classdakku_1_1InputStream" kindref="compound">InputStream</ref> *</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+<para>deserialize the object (do not include the property part) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/serialization.h" line="68" column="16"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>serializable object </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>dakku::Object</label>
+        <link refid="classdakku_1_1Object"/>
+      </node>
+      <node id="1">
+        <label>dakku::SerializableObject</label>
+        <link refid="classdakku_1_1SerializableObject"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>dakku::Object</label>
+        <link refid="classdakku_1_1Object"/>
+      </node>
+      <node id="1">
+        <label>dakku::SerializableObject</label>
+        <link refid="classdakku_1_1SerializableObject"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/core/serialization.h" line="52" column="1" bodyfile="src/core/serialization.h" bodystart="52" bodyend="69"/>
+    <listofallmembers>
+      <member refid="classdakku_1_1SerializableObject_1a20425307e474662b2825ca6fe0c3e1fc" prot="public" virt="non-virtual"><scope>dakku::SerializableObject</scope><name>DAKKU_DECLARE_OBJECT</name></member>
+      <member refid="classdakku_1_1SerializableObject_1ae947f98ea5fdc86500b0f09a3cbd0d41" prot="public" virt="pure-virtual"><scope>dakku::SerializableObject</scope><name>deserialize</name></member>
+      <member refid="classdakku_1_1Object_1a543f734268f7be81badecee6cf7245cc" prot="public" virt="virtual"><scope>dakku::SerializableObject</scope><name>getClassName</name></member>
+      <member refid="classdakku_1_1Object_1a247ed68865f464d511b7fdb85467c354" prot="public" virt="non-virtual"><scope>dakku::SerializableObject</scope><name>getClassNameStatic</name></member>
+      <member refid="classdakku_1_1Object_1accec0632e79097564677055bef4220bd" prot="public" virt="virtual"><scope>dakku::SerializableObject</scope><name>getParentName</name></member>
+      <member refid="classdakku_1_1Object_1a08ec83c660afb1850455ef30c43fa29c" prot="public" virt="non-virtual"><scope>dakku::SerializableObject</scope><name>getParentNameStatic</name></member>
+      <member refid="classdakku_1_1Object_1a055e32b0624d9a96fc2014fe5d9d0c81" prot="public" virt="non-virtual"><scope>dakku::SerializableObject</scope><name>isBaseOf</name></member>
+      <member refid="classdakku_1_1Object_1add47b28fc1878f008bb6664a83faad72" prot="public" virt="non-virtual"><scope>dakku::SerializableObject</scope><name>isDerivedFrom</name></member>
+      <member refid="classdakku_1_1Object_1a20e78d46fa11d575d63e048279150eac" prot="public" virt="non-virtual"><scope>dakku::SerializableObject</scope><name>Object</name></member>
+      <member refid="classdakku_1_1SerializableObject_1afbd8e48383b89c71132d091c9cd8b023" prot="public" virt="pure-virtual"><scope>dakku::SerializableObject</scope><name>serialize</name></member>
+      <member refid="classdakku_1_1Object_1a65d91c04e480b827fa495df96af2826b" prot="public" virt="virtual"><scope>dakku::SerializableObject</scope><name>toString</name></member>
+      <member refid="classdakku_1_1Object_1a0c792f089351caf3fa7a704c86ce903d" prot="public" virt="virtual"><scope>dakku::SerializableObject</scope><name>~Object</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

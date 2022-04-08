@@ -1,0 +1,253 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="fstream_8h" kind="file" language="C++">
+    <compoundname>fstream.h</compoundname>
+    <includes refid="stream_2fwd_8h" local="no">stream/fwd.h</includes>
+    <includes local="no">filesystem</includes>
+    <includes local="no">fstream</includes>
+    <includedby refid="stream_2api_8h" local="no">src/stream/api.h</includedby>
+    <incdepgraph>
+      <node id="5">
+        <label>core/class.h</label>
+        <link refid="class_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>core/fwd.h</label>
+        <link refid="core_2fwd_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>core/logger.h</label>
+        <link refid="logger_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>core/object.h</label>
+        <link refid="object_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>core/property.h</label>
+        <link refid="property_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>core/ray.h</label>
+        <link refid="ray_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>core/serialization.h</label>
+        <link refid="serialization_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>core/transform.h</label>
+        <link refid="transform_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>core/vector.h</label>
+        <link refid="vector_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>core/vector_base.h</label>
+        <link refid="vector__base_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>platform.h</label>
+        <link refid="platform_8h"/>
+      </node>
+      <node id="1">
+        <label>src/stream/fstream.h</label>
+        <link refid="fstream_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stream/fwd.h</label>
+        <link refid="stream_2fwd_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>algorithm</label>
+      </node>
+      <node id="19">
+        <label>array</label>
+      </node>
+      <node id="11">
+        <label>cmath</label>
+      </node>
+      <node id="15">
+        <label>cstdlib</label>
+      </node>
+      <node id="31">
+        <label>filesystem</label>
+      </node>
+      <node id="32">
+        <label>fstream</label>
+      </node>
+      <node id="9">
+        <label>limits</label>
+      </node>
+      <node id="28">
+        <label>map</label>
+      </node>
+      <node id="27">
+        <label>nlohmann/json.hpp</label>
+      </node>
+      <node id="10">
+        <label>numbers</label>
+      </node>
+      <node id="23">
+        <label>numeric</label>
+      </node>
+      <node id="22">
+        <label>ostream</label>
+      </node>
+      <node id="14">
+        <label>spdlog/fmt/ostr.h</label>
+      </node>
+      <node id="13">
+        <label>spdlog/spdlog.h</label>
+      </node>
+      <node id="21">
+        <label>string</label>
+      </node>
+      <node id="30">
+        <label>string_view</label>
+      </node>
+      <node id="8">
+        <label>type_traits</label>
+      </node>
+      <node id="26">
+        <label>utility</label>
+      </node>
+      <node id="29">
+        <label>variant</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>src/stream/api.h</label>
+        <link refid="stream_2api_8h"/>
+      </node>
+      <node id="1">
+        <label>src/stream/fstream.h</label>
+        <link refid="fstream_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classdakku_1_1FileInputStream" prot="public">dakku::FileInputStream</innerclass>
+    <innerclass refid="classdakku_1_1FileOutputStream" prot="public">dakku::FileOutputStream</innerclass>
+    <innernamespace refid="namespacedakku">dakku</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>DAKKU_STREAM_FSTREAM_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DAKKU_STREAM_FSTREAM_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="stream_2fwd_8h" kindref="compound">stream/fwd.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;filesystem&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacedakku" kindref="compound">dakku</ref><sp/>{</highlight></codeline>
+<codeline lineno="11" refid="classdakku_1_1FileInputStream" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="stream_2fwd_8h_1aaa6b0e6f6a552de3f9f6bb40ed162e36" kindref="member">DAKKU_EXPORT_STREAM</ref><sp/><ref refid="classdakku_1_1FileInputStream" kindref="compound">FileInputStream</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1InputStream" kindref="compound">InputStream</ref><sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="13" refid="classdakku_1_1FileInputStream_1a78fcbd9bd3066af2b2d91e9f07f3b2d6" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classdakku_1_1FileInputStream_1a78fcbd9bd3066af2b2d91e9f07f3b2d6" kindref="member">DAKKU_DECLARE_OBJECT</ref>(<ref refid="classdakku_1_1FileInputStream" kindref="compound">FileInputStream</ref>,<sp/><ref refid="classdakku_1_1InputStream" kindref="compound">InputStream</ref>);</highlight></codeline>
+<codeline lineno="17" refid="classdakku_1_1FileInputStream_1a061b083cd03658c4a594d1d30d4d0b1b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1FileInputStream_1a061b083cd03658c4a594d1d30d4d0b1b" kindref="member">FileInputStream</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::filesystem::path<sp/>&amp;path);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="classdakku_1_1FileInputStream_1a0bca053c299098766dc46f947ea35c52" refkind="member"><highlight class="normal"><sp/><sp/>std::uint8_t<sp/><ref refid="classdakku_1_1FileInputStream_1a0bca053c299098766dc46f947ea35c52" kindref="member">readByte</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="classdakku_1_1FileInputStream_1a157681cafffcb6adadd5de64d8bc918d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1FileInputStream_1a157681cafffcb6adadd5de64d8bc918d" kindref="member">readBytes</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*ptr,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="33" refid="classdakku_1_1FileInputStream_1ad64d091dae724af7202e76219a7eb59e" refkind="member"><highlight class="normal"><sp/><sp/>std::ifstream<sp/><ref refid="classdakku_1_1FileInputStream_1ad64d091dae724af7202e76219a7eb59e" kindref="member">stream</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="classdakku_1_1FileOutputStream" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="stream_2fwd_8h_1aaa6b0e6f6a552de3f9f6bb40ed162e36" kindref="member">DAKKU_EXPORT_STREAM</ref><sp/><ref refid="classdakku_1_1FileOutputStream" kindref="compound">FileOutputStream</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1OutputStream" kindref="compound">OutputStream</ref><sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="41" refid="classdakku_1_1FileOutputStream_1af0bdc8b8c2e04c6602cc9d4048a4d281" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classdakku_1_1FileOutputStream_1af0bdc8b8c2e04c6602cc9d4048a4d281" kindref="member">DAKKU_DECLARE_OBJECT</ref>(<ref refid="classdakku_1_1FileOutputStream" kindref="compound">FileOutputStream</ref>,<sp/><ref refid="classdakku_1_1OutputStream" kindref="compound">OutputStream</ref>);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="46" refid="classdakku_1_1FileOutputStream_1a7a11c66c8938371d28c8f9ddce222f0c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1FileOutputStream_1a7a11c66c8938371d28c8f9ddce222f0c" kindref="member">FileOutputStream</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::filesystem::path<sp/>&amp;path);</highlight></codeline>
+<codeline lineno="51" refid="classdakku_1_1FileOutputStream_1ac793da8372c702f923a5a3f3306367ae" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1FileOutputStream_1ac793da8372c702f923a5a3f3306367ae" kindref="member">writeByte</ref>(std::uint8_t<sp/>value)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="59" refid="classdakku_1_1FileOutputStream_1a239a3e78d06f170d29b0e0db74e55c8c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1FileOutputStream_1a239a3e78d06f170d29b0e0db74e55c8c" kindref="member">writeBytes</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*ptr,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="62" refid="classdakku_1_1FileOutputStream_1a1c607c36adc63bb83817516964c6e72e" refkind="member"><highlight class="normal"><sp/><sp/>std::ofstream<sp/><ref refid="classdakku_1_1FileOutputStream_1a1c607c36adc63bb83817516964c6e72e" kindref="member">stream</ref>;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dakku</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="src/stream/fstream.h"/>
+  </compounddef>
+</doxygen>

@@ -36,6 +36,21 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1FileInputStream/</loc>
+         <lastmod>2022-04-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1FileOutputStream/</loc>
+         <lastmod>2022-04-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1InputStream/</loc>
+         <lastmod>2022-04-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1Logger/</loc>
          <lastmod>2022-04-08</lastmod>
          <changefreq>daily</changefreq>
@@ -47,6 +62,11 @@
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1Object/</loc>
+         <lastmod>2022-04-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1OutputStream/</loc>
          <lastmod>2022-04-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -67,6 +87,16 @@
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1RayDifferential/</loc>
+         <lastmod>2022-04-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1RelativeRoot/</loc>
+         <lastmod>2022-04-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1SerializableObject/</loc>
          <lastmod>2022-04-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -116,6 +146,21 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://xehoth.github.io/dakku/Files/core_2api_8h/</loc>
+         <lastmod>2022-04-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Files/core_2fwd_8h/</loc>
+         <lastmod>2022-04-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Files/dir_090521d29e73b40f7fc0a63254d8965e/</loc>
+         <lastmod>2022-04-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://xehoth.github.io/dakku/Files/dir_68267d1309a1af8e8297ef4c3efbcdba/</loc>
          <lastmod>2022-04-08</lastmod>
          <changefreq>daily</changefreq>
@@ -126,7 +171,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://xehoth.github.io/dakku/Files/fwd_8h/</loc>
+         <loc>https://xehoth.github.io/dakku/Files/fstream_8h/</loc>
          <lastmod>2022-04-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -152,6 +197,31 @@
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/ray_8h/</loc>
+         <lastmod>2022-04-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Files/relative_8h/</loc>
+         <lastmod>2022-04-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Files/serialization_8h/</loc>
+         <lastmod>2022-04-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Files/stream_2api_8h/</loc>
+         <lastmod>2022-04-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Files/stream_2fwd_8h/</loc>
+         <lastmod>2022-04-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Files/stream_8h/</loc>
          <lastmod>2022-04-08</lastmod>
          <changefreq>daily</changefreq>
     </url>

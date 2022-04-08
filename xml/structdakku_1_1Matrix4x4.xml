@@ -355,7 +355,7 @@
       </sectiondef>
       <sectiondef kind="friend">
       <memberdef kind="friend" id="structdakku_1_1Matrix4x4_1ad9179852977de8383c0ae1683f12fc5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="structdakku_1_1Matrix4x4" kindref="compound">Matrix4x4</ref> <ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
+        <type><ref refid="structdakku_1_1Matrix4x4" kindref="compound">Matrix4x4</ref> <ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
         <definition>Matrix4x4 DAKKU_EXPORT_CORE transpose</definition>
         <argsstring>(const Matrix4x4 &amp;m)</argsstring>
         <name>transpose</name>
@@ -373,7 +373,7 @@
         <location file="src/core/transform.h" line="85" column="38"/>
       </memberdef>
       <memberdef kind="friend" id="structdakku_1_1Matrix4x4_1ac742caf08472cdfeda8fce5abf75c6a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="structdakku_1_1Matrix4x4" kindref="compound">Matrix4x4</ref> <ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
+        <type><ref refid="structdakku_1_1Matrix4x4" kindref="compound">Matrix4x4</ref> <ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
         <definition>Matrix4x4 DAKKU_EXPORT_CORE inverse</definition>
         <argsstring>(const Matrix4x4 &amp;m)</argsstring>
         <name>inverse</name>

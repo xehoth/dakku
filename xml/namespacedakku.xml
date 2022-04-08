@@ -7,14 +7,20 @@
     <innerclass refid="classdakku_1_1Bounds3" prot="public">dakku::Bounds3</innerclass>
     <innerclass refid="classdakku_1_1BoundsBase" prot="public">dakku::BoundsBase</innerclass>
     <innerclass refid="classdakku_1_1Class" prot="public">dakku::Class</innerclass>
+    <innerclass refid="classdakku_1_1FileInputStream" prot="public">dakku::FileInputStream</innerclass>
+    <innerclass refid="classdakku_1_1FileOutputStream" prot="public">dakku::FileOutputStream</innerclass>
+    <innerclass refid="classdakku_1_1InputStream" prot="public">dakku::InputStream</innerclass>
     <innerclass refid="classdakku_1_1Logger" prot="public">dakku::Logger</innerclass>
     <innerclass refid="structdakku_1_1Matrix4x4" prot="public">dakku::Matrix4x4</innerclass>
     <innerclass refid="classdakku_1_1Normal" prot="public">dakku::Normal</innerclass>
     <innerclass refid="classdakku_1_1Object" prot="public">dakku::Object</innerclass>
+    <innerclass refid="classdakku_1_1OutputStream" prot="public">dakku::OutputStream</innerclass>
     <innerclass refid="classdakku_1_1Point" prot="public">dakku::Point</innerclass>
     <innerclass refid="classdakku_1_1Property" prot="public">dakku::Property</innerclass>
     <innerclass refid="classdakku_1_1Ray" prot="public">dakku::Ray</innerclass>
     <innerclass refid="classdakku_1_1RayDifferential" prot="public">dakku::RayDifferential</innerclass>
+    <innerclass refid="classdakku_1_1RelativeRoot" prot="public">dakku::RelativeRoot</innerclass>
+    <innerclass refid="classdakku_1_1SerializableObject" prot="public">dakku::SerializableObject</innerclass>
     <innerclass refid="classdakku_1_1Transform" prot="public">dakku::Transform</innerclass>
     <innerclass refid="classdakku_1_1Vector" prot="public">dakku::Vector</innerclass>
     <innerclass refid="classdakku_1_1VectorBase" prot="public">dakku::VectorBase</innerclass>
@@ -395,8 +401,47 @@
         </inbodydescription>
         <location file="src/core/fwd.h" line="21" column="24" bodyfile="src/core/fwd.h" bodystart="21" bodyend="-1"/>
       </memberdef>
+      <memberdef kind="variable" id="namespacedakku_1ab81d04f25c58c43667816d47b70f4734" prot="public" static="no" mutable="no">
+        <type>class <ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
+        <definition>class DAKKU_EXPORT_CORE dakku::RelativeRoot</definition>
+        <argsstring></argsstring>
+        <name>RelativeRoot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/fwd.h" line="68" column="24" bodyfile="src/core/fwd.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacedakku_1a60d80eeb1de44e0299e91a45d8f94446" prot="public" static="no" mutable="no">
+        <type>class <ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
+        <definition>class DAKKU_EXPORT_CORE dakku::InputStream</definition>
+        <argsstring></argsstring>
+        <name>InputStream</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/fwd.h" line="69" column="24" bodyfile="src/core/fwd.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacedakku_1a04dac11edaf26a2e58c8d00f31e6fa29" prot="public" static="no" mutable="no">
+        <type>class <ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
+        <definition>class DAKKU_EXPORT_CORE dakku::OutputStream</definition>
+        <argsstring></argsstring>
+        <name>OutputStream</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/fwd.h" line="70" column="24" bodyfile="src/core/fwd.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="variable" id="namespacedakku_1a96416914fd138a9ad1724211806eaadc" prot="public" static="no" mutable="no">
-        <type>class <ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
+        <type>class <ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
         <definition>class DAKKU_EXPORT_CORE dakku::Property</definition>
         <argsstring></argsstring>
         <name>Property</name>
@@ -406,10 +451,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="69" column="24" bodyfile="src/core/fwd.h" bodystart="69" bodyend="-1"/>
+        <location file="src/core/fwd.h" line="73" column="24" bodyfile="src/core/fwd.h" bodystart="73" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacedakku_1a5e92e662fd955a5d5e138ec343496ecb" prot="public" static="no" mutable="no">
-        <type>class <ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
+        <type>class <ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
         <definition>class DAKKU_EXPORT_CORE dakku::Class</definition>
         <argsstring></argsstring>
         <name>Class</name>
@@ -419,10 +464,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="70" column="24" bodyfile="src/core/fwd.h" bodystart="70" bodyend="-1"/>
+        <location file="src/core/fwd.h" line="74" column="24" bodyfile="src/core/fwd.h" bodystart="74" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacedakku_1a814749a6cf3cd7575912f5119a5be6ad" prot="public" static="no" mutable="no">
-        <type>class <ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
+        <type>class <ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
         <definition>class DAKKU_EXPORT_CORE dakku::Object</definition>
         <argsstring></argsstring>
         <name>Object</name>
@@ -432,10 +477,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="71" column="24" bodyfile="src/core/fwd.h" bodystart="71" bodyend="-1"/>
+        <location file="src/core/fwd.h" line="75" column="24" bodyfile="src/core/fwd.h" bodystart="75" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacedakku_1afb9578030bac745ae0282d66d44df22c" prot="public" static="no" mutable="no">
-        <type>struct <ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
+        <type>struct <ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
         <definition>struct DAKKU_EXPORT_CORE dakku::Matrix4x4</definition>
         <argsstring></argsstring>
         <name>Matrix4x4</name>
@@ -445,10 +490,38 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="72" column="24" bodyfile="src/core/fwd.h" bodystart="72" bodyend="-1"/>
+        <location file="src/core/fwd.h" line="76" column="24" bodyfile="src/core/fwd.h" bodystart="76" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
+      <memberdef kind="function" id="namespacedakku_1a44beae0957b26c547b6a4f0a7d60166e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dakku::DAKKU_EXPORT_OBJECTS</definition>
+        <argsstring>(Core, Object, InputStream, OutputStream, SerializableObject)</argsstring>
+        <name>DAKKU_EXPORT_OBJECTS</name>
+        <param>
+          <type>Core</type>
+        </param>
+        <param>
+          <type><ref refid="classdakku_1_1Object" kindref="compound">Object</ref></type>
+        </param>
+        <param>
+          <type><ref refid="classdakku_1_1InputStream" kindref="compound">InputStream</ref></type>
+        </param>
+        <param>
+          <type><ref refid="classdakku_1_1OutputStream" kindref="compound">OutputStream</ref></type>
+        </param>
+        <param>
+          <type><ref refid="classdakku_1_1SerializableObject" kindref="compound">SerializableObject</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/api.h" line="13" column="1" declfile="src/core/api.h" declline="13" declcolumn="1"/>
+      </memberdef>
       <memberdef kind="function" id="namespacedakku_1af0a2453f8db3eb948901c7a0aed18434" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classdakku_1_1Bounds2iIterator" kindref="compound">Bounds2iIterator</ref></type>
         <definition>Bounds2iIterator dakku::begin</definition>
@@ -625,8 +698,28 @@
         </inbodydescription>
         <location file="src/core/fwd.h" line="66" column="14" bodyfile="src/core/fwd.h" bodystart="66" bodyend="66"/>
       </memberdef>
+      <memberdef kind="function" id="namespacedakku_1ac5c65853b3b4155436da5b4402bebcad" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void dakku::registerObjects</definition>
+        <argsstring>()</argsstring>
+        <name>registerObjects</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/object.h" line="69" column="13" bodyfile="src/core/object.h" bodystart="69" bodyend="71"/>
+      </memberdef>
       <memberdef kind="function" id="namespacedakku_1a1e461427d5e700eff84e148509b7fcba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref> <ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref></type>
+        <type><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref> <ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref></type>
         <definition>DAKKU_EXPORT_CORE Transform dakku::translate</definition>
         <argsstring>(const Vector3f &amp;delta)</argsstring>
         <name>translate</name>
@@ -644,7 +737,7 @@
         <location file="src/core/transform.h" line="286" column="29" declfile="src/core/transform.h" declline="286" declcolumn="29"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1a7acbd19453bccf5b94cfa1133df02981" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref> <ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref></type>
+        <type><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref> <ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref></type>
         <definition>DAKKU_EXPORT_CORE Transform dakku::scale</definition>
         <argsstring>(float x, float y, float z)</argsstring>
         <name>scale</name>
@@ -670,7 +763,7 @@
         <location file="src/core/transform.h" line="292" column="29" declfile="src/core/transform.h" declline="292" declcolumn="29"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1a9a343fe7cec03ad3c562a926fc052f6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref> <ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref></type>
+        <type><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref> <ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref></type>
         <definition>DAKKU_EXPORT_CORE Transform dakku::rotateX</definition>
         <argsstring>(float theta)</argsstring>
         <name>rotateX</name>
@@ -688,7 +781,7 @@
         <location file="src/core/transform.h" line="298" column="29" declfile="src/core/transform.h" declline="298" declcolumn="29"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1a6ddc73eb8238f15d8c1016069962e8c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref> <ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref></type>
+        <type><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref> <ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref></type>
         <definition>DAKKU_EXPORT_CORE Transform dakku::rotateY</definition>
         <argsstring>(float theta)</argsstring>
         <name>rotateY</name>
@@ -718,7 +811,7 @@
         <location file="src/core/transform.h" line="306" column="29" declfile="src/core/transform.h" declline="306" declcolumn="29"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1a2bbb040f4ba3ff426a543ad8129195de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref> <ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref></type>
+        <type><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref> <ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref></type>
         <definition>DAKKU_EXPORT_CORE Transform dakku::rotateZ</definition>
         <argsstring>(float theta)</argsstring>
         <name>rotateZ</name>
@@ -748,7 +841,7 @@
         <location file="src/core/transform.h" line="314" column="29" declfile="src/core/transform.h" declline="314" declcolumn="29"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1a5158202b82b35e77f9fc61285161488a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref> <ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref></type>
+        <type><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref> <ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref></type>
         <definition>DAKKU_EXPORT_CORE Transform dakku::rotate</definition>
         <argsstring>(float theta, const Vector3f &amp;axis)</argsstring>
         <name>rotate</name>
@@ -788,7 +881,7 @@
         <location file="src/core/transform.h" line="322" column="29" declfile="src/core/transform.h" declline="322" declcolumn="29"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1aaa536865ee7be0b7a4ed6109f261eeb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref> <ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref></type>
+        <type><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref> <ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref></type>
         <definition>DAKKU_EXPORT_CORE Transform dakku::lookAt</definition>
         <argsstring>(const Point3f &amp;pos, const Point3f &amp;look, const Vector3f &amp;refUp)</argsstring>
         <name>lookAt</name>
@@ -840,7 +933,7 @@
         <location file="src/core/transform.h" line="331" column="29" declfile="src/core/transform.h" declline="331" declcolumn="29"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1a027a77f92f8ae36b091ef409ec0b4c6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref> <ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref></type>
+        <type><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref> <ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref></type>
         <definition>DAKKU_EXPORT_CORE Transform dakku::perspective</definition>
         <argsstring>(float fov, float znear, float zfar)</argsstring>
         <name>perspective</name>
@@ -951,12 +1044,34 @@ the shorter edge mapped to [-1, 1], the longer [-ratio, ratio] left handed </par
         </inbodydescription>
         <location file="src/core/vector_base.h" line="724" column="17" bodyfile="src/core/vector_base.h" bodystart="724" bodyend="727"/>
       </memberdef>
+      <memberdef kind="function" id="namespacedakku_1a56ee8590ffd24bd3f70b555372fa4697" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dakku::DAKKU_EXPORT_OBJECTS</definition>
+        <argsstring>(Stream, FileOutputStream, FileInputStream)</argsstring>
+        <name>DAKKU_EXPORT_OBJECTS</name>
+        <param>
+          <type>Stream</type>
+        </param>
+        <param>
+          <type><ref refid="classdakku_1_1FileOutputStream" kindref="compound">FileOutputStream</ref></type>
+        </param>
+        <param>
+          <type><ref refid="classdakku_1_1FileInputStream" kindref="compound">FileInputStream</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/stream/api.h" line="13" column="1" declfile="src/stream/api.h" declline="13" declcolumn="1"/>
+      </memberdef>
       </sectiondef>
     <briefdescription>
 <para>dakku namespace </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/core/bounds.h" line="7" column="1"/>
+    <location file="src/core/api.h" line="11" column="1"/>
   </compounddef>
 </doxygen>

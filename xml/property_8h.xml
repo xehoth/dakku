@@ -12,7 +12,7 @@
     <incdepgraph>
       <node id="5">
         <label>core/fwd.h</label>
-        <link refid="fwd_8h"/>
+        <link refid="core_2fwd_8h"/>
         <childnode refid="6" relation="include">
         </childnode>
         <childnode refid="7" relation="include">
@@ -144,6 +144,10 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
+      <node id="4">
+        <label>src/core/api.h</label>
+        <link refid="core_2api_8h"/>
+      </node>
       <node id="2">
         <label>src/core/class.h</label>
         <link refid="class_8h"/>
@@ -153,11 +157,39 @@
       <node id="3">
         <label>src/core/object.h</label>
         <link refid="object_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
       </node>
       <node id="1">
         <label>src/core/property.h</label>
         <link refid="property_8h"/>
         <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>src/core/serialization.h</label>
+        <link refid="serialization_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>src/stream/api.h</label>
+        <link refid="stream_2api_8h"/>
+      </node>
+      <node id="7">
+        <label>src/stream/fstream.h</label>
+        <link refid="fstream_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>src/stream/fwd.h</label>
+        <link refid="stream_2fwd_8h"/>
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -188,7 +220,7 @@
 <codeline lineno="22"><highlight class="normal"><sp/><sp/><ref refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaadceae9409e3ff24c6c0af99860ba44ac" kindref="member">TRANSFORM</ref></highlight></codeline>
 <codeline lineno="23"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="29" refid="classdakku_1_1Property" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref><sp/><ref refid="classdakku_1_1Property" kindref="compound">Property</ref><sp/>{</highlight></codeline>
+<codeline lineno="29" refid="classdakku_1_1Property" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref><sp/><ref refid="classdakku_1_1Property" kindref="compound">Property</ref><sp/>{</highlight></codeline>
 <codeline lineno="30"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="31" refid="classdakku_1_1Property_1a3572cc83d304fa13a828df071bc1530b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="conceptdakku_1_1ObjectType" kindref="compound">ObjectType</ref><sp/>=<sp/>std::map&lt;std::string,<sp/>Property,<sp/>std::less&lt;&gt;&gt;;</highlight></codeline>
 <codeline lineno="32" refid="classdakku_1_1Property_1aa44ae47ef51fe042e4cdc2d558fd6c63" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Property_1aa44ae47ef51fe042e4cdc2d558fd6c63" kindref="member">ArrayType</ref><sp/>=<sp/>std::vector&lt;Property&gt;;</highlight></codeline>
@@ -454,22 +486,83 @@
 <codeline lineno="436"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="437"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="438"><highlight class="normal"></highlight></codeline>
-<codeline lineno="439"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="440"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(_MSC_VER)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="441"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>warning(push)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="442"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>warning(disable<sp/>:<sp/>4251)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="443"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
-<codeline lineno="445"><highlight class="normal"><sp/><sp/>std::variant&lt;std::nullptr_t,<sp/><ref refid="conceptdakku_1_1ObjectType" kindref="compound">ObjectType</ref>,<sp/>ArrayType,<sp/>NumberType,<sp/>StringType,</highlight></codeline>
-<codeline lineno="446"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VectorType,<sp/>TransformType&gt;</highlight></codeline>
-<codeline lineno="447"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>data;</highlight></codeline>
-<codeline lineno="448"><highlight class="normal"></highlight></codeline>
-<codeline lineno="449"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(_MSC_VER)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="450"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>warning(pop)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="451"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
-<codeline lineno="453"><highlight class="normal"><sp/><sp/><ref refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfca" kindref="member">PropertyType</ref><sp/>type{<ref refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaab50339a10e1de285ac99d4c3990b8693" kindref="member">PropertyType::NONE</ref>};</highlight></codeline>
-<codeline lineno="454"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="455"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dakku</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="456"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="444" refid="classdakku_1_1Property_1aed6c0ab5f44b13d225b82a40fed74911" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/><ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref><sp/><ref refid="classdakku_1_1Property_1aed6c0ab5f44b13d225b82a40fed74911" kindref="member">mergeTransform</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="445"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>already<sp/>a<sp/>transform</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="446"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref><sp/>ret;</highlight></codeline>
+<codeline lineno="447"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(isTransformType())<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="448"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(isArrayType())<sp/>{</highlight></codeline>
+<codeline lineno="449"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;arr<sp/>=<sp/>getArray();</highlight></codeline>
+<codeline lineno="450"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;v<sp/>:<sp/>arr)<sp/>{</highlight></codeline>
+<codeline lineno="451"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!v.isTransformType())<sp/>{</highlight></codeline>
+<codeline lineno="452"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(v.isObjectType())<sp/>{</highlight></codeline>
+<codeline lineno="453"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>transType;</highlight></codeline>
+<codeline lineno="454"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it<sp/>=<sp/>v.getObject().find(</highlight><highlight class="stringliteral">&quot;type&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="455"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>it<sp/>!=<sp/>v.getObject().end()<sp/>&amp;&amp;<sp/>it-&gt;second.isStringType())<sp/>{</highlight></codeline>
+<codeline lineno="456"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>transType<sp/>=<sp/>it-&gt;second.getString();</highlight></codeline>
+<codeline lineno="457"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="458"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="logger_8h_1a9edd762e54e3ce43a70ddfe81b6e2fc5" kindref="member">DAKKU_ERR</ref>(</highlight><highlight class="stringliteral">&quot;cannot<sp/>merge<sp/>transforms<sp/>for:<sp/>{}&quot;</highlight><highlight class="normal">,<sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="459"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="460"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(transType<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;lookat&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="461"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdakku_1_1Point" kindref="compound">Point3f</ref><sp/>pos<sp/>=<sp/>v[</highlight><highlight class="stringliteral">&quot;pos&quot;</highlight><highlight class="normal">].getVector();</highlight></codeline>
+<codeline lineno="462"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdakku_1_1Point" kindref="compound">Point3f</ref><sp/>look<sp/>=<sp/>v[</highlight><highlight class="stringliteral">&quot;look&quot;</highlight><highlight class="normal">].getVector();</highlight></codeline>
+<codeline lineno="463"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdakku_1_1Vector" kindref="compound">Vector3f</ref><sp/>refUp<sp/>=<sp/>v[</highlight><highlight class="stringliteral">&quot;up&quot;</highlight><highlight class="normal">].getVector();</highlight></codeline>
+<codeline lineno="464"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>=<sp/>ret<sp/>*<sp/><ref refid="namespacedakku_1aaa536865ee7be0b7a4ed6109f261eeb7" kindref="member">lookAt</ref>(pos,<sp/>look,<sp/>refUp);</highlight></codeline>
+<codeline lineno="465"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(transType<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;rotate&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="466"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>angle<sp/>=<sp/>v[</highlight><highlight class="stringliteral">&quot;data&quot;</highlight><highlight class="normal">].getNumber();</highlight></codeline>
+<codeline lineno="467"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(v[</highlight><highlight class="stringliteral">&quot;axis&quot;</highlight><highlight class="normal">].isStringType())<sp/>{</highlight></codeline>
+<codeline lineno="468"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>axis<sp/>=<sp/>v[</highlight><highlight class="stringliteral">&quot;axis&quot;</highlight><highlight class="normal">].getString();</highlight></codeline>
+<codeline lineno="469"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(axis<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;x&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="470"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>=<sp/>ret<sp/>*<sp/><ref refid="namespacedakku_1a9a343fe7cec03ad3c562a926fc052f6d" kindref="member">rotateX</ref>(angle);</highlight></codeline>
+<codeline lineno="471"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(axis<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;y&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="472"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>=<sp/>ret<sp/>*<sp/><ref refid="namespacedakku_1a6ddc73eb8238f15d8c1016069962e8c4" kindref="member">rotateY</ref>(angle);</highlight></codeline>
+<codeline lineno="473"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(axis<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;z&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="474"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>=<sp/>ret<sp/>*<sp/><ref refid="namespacedakku_1a2bbb040f4ba3ff426a543ad8129195de" kindref="member">rotateZ</ref>(angle);</highlight></codeline>
+<codeline lineno="475"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="476"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="logger_8h_1a9edd762e54e3ce43a70ddfe81b6e2fc5" kindref="member">DAKKU_ERR</ref>(</highlight><highlight class="stringliteral">&quot;invalid<sp/>axis<sp/>for<sp/>rotation:<sp/>{}&quot;</highlight><highlight class="normal">,<sp/>axis);</highlight></codeline>
+<codeline lineno="477"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="478"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="479"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="480"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdakku_1_1Vector" kindref="compound">Vector3f</ref><sp/>axis<sp/>=<sp/>v[</highlight><highlight class="stringliteral">&quot;axis&quot;</highlight><highlight class="normal">].getVector();</highlight></codeline>
+<codeline lineno="481"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>=<sp/>ret<sp/>*<sp/><ref refid="namespacedakku_1a5158202b82b35e77f9fc61285161488a" kindref="member">rotate</ref>(angle,<sp/>axis);</highlight></codeline>
+<codeline lineno="482"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="483"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(transType<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;translate&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="484"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdakku_1_1Vector" kindref="compound">Vector3f</ref><sp/>delta<sp/>=<sp/>v[</highlight><highlight class="stringliteral">&quot;data&quot;</highlight><highlight class="normal">].getVector();</highlight></codeline>
+<codeline lineno="485"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>=<sp/>ret<sp/>*<sp/><ref refid="namespacedakku_1a1e461427d5e700eff84e148509b7fcba" kindref="member">translate</ref>(delta);</highlight></codeline>
+<codeline lineno="486"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(transType<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;scale&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="487"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdakku_1_1Vector" kindref="compound">Vector3f</ref><sp/>s<sp/>=<sp/>v[</highlight><highlight class="stringliteral">&quot;data&quot;</highlight><highlight class="normal">].getVector();</highlight></codeline>
+<codeline lineno="488"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>=<sp/>ret<sp/>*<sp/><ref refid="namespacedakku_1a7acbd19453bccf5b94cfa1133df02981" kindref="member">scale</ref>(s.<ref refid="classdakku_1_1VectorBase_1aad720931a9787a87375de3f8d545567d" kindref="member">x</ref>(),<sp/>s.<ref refid="classdakku_1_1VectorBase_1a14b6216fd55dc1cd2f321c834f6121ca" kindref="member">y</ref>(),<sp/>s.<ref refid="classdakku_1_1VectorBase_1a207d3b94f85366aeb9e7773785a498ea" kindref="member">z</ref>());</highlight></codeline>
+<codeline lineno="489"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="490"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="logger_8h_1a9edd762e54e3ce43a70ddfe81b6e2fc5" kindref="member">DAKKU_ERR</ref>(</highlight><highlight class="stringliteral">&quot;invalid<sp/>transform<sp/>type:<sp/>{}&quot;</highlight><highlight class="normal">,<sp/>type);</highlight></codeline>
+<codeline lineno="491"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="492"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="493"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="494"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="logger_8h_1a9edd762e54e3ce43a70ddfe81b6e2fc5" kindref="member">DAKKU_ERR</ref>(</highlight><highlight class="stringliteral">&quot;cannot<sp/>merge<sp/>transforms<sp/>for:<sp/>{}&quot;</highlight><highlight class="normal">,<sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="495"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="496"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="497"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="498"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="499"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="500"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="logger_8h_1a9edd762e54e3ce43a70ddfe81b6e2fc5" kindref="member">DAKKU_ERR</ref>(</highlight><highlight class="stringliteral">&quot;cannot<sp/>merge<sp/>transforms<sp/>for:<sp/>{}&quot;</highlight><highlight class="normal">,<sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="501"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="502"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="503"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="504"><highlight class="normal"></highlight></codeline>
+<codeline lineno="505"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="506"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(_MSC_VER)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="507"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>warning(push)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="508"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>warning(disable<sp/>:<sp/>4251)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="509"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="511"><highlight class="normal"><sp/><sp/>std::variant&lt;std::nullptr_t,<sp/><ref refid="conceptdakku_1_1ObjectType" kindref="compound">ObjectType</ref>,<sp/>ArrayType,<sp/>NumberType,<sp/>StringType,</highlight></codeline>
+<codeline lineno="512"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VectorType,<sp/>TransformType&gt;</highlight></codeline>
+<codeline lineno="513"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>data;</highlight></codeline>
+<codeline lineno="514"><highlight class="normal"></highlight></codeline>
+<codeline lineno="515"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(_MSC_VER)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="516"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>warning(pop)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="517"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="519"><highlight class="normal"><sp/><sp/><ref refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfca" kindref="member">PropertyType</ref><sp/>type{<ref refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaab50339a10e1de285ac99d4c3990b8693" kindref="member">PropertyType::NONE</ref>};</highlight></codeline>
+<codeline lineno="520"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="521"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dakku</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="522"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="src/core/property.h"/>
   </compounddef>

@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="classdakku_1_1InputStream" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>dakku::InputStream</compoundname>
+    <basecompoundref refid="classdakku_1_1Object" prot="public" virt="non-virtual">dakku::Object</basecompoundref>
+    <derivedcompoundref refid="classdakku_1_1FileInputStream" prot="public" virt="non-virtual">dakku::FileInputStream</derivedcompoundref>
+    <includes refid="serialization_8h" local="no">serialization.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdakku_1_1InputStream_1a72f97ed2ffd8176e418dc962de184ade" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dakku::InputStream::DAKKU_DECLARE_OBJECT</definition>
+        <argsstring>(InputStream, Object)</argsstring>
+        <name>DAKKU_DECLARE_OBJECT</name>
+        <param>
+          <type><ref refid="classdakku_1_1InputStream" kindref="compound">InputStream</ref></type>
+        </param>
+        <param>
+          <type><ref refid="classdakku_1_1Object" kindref="compound">Object</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/serialization.h" line="12" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1InputStream_1a2740268624ee2642cc70b419831153cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::uint8_t</type>
+        <definition>virtual std::uint8_t dakku::InputStream::readByte</definition>
+        <argsstring>()=0</argsstring>
+        <name>readByte</name>
+        <reimplementedby refid="classdakku_1_1FileInputStream_1a0bca053c299098766dc46f947ea35c52">readByte</reimplementedby>
+        <briefdescription>
+<para>read next byte </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the next byte </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/serialization.h" line="18" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1InputStream_1a38473aafb15173995f837b818903ad47" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>size_t</type>
+        <definition>virtual size_t dakku::InputStream::readBytes</definition>
+        <argsstring>(void *ptr, size_t size)=0</argsstring>
+        <name>readBytes</name>
+        <reimplementedby refid="classdakku_1_1FileInputStream_1a157681cafffcb6adadd5de64d8bc918d">readBytes</reimplementedby>
+        <param>
+          <type>void *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>read bytes </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the output address </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the size of bytes </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the size actually read </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/serialization.h" line="25" column="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>input stream </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>dakku::FileInputStream</label>
+        <link refid="classdakku_1_1FileInputStream"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>dakku::InputStream</label>
+        <link refid="classdakku_1_1InputStream"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dakku::Object</label>
+        <link refid="classdakku_1_1Object"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>dakku::InputStream</label>
+        <link refid="classdakku_1_1InputStream"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dakku::Object</label>
+        <link refid="classdakku_1_1Object"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/core/serialization.h" line="10" column="1" bodyfile="src/core/serialization.h" bodystart="10" bodyend="26"/>
+    <listofallmembers>
+      <member refid="classdakku_1_1InputStream_1a72f97ed2ffd8176e418dc962de184ade" prot="public" virt="non-virtual"><scope>dakku::InputStream</scope><name>DAKKU_DECLARE_OBJECT</name></member>
+      <member refid="classdakku_1_1Object_1a543f734268f7be81badecee6cf7245cc" prot="public" virt="virtual"><scope>dakku::InputStream</scope><name>getClassName</name></member>
+      <member refid="classdakku_1_1Object_1a247ed68865f464d511b7fdb85467c354" prot="public" virt="non-virtual"><scope>dakku::InputStream</scope><name>getClassNameStatic</name></member>
+      <member refid="classdakku_1_1Object_1accec0632e79097564677055bef4220bd" prot="public" virt="virtual"><scope>dakku::InputStream</scope><name>getParentName</name></member>
+      <member refid="classdakku_1_1Object_1a08ec83c660afb1850455ef30c43fa29c" prot="public" virt="non-virtual"><scope>dakku::InputStream</scope><name>getParentNameStatic</name></member>
+      <member refid="classdakku_1_1Object_1a055e32b0624d9a96fc2014fe5d9d0c81" prot="public" virt="non-virtual"><scope>dakku::InputStream</scope><name>isBaseOf</name></member>
+      <member refid="classdakku_1_1Object_1add47b28fc1878f008bb6664a83faad72" prot="public" virt="non-virtual"><scope>dakku::InputStream</scope><name>isDerivedFrom</name></member>
+      <member refid="classdakku_1_1Object_1a20e78d46fa11d575d63e048279150eac" prot="public" virt="non-virtual"><scope>dakku::InputStream</scope><name>Object</name></member>
+      <member refid="classdakku_1_1InputStream_1a2740268624ee2642cc70b419831153cd" prot="public" virt="pure-virtual"><scope>dakku::InputStream</scope><name>readByte</name></member>
+      <member refid="classdakku_1_1InputStream_1a38473aafb15173995f837b818903ad47" prot="public" virt="pure-virtual"><scope>dakku::InputStream</scope><name>readBytes</name></member>
+      <member refid="classdakku_1_1Object_1a65d91c04e480b827fa495df96af2826b" prot="public" virt="virtual"><scope>dakku::InputStream</scope><name>toString</name></member>
+      <member refid="classdakku_1_1Object_1a0c792f089351caf3fa7a704c86ce903d" prot="public" virt="virtual"><scope>dakku::InputStream</scope><name>~Object</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
