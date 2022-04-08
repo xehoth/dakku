@@ -20,6 +20,9 @@ static constexpr float INF = std::numeric_limits<float>::infinity();
 /// PI
 static constexpr float PI = std::numbers::pi_v<float>;
 
+/// L1 cache line size
+static constexpr size_t L1_CACHE_LINE_SIZE = 64;
+
 /**
  * @brief concept: `T` is an arithemetic type
  *

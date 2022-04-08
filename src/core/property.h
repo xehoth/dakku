@@ -285,7 +285,7 @@ class DAKKU_EXPORT_CORE Property {
    * @return value
    */
   decltype(auto) operator[](const std::string &key) {
-    [[unlikely]] if (type == PropertyType::NONE) {
+    if (type == PropertyType::NONE) {
       data = ObjectType{};
       type = PropertyType::OBJECT;
     }
@@ -300,14 +300,13 @@ class DAKKU_EXPORT_CORE Property {
    * @return value
    */
   decltype(auto) operator[](const std::string &key) const {
-    [[unlikely]] if (!isObjectType()) {
+    if (!isObjectType()) {
       DAKKU_ERR("try to access {} in a non-object type property", key);
       std::exit(-1);
     }
-    [[likely]] if (auto it = getObject().find(key); it != getObject().end()) {
+    if (auto it = getObject().find(key); it != getObject().end()) {
       return it->second;
-    }
-    else {
+    } else {
       DAKKU_ERR("cannot find the request key: {}", key);
       std::exit(-1);
     }
@@ -320,7 +319,7 @@ class DAKKU_EXPORT_CORE Property {
    * @return the data
    */
   decltype(auto) operator[](size_t i) {
-    [[unlikely]] if (type == PropertyType::NONE) {
+    if (type == PropertyType::NONE) {
       data = ArrayType{};
       type = PropertyType::ARRAY;
       getArray().reserve((i + 1) * 2);
@@ -341,14 +340,13 @@ class DAKKU_EXPORT_CORE Property {
    * @return the data
    */
   decltype(auto) operator[](size_t i) const {
-    [[unlikely]] if (type == PropertyType::NONE) {
+    if (type == PropertyType::NONE) {
       DAKKU_ERR("try to index {} in a non-array type property", i);
       std::exit(-1);
     }
-    [[likely]] if (const auto &arr = getArray(); i < arr.size()) {
+    if (const auto &arr = getArray(); i < arr.size()) {
       return arr[i];
-    }
-    else {
+    } else {
       DAKKU_ERR("index out of range: {} >= {}", i, arr.size());
       std::exit(-1);
     }
@@ -502,6 +500,29 @@ class DAKKU_EXPORT_CORE Property {
       DAKKU_ERR("cannot merge transforms for: {}", *this);
     }
     return ret;
+  }
+
+  /**
+   * @brief get a vector by looking up `key`, if not found return the given
+   * `value`
+   *
+   */
+  template <typename T>
+  T getVectorIf(std::string_view key, const T &value) const {
+    if (auto it = getObject().find(key); it != getObject().end()) {
+      return T{it->second.getVector()};
+    } else {
+      return value;
+    }
+  }
+
+  template <ArithmeticType T = float>
+  T getNumberIf(std::string_view key, const T &value) const {
+    if (auto it = getObject().find(key); it != getObject().end()) {
+      return static_cast<T>(it->second.getNumber());
+    } else {
+      return value;
+    }
   }
 
  private:

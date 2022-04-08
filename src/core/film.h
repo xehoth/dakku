@@ -2,6 +2,7 @@
 #define DAKKU_CORE_FILM_H_
 #include <core/serialization.h>
 #include <core/bounds.h>
+#include <mutex>
 
 namespace dakku {
 /**
@@ -42,7 +43,13 @@ class DAKKU_EXPORT_CORE Film : public SerializableObject {
   Bounds2i croppedPixelBounds;
 
   /// filter table width
-  static constexpr int filterTableWidth = 16;
+  static constexpr size_t filterTableWidth = 16;
+
+  /// filter table
+  std::array<float, filterTableWidth * filterTableWidth> filterTable{};
+
+  /// mutex to protect tile merge
+  std::mutex mutex;
 
 #if defined(_MSC_VER)
 #pragma warning(pop)
