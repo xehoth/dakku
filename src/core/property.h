@@ -516,10 +516,29 @@ class DAKKU_EXPORT_CORE Property {
     }
   }
 
+  /**
+   * @brief get a number by looking up `key`, if not found return the given
+   * `value`
+   *
+   */
   template <ArithmeticType T = float>
   T getNumberIf(std::string_view key, const T &value) const {
     if (auto it = getObject().find(key); it != getObject().end()) {
       return static_cast<T>(it->second.getNumber());
+    } else {
+      return value;
+    }
+  }
+
+  /**
+   * @brief get a string by looking up `key`, if not found return the given
+   * `value`
+   *
+   */
+  [[nodiscard]] std::string getStringIf(std::string_view key,
+                                        const std::string &value) const {
+    if (auto it = getObject().find(key); it != getObject().end()) {
+      return it->second.getString();
     } else {
       return value;
     }

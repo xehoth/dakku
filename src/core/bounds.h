@@ -198,6 +198,14 @@ class BoundsBase {
     return ret;
   }
 
+  [[nodiscard]] std::string toString() const {
+    return "[" + pMin.toString() + ", " + pMax.toString() + "]";
+  }
+
+  friend std::ostream &operator<<(std::ostream &os, const BoundsBase &b) {
+    return os << b.toString();
+  }
+
   /// left bottom corner of the bounds
   Point<T, S> pMin{std::numeric_limits<T>::max()};
   /// right top corner of the bounds

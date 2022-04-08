@@ -6,6 +6,7 @@
 #include <string>
 #include <ostream>
 #include <numeric>
+#include <span>
 
 namespace dakku {
 
@@ -707,6 +708,48 @@ class VectorBase {
                    (z() * rhs.x()) - (x() * rhs.z()),
                    (x() * rhs.y()) - (y() * rhs.x())};
   }
+
+  /**
+   * @brief check whether all components are zero
+   *
+   */
+  [[nodiscard]] bool isZero() const {
+    return std::all_of(begin(), end(), [](const T &v) { return v == 0; });
+  }
+
+  /**
+   * @brief element-wise sqrt
+   *
+   */
+  friend Derived sqrt(const Derived &v) {
+    Derived ret = v;
+    for (size_t i = 0; i < S; ++i) ret[i] = static_cast<T>(std::sqrt(ret[i]));
+    return ret;
+  }
+
+  /**
+   * @brief element-wise power
+   *
+   */
+  template <ArithmeticType E>
+  friend Derived pow(const Derived &v, E e) {
+    Derived ret = v;
+    for (size_t i = 0; i < S; ++i) ret[i] = static_cast<T>(std::pow(ret[i], e));
+    return ret;
+  }
+
+  /**
+   * @brief element-wise exp
+   *
+   */
+  friend Derived exp(const Derived &v) {
+    Derived ret = v;
+    for (size_t i = 0; i < S; ++i) ret[i] = static_cast<T>(std::exp(ret[i]));
+    return ret;
+  }
+
+  operator std::span<T, S>() { return std::span{_data}; }
+  operator std::span<const T, S>() const { return std::span{_data}; }
 
  protected:
   /// vector base data

@@ -89,5 +89,10 @@ class RayDifferential;
 
 class DAKKU_EXPORT_CORE Filter;
 class DAKKU_EXPORT_CORE Film;
+template <size_t S, typename Derived>
+class CoefficientSpectrum;
+class RgbSpectrum;
+/// Spectrum type: use RgbSpectrum
+using Spectrum = RgbSpectrum;
 }  // namespace dakku
 #endif
