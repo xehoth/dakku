@@ -1,11 +1,5 @@
-#include <core/fwd.h>
-#include <core/logger.h>
-#include <core/vector.h>
-#include <core/property.h>
-#include <core/transform.h>
-#include <core/class.h>
-#include <core/object.h>
-#include <core/bounds.h>
+#include <core/api.h>
+#include <stream/api.h>
 #include <iostream>
 
 using namespace dakku;

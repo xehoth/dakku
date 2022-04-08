@@ -436,6 +436,72 @@ class DAKKU_EXPORT_CORE Property {
     }
   }
 
+  /**
+   * @brief special case, merge transforms (e.g., lookat, rotate, translate)
+   *
+   * @return Property&
+   */
+  [[nodiscard]] Transform mergeTransform() const {
+    // already a transform
+    Transform ret;
+    if (isTransformType()) return ret;
+    if (isArrayType()) {
+      auto &arr = getArray();
+      for (const auto &v : arr) {
+        if (!v.isTransformType()) {
+          if (v.isObjectType()) {
+            std::string transType;
+            if (auto it = v.getObject().find("type");
+                it != v.getObject().end() && it->second.isStringType()) {
+              transType = it->second.getString();
+            } else {
+              DAKKU_ERR("cannot merge transforms for: {}", *this);
+            }
+            if (transType == "lookat") {
+              Point3f pos = v["pos"].getVector();
+              Point3f look = v["look"].getVector();
+              Vector3f refUp = v["up"].getVector();
+              ret = ret * lookAt(pos, look, refUp);
+            } else if (transType == "rotate") {
+              float angle = v["data"].getNumber();
+              if (v["axis"].isStringType()) {
+                std::string axis = v["axis"].getString();
+                if (axis == "x") {
+                  ret = ret * rotateX(angle);
+                } else if (axis == "y") {
+                  ret = ret * rotateY(angle);
+                } else if (axis == "z") {
+                  ret = ret * rotateZ(angle);
+                } else {
+                  DAKKU_ERR("invalid axis for rotation: {}", axis);
+                  return ret;
+                }
+              } else {
+                Vector3f axis = v["axis"].getVector();
+                ret = ret * rotate(angle, axis);
+              }
+            } else if (transType == "translate") {
+              Vector3f delta = v["data"].getVector();
+              ret = ret * translate(delta);
+            } else if (transType == "scale") {
+              Vector3f s = v["data"].getVector();
+              ret = ret * scale(s.x(), s.y(), s.z());
+            } else {
+              DAKKU_ERR("invalid transform type: {}", type);
+              return ret;
+            }
+          } else {
+            DAKKU_ERR("cannot merge transforms for: {}", *this);
+            return ret;
+          }
+        }
+      }
+    } else {
+      DAKKU_ERR("cannot merge transforms for: {}", *this);
+    }
+    return ret;
+  }
+
  private:
 #if defined(_MSC_VER)
 #pragma warning(push)

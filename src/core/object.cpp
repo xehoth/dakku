@@ -18,5 +18,4 @@ bool Object::isBaseOf(std::string_view name) const {
   return Class::instance().isBaseof(this->getClassName(), name);
 }
 
-DAKKU_EXPORT_OBJECT(Object);
 }  // namespace dakku

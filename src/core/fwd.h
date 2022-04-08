@@ -65,6 +65,10 @@ inline float radians(float deg) { return PI / 180.0f * deg; }
  */
 inline float degrees(float rad) { return 180.0f / PI * rad; }
 
+class DAKKU_EXPORT_CORE RelativeRoot;
+class DAKKU_EXPORT_CORE InputStream;
+class DAKKU_EXPORT_CORE OutputStream;
+
 enum class PropertyType;
 class DAKKU_EXPORT_CORE Property;
 class DAKKU_EXPORT_CORE Class;

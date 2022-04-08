@@ -31,13 +31,13 @@ class DAKKU_EXPORT_CORE Object {
 
   /**
    * @brief whther the object is derived from `name` (inclusive)
-   * 
+   *
    */
   [[nodiscard]] bool isDerivedFrom(std::string_view name) const;
 
   /**
    * @brief whether the object is base of `name` (inclusive)
-   * 
+   *
    */
   [[nodiscard]] bool isBaseOf(std::string_view name) const;
 
@@ -65,14 +65,15 @@ class DAKKU_EXPORT_CORE Object {
   }                                                            \
   explicit name(const Property & = {})
 
-/**
- * @brief export a object (register the class)
- *
- */
-#define DAKKU_EXPORT_OBJECT(name)            \
-  int _register##name = [] {                 \
-    Class::instance().registerClass<name>(); \
-    return 0;                                \
+template <typename... Args>
+inline void registerObjects() {
+  (Class::instance().registerClass<Args>(), ...);
+}
+
+#define DAKKU_EXPORT_OBJECTS(module, ...)            \
+  volatile int _export##module##ModuleObjects = [] { \
+    registerObjects<__VA_ARGS__>();                  \
+    return 0;                                        \
   }()
 
 }  // namespace dakku
