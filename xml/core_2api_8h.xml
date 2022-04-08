@@ -4,6 +4,8 @@
     <compoundname>api.h</compoundname>
     <includes refid="object_8h" local="no">core/object.h</includes>
     <includes refid="serialization_8h" local="no">core/serialization.h</includes>
+    <includes refid="filter_8h" local="no">core/filter.h</includes>
+    <includes refid="film_8h" local="no">core/film.h</includes>
     <incdepgraph>
       <node id="1">
         <label>src/core/api.h</label>
@@ -11,6 +13,20 @@
         <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>core/bounds.h</label>
+        <link refid="bounds_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
         </childnode>
       </node>
       <node id="3">
@@ -27,6 +43,20 @@
         <childnode refid="26" relation="include">
         </childnode>
         <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>core/film.h</label>
+        <link refid="film_8h"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>core/filter.h</label>
+        <link refid="filter_8h"/>
+        <childnode refid="2" relation="include">
         </childnode>
       </node>
       <node id="4">
@@ -137,6 +167,9 @@
       <node id="13">
         <label>cstdlib</label>
       </node>
+      <node id="33">
+        <label>iterator</label>
+      </node>
       <node id="7">
         <label>limits</label>
       </node>
@@ -189,12 +222,15 @@
 <codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DAKKU_CORE_API_H_</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="object_8h" kindref="compound">core/object.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="serialization_8h" kindref="compound">core/serialization.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight></codeline>
-<codeline lineno="11" refid="namespacedakku" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacedakku" kindref="compound">dakku</ref><sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="filter_8h" kindref="compound">core/filter.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="film_8h" kindref="compound">core/film.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="12"><highlight class="normal"></highlight></codeline>
-<codeline lineno="13" refid="namespacedakku_1a44beae0957b26c547b6a4f0a7d60166e" refkind="member"><highlight class="normal"><ref refid="namespacedakku_1a44beae0957b26c547b6a4f0a7d60166e" kindref="member">DAKKU_EXPORT_OBJECTS</ref>(Core,<sp/><ref refid="classdakku_1_1Object" kindref="compound">Object</ref>,<sp/><ref refid="classdakku_1_1InputStream" kindref="compound">InputStream</ref>,<sp/><ref refid="classdakku_1_1OutputStream" kindref="compound">OutputStream</ref>,<sp/><ref refid="classdakku_1_1SerializableObject" kindref="compound">SerializableObject</ref>);</highlight></codeline>
-<codeline lineno="14"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dakku</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="13" refid="namespacedakku" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacedakku" kindref="compound">dakku</ref><sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="namespacedakku_1a6366bb992a59ee08f6364f16886477b0" refkind="member"><highlight class="normal"><ref refid="namespacedakku_1a6366bb992a59ee08f6364f16886477b0" kindref="member">DAKKU_EXPORT_OBJECTS</ref>(Core,<sp/><ref refid="classdakku_1_1Object" kindref="compound">Object</ref>,<sp/><ref refid="classdakku_1_1InputStream" kindref="compound">InputStream</ref>,<sp/><ref refid="classdakku_1_1OutputStream" kindref="compound">OutputStream</ref>,</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdakku_1_1SerializableObject" kindref="compound">SerializableObject</ref>,<sp/><ref refid="classdakku_1_1Filter" kindref="compound">Filter</ref>,<sp/><ref refid="classdakku_1_1Film" kindref="compound">Film</ref>);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dakku</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="src/core/api.h"/>
   </compounddef>

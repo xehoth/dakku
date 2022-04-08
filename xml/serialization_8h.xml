@@ -4,6 +4,8 @@
     <compoundname>serialization.h</compoundname>
     <includes refid="object_8h" local="no">core/object.h</includes>
     <includedby refid="core_2api_8h" local="no">src/core/api.h</includedby>
+    <includedby refid="film_8h" local="no">src/core/film.h</includedby>
+    <includedby refid="filters_2fwd_8h" local="no">src/filters/fwd.h</includedby>
     <includedby refid="stream_2fwd_8h" local="no">src/stream/fwd.h</includedby>
     <incdepgraph>
       <node id="3">
@@ -175,6 +177,12 @@
         <label>src/core/api.h</label>
         <link refid="core_2api_8h"/>
       </node>
+      <node id="3">
+        <label>src/core/film.h</label>
+        <link refid="film_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
       <node id="1">
         <label>src/core/serialization.h</label>
         <link refid="serialization_8h"/>
@@ -182,21 +190,49 @@
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>src/filters/api.h</label>
+        <link refid="filters_2api_8h"/>
       </node>
       <node id="5">
+        <label>src/filters/box.h</label>
+        <link refid="box_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>src/filters/fwd.h</label>
+        <link refid="filters_2fwd_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>src/filters/triangle.h</label>
+        <link refid="triangle_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
         <label>src/stream/api.h</label>
         <link refid="stream_2api_8h"/>
       </node>
-      <node id="4">
+      <node id="9">
         <label>src/stream/fstream.h</label>
         <link refid="fstream_8h"/>
-        <childnode refid="5" relation="include">
+        <childnode refid="10" relation="include">
         </childnode>
       </node>
-      <node id="3">
+      <node id="8">
         <label>src/stream/fwd.h</label>
         <link refid="stream_2fwd_8h"/>
-        <childnode refid="4" relation="include">
+        <childnode refid="9" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -236,7 +272,7 @@
 <codeline lineno="55"><highlight class="normal"></highlight></codeline>
 <codeline lineno="61" refid="classdakku_1_1SerializableObject_1afbd8e48383b89c71132d091c9cd8b023" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1SerializableObject_1afbd8e48383b89c71132d091c9cd8b023" kindref="member">serialize</ref>(<ref refid="classdakku_1_1OutputStream" kindref="compound">OutputStream</ref><sp/>*stream)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="62"><highlight class="normal"></highlight></codeline>
-<codeline lineno="68" refid="classdakku_1_1SerializableObject_1ae947f98ea5fdc86500b0f09a3cbd0d41" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1SerializableObject_1ae947f98ea5fdc86500b0f09a3cbd0d41" kindref="member">deserialize</ref>(<ref refid="classdakku_1_1InputStream" kindref="compound">InputStream</ref><sp/>*stream)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="68" refid="classdakku_1_1SerializableObject_1af130034b07c1f5dc21fd84e0cbefbbb4" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1SerializableObject_1af130034b07c1f5dc21fd84e0cbefbbb4" kindref="member">deserialize</ref>(<ref refid="classdakku_1_1InputStream" kindref="compound">InputStream</ref><sp/>*stream)<sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="69"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="70"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dakku</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>

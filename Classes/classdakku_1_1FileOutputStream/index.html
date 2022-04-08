@@ -349,13 +349,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#detailed-description" class="md-nav__link">
-    Detailed Description
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#public-functions-documentation" class="md-nav__link">
     Public Functions Documentation
   </a>
@@ -435,7 +428,7 @@
 
 
 <h1 id="dakkufileoutputstream">dakku::FileOutputStream</h1>
-<p><a href="#detailed-description">More...</a></p>
+<p>file output stream </p>
 <p><code>#include &lt;fstream.h&gt;</code></p>
 <p>Inherits from <a href="/dakku/Classes/classdakku_1_1OutputStream/">dakku::OutputStream</a>, <a href="/dakku/Classes/classdakku_1_1Object/">dakku::Object</a></p>
 <h2 id="public-functions">Public Functions</h2>
@@ -457,11 +450,11 @@
 </tr>
 <tr>
 <td>virtual void</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1FileOutputStream/#function-writebyte">writeByte</a></strong>(std::uint8_t value) override</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1FileOutputStream/#function-writebyte">writeByte</a></strong>(std::uint8_t value) override<br>write one byte</td>
 </tr>
 <tr>
 <td>virtual size_t</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1FileOutputStream/#function-writebytes">writeBytes</a></strong>(const void * ptr, size_t size) override</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1FileOutputStream/#function-writebytes">writeBytes</a></strong>(const void * ptr, size_t size) override<br>write <code>size</code> bytes starting at <code>ptr</code></td>
 </tr>
 </tbody>
 </table>
@@ -476,7 +469,7 @@
 <tbody>
 <tr>
 <td>std::ofstream</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1FileOutputStream/#variable-stream">stream</a></strong></td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1FileOutputStream/#variable-stream">stream</a></strong> <br>ofstream</td>
 </tr>
 </tbody>
 </table>
@@ -528,43 +521,40 @@
 </tr>
 </tbody>
 </table>
-<h2 id="detailed-description">Detailed Description</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">dakku</span><span class="o">::</span><span class="n">FileOutputStream</span><span class="p">;</span><span class="w"></span>
-</code></pre></div>
-<p>dakku file output stream </p>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-dakku_declare_object">function DAKKU_DECLARE_OBJECT</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">DAKKU_DECLARE_OBJECT</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="n">FileOutputStream</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="n">OutputStream</span><span class="w"> </span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">DAKKU_DECLARE_OBJECT</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="n">FileOutputStream</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">OutputStream</span><span class="w"> </span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 <h3 id="function-fileoutputstream">function FileOutputStream</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">explicit</span><span class="w"> </span><span class="n">FileOutputStream</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">filesystem</span><span class="o">::</span><span class="n">path</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">path</span><span class="w"></span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">explicit</span><span class="w"> </span><span class="n">FileOutputStream</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">filesystem</span><span class="o">::</span><span class="n">path</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">path</span><span class="w"></span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 <p><strong>Parameters</strong>: </p>
 <ul>
 <li><strong>path</strong> the path of the file </li>
 </ul>
 <h3 id="function-writebyte">function writeByte</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">writeByte</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">value</span><span class="w"></span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">writeByte</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">value</span><span class="w"></span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"></span>
 </code></pre></div>
+<p>write one byte </p>
 <p><strong>Parameters</strong>: </p>
 <ul>
 <li><strong>value</strong> the byte to write </li>
 </ul>
 <p><strong>Reimplements</strong>: <a href="/dakku/Classes/classdakku_1_1OutputStream/#function-writebyte">dakku::OutputStream::writeByte</a></p>
-<p>write one byte </p>
 <h3 id="function-writebytes">function writeBytes</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">writeBytes</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">ptr</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">size</span><span class="w"></span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">writeBytes</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">ptr</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">size</span><span class="w"></span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"></span>
 </code></pre></div>
+<p>write <code>size</code> bytes starting at <code>ptr</code></p>
 <p><strong>Parameters</strong>: </p>
 <ul>
 <li><strong>ptr</strong> the starting pointer (buffer address) </li>
@@ -572,13 +562,13 @@
 </ul>
 <p><strong>Return</strong>: the actual number of bytes the stream writes </p>
 <p><strong>Reimplements</strong>: <a href="/dakku/Classes/classdakku_1_1OutputStream/#function-writebytes">dakku::OutputStream::writeBytes</a></p>
-<p>write [size] bytes starting at [ptr] </p>
 <h2 id="protected-attributes-documentation">Protected Attributes Documentation</h2>
 <h3 id="variable-stream">variable stream</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">std</span><span class="o">::</span><span class="n">ofstream</span><span class="w"> </span><span class="n">stream</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">std</span><span class="o">::</span><span class="n">ofstream</span><span class="w"> </span><span class="n">stream</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
+<p>ofstream </p>
 <hr />
-<p>Updated on 2022-04-08 at 07:05:53 +0000</p>
+<p>Updated on 2022-04-08 at 08:30:30 +0000</p>
 
               
             </article>

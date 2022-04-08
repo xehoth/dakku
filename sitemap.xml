@@ -31,6 +31,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1BoxFilter/</loc>
+         <lastmod>2022-04-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1Class/</loc>
          <lastmod>2022-04-08</lastmod>
          <changefreq>daily</changefreq>
@@ -42,6 +47,16 @@
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1FileOutputStream/</loc>
+         <lastmod>2022-04-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1Film/</loc>
+         <lastmod>2022-04-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1Filter/</loc>
          <lastmod>2022-04-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -106,6 +121,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1TriangleFilter/</loc>
+         <lastmod>2022-04-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1Vector/</loc>
          <lastmod>2022-04-08</lastmod>
          <changefreq>daily</changefreq>
@@ -117,6 +137,11 @@
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/structdakku_1_1Class_1_1Metadata/</loc>
+         <lastmod>2022-04-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Classes/structdakku_1_1Film_1_1Pixel/</loc>
          <lastmod>2022-04-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -141,6 +166,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://xehoth.github.io/dakku/Files/box_8h/</loc>
+         <lastmod>2022-04-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://xehoth.github.io/dakku/Files/class_8h/</loc>
          <lastmod>2022-04-08</lastmod>
          <changefreq>daily</changefreq>
@@ -161,12 +191,37 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://xehoth.github.io/dakku/Files/dir_1bc13244e26df1e1f069a1fd18e36da3/</loc>
+         <lastmod>2022-04-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://xehoth.github.io/dakku/Files/dir_68267d1309a1af8e8297ef4c3efbcdba/</loc>
          <lastmod>2022-04-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/dir_aebb8dcc11953d78e620bbef0b9e2183/</loc>
+         <lastmod>2022-04-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Files/film_8h/</loc>
+         <lastmod>2022-04-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Files/filter_8h/</loc>
+         <lastmod>2022-04-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Files/filters_2api_8h/</loc>
+         <lastmod>2022-04-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Files/filters_2fwd_8h/</loc>
          <lastmod>2022-04-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -227,6 +282,11 @@
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/transform_8h/</loc>
+         <lastmod>2022-04-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Files/triangle_8h/</loc>
          <lastmod>2022-04-08</lastmod>
          <changefreq>daily</changefreq>
     </url>

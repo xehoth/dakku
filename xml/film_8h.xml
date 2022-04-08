@@ -1,0 +1,255 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="film_8h" kind="file" language="C++">
+    <compoundname>film.h</compoundname>
+    <includes refid="serialization_8h" local="no">core/serialization.h</includes>
+    <includes refid="bounds_8h" local="no">core/bounds.h</includes>
+    <includedby refid="core_2api_8h" local="no">src/core/api.h</includedby>
+    <incdepgraph>
+      <node id="30">
+        <label>core/bounds.h</label>
+        <link refid="bounds_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>core/class.h</label>
+        <link refid="class_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/core/film.h</label>
+        <link refid="film_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>core/fwd.h</label>
+        <link refid="core_2fwd_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>core/logger.h</label>
+        <link refid="logger_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>core/object.h</label>
+        <link refid="object_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>core/property.h</label>
+        <link refid="property_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>core/ray.h</label>
+        <link refid="ray_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>core/serialization.h</label>
+        <link refid="serialization_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>core/transform.h</label>
+        <link refid="transform_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>core/vector.h</label>
+        <link refid="vector_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>core/vector_base.h</label>
+        <link refid="vector__base_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>platform.h</label>
+        <link refid="platform_8h"/>
+      </node>
+      <node id="19">
+        <label>algorithm</label>
+      </node>
+      <node id="18">
+        <label>array</label>
+      </node>
+      <node id="10">
+        <label>cmath</label>
+      </node>
+      <node id="14">
+        <label>cstdlib</label>
+      </node>
+      <node id="31">
+        <label>iterator</label>
+      </node>
+      <node id="8">
+        <label>limits</label>
+      </node>
+      <node id="27">
+        <label>map</label>
+      </node>
+      <node id="26">
+        <label>nlohmann/json.hpp</label>
+      </node>
+      <node id="9">
+        <label>numbers</label>
+      </node>
+      <node id="22">
+        <label>numeric</label>
+      </node>
+      <node id="21">
+        <label>ostream</label>
+      </node>
+      <node id="13">
+        <label>spdlog/fmt/ostr.h</label>
+      </node>
+      <node id="12">
+        <label>spdlog/spdlog.h</label>
+      </node>
+      <node id="20">
+        <label>string</label>
+      </node>
+      <node id="29">
+        <label>string_view</label>
+      </node>
+      <node id="7">
+        <label>type_traits</label>
+      </node>
+      <node id="25">
+        <label>utility</label>
+      </node>
+      <node id="28">
+        <label>variant</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>src/core/api.h</label>
+        <link refid="core_2api_8h"/>
+      </node>
+      <node id="1">
+        <label>src/core/film.h</label>
+        <link refid="film_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classdakku_1_1Film" prot="public">dakku::Film</innerclass>
+    <innerclass refid="structdakku_1_1Film_1_1Pixel" prot="private">dakku::Film::Pixel</innerclass>
+    <innernamespace refid="namespacedakku">dakku</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>DAKKU_CORE_FILM_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DAKKU_CORE_FILM_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="serialization_8h" kindref="compound">core/serialization.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="bounds_8h" kindref="compound">core/bounds.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacedakku" kindref="compound">dakku</ref><sp/>{</highlight></codeline>
+<codeline lineno="11" refid="classdakku_1_1Film" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref><sp/><ref refid="classdakku_1_1Film" kindref="compound">Film</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1SerializableObject" kindref="compound">SerializableObject</ref><sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="13" refid="classdakku_1_1Film_1a246c871f2adf1dca61f541a9f8544b4b" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classdakku_1_1Film_1a246c871f2adf1dca61f541a9f8544b4b" kindref="member">DAKKU_DECLARE_OBJECT</ref>(<ref refid="classdakku_1_1Film" kindref="compound">Film</ref>,<sp/><ref refid="classdakku_1_1SerializableObject" kindref="compound">SerializableObject</ref>);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>explicit<sp/>Film(const<sp/>Point2i<sp/>&amp;fullResolution,<sp/>const<sp/>Bounds2f<sp/>cropWindow,<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="classdakku_1_1Film_1abd5500d780cda9eb7b512dc7ac1740d5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Film_1abd5500d780cda9eb7b512dc7ac1740d5" kindref="member">serialize</ref>(<ref refid="classdakku_1_1OutputStream" kindref="compound">OutputStream</ref><sp/>*stream)<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="18" refid="classdakku_1_1Film_1a5c376ccf9abcdb293db2e9b9935b785c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Film_1a5c376ccf9abcdb293db2e9b9935b785c" kindref="member">deserialize</ref>(<ref refid="classdakku_1_1InputStream" kindref="compound">InputStream</ref><sp/>*stream)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">Pixel<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>xyz[3];</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>filterWeightSum;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(_MSC_VER)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>warning(push)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>warning(disable<sp/>:<sp/>4251)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>std::unique_ptr&lt;Pixel[]&gt;<sp/>pixels{};</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><ref refid="namespacedakku_1a059653c441fcfa28e3b00de3709176e9" kindref="member">Point2i</ref><sp/>fullResolution;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><ref refid="namespacedakku_1abcc743bdeb62068a56f14ac3ef9963b7" kindref="member">Bounds2f</ref><sp/>cropWindow{<ref refid="namespacedakku_1a9910f23501fd2ef5e9a829cdab0992be" kindref="member">Point2f</ref>(0,<sp/>0),<sp/><ref refid="namespacedakku_1a9910f23501fd2ef5e9a829cdab0992be" kindref="member">Point2f</ref>(1,<sp/>1)};</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><ref refid="namespacedakku_1ae2cd423e1acf2fd91f4cdf3cc5ad50c6" kindref="member">Bounds2i</ref><sp/>croppedPixelBounds;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>filterTableWidth<sp/>=<sp/>16;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(_MSC_VER)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>warning(pop)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dakku</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="src/core/film.h"/>
+  </compounddef>
+</doxygen>

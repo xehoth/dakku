@@ -3,6 +3,7 @@
   <compounddef id="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir">
     <compoundname>src</compoundname>
     <innerdir refid="dir_aebb8dcc11953d78e620bbef0b9e2183">src/core</innerdir>
+    <innerdir refid="dir_1bc13244e26df1e1f069a1fd18e36da3">src/filters</innerdir>
     <innerdir refid="dir_090521d29e73b40f7fc0a63254d8965e">src/stream</innerdir>
     <innerfile refid="platform_8h">platform.h</innerfile>
     <briefdescription>

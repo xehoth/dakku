@@ -1,0 +1,226 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="classdakku_1_1Film" kind="class" language="C++" prot="public">
+    <compoundname>dakku::Film</compoundname>
+    <basecompoundref refid="classdakku_1_1SerializableObject" prot="public" virt="non-virtual">dakku::SerializableObject</basecompoundref>
+    <includes refid="film_8h" local="no">film.h</includes>
+    <innerclass refid="structdakku_1_1Film_1_1Pixel" prot="private">dakku::Film::Pixel</innerclass>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdakku_1_1Film_1a428fa06a95483622e24fef64a6d8255a" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; Pixel[]&gt;</type>
+        <definition>std::unique_ptr&lt;Pixel[]&gt; dakku::Film::pixels</definition>
+        <argsstring></argsstring>
+        <name>pixels</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+<para>pixels data </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/film.h" line="37" column="19" bodyfile="src/core/film.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdakku_1_1Film_1ad88e45f878fce2f808efa02e0d4d15f1" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacedakku_1a059653c441fcfa28e3b00de3709176e9" kindref="member">Point2i</ref></type>
+        <definition>Point2i dakku::Film::fullResolution</definition>
+        <argsstring></argsstring>
+        <name>fullResolution</name>
+        <briefdescription>
+<para>full resolution of the film </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/film.h" line="39" column="11" bodyfile="src/core/film.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdakku_1_1Film_1a0bb1214116cf0aa5c27bead71aeef981" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacedakku_1abcc743bdeb62068a56f14ac3ef9963b7" kindref="member">Bounds2f</ref></type>
+        <definition>Bounds2f dakku::Film::cropWindow</definition>
+        <argsstring></argsstring>
+        <name>cropWindow</name>
+        <initializer>{<ref refid="namespacedakku_1a9910f23501fd2ef5e9a829cdab0992be" kindref="member">Point2f</ref>(0, 0), <ref refid="namespacedakku_1a9910f23501fd2ef5e9a829cdab0992be" kindref="member">Point2f</ref>(1, 1)}</initializer>
+        <briefdescription>
+<para>film crop window </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/film.h" line="41" column="12" bodyfile="src/core/film.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdakku_1_1Film_1ab903557a26253b8d83313dcc8d082162" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacedakku_1ae2cd423e1acf2fd91f4cdf3cc5ad50c6" kindref="member">Bounds2i</ref></type>
+        <definition>Bounds2i dakku::Film::croppedPixelBounds</definition>
+        <argsstring></argsstring>
+        <name>croppedPixelBounds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/film.h" line="42" column="12" bodyfile="src/core/film.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classdakku_1_1Film_1a76d2a162152a9c6f0038857a2f9488c4" prot="private" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int dakku::Film::filterTableWidth</definition>
+        <argsstring></argsstring>
+        <name>filterTableWidth</name>
+        <initializer>= 16</initializer>
+        <briefdescription>
+<para>filter table width </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/film.h" line="45" column="24" bodyfile="src/core/film.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdakku_1_1Film_1a246c871f2adf1dca61f541a9f8544b4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dakku::Film::DAKKU_DECLARE_OBJECT</definition>
+        <argsstring>(Film, SerializableObject)</argsstring>
+        <name>DAKKU_DECLARE_OBJECT</name>
+        <param>
+          <type><ref refid="classdakku_1_1Film" kindref="compound">Film</ref></type>
+        </param>
+        <param>
+          <type><ref refid="classdakku_1_1SerializableObject" kindref="compound">SerializableObject</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/film.h" line="13" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1Film_1abd5500d780cda9eb7b512dc7ac1740d5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void dakku::Film::serialize</definition>
+        <argsstring>(OutputStream *stream) const override</argsstring>
+        <name>serialize</name>
+        <reimplements refid="classdakku_1_1SerializableObject_1afbd8e48383b89c71132d091c9cd8b023">serialize</reimplements>
+        <param>
+          <type><ref refid="classdakku_1_1OutputStream" kindref="compound">OutputStream</ref> *</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+<para>serialize the object (do not include the property part) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/film.h" line="17" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1Film_1a5c376ccf9abcdb293db2e9b9935b785c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void dakku::Film::deserialize</definition>
+        <argsstring>(InputStream *stream) override</argsstring>
+        <name>deserialize</name>
+        <reimplements refid="classdakku_1_1SerializableObject_1af130034b07c1f5dc21fd84e0cbefbbb4">deserialize</reimplements>
+        <param>
+          <type><ref refid="classdakku_1_1InputStream" kindref="compound">InputStream</ref> *</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+<para>deserialize the object (do not include the property part) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/film.h" line="18" column="8"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>film class </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>dakku::Film</label>
+        <link refid="classdakku_1_1Film"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>dakku::Object</label>
+        <link refid="classdakku_1_1Object"/>
+      </node>
+      <node id="2">
+        <label>dakku::SerializableObject</label>
+        <link refid="classdakku_1_1SerializableObject"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>dakku::Film</label>
+        <link refid="classdakku_1_1Film"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>dakku::Object</label>
+        <link refid="classdakku_1_1Object"/>
+      </node>
+      <node id="2">
+        <label>dakku::SerializableObject</label>
+        <link refid="classdakku_1_1SerializableObject"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/core/film.h" line="11" column="1" bodyfile="src/core/film.h" bodystart="11" bodyend="50"/>
+    <listofallmembers>
+      <member refid="classdakku_1_1Film_1ab903557a26253b8d83313dcc8d082162" prot="private" virt="non-virtual"><scope>dakku::Film</scope><name>croppedPixelBounds</name></member>
+      <member refid="classdakku_1_1Film_1a0bb1214116cf0aa5c27bead71aeef981" prot="private" virt="non-virtual"><scope>dakku::Film</scope><name>cropWindow</name></member>
+      <member refid="classdakku_1_1Film_1a246c871f2adf1dca61f541a9f8544b4b" prot="public" virt="non-virtual"><scope>dakku::Film</scope><name>DAKKU_DECLARE_OBJECT</name></member>
+      <member refid="classdakku_1_1SerializableObject_1a20425307e474662b2825ca6fe0c3e1fc" prot="public" virt="non-virtual" ambiguityscope="dakku::SerializableObject::"><scope>dakku::Film</scope><name>DAKKU_DECLARE_OBJECT</name></member>
+      <member refid="classdakku_1_1Film_1a5c376ccf9abcdb293db2e9b9935b785c" prot="public" virt="virtual"><scope>dakku::Film</scope><name>deserialize</name></member>
+      <member refid="classdakku_1_1Film_1a76d2a162152a9c6f0038857a2f9488c4" prot="private" virt="non-virtual"><scope>dakku::Film</scope><name>filterTableWidth</name></member>
+      <member refid="classdakku_1_1Film_1ad88e45f878fce2f808efa02e0d4d15f1" prot="private" virt="non-virtual"><scope>dakku::Film</scope><name>fullResolution</name></member>
+      <member refid="classdakku_1_1Object_1a543f734268f7be81badecee6cf7245cc" prot="public" virt="virtual"><scope>dakku::Film</scope><name>getClassName</name></member>
+      <member refid="classdakku_1_1Object_1a247ed68865f464d511b7fdb85467c354" prot="public" virt="non-virtual"><scope>dakku::Film</scope><name>getClassNameStatic</name></member>
+      <member refid="classdakku_1_1Object_1accec0632e79097564677055bef4220bd" prot="public" virt="virtual"><scope>dakku::Film</scope><name>getParentName</name></member>
+      <member refid="classdakku_1_1Object_1a08ec83c660afb1850455ef30c43fa29c" prot="public" virt="non-virtual"><scope>dakku::Film</scope><name>getParentNameStatic</name></member>
+      <member refid="classdakku_1_1Object_1a055e32b0624d9a96fc2014fe5d9d0c81" prot="public" virt="non-virtual"><scope>dakku::Film</scope><name>isBaseOf</name></member>
+      <member refid="classdakku_1_1Object_1add47b28fc1878f008bb6664a83faad72" prot="public" virt="non-virtual"><scope>dakku::Film</scope><name>isDerivedFrom</name></member>
+      <member refid="classdakku_1_1Object_1a20e78d46fa11d575d63e048279150eac" prot="public" virt="non-virtual"><scope>dakku::Film</scope><name>Object</name></member>
+      <member refid="classdakku_1_1Film_1a428fa06a95483622e24fef64a6d8255a" prot="private" virt="non-virtual"><scope>dakku::Film</scope><name>pixels</name></member>
+      <member refid="classdakku_1_1Film_1abd5500d780cda9eb7b512dc7ac1740d5" prot="public" virt="virtual"><scope>dakku::Film</scope><name>serialize</name></member>
+      <member refid="classdakku_1_1Object_1a65d91c04e480b827fa495df96af2826b" prot="public" virt="virtual"><scope>dakku::Film</scope><name>toString</name></member>
+      <member refid="classdakku_1_1Object_1a0c792f089351caf3fa7a704c86ce903d" prot="public" virt="virtual"><scope>dakku::Film</scope><name>~Object</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

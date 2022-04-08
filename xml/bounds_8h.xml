@@ -5,6 +5,7 @@
     <includes refid="vector_8h" local="no">core/vector.h</includes>
     <includes local="no">iterator</includes>
     <includes local="no">utility</includes>
+    <includedby refid="film_8h" local="no">src/core/film.h</includedby>
     <incdepgraph>
       <node id="1">
         <label>src/core/bounds.h</label>
@@ -111,6 +112,24 @@
         <label>utility</label>
       </node>
     </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>src/core/api.h</label>
+        <link refid="core_2api_8h"/>
+      </node>
+      <node id="1">
+        <label>src/core/bounds.h</label>
+        <link refid="bounds_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>src/core/film.h</label>
+        <link refid="film_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
     <innerclass refid="classdakku_1_1BoundsBase" prot="public">dakku::BoundsBase</innerclass>
     <innerclass refid="classdakku_1_1Bounds2" prot="public">dakku::Bounds2</innerclass>
     <innerclass refid="classdakku_1_1Bounds3" prot="public">dakku::Bounds3</innerclass>

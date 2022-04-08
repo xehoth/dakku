@@ -607,6 +607,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#function-dakku_export_objects_2" class="md-nav__link">
+    function DAKKU_EXPORT_OBJECTS
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -683,6 +690,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#variable-filter" class="md-nav__link">
+    variable Filter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-film" class="md-nav__link">
+    variable Film
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -735,6 +756,10 @@
 </tr>
 <tr>
 <td>class</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1BoxFilter/">dakku::BoxFilter</a></strong> <br>box filter    the box filter is simple, just return <span class="arithmatex">\(1\)</span> for all values</td>
+</tr>
+<tr>
+<td>class</td>
 <td><strong><a href="/dakku/Classes/classdakku_1_1Class/">dakku::Class</a></strong> <br>RTTI support.</td>
 </tr>
 <tr>
@@ -743,7 +768,15 @@
 </tr>
 <tr>
 <td>class</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1FileOutputStream/">dakku::FileOutputStream</a></strong></td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1FileOutputStream/">dakku::FileOutputStream</a></strong> <br>file output stream</td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Film/">dakku::Film</a></strong> <br>film class</td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Filter/">dakku::Filter</a></strong> <br>filter class all filters are centered at origin <span class="arithmatex">\((0, 0)\)</span> and defined a radius beyond which they have a value of <span class="arithmatex">\(0\)</span> this width may be different in the <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(y\)</span> directions</td>
 </tr>
 <tr>
 <td>class</td>
@@ -796,6 +829,10 @@
 <tr>
 <td>class</td>
 <td><strong><a href="/dakku/Classes/classdakku_1_1Transform/">dakku::Transform</a></strong></td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1TriangleFilter/">dakku::TriangleFilter</a></strong> <br>triangle filter the weight falls off linearly from the filter center over the square extent of the filter</td>
 </tr>
 <tr>
 <td>class</td>
@@ -889,7 +926,7 @@
 <tbody>
 <tr>
 <td></td>
-<td><strong><a href="/dakku/Namespaces/namespacedakku/#function-dakku-export-objects">DAKKU_EXPORT_OBJECTS</a></strong>(Core , <a href="/dakku/Classes/classdakku_1_1Object/">Object</a> , <a href="/dakku/Classes/classdakku_1_1InputStream/">InputStream</a> , <a href="/dakku/Classes/classdakku_1_1OutputStream/">OutputStream</a> , <a href="/dakku/Classes/classdakku_1_1SerializableObject/">SerializableObject</a> )</td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#function-dakku-export-objects">DAKKU_EXPORT_OBJECTS</a></strong>(Core , <a href="/dakku/Classes/classdakku_1_1Object/">Object</a> , <a href="/dakku/Classes/classdakku_1_1InputStream/">InputStream</a> , <a href="/dakku/Classes/classdakku_1_1OutputStream/">OutputStream</a> , <a href="/dakku/Classes/classdakku_1_1SerializableObject/">SerializableObject</a> , <a href="/dakku/Classes/classdakku_1_1Filter/">Filter</a> , <a href="/dakku/Classes/classdakku_1_1Film/">Film</a> )</td>
 </tr>
 <tr>
 <td><a href="/dakku/Classes/classdakku_1_1Bounds2iIterator/">Bounds2iIterator</a></td>
@@ -949,11 +986,15 @@
 </tr>
 <tr>
 <td><a href="/dakku/Files/core_2fwd_8h/#define-dakku-export-core">DAKKU_EXPORT_CORE</a><a href="/dakku/Classes/classdakku_1_1Transform/">Transform</a></td>
-<td><strong><a href="/dakku/Namespaces/namespacedakku/#function-perspective">perspective</a></strong>(float fov, float znear, float zfar)<br>perspective transform</td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#function-perspective">perspective</a></strong>(float fov, float zNear, float zFar)<br>perspective transform</td>
 </tr>
 <tr>
 <td>template &lt;ArithmeticType T,size_t S,typename D1 ,typename D2 > <br>decltype(auto)</td>
 <td><strong><a href="/dakku/Namespaces/namespacedakku/#function-dot">dot</a></strong>(const <a href="/dakku/Classes/classdakku_1_1VectorBase/">VectorBase</a>&lt; T, S, D1 &gt; &amp; a, const <a href="/dakku/Classes/classdakku_1_1VectorBase/">VectorBase</a>&lt; T, S, D2 &gt; &amp; b)<br>dot product between two vectors</td>
+</tr>
+<tr>
+<td></td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#function-dakku-export-objects">DAKKU_EXPORT_OBJECTS</a></strong>(Filters , <a href="/dakku/Classes/classdakku_1_1BoxFilter/">BoxFilter</a> , <a href="/dakku/Classes/classdakku_1_1TriangleFilter/">TriangleFilter</a> )</td>
 </tr>
 <tr>
 <td></td>
@@ -1005,6 +1046,14 @@
 <tr>
 <td>struct <a href="/dakku/Files/core_2fwd_8h/#define-dakku-export-core">DAKKU_EXPORT_CORE</a></td>
 <td><strong><a href="/dakku/Namespaces/namespacedakku/#variable-matrix4x4">Matrix4x4</a></strong></td>
+</tr>
+<tr>
+<td>class <a href="/dakku/Files/core_2fwd_8h/#define-dakku-export-core">DAKKU_EXPORT_CORE</a></td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#variable-filter">Filter</a></strong></td>
+</tr>
+<tr>
+<td>class <a href="/dakku/Files/core_2fwd_8h/#define-dakku-export-core">DAKKU_EXPORT_CORE</a></td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#variable-film">Film</a></strong></td>
 </tr>
 </tbody>
 </table>
@@ -1145,8 +1194,10 @@
 <a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">    </span><span class="n">Object</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
 <a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">    </span><span class="n">InputStream</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
 <a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">    </span><span class="n">OutputStream</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="w">    </span><span class="n">SerializableObject</span><span class="w"> </span>
-<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="w">    </span><span class="n">SerializableObject</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="w">    </span><span class="n">Filter</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="w">    </span><span class="n">Film</span><span class="w"> </span>
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 <h3 id="function-begin">function begin</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kr">inline</span><span class="w"> </span><span class="n">Bounds2iIterator</span><span class="w"> </span><span class="n">begin</span><span class="p">(</span><span class="w"></span>
@@ -1285,16 +1336,16 @@
 <h3 id="function-perspective">function perspective</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="n">DAKKU_EXPORT_CORETransform</span><span class="w"> </span><span class="n">perspective</span><span class="p">(</span><span class="w"></span>
 <a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">fov</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">znear</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">zfar</span><span class="w"></span>
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">zNear</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">zFar</span><span class="w"></span>
 <a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 <p>perspective transform </p>
 <p><strong>Parameters</strong>: </p>
 <ul>
 <li><strong>fov</strong> field of view </li>
-<li><strong>znear</strong> far plane z </li>
-<li><strong>zfar</strong> near plane z</li>
+<li><strong>zNear</strong> far plane z </li>
+<li><strong>zFar</strong> near plane z</li>
 </ul>
 <p>the shorter edge mapped to [-1, 1], the longer [-ratio, ratio] left handed </p>
 <h3 id="function-dot">function dot</h3>
@@ -1316,43 +1367,56 @@
 <p><strong>Return</strong>: <span class="arithmatex">\(\vec a \cdot \vec b\)</span> </p>
 <h3 id="function-dakku_export_objects_1">function DAKKU_EXPORT_OBJECTS</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="n">DAKKU_EXPORT_OBJECTS</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="w">    </span><span class="n">Stream</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a><span class="w">    </span><span class="n">FileOutputStream</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a><span class="w">    </span><span class="n">FileInputStream</span><span class="w"> </span>
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="w">    </span><span class="n">Filters</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a><span class="w">    </span><span class="n">BoxFilter</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a><span class="w">    </span><span class="n">TriangleFilter</span><span class="w"> </span>
 <a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-dakku_export_objects_2">function DAKKU_EXPORT_OBJECTS</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="n">DAKKU_EXPORT_OBJECTS</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="w">    </span><span class="n">Stream</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a><span class="w">    </span><span class="n">FileOutputStream</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a><span class="w">    </span><span class="n">FileInputStream</span><span class="w"> </span>
+<a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 <h2 id="attributes-documentation">Attributes Documentation</h2>
 <h3 id="variable-inf">variable INF</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">INF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;::</span><span class="n">infinity</span><span class="p">();</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">INF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;::</span><span class="n">infinity</span><span class="p">();</span><span class="w"></span>
 </code></pre></div>
 <p>infinity </p>
 <h3 id="variable-pi">variable PI</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">PI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">numbers</span><span class="o">::</span><span class="n">pi_v</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">PI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">numbers</span><span class="o">::</span><span class="n">pi_v</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <p>PI. </p>
 <h3 id="variable-relativeroot">variable RelativeRoot</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">DAKKU_EXPORT_CORE</span><span class="w"> </span><span class="n">RelativeRoot</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">DAKKU_EXPORT_CORE</span><span class="w"> </span><span class="n">RelativeRoot</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <h3 id="variable-inputstream">variable InputStream</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">DAKKU_EXPORT_CORE</span><span class="w"> </span><span class="n">InputStream</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">DAKKU_EXPORT_CORE</span><span class="w"> </span><span class="n">InputStream</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <h3 id="variable-outputstream">variable OutputStream</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">DAKKU_EXPORT_CORE</span><span class="w"> </span><span class="n">OutputStream</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">DAKKU_EXPORT_CORE</span><span class="w"> </span><span class="n">OutputStream</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <h3 id="variable-property">variable Property</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">DAKKU_EXPORT_CORE</span><span class="w"> </span><span class="n">Property</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">DAKKU_EXPORT_CORE</span><span class="w"> </span><span class="n">Property</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <h3 id="variable-class">variable Class</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">DAKKU_EXPORT_CORE</span><span class="w"> </span><span class="n">Class</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">DAKKU_EXPORT_CORE</span><span class="w"> </span><span class="n">Class</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <h3 id="variable-object">variable Object</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">DAKKU_EXPORT_CORE</span><span class="w"> </span><span class="n">Object</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">DAKKU_EXPORT_CORE</span><span class="w"> </span><span class="n">Object</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <h3 id="variable-matrix4x4">variable Matrix4x4</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">DAKKU_EXPORT_CORE</span><span class="w"> </span><span class="n">Matrix4x4</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">DAKKU_EXPORT_CORE</span><span class="w"> </span><span class="n">Matrix4x4</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h3 id="variable-filter">variable Filter</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">DAKKU_EXPORT_CORE</span><span class="w"> </span><span class="n">Filter</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h3 id="variable-film">variable Film</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">DAKKU_EXPORT_CORE</span><span class="w"> </span><span class="n">Film</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <hr />
-<p>Updated on 2022-04-08 at 07:05:53 +0000</p>
+<p>Updated on 2022-04-08 at 08:30:30 +0000</p>
 
               
             </article>

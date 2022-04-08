@@ -6,9 +6,12 @@
     <innerclass refid="classdakku_1_1Bounds2iIterator" prot="public">dakku::Bounds2iIterator</innerclass>
     <innerclass refid="classdakku_1_1Bounds3" prot="public">dakku::Bounds3</innerclass>
     <innerclass refid="classdakku_1_1BoundsBase" prot="public">dakku::BoundsBase</innerclass>
+    <innerclass refid="classdakku_1_1BoxFilter" prot="public">dakku::BoxFilter</innerclass>
     <innerclass refid="classdakku_1_1Class" prot="public">dakku::Class</innerclass>
     <innerclass refid="classdakku_1_1FileInputStream" prot="public">dakku::FileInputStream</innerclass>
     <innerclass refid="classdakku_1_1FileOutputStream" prot="public">dakku::FileOutputStream</innerclass>
+    <innerclass refid="classdakku_1_1Film" prot="public">dakku::Film</innerclass>
+    <innerclass refid="classdakku_1_1Filter" prot="public">dakku::Filter</innerclass>
     <innerclass refid="classdakku_1_1InputStream" prot="public">dakku::InputStream</innerclass>
     <innerclass refid="classdakku_1_1Logger" prot="public">dakku::Logger</innerclass>
     <innerclass refid="structdakku_1_1Matrix4x4" prot="public">dakku::Matrix4x4</innerclass>
@@ -22,6 +25,7 @@
     <innerclass refid="classdakku_1_1RelativeRoot" prot="public">dakku::RelativeRoot</innerclass>
     <innerclass refid="classdakku_1_1SerializableObject" prot="public">dakku::SerializableObject</innerclass>
     <innerclass refid="classdakku_1_1Transform" prot="public">dakku::Transform</innerclass>
+    <innerclass refid="classdakku_1_1TriangleFilter" prot="public">dakku::TriangleFilter</innerclass>
     <innerclass refid="classdakku_1_1Vector" prot="public">dakku::Vector</innerclass>
     <innerclass refid="classdakku_1_1VectorBase" prot="public">dakku::VectorBase</innerclass>
       <sectiondef kind="enum">
@@ -492,12 +496,38 @@
         </inbodydescription>
         <location file="src/core/fwd.h" line="76" column="24" bodyfile="src/core/fwd.h" bodystart="76" bodyend="-1"/>
       </memberdef>
+      <memberdef kind="variable" id="namespacedakku_1ad32aa25f5584289eda626b47ae3525cc" prot="public" static="no" mutable="no">
+        <type>class <ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
+        <definition>class DAKKU_EXPORT_CORE dakku::Filter</definition>
+        <argsstring></argsstring>
+        <name>Filter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/fwd.h" line="87" column="24" bodyfile="src/core/fwd.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacedakku_1a1bd6403f2998d6f8d22f87c99eca7eed" prot="public" static="no" mutable="no">
+        <type>class <ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
+        <definition>class DAKKU_EXPORT_CORE dakku::Film</definition>
+        <argsstring></argsstring>
+        <name>Film</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/fwd.h" line="88" column="24" bodyfile="src/core/fwd.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
       </sectiondef>
       <sectiondef kind="func">
-      <memberdef kind="function" id="namespacedakku_1a44beae0957b26c547b6a4f0a7d60166e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespacedakku_1a6366bb992a59ee08f6364f16886477b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>dakku::DAKKU_EXPORT_OBJECTS</definition>
-        <argsstring>(Core, Object, InputStream, OutputStream, SerializableObject)</argsstring>
+        <argsstring>(Core, Object, InputStream, OutputStream, SerializableObject, Filter, Film)</argsstring>
         <name>DAKKU_EXPORT_OBJECTS</name>
         <param>
           <type>Core</type>
@@ -514,13 +544,19 @@
         <param>
           <type><ref refid="classdakku_1_1SerializableObject" kindref="compound">SerializableObject</ref></type>
         </param>
+        <param>
+          <type><ref refid="classdakku_1_1Filter" kindref="compound">Filter</ref></type>
+        </param>
+        <param>
+          <type><ref refid="classdakku_1_1Film" kindref="compound">Film</ref></type>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/api.h" line="13" column="1" declfile="src/core/api.h" declline="13" declcolumn="1"/>
+        <location file="src/core/api.h" line="15" column="1" declfile="src/core/api.h" declline="15" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1af0a2453f8db3eb948901c7a0aed18434" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classdakku_1_1Bounds2iIterator" kindref="compound">Bounds2iIterator</ref></type>
@@ -932,10 +968,10 @@
         </inbodydescription>
         <location file="src/core/transform.h" line="331" column="29" declfile="src/core/transform.h" declline="331" declcolumn="29"/>
       </memberdef>
-      <memberdef kind="function" id="namespacedakku_1a027a77f92f8ae36b091ef409ec0b4c6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespacedakku_1afd935f8b4f1ca9b28257d07b7f276739" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref> <ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref></type>
         <definition>DAKKU_EXPORT_CORE Transform dakku::perspective</definition>
-        <argsstring>(float fov, float znear, float zfar)</argsstring>
+        <argsstring>(float fov, float zNear, float zFar)</argsstring>
         <name>perspective</name>
         <param>
           <type>float</type>
@@ -943,11 +979,11 @@
         </param>
         <param>
           <type>float</type>
-          <declname>znear</declname>
+          <declname>zNear</declname>
         </param>
         <param>
           <type>float</type>
-          <declname>zfar</declname>
+          <declname>zFar</declname>
         </param>
         <briefdescription>
 <para>perspective transform </para>
@@ -963,7 +999,7 @@
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>znear</parametername>
+<parametername>zNear</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>far plane z </para>
@@ -971,7 +1007,7 @@
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>zfar</parametername>
+<parametername>zFar</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>near plane z</para>
@@ -1044,6 +1080,28 @@ the shorter edge mapped to [-1, 1], the longer [-ratio, ratio] left handed </par
         </inbodydescription>
         <location file="src/core/vector_base.h" line="724" column="17" bodyfile="src/core/vector_base.h" bodystart="724" bodyend="727"/>
       </memberdef>
+      <memberdef kind="function" id="namespacedakku_1ab1fd7a566663942d0a6ddc982890d74b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dakku::DAKKU_EXPORT_OBJECTS</definition>
+        <argsstring>(Filters, BoxFilter, TriangleFilter)</argsstring>
+        <name>DAKKU_EXPORT_OBJECTS</name>
+        <param>
+          <type>Filters</type>
+        </param>
+        <param>
+          <type><ref refid="classdakku_1_1BoxFilter" kindref="compound">BoxFilter</ref></type>
+        </param>
+        <param>
+          <type><ref refid="classdakku_1_1TriangleFilter" kindref="compound">TriangleFilter</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/filters/api.h" line="8" column="1" declfile="src/filters/api.h" declline="8" declcolumn="1"/>
+      </memberdef>
       <memberdef kind="function" id="namespacedakku_1a56ee8590ffd24bd3f70b555372fa4697" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>dakku::DAKKU_EXPORT_OBJECTS</definition>
@@ -1072,6 +1130,6 @@ the shorter edge mapped to [-1, 1], the longer [-ratio, ratio] left handed </par
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/core/api.h" line="11" column="1"/>
+    <location file="src/core/api.h" line="13" column="1"/>
   </compounddef>
 </doxygen>

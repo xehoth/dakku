@@ -41,6 +41,11 @@
     <member refid="classdakku_1_1BoundsBase_1a775827382a4cfcd6d7e18741bb7236f8" kind="friend"><name>operator|</name></member>
     <member refid="classdakku_1_1BoundsBase_1aabca5f08125e27d64b79bcb2cd1e7704" kind="friend"><name>operator&amp;</name></member>
   </compound>
+  <compound refid="classdakku_1_1BoxFilter" kind="class"><name>dakku::BoxFilter</name>
+    <member refid="classdakku_1_1BoxFilter_1ac4033f9e7e2cb0eee1b0eb5d8bd299b9" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
+    <member refid="classdakku_1_1BoxFilter_1a062696aca56d7f4f1ed238f1df17f95f" kind="function"><name>evaluate</name></member>
+    <member refid="classdakku_1_1BoxFilter_1a41c4e564d4f720c22852f36412836574" kind="function"><name>Filter</name></member>
+  </compound>
   <compound refid="classdakku_1_1Class" kind="class"><name>dakku::Class</name>
     <member refid="classdakku_1_1Class_1a5ca387aebcee4d1363ac17e25749098a" kind="variable"><name>_classMap</name></member>
     <member refid="classdakku_1_1Class_1a38f609682794eb8644448c458c9679cb" kind="function"><name>instance</name></member>
@@ -65,6 +70,23 @@
     <member refid="classdakku_1_1FileOutputStream_1a7a11c66c8938371d28c8f9ddce222f0c" kind="function"><name>FileOutputStream</name></member>
     <member refid="classdakku_1_1FileOutputStream_1ac793da8372c702f923a5a3f3306367ae" kind="function"><name>writeByte</name></member>
     <member refid="classdakku_1_1FileOutputStream_1a239a3e78d06f170d29b0e0db74e55c8c" kind="function"><name>writeBytes</name></member>
+  </compound>
+  <compound refid="classdakku_1_1Film" kind="class"><name>dakku::Film</name>
+    <member refid="classdakku_1_1Film_1a428fa06a95483622e24fef64a6d8255a" kind="variable"><name>pixels</name></member>
+    <member refid="classdakku_1_1Film_1ad88e45f878fce2f808efa02e0d4d15f1" kind="variable"><name>fullResolution</name></member>
+    <member refid="classdakku_1_1Film_1a0bb1214116cf0aa5c27bead71aeef981" kind="variable"><name>cropWindow</name></member>
+    <member refid="classdakku_1_1Film_1ab903557a26253b8d83313dcc8d082162" kind="variable"><name>croppedPixelBounds</name></member>
+    <member refid="classdakku_1_1Film_1a76d2a162152a9c6f0038857a2f9488c4" kind="variable"><name>filterTableWidth</name></member>
+    <member refid="classdakku_1_1Film_1a246c871f2adf1dca61f541a9f8544b4b" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
+    <member refid="classdakku_1_1Film_1abd5500d780cda9eb7b512dc7ac1740d5" kind="function"><name>serialize</name></member>
+    <member refid="classdakku_1_1Film_1a5c376ccf9abcdb293db2e9b9935b785c" kind="function"><name>deserialize</name></member>
+  </compound>
+  <compound refid="classdakku_1_1Filter" kind="class"><name>dakku::Filter</name>
+    <member refid="classdakku_1_1Filter_1a3cc4c4500a494841a7ba4c8a1e9ec14f" kind="variable"><name>radius</name></member>
+    <member refid="classdakku_1_1Filter_1ab8e792b035b315019d7fe4279ac914d8" kind="variable"><name>invRadius</name></member>
+    <member refid="classdakku_1_1Filter_1af5facbb86027fe03ecc4c9d6e4ae6a17" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
+    <member refid="classdakku_1_1Filter_1a41c4e564d4f720c22852f36412836574" kind="function"><name>Filter</name></member>
+    <member refid="classdakku_1_1Filter_1abe92aa3911e6856f7abcb1ed841ff3e9" kind="function"><name>evaluate</name></member>
   </compound>
   <compound refid="classdakku_1_1InputStream" kind="class"><name>dakku::InputStream</name>
     <member refid="classdakku_1_1InputStream_1a72f97ed2ffd8176e418dc962de184ade" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
@@ -121,6 +143,10 @@
     <member refid="classdakku_1_1OutputStream_1ac311e62efb5df496e544f8253d016852" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
     <member refid="classdakku_1_1OutputStream_1aa806da54971824033daaa468f630eb80" kind="function"><name>writeByte</name></member>
     <member refid="classdakku_1_1OutputStream_1aefc5fac8303fab5bd3c05aa1b7e26f90" kind="function"><name>writeBytes</name></member>
+  </compound>
+  <compound refid="structdakku_1_1Film_1_1Pixel" kind="struct"><name>dakku::Film::Pixel</name>
+    <member refid="structdakku_1_1Film_1_1Pixel_1a1605c1fd5405061a1d7b231109bbc2dd" kind="variable"><name>xyz</name></member>
+    <member refid="structdakku_1_1Film_1_1Pixel_1accd87822d3b67fbf4a0014915acc6cf2" kind="variable"><name>filterWeightSum</name></member>
   </compound>
   <compound refid="classdakku_1_1Point" kind="class"><name>dakku::Point</name>
     <member refid="classdakku_1_1Point_1ad8e485617ec76d5775ae2efd79522e29" kind="friend"><name>operator-</name></member>
@@ -203,7 +229,7 @@
   <compound refid="classdakku_1_1SerializableObject" kind="class"><name>dakku::SerializableObject</name>
     <member refid="classdakku_1_1SerializableObject_1a20425307e474662b2825ca6fe0c3e1fc" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
     <member refid="classdakku_1_1SerializableObject_1afbd8e48383b89c71132d091c9cd8b023" kind="function"><name>serialize</name></member>
-    <member refid="classdakku_1_1SerializableObject_1ae947f98ea5fdc86500b0f09a3cbd0d41" kind="function"><name>deserialize</name></member>
+    <member refid="classdakku_1_1SerializableObject_1af130034b07c1f5dc21fd84e0cbefbbb4" kind="function"><name>deserialize</name></member>
   </compound>
   <compound refid="classdakku_1_1Transform" kind="class"><name>dakku::Transform</name>
     <member refid="classdakku_1_1Transform_1ae48463c594e04791689e017baa5478ea" kind="variable"><name>m</name></member>
@@ -226,6 +252,11 @@
     <member refid="classdakku_1_1Transform_1a5bc005e21588a6ae9f81eadbd312a38c" kind="function"><name>swapsHandedNess</name></member>
     <member refid="classdakku_1_1Transform_1aa2b52f8ec5f9c6049e79d35e0b9e3716" kind="friend"><name>inverse</name></member>
     <member refid="classdakku_1_1Transform_1a3f1c4a4501cc53bf76979899c6da9498" kind="friend"><name>transpose</name></member>
+  </compound>
+  <compound refid="classdakku_1_1TriangleFilter" kind="class"><name>dakku::TriangleFilter</name>
+    <member refid="classdakku_1_1TriangleFilter_1a960b9a532a2a483637302dcd13925a57" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
+    <member refid="classdakku_1_1TriangleFilter_1acbb6ae521434bdb0336233ca2c79fe9d" kind="function"><name>evaluate</name></member>
+    <member refid="classdakku_1_1TriangleFilter_1a41c4e564d4f720c22852f36412836574" kind="function"><name>Filter</name></member>
   </compound>
   <compound refid="classdakku_1_1Vector" kind="class"><name>dakku::Vector</name>
     <member refid="classdakku_1_1Vector_1a316d381a8ae7de1d299f2131a042a349" kind="friend"><name>operator-</name></member>
@@ -340,7 +371,9 @@
     <member refid="namespacedakku_1a5e92e662fd955a5d5e138ec343496ecb" kind="variable"><name>Class</name></member>
     <member refid="namespacedakku_1a814749a6cf3cd7575912f5119a5be6ad" kind="variable"><name>Object</name></member>
     <member refid="namespacedakku_1afb9578030bac745ae0282d66d44df22c" kind="variable"><name>Matrix4x4</name></member>
-    <member refid="namespacedakku_1a44beae0957b26c547b6a4f0a7d60166e" kind="function"><name>DAKKU_EXPORT_OBJECTS</name></member>
+    <member refid="namespacedakku_1ad32aa25f5584289eda626b47ae3525cc" kind="variable"><name>Filter</name></member>
+    <member refid="namespacedakku_1a1bd6403f2998d6f8d22f87c99eca7eed" kind="variable"><name>Film</name></member>
+    <member refid="namespacedakku_1a6366bb992a59ee08f6364f16886477b0" kind="function"><name>DAKKU_EXPORT_OBJECTS</name></member>
     <member refid="namespacedakku_1af0a2453f8db3eb948901c7a0aed18434" kind="function"><name>begin</name></member>
     <member refid="namespacedakku_1a41ae9fcb2290e6ea6f7d4b0fbca86d17" kind="function"><name>end</name></member>
     <member refid="namespacedakku_1af754e4967f947036a0c31c0dbb4bf6e1" kind="function"><name>isNaN</name></member>
@@ -355,8 +388,9 @@
     <member refid="namespacedakku_1a2bbb040f4ba3ff426a543ad8129195de" kind="function"><name>rotateZ</name></member>
     <member refid="namespacedakku_1a5158202b82b35e77f9fc61285161488a" kind="function"><name>rotate</name></member>
     <member refid="namespacedakku_1aaa536865ee7be0b7a4ed6109f261eeb7" kind="function"><name>lookAt</name></member>
-    <member refid="namespacedakku_1a027a77f92f8ae36b091ef409ec0b4c6e" kind="function"><name>perspective</name></member>
+    <member refid="namespacedakku_1afd935f8b4f1ca9b28257d07b7f276739" kind="function"><name>perspective</name></member>
     <member refid="namespacedakku_1a2016f3c3a16c069a055a7017eacb0e66" kind="function"><name>dot</name></member>
+    <member refid="namespacedakku_1ab1fd7a566663942d0a6ddc982890d74b" kind="function"><name>DAKKU_EXPORT_OBJECTS</name></member>
     <member refid="namespacedakku_1a56ee8590ffd24bd3f70b555372fa4697" kind="function"><name>DAKKU_EXPORT_OBJECTS</name></member>
   </compound>
   <compound refid="namespacestd" kind="namespace"><name>std</name>
@@ -364,6 +398,10 @@
   <compound refid="bounds_8h" kind="file"><name>bounds.h</name>
   </compound>
   <compound refid="class_8h" kind="file"><name>class.h</name>
+  </compound>
+  <compound refid="film_8h" kind="file"><name>film.h</name>
+  </compound>
+  <compound refid="filter_8h" kind="file"><name>filter.h</name>
   </compound>
   <compound refid="logger_8h" kind="file"><name>logger.h</name>
     <member refid="logger_8h_1a9edd762e54e3ce43a70ddfe81b6e2fc5" kind="define"><name>DAKKU_ERR</name></member>
@@ -392,15 +430,22 @@
   </compound>
   <compound refid="vector__base_8h" kind="file"><name>vector_base.h</name>
   </compound>
+  <compound refid="box_8h" kind="file"><name>box.h</name>
+  </compound>
+  <compound refid="triangle_8h" kind="file"><name>triangle.h</name>
+  </compound>
   <compound refid="platform_8h" kind="file"><name>platform.h</name>
     <member refid="platform_8h_1a7bc0107b6d161e4a712eee011c57792c" kind="define"><name>DAKKU_INLINE</name></member>
     <member refid="platform_8h_1a5a852c25cfd1f921bfe140d4216a332f" kind="define"><name>DAKKU_EXPORT</name></member>
     <member refid="platform_8h_1a4dc2ada1002dbe2abdfbc3ec4e1aee36" kind="define"><name>DAKKU_IMPORT</name></member>
     <member refid="platform_8h_1a727f841a8615f5ba2055132fb14a18ec" kind="define"><name>DAKKU_CORE_MODULE</name></member>
     <member refid="platform_8h_1a6a1a04663120344778813d08185b6edb" kind="define"><name>DAKKU_STREAM_MODULE</name></member>
+    <member refid="platform_8h_1ac321229e879d4e468e1eb21d57344d58" kind="define"><name>DAKKU_FILTERS_MODULE</name></member>
     <member refid="platform_8h_1a09cd708407b8b153a1c5f21c764c142a" kind="define"><name>DAKKU_MAIN_MODULE</name></member>
   </compound>
   <compound refid="core_2api_8h" kind="file"><name>api.h</name>
+  </compound>
+  <compound refid="filters_2api_8h" kind="file"><name>api.h</name>
   </compound>
   <compound refid="stream_2api_8h" kind="file"><name>api.h</name>
   </compound>
@@ -409,12 +454,17 @@
   <compound refid="core_2fwd_8h" kind="file"><name>fwd.h</name>
     <member refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kind="define"><name>DAKKU_EXPORT_CORE</name></member>
   </compound>
+  <compound refid="filters_2fwd_8h" kind="file"><name>fwd.h</name>
+    <member refid="filters_2fwd_8h_1a43808664e862ce668a722f7b1077b1e5" kind="define"><name>DAKKU_EXPORT_FILTERS</name></member>
+  </compound>
   <compound refid="stream_2fwd_8h" kind="file"><name>fwd.h</name>
     <member refid="stream_2fwd_8h_1aaa6b0e6f6a552de3f9f6bb40ed162e36" kind="define"><name>DAKKU_EXPORT_STREAM</name></member>
   </compound>
   <compound refid="vector_base" kind="page"><name>vector_base</name>
   </compound>
   <compound refid="dir_aebb8dcc11953d78e620bbef0b9e2183" kind="dir"><name>src/core</name>
+  </compound>
+  <compound refid="dir_1bc13244e26df1e1f069a1fd18e36da3" kind="dir"><name>src/filters</name>
   </compound>
   <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
   </compound>

@@ -11,12 +11,13 @@
         <argsstring></argsstring>
         <name>stream</name>
         <briefdescription>
+<para>ofstream </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/stream/fstream.h" line="62" column="17" bodyfile="src/stream/fstream.h" bodystart="62" bodyend="-1"/>
+        <location file="src/stream/fstream.h" line="75" column="17" bodyfile="src/stream/fstream.h" bodystart="75" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -37,7 +38,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/stream/fstream.h" line="41" column="3"/>
+        <location file="src/stream/fstream.h" line="49" column="3"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1FileOutputStream_1a7a11c66c8938371d28c8f9ddce222f0c" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
         <type></type>
@@ -64,7 +65,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/stream/fstream.h" line="46" column="12"/>
+        <location file="src/stream/fstream.h" line="54" column="12"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1FileOutputStream_1ac793da8372c702f923a5a3f3306367ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -77,9 +78,10 @@
           <declname>value</declname>
         </param>
         <briefdescription>
+<para>write one byte </para>
         </briefdescription>
         <detaileddescription>
-<para>write one byte <parameterlist kind="param"><parameteritem>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>value</parametername>
 </parameternamelist>
@@ -92,7 +94,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/stream/fstream.h" line="51" column="8"/>
+        <location file="src/stream/fstream.h" line="59" column="8"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1FileOutputStream_1a239a3e78d06f170d29b0e0db74e55c8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>size_t</type>
@@ -109,9 +111,10 @@
           <declname>size</declname>
         </param>
         <briefdescription>
+<para>write <computeroutput>size</computeroutput> bytes starting at <computeroutput>ptr</computeroutput> </para>
         </briefdescription>
         <detaileddescription>
-<para>write [size] bytes starting at [ptr] <parameterlist kind="param"><parameteritem>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ptr</parametername>
 </parameternamelist>
@@ -134,13 +137,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/stream/fstream.h" line="59" column="10"/>
+        <location file="src/stream/fstream.h" line="67" column="10"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
+<para>file output stream </para>
     </briefdescription>
     <detaileddescription>
-<para>dakku file output stream </para>
     </detaileddescription>
     <inheritancegraph>
       <node id="1">
@@ -178,7 +181,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/stream/fstream.h" line="39" column="1" bodyfile="src/stream/fstream.h" bodystart="39" bodyend="63"/>
+    <location file="src/stream/fstream.h" line="47" column="1" bodyfile="src/stream/fstream.h" bodystart="47" bodyend="79"/>
     <listofallmembers>
       <member refid="classdakku_1_1FileOutputStream_1af0bdc8b8c2e04c6602cc9d4048a4d281" prot="public" virt="non-virtual"><scope>dakku::FileOutputStream</scope><name>DAKKU_DECLARE_OBJECT</name></member>
       <member refid="classdakku_1_1OutputStream_1ac311e62efb5df496e544f8253d016852" prot="public" virt="non-virtual" ambiguityscope="dakku::OutputStream::"><scope>dakku::FileOutputStream</scope><name>DAKKU_DECLARE_OBJECT</name></member>

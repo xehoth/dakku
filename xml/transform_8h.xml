@@ -125,12 +125,30 @@
         <childnode refid="4" relation="include">
         </childnode>
       </node>
+      <node id="11">
+        <label>src/core/film.h</label>
+        <link refid="film_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>src/core/filter.h</label>
+        <link refid="filter_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
       <node id="4">
         <label>src/core/object.h</label>
         <link refid="object_8h"/>
         <childnode refid="5" relation="include">
         </childnode>
         <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
         </childnode>
       </node>
       <node id="2">
@@ -139,12 +157,16 @@
         <childnode refid="3" relation="include">
         </childnode>
       </node>
-      <node id="6">
+      <node id="10">
         <label>src/core/serialization.h</label>
         <link refid="serialization_8h"/>
         <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -153,20 +175,44 @@
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="9">
-        <label>src/stream/api.h</label>
-        <link refid="stream_2api_8h"/>
-      </node>
       <node id="8">
-        <label>src/stream/fstream.h</label>
-        <link refid="fstream_8h"/>
+        <label>src/filters/api.h</label>
+        <link refid="filters_2api_8h"/>
+      </node>
+      <node id="7">
+        <label>src/filters/box.h</label>
+        <link refid="box_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>src/filters/fwd.h</label>
+        <link refid="filters_2fwd_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
         <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="7">
+      <node id="9">
+        <label>src/filters/triangle.h</label>
+        <link refid="triangle_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>src/stream/api.h</label>
+        <link refid="stream_2api_8h"/>
+      </node>
+      <node id="14">
+        <label>src/stream/fstream.h</label>
+        <link refid="fstream_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
         <label>src/stream/fwd.h</label>
         <link refid="stream_2fwd_8h"/>
-        <childnode refid="8" relation="include">
+        <childnode refid="14" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -396,7 +442,7 @@
 <codeline lineno="331" refid="namespacedakku_1aaa536865ee7be0b7a4ed6109f261eeb7" refkind="member"><highlight class="normal"><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref><sp/><ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref><sp/><ref refid="namespacedakku_1aaa536865ee7be0b7a4ed6109f261eeb7" kindref="member">lookAt</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Point" kindref="compound">Point3f</ref><sp/>&amp;pos,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Point" kindref="compound">Point3f</ref><sp/>&amp;look,</highlight></codeline>
 <codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Vector" kindref="compound">Vector3f</ref><sp/>&amp;refUp);</highlight></codeline>
 <codeline lineno="333"><highlight class="normal"></highlight></codeline>
-<codeline lineno="344" refid="namespacedakku_1a027a77f92f8ae36b091ef409ec0b4c6e" refkind="member"><highlight class="normal"><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref><sp/><ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref><sp/><ref refid="namespacedakku_1a027a77f92f8ae36b091ef409ec0b4c6e" kindref="member">perspective</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>fov,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>znear,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>zfar);</highlight></codeline>
+<codeline lineno="344" refid="namespacedakku_1afd935f8b4f1ca9b28257d07b7f276739" refkind="member"><highlight class="normal"><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref><sp/><ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref><sp/><ref refid="namespacedakku_1afd935f8b4f1ca9b28257d07b7f276739" kindref="member">perspective</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>fov,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>zNear,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>zFar);</highlight></codeline>
 <codeline lineno="345"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dakku</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="346"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
