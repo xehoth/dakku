@@ -76,7 +76,9 @@
     <member refid="classdakku_1_1Film_1ad88e45f878fce2f808efa02e0d4d15f1" kind="variable"><name>fullResolution</name></member>
     <member refid="classdakku_1_1Film_1a0bb1214116cf0aa5c27bead71aeef981" kind="variable"><name>cropWindow</name></member>
     <member refid="classdakku_1_1Film_1ab903557a26253b8d83313dcc8d082162" kind="variable"><name>croppedPixelBounds</name></member>
-    <member refid="classdakku_1_1Film_1a76d2a162152a9c6f0038857a2f9488c4" kind="variable"><name>filterTableWidth</name></member>
+    <member refid="classdakku_1_1Film_1a6fd4d08f6a29e54713a3972cd5a86afa" kind="variable"><name>filterTable</name></member>
+    <member refid="classdakku_1_1Film_1a189e65e1fdac41477f8c4fbc953a6c79" kind="variable"><name>mutex</name></member>
+    <member refid="classdakku_1_1Film_1a2761e7f49049136f7641e7eb9992aa3d" kind="variable"><name>filterTableWidth</name></member>
     <member refid="classdakku_1_1Film_1a246c871f2adf1dca61f541a9f8544b4b" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
     <member refid="classdakku_1_1Film_1abd5500d780cda9eb7b512dc7ac1740d5" kind="function"><name>serialize</name></member>
     <member refid="classdakku_1_1Film_1a5c376ccf9abcdb293db2e9b9935b785c" kind="function"><name>deserialize</name></member>
@@ -92,6 +94,13 @@
     <member refid="classdakku_1_1InputStream_1a72f97ed2ffd8176e418dc962de184ade" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
     <member refid="classdakku_1_1InputStream_1a2740268624ee2642cc70b419831153cd" kind="function"><name>readByte</name></member>
     <member refid="classdakku_1_1InputStream_1a38473aafb15173995f837b818903ad47" kind="function"><name>readBytes</name></member>
+  </compound>
+  <compound refid="classdakku_1_1L1CacheLineAlignedResource" kind="class"><name>dakku::L1CacheLineAlignedResource</name>
+    <member refid="classdakku_1_1L1CacheLineAlignedResource_1a510e0f8a82300e3cf0c6ee6fa8a889ed" kind="variable"><name>upStream</name></member>
+    <member refid="classdakku_1_1L1CacheLineAlignedResource_1aec866f03c500be7f144dc08f12add406" kind="function"><name>L1CacheLineAlignedResource</name></member>
+    <member refid="classdakku_1_1L1CacheLineAlignedResource_1a5d618ed96c73814fd10618cdf4694577" kind="function"><name>do_allocate</name></member>
+    <member refid="classdakku_1_1L1CacheLineAlignedResource_1a834de448e638b2bf9258b75bb210fcec" kind="function"><name>do_deallocate</name></member>
+    <member refid="classdakku_1_1L1CacheLineAlignedResource_1ac1a7d0784608447b9a4287fe81583a99" kind="function"><name>do_is_equal</name></member>
   </compound>
   <compound refid="classdakku_1_1Logger" kind="class"><name>dakku::Logger</name>
     <member refid="classdakku_1_1Logger_1aa6afc845ad6d0bcec3849515afc971cd" kind="variable"><name>_logger</name></member>
@@ -120,6 +129,14 @@
     <member refid="structdakku_1_1Matrix4x4_1ad9179852977de8383c0ae1683f12fc5f" kind="friend"><name>transpose</name></member>
     <member refid="structdakku_1_1Matrix4x4_1ac742caf08472cdfeda8fce5abf75c6a9" kind="friend"><name>inverse</name></member>
     <member refid="structdakku_1_1Matrix4x4_1a014300d3c91b6eea30d2c2e20f5d08ab" kind="friend"><name>operator&lt;&lt;</name></member>
+  </compound>
+  <compound refid="classdakku_1_1MemoryArena" kind="class"><name>dakku::MemoryArena</name>
+    <member refid="classdakku_1_1MemoryArena_1ab4b9c00cf51726ada8f065e50fd5ff8a" kind="variable"><name>upStream</name></member>
+    <member refid="classdakku_1_1MemoryArena_1a218ba07f5f79d5f45b1e5665d4635b4c" kind="variable"><name>resource</name></member>
+    <member refid="classdakku_1_1MemoryArena_1a7b9896cbdf1f21a31a4c12f875026b7d" kind="function"><name>MemoryArena</name></member>
+    <member refid="classdakku_1_1MemoryArena_1a71997f6b7b6fc9a808f95b8e729ff317" kind="function"><name>MemoryArena</name></member>
+    <member refid="classdakku_1_1MemoryArena_1af44583630a36c94b7040a9be738826af" kind="function"><name>allocObject</name></member>
+    <member refid="classdakku_1_1MemoryArena_1ae375338f226dc8cedae2d70eb6cb8111" kind="function"><name>release</name></member>
   </compound>
   <compound refid="structdakku_1_1Class_1_1Metadata" kind="struct"><name>dakku::Class::Metadata</name>
     <member refid="structdakku_1_1Class_1_1Metadata_1a6a92c14c8c88f4c3345dcde94bb7dd64" kind="variable"><name>constructor</name></member>
@@ -195,6 +212,8 @@
     <member refid="classdakku_1_1Property_1a064f14a56b1525c7c0fdb246d5105ce1" kind="function"><name>operator[]</name></member>
     <member refid="classdakku_1_1Property_1a98ec2192557128c57decc60656f2f019" kind="function"><name>toString</name></member>
     <member refid="classdakku_1_1Property_1aed6c0ab5f44b13d225b82a40fed74911" kind="function"><name>mergeTransform</name></member>
+    <member refid="classdakku_1_1Property_1aad759eefcdaf6eb0cad384e4fb500513" kind="function"><name>getVectorIf</name></member>
+    <member refid="classdakku_1_1Property_1ad2362fb13438b965ac0362889fe4ac79" kind="function"><name>getNumberIf</name></member>
     <member refid="classdakku_1_1Property_1ac83f11b8c568a198832de9754664be1d" kind="friend"><name>operator&lt;&lt;</name></member>
     <member refid="classdakku_1_1Property_1adc0d617576e2a4f4c1a52bc6d553972d" kind="friend"><name>to_json</name></member>
     <member refid="classdakku_1_1Property_1a23f4e939c57b1d95484c7ef925893aa2" kind="friend"><name>from_json</name></member>
@@ -364,6 +383,7 @@
     <member refid="namespacedakku_1a9b64e14dceffe6ac84029f1d40d6ec41" kind="typedef"><name>Normal3f</name></member>
     <member refid="namespacedakku_1a53c476552ecb27caba955675d8efb680" kind="variable"><name>INF</name></member>
     <member refid="namespacedakku_1af7aa9dc8532b3506d50b84f932560eb0" kind="variable"><name>PI</name></member>
+    <member refid="namespacedakku_1a09eee35861f6da88754b5645e5703ec4" kind="variable"><name>L1_CACHE_LINE_SIZE</name></member>
     <member refid="namespacedakku_1ab81d04f25c58c43667816d47b70f4734" kind="variable"><name>RelativeRoot</name></member>
     <member refid="namespacedakku_1a60d80eeb1de44e0299e91a45d8f94446" kind="variable"><name>InputStream</name></member>
     <member refid="namespacedakku_1a04dac11edaf26a2e58c8d00f31e6fa29" kind="variable"><name>OutputStream</name></member>
@@ -395,6 +415,8 @@
   </compound>
   <compound refid="namespacestd" kind="namespace"><name>std</name>
   </compound>
+  <compound refid="namespacestd_1_1pmr" kind="namespace"><name>std::pmr</name>
+  </compound>
   <compound refid="bounds_8h" kind="file"><name>bounds.h</name>
   </compound>
   <compound refid="class_8h" kind="file"><name>class.h</name>
@@ -409,6 +431,9 @@
     <member refid="logger_8h_1a614d277e34773e7302c6a2cda6909867" kind="define"><name>DAKKU_WARN</name></member>
     <member refid="logger_8h_1a9c5edb9052d4e1a515276aef0afef3e3" kind="define"><name>DAKKU_DEBUG</name></member>
     <member refid="logger_8h_1ad7e55cac030fb7ab38ebcfce264c1b3e" kind="define"><name>DAKKU_CHECK</name></member>
+  </compound>
+  <compound refid="memory_8h" kind="file"><name>memory.h</name>
+    <member refid="memory_8h_1a75ff6894fe90bba774fb4636c96c0031" kind="define"><name>DAKKU_ALLOCA</name></member>
   </compound>
   <compound refid="object_8h" kind="file"><name>object.h</name>
     <member refid="object_8h_1adebe9d6b28624419b368ed9d52f52f2f" kind="define"><name>DAKKU_DECLARE_OBJECT</name></member>

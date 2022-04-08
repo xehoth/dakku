@@ -7,6 +7,7 @@
     <includes local="no">spdlog/fmt/ostr.h</includes>
     <includes local="no">cstdlib</includes>
     <includedby refid="class_8h" local="no">src/core/class.h</includedby>
+    <includedby refid="memory_8h" local="no">src/core/memory.h</includedby>
     <includedby refid="vector__base_8h" local="no">src/core/vector_base.h</includedby>
     <incdepgraph>
       <node id="2">
@@ -66,7 +67,7 @@
         <label>src/core/api.h</label>
         <link refid="core_2api_8h"/>
       </node>
-      <node id="17">
+      <node id="18">
         <label>src/core/bounds.h</label>
         <link refid="bounds_8h"/>
         <childnode refid="10" relation="include">
@@ -101,6 +102,12 @@
         </childnode>
         <childnode refid="15" relation="include">
         </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>src/core/memory.h</label>
+        <link refid="memory_8h"/>
       </node>
       <node id="3">
         <label>src/core/object.h</label>
@@ -112,16 +119,16 @@
         <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="18">
+      <node id="19">
         <label>src/core/property.h</label>
         <link refid="property_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="19">
+      <node id="20">
         <label>src/core/ray.h</label>
         <link refid="ray_8h"/>
-        <childnode refid="20" relation="include">
+        <childnode refid="21" relation="include">
         </childnode>
       </node>
       <node id="9">
@@ -136,28 +143,28 @@
         <childnode refid="12" relation="include">
         </childnode>
       </node>
-      <node id="20">
+      <node id="21">
         <label>src/core/transform.h</label>
         <link refid="transform_8h"/>
-        <childnode refid="18" relation="include">
+        <childnode refid="19" relation="include">
         </childnode>
       </node>
-      <node id="16">
+      <node id="17">
         <label>src/core/vector.h</label>
         <link refid="vector_8h"/>
-        <childnode refid="17" relation="include">
-        </childnode>
         <childnode refid="18" relation="include">
         </childnode>
         <childnode refid="19" relation="include">
         </childnode>
         <childnode refid="20" relation="include">
         </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
       </node>
-      <node id="15">
+      <node id="16">
         <label>src/core/vector_base.h</label>
         <link refid="vector__base_8h"/>
-        <childnode refid="16" relation="include">
+        <childnode refid="17" relation="include">
         </childnode>
       </node>
       <node id="7">

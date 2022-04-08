@@ -47,7 +47,7 @@
         <label>src/core/api.h</label>
         <link refid="core_2api_8h"/>
       </node>
-      <node id="18">
+      <node id="19">
         <label>src/core/bounds.h</label>
         <link refid="bounds_8h"/>
         <childnode refid="10" relation="include">
@@ -82,7 +82,7 @@
         </childnode>
         <childnode refid="15" relation="include">
         </childnode>
-        <childnode refid="22" relation="include">
+        <childnode refid="23" relation="include">
         </childnode>
       </node>
       <node id="15">
@@ -92,6 +92,12 @@
         </childnode>
         <childnode refid="16" relation="include">
         </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>src/core/memory.h</label>
+        <link refid="memory_8h"/>
       </node>
       <node id="3">
         <label>src/core/object.h</label>
@@ -103,19 +109,19 @@
         <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="19">
+      <node id="20">
         <label>src/core/property.h</label>
         <link refid="property_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="20">
+      <node id="21">
         <label>src/core/ray.h</label>
         <link refid="ray_8h"/>
-        <childnode refid="21" relation="include">
+        <childnode refid="22" relation="include">
         </childnode>
       </node>
-      <node id="22">
+      <node id="23">
         <label>src/core/relative.h</label>
         <link refid="relative_8h"/>
       </node>
@@ -131,28 +137,28 @@
         <childnode refid="12" relation="include">
         </childnode>
       </node>
-      <node id="21">
+      <node id="22">
         <label>src/core/transform.h</label>
         <link refid="transform_8h"/>
-        <childnode refid="19" relation="include">
+        <childnode refid="20" relation="include">
         </childnode>
       </node>
-      <node id="17">
+      <node id="18">
         <label>src/core/vector.h</label>
         <link refid="vector_8h"/>
-        <childnode refid="18" relation="include">
-        </childnode>
         <childnode refid="19" relation="include">
         </childnode>
         <childnode refid="20" relation="include">
         </childnode>
         <childnode refid="21" relation="include">
         </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
       </node>
-      <node id="16">
+      <node id="17">
         <label>src/core/vector_base.h</label>
         <link refid="vector__base_8h"/>
-        <childnode refid="17" relation="include">
+        <childnode refid="18" relation="include">
         </childnode>
       </node>
       <node id="7">
@@ -235,40 +241,42 @@
 <codeline lineno="19"><highlight class="normal"></highlight></codeline>
 <codeline lineno="21"><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>PI<sp/>=<sp/>std::numbers::pi_v&lt;float&gt;;</highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
-<codeline lineno="29" refid="conceptdakku_1_1ArithmeticType" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">concept<sp/></highlight><highlight class="normal"><ref refid="conceptdakku_1_1ArithmeticType" kindref="compound">ArithmeticType</ref><sp/>=<sp/>std::is_arithmetic_v&lt;std::decay_t&lt;T&gt;&gt;;</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
-<codeline lineno="39" refid="namespacedakku_1af754e4967f947036a0c31c0dbb4bf6e1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">requires</highlight><highlight class="normal"><sp/>std::is_floating_point_v&lt;T&gt;<sp/><ref refid="platform_8h_1a7bc0107b6d161e4a712eee011c57792c" kindref="member">DAKKU_INLINE</ref><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespacedakku_1af754e4967f947036a0c31c0dbb4bf6e1" kindref="member">isNaN</ref>(T<sp/>x)<sp/>{</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::isnan(x);</highlight></codeline>
-<codeline lineno="41"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
-<codeline lineno="50" refid="namespacedakku_1af703ca0ba560169d1daf114a07175bf4" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">requires</highlight><highlight class="normal"><sp/>std::is_integral_v&lt;T&gt;<sp/><ref refid="platform_8h_1a7bc0107b6d161e4a712eee011c57792c" kindref="member">DAKKU_INLINE</ref><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespacedakku_1af754e4967f947036a0c31c0dbb4bf6e1" kindref="member">isNaN</ref>(T)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"></highlight></codeline>
-<codeline lineno="58" refid="namespacedakku_1a2a53414d45143151128b45997c42d7af" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="namespacedakku_1a2a53414d45143151128b45997c42d7af" kindref="member">radians</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>deg)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>PI<sp/>/<sp/>180.0f<sp/>*<sp/>deg;<sp/>}</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"></highlight></codeline>
-<codeline lineno="66" refid="namespacedakku_1a3d1bddf363d9216df7df7c148f917cd4" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="namespacedakku_1a3d1bddf363d9216df7df7c148f917cd4" kindref="member">degrees</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>rad)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>180.0f<sp/>/<sp/>PI<sp/>*<sp/>rad;<sp/>}</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"></highlight></codeline>
-<codeline lineno="68" refid="namespacedakku_1ab81d04f25c58c43667816d47b70f4734" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref><sp/><ref refid="classdakku_1_1RelativeRoot" kindref="compound">RelativeRoot</ref>;</highlight></codeline>
-<codeline lineno="69" refid="namespacedakku_1a60d80eeb1de44e0299e91a45d8f94446" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref><sp/><ref refid="classdakku_1_1InputStream" kindref="compound">InputStream</ref>;</highlight></codeline>
-<codeline lineno="70" refid="namespacedakku_1a04dac11edaf26a2e58c8d00f31e6fa29" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref><sp/><ref refid="classdakku_1_1OutputStream" kindref="compound">OutputStream</ref>;</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"></highlight></codeline>
-<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfca" kindref="member">PropertyType</ref>;</highlight></codeline>
-<codeline lineno="73" refid="namespacedakku_1a96416914fd138a9ad1724211806eaadc" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref><sp/><ref refid="classdakku_1_1Property" kindref="compound">Property</ref>;</highlight></codeline>
-<codeline lineno="74" refid="namespacedakku_1a5e92e662fd955a5d5e138ec343496ecb" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref><sp/><ref refid="classdakku_1_1Class" kindref="compound">Class</ref>;</highlight></codeline>
-<codeline lineno="75" refid="namespacedakku_1a814749a6cf3cd7575912f5119a5be6ad" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref><sp/><ref refid="classdakku_1_1Object" kindref="compound">Object</ref>;</highlight></codeline>
-<codeline lineno="76" refid="namespacedakku_1afb9578030bac745ae0282d66d44df22c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref><sp/><ref refid="structdakku_1_1Matrix4x4" kindref="compound">Matrix4x4</ref>;</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
-<codeline lineno="82" refid="conceptdakku_1_1ObjectType" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">concept<sp/></highlight><highlight class="normal"><ref refid="conceptdakku_1_1ObjectType" kindref="compound">ObjectType</ref><sp/>=<sp/>std::is_base_of_v&lt;Object,<sp/>T&gt;;</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Transform;</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Ray;</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">RayDifferential;</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"></highlight></codeline>
-<codeline lineno="87" refid="namespacedakku_1ad32aa25f5584289eda626b47ae3525cc" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref><sp/><ref refid="classdakku_1_1Filter" kindref="compound">Filter</ref>;</highlight></codeline>
-<codeline lineno="88" refid="namespacedakku_1a1bd6403f2998d6f8d22f87c99eca7eed" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref><sp/><ref refid="classdakku_1_1Film" kindref="compound">Film</ref>;</highlight></codeline>
-<codeline lineno="89"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dakku</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="24"><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>L1_CACHE_LINE_SIZE<sp/>=<sp/>64;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="32" refid="conceptdakku_1_1ArithmeticType" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">concept<sp/></highlight><highlight class="normal"><ref refid="conceptdakku_1_1ArithmeticType" kindref="compound">ArithmeticType</ref><sp/>=<sp/>std::is_arithmetic_v&lt;std::decay_t&lt;T&gt;&gt;;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="42" refid="namespacedakku_1af754e4967f947036a0c31c0dbb4bf6e1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">requires</highlight><highlight class="normal"><sp/>std::is_floating_point_v&lt;T&gt;<sp/><ref refid="platform_8h_1a7bc0107b6d161e4a712eee011c57792c" kindref="member">DAKKU_INLINE</ref><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespacedakku_1af754e4967f947036a0c31c0dbb4bf6e1" kindref="member">isNaN</ref>(T<sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::isnan(x);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="53" refid="namespacedakku_1af703ca0ba560169d1daf114a07175bf4" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">requires</highlight><highlight class="normal"><sp/>std::is_integral_v&lt;T&gt;<sp/><ref refid="platform_8h_1a7bc0107b6d161e4a712eee011c57792c" kindref="member">DAKKU_INLINE</ref><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespacedakku_1af754e4967f947036a0c31c0dbb4bf6e1" kindref="member">isNaN</ref>(T)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="namespacedakku_1a2a53414d45143151128b45997c42d7af" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="namespacedakku_1a2a53414d45143151128b45997c42d7af" kindref="member">radians</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>deg)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>PI<sp/>/<sp/>180.0f<sp/>*<sp/>deg;<sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="namespacedakku_1a3d1bddf363d9216df7df7c148f917cd4" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="namespacedakku_1a3d1bddf363d9216df7df7c148f917cd4" kindref="member">degrees</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>rad)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>180.0f<sp/>/<sp/>PI<sp/>*<sp/>rad;<sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="namespacedakku_1ab81d04f25c58c43667816d47b70f4734" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref><sp/><ref refid="classdakku_1_1RelativeRoot" kindref="compound">RelativeRoot</ref>;</highlight></codeline>
+<codeline lineno="72" refid="namespacedakku_1a60d80eeb1de44e0299e91a45d8f94446" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref><sp/><ref refid="classdakku_1_1InputStream" kindref="compound">InputStream</ref>;</highlight></codeline>
+<codeline lineno="73" refid="namespacedakku_1a04dac11edaf26a2e58c8d00f31e6fa29" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref><sp/><ref refid="classdakku_1_1OutputStream" kindref="compound">OutputStream</ref>;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfca" kindref="member">PropertyType</ref>;</highlight></codeline>
+<codeline lineno="76" refid="namespacedakku_1a96416914fd138a9ad1724211806eaadc" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref><sp/><ref refid="classdakku_1_1Property" kindref="compound">Property</ref>;</highlight></codeline>
+<codeline lineno="77" refid="namespacedakku_1a5e92e662fd955a5d5e138ec343496ecb" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref><sp/><ref refid="classdakku_1_1Class" kindref="compound">Class</ref>;</highlight></codeline>
+<codeline lineno="78" refid="namespacedakku_1a814749a6cf3cd7575912f5119a5be6ad" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref><sp/><ref refid="classdakku_1_1Object" kindref="compound">Object</ref>;</highlight></codeline>
+<codeline lineno="79" refid="namespacedakku_1afb9578030bac745ae0282d66d44df22c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref><sp/><ref refid="structdakku_1_1Matrix4x4" kindref="compound">Matrix4x4</ref>;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="85" refid="conceptdakku_1_1ObjectType" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">concept<sp/></highlight><highlight class="normal"><ref refid="conceptdakku_1_1ObjectType" kindref="compound">ObjectType</ref><sp/>=<sp/>std::is_base_of_v&lt;Object,<sp/>T&gt;;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Transform;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Ray;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">RayDifferential;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="namespacedakku_1ad32aa25f5584289eda626b47ae3525cc" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref><sp/><ref refid="classdakku_1_1Filter" kindref="compound">Filter</ref>;</highlight></codeline>
+<codeline lineno="91" refid="namespacedakku_1a1bd6403f2998d6f8d22f87c99eca7eed" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref><sp/><ref refid="classdakku_1_1Film" kindref="compound">Film</ref>;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dakku</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="src/core/fwd.h"/>
   </compounddef>

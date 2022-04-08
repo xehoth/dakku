@@ -19,7 +19,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/film.h" line="37" column="19" bodyfile="src/core/film.h" bodystart="37" bodyend="-1"/>
+        <location file="src/core/film.h" line="38" column="19" bodyfile="src/core/film.h" bodystart="38" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classdakku_1_1Film_1ad88e45f878fce2f808efa02e0d4d15f1" prot="private" static="no" mutable="no">
         <type><ref refid="namespacedakku_1a059653c441fcfa28e3b00de3709176e9" kindref="member">Point2i</ref></type>
@@ -33,7 +33,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/film.h" line="39" column="11" bodyfile="src/core/film.h" bodystart="39" bodyend="-1"/>
+        <location file="src/core/film.h" line="40" column="11" bodyfile="src/core/film.h" bodystart="40" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classdakku_1_1Film_1a0bb1214116cf0aa5c27bead71aeef981" prot="private" static="no" mutable="no">
         <type><ref refid="namespacedakku_1abcc743bdeb62068a56f14ac3ef9963b7" kindref="member">Bounds2f</ref></type>
@@ -48,7 +48,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/film.h" line="41" column="12" bodyfile="src/core/film.h" bodystart="41" bodyend="-1"/>
+        <location file="src/core/film.h" line="42" column="12" bodyfile="src/core/film.h" bodystart="42" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classdakku_1_1Film_1ab903557a26253b8d83313dcc8d082162" prot="private" static="no" mutable="no">
         <type><ref refid="namespacedakku_1ae2cd423e1acf2fd91f4cdf3cc5ad50c6" kindref="member">Bounds2i</ref></type>
@@ -61,13 +61,42 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/film.h" line="42" column="12" bodyfile="src/core/film.h" bodystart="42" bodyend="-1"/>
+        <location file="src/core/film.h" line="43" column="12" bodyfile="src/core/film.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdakku_1_1Film_1a6fd4d08f6a29e54713a3972cd5a86afa" prot="private" static="no" mutable="no">
+        <type>std::array&lt; float, filterTableWidth *filterTableWidth &gt;</type>
+        <definition>std::array&lt;float, filterTableWidth * filterTableWidth&gt; dakku::Film::filterTable</definition>
+        <argsstring></argsstring>
+        <name>filterTable</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+<para>filter table </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/film.h" line="49" column="14" bodyfile="src/core/film.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdakku_1_1Film_1a189e65e1fdac41477f8c4fbc953a6c79" prot="private" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex dakku::Film::mutex</definition>
+        <argsstring></argsstring>
+        <name>mutex</name>
+        <briefdescription>
+<para>mutex to protect tile merge </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/film.h" line="52" column="14" bodyfile="src/core/film.h" bodystart="52" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-static-attrib">
-      <memberdef kind="variable" id="classdakku_1_1Film_1a76d2a162152a9c6f0038857a2f9488c4" prot="private" static="yes" constexpr="yes" mutable="no">
-        <type>constexpr int</type>
-        <definition>constexpr int dakku::Film::filterTableWidth</definition>
+      <memberdef kind="variable" id="classdakku_1_1Film_1a2761e7f49049136f7641e7eb9992aa3d" prot="private" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr size_t</type>
+        <definition>constexpr size_t dakku::Film::filterTableWidth</definition>
         <argsstring></argsstring>
         <name>filterTableWidth</name>
         <initializer>= 16</initializer>
@@ -78,7 +107,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/film.h" line="45" column="24" bodyfile="src/core/film.h" bodystart="45" bodyend="-1"/>
+        <location file="src/core/film.h" line="46" column="27" bodyfile="src/core/film.h" bodystart="46" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -99,7 +128,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/film.h" line="13" column="3"/>
+        <location file="src/core/film.h" line="14" column="3"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Film_1abd5500d780cda9eb7b512dc7ac1740d5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -128,7 +157,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/film.h" line="17" column="8"/>
+        <location file="src/core/film.h" line="18" column="8"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Film_1a5c376ccf9abcdb293db2e9b9935b785c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -157,7 +186,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/film.h" line="18" column="8"/>
+        <location file="src/core/film.h" line="19" column="8"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -201,14 +230,15 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/core/film.h" line="11" column="1" bodyfile="src/core/film.h" bodystart="11" bodyend="50"/>
+    <location file="src/core/film.h" line="12" column="1" bodyfile="src/core/film.h" bodystart="12" bodyend="57"/>
     <listofallmembers>
       <member refid="classdakku_1_1Film_1ab903557a26253b8d83313dcc8d082162" prot="private" virt="non-virtual"><scope>dakku::Film</scope><name>croppedPixelBounds</name></member>
       <member refid="classdakku_1_1Film_1a0bb1214116cf0aa5c27bead71aeef981" prot="private" virt="non-virtual"><scope>dakku::Film</scope><name>cropWindow</name></member>
       <member refid="classdakku_1_1Film_1a246c871f2adf1dca61f541a9f8544b4b" prot="public" virt="non-virtual"><scope>dakku::Film</scope><name>DAKKU_DECLARE_OBJECT</name></member>
       <member refid="classdakku_1_1SerializableObject_1a20425307e474662b2825ca6fe0c3e1fc" prot="public" virt="non-virtual" ambiguityscope="dakku::SerializableObject::"><scope>dakku::Film</scope><name>DAKKU_DECLARE_OBJECT</name></member>
       <member refid="classdakku_1_1Film_1a5c376ccf9abcdb293db2e9b9935b785c" prot="public" virt="virtual"><scope>dakku::Film</scope><name>deserialize</name></member>
-      <member refid="classdakku_1_1Film_1a76d2a162152a9c6f0038857a2f9488c4" prot="private" virt="non-virtual"><scope>dakku::Film</scope><name>filterTableWidth</name></member>
+      <member refid="classdakku_1_1Film_1a6fd4d08f6a29e54713a3972cd5a86afa" prot="private" virt="non-virtual"><scope>dakku::Film</scope><name>filterTable</name></member>
+      <member refid="classdakku_1_1Film_1a2761e7f49049136f7641e7eb9992aa3d" prot="private" virt="non-virtual"><scope>dakku::Film</scope><name>filterTableWidth</name></member>
       <member refid="classdakku_1_1Film_1ad88e45f878fce2f808efa02e0d4d15f1" prot="private" virt="non-virtual"><scope>dakku::Film</scope><name>fullResolution</name></member>
       <member refid="classdakku_1_1Object_1a543f734268f7be81badecee6cf7245cc" prot="public" virt="virtual"><scope>dakku::Film</scope><name>getClassName</name></member>
       <member refid="classdakku_1_1Object_1a247ed68865f464d511b7fdb85467c354" prot="public" virt="non-virtual"><scope>dakku::Film</scope><name>getClassNameStatic</name></member>
@@ -216,6 +246,7 @@
       <member refid="classdakku_1_1Object_1a08ec83c660afb1850455ef30c43fa29c" prot="public" virt="non-virtual"><scope>dakku::Film</scope><name>getParentNameStatic</name></member>
       <member refid="classdakku_1_1Object_1a055e32b0624d9a96fc2014fe5d9d0c81" prot="public" virt="non-virtual"><scope>dakku::Film</scope><name>isBaseOf</name></member>
       <member refid="classdakku_1_1Object_1add47b28fc1878f008bb6664a83faad72" prot="public" virt="non-virtual"><scope>dakku::Film</scope><name>isDerivedFrom</name></member>
+      <member refid="classdakku_1_1Film_1a189e65e1fdac41477f8c4fbc953a6c79" prot="private" virt="non-virtual"><scope>dakku::Film</scope><name>mutex</name></member>
       <member refid="classdakku_1_1Object_1a20e78d46fa11d575d63e048279150eac" prot="public" virt="non-virtual"><scope>dakku::Film</scope><name>Object</name></member>
       <member refid="classdakku_1_1Film_1a428fa06a95483622e24fef64a6d8255a" prot="private" virt="non-virtual"><scope>dakku::Film</scope><name>pixels</name></member>
       <member refid="classdakku_1_1Film_1abd5500d780cda9eb7b512dc7ac1740d5" prot="public" virt="virtual"><scope>dakku::Film</scope><name>serialize</name></member>

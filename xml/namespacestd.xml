@@ -2,6 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
   <compounddef id="namespacestd" kind="namespace" language="C++">
     <compoundname>std</compoundname>
+    <innernamespace refid="namespacestd_1_1pmr">std::pmr</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
