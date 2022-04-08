@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/bounds.h" line="202" column="9" bodyfile="src/core/bounds.h" bodystart="202" bodyend="-1"/>
+        <location file="src/core/bounds.h" line="210" column="9" bodyfile="src/core/bounds.h" bodystart="210" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classdakku_1_1BoundsBase_1a1df49abc60c6cee7febd54aa46d04aa8" prot="public" static="no" mutable="no">
         <type><ref refid="classdakku_1_1Point" kindref="compound">Point</ref>&lt; T, S &gt;</type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/bounds.h" line="204" column="9" bodyfile="src/core/bounds.h" bodystart="204" bodyend="-1"/>
+        <location file="src/core/bounds.h" line="212" column="9" bodyfile="src/core/bounds.h" bodystart="212" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -295,6 +295,19 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/core/bounds.h" line="159" column="8" bodyfile="src/core/bounds.h" bodystart="159" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1BoundsBase_1a1131f2fb765ed853a8623a5aa0266d5e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string dakku::BoundsBase&lt; T, S &gt;::toString</definition>
+        <argsstring>() const</argsstring>
+        <name>toString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/bounds.h" line="201" column="16" bodyfile="src/core/bounds.h" bodystart="201" bodyend="203"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="friend">
@@ -550,6 +563,27 @@
         </inbodydescription>
         <location file="src/core/bounds.h" line="190" column="21" bodyfile="src/core/bounds.h" bodystart="190" bodyend="199"/>
       </memberdef>
+      <memberdef kind="friend" id="classdakku_1_1BoundsBase_1a02d61000d3d0599081a30bafc71bf758" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream &amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;os, const BoundsBase &amp;b)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classdakku_1_1BoundsBase" kindref="compound">BoundsBase</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/bounds.h" line="205" column="10" bodyfile="src/core/bounds.h" bodystart="205" bodyend="207"/>
+      </memberdef>
       </sectiondef>
     <briefdescription>
 <para>bounding box base </para>
@@ -574,7 +608,7 @@
 </parameterlist>
 </para>
     </detaileddescription>
-    <location file="src/core/bounds.h" line="16" column="1" bodyfile="src/core/bounds.h" bodystart="16" bodyend="205"/>
+    <location file="src/core/bounds.h" line="16" column="1" bodyfile="src/core/bounds.h" bodystart="16" bodyend="213"/>
     <listofallmembers>
       <member refid="classdakku_1_1BoundsBase_1a1533ac65725aee5fa771b9e068f1050d" prot="public" virt="non-virtual"><scope>dakku::BoundsBase</scope><name>boundingSphere</name></member>
       <member refid="classdakku_1_1BoundsBase_1a4dea00502d665d2f3e6657507a9b03fb" prot="public" virt="non-virtual"><scope>dakku::BoundsBase</scope><name>BoundsBase</name></member>
@@ -591,12 +625,14 @@
       <member refid="classdakku_1_1BoundsBase_1ae578a4e99b038d678ceef58b0acde222" prot="public" virt="non-virtual"><scope>dakku::BoundsBase</scope><name>operator BoundsBase&lt; U, S &gt;</name></member>
       <member refid="classdakku_1_1BoundsBase_1a06fb31654a6571636ccab3b28d4edbaf" prot="public" virt="non-virtual"><scope>dakku::BoundsBase</scope><name>operator!=</name></member>
       <member refid="classdakku_1_1BoundsBase_1aabca5f08125e27d64b79bcb2cd1e7704" prot="public" virt="non-virtual"><scope>dakku::BoundsBase</scope><name>operator&amp;</name></member>
+      <member refid="classdakku_1_1BoundsBase_1a02d61000d3d0599081a30bafc71bf758" prot="public" virt="non-virtual"><scope>dakku::BoundsBase</scope><name>operator&lt;&lt;</name></member>
       <member refid="classdakku_1_1BoundsBase_1acd1339c39870cd9bac4a0c2ee3726d20" prot="public" virt="non-virtual"><scope>dakku::BoundsBase</scope><name>operator==</name></member>
       <member refid="classdakku_1_1BoundsBase_1a911ebeb367646117e45b81b7c3fceb02" prot="public" virt="non-virtual"><scope>dakku::BoundsBase</scope><name>operator|</name></member>
       <member refid="classdakku_1_1BoundsBase_1a775827382a4cfcd6d7e18741bb7236f8" prot="public" virt="non-virtual"><scope>dakku::BoundsBase</scope><name>operator|</name></member>
       <member refid="classdakku_1_1BoundsBase_1a354b7ef9e0dc908b9eca0a47f64cd37c" prot="public" virt="non-virtual"><scope>dakku::BoundsBase</scope><name>overlaps</name></member>
       <member refid="classdakku_1_1BoundsBase_1a1df49abc60c6cee7febd54aa46d04aa8" prot="public" virt="non-virtual"><scope>dakku::BoundsBase</scope><name>pMax</name></member>
       <member refid="classdakku_1_1BoundsBase_1abd7c34bec0f05f1dfb494b76eed47622" prot="public" virt="non-virtual"><scope>dakku::BoundsBase</scope><name>pMin</name></member>
+      <member refid="classdakku_1_1BoundsBase_1a1131f2fb765ed853a8623a5aa0266d5e" prot="public" virt="non-virtual"><scope>dakku::BoundsBase</scope><name>toString</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

@@ -32,6 +32,7 @@
     <member refid="classdakku_1_1BoundsBase_1ac3a04d4a5ba9884d9ab2734c5c94248f" kind="function"><name>lerp</name></member>
     <member refid="classdakku_1_1BoundsBase_1a91d113dc02fe1d57163f8b2cee408ed1" kind="function"><name>offset</name></member>
     <member refid="classdakku_1_1BoundsBase_1a1533ac65725aee5fa771b9e068f1050d" kind="function"><name>boundingSphere</name></member>
+    <member refid="classdakku_1_1BoundsBase_1a1131f2fb765ed853a8623a5aa0266d5e" kind="function"><name>toString</name></member>
     <member refid="classdakku_1_1BoundsBase_1a354b7ef9e0dc908b9eca0a47f64cd37c" kind="friend"><name>overlaps</name></member>
     <member refid="classdakku_1_1BoundsBase_1a4ba0780dc5fab304376d54affb497ae8" kind="friend"><name>inside</name></member>
     <member refid="classdakku_1_1BoundsBase_1aaac97265d9f25e86e8a992a5bf5a96d4" kind="friend"><name>insideExclusive</name></member>
@@ -40,6 +41,7 @@
     <member refid="classdakku_1_1BoundsBase_1a911ebeb367646117e45b81b7c3fceb02" kind="friend"><name>operator|</name></member>
     <member refid="classdakku_1_1BoundsBase_1a775827382a4cfcd6d7e18741bb7236f8" kind="friend"><name>operator|</name></member>
     <member refid="classdakku_1_1BoundsBase_1aabca5f08125e27d64b79bcb2cd1e7704" kind="friend"><name>operator&amp;</name></member>
+    <member refid="classdakku_1_1BoundsBase_1a02d61000d3d0599081a30bafc71bf758" kind="friend"><name>operator&lt;&lt;</name></member>
   </compound>
   <compound refid="classdakku_1_1BoxFilter" kind="class"><name>dakku::BoxFilter</name>
     <member refid="classdakku_1_1BoxFilter_1ac4033f9e7e2cb0eee1b0eb5d8bd299b9" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
@@ -56,6 +58,10 @@
     <member refid="classdakku_1_1Class_1a2660e682570378b72183207e1a7fa636" kind="function"><name>create</name></member>
     <member refid="classdakku_1_1Class_1af64deeeb68dfef5d6d4db8401df6281b" kind="function"><name>Class</name></member>
     <member refid="classdakku_1_1Class_1a055cb7eb3d914e2a1242d0d39f12f39d" kind="function"><name>constructor</name></member>
+  </compound>
+  <compound refid="classdakku_1_1CoefficientSpectrum" kind="class"><name>dakku::CoefficientSpectrum</name>
+    <member refid="classdakku_1_1CoefficientSpectrum_1a3419bb7bc9a9f6ab7b2c00c3cee942d1" kind="function"><name>isBlack</name></member>
+    <member refid="classdakku_1_1CoefficientSpectrum_1ae9b538dae7b0ef76e17b5b8379d62224" kind="function"><name>clamp</name></member>
   </compound>
   <compound refid="classdakku_1_1FileInputStream" kind="class"><name>dakku::FileInputStream</name>
     <member refid="classdakku_1_1FileInputStream_1ad64d091dae724af7202e76219a7eb59e" kind="variable"><name>stream</name></member>
@@ -74,14 +80,22 @@
   <compound refid="classdakku_1_1Film" kind="class"><name>dakku::Film</name>
     <member refid="classdakku_1_1Film_1a428fa06a95483622e24fef64a6d8255a" kind="variable"><name>pixels</name></member>
     <member refid="classdakku_1_1Film_1ad88e45f878fce2f808efa02e0d4d15f1" kind="variable"><name>fullResolution</name></member>
-    <member refid="classdakku_1_1Film_1a0bb1214116cf0aa5c27bead71aeef981" kind="variable"><name>cropWindow</name></member>
+    <member refid="classdakku_1_1Film_1af37a20765786993f8e85f693da1aabae" kind="variable"><name>filter</name></member>
+    <member refid="classdakku_1_1Film_1a4e50af430a0965655502f18ebcd3a720" kind="variable"><name>fileName</name></member>
     <member refid="classdakku_1_1Film_1ab903557a26253b8d83313dcc8d082162" kind="variable"><name>croppedPixelBounds</name></member>
     <member refid="classdakku_1_1Film_1a6fd4d08f6a29e54713a3972cd5a86afa" kind="variable"><name>filterTable</name></member>
     <member refid="classdakku_1_1Film_1a189e65e1fdac41477f8c4fbc953a6c79" kind="variable"><name>mutex</name></member>
+    <member refid="classdakku_1_1Film_1a59fba870ff465e7f3611cef64074c3f1" kind="variable"><name>scale</name></member>
+    <member refid="classdakku_1_1Film_1a388a8ca872d43f220b7efd79cccd84af" kind="variable"><name>maxSampleLuminance</name></member>
     <member refid="classdakku_1_1Film_1a2761e7f49049136f7641e7eb9992aa3d" kind="variable"><name>filterTableWidth</name></member>
     <member refid="classdakku_1_1Film_1a246c871f2adf1dca61f541a9f8544b4b" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
+    <member refid="classdakku_1_1Film_1ad8e4f2a09968ca20e9963575c573ef5d" kind="function"><name>Film</name></member>
     <member refid="classdakku_1_1Film_1abd5500d780cda9eb7b512dc7ac1740d5" kind="function"><name>serialize</name></member>
     <member refid="classdakku_1_1Film_1a5c376ccf9abcdb293db2e9b9935b785c" kind="function"><name>deserialize</name></member>
+  </compound>
+  <compound refid="structdakku_1_1FilmTilePixel" kind="struct"><name>dakku::FilmTilePixel</name>
+    <member refid="structdakku_1_1FilmTilePixel_1af4beb8c6536598bd0233bcfa7b836f03" kind="variable"><name>contribSum</name></member>
+    <member refid="structdakku_1_1FilmTilePixel_1a4df7e5e93e3e44818913bb0e0fe3a97d" kind="variable"><name>filterWeightSum</name></member>
   </compound>
   <compound refid="classdakku_1_1Filter" kind="class"><name>dakku::Filter</name>
     <member refid="classdakku_1_1Filter_1a3cc4c4500a494841a7ba4c8a1e9ec14f" kind="variable"><name>radius</name></member>
@@ -164,6 +178,7 @@
   <compound refid="structdakku_1_1Film_1_1Pixel" kind="struct"><name>dakku::Film::Pixel</name>
     <member refid="structdakku_1_1Film_1_1Pixel_1a1605c1fd5405061a1d7b231109bbc2dd" kind="variable"><name>xyz</name></member>
     <member refid="structdakku_1_1Film_1_1Pixel_1accd87822d3b67fbf4a0014915acc6cf2" kind="variable"><name>filterWeightSum</name></member>
+    <member refid="structdakku_1_1Film_1_1Pixel_1acfbbbf1e8a707f1c10b73ba2d9215473" kind="variable"><name>splatXyz</name></member>
   </compound>
   <compound refid="classdakku_1_1Point" kind="class"><name>dakku::Point</name>
     <member refid="classdakku_1_1Point_1ad8e485617ec76d5775ae2efd79522e29" kind="friend"><name>operator-</name></member>
@@ -214,6 +229,7 @@
     <member refid="classdakku_1_1Property_1aed6c0ab5f44b13d225b82a40fed74911" kind="function"><name>mergeTransform</name></member>
     <member refid="classdakku_1_1Property_1aad759eefcdaf6eb0cad384e4fb500513" kind="function"><name>getVectorIf</name></member>
     <member refid="classdakku_1_1Property_1ad2362fb13438b965ac0362889fe4ac79" kind="function"><name>getNumberIf</name></member>
+    <member refid="classdakku_1_1Property_1a8e16cf738d78a8c08bab9d1537e926e5" kind="function"><name>getStringIf</name></member>
     <member refid="classdakku_1_1Property_1ac83f11b8c568a198832de9754664be1d" kind="friend"><name>operator&lt;&lt;</name></member>
     <member refid="classdakku_1_1Property_1adc0d617576e2a4f4c1a52bc6d553972d" kind="friend"><name>to_json</name></member>
     <member refid="classdakku_1_1Property_1a23f4e939c57b1d95484c7ef925893aa2" kind="friend"><name>from_json</name></member>
@@ -244,6 +260,12 @@
     <member refid="classdakku_1_1RelativeRoot_1a29dea2b4e909cbb018c9cab5c3fa3c9f" kind="function"><name>get</name></member>
     <member refid="classdakku_1_1RelativeRoot_1a808e9343f1b0aaec20fbf0b41d1738d6" kind="function"><name>set</name></member>
     <member refid="classdakku_1_1RelativeRoot_1a6dec67b72433b4d4a169fd0006792c61" kind="function"><name>RelativeRoot</name></member>
+  </compound>
+  <compound refid="classdakku_1_1RgbSpectrum" kind="class"><name>dakku::RgbSpectrum</name>
+    <member refid="classdakku_1_1RgbSpectrum_1a24a0c6a84be207d959a6da3bd5bd4461" kind="function"><name>fromRgb</name></member>
+    <member refid="classdakku_1_1RgbSpectrum_1a840645ae729c87f3d95ec559dce855db" kind="function"><name>fromXyz</name></member>
+    <member refid="classdakku_1_1RgbSpectrum_1acad4b7dbdb3732a8e88029254ecdbca6" kind="function"><name>toRgb</name></member>
+    <member refid="classdakku_1_1RgbSpectrum_1a0b49739ae4a25e2954b07ba8b531d991" kind="function"><name>toXyz</name></member>
   </compound>
   <compound refid="classdakku_1_1SerializableObject" kind="class"><name>dakku::SerializableObject</name>
     <member refid="classdakku_1_1SerializableObject_1a20425307e474662b2825ca6fe0c3e1fc" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
@@ -334,6 +356,9 @@
     <member refid="classdakku_1_1VectorBase_1a3de0043db1772cb93312cc158d00df03" kind="function"><name>norm</name></member>
     <member refid="classdakku_1_1VectorBase_1a8cc945684d6dca638d46a32ca403048d" kind="function"><name>length</name></member>
     <member refid="classdakku_1_1VectorBase_1acb5565956ec02b69198a23c5e4046aa6" kind="function"><name>cross</name></member>
+    <member refid="classdakku_1_1VectorBase_1a3d663b309168d884b55d82b001b18ecb" kind="function"><name>isZero</name></member>
+    <member refid="classdakku_1_1VectorBase_1a05114dfb3499a8d0410b6b4bb8106706" kind="function"><name>operator std::span&lt; T, S &gt;</name></member>
+    <member refid="classdakku_1_1VectorBase_1a4e2cdbb5d684d8b3337ebdb93d756e5b" kind="function"><name>operator std::span&lt; const T, S &gt;</name></member>
     <member refid="classdakku_1_1VectorBase_1a531ed133257631916fc3384392b2ab7f" kind="friend"><name>operator&lt;&lt;</name></member>
     <member refid="classdakku_1_1VectorBase_1a6a604c24b1049ff1e9c3c12e9a26fff9" kind="friend"><name>operator+</name></member>
     <member refid="classdakku_1_1VectorBase_1aaeb63fd4c52bae59b7e867829e8b1025" kind="friend"><name>operator+</name></member>
@@ -353,6 +378,9 @@
     <member refid="classdakku_1_1VectorBase_1abc86f2d398f3082ed867b4a685720d06" kind="friend"><name>normalize</name></member>
     <member refid="classdakku_1_1VectorBase_1a9ed3b83465f89ef9e216e6f70a3be3c9" kind="friend"><name>distance</name></member>
     <member refid="classdakku_1_1VectorBase_1a0edf71c48dff606bc0173b7a8f55cf4a" kind="friend"><name>abs</name></member>
+    <member refid="classdakku_1_1VectorBase_1a4f610bf85df7ec868b857a8e1542bb4a" kind="friend"><name>sqrt</name></member>
+    <member refid="classdakku_1_1VectorBase_1a6d186fbf4a1071a8ae202382485dc859" kind="friend"><name>pow</name></member>
+    <member refid="classdakku_1_1VectorBase_1afd74fa091a074a68449d1f8e493fd745" kind="friend"><name>exp</name></member>
   </compound>
   <compound refid="conceptdakku_1_1ArithmeticType" kind="concept"><name>dakku::ArithmeticType</name>
   </compound>
@@ -370,6 +398,7 @@
     <member refid="namespacedakku_1abcc743bdeb62068a56f14ac3ef9963b7" kind="typedef"><name>Bounds2f</name></member>
     <member refid="namespacedakku_1ae2cd423e1acf2fd91f4cdf3cc5ad50c6" kind="typedef"><name>Bounds2i</name></member>
     <member refid="namespacedakku_1a19129587abbff965c2c15bab5723e208" kind="typedef"><name>Bounds3f</name></member>
+    <member refid="namespacedakku_1a72f253f8c73b2ec7fef8e3c83c0eac17" kind="typedef"><name>Spectrum</name></member>
     <member refid="namespacedakku_1ae7de7b89895e76d4a3f1c653393dde69" kind="typedef"><name>Vector2</name></member>
     <member refid="namespacedakku_1a3109ad27ee688fdd3462458714d7f1e7" kind="typedef"><name>Vector3</name></member>
     <member refid="namespacedakku_1abfd5a177365f8ffec7ab23d6cb6db8c0" kind="typedef"><name>Vector2f</name></member>
@@ -401,6 +430,8 @@
     <member refid="namespacedakku_1a2a53414d45143151128b45997c42d7af" kind="function"><name>radians</name></member>
     <member refid="namespacedakku_1a3d1bddf363d9216df7df7c148f917cd4" kind="function"><name>degrees</name></member>
     <member refid="namespacedakku_1ac5c65853b3b4155436da5b4402bebcad" kind="function"><name>registerObjects</name></member>
+    <member refid="namespacedakku_1a80d2f8350cdcc84f6586fed5f396f8c7" kind="function"><name>xyzToRgb</name></member>
+    <member refid="namespacedakku_1a4eafe1eaa4b431b45c002f81b793b46f" kind="function"><name>rgbToXyz</name></member>
     <member refid="namespacedakku_1a1e461427d5e700eff84e148509b7fcba" kind="function"><name>translate</name></member>
     <member refid="namespacedakku_1a7acbd19453bccf5b94cfa1133df02981" kind="function"><name>scale</name></member>
     <member refid="namespacedakku_1a9a343fe7cec03ad3c562a926fc052f6d" kind="function"><name>rotateX</name></member>
@@ -446,6 +477,8 @@
   <compound refid="relative_8h" kind="file"><name>relative.h</name>
   </compound>
   <compound refid="serialization_8h" kind="file"><name>serialization.h</name>
+  </compound>
+  <compound refid="spectrum_8h" kind="file"><name>spectrum.h</name>
   </compound>
   <compound refid="stream_8h" kind="file"><name>stream.h</name>
   </compound>

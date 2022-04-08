@@ -1,0 +1,833 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://xehoth.github.io/dakku/Classes/classdakku_1_1CoefficientSpectrum/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.8">
+    
+    
+      
+        <title>dakku::CoefficientSpectrum - dakku documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.644de097.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#dakkucoefficientspectrum" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="dakku documentation" class="md-header__button md-logo" aria-label="dakku documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            dakku documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              dakku::CoefficientSpectrum
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/xehoth/dakku/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="dakku documentation" class="md-nav__button md-logo" aria-label="dakku documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    dakku documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/xehoth/dakku/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/dakku/" class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/dakku/Classes/" class="md-nav__link">
+        Classes
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/dakku/Namespaces/" class="md-nav__link">
+        Namespaces
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/dakku/Modules/" class="md-nav__link">
+        Modules
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/dakku/Files/" class="md-nav__link">
+        Files
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/dakku/Pages/" class="md-nav__link">
+        Related Pages
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/dakku/Examples/" class="md-nav__link">
+        Examples
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#public-functions" class="md-nav__link">
+    Public Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-inherited-members" class="md-nav__link">
+    Additional inherited members
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detailed-description" class="md-nav__link">
+    Detailed Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-functions-documentation" class="md-nav__link">
+    Public Functions Documentation
+  </a>
+  
+    <nav class="md-nav" aria-label="Public Functions Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-isblack" class="md-nav__link">
+    function isBlack
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-clamp" class="md-nav__link">
+    function clamp
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+<a href="https://github.com/xehoth/dakku/edit/master/docs/Classes/classdakku_1_1CoefficientSpectrum.md" title="Edit this page" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+</a>
+
+
+
+<h1 id="dakkucoefficientspectrum">dakku::CoefficientSpectrum</h1>
+<p>coefficient spectrum  <a href="#detailed-description">More...</a></p>
+<p><code>#include &lt;spectrum.h&gt;</code></p>
+<p>Inherits from <a href="/dakku/Classes/classdakku_1_1VectorBase/">dakku::VectorBase&lt; float, S, Derived &gt;</a></p>
+<h2 id="public-functions">Public Functions</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bool</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1CoefficientSpectrum/#function-isblack">isBlack</a></strong>() const<br>whether the spectrum is black</td>
+</tr>
+<tr>
+<td>Derived</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1CoefficientSpectrum/#function-clamp">clamp</a></strong>(float low =0, float high =INF) const<br>element-wise clamp</td>
+</tr>
+</tbody>
+</table>
+<h2 id="additional-inherited-members">Additional inherited members</h2>
+<p><strong>Public Functions inherited from <a href="/dakku/Classes/classdakku_1_1VectorBase/">dakku::VectorBase&lt; float, S, Derived &gt;</a></strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-vectorbase">VectorBase</a></strong>()<br>Construct a new <a href="/dakku/Classes/classdakku_1_1Vector/">Vector</a> Base object with all components initialized to zero.</td>
+</tr>
+<tr>
+<td>template &lt;ArithmeticType Arg> <br></td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-vectorbase">VectorBase</a></strong>(Arg value)<br>Construct a new <a href="/dakku/Classes/classdakku_1_1Vector/">Vector</a> Base object with all components initialized to <code>value</code></td>
+</tr>
+<tr>
+<td>template &lt;ArithmeticType Other,typename OtherDerived > <br></td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-vectorbase">VectorBase</a></strong>(const <a href="/dakku/Classes/classdakku_1_1VectorBase/">VectorBase</a>&lt; Other, S, OtherDerived &gt; &amp; other)<br>Construct a new <a href="/dakku/Classes/classdakku_1_1Vector/">Vector</a> Base object with a vector expression.</td>
+</tr>
+<tr>
+<td></td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-vectorbase">VectorBase</a></strong>(const <a href="/dakku/Classes/classdakku_1_1VectorBase/">VectorBase</a> &amp; other)</td>
+</tr>
+<tr>
+<td></td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-vectorbase">VectorBase</a></strong>(<a href="/dakku/Classes/classdakku_1_1VectorBase/">VectorBase</a> &amp;&amp; other)</td>
+</tr>
+<tr>
+<td><a href="/dakku/Classes/classdakku_1_1VectorBase/">VectorBase</a> &amp;</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-operator=">operator=</a></strong>(const <a href="/dakku/Classes/classdakku_1_1VectorBase/">VectorBase</a> &amp; other)</td>
+</tr>
+<tr>
+<td><a href="/dakku/Classes/classdakku_1_1VectorBase/">VectorBase</a> &amp;</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-operator=">operator=</a></strong>(<a href="/dakku/Classes/classdakku_1_1VectorBase/">VectorBase</a> &amp;&amp; other)</td>
+</tr>
+<tr>
+<td>template &lt;ArithmeticType Arg> <br>void</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-set">set</a></strong>(Arg value)<br>Construct a new <a href="/dakku/Classes/classdakku_1_1Vector/">Vector</a> Base object with given values.</td>
+</tr>
+<tr>
+<td>template &lt;ArithmeticType Arg> <br>void</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-setbyindex">setByIndex</a></strong>(size_t index, Arg value)<br>set data[index] to value</td>
+</tr>
+<tr>
+<td>template &lt;ArithmeticType... Args,size_t... Is> <br>void</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-set">set</a></strong>(std::index_sequence&lt; Is... &gt; , Args &amp;&amp;... args)<br>set data to args</td>
+</tr>
+<tr>
+<td>template &lt;ArithmeticType... Args> <br>void</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-set">set</a></strong>(Args &amp;&amp;... args)<br>set data to args</td>
+</tr>
+<tr>
+<td>template &lt;ArithmeticType Other,typename OtherDerived > <br>void</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-set">set</a></strong>(const <a href="/dakku/Classes/classdakku_1_1VectorBase/">VectorBase</a>&lt; Other, S, OtherDerived &gt; &amp; rhs)<br>set data by <code>rhs</code>'s data</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-hasnans">hasNaNs</a></strong>() const<br>check whether there are nan components</td>
+</tr>
+<tr>
+<td>const T &amp;</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-get">get</a></strong>(size_t i) const<br>get i'th component</td>
+</tr>
+<tr>
+<td>std::string</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-tostring">toString</a></strong>() const<br>convert vector to string</td>
+</tr>
+<tr>
+<td>size_t</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-size">size</a></strong>() const<br>size of the vector</td>
+</tr>
+<tr>
+<td>const T &amp;</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-operator[]">operator[]</a></strong>(size_t i) const<br>get i'th value</td>
+</tr>
+<tr>
+<td>T &amp;</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-operator[]">operator[]</a></strong>(size_t i)<br>get i'th value</td>
+</tr>
+<tr>
+<td>Derived</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-operator-">operator-</a></strong>() const<br>negation of the vector</td>
+</tr>
+<tr>
+<td>const Derived &amp;</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-derived">derived</a></strong>() const<br>get derived class</td>
+</tr>
+<tr>
+<td>Derived &amp;</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-derived">derived</a></strong>()<br>get derived class</td>
+</tr>
+<tr>
+<td>Derived &amp;</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-operator+=">operator+=</a></strong>(const Derived &amp; rhs)<br>addition</td>
+</tr>
+<tr>
+<td>template &lt;ArithmeticType V> <br>Derived &amp;</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-operator+=">operator+=</a></strong>(const V &amp; rhs)<br>addition</td>
+</tr>
+<tr>
+<td>Derived &amp;</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-operator-=">operator-=</a></strong>(const Derived &amp; rhs)<br>subtraction</td>
+</tr>
+<tr>
+<td>template &lt;ArithmeticType V> <br>Derived &amp;</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-operator-=">operator-=</a></strong>(const V &amp; rhs)<br>subtraction</td>
+</tr>
+<tr>
+<td>Derived &amp;</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-operator*=">operator*=</a></strong>(const Derived &amp; rhs)<br>multiplication</td>
+</tr>
+<tr>
+<td>template &lt;ArithmeticType V> <br>Derived &amp;</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-operator*=">operator*=</a></strong>(const V &amp; rhs)<br>multiplication</td>
+</tr>
+<tr>
+<td>Derived &amp;</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-operator/=">operator/=</a></strong>(const Derived &amp; rhs)<br>division</td>
+</tr>
+<tr>
+<td>template &lt;ArithmeticType V> <br>Derived &amp;</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-operator/=">operator/=</a></strong>(const V &amp; rhs)<br>division</td>
+</tr>
+<tr>
+<td>std::vector&lt; float &gt;</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-tofloatvector">toFloatVector</a></strong>() const<br>convert this to float vector (Property::VECTOR)</td>
+</tr>
+<tr>
+<td></td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-vectorbase">VectorBase</a></strong>(const std::vector&lt; float &gt; &amp; v)<br>Construct a new <a href="/dakku/Classes/classdakku_1_1Vector/">Vector</a> Base object with std::vector<float> (Property::VECTOR)</td>
+</tr>
+<tr>
+<td>decltype(auto)</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-x">x</a></strong>() const<br>get the first element</td>
+</tr>
+<tr>
+<td>decltype(auto)</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-x">x</a></strong>()<br>get the first element</td>
+</tr>
+<tr>
+<td>decltype(auto)</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-y">y</a></strong>() const<br>get the second element</td>
+</tr>
+<tr>
+<td>decltype(auto)</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-y">y</a></strong>()<br>get the second element</td>
+</tr>
+<tr>
+<td>decltype(auto)</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-z">z</a></strong>() const<br>get the third element</td>
+</tr>
+<tr>
+<td>decltype(auto)</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-z">z</a></strong>()<br>get the fourth element</td>
+</tr>
+<tr>
+<td>decltype(auto)</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-w">w</a></strong>() const<br>get the fourth element</td>
+</tr>
+<tr>
+<td>decltype(auto)</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-w">w</a></strong>()<br>get the third element</td>
+</tr>
+<tr>
+<td>size_t</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-maxelementindex">maxElementIndex</a></strong>() const<br>get the index of the max element</td>
+</tr>
+<tr>
+<td>decltype(auto)</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-maxelement">maxElement</a></strong>() const<br>get the max element in the vector</td>
+</tr>
+<tr>
+<td>decltype(auto)</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-begin">begin</a></strong>()</td>
+</tr>
+<tr>
+<td>decltype(auto)</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-begin">begin</a></strong>() const</td>
+</tr>
+<tr>
+<td>decltype(auto)</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-end">end</a></strong>()</td>
+</tr>
+<tr>
+<td>decltype(auto)</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-end">end</a></strong>() const</td>
+</tr>
+<tr>
+<td>decltype(auto)</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-normalized">normalized</a></strong>() const<br>normalized vector</td>
+</tr>
+<tr>
+<td>Derived &amp;</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-normalize">normalize</a></strong>()<br>normalize this</td>
+</tr>
+<tr>
+<td>template &lt;typename OtherDerived > <br>decltype(auto)</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-dot">dot</a></strong>(const <a href="/dakku/Classes/classdakku_1_1VectorBase/">VectorBase</a>&lt; T, S, OtherDerived &gt; &amp; rhs) const<br>dot product between two vectors</td>
+</tr>
+<tr>
+<td>decltype(auto)</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-squarednorm">squaredNorm</a></strong>() const<br>squared norm</td>
+</tr>
+<tr>
+<td>decltype(auto)</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-norm">norm</a></strong>() const<br>norm</td>
+</tr>
+<tr>
+<td>decltype(auto)</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-length">length</a></strong>() const<br>length</td>
+</tr>
+<tr>
+<td>Derived</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-cross">cross</a></strong>(const Derived &amp; rhs) const<br>cross product</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-iszero">isZero</a></strong>() const<br>check whether all components are zero</td>
+</tr>
+<tr>
+<td></td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-operator-stdspan&lt;-t,-s-&gt;">operator std::span&lt; T, S &gt;</a></strong>()</td>
+</tr>
+<tr>
+<td></td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-operator-stdspan&lt;-const-t,-s-&gt;">operator std::span&lt; const T, S &gt;</a></strong>() const</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Protected Attributes inherited from <a href="/dakku/Classes/classdakku_1_1VectorBase/">dakku::VectorBase&lt; float, S, Derived &gt;</a></strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>std::array&lt; T, S &gt;</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#variable--data">_data</a></strong> <br>vector base data</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Friends inherited from <a href="/dakku/Classes/classdakku_1_1VectorBase/">dakku::VectorBase&lt; float, S, Derived &gt;</a></strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>std::ostream &amp;</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-operator&lt;&lt;">operator&lt;&lt;</a></strong>(std::ostream &amp; os, const <a href="/dakku/Classes/classdakku_1_1VectorBase/">VectorBase</a> &amp; vec) <br>output the vector</td>
+</tr>
+<tr>
+<td>Derived</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-operator+">operator+</a></strong>(const Derived &amp; a, const Derived &amp; b) <br>addition</td>
+</tr>
+<tr>
+<td>Derived</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-operator+">operator+</a></strong>(const Derived &amp; a, const U &amp; b) <br>addition</td>
+</tr>
+<tr>
+<td>Derived</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-operator+">operator+</a></strong>(const U &amp; a, const Derived &amp; b) <br>addition</td>
+</tr>
+<tr>
+<td>Derived</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-operator-">operator-</a></strong>(const Derived &amp; a, const U &amp; b) <br>subtraction</td>
+</tr>
+<tr>
+<td>Derived</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-operator-">operator-</a></strong>(const U &amp; a, const Derived &amp; b) <br>subtraction</td>
+</tr>
+<tr>
+<td>Derived</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-operator*">operator*</a></strong>(const Derived &amp; a, const Derived &amp; b) <br>multiplication</td>
+</tr>
+<tr>
+<td>Derived</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-operator*">operator*</a></strong>(const Derived &amp; a, const U &amp; b) <br>multiplication</td>
+</tr>
+<tr>
+<td>Derived</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-operator*">operator*</a></strong>(const U &amp; a, const Derived &amp; b) <br>multiplication</td>
+</tr>
+<tr>
+<td>Derived</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-operator/">operator/</a></strong>(const Derived &amp; a, const Derived &amp; b) <br>division</td>
+</tr>
+<tr>
+<td>Derived</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-operator/">operator/</a></strong>(const Derived &amp; a, const U &amp; b) <br>division</td>
+</tr>
+<tr>
+<td>Derived</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-operator/">operator/</a></strong>(const U &amp; a, const Derived &amp; b) <br>division</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-operator==">operator==</a></strong>(const Derived &amp; a, const Derived &amp; b) <br>a == b (element wise)</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-operator!=">operator!=</a></strong>(const Derived &amp; a, const Derived &amp; b) <br>a != b (element wise)</td>
+</tr>
+<tr>
+<td>Derived</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-max">max</a></strong>(const Derived &amp; v1, const Derived &amp; v2) <br>element wise max</td>
+</tr>
+<tr>
+<td>Derived</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-min">min</a></strong>(const Derived &amp; v1, const Derived &amp; v2) <br>element wise min</td>
+</tr>
+<tr>
+<td>Derived</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-normalize">normalize</a></strong>(const Derived &amp; v) <br>normalized vector</td>
+</tr>
+<tr>
+<td>decltype(auto)</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-distance">distance</a></strong>(const Derived &amp; a, const Derived &amp; b) <br>the distance</td>
+</tr>
+<tr>
+<td>decltype(auto)</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-abs">abs</a></strong>(const Derived &amp; v) <br>abs</td>
+</tr>
+<tr>
+<td>Derived</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-sqrt">sqrt</a></strong>(const Derived &amp; v) <br>element-wise sqrt</td>
+</tr>
+<tr>
+<td>Derived</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-pow">pow</a></strong>(const Derived &amp; v, E e) <br>element-wise power</td>
+</tr>
+<tr>
+<td>Derived</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-exp">exp</a></strong>(const Derived &amp; v) <br>element-wise exp</td>
+</tr>
+</tbody>
+</table>
+<h2 id="detailed-description">Detailed Description</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="kt">size_t</span><span class="w"> </span><span class="n">S</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">typename</span><span class="w"> </span><span class="nc">Derived</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">class</span><span class="w"> </span><span class="nc">dakku</span><span class="o">::</span><span class="n">CoefficientSpectrum</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>coefficient spectrum </p>
+<p><strong>Template Parameters</strong>: </p>
+<ul>
+<li><strong>S</strong> the number of spectrum samples </li>
+<li><strong>Derived</strong> derived type </li>
+</ul>
+<h2 id="public-functions-documentation">Public Functions Documentation</h2>
+<h3 id="function-isblack">function isBlack</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kr">inline</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">isBlack</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+</code></pre></div>
+<p>whether the spectrum is black </p>
+<h3 id="function-clamp">function clamp</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kr">inline</span><span class="w"> </span><span class="n">Derived</span><span class="w"> </span><span class="n">clamp</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">low</span><span class="w"> </span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">high</span><span class="w"> </span><span class="o">=</span><span class="n">INF</span><span class="w"></span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+</code></pre></div>
+<p>element-wise clamp </p>
+<hr />
+<p>Updated on 2022-04-08 at 12:40:11 +0000</p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.5e67fbfe.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c44cc438.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

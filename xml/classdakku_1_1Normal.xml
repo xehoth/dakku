@@ -100,12 +100,15 @@
       <member refid="classdakku_1_1VectorBase_1a3b54e311208a4d3d90763cad329d1759" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>end</name></member>
       <member refid="classdakku_1_1VectorBase_1ae498067d7973072d02c9417b8b677e83" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>get</name></member>
       <member refid="classdakku_1_1VectorBase_1a24b199ecb70deba0853e9532b888a183" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>hasNaNs</name></member>
+      <member refid="classdakku_1_1VectorBase_1a3d663b309168d884b55d82b001b18ecb" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>isZero</name></member>
       <member refid="classdakku_1_1VectorBase_1a8cc945684d6dca638d46a32ca403048d" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>length</name></member>
       <member refid="classdakku_1_1VectorBase_1ae42082956c30a3e7f611e421427a785f" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>maxElement</name></member>
       <member refid="classdakku_1_1VectorBase_1a41e30926cb56189a7378f339bc175ccc" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>maxElementIndex</name></member>
       <member refid="classdakku_1_1VectorBase_1a3de0043db1772cb93312cc158d00df03" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>norm</name></member>
       <member refid="classdakku_1_1VectorBase_1aa7d5096dec8ced27b8637c43f689096c" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>normalize</name></member>
       <member refid="classdakku_1_1VectorBase_1a3c58e3c4dff9ad3a3a021c63ee8a7dfe" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>normalized</name></member>
+      <member refid="classdakku_1_1VectorBase_1a4e2cdbb5d684d8b3337ebdb93d756e5b" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>operator std::span&lt; const T, S &gt;</name></member>
+      <member refid="classdakku_1_1VectorBase_1a05114dfb3499a8d0410b6b4bb8106706" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>operator std::span&lt; T, S &gt;</name></member>
       <member refid="classdakku_1_1VectorBase_1a5353b2617ac5343efeee0f325632d772" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>operator*=</name></member>
       <member refid="classdakku_1_1VectorBase_1ad4136ad736840507f9fc902d9d6c6dfd" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>operator*=</name></member>
       <member refid="classdakku_1_1VectorBase_1ae64bc6bd658a94d08f3b407fcb0e7fba" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>operator+=</name></member>

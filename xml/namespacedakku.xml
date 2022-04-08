@@ -8,9 +8,11 @@
     <innerclass refid="classdakku_1_1BoundsBase" prot="public">dakku::BoundsBase</innerclass>
     <innerclass refid="classdakku_1_1BoxFilter" prot="public">dakku::BoxFilter</innerclass>
     <innerclass refid="classdakku_1_1Class" prot="public">dakku::Class</innerclass>
+    <innerclass refid="classdakku_1_1CoefficientSpectrum" prot="public">dakku::CoefficientSpectrum</innerclass>
     <innerclass refid="classdakku_1_1FileInputStream" prot="public">dakku::FileInputStream</innerclass>
     <innerclass refid="classdakku_1_1FileOutputStream" prot="public">dakku::FileOutputStream</innerclass>
     <innerclass refid="classdakku_1_1Film" prot="public">dakku::Film</innerclass>
+    <innerclass refid="structdakku_1_1FilmTilePixel" prot="public">dakku::FilmTilePixel</innerclass>
     <innerclass refid="classdakku_1_1Filter" prot="public">dakku::Filter</innerclass>
     <innerclass refid="classdakku_1_1InputStream" prot="public">dakku::InputStream</innerclass>
     <innerclass refid="classdakku_1_1L1CacheLineAlignedResource" prot="public">dakku::L1CacheLineAlignedResource</innerclass>
@@ -25,6 +27,7 @@
     <innerclass refid="classdakku_1_1Ray" prot="public">dakku::Ray</innerclass>
     <innerclass refid="classdakku_1_1RayDifferential" prot="public">dakku::RayDifferential</innerclass>
     <innerclass refid="classdakku_1_1RelativeRoot" prot="public">dakku::RelativeRoot</innerclass>
+    <innerclass refid="classdakku_1_1RgbSpectrum" prot="public">dakku::RgbSpectrum</innerclass>
     <innerclass refid="classdakku_1_1SerializableObject" prot="public">dakku::SerializableObject</innerclass>
     <innerclass refid="classdakku_1_1Transform" prot="public">dakku::Transform</innerclass>
     <innerclass refid="classdakku_1_1TriangleFilter" prot="public">dakku::TriangleFilter</innerclass>
@@ -106,7 +109,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/bounds.h" line="230" column="1" bodyfile="src/core/bounds.h" bodystart="230" bodyend="-1"/>
+        <location file="src/core/bounds.h" line="238" column="1" bodyfile="src/core/bounds.h" bodystart="238" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespacedakku_1ae2cd423e1acf2fd91f4cdf3cc5ad50c6" prot="public" static="no">
         <type><ref refid="classdakku_1_1Bounds2" kindref="compound">Bounds2</ref>&lt; int &gt;</type>
@@ -120,7 +123,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/bounds.h" line="232" column="1" bodyfile="src/core/bounds.h" bodystart="232" bodyend="-1"/>
+        <location file="src/core/bounds.h" line="240" column="1" bodyfile="src/core/bounds.h" bodystart="240" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespacedakku_1a19129587abbff965c2c15bab5723e208" prot="public" static="no">
         <type><ref refid="classdakku_1_1Bounds3" kindref="compound">Bounds3</ref>&lt; float &gt;</type>
@@ -134,7 +137,21 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/bounds.h" line="247" column="1" bodyfile="src/core/bounds.h" bodystart="247" bodyend="-1"/>
+        <location file="src/core/bounds.h" line="255" column="1" bodyfile="src/core/bounds.h" bodystart="255" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacedakku_1a72f253f8c73b2ec7fef8e3c83c0eac17" prot="public" static="no">
+        <type><ref refid="classdakku_1_1RgbSpectrum" kindref="compound">RgbSpectrum</ref></type>
+        <definition>using dakku::Spectrum = typedef RgbSpectrum</definition>
+        <argsstring></argsstring>
+        <name>Spectrum</name>
+        <briefdescription>
+<para>Spectrum type: use <ref refid="classdakku_1_1RgbSpectrum" kindref="compound">RgbSpectrum</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/fwd.h" line="96" column="1" bodyfile="src/core/fwd.h" bodystart="96" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespacedakku_1ae7de7b89895e76d4a3f1c653393dde69" prot="public" static="no">
         <templateparamlist>
@@ -591,7 +608,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/bounds.h" line="296" column="25" bodyfile="src/core/bounds.h" bodystart="296" bodyend="298"/>
+        <location file="src/core/bounds.h" line="304" column="25" bodyfile="src/core/bounds.h" bodystart="304" bodyend="306"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1a41ae9fcb2290e6ea6f7d4b0fbca86d17" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classdakku_1_1Bounds2iIterator" kindref="compound">Bounds2iIterator</ref></type>
@@ -609,7 +626,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/bounds.h" line="304" column="25" bodyfile="src/core/bounds.h" bodystart="304" bodyend="313"/>
+        <location file="src/core/bounds.h" line="312" column="25" bodyfile="src/core/bounds.h" bodystart="312" bodyend="321"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1af754e4967f947036a0c31c0dbb4bf6e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -770,6 +787,50 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/core/object.h" line="69" column="13" bodyfile="src/core/object.h" bodystart="69" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1a80d2f8350cdcc84f6586fed5f396f8c7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void dakku::xyzToRgb</definition>
+        <argsstring>(std::span&lt; const float, 3 &gt; xyz, std::span&lt; float, 3 &gt; rgb)</argsstring>
+        <name>xyzToRgb</name>
+        <param>
+          <type>std::span&lt; const float, 3 &gt;</type>
+          <declname>xyz</declname>
+        </param>
+        <param>
+          <type>std::span&lt; float, 3 &gt;</type>
+          <declname>rgb</declname>
+        </param>
+        <briefdescription>
+<para>xyz to rgb </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/spectrum.h" line="11" column="13" bodyfile="src/core/spectrum.h" bodystart="11" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1a4eafe1eaa4b431b45c002f81b793b46f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void dakku::rgbToXyz</definition>
+        <argsstring>(std::span&lt; const float, 3 &gt; rgb, std::span&lt; float, 3 &gt; xyz)</argsstring>
+        <name>rgbToXyz</name>
+        <param>
+          <type>std::span&lt; const float, 3 &gt;</type>
+          <declname>rgb</declname>
+        </param>
+        <param>
+          <type>std::span&lt; float, 3 &gt;</type>
+          <declname>xyz</declname>
+        </param>
+        <briefdescription>
+<para>rgb to xyz </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/spectrum.h" line="21" column="13" bodyfile="src/core/spectrum.h" bodystart="21" bodyend="25"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1a1e461427d5e700eff84e148509b7fcba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref> <ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref></type>
@@ -1095,7 +1156,7 @@ the shorter edge mapped to [-1, 1], the longer [-ratio, ratio] left handed </par
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector_base.h" line="724" column="17" bodyfile="src/core/vector_base.h" bodystart="724" bodyend="727"/>
+        <location file="src/core/vector_base.h" line="767" column="17" bodyfile="src/core/vector_base.h" bodystart="767" bodyend="770"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1ab1fd7a566663942d0a6ddc982890d74b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>

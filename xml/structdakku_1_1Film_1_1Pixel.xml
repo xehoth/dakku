@@ -1,7 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
-  <compounddef id="structdakku_1_1Film_1_1Pixel" kind="struct" language="C++" prot="private">
+  <compounddef id="structdakku_1_1Film_1_1Pixel" kind="struct" language="C++" prot="public">
     <compoundname>dakku::Film::Pixel</compoundname>
+    <includes refid="film_8h" local="no">film.h</includes>
       <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="structdakku_1_1Film_1_1Pixel_1a1605c1fd5405061a1d7b231109bbc2dd" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -15,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/film.h" line="28" column="11" bodyfile="src/core/film.h" bodystart="28" bodyend="-1"/>
+        <location file="src/core/film.h" line="53" column="11" bodyfile="src/core/film.h" bodystart="53" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structdakku_1_1Film_1_1Pixel_1accd87822d3b67fbf4a0014915acc6cf2" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -29,7 +30,21 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/film.h" line="30" column="11" bodyfile="src/core/film.h" bodystart="30" bodyend="-1"/>
+        <location file="src/core/film.h" line="55" column="11" bodyfile="src/core/film.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdakku_1_1Film_1_1Pixel_1acfbbbf1e8a707f1c10b73ba2d9215473" prot="public" static="no" mutable="no">
+        <type>std::atomic&lt; float &gt;</type>
+        <definition>std::atomic&lt;float&gt; dakku::Film::Pixel::splatXyz[3]</definition>
+        <argsstring>[3]</argsstring>
+        <name>splatXyz</name>
+        <briefdescription>
+<para>splat values to pixels, needed by bidirectional methods </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/film.h" line="57" column="17" bodyfile="src/core/film.h" bodystart="57" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -37,9 +52,10 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/core/film.h" line="26" column="3" bodyfile="src/core/film.h" bodystart="26" bodyend="31"/>
+    <location file="src/core/film.h" line="51" column="3" bodyfile="src/core/film.h" bodystart="51" bodyend="58"/>
     <listofallmembers>
       <member refid="structdakku_1_1Film_1_1Pixel_1accd87822d3b67fbf4a0014915acc6cf2" prot="public" virt="non-virtual"><scope>dakku::Film::Pixel</scope><name>filterWeightSum</name></member>
+      <member refid="structdakku_1_1Film_1_1Pixel_1acfbbbf1e8a707f1c10b73ba2d9215473" prot="public" virt="non-virtual"><scope>dakku::Film::Pixel</scope><name>splatXyz</name></member>
       <member refid="structdakku_1_1Film_1_1Pixel_1a1605c1fd5405061a1d7b231109bbc2dd" prot="public" virt="non-virtual"><scope>dakku::Film::Pixel</scope><name>xyz</name></member>
     </listofallmembers>
   </compounddef>

@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="classdakku_1_1CoefficientSpectrum" kind="class" language="C++" prot="public">
+    <compoundname>dakku::CoefficientSpectrum</compoundname>
+    <basecompoundref refid="classdakku_1_1VectorBase" prot="public" virt="non-virtual">dakku::VectorBase&lt; float, S, Derived &gt;</basecompoundref>
+    <includes refid="spectrum_8h" local="no">spectrum.h</includes>
+    <templateparamlist>
+      <param>
+        <type>size_t</type>
+        <declname>S</declname>
+        <defname>S</defname>
+      </param>
+      <param>
+        <type>typename Derived</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdakku_1_1CoefficientSpectrum_1a3419bb7bc9a9f6ab7b2c00c3cee942d1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool dakku::CoefficientSpectrum&lt; S, Derived &gt;::isBlack</definition>
+        <argsstring>() const</argsstring>
+        <name>isBlack</name>
+        <briefdescription>
+<para>whether the spectrum is black </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/spectrum.h" line="42" column="9" bodyfile="src/core/spectrum.h" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1CoefficientSpectrum_1ae9b538dae7b0ef76e17b5b8379d62224" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Derived</type>
+        <definition>Derived dakku::CoefficientSpectrum&lt; S, Derived &gt;::clamp</definition>
+        <argsstring>(float low=0, float high=INF) const</argsstring>
+        <name>clamp</name>
+        <param>
+          <type>float</type>
+          <declname>low</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>high</declname>
+          <defval>INF</defval>
+        </param>
+        <briefdescription>
+<para>element-wise clamp </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/spectrum.h" line="48" column="12" bodyfile="src/core/spectrum.h" bodystart="48" bodyend="52"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>coefficient spectrum </para>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>S</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the number of spectrum samples </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Derived</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>derived type </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>dakku::VectorBase&lt; float, S, Derived &gt;</label>
+        <link refid="classdakku_1_1VectorBase"/>
+      </node>
+      <node id="1">
+        <label>dakku::CoefficientSpectrum&lt; S, Derived &gt;</label>
+        <link refid="classdakku_1_1CoefficientSpectrum"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>dakku::VectorBase&lt; float, S, Derived &gt;</label>
+        <link refid="classdakku_1_1VectorBase"/>
+      </node>
+      <node id="1">
+        <label>dakku::CoefficientSpectrum&lt; S, Derived &gt;</label>
+        <link refid="classdakku_1_1CoefficientSpectrum"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/core/spectrum.h" line="34" column="1" bodyfile="src/core/spectrum.h" bodystart="34" bodyend="53"/>
+    <listofallmembers>
+      <member refid="classdakku_1_1VectorBase_1adfeaa30c58620f0e4e8cbc9bc911c60c" prot="protected" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>_data</name></member>
+      <member refid="classdakku_1_1VectorBase_1ae4f16b45f3696a2c75abcbe8c09120df" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>begin</name></member>
+      <member refid="classdakku_1_1VectorBase_1abf676422e4f35272f97d5a9d286002b3" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>begin</name></member>
+      <member refid="classdakku_1_1CoefficientSpectrum_1ae9b538dae7b0ef76e17b5b8379d62224" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>clamp</name></member>
+      <member refid="classdakku_1_1VectorBase_1acb5565956ec02b69198a23c5e4046aa6" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>cross</name></member>
+      <member refid="classdakku_1_1VectorBase_1a164c7c788c4967c1c6ebcf7ae8466ba8" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>derived</name></member>
+      <member refid="classdakku_1_1VectorBase_1abb0f3e3fa71aaf063c3a5a6002fcbf1f" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>derived</name></member>
+      <member refid="classdakku_1_1VectorBase_1ab55fd8f1a9e9835b5383189560c86973" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>dot</name></member>
+      <member refid="classdakku_1_1VectorBase_1a77b079ddc174893319dbdb3bc1eb37ee" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>end</name></member>
+      <member refid="classdakku_1_1VectorBase_1a3b54e311208a4d3d90763cad329d1759" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>end</name></member>
+      <member refid="classdakku_1_1VectorBase_1ae498067d7973072d02c9417b8b677e83" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>get</name></member>
+      <member refid="classdakku_1_1VectorBase_1a24b199ecb70deba0853e9532b888a183" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>hasNaNs</name></member>
+      <member refid="classdakku_1_1CoefficientSpectrum_1a3419bb7bc9a9f6ab7b2c00c3cee942d1" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>isBlack</name></member>
+      <member refid="classdakku_1_1VectorBase_1a3d663b309168d884b55d82b001b18ecb" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>isZero</name></member>
+      <member refid="classdakku_1_1VectorBase_1a8cc945684d6dca638d46a32ca403048d" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>length</name></member>
+      <member refid="classdakku_1_1VectorBase_1ae42082956c30a3e7f611e421427a785f" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>maxElement</name></member>
+      <member refid="classdakku_1_1VectorBase_1a41e30926cb56189a7378f339bc175ccc" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>maxElementIndex</name></member>
+      <member refid="classdakku_1_1VectorBase_1a3de0043db1772cb93312cc158d00df03" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>norm</name></member>
+      <member refid="classdakku_1_1VectorBase_1aa7d5096dec8ced27b8637c43f689096c" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>normalize</name></member>
+      <member refid="classdakku_1_1VectorBase_1a3c58e3c4dff9ad3a3a021c63ee8a7dfe" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>normalized</name></member>
+      <member refid="classdakku_1_1VectorBase_1a4e2cdbb5d684d8b3337ebdb93d756e5b" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>operator std::span&lt; const T, S &gt;</name></member>
+      <member refid="classdakku_1_1VectorBase_1a05114dfb3499a8d0410b6b4bb8106706" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>operator std::span&lt; T, S &gt;</name></member>
+      <member refid="classdakku_1_1VectorBase_1a5353b2617ac5343efeee0f325632d772" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>operator*=</name></member>
+      <member refid="classdakku_1_1VectorBase_1ad4136ad736840507f9fc902d9d6c6dfd" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>operator*=</name></member>
+      <member refid="classdakku_1_1VectorBase_1ae64bc6bd658a94d08f3b407fcb0e7fba" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>operator+=</name></member>
+      <member refid="classdakku_1_1VectorBase_1a3351845012fbb55d54623d8af9c44a79" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>operator+=</name></member>
+      <member refid="classdakku_1_1VectorBase_1a838ade15abc3b13923aa49d191c1b796" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>operator-</name></member>
+      <member refid="classdakku_1_1VectorBase_1ad6e6b4c4275de701f79d952ed56fe9ff" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>operator-=</name></member>
+      <member refid="classdakku_1_1VectorBase_1a846dad82a5cd66baba195846d3da7c9d" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>operator-=</name></member>
+      <member refid="classdakku_1_1VectorBase_1add8d1fe3254c662f2c6bfc6beb541c9e" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>operator/=</name></member>
+      <member refid="classdakku_1_1VectorBase_1ad5b06200c617ca92964ad3d81787848f" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>operator/=</name></member>
+      <member refid="classdakku_1_1VectorBase_1afe4959c7c80f7ae0297325ca971cc97a" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>operator=</name></member>
+      <member refid="classdakku_1_1VectorBase_1a9a1f1574000785aa4037f604a4fa21e2" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>operator=</name></member>
+      <member refid="classdakku_1_1VectorBase_1ada05b4cd2b9838400f490961dc3ac825" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>operator[]</name></member>
+      <member refid="classdakku_1_1VectorBase_1a619efcd85e3a91770ccae7f80031e55e" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>operator[]</name></member>
+      <member refid="classdakku_1_1VectorBase_1afa4cd455e4e2f12a88695122e221ca13" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>set</name></member>
+      <member refid="classdakku_1_1VectorBase_1a47ce308974d85dac95130bc829603e52" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>set</name></member>
+      <member refid="classdakku_1_1VectorBase_1a9ff0cd03971a94292507a01ba8852557" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>set</name></member>
+      <member refid="classdakku_1_1VectorBase_1a490cefc87b4becdd6a938140e2f8e533" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>set</name></member>
+      <member refid="classdakku_1_1VectorBase_1aa040165f6c4711d6ac753670e76e868e" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>setByIndex</name></member>
+      <member refid="classdakku_1_1VectorBase_1acc8e8a5aa7749125a4f6aa11b92f9dae" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>size</name></member>
+      <member refid="classdakku_1_1VectorBase_1a407486b0eb23a07bb98e2d5a50910695" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>squaredNorm</name></member>
+      <member refid="classdakku_1_1VectorBase_1a0efbe333b29373696a0fbb9cf0f11af2" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>toFloatVector</name></member>
+      <member refid="classdakku_1_1VectorBase_1ad762f525bce13332abbd4b9157287ecd" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>toString</name></member>
+      <member refid="classdakku_1_1VectorBase_1acae6683bc17650d9ff87aafa8cfb6b18" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>VectorBase</name></member>
+      <member refid="classdakku_1_1VectorBase_1aee90251abb9484a6886f76d79091b96e" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>VectorBase</name></member>
+      <member refid="classdakku_1_1VectorBase_1a3992f122fe320723d8a2b08aa0f0b658" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>VectorBase</name></member>
+      <member refid="classdakku_1_1VectorBase_1acb37abb2d3484b94e77ce4db959e4aa5" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>VectorBase</name></member>
+      <member refid="classdakku_1_1VectorBase_1a707acaad663a7d8c53b0f31db60ad21f" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>VectorBase</name></member>
+      <member refid="classdakku_1_1VectorBase_1a3cfd9b2142d1366bc105463b24fd5149" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>VectorBase</name></member>
+      <member refid="classdakku_1_1VectorBase_1a70ef47d449743bb4e68dba7e93a56488" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>w</name></member>
+      <member refid="classdakku_1_1VectorBase_1a0abbcce49a53783f902e49b81b20b097" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>w</name></member>
+      <member refid="classdakku_1_1VectorBase_1aad720931a9787a87375de3f8d545567d" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>x</name></member>
+      <member refid="classdakku_1_1VectorBase_1ab937f5988070397cab4b236cda690356" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>x</name></member>
+      <member refid="classdakku_1_1VectorBase_1a14b6216fd55dc1cd2f321c834f6121ca" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>y</name></member>
+      <member refid="classdakku_1_1VectorBase_1a4c537c79e56ad3b82ac56711dc774dc7" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>y</name></member>
+      <member refid="classdakku_1_1VectorBase_1a207d3b94f85366aeb9e7773785a498ea" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>z</name></member>
+      <member refid="classdakku_1_1VectorBase_1ad4683c184e26c7879ed8359c34162f9b" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>z</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

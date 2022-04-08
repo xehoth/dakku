@@ -4,17 +4,18 @@
     <compoundname>film.h</compoundname>
     <includes refid="serialization_8h" local="no">core/serialization.h</includes>
     <includes refid="bounds_8h" local="no">core/bounds.h</includes>
+    <includes refid="spectrum_8h" local="no">core/spectrum.h</includes>
     <includes local="no">mutex</includes>
     <includedby refid="core_2api_8h" local="no">src/core/api.h</includedby>
     <incdepgraph>
-      <node id="30">
+      <node id="31">
         <label>core/bounds.h</label>
         <link refid="bounds_8h"/>
         <childnode refid="16" relation="include">
         </childnode>
-        <childnode refid="31" relation="include">
+        <childnode refid="32" relation="include">
         </childnode>
-        <childnode refid="25" relation="include">
+        <childnode refid="26" relation="include">
         </childnode>
       </node>
       <node id="4">
@@ -28,9 +29,9 @@
         </childnode>
         <childnode refid="20" relation="include">
         </childnode>
-        <childnode refid="27" relation="include">
+        <childnode refid="28" relation="include">
         </childnode>
-        <childnode refid="29" relation="include">
+        <childnode refid="30" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -38,9 +39,11 @@
         <link refid="film_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="30" relation="include">
+        <childnode refid="31" relation="include">
         </childnode>
-        <childnode refid="32" relation="include">
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
         </childnode>
       </node>
       <node id="5">
@@ -80,23 +83,23 @@
         <link refid="property_8h"/>
         <childnode refid="16" relation="include">
         </childnode>
-        <childnode refid="23" relation="include">
-        </childnode>
-        <childnode refid="26" relation="include">
+        <childnode refid="24" relation="include">
         </childnode>
         <childnode refid="27" relation="include">
         </childnode>
-        <childnode refid="20" relation="include">
-        </childnode>
         <childnode refid="28" relation="include">
         </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
       </node>
-      <node id="24">
+      <node id="25">
         <label>core/ray.h</label>
         <link refid="ray_8h"/>
         <childnode refid="16" relation="include">
         </childnode>
-        <childnode refid="25" relation="include">
+        <childnode refid="26" relation="include">
         </childnode>
       </node>
       <node id="2">
@@ -105,12 +108,18 @@
         <childnode refid="3" relation="include">
         </childnode>
       </node>
-      <node id="23">
+      <node id="33">
+        <label>core/spectrum.h</label>
+        <link refid="spectrum_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
         <label>core/transform.h</label>
         <link refid="transform_8h"/>
         <childnode refid="16" relation="include">
         </childnode>
-        <childnode refid="24" relation="include">
+        <childnode refid="25" relation="include">
         </childnode>
       </node>
       <node id="16">
@@ -134,6 +143,8 @@
         </childnode>
         <childnode refid="22" relation="include">
         </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
       </node>
       <node id="6">
         <label>platform.h</label>
@@ -151,19 +162,19 @@
       <node id="14">
         <label>cstdlib</label>
       </node>
-      <node id="31">
+      <node id="32">
         <label>iterator</label>
       </node>
       <node id="8">
         <label>limits</label>
       </node>
-      <node id="27">
+      <node id="28">
         <label>map</label>
       </node>
-      <node id="32">
+      <node id="34">
         <label>mutex</label>
       </node>
-      <node id="26">
+      <node id="27">
         <label>nlohmann/json.hpp</label>
       </node>
       <node id="9">
@@ -175,6 +186,9 @@
       <node id="21">
         <label>ostream</label>
       </node>
+      <node id="23">
+        <label>span</label>
+      </node>
       <node id="13">
         <label>spdlog/fmt/ostr.h</label>
       </node>
@@ -184,16 +198,16 @@
       <node id="20">
         <label>string</label>
       </node>
-      <node id="29">
+      <node id="30">
         <label>string_view</label>
       </node>
       <node id="7">
         <label>type_traits</label>
       </node>
-      <node id="25">
+      <node id="26">
         <label>utility</label>
       </node>
-      <node id="28">
+      <node id="29">
         <label>variant</label>
       </node>
     </incdepgraph>
@@ -209,8 +223,9 @@
         </childnode>
       </node>
     </invincdepgraph>
+    <innerclass refid="structdakku_1_1FilmTilePixel" prot="public">dakku::FilmTilePixel</innerclass>
     <innerclass refid="classdakku_1_1Film" prot="public">dakku::Film</innerclass>
-    <innerclass refid="structdakku_1_1Film_1_1Pixel" prot="private">dakku::Film::Pixel</innerclass>
+    <innerclass refid="structdakku_1_1Film_1_1Pixel" prot="public">dakku::Film::Pixel</innerclass>
     <innernamespace refid="namespacedakku">dakku</innernamespace>
     <briefdescription>
     </briefdescription>
@@ -221,45 +236,60 @@
 <codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DAKKU_CORE_FILM_H_</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="serialization_8h" kindref="compound">core/serialization.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="bounds_8h" kindref="compound">core/bounds.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mutex&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacedakku" kindref="compound">dakku</ref><sp/>{</highlight></codeline>
-<codeline lineno="12" refid="classdakku_1_1Film" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref><sp/><ref refid="classdakku_1_1Film" kindref="compound">Film</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1SerializableObject" kindref="compound">SerializableObject</ref><sp/>{</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="14" refid="classdakku_1_1Film_1a246c871f2adf1dca61f541a9f8544b4b" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classdakku_1_1Film_1a246c871f2adf1dca61f541a9f8544b4b" kindref="member">DAKKU_DECLARE_OBJECT</ref>(<ref refid="classdakku_1_1Film" kindref="compound">Film</ref>,<sp/><ref refid="classdakku_1_1SerializableObject" kindref="compound">SerializableObject</ref>);</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>explicit<sp/>Film(const<sp/>Point2i<sp/>&amp;fullResolution,<sp/>const<sp/>Bounds2f<sp/>cropWindow,<sp/>)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="17"><highlight class="normal"></highlight></codeline>
-<codeline lineno="18" refid="classdakku_1_1Film_1abd5500d780cda9eb7b512dc7ac1740d5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Film_1abd5500d780cda9eb7b512dc7ac1740d5" kindref="member">serialize</ref>(<ref refid="classdakku_1_1OutputStream" kindref="compound">OutputStream</ref><sp/>*stream)<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="19" refid="classdakku_1_1Film_1a5c376ccf9abcdb293db2e9b9935b785c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Film_1a5c376ccf9abcdb293db2e9b9935b785c" kindref="member">deserialize</ref>(<ref refid="classdakku_1_1InputStream" kindref="compound">InputStream</ref><sp/>*stream)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="spectrum_8h" kindref="compound">core/spectrum.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mutex&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacedakku" kindref="compound">dakku</ref><sp/>{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="structdakku_1_1FilmTilePixel" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdakku_1_1FilmTilePixel" kindref="compound">FilmTilePixel</ref><sp/>{</highlight></codeline>
+<codeline lineno="16" refid="structdakku_1_1FilmTilePixel_1af4beb8c6536598bd0233bcfa7b836f03" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classdakku_1_1RgbSpectrum" kindref="compound">Spectrum</ref><sp/><ref refid="structdakku_1_1FilmTilePixel_1af4beb8c6536598bd0233bcfa7b836f03" kindref="member">contribSum</ref>;</highlight></codeline>
+<codeline lineno="18" refid="structdakku_1_1FilmTilePixel_1a4df7e5e93e3e44818913bb0e0fe3a97d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structdakku_1_1FilmTilePixel_1a4df7e5e93e3e44818913bb0e0fe3a97d" kindref="member">filterWeightSum</ref>;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="20"><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">Pixel<sp/>{</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>xyz[3];</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>filterWeightSum;</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(_MSC_VER)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>warning(push)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>warning(disable<sp/>:<sp/>4251)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/>std::unique_ptr&lt;Pixel[]&gt;<sp/>pixels{};</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><ref refid="namespacedakku_1a059653c441fcfa28e3b00de3709176e9" kindref="member">Point2i</ref><sp/>fullResolution;</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><ref refid="namespacedakku_1abcc743bdeb62068a56f14ac3ef9963b7" kindref="member">Bounds2f</ref><sp/>cropWindow{<ref refid="namespacedakku_1a9910f23501fd2ef5e9a829cdab0992be" kindref="member">Point2f</ref>(0,<sp/>0),<sp/><ref refid="namespacedakku_1a9910f23501fd2ef5e9a829cdab0992be" kindref="member">Point2f</ref>(1,<sp/>1)};</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><ref refid="namespacedakku_1ae2cd423e1acf2fd91f4cdf3cc5ad50c6" kindref="member">Bounds2i</ref><sp/>croppedPixelBounds;</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>filterTableWidth<sp/>=<sp/>16;</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/>std::array&lt;float,<sp/>filterTableWidth<sp/>*<sp/>filterTableWidth&gt;<sp/>filterTable{};</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/>std::mutex<sp/>mutex;</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"></highlight></codeline>
-<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(_MSC_VER)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>warning(pop)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="57"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="58"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dakku</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="25" refid="classdakku_1_1Film" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref><sp/><ref refid="classdakku_1_1Film" kindref="compound">Film</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1SerializableObject" kindref="compound">SerializableObject</ref><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="27" refid="classdakku_1_1Film_1a246c871f2adf1dca61f541a9f8544b4b" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classdakku_1_1Film_1a246c871f2adf1dca61f541a9f8544b4b" kindref="member">DAKKU_DECLARE_OBJECT</ref>(<ref refid="classdakku_1_1Film" kindref="compound">Film</ref>,<sp/><ref refid="classdakku_1_1SerializableObject" kindref="compound">SerializableObject</ref>);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="classdakku_1_1Film_1ad8e4f2a09968ca20e9963575c573ef5d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Film_1ad8e4f2a09968ca20e9963575c573ef5d" kindref="member">Film</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Point" kindref="compound">Point2i</ref><sp/>&amp;fullResolution,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Bounds2" kindref="compound">Bounds2f</ref><sp/>&amp;cropWindow,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::unique_ptr&lt;Filter&gt;<sp/>filter,<sp/>std::string<sp/>fileName,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="namespacedakku_1a7acbd19453bccf5b94cfa1133df02981" kindref="member">scale</ref>,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>maxSampleLuminance<sp/>=<sp/>INF);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="classdakku_1_1Film_1abd5500d780cda9eb7b512dc7ac1740d5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Film_1abd5500d780cda9eb7b512dc7ac1740d5" kindref="member">serialize</ref>(<ref refid="classdakku_1_1OutputStream" kindref="compound">OutputStream</ref><sp/>*stream)<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="44" refid="classdakku_1_1Film_1a5c376ccf9abcdb293db2e9b9935b785c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Film_1a5c376ccf9abcdb293db2e9b9935b785c" kindref="member">deserialize</ref>(<ref refid="classdakku_1_1InputStream" kindref="compound">InputStream</ref><sp/>*stream)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="51" refid="structdakku_1_1Film_1_1Pixel" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="keyword">alignas</highlight><highlight class="normal">(32)<sp/><ref refid="structdakku_1_1Film_1_1Pixel" kindref="compound">Pixel</ref><sp/>{</highlight></codeline>
+<codeline lineno="53" refid="structdakku_1_1Film_1_1Pixel_1a1605c1fd5405061a1d7b231109bbc2dd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>xyz[3];</highlight></codeline>
+<codeline lineno="55" refid="structdakku_1_1Film_1_1Pixel_1accd87822d3b67fbf4a0014915acc6cf2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structdakku_1_1Film_1_1Pixel_1accd87822d3b67fbf4a0014915acc6cf2" kindref="member">filterWeightSum</ref>;</highlight></codeline>
+<codeline lineno="57" refid="structdakku_1_1Film_1_1Pixel_1acfbbbf1e8a707f1c10b73ba2d9215473" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::atomic&lt;float&gt;<sp/>splatXyz[3];</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(_MSC_VER)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>warning(push)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>warning(disable<sp/>:<sp/>4251)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="65" refid="classdakku_1_1Film_1a428fa06a95483622e24fef64a6d8255a" refkind="member"><highlight class="normal"><sp/><sp/>std::unique_ptr&lt;Pixel[]&gt;<sp/>pixels{};</highlight></codeline>
+<codeline lineno="67" refid="classdakku_1_1Film_1ad88e45f878fce2f808efa02e0d4d15f1" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classdakku_1_1Point" kindref="compound">Point2i</ref><sp/><ref refid="classdakku_1_1Film_1ad88e45f878fce2f808efa02e0d4d15f1" kindref="member">fullResolution</ref>;</highlight></codeline>
+<codeline lineno="69" refid="classdakku_1_1Film_1af37a20765786993f8e85f693da1aabae" refkind="member"><highlight class="normal"><sp/><sp/>std::unique_ptr&lt;Filter&gt;<sp/>filter{};</highlight></codeline>
+<codeline lineno="71" refid="classdakku_1_1Film_1a4e50af430a0965655502f18ebcd3a720" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classdakku_1_1Film_1a4e50af430a0965655502f18ebcd3a720" kindref="member">fileName</ref>;</highlight></codeline>
+<codeline lineno="73" refid="classdakku_1_1Film_1ab903557a26253b8d83313dcc8d082162" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classdakku_1_1Bounds2" kindref="compound">Bounds2i</ref><sp/><ref refid="classdakku_1_1Film_1ab903557a26253b8d83313dcc8d082162" kindref="member">croppedPixelBounds</ref>;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="classdakku_1_1Film_1a2761e7f49049136f7641e7eb9992aa3d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>filterTableWidth<sp/>=<sp/>16;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="classdakku_1_1Film_1a6fd4d08f6a29e54713a3972cd5a86afa" refkind="member"><highlight class="normal"><sp/><sp/>std::array&lt;float,<sp/>filterTableWidth<sp/>*<sp/>filterTableWidth&gt;<sp/>filterTable{};</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="classdakku_1_1Film_1a189e65e1fdac41477f8c4fbc953a6c79" refkind="member"><highlight class="normal"><sp/><sp/>std::mutex<sp/><ref refid="classdakku_1_1Film_1a189e65e1fdac41477f8c4fbc953a6c79" kindref="member">mutex</ref>;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="classdakku_1_1Film_1a59fba870ff465e7f3611cef64074c3f1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Film_1a59fba870ff465e7f3611cef64074c3f1" kindref="member">scale</ref>;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="classdakku_1_1Film_1a388a8ca872d43f220b7efd79cccd84af" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Film_1a388a8ca872d43f220b7efd79cccd84af" kindref="member">maxSampleLuminance</ref>;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(_MSC_VER)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>warning(pop)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dakku</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="src/core/film.h"/>
   </compounddef>

@@ -47,7 +47,7 @@
         <label>src/core/api.h</label>
         <link refid="core_2api_8h"/>
       </node>
-      <node id="19">
+      <node id="20">
         <label>src/core/bounds.h</label>
         <link refid="bounds_8h"/>
         <childnode refid="10" relation="include">
@@ -82,7 +82,7 @@
         </childnode>
         <childnode refid="15" relation="include">
         </childnode>
-        <childnode refid="23" relation="include">
+        <childnode refid="24" relation="include">
         </childnode>
       </node>
       <node id="15">
@@ -109,19 +109,19 @@
         <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="20">
+      <node id="21">
         <label>src/core/property.h</label>
         <link refid="property_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="21">
+      <node id="22">
         <label>src/core/ray.h</label>
         <link refid="ray_8h"/>
-        <childnode refid="22" relation="include">
+        <childnode refid="23" relation="include">
         </childnode>
       </node>
-      <node id="23">
+      <node id="24">
         <label>src/core/relative.h</label>
         <link refid="relative_8h"/>
       </node>
@@ -137,28 +137,36 @@
         <childnode refid="12" relation="include">
         </childnode>
       </node>
-      <node id="22">
-        <label>src/core/transform.h</label>
-        <link refid="transform_8h"/>
-        <childnode refid="20" relation="include">
+      <node id="18">
+        <label>src/core/spectrum.h</label>
+        <link refid="spectrum_8h"/>
+        <childnode refid="10" relation="include">
         </childnode>
       </node>
-      <node id="18">
+      <node id="23">
+        <label>src/core/transform.h</label>
+        <link refid="transform_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
         <label>src/core/vector.h</label>
         <link refid="vector_8h"/>
-        <childnode refid="19" relation="include">
-        </childnode>
         <childnode refid="20" relation="include">
         </childnode>
         <childnode refid="21" relation="include">
         </childnode>
         <childnode refid="22" relation="include">
         </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
       </node>
       <node id="17">
         <label>src/core/vector_base.h</label>
         <link refid="vector__base_8h"/>
         <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
         </childnode>
       </node>
       <node id="7">
@@ -275,8 +283,12 @@
 <codeline lineno="89"><highlight class="normal"></highlight></codeline>
 <codeline lineno="90" refid="namespacedakku_1ad32aa25f5584289eda626b47ae3525cc" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref><sp/><ref refid="classdakku_1_1Filter" kindref="compound">Filter</ref>;</highlight></codeline>
 <codeline lineno="91" refid="namespacedakku_1a1bd6403f2998d6f8d22f87c99eca7eed" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref><sp/><ref refid="classdakku_1_1Film" kindref="compound">Film</ref>;</highlight></codeline>
-<codeline lineno="92"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dakku</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>S,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Derived&gt;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdakku_1_1CoefficientSpectrum" kindref="compound">CoefficientSpectrum</ref>;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdakku_1_1RgbSpectrum" kindref="compound">RgbSpectrum</ref>;</highlight></codeline>
+<codeline lineno="96" refid="namespacedakku_1a72f253f8c73b2ec7fef8e3c83c0eac17" refkind="member"><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1RgbSpectrum" kindref="compound">Spectrum</ref><sp/>=<sp/><ref refid="classdakku_1_1RgbSpectrum" kindref="compound">RgbSpectrum</ref>;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dakku</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="src/core/fwd.h"/>
   </compounddef>

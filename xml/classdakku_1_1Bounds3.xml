@@ -27,7 +27,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/bounds.h" line="243" column="3" bodyfile="src/core/bounds.h" bodystart="243" bodyend="243"/>
+        <location file="src/core/bounds.h" line="251" column="3" bodyfile="src/core/bounds.h" bodystart="251" bodyend="251"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -59,7 +59,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/core/bounds.h" line="239" column="1" bodyfile="src/core/bounds.h" bodystart="239" bodyend="244"/>
+    <location file="src/core/bounds.h" line="247" column="1" bodyfile="src/core/bounds.h" bodystart="247" bodyend="252"/>
     <listofallmembers>
       <member refid="classdakku_1_1BoundsBase_1a1533ac65725aee5fa771b9e068f1050d" prot="public" virt="non-virtual"><scope>dakku::Bounds3</scope><name>boundingSphere</name></member>
       <member refid="classdakku_1_1Bounds3_1a46c718e38bed601047044a6f1c1b7d7c" prot="public" virt="non-virtual"><scope>dakku::Bounds3</scope><name>Bounds3</name></member>
@@ -75,6 +75,7 @@
       <member refid="classdakku_1_1BoundsBase_1acd1339c39870cd9bac4a0c2ee3726d20" prot="public" virt="non-virtual"><scope>dakku::Bounds3</scope><name>operator==</name></member>
       <member refid="classdakku_1_1BoundsBase_1a1df49abc60c6cee7febd54aa46d04aa8" prot="public" virt="non-virtual"><scope>dakku::Bounds3</scope><name>pMax</name></member>
       <member refid="classdakku_1_1BoundsBase_1abd7c34bec0f05f1dfb494b76eed47622" prot="public" virt="non-virtual"><scope>dakku::Bounds3</scope><name>pMin</name></member>
+      <member refid="classdakku_1_1BoundsBase_1a1131f2fb765ed853a8623a5aa0266d5e" prot="public" virt="non-virtual"><scope>dakku::Bounds3</scope><name>toString</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

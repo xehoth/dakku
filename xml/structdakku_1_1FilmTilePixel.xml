@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="structdakku_1_1FilmTilePixel" kind="struct" language="C++" prot="public">
+    <compoundname>dakku::FilmTilePixel</compoundname>
+    <includes refid="film_8h" local="no">film.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structdakku_1_1FilmTilePixel_1af4beb8c6536598bd0233bcfa7b836f03" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacedakku_1a72f253f8c73b2ec7fef8e3c83c0eac17" kindref="member">Spectrum</ref></type>
+        <definition>Spectrum dakku::FilmTilePixel::contribSum</definition>
+        <argsstring></argsstring>
+        <name>contribSum</name>
+        <briefdescription>
+<para>radiance contribution sum </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/film.h" line="16" column="12" bodyfile="src/core/film.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdakku_1_1FilmTilePixel_1a4df7e5e93e3e44818913bb0e0fe3a97d" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float dakku::FilmTilePixel::filterWeightSum</definition>
+        <argsstring></argsstring>
+        <name>filterWeightSum</name>
+        <briefdescription>
+<para>sum of filter weights </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/film.h" line="18" column="9" bodyfile="src/core/film.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>film tile pixel </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>dakku::CoefficientSpectrum&lt; 3, RgbSpectrum &gt;</label>
+        <link refid="classdakku_1_1CoefficientSpectrum"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>dakku::FilmTilePixel</label>
+        <link refid="structdakku_1_1FilmTilePixel"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>contribSum</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dakku::RgbSpectrum</label>
+        <link refid="classdakku_1_1RgbSpectrum"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>dakku::VectorBase&lt; T, S, Derived &gt;</label>
+        <link refid="classdakku_1_1VectorBase"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/core/film.h" line="14" column="1" bodyfile="src/core/film.h" bodystart="14" bodyend="19"/>
+    <listofallmembers>
+      <member refid="structdakku_1_1FilmTilePixel_1af4beb8c6536598bd0233bcfa7b836f03" prot="public" virt="non-virtual"><scope>dakku::FilmTilePixel</scope><name>contribSum</name></member>
+      <member refid="structdakku_1_1FilmTilePixel_1a4df7e5e93e3e44818913bb0e0fe3a97d" prot="public" virt="non-virtual"><scope>dakku::FilmTilePixel</scope><name>filterWeightSum</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

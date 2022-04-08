@@ -12,9 +12,9 @@
         <link refid="bounds_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="19" relation="include">
-        </childnode>
         <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
         </childnode>
       </node>
       <node id="5">
@@ -64,6 +64,8 @@
         </childnode>
         <childnode refid="18" relation="include">
         </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
       </node>
       <node id="6">
         <label>platform.h</label>
@@ -81,7 +83,7 @@
       <node id="13">
         <label>cstdlib</label>
       </node>
-      <node id="19">
+      <node id="20">
         <label>iterator</label>
       </node>
       <node id="8">
@@ -96,6 +98,9 @@
       <node id="17">
         <label>ostream</label>
       </node>
+      <node id="19">
+        <label>span</label>
+      </node>
       <node id="12">
         <label>spdlog/fmt/ostr.h</label>
       </node>
@@ -108,7 +113,7 @@
       <node id="7">
         <label>type_traits</label>
       </node>
-      <node id="20">
+      <node id="21">
         <label>utility</label>
       </node>
     </incdepgraph>
@@ -247,91 +252,99 @@
 <codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
 <codeline lineno="199"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="200"><highlight class="normal"></highlight></codeline>
-<codeline lineno="202" refid="classdakku_1_1BoundsBase_1abd7c34bec0f05f1dfb494b76eed47622" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classdakku_1_1Point" kindref="compound">Point&lt;T, S&gt;</ref><sp/><ref refid="classdakku_1_1BoundsBase_1abd7c34bec0f05f1dfb494b76eed47622" kindref="member">pMin</ref>{std::numeric_limits&lt;T&gt;::max()};</highlight></codeline>
-<codeline lineno="204" refid="classdakku_1_1BoundsBase_1a1df49abc60c6cee7febd54aa46d04aa8" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classdakku_1_1Point" kindref="compound">Point&lt;T, S&gt;</ref><sp/><ref refid="classdakku_1_1BoundsBase_1a1df49abc60c6cee7febd54aa46d04aa8" kindref="member">pMax</ref>{std::numeric_limits&lt;T&gt;::lowest()};</highlight></codeline>
-<codeline lineno="205"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="206"><highlight class="normal"></highlight></codeline>
-<codeline lineno="211"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;ArithmeticType<sp/>T&gt;</highlight></codeline>
-<codeline lineno="212" refid="classdakku_1_1Bounds2" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdakku_1_1Bounds2" kindref="compound">Bounds2</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1BoundsBase" kindref="compound">BoundsBase</ref>&lt;T,<sp/>2&gt;<sp/>{</highlight></codeline>
-<codeline lineno="213"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="214"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1BoundsBase" kindref="compound">BoundsBase&lt;T, 2&gt;::BoundsBase</ref>;</highlight></codeline>
-<codeline lineno="215"><highlight class="normal"></highlight></codeline>
-<codeline lineno="216" refid="classdakku_1_1Bounds2_1a6ae823c1ed9889a5ac8ca8a0af4da79e" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classdakku_1_1Bounds2_1a6ae823c1ed9889a5ac8ca8a0af4da79e" kindref="member">Bounds2</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1BoundsBase" kindref="compound">BoundsBase&lt;T, 2&gt;</ref><sp/>&amp;base)<sp/>:<sp/><ref refid="classdakku_1_1BoundsBase" kindref="compound">BoundsBase</ref>&lt;T,<sp/>2&gt;(base)<sp/>{}</highlight></codeline>
-<codeline lineno="217"><highlight class="normal"></highlight></codeline>
-<codeline lineno="223" refid="classdakku_1_1Bounds2_1ae986c4aae4bed669564ea89613984356" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">)<sp/><ref refid="classdakku_1_1Bounds2_1ae986c4aae4bed669564ea89613984356" kindref="member">area</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>d<sp/>=<sp/>this-&gt;<ref refid="classdakku_1_1BoundsBase_1a07b1800b4e56f7f2daf1f59785215aee" kindref="member">diagonal</ref>();</highlight></codeline>
-<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>d.x()<sp/>*<sp/>d.y();</highlight></codeline>
-<codeline lineno="226"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="227"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="228"><highlight class="normal"></highlight></codeline>
-<codeline lineno="230" refid="namespacedakku_1abcc743bdeb62068a56f14ac3ef9963b7" refkind="member"><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Bounds2" kindref="compound">Bounds2f</ref><sp/>=<sp/><ref refid="classdakku_1_1Bounds2" kindref="compound">Bounds2&lt;float&gt;</ref>;</highlight></codeline>
-<codeline lineno="232" refid="namespacedakku_1ae2cd423e1acf2fd91f4cdf3cc5ad50c6" refkind="member"><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Bounds2" kindref="compound">Bounds2i</ref><sp/>=<sp/><ref refid="classdakku_1_1Bounds2" kindref="compound">Bounds2&lt;int&gt;</ref>;</highlight></codeline>
-<codeline lineno="233"><highlight class="normal"></highlight></codeline>
-<codeline lineno="238"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;ArithmeticType<sp/>T&gt;</highlight></codeline>
-<codeline lineno="239" refid="classdakku_1_1Bounds3" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdakku_1_1Bounds3" kindref="compound">Bounds3</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1BoundsBase" kindref="compound">BoundsBase</ref>&lt;T,<sp/>3&gt;<sp/>{</highlight></codeline>
-<codeline lineno="240"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="241"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1BoundsBase" kindref="compound">BoundsBase&lt;T, 3&gt;::BoundsBase</ref>;</highlight></codeline>
-<codeline lineno="242"><highlight class="normal"></highlight></codeline>
-<codeline lineno="243" refid="classdakku_1_1Bounds3_1a46c718e38bed601047044a6f1c1b7d7c" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classdakku_1_1Bounds3_1a46c718e38bed601047044a6f1c1b7d7c" kindref="member">Bounds3</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1BoundsBase" kindref="compound">BoundsBase&lt;T, 3&gt;</ref><sp/>&amp;base)<sp/>:<sp/><ref refid="classdakku_1_1BoundsBase" kindref="compound">BoundsBase</ref>&lt;T,<sp/>3&gt;(base)<sp/>{}</highlight></codeline>
-<codeline lineno="244"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="245"><highlight class="normal"></highlight></codeline>
-<codeline lineno="247" refid="namespacedakku_1a19129587abbff965c2c15bab5723e208" refkind="member"><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Bounds3" kindref="compound">Bounds3f</ref><sp/>=<sp/><ref refid="classdakku_1_1Bounds3" kindref="compound">Bounds3&lt;float&gt;</ref>;</highlight></codeline>
-<codeline lineno="248"><highlight class="normal"></highlight></codeline>
-<codeline lineno="253" refid="classdakku_1_1Bounds2iIterator" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdakku_1_1Bounds2iIterator" kindref="compound">Bounds2iIterator</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>std::forward_iterator_tag<sp/>{</highlight></codeline>
-<codeline lineno="254"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="255" refid="classdakku_1_1Bounds2iIterator_1a5c7da4004ef177e5726790240a2191aa" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Bounds2iIterator_1a5c7da4004ef177e5726790240a2191aa" kindref="member">Bounds2iIterator</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Bounds2" kindref="compound">Bounds2i</ref><sp/>&amp;b,<sp/><ref refid="classdakku_1_1Point" kindref="compound">Point2i</ref><sp/>p)</highlight></codeline>
-<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>b(b),<sp/>p(std::move(p))<sp/>{}</highlight></codeline>
-<codeline lineno="257"><highlight class="normal"></highlight></codeline>
-<codeline lineno="258" refid="classdakku_1_1Bounds2iIterator_1ad19c79cc44f5407ffedd8fee2e74b873" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classdakku_1_1Bounds2iIterator" kindref="compound">Bounds2iIterator</ref><sp/><ref refid="classdakku_1_1Bounds2iIterator_1ad19c79cc44f5407ffedd8fee2e74b873" kindref="member">operator++</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/>advance();</highlight></codeline>
-<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="261"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="262"><highlight class="normal"></highlight></codeline>
-<codeline lineno="263" refid="classdakku_1_1Bounds2iIterator_1abba748bffd9de14381de7393279e0ab1" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classdakku_1_1Bounds2iIterator" kindref="compound">Bounds2iIterator</ref><sp/><ref refid="classdakku_1_1Bounds2iIterator_1abba748bffd9de14381de7393279e0ab1" kindref="member">operator++</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
-<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdakku_1_1Bounds2iIterator" kindref="compound">Bounds2iIterator</ref><sp/>ret<sp/>=<sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/>advance();</highlight></codeline>
-<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
-<codeline lineno="267"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="268"><highlight class="normal"></highlight></codeline>
-<codeline lineno="269" refid="classdakku_1_1Bounds2iIterator_1aabbc42d3b83e2b025e1a8540ff62314b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Bounds2iIterator_1aabbc42d3b83e2b025e1a8540ff62314b" kindref="member">operator==</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Bounds2iIterator" kindref="compound">Bounds2iIterator</ref><sp/>&amp;rhs)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>p<sp/>==<sp/>rhs.p<sp/>&amp;&amp;<sp/>(&amp;b<sp/>==<sp/>&amp;rhs.b);</highlight></codeline>
-<codeline lineno="271"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="272"><highlight class="normal"></highlight></codeline>
-<codeline lineno="273" refid="classdakku_1_1Bounds2iIterator_1aec365c1c605c7f12c463b13668a6fa5b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Bounds2iIterator_1aec365c1c605c7f12c463b13668a6fa5b" kindref="member">operator!=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Bounds2iIterator" kindref="compound">Bounds2iIterator</ref><sp/>&amp;rhs)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>p<sp/>!=<sp/>rhs.p<sp/>||<sp/>(&amp;b<sp/>!=<sp/>&amp;rhs.b);</highlight></codeline>
+<codeline lineno="201" refid="classdakku_1_1BoundsBase_1a1131f2fb765ed853a8623a5aa0266d5e" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/>std::string<sp/><ref refid="classdakku_1_1BoundsBase_1a1131f2fb765ed853a8623a5aa0266d5e" kindref="member">toString</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;[&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="classdakku_1_1BoundsBase_1abd7c34bec0f05f1dfb494b76eed47622" kindref="member">pMin</ref>.toString()<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="classdakku_1_1BoundsBase_1a1df49abc60c6cee7febd54aa46d04aa8" kindref="member">pMax</ref>.toString()<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;]&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205" refid="classdakku_1_1BoundsBase_1a02d61000d3d0599081a30bafc71bf758" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/>std::ostream<sp/>&amp;<ref refid="classdakku_1_1BoundsBase_1a02d61000d3d0599081a30bafc71bf758" kindref="member">operator&lt;&lt;</ref>(std::ostream<sp/>&amp;os,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1BoundsBase" kindref="compound">BoundsBase</ref><sp/>&amp;b)<sp/>{</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>os<sp/>&lt;&lt;<sp/>b.<ref refid="classdakku_1_1BoundsBase_1a1131f2fb765ed853a8623a5aa0266d5e" kindref="member">toString</ref>();</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210" refid="classdakku_1_1BoundsBase_1abd7c34bec0f05f1dfb494b76eed47622" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classdakku_1_1Point" kindref="compound">Point&lt;T, S&gt;</ref><sp/><ref refid="classdakku_1_1BoundsBase_1abd7c34bec0f05f1dfb494b76eed47622" kindref="member">pMin</ref>{std::numeric_limits&lt;T&gt;::max()};</highlight></codeline>
+<codeline lineno="212" refid="classdakku_1_1BoundsBase_1a1df49abc60c6cee7febd54aa46d04aa8" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classdakku_1_1Point" kindref="compound">Point&lt;T, S&gt;</ref><sp/><ref refid="classdakku_1_1BoundsBase_1a1df49abc60c6cee7febd54aa46d04aa8" kindref="member">pMax</ref>{std::numeric_limits&lt;T&gt;::lowest()};</highlight></codeline>
+<codeline lineno="213"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;ArithmeticType<sp/>T&gt;</highlight></codeline>
+<codeline lineno="220" refid="classdakku_1_1Bounds2" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdakku_1_1Bounds2" kindref="compound">Bounds2</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1BoundsBase" kindref="compound">BoundsBase</ref>&lt;T,<sp/>2&gt;<sp/>{</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1BoundsBase" kindref="compound">BoundsBase&lt;T, 2&gt;::BoundsBase</ref>;</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224" refid="classdakku_1_1Bounds2_1a6ae823c1ed9889a5ac8ca8a0af4da79e" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classdakku_1_1Bounds2_1a6ae823c1ed9889a5ac8ca8a0af4da79e" kindref="member">Bounds2</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1BoundsBase" kindref="compound">BoundsBase&lt;T, 2&gt;</ref><sp/>&amp;base)<sp/>:<sp/><ref refid="classdakku_1_1BoundsBase" kindref="compound">BoundsBase</ref>&lt;T,<sp/>2&gt;(base)<sp/>{}</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231" refid="classdakku_1_1Bounds2_1ae986c4aae4bed669564ea89613984356" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">)<sp/><ref refid="classdakku_1_1Bounds2_1ae986c4aae4bed669564ea89613984356" kindref="member">area</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>d<sp/>=<sp/>this-&gt;<ref refid="classdakku_1_1BoundsBase_1a07b1800b4e56f7f2daf1f59785215aee" kindref="member">diagonal</ref>();</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>d.x()<sp/>*<sp/>d.y();</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="235"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238" refid="namespacedakku_1abcc743bdeb62068a56f14ac3ef9963b7" refkind="member"><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Bounds2" kindref="compound">Bounds2f</ref><sp/>=<sp/><ref refid="classdakku_1_1Bounds2" kindref="compound">Bounds2&lt;float&gt;</ref>;</highlight></codeline>
+<codeline lineno="240" refid="namespacedakku_1ae2cd423e1acf2fd91f4cdf3cc5ad50c6" refkind="member"><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Bounds2" kindref="compound">Bounds2i</ref><sp/>=<sp/><ref refid="classdakku_1_1Bounds2" kindref="compound">Bounds2&lt;int&gt;</ref>;</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;ArithmeticType<sp/>T&gt;</highlight></codeline>
+<codeline lineno="247" refid="classdakku_1_1Bounds3" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdakku_1_1Bounds3" kindref="compound">Bounds3</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1BoundsBase" kindref="compound">BoundsBase</ref>&lt;T,<sp/>3&gt;<sp/>{</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1BoundsBase" kindref="compound">BoundsBase&lt;T, 3&gt;::BoundsBase</ref>;</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251" refid="classdakku_1_1Bounds3_1a46c718e38bed601047044a6f1c1b7d7c" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classdakku_1_1Bounds3_1a46c718e38bed601047044a6f1c1b7d7c" kindref="member">Bounds3</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1BoundsBase" kindref="compound">BoundsBase&lt;T, 3&gt;</ref><sp/>&amp;base)<sp/>:<sp/><ref refid="classdakku_1_1BoundsBase" kindref="compound">BoundsBase</ref>&lt;T,<sp/>3&gt;(base)<sp/>{}</highlight></codeline>
+<codeline lineno="252"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255" refid="namespacedakku_1a19129587abbff965c2c15bab5723e208" refkind="member"><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Bounds3" kindref="compound">Bounds3f</ref><sp/>=<sp/><ref refid="classdakku_1_1Bounds3" kindref="compound">Bounds3&lt;float&gt;</ref>;</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight></codeline>
+<codeline lineno="261" refid="classdakku_1_1Bounds2iIterator" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdakku_1_1Bounds2iIterator" kindref="compound">Bounds2iIterator</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>std::forward_iterator_tag<sp/>{</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="263" refid="classdakku_1_1Bounds2iIterator_1a5c7da4004ef177e5726790240a2191aa" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Bounds2iIterator_1a5c7da4004ef177e5726790240a2191aa" kindref="member">Bounds2iIterator</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Bounds2" kindref="compound">Bounds2i</ref><sp/>&amp;b,<sp/><ref refid="classdakku_1_1Point" kindref="compound">Point2i</ref><sp/>p)</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>b(b),<sp/>p(std::move(p))<sp/>{}</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight></codeline>
+<codeline lineno="266" refid="classdakku_1_1Bounds2iIterator_1ad19c79cc44f5407ffedd8fee2e74b873" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classdakku_1_1Bounds2iIterator" kindref="compound">Bounds2iIterator</ref><sp/><ref refid="classdakku_1_1Bounds2iIterator_1ad19c79cc44f5407ffedd8fee2e74b873" kindref="member">operator++</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/>advance();</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight></codeline>
+<codeline lineno="271" refid="classdakku_1_1Bounds2iIterator_1abba748bffd9de14381de7393279e0ab1" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classdakku_1_1Bounds2iIterator" kindref="compound">Bounds2iIterator</ref><sp/><ref refid="classdakku_1_1Bounds2iIterator_1abba748bffd9de14381de7393279e0ab1" kindref="member">operator++</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdakku_1_1Bounds2iIterator" kindref="compound">Bounds2iIterator</ref><sp/>ret<sp/>=<sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/>advance();</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
 <codeline lineno="275"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="276"><highlight class="normal"></highlight></codeline>
-<codeline lineno="277" refid="classdakku_1_1Bounds2iIterator_1a6b917d1a9e146470819a369ee789c65d" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classdakku_1_1Point" kindref="compound">Point2i</ref><sp/><ref refid="classdakku_1_1Bounds2iIterator_1a6b917d1a9e146470819a369ee789c65d" kindref="member">operator*</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>p;<sp/>}</highlight></codeline>
-<codeline lineno="278"><highlight class="normal"></highlight></codeline>
-<codeline lineno="279"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="280"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>advance()<sp/>{</highlight></codeline>
-<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/>++p.<ref refid="classdakku_1_1VectorBase_1aad720931a9787a87375de3f8d545567d" kindref="member">x</ref>();</highlight></codeline>
-<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(p.<ref refid="classdakku_1_1VectorBase_1aad720931a9787a87375de3f8d545567d" kindref="member">x</ref>()<sp/>==<sp/>b.<ref refid="classdakku_1_1BoundsBase_1a1df49abc60c6cee7febd54aa46d04aa8" kindref="member">pMax</ref>.x())<sp/>{</highlight></codeline>
-<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>p.<ref refid="classdakku_1_1VectorBase_1aad720931a9787a87375de3f8d545567d" kindref="member">x</ref>()<sp/>=<sp/>b.<ref refid="classdakku_1_1BoundsBase_1abd7c34bec0f05f1dfb494b76eed47622" kindref="member">pMin</ref>.x();</highlight></codeline>
-<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>++p.<ref refid="classdakku_1_1VectorBase_1a14b6216fd55dc1cd2f321c834f6121ca" kindref="member">y</ref>();</highlight></codeline>
-<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="286"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="287"><highlight class="normal"></highlight></codeline>
-<codeline lineno="288"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacedakku_1ae2cd423e1acf2fd91f4cdf3cc5ad50c6" kindref="member">Bounds2i</ref><sp/>&amp;b;</highlight></codeline>
-<codeline lineno="289"><highlight class="normal"><sp/><sp/><ref refid="namespacedakku_1a059653c441fcfa28e3b00de3709176e9" kindref="member">Point2i</ref><sp/>p;</highlight></codeline>
-<codeline lineno="290"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="291"><highlight class="normal"></highlight></codeline>
-<codeline lineno="296" refid="namespacedakku_1af0a2453f8db3eb948901c7a0aed18434" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Bounds2iIterator" kindref="compound">Bounds2iIterator</ref><sp/><ref refid="namespacedakku_1af0a2453f8db3eb948901c7a0aed18434" kindref="member">begin</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Bounds2" kindref="compound">Bounds2i</ref><sp/>&amp;b)<sp/>{</highlight></codeline>
-<codeline lineno="297"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Bounds2iIterator" kindref="compound">Bounds2iIterator</ref>{b,<sp/>b.<ref refid="classdakku_1_1BoundsBase_1abd7c34bec0f05f1dfb494b76eed47622" kindref="member">pMin</ref>};</highlight></codeline>
-<codeline lineno="298"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="277" refid="classdakku_1_1Bounds2iIterator_1aabbc42d3b83e2b025e1a8540ff62314b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Bounds2iIterator_1aabbc42d3b83e2b025e1a8540ff62314b" kindref="member">operator==</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Bounds2iIterator" kindref="compound">Bounds2iIterator</ref><sp/>&amp;rhs)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>p<sp/>==<sp/>rhs.p<sp/>&amp;&amp;<sp/>(&amp;b<sp/>==<sp/>&amp;rhs.b);</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight></codeline>
+<codeline lineno="281" refid="classdakku_1_1Bounds2iIterator_1aec365c1c605c7f12c463b13668a6fa5b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Bounds2iIterator_1aec365c1c605c7f12c463b13668a6fa5b" kindref="member">operator!=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Bounds2iIterator" kindref="compound">Bounds2iIterator</ref><sp/>&amp;rhs)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>p<sp/>!=<sp/>rhs.p<sp/>||<sp/>(&amp;b<sp/>!=<sp/>&amp;rhs.b);</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight></codeline>
+<codeline lineno="285" refid="classdakku_1_1Bounds2iIterator_1a6b917d1a9e146470819a369ee789c65d" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classdakku_1_1Point" kindref="compound">Point2i</ref><sp/><ref refid="classdakku_1_1Bounds2iIterator_1a6b917d1a9e146470819a369ee789c65d" kindref="member">operator*</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>p;<sp/>}</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>advance()<sp/>{</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/>++p.<ref refid="classdakku_1_1VectorBase_1aad720931a9787a87375de3f8d545567d" kindref="member">x</ref>();</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(p.<ref refid="classdakku_1_1VectorBase_1aad720931a9787a87375de3f8d545567d" kindref="member">x</ref>()<sp/>==<sp/>b.<ref refid="classdakku_1_1BoundsBase_1a1df49abc60c6cee7febd54aa46d04aa8" kindref="member">pMax</ref>.x())<sp/>{</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>p.<ref refid="classdakku_1_1VectorBase_1aad720931a9787a87375de3f8d545567d" kindref="member">x</ref>()<sp/>=<sp/>b.<ref refid="classdakku_1_1BoundsBase_1abd7c34bec0f05f1dfb494b76eed47622" kindref="member">pMin</ref>.x();</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>++p.<ref refid="classdakku_1_1VectorBase_1a14b6216fd55dc1cd2f321c834f6121ca" kindref="member">y</ref>();</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacedakku_1ae2cd423e1acf2fd91f4cdf3cc5ad50c6" kindref="member">Bounds2i</ref><sp/>&amp;b;</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><ref refid="namespacedakku_1a059653c441fcfa28e3b00de3709176e9" kindref="member">Point2i</ref><sp/>p;</highlight></codeline>
+<codeline lineno="298"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="299"><highlight class="normal"></highlight></codeline>
-<codeline lineno="304" refid="namespacedakku_1a41ae9fcb2290e6ea6f7d4b0fbca86d17" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Bounds2iIterator" kindref="compound">Bounds2iIterator</ref><sp/><ref refid="namespacedakku_1a41ae9fcb2290e6ea6f7d4b0fbca86d17" kindref="member">end</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Bounds2" kindref="compound">Bounds2i</ref><sp/>&amp;b)<sp/>{</highlight></codeline>
-<codeline lineno="305"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>normally,<sp/>the<sp/>ending<sp/>point<sp/>is<sp/>at<sp/>the<sp/>minimum<sp/>x<sp/>value<sp/>and<sp/>one<sp/>past</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="306"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>last<sp/>valid<sp/>y<sp/>value.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="307"><highlight class="normal"><sp/><sp/><ref refid="classdakku_1_1Point" kindref="compound">Point2i</ref><sp/>pEnd(b.<ref refid="classdakku_1_1BoundsBase_1abd7c34bec0f05f1dfb494b76eed47622" kindref="member">pMin</ref>.x(),<sp/>b.<ref refid="classdakku_1_1BoundsBase_1a1df49abc60c6cee7febd54aa46d04aa8" kindref="member">pMax</ref>.y());</highlight></codeline>
-<codeline lineno="308"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>however,<sp/>if<sp/>the<sp/>bounds<sp/>are<sp/>degenerate,<sp/>override<sp/>the<sp/>end<sp/>point<sp/>to</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="309"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>equal<sp/>the<sp/>start<sp/>point<sp/>so<sp/>that<sp/>any<sp/>attempt<sp/>to<sp/>iterate<sp/>over<sp/>the<sp/>bounds</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="310"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>exits<sp/>out<sp/>immediately.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="311"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(b.<ref refid="classdakku_1_1BoundsBase_1abd7c34bec0f05f1dfb494b76eed47622" kindref="member">pMin</ref>.x()<sp/>&gt;=<sp/>b.<ref refid="classdakku_1_1BoundsBase_1a1df49abc60c6cee7febd54aa46d04aa8" kindref="member">pMax</ref>.x()<sp/>||<sp/>b.<ref refid="classdakku_1_1BoundsBase_1abd7c34bec0f05f1dfb494b76eed47622" kindref="member">pMin</ref>.y()<sp/>&gt;=<sp/>b.<ref refid="classdakku_1_1BoundsBase_1a1df49abc60c6cee7febd54aa46d04aa8" kindref="member">pMax</ref>.y())<sp/>pEnd<sp/>=<sp/>b.<ref refid="classdakku_1_1BoundsBase_1abd7c34bec0f05f1dfb494b76eed47622" kindref="member">pMin</ref>;</highlight></codeline>
-<codeline lineno="312"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Bounds2iIterator" kindref="compound">Bounds2iIterator</ref>{b,<sp/>pEnd};</highlight></codeline>
-<codeline lineno="313"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="314"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dakku</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="315"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="304" refid="namespacedakku_1af0a2453f8db3eb948901c7a0aed18434" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Bounds2iIterator" kindref="compound">Bounds2iIterator</ref><sp/><ref refid="namespacedakku_1af0a2453f8db3eb948901c7a0aed18434" kindref="member">begin</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Bounds2" kindref="compound">Bounds2i</ref><sp/>&amp;b)<sp/>{</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Bounds2iIterator" kindref="compound">Bounds2iIterator</ref>{b,<sp/>b.<ref refid="classdakku_1_1BoundsBase_1abd7c34bec0f05f1dfb494b76eed47622" kindref="member">pMin</ref>};</highlight></codeline>
+<codeline lineno="306"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight></codeline>
+<codeline lineno="312" refid="namespacedakku_1a41ae9fcb2290e6ea6f7d4b0fbca86d17" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Bounds2iIterator" kindref="compound">Bounds2iIterator</ref><sp/><ref refid="namespacedakku_1a41ae9fcb2290e6ea6f7d4b0fbca86d17" kindref="member">end</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Bounds2" kindref="compound">Bounds2i</ref><sp/>&amp;b)<sp/>{</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>normally,<sp/>the<sp/>ending<sp/>point<sp/>is<sp/>at<sp/>the<sp/>minimum<sp/>x<sp/>value<sp/>and<sp/>one<sp/>past</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>last<sp/>valid<sp/>y<sp/>value.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><ref refid="classdakku_1_1Point" kindref="compound">Point2i</ref><sp/>pEnd(b.<ref refid="classdakku_1_1BoundsBase_1abd7c34bec0f05f1dfb494b76eed47622" kindref="member">pMin</ref>.x(),<sp/>b.<ref refid="classdakku_1_1BoundsBase_1a1df49abc60c6cee7febd54aa46d04aa8" kindref="member">pMax</ref>.y());</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>however,<sp/>if<sp/>the<sp/>bounds<sp/>are<sp/>degenerate,<sp/>override<sp/>the<sp/>end<sp/>point<sp/>to</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>equal<sp/>the<sp/>start<sp/>point<sp/>so<sp/>that<sp/>any<sp/>attempt<sp/>to<sp/>iterate<sp/>over<sp/>the<sp/>bounds</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>exits<sp/>out<sp/>immediately.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(b.<ref refid="classdakku_1_1BoundsBase_1abd7c34bec0f05f1dfb494b76eed47622" kindref="member">pMin</ref>.x()<sp/>&gt;=<sp/>b.<ref refid="classdakku_1_1BoundsBase_1a1df49abc60c6cee7febd54aa46d04aa8" kindref="member">pMax</ref>.x()<sp/>||<sp/>b.<ref refid="classdakku_1_1BoundsBase_1abd7c34bec0f05f1dfb494b76eed47622" kindref="member">pMin</ref>.y()<sp/>&gt;=<sp/>b.<ref refid="classdakku_1_1BoundsBase_1a1df49abc60c6cee7febd54aa46d04aa8" kindref="member">pMax</ref>.y())<sp/>pEnd<sp/>=<sp/>b.<ref refid="classdakku_1_1BoundsBase_1abd7c34bec0f05f1dfb494b76eed47622" kindref="member">pMin</ref>;</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Bounds2iIterator" kindref="compound">Bounds2iIterator</ref>{b,<sp/>pEnd};</highlight></codeline>
+<codeline lineno="321"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="322"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dakku</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="src/core/bounds.h"/>
   </compounddef>

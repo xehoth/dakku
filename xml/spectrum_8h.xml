@@ -1,0 +1,187 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="spectrum_8h" kind="file" language="C++">
+    <compoundname>spectrum.h</compoundname>
+    <includes refid="vector__base_8h" local="no">core/vector_base.h</includes>
+    <includedby refid="film_8h" local="no">src/core/film.h</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>core/fwd.h</label>
+        <link refid="core_2fwd_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>core/logger.h</label>
+        <link refid="logger_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/core/spectrum.h</label>
+        <link refid="spectrum_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>core/vector_base.h</label>
+        <link refid="vector__base_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>platform.h</label>
+        <link refid="platform_8h"/>
+      </node>
+      <node id="14">
+        <label>algorithm</label>
+      </node>
+      <node id="13">
+        <label>array</label>
+      </node>
+      <node id="9">
+        <label>cmath</label>
+      </node>
+      <node id="12">
+        <label>cstdlib</label>
+      </node>
+      <node id="7">
+        <label>limits</label>
+      </node>
+      <node id="8">
+        <label>numbers</label>
+      </node>
+      <node id="17">
+        <label>numeric</label>
+      </node>
+      <node id="16">
+        <label>ostream</label>
+      </node>
+      <node id="18">
+        <label>span</label>
+      </node>
+      <node id="11">
+        <label>spdlog/fmt/ostr.h</label>
+      </node>
+      <node id="10">
+        <label>spdlog/spdlog.h</label>
+      </node>
+      <node id="15">
+        <label>string</label>
+      </node>
+      <node id="6">
+        <label>type_traits</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>src/core/api.h</label>
+        <link refid="core_2api_8h"/>
+      </node>
+      <node id="2">
+        <label>src/core/film.h</label>
+        <link refid="film_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/core/spectrum.h</label>
+        <link refid="spectrum_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classdakku_1_1CoefficientSpectrum" prot="public">dakku::CoefficientSpectrum</innerclass>
+    <innerclass refid="classdakku_1_1RgbSpectrum" prot="public">dakku::RgbSpectrum</innerclass>
+    <innernamespace refid="namespacedakku">dakku</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>DAKKU_CORE_SPECTRUM_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DAKKU_CORE_SPECTRUM_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="vector__base_8h" kindref="compound">core/vector_base.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacedakku" kindref="compound">dakku</ref><sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="namespacedakku_1a80d2f8350cdcc84f6586fed5f396f8c7" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacedakku_1a80d2f8350cdcc84f6586fed5f396f8c7" kindref="member">xyzToRgb</ref>(std::span&lt;const<sp/>float,<sp/>3&gt;<sp/>xyz,<sp/>std::span&lt;float,<sp/>3&gt;<sp/>rgb)<sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/>rgb[0]<sp/>=<sp/>3.240479f<sp/>*<sp/>xyz[0]<sp/>-<sp/>1.537150f<sp/>*<sp/>xyz[1]<sp/>-<sp/>0.498535f<sp/>*<sp/>xyz[2];</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/>rgb[1]<sp/>=<sp/>-0.969256f<sp/>*<sp/>xyz[0]<sp/>+<sp/>1.875991f<sp/>*<sp/>xyz[1]<sp/>+<sp/>0.041556f<sp/>*<sp/>xyz[2];</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/>rgb[2]<sp/>=<sp/>0.055648f<sp/>*<sp/>xyz[0]<sp/>-<sp/>0.204043f<sp/>*<sp/>xyz[1]<sp/>+<sp/>1.057311f<sp/>*<sp/>xyz[2];</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="namespacedakku_1a4eafe1eaa4b431b45c002f81b793b46f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacedakku_1a4eafe1eaa4b431b45c002f81b793b46f" kindref="member">rgbToXyz</ref>(std::span&lt;const<sp/>float,<sp/>3&gt;<sp/>rgb,<sp/>std::span&lt;float,<sp/>3&gt;<sp/>xyz)<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/>xyz[0]<sp/>=<sp/>0.412453f<sp/>*<sp/>rgb[0]<sp/>+<sp/>0.357580f<sp/>*<sp/>rgb[1]<sp/>+<sp/>0.180423f<sp/>*<sp/>rgb[2];</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/>xyz[1]<sp/>=<sp/>0.212671f<sp/>*<sp/>rgb[0]<sp/>+<sp/>0.715160f<sp/>*<sp/>rgb[1]<sp/>+<sp/>0.072169f<sp/>*<sp/>rgb[2];</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/>xyz[2]<sp/>=<sp/>0.019334f<sp/>*<sp/>rgb[0]<sp/>+<sp/>0.119193f<sp/>*<sp/>rgb[1]<sp/>+<sp/>0.950227f<sp/>*<sp/>rgb[2];</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>S,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Derived&gt;</highlight></codeline>
+<codeline lineno="34" refid="classdakku_1_1CoefficientSpectrum" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdakku_1_1CoefficientSpectrum" kindref="compound">CoefficientSpectrum</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1VectorBase" kindref="compound">VectorBase</ref>&lt;float,<sp/>S,<sp/>Derived&gt;<sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1VectorBase" kindref="compound">VectorBase&lt;float, S, Derived&gt;::VectorBase</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="classdakku_1_1CoefficientSpectrum_1a3419bb7bc9a9f6ab7b2c00c3cee942d1" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1CoefficientSpectrum_1a3419bb7bc9a9f6ab7b2c00c3cee942d1" kindref="member">isBlack</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;<ref refid="classdakku_1_1VectorBase_1a3d663b309168d884b55d82b001b18ecb" kindref="member">isZero</ref>();<sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="classdakku_1_1CoefficientSpectrum_1ae9b538dae7b0ef76e17b5b8379d62224" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/>Derived<sp/><ref refid="classdakku_1_1CoefficientSpectrum_1ae9b538dae7b0ef76e17b5b8379d62224" kindref="member">clamp</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>low<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>high<sp/>=<sp/>INF)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>Derived<sp/>ret<sp/>=<sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>S;<sp/>++i)<sp/>ret[i]<sp/>=<sp/>std::clamp(ret[i],<sp/>low,<sp/>high);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="classdakku_1_1RgbSpectrum" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdakku_1_1RgbSpectrum" kindref="compound">RgbSpectrum</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1CoefficientSpectrum" kindref="compound">CoefficientSpectrum</ref>&lt;3,<sp/>RgbSpectrum&gt;<sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1CoefficientSpectrum" kindref="compound">CoefficientSpectrum&lt;3, RgbSpectrum&gt;::CoefficientSpectrum</ref>;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="classdakku_1_1RgbSpectrum_1a24a0c6a84be207d959a6da3bd5bd4461" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1RgbSpectrum" kindref="compound">RgbSpectrum</ref><sp/><ref refid="classdakku_1_1RgbSpectrum_1a24a0c6a84be207d959a6da3bd5bd4461" kindref="member">fromRgb</ref>(std::span&lt;const<sp/>float,<sp/>3&gt;<sp/>rgb)<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1RgbSpectrum" kindref="compound">RgbSpectrum</ref>{rgb[0],<sp/>rgb[1],<sp/>rgb[2]};</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="classdakku_1_1RgbSpectrum_1a840645ae729c87f3d95ec559dce855db" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1RgbSpectrum" kindref="compound">RgbSpectrum</ref><sp/><ref refid="classdakku_1_1RgbSpectrum_1a840645ae729c87f3d95ec559dce855db" kindref="member">fromXyz</ref>(std::span&lt;const<sp/>float,<sp/>3&gt;<sp/>xyz)<sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdakku_1_1RgbSpectrum" kindref="compound">RgbSpectrum</ref><sp/>ret;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedakku_1a80d2f8350cdcc84f6586fed5f396f8c7" kindref="member">xyzToRgb</ref>(xyz,<sp/>ret);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="classdakku_1_1RgbSpectrum_1acad4b7dbdb3732a8e88029254ecdbca6" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1RgbSpectrum_1acad4b7dbdb3732a8e88029254ecdbca6" kindref="member">toRgb</ref>(std::span&lt;float,<sp/>3&gt;<sp/>rgb)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>rgb[0]<sp/>=<sp/>(*this)[0];</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>rgb[1]<sp/>=<sp/>(*this)[1];</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>rgb[2]<sp/>=<sp/>(*this)[2];</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="classdakku_1_1RgbSpectrum_1a0b49739ae4a25e2954b07ba8b531d991" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1RgbSpectrum_1a0b49739ae4a25e2954b07ba8b531d991" kindref="member">toXyz</ref>(std::span&lt;float,<sp/>3&gt;<sp/>xyz)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/><ref refid="namespacedakku_1a4eafe1eaa4b431b45c002f81b793b46f" kindref="member">rgbToXyz</ref>(*</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>xyz);<sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dakku</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="src/core/spectrum.h"/>
+  </compounddef>
+</doxygen>

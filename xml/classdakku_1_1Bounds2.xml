@@ -27,7 +27,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/bounds.h" line="216" column="3" bodyfile="src/core/bounds.h" bodystart="216" bodyend="216"/>
+        <location file="src/core/bounds.h" line="224" column="3" bodyfile="src/core/bounds.h" bodystart="224" bodyend="224"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Bounds2_1ae986c4aae4bed669564ea89613984356" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>decltype(auto)</type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/bounds.h" line="223" column="13" bodyfile="src/core/bounds.h" bodystart="223" bodyend="226"/>
+        <location file="src/core/bounds.h" line="231" column="13" bodyfile="src/core/bounds.h" bodystart="231" bodyend="234"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -76,7 +76,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/core/bounds.h" line="212" column="1" bodyfile="src/core/bounds.h" bodystart="212" bodyend="227"/>
+    <location file="src/core/bounds.h" line="220" column="1" bodyfile="src/core/bounds.h" bodystart="220" bodyend="235"/>
     <listofallmembers>
       <member refid="classdakku_1_1Bounds2_1ae986c4aae4bed669564ea89613984356" prot="public" virt="non-virtual"><scope>dakku::Bounds2</scope><name>area</name></member>
       <member refid="classdakku_1_1BoundsBase_1a1533ac65725aee5fa771b9e068f1050d" prot="public" virt="non-virtual"><scope>dakku::Bounds2</scope><name>boundingSphere</name></member>
@@ -93,6 +93,7 @@
       <member refid="classdakku_1_1BoundsBase_1acd1339c39870cd9bac4a0c2ee3726d20" prot="public" virt="non-virtual"><scope>dakku::Bounds2</scope><name>operator==</name></member>
       <member refid="classdakku_1_1BoundsBase_1a1df49abc60c6cee7febd54aa46d04aa8" prot="public" virt="non-virtual"><scope>dakku::Bounds2</scope><name>pMax</name></member>
       <member refid="classdakku_1_1BoundsBase_1abd7c34bec0f05f1dfb494b76eed47622" prot="public" virt="non-virtual"><scope>dakku::Bounds2</scope><name>pMin</name></member>
+      <member refid="classdakku_1_1BoundsBase_1a1131f2fb765ed853a8623a5aa0266d5e" prot="public" virt="non-virtual"><scope>dakku::Bounds2</scope><name>toString</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

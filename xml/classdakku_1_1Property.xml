@@ -96,7 +96,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/property.h" line="536" column="7" bodyfile="src/core/property.h" bodystart="536" bodyend="-1"/>
+        <location file="src/core/property.h" line="555" column="7" bodyfile="src/core/property.h" bodystart="555" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classdakku_1_1Property_1aced3169c7b9d2a24ee8853660fb9ac54" prot="private" static="no" mutable="no">
         <type><ref refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfca" kindref="member">PropertyType</ref></type>
@@ -111,7 +111,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/property.h" line="542" column="16" bodyfile="src/core/property.h" bodystart="542" bodyend="-1"/>
+        <location file="src/core/property.h" line="561" column="16" bodyfile="src/core/property.h" bodystart="561" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -811,12 +811,35 @@
           <declname>value</declname>
         </param>
         <briefdescription>
+<para>get a number by looking up <computeroutput>key</computeroutput>, if not found return the given <computeroutput>value</computeroutput> </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/property.h" line="520" column="5" bodyfile="src/core/property.h" bodystart="520" bodyend="526"/>
+        <location file="src/core/property.h" line="525" column="5" bodyfile="src/core/property.h" bodystart="525" bodyend="531"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1Property_1a8e16cf738d78a8c08bab9d1537e926e5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string dakku::Property::getStringIf</definition>
+        <argsstring>(std::string_view key, const std::string &amp;value) const</argsstring>
+        <name>getStringIf</name>
+        <param>
+          <type>std::string_view</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>get a string by looking up <computeroutput>key</computeroutput>, if not found return the given <computeroutput>value</computeroutput> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/property.h" line="538" column="16" bodyfile="src/core/property.h" bodystart="538" bodyend="545"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="friend">
@@ -890,7 +913,7 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/core/property.h" line="29" column="1" bodyfile="src/core/property.h" bodystart="29" bodyend="543"/>
+    <location file="src/core/property.h" line="29" column="1" bodyfile="src/core/property.h" bodystart="29" bodyend="562"/>
     <listofallmembers>
       <member refid="classdakku_1_1Property_1aa44ae47ef51fe042e4cdc2d558fd6c63" prot="public" virt="non-virtual"><scope>dakku::Property</scope><name>ArrayType</name></member>
       <member refid="classdakku_1_1Property_1ae83c9705acea5d552705a45e06328408" prot="private" virt="non-virtual"><scope>dakku::Property</scope><name>data</name></member>
@@ -907,6 +930,7 @@
       <member refid="classdakku_1_1Property_1a86d3f30da8f500e82852c0dd6a47d892" prot="public" virt="non-virtual"><scope>dakku::Property</scope><name>getPropertyType</name></member>
       <member refid="classdakku_1_1Property_1ae6c51d63bf9638a751d7f0d0fdc8552d" prot="public" virt="non-virtual"><scope>dakku::Property</scope><name>getString</name></member>
       <member refid="classdakku_1_1Property_1ab781c77819cd814717db2fff5f5cad83" prot="public" virt="non-virtual"><scope>dakku::Property</scope><name>getString</name></member>
+      <member refid="classdakku_1_1Property_1a8e16cf738d78a8c08bab9d1537e926e5" prot="public" virt="non-virtual"><scope>dakku::Property</scope><name>getStringIf</name></member>
       <member refid="classdakku_1_1Property_1a8cf3044bb0e4278868f4d9561f01dd08" prot="public" virt="non-virtual"><scope>dakku::Property</scope><name>getTransform</name></member>
       <member refid="classdakku_1_1Property_1afe9d1b89c27dd11be2408cd7de9dec39" prot="public" virt="non-virtual"><scope>dakku::Property</scope><name>getTransform</name></member>
       <member refid="classdakku_1_1Property_1a7a29d6659e52edb24d84cb05484dc2b8" prot="public" virt="non-virtual"><scope>dakku::Property</scope><name>getVector</name></member>

@@ -41,6 +41,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1CoefficientSpectrum/</loc>
+         <lastmod>2022-04-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1FileInputStream/</loc>
          <lastmod>2022-04-08</lastmod>
          <changefreq>daily</changefreq>
@@ -121,6 +126,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1RgbSpectrum/</loc>
+         <lastmod>2022-04-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1SerializableObject/</loc>
          <lastmod>2022-04-08</lastmod>
          <changefreq>daily</changefreq>
@@ -147,6 +157,11 @@
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/structdakku_1_1Class_1_1Metadata/</loc>
+         <lastmod>2022-04-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Classes/structdakku_1_1FilmTilePixel/</loc>
          <lastmod>2022-04-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -277,6 +292,11 @@
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/serialization_8h/</loc>
+         <lastmod>2022-04-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Files/spectrum_8h/</loc>
          <lastmod>2022-04-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
