@@ -3,6 +3,7 @@
   <compounddef id="platform_8h" kind="file" language="C++">
     <compoundname>platform.h</compoundname>
     <includedby refid="core_2fwd_8h" local="no">src/core/fwd.h</includedby>
+    <includedby refid="imageio_2fwd_8h" local="no">src/imageio/fwd.h</includedby>
     <invincdepgraph>
       <node id="5">
         <label>src/core/api.h</label>
@@ -59,6 +60,8 @@
       <node id="17">
         <label>src/core/memory.h</label>
         <link refid="memory_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
       </node>
       <node id="4">
         <label>src/core/object.h</label>
@@ -154,10 +157,22 @@
         <childnode refid="8" relation="include">
         </childnode>
       </node>
+      <node id="26">
+        <label>src/imageio/fwd.h</label>
+        <link refid="imageio_2fwd_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>src/imageio/imageio.h</label>
+        <link refid="imageio_8h"/>
+      </node>
       <node id="1">
         <label>src/platform.h</label>
         <link refid="platform_8h"/>
         <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
         </childnode>
       </node>
       <node id="15">
@@ -235,9 +250,21 @@
         </inbodydescription>
         <location file="src/platform.h" line="27" column="9" bodyfile="src/platform.h" bodystart="27" bodyend="-1"/>
       </memberdef>
+      <memberdef kind="define" id="platform_8h_1af38869f447ed6e8768ab41a8b2d4f7e9" prot="public" static="no">
+        <name>DAKKU_IMAGEIO_MODULE</name>
+        <initializer>3</initializer>
+        <briefdescription>
+<para>dakku imageio module </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/platform.h" line="29" column="9" bodyfile="src/platform.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="define" id="platform_8h_1ac321229e879d4e468e1eb21d57344d58" prot="public" static="no">
         <name>DAKKU_FILTERS_MODULE</name>
-        <initializer>2</initializer>
+        <initializer>4</initializer>
         <briefdescription>
 <para>dakku filters module </para>
         </briefdescription>
@@ -245,7 +272,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/platform.h" line="29" column="9" bodyfile="src/platform.h" bodystart="29" bodyend="-1"/>
+        <location file="src/platform.h" line="31" column="9" bodyfile="src/platform.h" bodystart="31" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="platform_8h_1a09cd708407b8b153a1c5f21c764c142a" prot="public" static="no">
         <name>DAKKU_MAIN_MODULE</name>
@@ -257,7 +284,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/platform.h" line="31" column="9" bodyfile="src/platform.h" bodystart="31" bodyend="-1"/>
+        <location file="src/platform.h" line="33" column="9" bodyfile="src/platform.h" bodystart="33" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -287,13 +314,14 @@
 <codeline lineno="23"><highlight class="normal"></highlight></codeline>
 <codeline lineno="25" refid="platform_8h_1a727f841a8615f5ba2055132fb14a18ec" refkind="member"><highlight class="preprocessor">#define<sp/>DAKKU_CORE_MODULE<sp/>1</highlight></codeline>
 <codeline lineno="27" refid="platform_8h_1a6a1a04663120344778813d08185b6edb" refkind="member"><highlight class="preprocessor">#define<sp/>DAKKU_STREAM_MODULE<sp/>2</highlight></codeline>
-<codeline lineno="29" refid="platform_8h_1ac321229e879d4e468e1eb21d57344d58" refkind="member"><highlight class="preprocessor">#define<sp/>DAKKU_FILTERS_MODULE<sp/>2</highlight></codeline>
-<codeline lineno="31" refid="platform_8h_1a09cd708407b8b153a1c5f21c764c142a" refkind="member"><highlight class="preprocessor">#define<sp/>DAKKU_MAIN_MODULE<sp/>10</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dakku</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="platform_8h_1af38869f447ed6e8768ab41a8b2d4f7e9" refkind="member"><highlight class="preprocessor">#define<sp/>DAKKU_IMAGEIO_MODULE<sp/>3</highlight></codeline>
+<codeline lineno="31" refid="platform_8h_1ac321229e879d4e468e1eb21d57344d58" refkind="member"><highlight class="preprocessor">#define<sp/>DAKKU_FILTERS_MODULE<sp/>4</highlight></codeline>
+<codeline lineno="33" refid="platform_8h_1a09cd708407b8b153a1c5f21c764c142a" refkind="member"><highlight class="preprocessor">#define<sp/>DAKKU_MAIN_MODULE<sp/>10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
 <codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dakku</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="src/platform.h"/>
   </compounddef>

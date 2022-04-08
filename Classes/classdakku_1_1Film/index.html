@@ -328,22 +328,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#public-classes" class="md-nav__link">
-    Public Classes
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#public-functions" class="md-nav__link">
     Public Functions
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#public-attributes" class="md-nav__link">
-    Public Attributes
   </a>
   
 </li>
@@ -378,6 +364,34 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#function-getsamplebounds" class="md-nav__link">
+    function getSampleBounds
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-getfilmtile" class="md-nav__link">
+    function getFilmTile
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-mergefilmtile" class="md-nav__link">
+    function mergeFilmTile
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-writeimage" class="md-nav__link">
+    function writeImage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#function-serialize" class="md-nav__link">
     function serialize
   </a>
@@ -387,89 +401,6 @@
           <li class="md-nav__item">
   <a href="#function-deserialize" class="md-nav__link">
     function deserialize
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#public-attributes-documentation" class="md-nav__link">
-    Public Attributes Documentation
-  </a>
-  
-    <nav class="md-nav" aria-label="Public Attributes Documentation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#variable-pixels" class="md-nav__link">
-    variable pixels
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#variable-fullresolution" class="md-nav__link">
-    variable fullResolution
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#variable-filter" class="md-nav__link">
-    variable filter
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#variable-filename" class="md-nav__link">
-    variable fileName
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#variable-croppedpixelbounds" class="md-nav__link">
-    variable croppedPixelBounds
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#variable-filtertable" class="md-nav__link">
-    variable filterTable
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#variable-mutex" class="md-nav__link">
-    variable mutex
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#variable-scale" class="md-nav__link">
-    variable scale
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#variable-maxsampleluminance" class="md-nav__link">
-    variable maxSampleLuminance
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#variable-filtertablewidth" class="md-nav__link">
-    variable filterTableWidth
   </a>
   
 </li>
@@ -501,21 +432,6 @@
 <p>film class </p>
 <p><code>#include &lt;film.h&gt;</code></p>
 <p>Inherits from <a href="/dakku/Classes/classdakku_1_1SerializableObject/">dakku::SerializableObject</a>, <a href="/dakku/Classes/classdakku_1_1Object/">dakku::Object</a></p>
-<h2 id="public-classes">Public Classes</h2>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>Name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>struct</td>
-<td><strong><a href="/dakku/Classes/structdakku_1_1Film_1_1Pixel/">Pixel</a></strong> <br>pixel struct</td>
-</tr>
-</tbody>
-</table>
 <h2 id="public-functions">Public Functions</h2>
 <table>
 <thead>
@@ -534,63 +450,28 @@
 <td><strong><a href="/dakku/Classes/classdakku_1_1Film/#function-film">Film</a></strong>(const <a href="/dakku/Namespaces/namespacedakku/#using-point2i">Point2i</a> &amp; fullResolution, const <a href="/dakku/Namespaces/namespacedakku/#using-bounds2f">Bounds2f</a> &amp; cropWindow, std::unique_ptr&lt; <a href="/dakku/Classes/classdakku_1_1Filter/">Filter</a> &gt; filter, std::string fileName, float scale, float maxSampleLuminance =INF)<br>Construct a new <a href="/dakku/Classes/classdakku_1_1Film/">Film</a> object.</td>
 </tr>
 <tr>
+<td><a href="/dakku/Namespaces/namespacedakku/#using-bounds2i">Bounds2i</a></td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Film/#function-getsamplebounds">getSampleBounds</a></strong>() const<br>get the area to be sampled because the pixel reconstruction filter spans a number of pixels</td>
+</tr>
+<tr>
+<td>std::unique_ptr&lt; <a href="/dakku/Classes/classdakku_1_1FilmTile/">FilmTile</a> &gt;</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Film/#function-getfilmtile">getFilmTile</a></strong>(const <a href="/dakku/Namespaces/namespacedakku/#using-bounds2i">Bounds2i</a> &amp; sampleBounds)<br>get the film tile according to the given sample bounds</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Film/#function-mergefilmtile">mergeFilmTile</a></strong>(std::unique_ptr&lt; <a href="/dakku/Classes/classdakku_1_1FilmTile/">FilmTile</a> &gt; tile)<br>merge a film tile into the film</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Film/#function-writeimage">writeImage</a></strong>(float splatScale =1)<br>write image to <code>fileName</code></td>
+</tr>
+<tr>
 <td>virtual void</td>
 <td><strong><a href="/dakku/Classes/classdakku_1_1Film/#function-serialize">serialize</a></strong>(<a href="/dakku/Classes/classdakku_1_1OutputStream/">OutputStream</a> * stream) const override<br>serialize the object (do not include the property part)</td>
 </tr>
 <tr>
 <td>virtual void</td>
 <td><strong><a href="/dakku/Classes/classdakku_1_1Film/#function-deserialize">deserialize</a></strong>(<a href="/dakku/Classes/classdakku_1_1InputStream/">InputStream</a> * stream) override<br>deserialize the object (do not include the property part)</td>
-</tr>
-</tbody>
-</table>
-<h2 id="public-attributes">Public Attributes</h2>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>Name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>std::unique_ptr&lt; <a href="/dakku/Classes/structdakku_1_1Film_1_1Pixel/">Pixel</a>[]&gt;</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1Film/#variable-pixels">pixels</a></strong> <br>pixels data</td>
-</tr>
-<tr>
-<td><a href="/dakku/Namespaces/namespacedakku/#using-point2i">Point2i</a></td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1Film/#variable-fullresolution">fullResolution</a></strong> <br>full resolution of the film</td>
-</tr>
-<tr>
-<td>std::unique_ptr&lt; <a href="/dakku/Classes/classdakku_1_1Filter/">Filter</a> &gt;</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1Film/#variable-filter">filter</a></strong> <br>filter</td>
-</tr>
-<tr>
-<td>const std::string</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1Film/#variable-filename">fileName</a></strong> <br>file name to save image</td>
-</tr>
-<tr>
-<td><a href="/dakku/Namespaces/namespacedakku/#using-bounds2i">Bounds2i</a></td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1Film/#variable-croppedpixelbounds">croppedPixelBounds</a></strong> <br>film crop window bounds</td>
-</tr>
-<tr>
-<td>std::array&lt; float, <a href="/dakku/Classes/classdakku_1_1Film/#variable-filtertablewidth">filterTableWidth</a> *<a href="/dakku/Classes/classdakku_1_1Film/#variable-filtertablewidth">filterTableWidth</a> &gt;</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1Film/#variable-filtertable">filterTable</a></strong> <br>filter table</td>
-</tr>
-<tr>
-<td>std::mutex</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1Film/#variable-mutex">mutex</a></strong> <br>mutex to protect tile merge</td>
-</tr>
-<tr>
-<td>const float</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1Film/#variable-scale">scale</a></strong> <br>pixel value scale</td>
-</tr>
-<tr>
-<td>const float</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1Film/#variable-maxsampleluminance">maxSampleLuminance</a></strong> <br>max sample luminance</td>
-</tr>
-<tr>
-<td>constexpr size_t</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1Film/#variable-filtertablewidth">filterTableWidth</a></strong> <br>filter table width</td>
 </tr>
 </tbody>
 </table>
@@ -669,10 +550,46 @@
 <li><strong>scale</strong> scale the pixel value </li>
 <li><strong>maxSampleLuminance</strong> max sample luminance </li>
 </ul>
+<h3 id="function-getsamplebounds">function getSampleBounds</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">Bounds2i</span><span class="w"> </span><span class="n">getSampleBounds</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+</code></pre></div>
+<p>get the area to be sampled because the pixel reconstruction filter spans a number of pixels </p>
+<p><strong>Return</strong>: the sample bounds </p>
+<h3 id="function-getfilmtile">function getFilmTile</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="w"> </span><span class="n">FilmTile</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">getFilmTile</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Bounds2i</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">sampleBounds</span><span class="w"></span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>get the film tile according to the given sample bounds </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>sampleBounds</strong> given region of the image </li>
+</ul>
+<p><strong>Return</strong>: the film tile </p>
+<h3 id="function-mergefilmtile">function mergeFilmTile</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">mergeFilmTile</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="w"> </span><span class="n">FilmTile</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">tile</span><span class="w"></span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>merge a film tile into the film </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>tile</strong> the given film tile </li>
+</ul>
+<h3 id="function-writeimage">function writeImage</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">writeImage</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">splatScale</span><span class="w"> </span><span class="o">=</span><span class="mi">1</span><span class="w"></span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>write image to <code>fileName</code></p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>splatScale</strong> scale splat values </li>
+</ul>
 <h3 id="function-serialize">function serialize</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">serialize</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="n">OutputStream</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">stream</span><span class="w"></span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">override</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">serialize</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="n">OutputStream</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">stream</span><span class="w"></span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">override</span><span class="w"></span>
 </code></pre></div>
 <p>serialize the object (do not include the property part) </p>
 <p><strong>Parameters</strong>: </p>
@@ -681,9 +598,9 @@
 </ul>
 <p><strong>Reimplements</strong>: <a href="/dakku/Classes/classdakku_1_1SerializableObject/#function-serialize">dakku::SerializableObject::serialize</a></p>
 <h3 id="function-deserialize">function deserialize</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">deserialize</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">InputStream</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">stream</span><span class="w"></span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">deserialize</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="n">InputStream</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">stream</span><span class="w"></span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"></span>
 </code></pre></div>
 <p>deserialize the object (do not include the property part) </p>
 <p><strong>Parameters</strong>: </p>
@@ -691,49 +608,8 @@
 <li><strong>stream</strong> </li>
 </ul>
 <p><strong>Reimplements</strong>: <a href="/dakku/Classes/classdakku_1_1SerializableObject/#function-deserialize">dakku::SerializableObject::deserialize</a></p>
-<h2 id="public-attributes-documentation">Public Attributes Documentation</h2>
-<h3 id="variable-pixels">variable pixels</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="w"> </span><span class="n">Pixel</span><span class="p">[]</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pixels</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-</code></pre></div>
-<p>pixels data </p>
-<h3 id="variable-fullresolution">variable fullResolution</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">Point2i</span><span class="w"> </span><span class="n">fullResolution</span><span class="p">;</span><span class="w"></span>
-</code></pre></div>
-<p>full resolution of the film </p>
-<h3 id="variable-filter">variable filter</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="w"> </span><span class="n">Filter</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">filter</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-</code></pre></div>
-<p>filter </p>
-<h3 id="variable-filename">variable fileName</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">fileName</span><span class="p">;</span><span class="w"></span>
-</code></pre></div>
-<p>file name to save image </p>
-<h3 id="variable-croppedpixelbounds">variable croppedPixelBounds</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">Bounds2i</span><span class="w"> </span><span class="n">croppedPixelBounds</span><span class="p">;</span><span class="w"></span>
-</code></pre></div>
-<p>film crop window bounds </p>
-<h3 id="variable-filtertable">variable filterTable</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="w"> </span><span class="kt">float</span><span class="p">,</span><span class="w"> </span><span class="n">filterTableWidth</span><span class="w"> </span><span class="o">*</span><span class="n">filterTableWidth</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">filterTable</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
-</code></pre></div>
-<p>filter table </p>
-<h3 id="variable-mutex">variable mutex</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">std</span><span class="o">::</span><span class="n">mutex</span><span class="w"> </span><span class="n">mutex</span><span class="p">;</span><span class="w"></span>
-</code></pre></div>
-<p>mutex to protect tile merge </p>
-<h3 id="variable-scale">variable scale</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">scale</span><span class="p">;</span><span class="w"></span>
-</code></pre></div>
-<p>pixel value scale </p>
-<h3 id="variable-maxsampleluminance">variable maxSampleLuminance</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">maxSampleLuminance</span><span class="p">;</span><span class="w"></span>
-</code></pre></div>
-<p>max sample luminance </p>
-<h3 id="variable-filtertablewidth">variable filterTableWidth</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">filterTableWidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">16</span><span class="p">;</span><span class="w"></span>
-</code></pre></div>
-<p>filter table width </p>
 <hr />
-<p>Updated on 2022-04-08 at 12:40:11 +0000</p>
+<p>Updated on 2022-04-08 at 16:24:34 +0000</p>
 
               
             </article>

@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector_base.h" line="756" column="14" bodyfile="src/core/vector_base.h" bodystart="756" bodyend="-1"/>
+        <location file="src/core/vector_base.h" line="776" column="14" bodyfile="src/core/vector_base.h" bodystart="776" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -1353,7 +1353,7 @@ set all components to <computeroutput>value</computeroutput></para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector_base.h" line="751" column="3" bodyfile="src/core/vector_base.h" bodystart="751" bodyend="751"/>
+        <location file="src/core/vector_base.h" line="771" column="3" bodyfile="src/core/vector_base.h" bodystart="771" bodyend="771"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1VectorBase_1a4e2cdbb5d684d8b3337ebdb93d756e5b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -1366,7 +1366,7 @@ set all components to <computeroutput>value</computeroutput></para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector_base.h" line="752" column="3" bodyfile="src/core/vector_base.h" bodystart="752" bodyend="752"/>
+        <location file="src/core/vector_base.h" line="772" column="3" bodyfile="src/core/vector_base.h" bodystart="772" bodyend="772"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="friend">
@@ -2165,6 +2165,42 @@ set all components to <computeroutput>value</computeroutput></para>
         </inbodydescription>
         <location file="src/core/vector_base.h" line="745" column="18" bodyfile="src/core/vector_base.h" bodystart="745" bodyend="749"/>
       </memberdef>
+      <memberdef kind="friend" id="classdakku_1_1VectorBase_1ac1a4a8247b5394c188dcea147def6a2a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Derived</type>
+        <definition>Derived floor</definition>
+        <argsstring>(const Derived &amp;v)</argsstring>
+        <name>floor</name>
+        <param>
+          <type>const Derived &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>element-wise floor </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/vector_base.h" line="755" column="18" bodyfile="src/core/vector_base.h" bodystart="755" bodyend="759"/>
+      </memberdef>
+      <memberdef kind="friend" id="classdakku_1_1VectorBase_1ae6e15655167cb8377e29a6cc3198c18e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Derived</type>
+        <definition>Derived ceil</definition>
+        <argsstring>(const Derived &amp;v)</argsstring>
+        <name>ceil</name>
+        <param>
+          <type>const Derived &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>element-wise ceil </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/vector_base.h" line="765" column="18" bodyfile="src/core/vector_base.h" bodystart="765" bodyend="769"/>
+      </memberdef>
       </sectiondef>
     <briefdescription>
 <para>vector base class </para>
@@ -2215,12 +2251,13 @@ set all components to <computeroutput>value</computeroutput></para>
         <link refid="classdakku_1_1VectorBase"/>
       </node>
     </inheritancegraph>
-    <location file="src/core/vector_base.h" line="21" column="1" bodyfile="src/core/vector_base.h" bodystart="21" bodyend="757"/>
+    <location file="src/core/vector_base.h" line="21" column="1" bodyfile="src/core/vector_base.h" bodystart="21" bodyend="777"/>
     <listofallmembers>
       <member refid="classdakku_1_1VectorBase_1adfeaa30c58620f0e4e8cbc9bc911c60c" prot="protected" virt="non-virtual"><scope>dakku::VectorBase</scope><name>_data</name></member>
       <member refid="classdakku_1_1VectorBase_1a0edf71c48dff606bc0173b7a8f55cf4a" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>abs</name></member>
       <member refid="classdakku_1_1VectorBase_1ae4f16b45f3696a2c75abcbe8c09120df" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>begin</name></member>
       <member refid="classdakku_1_1VectorBase_1abf676422e4f35272f97d5a9d286002b3" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>begin</name></member>
+      <member refid="classdakku_1_1VectorBase_1ae6e15655167cb8377e29a6cc3198c18e" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>ceil</name></member>
       <member refid="classdakku_1_1VectorBase_1acb5565956ec02b69198a23c5e4046aa6" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>cross</name></member>
       <member refid="classdakku_1_1VectorBase_1a164c7c788c4967c1c6ebcf7ae8466ba8" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>derived</name></member>
       <member refid="classdakku_1_1VectorBase_1abb0f3e3fa71aaf063c3a5a6002fcbf1f" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>derived</name></member>
@@ -2229,6 +2266,7 @@ set all components to <computeroutput>value</computeroutput></para>
       <member refid="classdakku_1_1VectorBase_1a77b079ddc174893319dbdb3bc1eb37ee" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>end</name></member>
       <member refid="classdakku_1_1VectorBase_1a3b54e311208a4d3d90763cad329d1759" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>end</name></member>
       <member refid="classdakku_1_1VectorBase_1afd74fa091a074a68449d1f8e493fd745" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>exp</name></member>
+      <member refid="classdakku_1_1VectorBase_1ac1a4a8247b5394c188dcea147def6a2a" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>floor</name></member>
       <member refid="classdakku_1_1VectorBase_1ae498067d7973072d02c9417b8b677e83" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>get</name></member>
       <member refid="classdakku_1_1VectorBase_1a24b199ecb70deba0853e9532b888a183" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>hasNaNs</name></member>
       <member refid="classdakku_1_1VectorBase_1a3d663b309168d884b55d82b001b18ecb" prot="public" virt="non-virtual"><scope>dakku::VectorBase</scope><name>isZero</name></member>

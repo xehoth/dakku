@@ -98,6 +98,8 @@
       <node id="16">
         <label>src/core/memory.h</label>
         <link refid="memory_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
       </node>
       <node id="3">
         <label>src/core/object.h</label>
@@ -283,12 +285,13 @@
 <codeline lineno="89"><highlight class="normal"></highlight></codeline>
 <codeline lineno="90" refid="namespacedakku_1ad32aa25f5584289eda626b47ae3525cc" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref><sp/><ref refid="classdakku_1_1Filter" kindref="compound">Filter</ref>;</highlight></codeline>
 <codeline lineno="91" refid="namespacedakku_1a1bd6403f2998d6f8d22f87c99eca7eed" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref><sp/><ref refid="classdakku_1_1Film" kindref="compound">Film</ref>;</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>S,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Derived&gt;</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdakku_1_1CoefficientSpectrum" kindref="compound">CoefficientSpectrum</ref>;</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdakku_1_1RgbSpectrum" kindref="compound">RgbSpectrum</ref>;</highlight></codeline>
-<codeline lineno="96" refid="namespacedakku_1a72f253f8c73b2ec7fef8e3c83c0eac17" refkind="member"><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1RgbSpectrum" kindref="compound">Spectrum</ref><sp/>=<sp/><ref refid="classdakku_1_1RgbSpectrum" kindref="compound">RgbSpectrum</ref>;</highlight></codeline>
-<codeline lineno="97"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dakku</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdakku_1_1FilmTile" kindref="compound">FilmTile</ref>;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>S,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Derived&gt;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdakku_1_1CoefficientSpectrum" kindref="compound">CoefficientSpectrum</ref>;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdakku_1_1RgbSpectrum" kindref="compound">RgbSpectrum</ref>;</highlight></codeline>
+<codeline lineno="97" refid="namespacedakku_1a72f253f8c73b2ec7fef8e3c83c0eac17" refkind="member"><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1RgbSpectrum" kindref="compound">Spectrum</ref><sp/>=<sp/><ref refid="classdakku_1_1RgbSpectrum" kindref="compound">RgbSpectrum</ref>;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dakku</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="src/core/fwd.h"/>
   </compounddef>

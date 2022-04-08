@@ -4,6 +4,7 @@
     <compoundname>memory.h</compoundname>
     <includes refid="logger_8h" local="no">core/logger.h</includes>
     <includes local="no">memory_resource</includes>
+    <includedby refid="film_8h" local="no">src/core/film.h</includedby>
     <incdepgraph>
       <node id="3">
         <label>core/fwd.h</label>
@@ -68,6 +69,24 @@
         <label>type_traits</label>
       </node>
     </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>src/core/api.h</label>
+        <link refid="core_2api_8h"/>
+      </node>
+      <node id="2">
+        <label>src/core/film.h</label>
+        <link refid="film_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/core/memory.h</label>
+        <link refid="memory_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
     <innerclass refid="classdakku_1_1L1CacheLineAlignedResource" prot="public">dakku::L1CacheLineAlignedResource</innerclass>
     <innerclass refid="classdakku_1_1MemoryArena" prot="public">dakku::MemoryArena</innerclass>
     <innernamespace refid="namespacedakku">dakku</innernamespace>

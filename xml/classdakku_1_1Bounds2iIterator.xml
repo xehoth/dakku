@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/bounds.h" line="296" column="18" bodyfile="src/core/bounds.h" bodystart="296" bodyend="-1"/>
+        <location file="src/core/bounds.h" line="295" column="18" bodyfile="src/core/bounds.h" bodystart="295" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classdakku_1_1Bounds2iIterator_1a03a906289f14103e080bc463642aeba3" prot="private" static="no" mutable="no">
         <type><ref refid="namespacedakku_1a059653c441fcfa28e3b00de3709176e9" kindref="member">Point2i</ref></type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/bounds.h" line="297" column="11" bodyfile="src/core/bounds.h" bodystart="297" bodyend="-1"/>
+        <location file="src/core/bounds.h" line="296" column="11" bodyfile="src/core/bounds.h" bodystart="296" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -52,7 +52,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/bounds.h" line="263" column="12" bodyfile="src/core/bounds.h" bodystart="263" bodyend="264"/>
+        <location file="src/core/bounds.h" line="262" column="12" bodyfile="src/core/bounds.h" bodystart="262" bodyend="263"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Bounds2iIterator_1ad19c79cc44f5407ffedd8fee2e74b873" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classdakku_1_1Bounds2iIterator" kindref="compound">Bounds2iIterator</ref></type>
@@ -65,7 +65,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/bounds.h" line="266" column="20" bodyfile="src/core/bounds.h" bodystart="266" bodyend="269"/>
+        <location file="src/core/bounds.h" line="265" column="20" bodyfile="src/core/bounds.h" bodystart="265" bodyend="268"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Bounds2iIterator_1abba748bffd9de14381de7393279e0ab1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classdakku_1_1Bounds2iIterator" kindref="compound">Bounds2iIterator</ref></type>
@@ -81,7 +81,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/bounds.h" line="271" column="20" bodyfile="src/core/bounds.h" bodystart="271" bodyend="275"/>
+        <location file="src/core/bounds.h" line="270" column="20" bodyfile="src/core/bounds.h" bodystart="270" bodyend="274"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Bounds2iIterator_1aabbc42d3b83e2b025e1a8540ff62314b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -98,7 +98,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/bounds.h" line="277" column="8" bodyfile="src/core/bounds.h" bodystart="277" bodyend="279"/>
+        <location file="src/core/bounds.h" line="276" column="8" bodyfile="src/core/bounds.h" bodystart="276" bodyend="278"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Bounds2iIterator_1aec365c1c605c7f12c463b13668a6fa5b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -115,7 +115,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/bounds.h" line="281" column="8" bodyfile="src/core/bounds.h" bodystart="281" bodyend="283"/>
+        <location file="src/core/bounds.h" line="280" column="8" bodyfile="src/core/bounds.h" bodystart="280" bodyend="282"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Bounds2iIterator_1a6b917d1a9e146470819a369ee789c65d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="namespacedakku_1a059653c441fcfa28e3b00de3709176e9" kindref="member">Point2i</ref></type>
@@ -128,7 +128,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/bounds.h" line="285" column="11" bodyfile="src/core/bounds.h" bodystart="285" bodyend="285"/>
+        <location file="src/core/bounds.h" line="284" column="11" bodyfile="src/core/bounds.h" bodystart="284" bodyend="284"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -143,7 +143,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/bounds.h" line="288" column="8" bodyfile="src/core/bounds.h" bodystart="288" bodyend="294"/>
+        <location file="src/core/bounds.h" line="287" column="8" bodyfile="src/core/bounds.h" bodystart="287" bodyend="293"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -173,7 +173,7 @@
         <label>std::forward_iterator_tag</label>
       </node>
     </collaborationgraph>
-    <location file="src/core/bounds.h" line="261" column="1" bodyfile="src/core/bounds.h" bodystart="261" bodyend="298"/>
+    <location file="src/core/bounds.h" line="260" column="1" bodyfile="src/core/bounds.h" bodystart="260" bodyend="297"/>
     <listofallmembers>
       <member refid="classdakku_1_1Bounds2iIterator_1aa30d8017ae278532454b1dacf52d1807" prot="private" virt="non-virtual"><scope>dakku::Bounds2iIterator</scope><name>advance</name></member>
       <member refid="classdakku_1_1Bounds2iIterator_1a25db7490f2d16d4ce72ad2701535ffae" prot="private" virt="non-virtual"><scope>dakku::Bounds2iIterator</scope><name>b</name></member>

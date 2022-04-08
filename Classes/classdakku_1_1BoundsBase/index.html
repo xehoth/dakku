@@ -385,8 +385,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#function-operator-boundsbase-u-s" class="md-nav__link">
-    function operator BoundsBase&lt; U, S &gt;
+  <a href="#function-boundsbase_3" class="md-nav__link">
+    function BoundsBase
   </a>
   
 </li>
@@ -594,12 +594,12 @@
 <td><strong><a href="/dakku/Classes/classdakku_1_1BoundsBase/#function-boundsbase">BoundsBase</a></strong>(const <a href="/dakku/Classes/classdakku_1_1Point/">Point</a>&lt; T, S &gt; &amp; p)<br>Construct a new <a href="/dakku/Classes/classdakku_1_1Bounds2/">Bounds2</a> with a point.</td>
 </tr>
 <tr>
-<td></td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1BoundsBase/#function-boundsbase">BoundsBase</a></strong>(const <a href="/dakku/Classes/classdakku_1_1Point/">Point</a>&lt; T, S &gt; &amp; p1, const <a href="/dakku/Classes/classdakku_1_1Point/">Point</a>&lt; T, S &gt; &amp; p2)<br>Construct a new Bounds Base object with two points (take min/max of them to pMin and pMax)</td>
+<td>template &lt;ArithmeticType U> <br></td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1BoundsBase/#function-boundsbase">BoundsBase</a></strong>(const <a href="/dakku/Classes/classdakku_1_1BoundsBase/">BoundsBase</a>&lt; U, S &gt; &amp; b)<br>type conversion</td>
 </tr>
 <tr>
-<td>template &lt;ArithmeticType U> <br></td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1BoundsBase/#function-operator-boundsbase&lt;-u,-s-&gt;">operator BoundsBase&lt; U, S &gt;</a></strong>() const<br>cast data type of bounds</td>
+<td></td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1BoundsBase/#function-boundsbase">BoundsBase</a></strong>(const <a href="/dakku/Classes/classdakku_1_1Point/">Point</a>&lt; T, S &gt; &amp; p1, const <a href="/dakku/Classes/classdakku_1_1Point/">Point</a>&lt; T, S &gt; &amp; p2)<br>Construct a new Bounds Base object with two points (take min/max of them to pMin and pMax)</td>
 </tr>
 <tr>
 <td><a href="/dakku/Classes/classdakku_1_1Vector/">Vector</a>&lt; T, S &gt;</td>
@@ -728,17 +728,19 @@
 <li><strong>p</strong> the given point </li>
 </ul>
 <h3 id="function-boundsbase_2">function BoundsBase</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kr">inline</span><span class="w"> </span><span class="n">BoundsBase</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Point</span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">p1</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Point</span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">p2</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="n">ArithmeticType</span><span class="w"> </span><span class="n">U</span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kr">inline</span><span class="w"> </span><span class="k">explicit</span><span class="w"> </span><span class="n">BoundsBase</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">BoundsBase</span><span class="o">&lt;</span><span class="w"> </span><span class="n">U</span><span class="p">,</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">b</span><span class="w"></span>
 <a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
-<p>Construct a new Bounds Base object with two points (take min/max of them to pMin and pMax) </p>
-<h3 id="function-operator-boundsbase-u-s">function operator BoundsBase&lt; U, S &gt;</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="n">ArithmeticType</span><span class="w"> </span><span class="n">U</span><span class="o">&gt;</span><span class="w"></span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="kr">inline</span><span class="w"> </span><span class="k">explicit</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="n">BoundsBase</span><span class="o">&lt;</span><span class="w"> </span><span class="n">U</span><span class="p">,</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="o">&gt;</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+<p>type conversion </p>
+<h3 id="function-boundsbase_3">function BoundsBase</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kr">inline</span><span class="w"> </span><span class="n">BoundsBase</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Point</span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">p1</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Point</span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">p2</span><span class="w"></span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
-<p>cast data type of bounds </p>
+<p>Construct a new Bounds Base object with two points (take min/max of them to pMin and pMax) </p>
 <h3 id="function-diagonal">function diagonal</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kr">inline</span><span class="w"> </span><span class="n">Vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">diagonal</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
 </code></pre></div>
@@ -898,7 +900,7 @@
 <a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 <hr />
-<p>Updated on 2022-04-08 at 12:40:11 +0000</p>
+<p>Updated on 2022-04-08 at 16:24:34 +0000</p>
 
               
             </article>

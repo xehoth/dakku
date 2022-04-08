@@ -12,6 +12,7 @@
     <innerclass refid="classdakku_1_1FileInputStream" prot="public">dakku::FileInputStream</innerclass>
     <innerclass refid="classdakku_1_1FileOutputStream" prot="public">dakku::FileOutputStream</innerclass>
     <innerclass refid="classdakku_1_1Film" prot="public">dakku::Film</innerclass>
+    <innerclass refid="classdakku_1_1FilmTile" prot="public">dakku::FilmTile</innerclass>
     <innerclass refid="structdakku_1_1FilmTilePixel" prot="public">dakku::FilmTilePixel</innerclass>
     <innerclass refid="classdakku_1_1Filter" prot="public">dakku::Filter</innerclass>
     <innerclass refid="classdakku_1_1InputStream" prot="public">dakku::InputStream</innerclass>
@@ -109,7 +110,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/bounds.h" line="238" column="1" bodyfile="src/core/bounds.h" bodystart="238" bodyend="-1"/>
+        <location file="src/core/bounds.h" line="237" column="1" bodyfile="src/core/bounds.h" bodystart="237" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespacedakku_1ae2cd423e1acf2fd91f4cdf3cc5ad50c6" prot="public" static="no">
         <type><ref refid="classdakku_1_1Bounds2" kindref="compound">Bounds2</ref>&lt; int &gt;</type>
@@ -123,7 +124,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/bounds.h" line="240" column="1" bodyfile="src/core/bounds.h" bodystart="240" bodyend="-1"/>
+        <location file="src/core/bounds.h" line="239" column="1" bodyfile="src/core/bounds.h" bodystart="239" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespacedakku_1a19129587abbff965c2c15bab5723e208" prot="public" static="no">
         <type><ref refid="classdakku_1_1Bounds3" kindref="compound">Bounds3</ref>&lt; float &gt;</type>
@@ -137,7 +138,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/bounds.h" line="255" column="1" bodyfile="src/core/bounds.h" bodystart="255" bodyend="-1"/>
+        <location file="src/core/bounds.h" line="254" column="1" bodyfile="src/core/bounds.h" bodystart="254" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespacedakku_1a72f253f8c73b2ec7fef8e3c83c0eac17" prot="public" static="no">
         <type><ref refid="classdakku_1_1RgbSpectrum" kindref="compound">RgbSpectrum</ref></type>
@@ -151,7 +152,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="96" column="1" bodyfile="src/core/fwd.h" bodystart="96" bodyend="-1"/>
+        <location file="src/core/fwd.h" line="97" column="1" bodyfile="src/core/fwd.h" bodystart="97" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespacedakku_1ae7de7b89895e76d4a3f1c653393dde69" prot="public" static="no">
         <templateparamlist>
@@ -608,7 +609,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/bounds.h" line="304" column="25" bodyfile="src/core/bounds.h" bodystart="304" bodyend="306"/>
+        <location file="src/core/bounds.h" line="303" column="25" bodyfile="src/core/bounds.h" bodystart="303" bodyend="305"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1a41ae9fcb2290e6ea6f7d4b0fbca86d17" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classdakku_1_1Bounds2iIterator" kindref="compound">Bounds2iIterator</ref></type>
@@ -626,7 +627,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/bounds.h" line="312" column="25" bodyfile="src/core/bounds.h" bodystart="312" bodyend="321"/>
+        <location file="src/core/bounds.h" line="311" column="25" bodyfile="src/core/bounds.h" bodystart="311" bodyend="320"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1af754e4967f947036a0c31c0dbb4bf6e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -1156,7 +1157,7 @@ the shorter edge mapped to [-1, 1], the longer [-ratio, ratio] left handed </par
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector_base.h" line="767" column="17" bodyfile="src/core/vector_base.h" bodystart="767" bodyend="770"/>
+        <location file="src/core/vector_base.h" line="787" column="17" bodyfile="src/core/vector_base.h" bodystart="787" bodyend="790"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1ab1fd7a566663942d0a6ddc982890d74b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -1179,6 +1180,91 @@ the shorter edge mapped to [-1, 1], the longer [-ratio, ratio] left handed </par
         <inbodydescription>
         </inbodydescription>
         <location file="src/filters/api.h" line="8" column="1" declfile="src/filters/api.h" declline="8" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1af6341cd9dee71fb7731ce988277fea7c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float dakku::gammaCorrect</definition>
+        <argsstring>(float value)</argsstring>
+        <name>gammaCorrect</name>
+        <param>
+          <type>float</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>gamma correction </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/imageio/fwd.h" line="17" column="14" bodyfile="src/imageio/fwd.h" bodystart="17" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1aeb8251264c62aa09029e8f63d598e2b3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float dakku::inverseGammaCorrect</definition>
+        <argsstring>(float value)</argsstring>
+        <name>inverseGammaCorrect</name>
+        <param>
+          <type>float</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>inverse gamma correction </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/imageio/fwd.h" line="26" column="14" bodyfile="src/imageio/fwd.h" bodystart="26" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1abc410b389b946378187c69b6cbeba1e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="imageio_2fwd_8h_1ab0769d84ea09188408c5c02f1e8d42aa" kindref="member">DAKKU_EXPORT_IMAGEIO</ref> bool</type>
+        <definition>DAKKU_EXPORT_IMAGEIO bool dakku::writeImage</definition>
+        <argsstring>(const std::filesystem::path &amp;path, const float *rgb, int totalResX, int totalResY, int outBoundsMinX=0, int outBoundsMinY=0, int outBoundsMaxX=-1, int outBoundsMaxY=-1)</argsstring>
+        <name>writeImage</name>
+        <param>
+          <type>const std::filesystem::path &amp;</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>const float *</type>
+          <declname>rgb</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>totalResX</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>totalResY</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>outBoundsMinX</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>outBoundsMinY</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>outBoundsMaxX</declname>
+          <defval>-1</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>outBoundsMaxY</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/imageio/imageio.h" line="8" column="27" declfile="src/imageio/imageio.h" declline="8" declcolumn="27"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1a56ee8590ffd24bd3f70b555372fa4697" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>

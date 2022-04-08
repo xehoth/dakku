@@ -108,6 +108,8 @@
       <node id="15">
         <label>src/core/memory.h</label>
         <link refid="memory_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
       </node>
       <node id="3">
         <label>src/core/object.h</label>

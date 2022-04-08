@@ -23,8 +23,8 @@
     <member refid="classdakku_1_1BoundsBase_1a1df49abc60c6cee7febd54aa46d04aa8" kind="variable"><name>pMax</name></member>
     <member refid="classdakku_1_1BoundsBase_1a4dea00502d665d2f3e6657507a9b03fb" kind="function"><name>BoundsBase</name></member>
     <member refid="classdakku_1_1BoundsBase_1a4707e959360ddbc591c0645854575ad9" kind="function"><name>BoundsBase</name></member>
+    <member refid="classdakku_1_1BoundsBase_1ab17dcf1e9998aeb07b29614aaeb42118" kind="function"><name>BoundsBase</name></member>
     <member refid="classdakku_1_1BoundsBase_1ac2e934c9361722edb8bb081686feff62" kind="function"><name>BoundsBase</name></member>
-    <member refid="classdakku_1_1BoundsBase_1ae578a4e99b038d678ceef58b0acde222" kind="function"><name>operator BoundsBase&lt; U, S &gt;</name></member>
     <member refid="classdakku_1_1BoundsBase_1a07b1800b4e56f7f2daf1f59785215aee" kind="function"><name>diagonal</name></member>
     <member refid="classdakku_1_1BoundsBase_1acaa8ef9b9991109e049d9409a1216518" kind="function"><name>maxExtent</name></member>
     <member refid="classdakku_1_1BoundsBase_1acd1339c39870cd9bac4a0c2ee3726d20" kind="function"><name>operator==</name></member>
@@ -90,8 +90,28 @@
     <member refid="classdakku_1_1Film_1a2761e7f49049136f7641e7eb9992aa3d" kind="variable"><name>filterTableWidth</name></member>
     <member refid="classdakku_1_1Film_1a246c871f2adf1dca61f541a9f8544b4b" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
     <member refid="classdakku_1_1Film_1ad8e4f2a09968ca20e9963575c573ef5d" kind="function"><name>Film</name></member>
+    <member refid="classdakku_1_1Film_1ab9c52d3813f1c4182aee9188a3f70651" kind="function"><name>getSampleBounds</name></member>
+    <member refid="classdakku_1_1Film_1ad9c09087e70ccaac1c152da26d064f1d" kind="function"><name>getFilmTile</name></member>
+    <member refid="classdakku_1_1Film_1a36494dc9faa8017ffefb68564d4c52e8" kind="function"><name>mergeFilmTile</name></member>
+    <member refid="classdakku_1_1Film_1a3f25d31dcc0086c6f0f0f02a093827e6" kind="function"><name>writeImage</name></member>
     <member refid="classdakku_1_1Film_1abd5500d780cda9eb7b512dc7ac1740d5" kind="function"><name>serialize</name></member>
     <member refid="classdakku_1_1Film_1a5c376ccf9abcdb293db2e9b9935b785c" kind="function"><name>deserialize</name></member>
+    <member refid="classdakku_1_1Film_1a8a5b6b0f27f82805309c7f6600f0e7bb" kind="function"><name>getPixel</name></member>
+  </compound>
+  <compound refid="classdakku_1_1FilmTile" kind="class"><name>dakku::FilmTile</name>
+    <member refid="classdakku_1_1FilmTile_1a1508a6fd2a92c50b745f618f727c9a42" kind="variable"><name>pixelBounds</name></member>
+    <member refid="classdakku_1_1FilmTile_1a1afd075f21aa8b29c3251c25f9f64c04" kind="variable"><name>filterRadius</name></member>
+    <member refid="classdakku_1_1FilmTile_1a481cfd22c362b14f00356a5f5f6af2ca" kind="variable"><name>invFilterRadius</name></member>
+    <member refid="classdakku_1_1FilmTile_1a9e54ced1f78c9175bf3e0557c573149a" kind="variable"><name>filterTable</name></member>
+    <member refid="classdakku_1_1FilmTile_1a9cf8e3758bd19ae38f73790af53f5733" kind="variable"><name>filterTableSize</name></member>
+    <member refid="classdakku_1_1FilmTile_1aca37384e334a85748bb5cb84e9d9b8d0" kind="variable"><name>pixels</name></member>
+    <member refid="classdakku_1_1FilmTile_1a950301e119159f8a2bc744dd01618001" kind="variable"><name>maxSampleLuminance</name></member>
+    <member refid="classdakku_1_1FilmTile_1a4af0d3c902fcdaafd695e2caec4f25e2" kind="friend"><name>Film</name></member>
+    <member refid="classdakku_1_1FilmTile_1ab5e508950c376c05c2035bf0aff7af24" kind="function"><name>FilmTile</name></member>
+    <member refid="classdakku_1_1FilmTile_1a0d8326e3cf8dc31bc9bc6da5ca8a9574" kind="function"><name>getPixel</name></member>
+    <member refid="classdakku_1_1FilmTile_1a469b9f0732df43d2f056dcbdb996fca8" kind="function"><name>getPixel</name></member>
+    <member refid="classdakku_1_1FilmTile_1a59959fe4403070d8d2bc2d1a22bef92e" kind="function"><name>getPixelBounds</name></member>
+    <member refid="classdakku_1_1FilmTile_1a36ae7d12134c16a3785f4cb1dd0b8cf3" kind="function"><name>addSample</name></member>
   </compound>
   <compound refid="structdakku_1_1FilmTilePixel" kind="struct"><name>dakku::FilmTilePixel</name>
     <member refid="structdakku_1_1FilmTilePixel_1af4beb8c6536598bd0233bcfa7b836f03" kind="variable"><name>contribSum</name></member>
@@ -179,6 +199,7 @@
     <member refid="structdakku_1_1Film_1_1Pixel_1a1605c1fd5405061a1d7b231109bbc2dd" kind="variable"><name>xyz</name></member>
     <member refid="structdakku_1_1Film_1_1Pixel_1accd87822d3b67fbf4a0014915acc6cf2" kind="variable"><name>filterWeightSum</name></member>
     <member refid="structdakku_1_1Film_1_1Pixel_1acfbbbf1e8a707f1c10b73ba2d9215473" kind="variable"><name>splatXyz</name></member>
+    <member refid="structdakku_1_1Film_1_1Pixel_1a4261a021d7b18f7c621e5344ab164b19" kind="variable"><name>_padding</name></member>
   </compound>
   <compound refid="classdakku_1_1Point" kind="class"><name>dakku::Point</name>
     <member refid="classdakku_1_1Point_1ad8e485617ec76d5775ae2efd79522e29" kind="friend"><name>operator-</name></member>
@@ -381,6 +402,8 @@
     <member refid="classdakku_1_1VectorBase_1a4f610bf85df7ec868b857a8e1542bb4a" kind="friend"><name>sqrt</name></member>
     <member refid="classdakku_1_1VectorBase_1a6d186fbf4a1071a8ae202382485dc859" kind="friend"><name>pow</name></member>
     <member refid="classdakku_1_1VectorBase_1afd74fa091a074a68449d1f8e493fd745" kind="friend"><name>exp</name></member>
+    <member refid="classdakku_1_1VectorBase_1ac1a4a8247b5394c188dcea147def6a2a" kind="friend"><name>floor</name></member>
+    <member refid="classdakku_1_1VectorBase_1ae6e15655167cb8377e29a6cc3198c18e" kind="friend"><name>ceil</name></member>
   </compound>
   <compound refid="conceptdakku_1_1ArithmeticType" kind="concept"><name>dakku::ArithmeticType</name>
   </compound>
@@ -442,6 +465,9 @@
     <member refid="namespacedakku_1afd935f8b4f1ca9b28257d07b7f276739" kind="function"><name>perspective</name></member>
     <member refid="namespacedakku_1a2016f3c3a16c069a055a7017eacb0e66" kind="function"><name>dot</name></member>
     <member refid="namespacedakku_1ab1fd7a566663942d0a6ddc982890d74b" kind="function"><name>DAKKU_EXPORT_OBJECTS</name></member>
+    <member refid="namespacedakku_1af6341cd9dee71fb7731ce988277fea7c" kind="function"><name>gammaCorrect</name></member>
+    <member refid="namespacedakku_1aeb8251264c62aa09029e8f63d598e2b3" kind="function"><name>inverseGammaCorrect</name></member>
+    <member refid="namespacedakku_1abc410b389b946378187c69b6cbeba1e7" kind="function"><name>writeImage</name></member>
     <member refid="namespacedakku_1a56ee8590ffd24bd3f70b555372fa4697" kind="function"><name>DAKKU_EXPORT_OBJECTS</name></member>
   </compound>
   <compound refid="namespacestd" kind="namespace"><name>std</name>
@@ -492,12 +518,15 @@
   </compound>
   <compound refid="triangle_8h" kind="file"><name>triangle.h</name>
   </compound>
+  <compound refid="imageio_8h" kind="file"><name>imageio.h</name>
+  </compound>
   <compound refid="platform_8h" kind="file"><name>platform.h</name>
     <member refid="platform_8h_1a7bc0107b6d161e4a712eee011c57792c" kind="define"><name>DAKKU_INLINE</name></member>
     <member refid="platform_8h_1a5a852c25cfd1f921bfe140d4216a332f" kind="define"><name>DAKKU_EXPORT</name></member>
     <member refid="platform_8h_1a4dc2ada1002dbe2abdfbc3ec4e1aee36" kind="define"><name>DAKKU_IMPORT</name></member>
     <member refid="platform_8h_1a727f841a8615f5ba2055132fb14a18ec" kind="define"><name>DAKKU_CORE_MODULE</name></member>
     <member refid="platform_8h_1a6a1a04663120344778813d08185b6edb" kind="define"><name>DAKKU_STREAM_MODULE</name></member>
+    <member refid="platform_8h_1af38869f447ed6e8768ab41a8b2d4f7e9" kind="define"><name>DAKKU_IMAGEIO_MODULE</name></member>
     <member refid="platform_8h_1ac321229e879d4e468e1eb21d57344d58" kind="define"><name>DAKKU_FILTERS_MODULE</name></member>
     <member refid="platform_8h_1a09cd708407b8b153a1c5f21c764c142a" kind="define"><name>DAKKU_MAIN_MODULE</name></member>
   </compound>
@@ -515,6 +544,9 @@
   <compound refid="filters_2fwd_8h" kind="file"><name>fwd.h</name>
     <member refid="filters_2fwd_8h_1a43808664e862ce668a722f7b1077b1e5" kind="define"><name>DAKKU_EXPORT_FILTERS</name></member>
   </compound>
+  <compound refid="imageio_2fwd_8h" kind="file"><name>fwd.h</name>
+    <member refid="imageio_2fwd_8h_1ab0769d84ea09188408c5c02f1e8d42aa" kind="define"><name>DAKKU_EXPORT_IMAGEIO</name></member>
+  </compound>
   <compound refid="stream_2fwd_8h" kind="file"><name>fwd.h</name>
     <member refid="stream_2fwd_8h_1aaa6b0e6f6a552de3f9f6bb40ed162e36" kind="define"><name>DAKKU_EXPORT_STREAM</name></member>
   </compound>
@@ -523,6 +555,8 @@
   <compound refid="dir_aebb8dcc11953d78e620bbef0b9e2183" kind="dir"><name>src/core</name>
   </compound>
   <compound refid="dir_1bc13244e26df1e1f069a1fd18e36da3" kind="dir"><name>src/filters</name>
+  </compound>
+  <compound refid="dir_a0ac0340ed7c73c764f7b19b1e0fdeee" kind="dir"><name>src/imageio</name>
   </compound>
   <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
   </compound>

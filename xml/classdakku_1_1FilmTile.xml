@@ -1,0 +1,252 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="classdakku_1_1FilmTile" kind="class" language="C++" prot="public">
+    <compoundname>dakku::FilmTile</compoundname>
+    <includes refid="film_8h" local="no">film.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdakku_1_1FilmTile_1a1508a6fd2a92c50b745f618f727c9a42" prot="private" static="no" mutable="no">
+        <type>const <ref refid="namespacedakku_1ae2cd423e1acf2fd91f4cdf3cc5ad50c6" kindref="member">Bounds2i</ref></type>
+        <definition>const Bounds2i dakku::FilmTile::pixelBounds</definition>
+        <argsstring></argsstring>
+        <name>pixelBounds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/film.h" line="224" column="18" bodyfile="src/core/film.h" bodystart="224" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdakku_1_1FilmTile_1a1afd075f21aa8b29c3251c25f9f64c04" prot="private" static="no" mutable="no">
+        <type>const <ref refid="namespacedakku_1abfd5a177365f8ffec7ab23d6cb6db8c0" kindref="member">Vector2f</ref></type>
+        <definition>const Vector2f dakku::FilmTile::filterRadius</definition>
+        <argsstring></argsstring>
+        <name>filterRadius</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/film.h" line="225" column="18" bodyfile="src/core/film.h" bodystart="225" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdakku_1_1FilmTile_1a481cfd22c362b14f00356a5f5f6af2ca" prot="private" static="no" mutable="no">
+        <type>const <ref refid="namespacedakku_1abfd5a177365f8ffec7ab23d6cb6db8c0" kindref="member">Vector2f</ref></type>
+        <definition>const Vector2f dakku::FilmTile::invFilterRadius</definition>
+        <argsstring></argsstring>
+        <name>invFilterRadius</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/film.h" line="225" column="31" bodyfile="src/core/film.h" bodystart="225" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdakku_1_1FilmTile_1a9e54ced1f78c9175bf3e0557c573149a" prot="private" static="no" mutable="no">
+        <type>std::span&lt; const float &gt;</type>
+        <definition>std::span&lt;const float&gt; dakku::FilmTile::filterTable</definition>
+        <argsstring></argsstring>
+        <name>filterTable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/film.h" line="226" column="13" bodyfile="src/core/film.h" bodystart="226" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdakku_1_1FilmTile_1a9cf8e3758bd19ae38f73790af53f5733" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int dakku::FilmTile::filterTableSize</definition>
+        <argsstring></argsstring>
+        <name>filterTableSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/film.h" line="227" column="13" bodyfile="src/core/film.h" bodystart="227" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdakku_1_1FilmTile_1aca37384e334a85748bb5cb84e9d9b8d0" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structdakku_1_1FilmTilePixel" kindref="compound">FilmTilePixel</ref> &gt;</type>
+        <definition>std::vector&lt;FilmTilePixel&gt; dakku::FilmTile::pixels</definition>
+        <argsstring></argsstring>
+        <name>pixels</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/film.h" line="228" column="15" bodyfile="src/core/film.h" bodystart="228" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdakku_1_1FilmTile_1a950301e119159f8a2bc744dd01618001" prot="private" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float dakku::FilmTile::maxSampleLuminance</definition>
+        <argsstring></argsstring>
+        <name>maxSampleLuminance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/film.h" line="229" column="15" bodyfile="src/core/film.h" bodystart="229" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classdakku_1_1FilmTile_1a4af0d3c902fcdaafd695e2caec4f25e2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class Film</definition>
+        <argsstring></argsstring>
+        <name>Film</name>
+        <param>
+          <type><ref refid="classdakku_1_1Film" kindref="compound">Film</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/film.h" line="230" column="16" bodyfile="src/core/film.h" bodystart="230" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdakku_1_1FilmTile_1ab5e508950c376c05c2035bf0aff7af24" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>dakku::FilmTile::FilmTile</definition>
+        <argsstring>(const Bounds2i &amp;pixelBounds, const Vector2f &amp;filterRadius, std::span&lt; const float &gt; filterTable, int filterTableSize, float maxSampleLuminance=INF)</argsstring>
+        <name>FilmTile</name>
+        <param>
+          <type>const <ref refid="namespacedakku_1ae2cd423e1acf2fd91f4cdf3cc5ad50c6" kindref="member">Bounds2i</ref> &amp;</type>
+          <declname>pixelBounds</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacedakku_1abfd5a177365f8ffec7ab23d6cb6db8c0" kindref="member">Vector2f</ref> &amp;</type>
+          <declname>filterRadius</declname>
+        </param>
+        <param>
+          <type>std::span&lt; const float &gt;</type>
+          <declname>filterTable</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>filterTableSize</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>maxSampleLuminance</declname>
+          <defval>INF</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/film.h" line="137" column="12" bodyfile="src/core/film.h" bodystart="137" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1FilmTile_1a0d8326e3cf8dc31bc9bc6da5ca8a9574" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structdakku_1_1FilmTilePixel" kindref="compound">FilmTilePixel</ref> &amp;</type>
+        <definition>FilmTilePixel &amp; dakku::FilmTile::getPixel</definition>
+        <argsstring>(const Point2i &amp;p)</argsstring>
+        <name>getPixel</name>
+        <param>
+          <type>const <ref refid="namespacedakku_1a059653c441fcfa28e3b00de3709176e9" kindref="member">Point2i</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Get the Pixel object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/film.h" line="153" column="17" bodyfile="src/core/film.h" bodystart="153" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1FilmTile_1a469b9f0732df43d2f056dcbdb996fca8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="structdakku_1_1FilmTilePixel" kindref="compound">FilmTilePixel</ref> &amp;</type>
+        <definition>const FilmTilePixel &amp; dakku::FilmTile::getPixel</definition>
+        <argsstring>(const Point2i &amp;p) const</argsstring>
+        <name>getPixel</name>
+        <param>
+          <type>const <ref refid="namespacedakku_1a059653c441fcfa28e3b00de3709176e9" kindref="member">Point2i</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Get the Pixel object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/film.h" line="162" column="24" bodyfile="src/core/film.h" bodystart="162" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1FilmTile_1a59959fe4403070d8d2bc2d1a22bef92e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacedakku_1ae2cd423e1acf2fd91f4cdf3cc5ad50c6" kindref="member">Bounds2i</ref></type>
+        <definition>Bounds2i dakku::FilmTile::getPixelBounds</definition>
+        <argsstring>() const</argsstring>
+        <name>getPixelBounds</name>
+        <briefdescription>
+<para>Get the Pixel Bounds object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/film.h" line="174" column="13" bodyfile="src/core/film.h" bodystart="174" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1FilmTile_1a36ae7d12134c16a3785f4cb1dd0b8cf3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void dakku::FilmTile::addSample</definition>
+        <argsstring>(const Point2f &amp;pFilm, Spectrum L, float sampleWeight=1)</argsstring>
+        <name>addSample</name>
+        <param>
+          <type>const <ref refid="namespacedakku_1a9910f23501fd2ef5e9a829cdab0992be" kindref="member">Point2f</ref> &amp;</type>
+          <declname>pFilm</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacedakku_1a72f253f8c73b2ec7fef8e3c83c0eac17" kindref="member">Spectrum</ref></type>
+          <declname>L</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>sampleWeight</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+<para>add sample to the film tile </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/film.h" line="180" column="8" bodyfile="src/core/film.h" bodystart="180" bodyend="221"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>film tile </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/core/film.h" line="135" column="1" bodyfile="src/core/film.h" bodystart="135" bodyend="231"/>
+    <listofallmembers>
+      <member refid="classdakku_1_1FilmTile_1a36ae7d12134c16a3785f4cb1dd0b8cf3" prot="public" virt="non-virtual"><scope>dakku::FilmTile</scope><name>addSample</name></member>
+      <member refid="classdakku_1_1FilmTile_1a4af0d3c902fcdaafd695e2caec4f25e2" prot="private" virt="non-virtual"><scope>dakku::FilmTile</scope><name>Film</name></member>
+      <member refid="classdakku_1_1FilmTile_1ab5e508950c376c05c2035bf0aff7af24" prot="public" virt="non-virtual"><scope>dakku::FilmTile</scope><name>FilmTile</name></member>
+      <member refid="classdakku_1_1FilmTile_1a1afd075f21aa8b29c3251c25f9f64c04" prot="private" virt="non-virtual"><scope>dakku::FilmTile</scope><name>filterRadius</name></member>
+      <member refid="classdakku_1_1FilmTile_1a9e54ced1f78c9175bf3e0557c573149a" prot="private" virt="non-virtual"><scope>dakku::FilmTile</scope><name>filterTable</name></member>
+      <member refid="classdakku_1_1FilmTile_1a9cf8e3758bd19ae38f73790af53f5733" prot="private" virt="non-virtual"><scope>dakku::FilmTile</scope><name>filterTableSize</name></member>
+      <member refid="classdakku_1_1FilmTile_1a0d8326e3cf8dc31bc9bc6da5ca8a9574" prot="public" virt="non-virtual"><scope>dakku::FilmTile</scope><name>getPixel</name></member>
+      <member refid="classdakku_1_1FilmTile_1a469b9f0732df43d2f056dcbdb996fca8" prot="public" virt="non-virtual"><scope>dakku::FilmTile</scope><name>getPixel</name></member>
+      <member refid="classdakku_1_1FilmTile_1a59959fe4403070d8d2bc2d1a22bef92e" prot="public" virt="non-virtual"><scope>dakku::FilmTile</scope><name>getPixelBounds</name></member>
+      <member refid="classdakku_1_1FilmTile_1a481cfd22c362b14f00356a5f5f6af2ca" prot="private" virt="non-virtual"><scope>dakku::FilmTile</scope><name>invFilterRadius</name></member>
+      <member refid="classdakku_1_1FilmTile_1a950301e119159f8a2bc744dd01618001" prot="private" virt="non-virtual"><scope>dakku::FilmTile</scope><name>maxSampleLuminance</name></member>
+      <member refid="classdakku_1_1FilmTile_1a1508a6fd2a92c50b745f618f727c9a42" prot="private" virt="non-virtual"><scope>dakku::FilmTile</scope><name>pixelBounds</name></member>
+      <member refid="classdakku_1_1FilmTile_1aca37384e334a85748bb5cb84e9d9b8d0" prot="private" virt="non-virtual"><scope>dakku::FilmTile</scope><name>pixels</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

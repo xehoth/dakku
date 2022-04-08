@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="dir_a0ac0340ed7c73c764f7b19b1e0fdeee" kind="dir">
+    <compoundname>src/imageio</compoundname>
+    <innerfile refid="imageio_2fwd_8h">fwd.h</innerfile>
+    <innerfile refid="imageio_8h">imageio.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/imageio/"/>
+  </compounddef>
+</doxygen>
