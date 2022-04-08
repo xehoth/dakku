@@ -62,6 +62,19 @@ class DAKKU_EXPORT_CORE Property {
    */
   template <PropertyType type>
   [[nodiscard]] decltype(auto) get() {
+    auto &ret = static_cast<const Property &>(*this).get<type>();
+    return const_cast<std::add_lvalue_reference_t<std::decay_t<decltype(ret)>>>(
+        ret);
+  }
+
+  /**
+   * @brief get the property data according to given type (const)
+   *
+   * @tparam type the type to get
+   * @return the data
+   */
+  template <PropertyType type, bool required = false>
+  [[nodiscard]] decltype(auto) get() const {
     if constexpr (type == PropertyType::OBJECT) {
       return std::get<ObjectType>(data);
     } else if constexpr (type == PropertyType::ARRAY) {
@@ -76,7 +89,7 @@ class DAKKU_EXPORT_CORE Property {
       } else {
         DAKKU_WARN("invalid property type: {}", type);
       }
-      return nullptr;
+      return std::get<std::nullptr_t>(data);
     }
   }
 
@@ -89,10 +102,26 @@ class DAKKU_EXPORT_CORE Property {
   }
 
   /**
+   * @brief get object
+   *
+   */
+  [[nodiscard]] decltype(auto) getObject() const {
+    return get<PropertyType::OBJECT>();
+  }
+
+  /**
    * @brief get array
    *
    */
   [[nodiscard]] decltype(auto) getArray() { return get<PropertyType::ARRAY>(); }
+
+  /**
+   * @brief get array
+   *
+   */
+  [[nodiscard]] decltype(auto) getArray() const {
+    return get<PropertyType::ARRAY>();
+  }
 
   /**
    * @brief get number
@@ -103,10 +132,26 @@ class DAKKU_EXPORT_CORE Property {
   }
 
   /**
+   * @brief get number
+   *
+   */
+  [[nodiscard]] decltype(auto) getNumber() const {
+    return get<PropertyType::NUMBER>();
+  }
+
+  /**
    * @brief get vector
    *
    */
   [[nodiscard]] decltype(auto) getVector() {
+    return get<PropertyType::VECTOR>();
+  }
+
+  /**
+   * @brief get vector
+   *
+   */
+  [[nodiscard]] decltype(auto) getVector() const {
     return get<PropertyType::VECTOR>();
   }
 
@@ -156,6 +201,25 @@ class DAKKU_EXPORT_CORE Property {
   }
 
   /**
+   * @brief index `key` (const), key must exists
+   *
+   * @param key key to index
+   * @return value
+   */
+  decltype(auto) operator[](const std::string &key) const {
+    if (!isObjectType()) [[unlikely]] {
+      DAKKU_ERR("try to access {} in a non-object type property", key);
+      std::exit(-1);
+    }
+    if (auto it = getObject().find(key); it != getObject().end()) [[likely]] {
+      return it->second;
+    } else {
+      DAKKU_ERR("cannot find the request key: {}", key);
+      std::exit(-1);
+    }
+  }
+
+  /**
    * @brief index i, if this is NONE, then => ARRAY
    * if i >= size, it will grow automatically
    * @param i the index
@@ -177,6 +241,25 @@ class DAKKU_EXPORT_CORE Property {
   }
 
   /**
+   * @brief index i, if this is NONE, then => ARRAY
+   * if i >= size, it will grow automatically
+   * @param i the index
+   * @return the data
+   */
+  decltype(auto) operator[](size_t i) const {
+    if (type == PropertyType::NONE) [[unlikely]] {
+      DAKKU_ERR("try to index {} in a non-array type property", i);
+      std::exit(-1);
+    }
+    if (const auto &arr = getArray(); i < arr.size()) [[likely]] {
+      return arr[i];
+    } else {
+      DAKKU_ERR("index out of range: {} >= {}", i, arr.size());
+      std::exit(-1);
+    }
+  }
+
+  /**
    * @brief to string
    *
    */
@@ -192,7 +275,8 @@ class DAKKU_EXPORT_CORE Property {
 
  private:
   /// property data
-  std::variant<ObjectType, ArrayType, NumberType, VectorType> data;
+  std::variant<ObjectType, ArrayType, NumberType, VectorType, std::nullptr_t>
+      data;
   /// property type
   PropertyType type{PropertyType::NONE};
 };

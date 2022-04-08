@@ -12,6 +12,8 @@ class DAKKU_EXPORT_CORE Object {
  public:
   virtual ~Object() = default;
 
+  explicit Object(const Property & = {});
+
   /**
    * @return the class name of the object
    */
@@ -26,6 +28,18 @@ class DAKKU_EXPORT_CORE Object {
    * @return object to string (default: class name)
    */
   [[nodiscard]] virtual std::string toString() const;
+
+  /**
+   * @brief whther the object is derived from `name` (inclusive)
+   * 
+   */
+  [[nodiscard]] bool isDerivedFrom(std::string_view name) const;
+
+  /**
+   * @brief whether the object is base of `name` (inclusive)
+   * 
+   */
+  [[nodiscard]] bool isBaseOf(std::string_view name) const;
 
   /**
    * @return the class name of the object
@@ -49,7 +63,7 @@ class DAKKU_EXPORT_CORE Object {
   [[nodiscard]] std::string getParentName() const override {   \
     return getParentNameStatic();                              \
   }                                                            \
-  explicit name() = default
+  explicit name(const Property & = {})
 
 /**
  * @brief export a object (register the class)

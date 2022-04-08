@@ -46,8 +46,10 @@ requires std::is_floating_point_v<T> DAKKU_INLINE bool isNaN(T x) {
 template <typename T>
 requires std::is_integral_v<T> DAKKU_INLINE bool isNaN(T) { return false; }
 
-class Class;
-class Object;
+enum class PropertyType;
+class DAKKU_EXPORT_CORE Property;
+class DAKKU_EXPORT_CORE Class;
+class DAKKU_EXPORT_CORE Object;
 /**
  * @brief object type concept
  *

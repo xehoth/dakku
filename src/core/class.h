@@ -2,6 +2,7 @@
 #define DAKKU_CORE_CLASS_H_
 #include <core/fwd.h>
 #include <core/logger.h>
+#include <core/property.h>
 #include <string>
 #include <map>
 #include <string_view>
@@ -37,10 +38,25 @@ class DAKKU_EXPORT_CORE Class final {
                                    std::string_view from) const;
 
   /**
+   * @brief check whether `cur` is base of `other`
+   *
+   */
+  [[nodiscard]] bool isBaseof(std::string_view cur,
+                              std::string_view other) const;
+
+  /**
    * @brief check whether `name` is registered
    *
    */
   [[nodiscard]] bool contains(std::string_view name) const;
+
+  /**
+   * @brief create an object instance and construct with property
+   *
+   * @param name object name
+   * @return the object
+   */
+  Object *create(std::string_view name, const Property & = {});
 
  private:
   explicit Class() = default;
@@ -50,10 +66,10 @@ class DAKKU_EXPORT_CORE Class final {
    *
    */
   template <typename T>
-  static Object *constructor();
+  static Object *constructor(const Property &);
 
   struct Metadata {
-    std::add_pointer_t<Object *()> constructor;
+    std::add_pointer_t<Object *(const Property &)> constructor;
     std::string parent;
   };
 
@@ -73,9 +89,9 @@ void Class::registerClass() {
 }
 
 template <typename T>
-Object *Class::constructor() {
+Object *Class::constructor(const Property &property) {
   if constexpr (std::is_default_constructible_v<T>) {
-    return new T;
+    return new T{property};
   } else {
     DAKKU_ERR("cannot construct {}", T::getClassNameStatic());
     return nullptr;

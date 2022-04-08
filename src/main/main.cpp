@@ -4,6 +4,7 @@
 #include <core/property.h>
 #include <core/transform.h>
 #include <core/class.h>
+#include <core/object.h>
 #include <core/bounds.h>
 #include <iostream>
 
@@ -17,7 +18,10 @@ int main(int argc, const char *argv[]) {
   Property p;
   p[0] = a;
   Matrix4x4 m;
-  std::cout << m[0][0] << std::endl;
+  std::cout << p << std::endl;
+  Object *obj = Class::instance().create("Object");
+  std::cout << obj->getClassName();
+  delete obj;
   printf("%p\n", &Class::instance());
   // std::cout << inverse(a) << std::endl;
 
