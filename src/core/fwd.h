@@ -47,9 +47,10 @@ template <typename T>
 requires std::is_integral_v<T> DAKKU_INLINE bool isNaN(T) { return false; }
 
 enum class PropertyType;
-class DAKKU_EXPORT_CORE Property;
-class DAKKU_EXPORT_CORE Class;
-class DAKKU_EXPORT_CORE Object;
+class Property;
+class Class;
+class Object;
+struct Matrix4x4;
 /**
  * @brief object type concept
  *
