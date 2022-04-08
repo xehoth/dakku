@@ -285,7 +285,7 @@ class DAKKU_EXPORT_CORE Property {
    * @return value
    */
   decltype(auto) operator[](const std::string &key) {
-    if (type == PropertyType::NONE) [[unlikely]] {
+    [[unlikely]] if (type == PropertyType::NONE) {
       data = ObjectType{};
       type = PropertyType::OBJECT;
     }
@@ -300,13 +300,14 @@ class DAKKU_EXPORT_CORE Property {
    * @return value
    */
   decltype(auto) operator[](const std::string &key) const {
-    if (!isObjectType()) [[unlikely]] {
+    [[unlikely]] if (!isObjectType()) {
       DAKKU_ERR("try to access {} in a non-object type property", key);
       std::exit(-1);
     }
-    if (auto it = getObject().find(key); it != getObject().end()) [[likely]] {
+    [[likely]] if (auto it = getObject().find(key); it != getObject().end()) {
       return it->second;
-    } else {
+    }
+    else {
       DAKKU_ERR("cannot find the request key: {}", key);
       std::exit(-1);
     }
@@ -319,7 +320,7 @@ class DAKKU_EXPORT_CORE Property {
    * @return the data
    */
   decltype(auto) operator[](size_t i) {
-    if (type == PropertyType::NONE) [[unlikely]] {
+    [[unlikely]] if (type == PropertyType::NONE) {
       data = ArrayType{};
       type = PropertyType::ARRAY;
       getArray().reserve((i + 1) * 2);
@@ -340,13 +341,14 @@ class DAKKU_EXPORT_CORE Property {
    * @return the data
    */
   decltype(auto) operator[](size_t i) const {
-    if (type == PropertyType::NONE) [[unlikely]] {
+    [[unlikely]] if (type == PropertyType::NONE) {
       DAKKU_ERR("try to index {} in a non-array type property", i);
       std::exit(-1);
     }
-    if (const auto &arr = getArray(); i < arr.size()) [[likely]] {
+    [[likely]] if (const auto &arr = getArray(); i < arr.size()) {
       return arr[i];
-    } else {
+    }
+    else {
       DAKKU_ERR("index out of range: {} >= {}", i, arr.size());
       std::exit(-1);
     }
