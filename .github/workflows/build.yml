@@ -35,6 +35,6 @@ jobs:
         if: matrix.os != 'ubuntu-latest'
         run: 'xmake f --build_test=y -c -y'
       - name: Build
-        run: xmake build -y
+        run: xmake build -w -y
       - name: Run Test
         run: xmake run test

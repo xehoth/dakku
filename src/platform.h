@@ -25,6 +25,8 @@ namespace dakku {
 #define DAKKU_CORE_MODULE 1
 /// dakku stream module
 #define DAKKU_STREAM_MODULE 2
+/// dakku filters module
+#define DAKKU_FILTERS_MODULE 2
 /// dakku main module
 #define DAKKU_MAIN_MODULE 10
 

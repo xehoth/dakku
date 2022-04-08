@@ -335,12 +335,12 @@ DAKKU_EXPORT_CORE Transform lookAt(const Point3f &pos, const Point3f &look,
  * @brief perspective transform
  *
  * @param fov field of view
- * @param znear far plane z
- * @param zfar near plane z
+ * @param zNear far plane z
+ * @param zFar near plane z
  *
  * the shorter edge mapped to [-1, 1], the longer [-ratio, ratio]
  * left handed
  */
-DAKKU_EXPORT_CORE Transform perspective(float fov, float znear, float zfar);
+DAKKU_EXPORT_CORE Transform perspective(float fov, float zNear, float zFar);
 }  // namespace dakku
 #endif

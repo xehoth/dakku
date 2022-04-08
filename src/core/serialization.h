@@ -65,7 +65,7 @@ class DAKKU_EXPORT_CORE SerializableObject : public Object {
    *
    * @param stream
    */
-  virtual void deserialize(InputStream *stream) const = 0;
+  virtual void deserialize(InputStream *stream) = 0;
 };
 }  // namespace dakku
 #endif

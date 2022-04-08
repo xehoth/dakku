@@ -9,7 +9,9 @@ FileInputStream::FileInputStream(const std::filesystem::path &path)
                  : std::filesystem::path(RelativeRoot::instance().get() +
                                          path.string())) {}
 
-std::uint8_t FileInputStream::readByte() { return stream.rdbuf()->sbumpc(); }
+std::uint8_t FileInputStream::readByte() {
+  return static_cast<std::uint8_t>(stream.rdbuf()->sbumpc());
+}
 
 size_t FileInputStream::readBytes(void *ptr, size_t size) {
   return stream.rdbuf()->sgetn(reinterpret_cast<char *>(ptr),
@@ -30,8 +32,10 @@ size_t FileOutputStream::writeBytes(const void *ptr, size_t size) {
                                static_cast<std::streamsize>(size));
 }
 
-FileInputStream::FileInputStream(const Property &p) : InputStream(p) {}
+FileInputStream::FileInputStream(const Property &p)
+    : FileInputStream(std::filesystem::path{p.getString()}) {}
 
-FileOutputStream::FileOutputStream(const Property &p) : OutputStream(p) {}
+FileOutputStream::FileOutputStream(const Property &p)
+    : FileOutputStream(std::filesystem::path{p.getString()}) {}
 
 }  // namespace dakku

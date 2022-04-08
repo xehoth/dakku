@@ -83,5 +83,8 @@ concept ObjectType = std::is_base_of_v<Object, T>;
 class Transform;
 class Ray;
 class RayDifferential;
+
+class DAKKU_EXPORT_CORE Filter;
+class DAKKU_EXPORT_CORE Film;
 }  // namespace dakku
 #endif
