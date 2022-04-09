@@ -5,6 +5,7 @@
 #include <limits>
 #include <numbers>
 #include <cmath>
+#include <cstdint>
 
 namespace dakku {
 
