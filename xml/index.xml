@@ -64,7 +64,8 @@
     <member refid="classdakku_1_1CoefficientSpectrum_1ae9b538dae7b0ef76e17b5b8379d62224" kind="function"><name>clamp</name></member>
   </compound>
   <compound refid="classdakku_1_1ConstantTexture" kind="class"><name>dakku::ConstantTexture</name>
-    <member refid="classdakku_1_1ConstantTexture_1a652de9386ebe0eeeb0d42c6808b56e24" kind="variable"><name>value</name></member>
+    <member refid="classdakku_1_1ConstantTexture_1af4dc898baf51be9db4582df096e3067d" kind="variable"><name>value</name></member>
+    <member refid="classdakku_1_1ConstantTexture_1ad9eb08983dde4d7ceae32d9396c01720" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
     <member refid="classdakku_1_1ConstantTexture_1a84f1bec89957b9bcdff638aadfc8cbea" kind="function"><name>ConstantTexture</name></member>
     <member refid="classdakku_1_1ConstantTexture_1a0aeadd0c4db60fc0bd81664ef0d23fdb" kind="function"><name>ConstantTexture</name></member>
     <member refid="classdakku_1_1ConstantTexture_1af8a15246419b3a80396a98b63e452371" kind="function"><name>evaluate</name></member>
