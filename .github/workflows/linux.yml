@@ -14,8 +14,6 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-latest]
-    env:
-      XMAKE_PKG_CACHEDIR: $GITHUB_WORKSPACE/xmake-cache
 
     steps:
       - name: Checkout
@@ -32,7 +30,7 @@ jobs:
       - name: Cache XMake
         uses: actions/cache@v3
         with:
-          path: ${{ env.XMAKE_PKG_CACHEDIR }}
+          path: ~/.xmake/cache
           key: ${{ matrix.os }}-${{ matrix.arch }}
       - name: XMake Config for Clang & Test
         run: 'xmake f --toolchain=clang --build_test=y -c -y -vD'
