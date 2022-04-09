@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/memory.h" line="47" column="29" bodyfile="src/core/memory.h" bodystart="47" bodyend="-1"/>
+        <location file="src/core/memory.h" line="49" column="29" bodyfile="src/core/memory.h" bodystart="49" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -37,7 +37,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/memory.h" line="26" column="12" bodyfile="src/core/memory.h" bodystart="26" bodyend="28"/>
+        <location file="src/core/memory.h" line="28" column="12" bodyfile="src/core/memory.h" bodystart="28" bodyend="30"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1L1CacheLineAlignedResource_1a5d618ed96c73814fd10618cdf4694577" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void *</type>
@@ -58,7 +58,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/memory.h" line="30" column="8" bodyfile="src/core/memory.h" bodystart="30" bodyend="33"/>
+        <location file="src/core/memory.h" line="32" column="8" bodyfile="src/core/memory.h" bodystart="32" bodyend="35"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1L1CacheLineAlignedResource_1a834de448e638b2bf9258b75bb210fcec" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -83,7 +83,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/memory.h" line="35" column="8" bodyfile="src/core/memory.h" bodystart="35" bodyend="38"/>
+        <location file="src/core/memory.h" line="37" column="8" bodyfile="src/core/memory.h" bodystart="37" bodyend="40"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1L1CacheLineAlignedResource_1ac1a7d0784608447b9a4287fe81583a99" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type>bool</type>
@@ -100,7 +100,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/memory.h" line="40" column="9" bodyfile="src/core/memory.h" bodystart="40" bodyend="43"/>
+        <location file="src/core/memory.h" line="42" column="9" bodyfile="src/core/memory.h" bodystart="42" bodyend="45"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -130,7 +130,7 @@
         <label>std::pmr::memory_resource</label>
       </node>
     </collaborationgraph>
-    <location file="src/core/memory.h" line="24" column="1" bodyfile="src/core/memory.h" bodystart="24" bodyend="48"/>
+    <location file="src/core/memory.h" line="26" column="1" bodyfile="src/core/memory.h" bodystart="26" bodyend="50"/>
     <listofallmembers>
       <member refid="classdakku_1_1L1CacheLineAlignedResource_1a5d618ed96c73814fd10618cdf4694577" prot="public" virt="non-virtual"><scope>dakku::L1CacheLineAlignedResource</scope><name>do_allocate</name></member>
       <member refid="classdakku_1_1L1CacheLineAlignedResource_1a834de448e638b2bf9258b75bb210fcec" prot="public" virt="non-virtual"><scope>dakku::L1CacheLineAlignedResource</scope><name>do_deallocate</name></member>

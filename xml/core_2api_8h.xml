@@ -19,7 +19,7 @@
         </childnode>
         <childnode refid="32" relation="include">
         </childnode>
-        <childnode refid="39" relation="include">
+        <childnode refid="41" relation="include">
         </childnode>
       </node>
       <node id="33">
@@ -59,7 +59,7 @@
         </childnode>
         <childnode refid="36" relation="include">
         </childnode>
-        <childnode refid="38" relation="include">
+        <childnode refid="40" relation="include">
         </childnode>
       </node>
       <node id="31">
@@ -100,6 +100,10 @@
         <childnode refid="10" relation="include">
         </childnode>
         <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
         </childnode>
       </node>
       <node id="2">
@@ -144,7 +148,7 @@
         <childnode refid="16" relation="include">
         </childnode>
       </node>
-      <node id="39">
+      <node id="41">
         <label>core/texture.h</label>
         <link refid="texture_8h"/>
         <childnode refid="2" relation="include">
@@ -210,7 +214,7 @@
       <node id="37">
         <label>memory_resource</label>
       </node>
-      <node id="38">
+      <node id="40">
         <label>mutex</label>
       </node>
       <node id="26">
@@ -221,6 +225,12 @@
       </node>
       <node id="21">
         <label>numeric</label>
+      </node>
+      <node id="38">
+        <label>oneapi/tbb.h</label>
+      </node>
+      <node id="39">
+        <label>oneapi/tbb/scalable_allocator.h</label>
       </node>
       <node id="20">
         <label>ostream</label>

@@ -67,7 +67,7 @@
         <label>src/core/api.h</label>
         <link refid="core_2api_8h"/>
       </node>
-      <node id="24">
+      <node id="25">
         <label>src/core/bounds.h</label>
         <link refid="bounds_8h"/>
         <childnode refid="10" relation="include">
@@ -97,7 +97,7 @@
         <childnode refid="8" relation="include">
         </childnode>
       </node>
-      <node id="25">
+      <node id="26">
         <label>src/core/interaction.h</label>
         <link refid="interaction_8h"/>
       </node>
@@ -117,7 +117,7 @@
         <childnode refid="10" relation="include">
         </childnode>
       </node>
-      <node id="26">
+      <node id="23">
         <label>src/core/mipmap.h</label>
         <link refid="mipmap_8h"/>
       </node>
@@ -144,7 +144,7 @@
       <node id="28">
         <label>src/core/ray.h</label>
         <link refid="ray_8h"/>
-        <childnode refid="25" relation="include">
+        <childnode refid="26" relation="include">
         </childnode>
         <childnode refid="29" relation="include">
         </childnode>
@@ -170,6 +170,8 @@
         <link refid="spectrum_8h"/>
         <childnode refid="10" relation="include">
         </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
         <childnode refid="18" relation="include">
         </childnode>
       </node>
@@ -189,14 +191,14 @@
         <childnode refid="15" relation="include">
         </childnode>
       </node>
-      <node id="23">
+      <node id="24">
         <label>src/core/vector.h</label>
         <link refid="vector_8h"/>
-        <childnode refid="24" relation="include">
-        </childnode>
         <childnode refid="25" relation="include">
         </childnode>
         <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
         </childnode>
         <childnode refid="27" relation="include">
         </childnode>
@@ -210,7 +212,7 @@
         <link refid="vector__base_8h"/>
         <childnode refid="22" relation="include">
         </childnode>
-        <childnode refid="23" relation="include">
+        <childnode refid="24" relation="include">
         </childnode>
       </node>
       <node id="7">

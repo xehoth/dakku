@@ -201,7 +201,7 @@
     <member refid="structdakku_1_1Matrix4x4_1a014300d3c91b6eea30d2c2e20f5d08ab" kind="friend"><name>operator&lt;&lt;</name></member>
   </compound>
   <compound refid="classdakku_1_1MemoryArena" kind="class"><name>dakku::MemoryArena</name>
-    <member refid="classdakku_1_1MemoryArena_1ab4b9c00cf51726ada8f065e50fd5ff8a" kind="variable"><name>upStream</name></member>
+    <member refid="classdakku_1_1MemoryArena_1a33ddc091d46cbe83ca867ba9874fe606" kind="variable"><name>upStream</name></member>
     <member refid="classdakku_1_1MemoryArena_1a218ba07f5f79d5f45b1e5665d4635b4c" kind="variable"><name>resource</name></member>
     <member refid="classdakku_1_1MemoryArena_1a7b9896cbdf1f21a31a4c12f875026b7d" kind="function"><name>MemoryArena</name></member>
     <member refid="classdakku_1_1MemoryArena_1a71997f6b7b6fc9a808f95b8e729ff317" kind="function"><name>MemoryArena</name></member>
@@ -222,6 +222,9 @@
     <member refid="classdakku_1_1MipMap_1a6b6aaee191275ccfb13805dc1759d819" kind="function"><name>width</name></member>
     <member refid="classdakku_1_1MipMap_1a4134445335c6d3badf60022c7b7efb7c" kind="function"><name>height</name></member>
     <member refid="classdakku_1_1MipMap_1a1bdc88cec0a68524a7fd14ccc8f1c6bf" kind="function"><name>levels</name></member>
+    <member refid="classdakku_1_1MipMap_1a0fc81d9a52721498646375c374d8577e" kind="function"><name>resampleWeights</name></member>
+    <member refid="classdakku_1_1MipMap_1abb83b1d932d1416a8d11ae568f7192d6" kind="function"><name>clamp</name></member>
+    <member refid="classdakku_1_1MipMap_1af7005d286fc2af45aa51a4b929ddfa87" kind="function"><name>clamp</name></member>
   </compound>
   <compound refid="classdakku_1_1Normal" kind="class"><name>dakku::Normal</name>
     <member refid="classdakku_1_1Normal_1a5028bef9666f97b23bb23f11e3f4af7e" kind="friend"><name>operator-</name></member>
@@ -524,6 +527,9 @@
     <member refid="namespacedakku_1af703ca0ba560169d1daf114a07175bf4" kind="function"><name>isNaN</name></member>
     <member refid="namespacedakku_1a2a53414d45143151128b45997c42d7af" kind="function"><name>radians</name></member>
     <member refid="namespacedakku_1a3d1bddf363d9216df7df7c148f917cd4" kind="function"><name>degrees</name></member>
+    <member refid="namespacedakku_1a7b74e38fede77ac78a98a577ae8eff7c" kind="function"><name>isPowerOf2</name></member>
+    <member refid="namespacedakku_1a0d82bdc5016a1bcbb43a0a37c068be53" kind="function"><name>roundUpPow2</name></member>
+    <member refid="namespacedakku_1af5b2aaaf6403e90c77a4746ff984db8b" kind="function"><name>evalLanczos</name></member>
     <member refid="namespacedakku_1a1fd20fa9b44a1620a3ce2a133f53d83d" kind="function"><name>doTrilinear</name></member>
     <member refid="namespacedakku_1a5dc6c62020f3cb484153c43801d71ee0" kind="function"><name>maxAnisotropy</name></member>
     <member refid="namespacedakku_1a3daeac9348858af9dbb1a9c0415f5f84" kind="function"><name>wrapMode</name></member>

@@ -4,19 +4,21 @@
     <compoundname>dakku::MemoryArena</compoundname>
     <includes refid="memory_8h" local="no">memory.h</includes>
       <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="classdakku_1_1MemoryArena_1ab4b9c00cf51726ada8f065e50fd5ff8a" prot="private" static="no" mutable="no">
-        <type><ref refid="classdakku_1_1L1CacheLineAlignedResource" kindref="compound">L1CacheLineAlignedResource</ref></type>
-        <definition>L1CacheLineAlignedResource dakku::MemoryArena::upStream</definition>
+      <memberdef kind="variable" id="classdakku_1_1MemoryArena_1a33ddc091d46cbe83ca867ba9874fe606" prot="private" static="no" mutable="no">
+        <type>oneapi::tbb::cache_aligned_resource</type>
+        <definition>oneapi::tbb::cache_aligned_resource dakku::MemoryArena::upStream</definition>
         <argsstring></argsstring>
         <name>upStream</name>
+        <initializer>{
+      oneapi::tbb::scalable_memory_resource()}</initializer>
         <briefdescription>
-<para>upstream resource l1 cache line aligned </para>
+<para>cache aligned scalable resource </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/memory.h" line="82" column="30" bodyfile="src/core/memory.h" bodystart="82" bodyend="-1"/>
+        <location file="src/core/memory.h" line="84" column="39" bodyfile="src/core/memory.h" bodystart="84" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classdakku_1_1MemoryArena_1a218ba07f5f79d5f45b1e5665d4635b4c" prot="private" static="no" mutable="no">
         <type>std::pmr::unsynchronized_pool_resource</type>
@@ -25,13 +27,13 @@
         <name>resource</name>
         <initializer>{&amp;upStream}</initializer>
         <briefdescription>
-<para>pool resource </para>
+<para>cache aligned scalable resource </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/memory.h" line="84" column="42" bodyfile="src/core/memory.h" bodystart="84" bodyend="-1"/>
+        <location file="src/core/memory.h" line="87" column="42" bodyfile="src/core/memory.h" bodystart="87" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -46,7 +48,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/memory.h" line="56" column="12"/>
+        <location file="src/core/memory.h" line="58" column="12"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1MemoryArena_1a71997f6b7b6fc9a808f95b8e729ff317" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
         <type></type>
@@ -63,7 +65,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/memory.h" line="57" column="12" bodyfile="src/core/memory.h" bodystart="57" bodyend="58"/>
+        <location file="src/core/memory.h" line="59" column="12" bodyfile="src/core/memory.h" bodystart="59" bodyend="60"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1MemoryArena_1af44583630a36c94b7040a9be738826af" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -120,7 +122,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/memory.h" line="69" column="5" bodyfile="src/core/memory.h" bodystart="69" bodyend="72"/>
+        <location file="src/core/memory.h" line="71" column="5" bodyfile="src/core/memory.h" bodystart="71" bodyend="74"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1MemoryArena_1ae375338f226dc8cedae2d70eb6cb8111" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -134,7 +136,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/memory.h" line="78" column="8" bodyfile="src/core/memory.h" bodystart="78" bodyend="78"/>
+        <location file="src/core/memory.h" line="80" column="8" bodyfile="src/core/memory.h" bodystart="80" bodyend="80"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -142,14 +144,14 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/core/memory.h" line="54" column="1" bodyfile="src/core/memory.h" bodystart="54" bodyend="85"/>
+    <location file="src/core/memory.h" line="56" column="1" bodyfile="src/core/memory.h" bodystart="56" bodyend="88"/>
     <listofallmembers>
       <member refid="classdakku_1_1MemoryArena_1af44583630a36c94b7040a9be738826af" prot="public" virt="non-virtual"><scope>dakku::MemoryArena</scope><name>allocObject</name></member>
       <member refid="classdakku_1_1MemoryArena_1a7b9896cbdf1f21a31a4c12f875026b7d" prot="public" virt="non-virtual"><scope>dakku::MemoryArena</scope><name>MemoryArena</name></member>
       <member refid="classdakku_1_1MemoryArena_1a71997f6b7b6fc9a808f95b8e729ff317" prot="public" virt="non-virtual"><scope>dakku::MemoryArena</scope><name>MemoryArena</name></member>
       <member refid="classdakku_1_1MemoryArena_1ae375338f226dc8cedae2d70eb6cb8111" prot="public" virt="non-virtual"><scope>dakku::MemoryArena</scope><name>release</name></member>
       <member refid="classdakku_1_1MemoryArena_1a218ba07f5f79d5f45b1e5665d4635b4c" prot="private" virt="non-virtual"><scope>dakku::MemoryArena</scope><name>resource</name></member>
-      <member refid="classdakku_1_1MemoryArena_1ab4b9c00cf51726ada8f065e50fd5ff8a" prot="private" virt="non-virtual"><scope>dakku::MemoryArena</scope><name>upStream</name></member>
+      <member refid="classdakku_1_1MemoryArena_1a33ddc091d46cbe83ca867ba9874fe606" prot="private" virt="non-virtual"><scope>dakku::MemoryArena</scope><name>upStream</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>
