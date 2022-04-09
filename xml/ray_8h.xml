@@ -20,17 +20,19 @@
         </childnode>
         <childnode refid="10" relation="include">
         </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
       </node>
       <node id="4">
         <label>core/logger.h</label>
         <link refid="logger_8h"/>
         <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
         <childnode refid="12" relation="include">
         </childnode>
         <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -38,7 +40,7 @@
         <link refid="ray_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="20" relation="include">
+        <childnode refid="21" relation="include">
         </childnode>
       </node>
       <node id="2">
@@ -52,8 +54,6 @@
         <link refid="vector__base_8h"/>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
         <childnode refid="15" relation="include">
         </childnode>
         <childnode refid="16" relation="include">
@@ -64,21 +64,26 @@
         </childnode>
         <childnode refid="19" relation="include">
         </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
       </node>
       <node id="6">
         <label>platform.h</label>
         <link refid="platform_8h"/>
       </node>
-      <node id="15">
+      <node id="16">
         <label>algorithm</label>
       </node>
-      <node id="14">
+      <node id="15">
         <label>array</label>
       </node>
       <node id="10">
         <label>cmath</label>
       </node>
-      <node id="13">
+      <node id="11">
+        <label>cstdint</label>
+      </node>
+      <node id="14">
         <label>cstdlib</label>
       </node>
       <node id="8">
@@ -87,28 +92,28 @@
       <node id="9">
         <label>numbers</label>
       </node>
-      <node id="18">
+      <node id="19">
         <label>numeric</label>
       </node>
-      <node id="17">
+      <node id="18">
         <label>ostream</label>
       </node>
-      <node id="19">
+      <node id="20">
         <label>span</label>
       </node>
-      <node id="12">
+      <node id="13">
         <label>spdlog/fmt/ostr.h</label>
       </node>
-      <node id="11">
+      <node id="12">
         <label>spdlog/spdlog.h</label>
       </node>
-      <node id="16">
+      <node id="17">
         <label>string</label>
       </node>
       <node id="7">
         <label>type_traits</label>
       </node>
-      <node id="20">
+      <node id="21">
         <label>utility</label>
       </node>
     </incdepgraph>
