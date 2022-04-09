@@ -1,0 +1,376 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="classdakku_1_1BlockedArray" kind="class" language="C++" prot="public">
+    <compoundname>dakku::BlockedArray</compoundname>
+    <includes refid="blocked__array_8h" local="no">blocked_array.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+      <param>
+        <type>int</type>
+        <declname>logBlockSize</declname>
+        <defname>logBlockSize</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdakku_1_1BlockedArray_1a37737273da83a88a6674e9d64f8e80d2" prot="private" static="no" mutable="no">
+        <type>T *</type>
+        <definition>T* dakku::BlockedArray&lt; T, logBlockSize &gt;::data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <briefdescription>
+<para>data </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/blocked_array.h" line="112" column="5" bodyfile="src/core/blocked_array.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdakku_1_1BlockedArray_1ac0741d200cf5e107805b8973faa25c5a" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int dakku::BlockedArray&lt; T, logBlockSize &gt;::uRes</definition>
+        <argsstring></argsstring>
+        <name>uRes</name>
+        <briefdescription>
+<para>u resolution </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/blocked_array.h" line="114" column="13" bodyfile="src/core/blocked_array.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdakku_1_1BlockedArray_1a687d76d2769fd88b846662389057989f" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int dakku::BlockedArray&lt; T, logBlockSize &gt;::vRes</definition>
+        <argsstring></argsstring>
+        <name>vRes</name>
+        <briefdescription>
+<para>v resolution </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/blocked_array.h" line="116" column="13" bodyfile="src/core/blocked_array.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdakku_1_1BlockedArray_1a4167d153925c2a35446a920df32533ce" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int dakku::BlockedArray&lt; T, logBlockSize &gt;::uBlocks</definition>
+        <argsstring></argsstring>
+        <name>uBlocks</name>
+        <briefdescription>
+<para>u blocks </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/blocked_array.h" line="118" column="13" bodyfile="src/core/blocked_array.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdakku_1_1BlockedArray_1a03591132bf9c0e8adbb3f0257d5294e1" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>dakku::BlockedArray&lt; T, logBlockSize &gt;::BlockedArray</definition>
+        <argsstring>(int uRes, int vRes, std::span&lt; const T &gt; d={})</argsstring>
+        <name>BlockedArray</name>
+        <param>
+          <type>int</type>
+          <declname>uRes</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>vRes</declname>
+        </param>
+        <param>
+          <type>std::span&lt; const T &gt;</type>
+          <declname>d</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+<para>Construct a new Blocked Array object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>uRes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>u resolution (width) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vRes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>v resolution (height) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>data </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/blocked_array.h" line="28" column="12" bodyfile="src/core/blocked_array.h" bodystart="28" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1BlockedArray_1ad5d1543d19412b247cfa7baab90e42ef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>dakku::BlockedArray&lt; T, logBlockSize &gt;::~BlockedArray</definition>
+        <argsstring>()</argsstring>
+        <name>~BlockedArray</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/blocked_array.h" line="39" column="3" bodyfile="src/core/blocked_array.h" bodystart="39" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1BlockedArray_1ae216af42c6652377e419936650dd0b3f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int dakku::BlockedArray&lt; T, logBlockSize &gt;::blockIdx</definition>
+        <argsstring>(int i) const</argsstring>
+        <name>blockIdx</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>get block idx for a index </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the lookup index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(i / block size) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/blocked_array.h" line="50" column="8" bodyfile="src/core/blocked_array.h" bodystart="50" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1BlockedArray_1a4578be96d100f192600a8097145df17e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int dakku::BlockedArray&lt; T, logBlockSize &gt;::offset</definition>
+        <argsstring>(int i) const</argsstring>
+        <name>offset</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>get the offset within a block for a lookup index </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the lookup index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(i % block size) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/blocked_array.h" line="58" column="8" bodyfile="src/core/blocked_array.h" bodystart="58" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1BlockedArray_1a4f2ff6014a4a3da937ac35fa15c26174" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr int</type>
+        <definition>constexpr int dakku::BlockedArray&lt; T, logBlockSize &gt;::blockSize</definition>
+        <argsstring>() const</argsstring>
+        <name>blockSize</name>
+        <briefdescription>
+<para>get block size </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/blocked_array.h" line="64" column="18" bodyfile="src/core/blocked_array.h" bodystart="64" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1BlockedArray_1ab77aaff960362bd8167084053416879a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int dakku::BlockedArray&lt; T, logBlockSize &gt;::roundUp</definition>
+        <argsstring>(int x) const</argsstring>
+        <name>roundUp</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>the round up size, the smallest multiples of block size &gt;= x </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the requested size </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the round up size </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/blocked_array.h" line="73" column="8" bodyfile="src/core/blocked_array.h" bodystart="73" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1BlockedArray_1af9cd727849a0f2fff54bee55d0aeb41f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int dakku::BlockedArray&lt; T, logBlockSize &gt;::uSize</definition>
+        <argsstring>() const</argsstring>
+        <name>uSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/blocked_array.h" line="77" column="8" bodyfile="src/core/blocked_array.h" bodystart="77" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1BlockedArray_1aef7832e591051516bf31fd42ed6b446c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int dakku::BlockedArray&lt; T, logBlockSize &gt;::vSize</definition>
+        <argsstring>() const</argsstring>
+        <name>vSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/blocked_array.h" line="78" column="8" bodyfile="src/core/blocked_array.h" bodystart="78" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1BlockedArray_1abb0eb492d206324b7ae2f7cb1d2c9cc0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const T &amp;</type>
+        <definition>const T &amp; dakku::BlockedArray&lt; T, logBlockSize &gt;::operator()</definition>
+        <argsstring>(int u, int v) const</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>int</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>lookup data </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/blocked_array.h" line="84" column="11" bodyfile="src/core/blocked_array.h" bodystart="84" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1BlockedArray_1afc5c7e0d533d8988acbad8dbbd7a2a6c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>T &amp;</type>
+        <definition>T &amp; dakku::BlockedArray&lt; T, logBlockSize &gt;::operator()</definition>
+        <argsstring>(int u, int v)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>int</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>lookup data </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/blocked_array.h" line="96" column="5" bodyfile="src/core/blocked_array.h" bodystart="96" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1BlockedArray_1a0ca6195f068c9bb256df5b0b7c2123f0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void dakku::BlockedArray&lt; T, logBlockSize &gt;::toLinearArray</definition>
+        <argsstring>(std::span&lt; T &gt; a)</argsstring>
+        <name>toLinearArray</name>
+        <param>
+          <type>std::span&lt; T &gt;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+<para>to linear array </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/blocked_array.h" line="104" column="8" bodyfile="src/core/blocked_array.h" bodystart="104" bodyend="108"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>blocked array $s \times s$ elements are layout together (linear), where $s$ is the block size, then block by block linear layout block size $s$ is power of $2$ This improves the performance for looking up nearby elements (for texture) </para>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>data type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>logBlockSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>$\log s$ where $s$ is the block size </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <location file="src/core/blocked_array.h" line="19" column="1" bodyfile="src/core/blocked_array.h" bodystart="19" bodyend="119"/>
+    <listofallmembers>
+      <member refid="classdakku_1_1BlockedArray_1a03591132bf9c0e8adbb3f0257d5294e1" prot="public" virt="non-virtual"><scope>dakku::BlockedArray</scope><name>BlockedArray</name></member>
+      <member refid="classdakku_1_1BlockedArray_1ae216af42c6652377e419936650dd0b3f" prot="public" virt="non-virtual"><scope>dakku::BlockedArray</scope><name>blockIdx</name></member>
+      <member refid="classdakku_1_1BlockedArray_1a4f2ff6014a4a3da937ac35fa15c26174" prot="public" virt="non-virtual"><scope>dakku::BlockedArray</scope><name>blockSize</name></member>
+      <member refid="classdakku_1_1BlockedArray_1a37737273da83a88a6674e9d64f8e80d2" prot="private" virt="non-virtual"><scope>dakku::BlockedArray</scope><name>data</name></member>
+      <member refid="classdakku_1_1BlockedArray_1a4578be96d100f192600a8097145df17e" prot="public" virt="non-virtual"><scope>dakku::BlockedArray</scope><name>offset</name></member>
+      <member refid="classdakku_1_1BlockedArray_1abb0eb492d206324b7ae2f7cb1d2c9cc0" prot="public" virt="non-virtual"><scope>dakku::BlockedArray</scope><name>operator()</name></member>
+      <member refid="classdakku_1_1BlockedArray_1afc5c7e0d533d8988acbad8dbbd7a2a6c" prot="public" virt="non-virtual"><scope>dakku::BlockedArray</scope><name>operator()</name></member>
+      <member refid="classdakku_1_1BlockedArray_1ab77aaff960362bd8167084053416879a" prot="public" virt="non-virtual"><scope>dakku::BlockedArray</scope><name>roundUp</name></member>
+      <member refid="classdakku_1_1BlockedArray_1a0ca6195f068c9bb256df5b0b7c2123f0" prot="public" virt="non-virtual"><scope>dakku::BlockedArray</scope><name>toLinearArray</name></member>
+      <member refid="classdakku_1_1BlockedArray_1a4167d153925c2a35446a920df32533ce" prot="private" virt="non-virtual"><scope>dakku::BlockedArray</scope><name>uBlocks</name></member>
+      <member refid="classdakku_1_1BlockedArray_1ac0741d200cf5e107805b8973faa25c5a" prot="private" virt="non-virtual"><scope>dakku::BlockedArray</scope><name>uRes</name></member>
+      <member refid="classdakku_1_1BlockedArray_1af9cd727849a0f2fff54bee55d0aeb41f" prot="public" virt="non-virtual"><scope>dakku::BlockedArray</scope><name>uSize</name></member>
+      <member refid="classdakku_1_1BlockedArray_1a687d76d2769fd88b846662389057989f" prot="private" virt="non-virtual"><scope>dakku::BlockedArray</scope><name>vRes</name></member>
+      <member refid="classdakku_1_1BlockedArray_1aef7832e591051516bf31fd42ed6b446c" prot="public" virt="non-virtual"><scope>dakku::BlockedArray</scope><name>vSize</name></member>
+      <member refid="classdakku_1_1BlockedArray_1ad5d1543d19412b247cfa7baab90e42ef" prot="public" virt="non-virtual"><scope>dakku::BlockedArray</scope><name>~BlockedArray</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

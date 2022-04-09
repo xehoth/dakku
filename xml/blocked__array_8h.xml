@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="blocked__array_8h" kind="file" language="C++">
+    <compoundname>blocked_array.h</compoundname>
+    <includes refid="core_2fwd_8h" local="no">core/fwd.h</includes>
+    <includes local="no">span</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>src/core/blocked_array.h</label>
+        <link refid="blocked__array_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>core/fwd.h</label>
+        <link refid="core_2fwd_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>platform.h</label>
+        <link refid="platform_8h"/>
+      </node>
+      <node id="7">
+        <label>cmath</label>
+      </node>
+      <node id="5">
+        <label>limits</label>
+      </node>
+      <node id="6">
+        <label>numbers</label>
+      </node>
+      <node id="8">
+        <label>span</label>
+      </node>
+      <node id="4">
+        <label>type_traits</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classdakku_1_1BlockedArray" prot="public">dakku::BlockedArray</innerclass>
+    <innernamespace refid="namespacedakku">dakku</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>DAKKU_CORE_BLOCKED_ARRAY_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DAKKU_CORE_BLOCKED_ARRAY_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="core_2fwd_8h" kindref="compound">core/fwd.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;span&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacedakku" kindref="compound">dakku</ref><sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>logBlockSize&gt;</highlight></codeline>
+<codeline lineno="19" refid="classdakku_1_1BlockedArray" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdakku_1_1BlockedArray" kindref="compound">BlockedArray</ref><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="28" refid="classdakku_1_1BlockedArray_1a03591132bf9c0e8adbb3f0257d5294e1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1BlockedArray_1a03591132bf9c0e8adbb3f0257d5294e1" kindref="member">BlockedArray</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>uRes,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>vRes,<sp/>std::span&lt;const<sp/>T&gt;<sp/>d<sp/>=<sp/>{})</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>uRes(uRes),<sp/>vRes(vRes)<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nAlloc<sp/>=<sp/><ref refid="classdakku_1_1BlockedArray_1ab77aaff960362bd8167084053416879a" kindref="member">roundUp</ref>(uRes)<sp/>*<sp/><ref refid="classdakku_1_1BlockedArray_1ab77aaff960362bd8167084053416879a" kindref="member">roundUp</ref>(vRes);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>data<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>(std::max(</highlight><highlight class="keyword">alignof</highlight><highlight class="normal">(T),<sp/>std::align_val_t(L1_CACHE_LINE_SIZE)))</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>T[nAlloc]();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!d.empty())<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>v<sp/>=<sp/>0;<sp/>v<sp/>&lt;<sp/>vRes;<sp/>++v)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>u<sp/>=<sp/>0;<sp/>u<sp/>&lt;<sp/>uRes;<sp/>++u)<sp/>(*</highlight><highlight class="keyword">this</highlight><highlight class="normal">)(u,<sp/>v)<sp/>=<sp/>d[v<sp/>*<sp/>uRes<sp/>+<sp/>u];</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="classdakku_1_1BlockedArray_1ad5d1543d19412b247cfa7baab90e42ef" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classdakku_1_1BlockedArray_1ad5d1543d19412b247cfa7baab90e42ef" kindref="member">~BlockedArray</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">[]((std::max(</highlight><highlight class="keyword">alignof</highlight><highlight class="normal">(T),<sp/>std::align_val_t(L1_CACHE_LINE_SIZE))),</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="classdakku_1_1BlockedArray_1ae216af42c6652377e419936650dd0b3f" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1BlockedArray_1ae216af42c6652377e419936650dd0b3f" kindref="member">blockIdx</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>i<sp/>&gt;&gt;<sp/>logBlockSize;<sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="classdakku_1_1BlockedArray_1a4578be96d100f192600a8097145df17e" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1BlockedArray_1a4578be96d100f192600a8097145df17e" kindref="member">offset</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>i<sp/>&amp;<sp/>(<ref refid="classdakku_1_1BlockedArray_1a4f2ff6014a4a3da937ac35fa15c26174" kindref="member">blockSize</ref>()<sp/>-<sp/>1);<sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="classdakku_1_1BlockedArray_1a4f2ff6014a4a3da937ac35fa15c26174" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1BlockedArray_1a4f2ff6014a4a3da937ac35fa15c26174" kindref="member">blockSize</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1<sp/>&lt;&lt;<sp/>logBlockSize;<sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="classdakku_1_1BlockedArray_1ab77aaff960362bd8167084053416879a" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1BlockedArray_1ab77aaff960362bd8167084053416879a" kindref="member">roundUp</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(x<sp/>+<sp/><ref refid="classdakku_1_1BlockedArray_1a4f2ff6014a4a3da937ac35fa15c26174" kindref="member">blockSize</ref>()<sp/>-<sp/>1)<sp/>&amp;<sp/>~(<ref refid="classdakku_1_1BlockedArray_1a4f2ff6014a4a3da937ac35fa15c26174" kindref="member">blockSize</ref>()<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="classdakku_1_1BlockedArray_1af9cd727849a0f2fff54bee55d0aeb41f" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1BlockedArray_1af9cd727849a0f2fff54bee55d0aeb41f" kindref="member">uSize</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>uRes;<sp/>}</highlight></codeline>
+<codeline lineno="78" refid="classdakku_1_1BlockedArray_1aef7832e591051516bf31fd42ed6b446c" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1BlockedArray_1aef7832e591051516bf31fd42ed6b446c" kindref="member">vSize</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>vRes;<sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="classdakku_1_1BlockedArray_1abb0eb492d206324b7ae2f7cb1d2c9cc0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T<sp/>&amp;<ref refid="classdakku_1_1BlockedArray_1abb0eb492d206324b7ae2f7cb1d2c9cc0" kindref="member">operator()</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>u,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>v)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bu<sp/>=<sp/><ref refid="classdakku_1_1BlockedArray_1ae216af42c6652377e419936650dd0b3f" kindref="member">blockIdx</ref>(u),<sp/>bv<sp/>=<sp/><ref refid="classdakku_1_1BlockedArray_1ae216af42c6652377e419936650dd0b3f" kindref="member">blockIdx</ref>(v);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ou<sp/>=<sp/><ref refid="classdakku_1_1BlockedArray_1a4578be96d100f192600a8097145df17e" kindref="member">offset</ref>(u),<sp/>ov<sp/>=<sp/><ref refid="classdakku_1_1BlockedArray_1a4578be96d100f192600a8097145df17e" kindref="member">offset</ref>(v);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>off<sp/>=</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdakku_1_1BlockedArray_1a4f2ff6014a4a3da937ac35fa15c26174" kindref="member">blockSize</ref>()<sp/>*<sp/><ref refid="classdakku_1_1BlockedArray_1a4f2ff6014a4a3da937ac35fa15c26174" kindref="member">blockSize</ref>()<sp/>*<sp/>(uBlocks<sp/>*<sp/>bv<sp/>+<sp/>bu)<sp/>+<sp/><ref refid="classdakku_1_1BlockedArray_1a4f2ff6014a4a3da937ac35fa15c26174" kindref="member">blockSize</ref>()<sp/>*<sp/>ov<sp/>+<sp/>ou;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>data[off];</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="classdakku_1_1BlockedArray_1afc5c7e0d533d8988acbad8dbbd7a2a6c" refkind="member"><highlight class="normal"><sp/><sp/>T<sp/>&amp;<ref refid="classdakku_1_1BlockedArray_1afc5c7e0d533d8988acbad8dbbd7a2a6c" kindref="member">operator()</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>u,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>v)<sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const_cast&lt;</highlight><highlight class="normal">T<sp/>&amp;</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal"><ref refid="classdakku_1_1BlockedArray" kindref="compound">BlockedArray</ref><sp/>&amp;</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(*this)(u,<sp/>v));</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="classdakku_1_1BlockedArray_1a0ca6195f068c9bb256df5b0b7c2123f0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1BlockedArray_1a0ca6195f068c9bb256df5b0b7c2123f0" kindref="member">toLinearArray</ref>(std::span&lt;T&gt;<sp/>a)<sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>idx<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>v<sp/>=<sp/>0;<sp/>v<sp/>&lt;<sp/>vRes;<sp/>++v)</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>u<sp/>=<sp/>0;<sp/>u<sp/>&lt;<sp/>uRes;<sp/>++u)<sp/>a[idx++]<sp/>=<sp/>(*</highlight><highlight class="keyword">this</highlight><highlight class="normal">)(u,<sp/>v);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/>T<sp/>*data;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>uRes;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>vRes;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>uBlocks;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="120"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dakku</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="src/core/blocked_array.h"/>
+  </compounddef>
+</doxygen>

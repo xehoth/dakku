@@ -11,6 +11,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1BlockedArray/</loc>
+         <lastmod>2022-04-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1Bounds2/</loc>
          <lastmod>2022-04-09</lastmod>
          <changefreq>daily</changefreq>
@@ -212,6 +217,11 @@
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/</loc>
+         <lastmod>2022-04-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Files/blocked__array_8h/</loc>
          <lastmod>2022-04-09</lastmod>
          <changefreq>daily</changefreq>
     </url>

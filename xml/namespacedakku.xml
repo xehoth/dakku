@@ -2,6 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
   <compounddef id="namespacedakku" kind="namespace" language="C++">
     <compoundname>dakku</compoundname>
+    <innerclass refid="classdakku_1_1BlockedArray" prot="public">dakku::BlockedArray</innerclass>
     <innerclass refid="classdakku_1_1Bounds2" prot="public">dakku::Bounds2</innerclass>
     <innerclass refid="classdakku_1_1Bounds2iIterator" prot="public">dakku::Bounds2iIterator</innerclass>
     <innerclass refid="classdakku_1_1Bounds3" prot="public">dakku::Bounds3</innerclass>
