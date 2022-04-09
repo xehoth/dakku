@@ -1,4 +1,4 @@
-add_requires("openimageio >=2.3.13", {configs = {languages = "c++17", shared = true}})
+add_requires("openimageio >=2.3.13")
 target("dakku.imageio")
   set_languages("c++17")
   set_kind("shared")
