@@ -34,7 +34,6 @@ jobs:
             ~/.xmake/cache
             ~/.xmake/packages
           key: ${{ matrix.os }}-${{ hashFiles('xmake-requires.lock') }}
-          restore-keys: ${{ matrix.os }}-
       - name: XMake Config for Clang & Test
         run: 'xmake f --build_test=y -c -y'
       - name: Build
