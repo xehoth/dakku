@@ -2,6 +2,7 @@ set_project("dakku")
 set_languages("c++20")
 set_warnings("allextra")
 add_rules("mode.debug", "mode.release", "mode.check")
+set_policy("package.requires_lock", true)
 
 if is_mode("debug") then 
   add_defines("DAKKU_BUILD_DEBUG", "DAKKU_BUILD_CHECK")

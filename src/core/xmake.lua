@@ -1,5 +1,5 @@
-add_requires("spdlog >=1.9.2", {configs = {fmt_external = false}})
-add_requires("nlohmann_json >=3.10.5")
+add_requires("spdlog")
+add_requires("nlohmann_json")
 
 target("dakku.core")
   set_kind("shared")

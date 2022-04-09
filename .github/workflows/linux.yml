@@ -21,7 +21,7 @@ jobs:
       - name: Set up GCC
         uses: egor-tensin/setup-gcc@v1
         with:
-          version: latest
+          version: 11
           platform: x64
       - name: Get XMake
         uses: xmake-io/github-action-setup-xmake@v1
@@ -31,7 +31,11 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ~/.xmake/cache
-          key: ${{ matrix.os }}-${{ matrix.arch }}
+          key: ${{ matrix.os }}-${{ matrix.arch }}-${{ hashFiles('xmake-requires.lock') }}
+          restore-keys: |
+            ${{ matrix.os }}-${{ matrix.arch }}-
+            ${{ matrix.os }}-
+
       - name: XMake Config for Clang & Test
         run: 'xmake f --build_test=y -c -y'
       - name: Build

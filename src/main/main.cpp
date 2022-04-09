@@ -1,6 +1,7 @@
 #include <core/api.h>
 #include <stream/api.h>
 #include <filters/api.h>
+#include <textures/api.h>
 #include <iostream>
 
 using namespace dakku;

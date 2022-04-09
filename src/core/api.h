@@ -9,10 +9,10 @@
 #include <core/serialization.h>
 #include <core/filter.h>
 #include <core/film.h>
-
+#include <core/texture.h>
 namespace dakku {
 
 DAKKU_EXPORT_OBJECTS(Core, Object, InputStream, OutputStream,
-                     SerializableObject, Filter, Film);
+                     SerializableObject, Filter, Film, Texture);
 }  // namespace dakku
 #endif
