@@ -23,6 +23,7 @@
     <innerclass refid="classdakku_1_1Logger" prot="public">dakku::Logger</innerclass>
     <innerclass refid="structdakku_1_1Matrix4x4" prot="public">dakku::Matrix4x4</innerclass>
     <innerclass refid="classdakku_1_1MemoryArena" prot="public">dakku::MemoryArena</innerclass>
+    <innerclass refid="classdakku_1_1MipMap" prot="public">dakku::MipMap</innerclass>
     <innerclass refid="classdakku_1_1Normal" prot="public">dakku::Normal</innerclass>
     <innerclass refid="classdakku_1_1Object" prot="public">dakku::Object</innerclass>
     <innerclass refid="classdakku_1_1OutputStream" prot="public">dakku::OutputStream</innerclass>
@@ -31,6 +32,7 @@
     <innerclass refid="classdakku_1_1Ray" prot="public">dakku::Ray</innerclass>
     <innerclass refid="classdakku_1_1RayDifferential" prot="public">dakku::RayDifferential</innerclass>
     <innerclass refid="classdakku_1_1RelativeRoot" prot="public">dakku::RelativeRoot</innerclass>
+    <innerclass refid="structdakku_1_1ResampleWeight" prot="public">dakku::ResampleWeight</innerclass>
     <innerclass refid="classdakku_1_1RgbSpectrum" prot="public">dakku::RgbSpectrum</innerclass>
     <innerclass refid="classdakku_1_1SerializableObject" prot="public">dakku::SerializableObject</innerclass>
     <innerclass refid="classdakku_1_1Shape" prot="public">dakku::Shape</innerclass>
@@ -41,6 +43,39 @@
     <innerclass refid="classdakku_1_1Vector" prot="public">dakku::Vector</innerclass>
     <innerclass refid="classdakku_1_1VectorBase" prot="public">dakku::VectorBase</innerclass>
       <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespacedakku_1a9f69e6875268e5345a38fd61108935dc" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>ImageWrapMode</name>
+        <enumvalue id="namespacedakku_1a9f69e6875268e5345a38fd61108935dca5be68175be14dfaa080165456c2e9555" prot="public">
+          <name>REPEAT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacedakku_1a9f69e6875268e5345a38fd61108935dca08d0012388564e95c3b4a7407cf04965" prot="public">
+          <name>BLACK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacedakku_1a9f69e6875268e5345a38fd61108935dcaecf301fe86e23bb2bf5155bbef3b1345" prot="public">
+          <name>CLAMP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>image wrap mode </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/mipmap.h" line="14" column="1" bodyfile="src/core/mipmap.h" bodystart="14" bodyend="14"/>
+      </memberdef>
       <memberdef kind="enum" id="namespacedakku_1a61a88f7b109506521f2be6050dc9bfca" prot="public" static="no" strong="yes">
         <type></type>
         <name>PropertyType</name>
@@ -604,6 +639,24 @@
         </inbodydescription>
         <location file="src/core/fwd.h" line="104" column="24" bodyfile="src/core/fwd.h" bodystart="104" bodyend="-1"/>
       </memberdef>
+      <memberdef kind="variable" id="namespacedakku_1ad67fc67650e8ff59c3b25b9e9d462ee4" prot="public" static="no" mutable="no">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>dakku::__pad0__</definition>
+        <argsstring></argsstring>
+        <name>__pad0__</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/mipmap.h" line="1" column="0" bodyfile="src/core/mipmap.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
       </sectiondef>
       <sectiondef kind="func">
       <memberdef kind="function" id="namespacedakku_1a0a6e521b5790d32f876aad2bcc68d011" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -818,6 +871,54 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/core/fwd.h" line="72" column="14" bodyfile="src/core/fwd.h" bodystart="72" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1a1fd20fa9b44a1620a3ce2a133f53d83d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dakku::doTrilinear</definition>
+        <argsstring>(doTrilinear)</argsstring>
+        <name>doTrilinear</name>
+        <param>
+          <type>doTrilinear</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/mipmap.h" line="64" column="7"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1a5dc6c62020f3cb484153c43801d71ee0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dakku::maxAnisotropy</definition>
+        <argsstring>(maxAnisotropy)</argsstring>
+        <name>maxAnisotropy</name>
+        <param>
+          <type>maxAnisotropy</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/mipmap.h" line="65" column="7"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1a3daeac9348858af9dbb1a9c0415f5f84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dakku::wrapMode</definition>
+        <argsstring>(wrapMode)</argsstring>
+        <name>wrapMode</name>
+        <param>
+          <type>wrapMode</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/mipmap.h" line="66" column="7" bodyfile="src/core/mipmap.h" bodystart="66" bodyend="68"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1ac5c65853b3b4155436da5b4402bebcad" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>

@@ -101,6 +101,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1MipMap/</loc>
+         <lastmod>2022-04-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1Normal/</loc>
          <lastmod>2022-04-09</lastmod>
          <changefreq>daily</changefreq>
@@ -207,6 +212,11 @@
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/structdakku_1_1Matrix4x4/</loc>
+         <lastmod>2022-04-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Classes/structdakku_1_1ResampleWeight/</loc>
          <lastmod>2022-04-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -332,6 +342,11 @@
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/memory_8h/</loc>
+         <lastmod>2022-04-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Files/mipmap_8h/</loc>
          <lastmod>2022-04-09</lastmod>
          <changefreq>daily</changefreq>
     </url>

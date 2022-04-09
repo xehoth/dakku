@@ -11,6 +11,7 @@
         <type>int</type>
         <declname>logBlockSize</declname>
         <defname>logBlockSize</defname>
+        <defval>2</defval>
       </param>
     </templateparamlist>
       <sectiondef kind="private-attrib">

@@ -12,6 +12,7 @@
     <innerfile refid="interaction_8h">interaction.h</innerfile>
     <innerfile refid="logger_8h">logger.h</innerfile>
     <innerfile refid="memory_8h">memory.h</innerfile>
+    <innerfile refid="mipmap_8h">mipmap.h</innerfile>
     <innerfile refid="object_8h">object.h</innerfile>
     <innerfile refid="property_8h">property.h</innerfile>
     <innerfile refid="ray_8h">ray.h</innerfile>

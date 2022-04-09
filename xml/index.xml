@@ -212,6 +212,17 @@
     <member refid="structdakku_1_1Class_1_1Metadata_1a6a92c14c8c88f4c3345dcde94bb7dd64" kind="variable"><name>constructor</name></member>
     <member refid="structdakku_1_1Class_1_1Metadata_1a8d7762b1bbefa76e48624868d987c871" kind="variable"><name>parent</name></member>
   </compound>
+  <compound refid="classdakku_1_1MipMap" kind="class"><name>dakku::MipMap</name>
+    <member refid="classdakku_1_1MipMap_1ac6ca8840ae5bddcf0fd045f2a50fa414" kind="variable"><name>doTrilinear</name></member>
+    <member refid="classdakku_1_1MipMap_1a042ae1aae7c70c65cbb89d6a49ec7ed9" kind="variable"><name>maxAnisotropy</name></member>
+    <member refid="classdakku_1_1MipMap_1ada7958bd81d9742463689df8dc6371e8" kind="variable"><name>wrapMode</name></member>
+    <member refid="classdakku_1_1MipMap_1abe2aa9f5f186ccfedfe9aa58385bbd40" kind="variable"><name>resolution</name></member>
+    <member refid="classdakku_1_1MipMap_1aa61ecf5582cca022c002e42cdfe97e11" kind="variable"><name>pyramid</name></member>
+    <member refid="classdakku_1_1MipMap_1ad450a8b3b03fffeb74ff96856bcb0b4f" kind="function"><name>MipMap</name></member>
+    <member refid="classdakku_1_1MipMap_1a6b6aaee191275ccfb13805dc1759d819" kind="function"><name>width</name></member>
+    <member refid="classdakku_1_1MipMap_1a4134445335c6d3badf60022c7b7efb7c" kind="function"><name>height</name></member>
+    <member refid="classdakku_1_1MipMap_1a1bdc88cec0a68524a7fd14ccc8f1c6bf" kind="function"><name>levels</name></member>
+  </compound>
   <compound refid="classdakku_1_1Normal" kind="class"><name>dakku::Normal</name>
     <member refid="classdakku_1_1Normal_1a5028bef9666f97b23bb23f11e3f4af7e" kind="friend"><name>operator-</name></member>
   </compound>
@@ -317,6 +328,10 @@
     <member refid="classdakku_1_1RelativeRoot_1a29dea2b4e909cbb018c9cab5c3fa3c9f" kind="function"><name>get</name></member>
     <member refid="classdakku_1_1RelativeRoot_1a808e9343f1b0aaec20fbf0b41d1738d6" kind="function"><name>set</name></member>
     <member refid="classdakku_1_1RelativeRoot_1a6dec67b72433b4d4a169fd0006792c61" kind="function"><name>RelativeRoot</name></member>
+  </compound>
+  <compound refid="structdakku_1_1ResampleWeight" kind="struct"><name>dakku::ResampleWeight</name>
+    <member refid="structdakku_1_1ResampleWeight_1abc89fe6d4568cfb82e062d82898fca6f" kind="variable"><name>firstTexel</name></member>
+    <member refid="structdakku_1_1ResampleWeight_1abe9d0c7de12b36bd2f0ac68e490cd6aa" kind="variable"><name>weight</name></member>
   </compound>
   <compound refid="classdakku_1_1RgbSpectrum" kind="class"><name>dakku::RgbSpectrum</name>
     <member refid="classdakku_1_1RgbSpectrum_1a24a0c6a84be207d959a6da3bd5bd4461" kind="function"><name>fromRgb</name></member>
@@ -459,6 +474,10 @@
   <compound refid="conceptdakku_1_1ObjectType" kind="concept"><name>dakku::ObjectType</name>
   </compound>
   <compound refid="namespacedakku" kind="namespace"><name>dakku</name>
+    <member refid="namespacedakku_1a9f69e6875268e5345a38fd61108935dc" kind="enum"><name>ImageWrapMode</name></member>
+    <member refid="namespacedakku_1a9f69e6875268e5345a38fd61108935dca5be68175be14dfaa080165456c2e9555" kind="enumvalue"><name>REPEAT</name></member>
+    <member refid="namespacedakku_1a9f69e6875268e5345a38fd61108935dca08d0012388564e95c3b4a7407cf04965" kind="enumvalue"><name>BLACK</name></member>
+    <member refid="namespacedakku_1a9f69e6875268e5345a38fd61108935dcaecf301fe86e23bb2bf5155bbef3b1345" kind="enumvalue"><name>CLAMP</name></member>
     <member refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfca" kind="enum"><name>PropertyType</name></member>
     <member refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaab50339a10e1de285ac99d4c3990b8693" kind="enumvalue"><name>NONE</name></member>
     <member refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaacb4fb1757fb37c43cded35d3eb857c43" kind="enumvalue"><name>ARRAY</name></member>
@@ -497,6 +516,7 @@
     <member refid="namespacedakku_1a1bd6403f2998d6f8d22f87c99eca7eed" kind="variable"><name>Film</name></member>
     <member refid="namespacedakku_1ad4c70953467b9d3d22eac250d8655aff" kind="variable"><name>Shape</name></member>
     <member refid="namespacedakku_1a24e2c761467417bba0b7b17b7c0e9f79" kind="variable"><name>Texture</name></member>
+    <member refid="namespacedakku_1ad67fc67650e8ff59c3b25b9e9d462ee4" kind="variable"><name>__pad0__</name></member>
     <member refid="namespacedakku_1a0a6e521b5790d32f876aad2bcc68d011" kind="function"><name>DAKKU_EXPORT_OBJECTS</name></member>
     <member refid="namespacedakku_1af0a2453f8db3eb948901c7a0aed18434" kind="function"><name>begin</name></member>
     <member refid="namespacedakku_1a41ae9fcb2290e6ea6f7d4b0fbca86d17" kind="function"><name>end</name></member>
@@ -504,6 +524,9 @@
     <member refid="namespacedakku_1af703ca0ba560169d1daf114a07175bf4" kind="function"><name>isNaN</name></member>
     <member refid="namespacedakku_1a2a53414d45143151128b45997c42d7af" kind="function"><name>radians</name></member>
     <member refid="namespacedakku_1a3d1bddf363d9216df7df7c148f917cd4" kind="function"><name>degrees</name></member>
+    <member refid="namespacedakku_1a1fd20fa9b44a1620a3ce2a133f53d83d" kind="function"><name>doTrilinear</name></member>
+    <member refid="namespacedakku_1a5dc6c62020f3cb484153c43801d71ee0" kind="function"><name>maxAnisotropy</name></member>
+    <member refid="namespacedakku_1a3daeac9348858af9dbb1a9c0415f5f84" kind="function"><name>wrapMode</name></member>
     <member refid="namespacedakku_1ac5c65853b3b4155436da5b4402bebcad" kind="function"><name>registerObjects</name></member>
     <member refid="namespacedakku_1ac70f11ace3ab613579837a2d336b38c5" kind="function"><name>offsetRayOrigin</name></member>
     <member refid="namespacedakku_1a80d2f8350cdcc84f6586fed5f396f8c7" kind="function"><name>xyzToRgb</name></member>
@@ -549,6 +572,8 @@
   </compound>
   <compound refid="memory_8h" kind="file"><name>memory.h</name>
     <member refid="memory_8h_1a75ff6894fe90bba774fb4636c96c0031" kind="define"><name>DAKKU_ALLOCA</name></member>
+  </compound>
+  <compound refid="mipmap_8h" kind="file"><name>mipmap.h</name>
   </compound>
   <compound refid="object_8h" kind="file"><name>object.h</name>
     <member refid="object_8h_1adebe9d6b28624419b368ed9d52f52f2f" kind="define"><name>DAKKU_DECLARE_OBJECT</name></member>

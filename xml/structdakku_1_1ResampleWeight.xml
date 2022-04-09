@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="structdakku_1_1ResampleWeight" kind="struct" language="C++" prot="public">
+    <compoundname>dakku::ResampleWeight</compoundname>
+    <includes refid="mipmap_8h" local="no">mipmap.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structdakku_1_1ResampleWeight_1abc89fe6d4568cfb82e062d82898fca6f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int dakku::ResampleWeight::firstTexel</definition>
+        <argsstring></argsstring>
+        <name>firstTexel</name>
+        <briefdescription>
+<para>first texel index </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/mipmap.h" line="22" column="7" bodyfile="src/core/mipmap.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdakku_1_1ResampleWeight_1abe9d0c7de12b36bd2f0ac68e490cd6aa" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float dakku::ResampleWeight::weight[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>weight</name>
+        <briefdescription>
+<para>resample weight of the four texels </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/mipmap.h" line="24" column="9" bodyfile="src/core/mipmap.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>resample weight of the four nearby (continuous) texels </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/core/mipmap.h" line="20" column="1" bodyfile="src/core/mipmap.h" bodystart="20" bodyend="25"/>
+    <listofallmembers>
+      <member refid="structdakku_1_1ResampleWeight_1abc89fe6d4568cfb82e062d82898fca6f" prot="public" virt="non-virtual"><scope>dakku::ResampleWeight</scope><name>firstTexel</name></member>
+      <member refid="structdakku_1_1ResampleWeight_1abe9d0c7de12b36bd2f0ac68e490cd6aa" prot="public" virt="non-virtual"><scope>dakku::ResampleWeight</scope><name>weight</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

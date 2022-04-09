@@ -4,6 +4,7 @@
     <compoundname>blocked_array.h</compoundname>
     <includes refid="core_2fwd_8h" local="no">core/fwd.h</includes>
     <includes local="no">span</includes>
+    <includedby refid="mipmap_8h" local="no">src/core/mipmap.h</includedby>
     <incdepgraph>
       <node id="1">
         <label>src/core/blocked_array.h</label>
@@ -47,6 +48,18 @@
         <label>type_traits</label>
       </node>
     </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>src/core/blocked_array.h</label>
+        <link refid="blocked__array_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>src/core/mipmap.h</label>
+        <link refid="mipmap_8h"/>
+      </node>
+    </invincdepgraph>
     <innerclass refid="classdakku_1_1BlockedArray" prot="public">dakku::BlockedArray</innerclass>
     <innernamespace refid="namespacedakku">dakku</innernamespace>
     <briefdescription>
@@ -61,7 +74,7 @@
 <codeline lineno="5"><highlight class="normal"></highlight></codeline>
 <codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacedakku" kindref="compound">dakku</ref><sp/>{</highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight></codeline>
-<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>logBlockSize&gt;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>logBlockSize<sp/>=<sp/>2&gt;</highlight></codeline>
 <codeline lineno="19" refid="classdakku_1_1BlockedArray" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdakku_1_1BlockedArray" kindref="compound">BlockedArray</ref><sp/>{</highlight></codeline>
 <codeline lineno="20"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="28" refid="classdakku_1_1BlockedArray_1a03591132bf9c0e8adbb3f0257d5294e1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1BlockedArray_1a03591132bf9c0e8adbb3f0257d5294e1" kindref="member">BlockedArray</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>uRes,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>vRes,<sp/>std::span&lt;const<sp/>T&gt;<sp/>d<sp/>=<sp/>{})</highlight></codeline>
