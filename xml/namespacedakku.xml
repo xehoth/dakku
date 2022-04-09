@@ -1259,12 +1259,81 @@ the shorter edge mapped to [-1, 1], the longer [-ratio, ratio] left handed </par
           <defval>-1</defval>
         </param>
         <briefdescription>
+<para>write image to path </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>file path </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rgb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>image data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>totalResX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>total resolution x (width) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>totalResY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>total resolution y (height) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>outBoundsMinX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>crop window bounds (pMin.x) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>outBoundsMinY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>crop window bounds (pMin.y) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>outBoundsMaxX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>crop window bounds (pMax.x) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>outBoundsMaxY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>crop window bounds (pMax.y) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>DAKKU_EXPORT_IMAGEIO </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/imageio/imageio.h" line="8" column="27" declfile="src/imageio/imageio.h" declline="8" declcolumn="27"/>
+        <location file="src/imageio/imageio.h" line="21" column="27" declfile="src/imageio/imageio.h" declline="21" declcolumn="27"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1a56ee8590ffd24bd3f70b555372fa4697" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
