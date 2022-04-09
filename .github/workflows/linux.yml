@@ -30,15 +30,12 @@ jobs:
       - name: Cache XMake
         uses: actions/cache@v3
         with:
-          path: ~/.xmake/cache
-          key: ${{ matrix.os }}-${{ matrix.arch }}-${{ hashFiles('xmake-requires.lock') }}
-          restore-keys: |
-            ${{ matrix.os }}-${{ matrix.arch }}-
-            ${{ matrix.os }}-
-
+          path: |
+            ~/.xmake/cache
+            ~/.xmake/packages
+          key: ${{ matrix.os }}-${{ hashFiles('xmake-requires.lock') }}
+          restore-keys: ${{ matrix.os }}-
       - name: XMake Config for Clang & Test
         run: 'xmake f --build_test=y -c -y'
       - name: Build
         run: xmake build -w -y -vD
-      - name: Run Test
-        run: xmake run test

@@ -25,11 +25,11 @@ jobs:
       - name: Cache XMake
         uses: actions/cache@v3
         with:
-          path: "C:/Users/runneradmin/AppData/Local/.xmake/cache"
-          key: ${{ matrix.os }}-${{ matrix.arch }}-${{ hashFiles('xmake-requires.lock') }}
-          restore-keys: |
-            ${{ matrix.os }}-${{ matrix.arch }}-
-            ${{ matrix.os }}-
+          path: |
+            "C:/Users/runneradmin/AppData/Local/.xmake/cache"
+            "C:/Users/runneradmin/AppData/Local/.xmake/packages"
+          key: ${{ matrix.os }}-${{ hashFiles('xmake-requires.lock') }}
+          restore-keys: ${{ matrix.os }}-
       - name: Config Test
         run: 'xmake f --build_test=y -c -y'
       - name: Build

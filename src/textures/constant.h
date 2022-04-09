@@ -6,6 +6,8 @@ namespace dakku {
 
 class DAKKU_EXPORT_TEXTURES ConstantTexture : public Texture {
  public:
+  DAKKU_DECLARE_OBJECT(ConstantTexture, Texture);
+
   explicit ConstantTexture(float v);
   explicit ConstantTexture(Spectrum v);
   [[nodiscard]] Spectrum evaluate() const override;
@@ -15,7 +17,7 @@ class DAKKU_EXPORT_TEXTURES ConstantTexture : public Texture {
 #pragma warning(push)
 #pragma warning(disable : 4251)
 #endif
-  const Spectrum value;
+  Spectrum value;
 #if defined(_MSC_VER)
 #pragma warning(pop)
 #endif
