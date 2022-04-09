@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://xehoth.github.io/dakku/Classes/classdakku_1_1FilmTile/">
+        <link rel="canonical" href="https://xehoth.github.io/dakku/Classes/classdakku_1_1ConstantTexture/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.9">
     
     
       
-        <title>dakku::FilmTile - dakku documentation</title>
+        <title>dakku::ConstantTexture - dakku documentation</title>
       
     
     
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#dakkufilmtile" class="md-skip">
+        <a href="#dakkuconstanttexture" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              dakku::FilmTile
+              dakku::ConstantTexture
             
           </span>
         </div>
@@ -335,8 +335,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#friends" class="md-nav__link">
-    Friends
+  <a href="#additional-inherited-members" class="md-nav__link">
+    Additional inherited members
   </a>
   
 </li>
@@ -350,56 +350,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#function-filmtile" class="md-nav__link">
-    function FilmTile
+  <a href="#function-constanttexture" class="md-nav__link">
+    function ConstantTexture
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#function-getpixel" class="md-nav__link">
-    function getPixel
+  <a href="#function-constanttexture_1" class="md-nav__link">
+    function ConstantTexture
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#function-getpixel_1" class="md-nav__link">
-    function getPixel
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-getpixelbounds" class="md-nav__link">
-    function getPixelBounds
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-addsample" class="md-nav__link">
-    function addSample
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#friends_1" class="md-nav__link">
-    Friends
-  </a>
-  
-    <nav class="md-nav" aria-label="Friends">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#friend-film" class="md-nav__link">
-    friend Film
+  <a href="#function-evaluate" class="md-nav__link">
+    function evaluate
   </a>
   
 </li>
@@ -421,15 +387,15 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/xehoth/dakku/edit/master/docs/Classes/classdakku_1_1FilmTile.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/xehoth/dakku/edit/master/docs/Classes/classdakku_1_1ConstantTexture.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="dakkufilmtile">dakku::FilmTile</h1>
-<p>film tile </p>
-<p><code>#include &lt;film.h&gt;</code></p>
+<h1 id="dakkuconstanttexture">dakku::ConstantTexture</h1>
+<p><code>#include &lt;constant.h&gt;</code></p>
+<p>Inherits from <a href="/dakku/Classes/classdakku_1_1Texture/">dakku::Texture</a>, <a href="/dakku/Classes/classdakku_1_1Object/">dakku::Object</a></p>
 <h2 id="public-functions">Public Functions</h2>
 <table>
 <thead>
@@ -441,27 +407,20 @@
 <tbody>
 <tr>
 <td></td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1FilmTile/#function-filmtile">FilmTile</a></strong>(const <a href="/dakku/Namespaces/namespacedakku/#using-bounds2i">Bounds2i</a> &amp; pixelBounds, const <a href="/dakku/Namespaces/namespacedakku/#using-vector2f">Vector2f</a> &amp; filterRadius, std::span&lt; const float &gt; filterTable, int filterTableSize, float maxSampleLuminance =INF)</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1ConstantTexture/#function-constanttexture">ConstantTexture</a></strong>(float v)</td>
 </tr>
 <tr>
-<td><a href="/dakku/Classes/structdakku_1_1FilmTilePixel/">FilmTilePixel</a> &amp;</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1FilmTile/#function-getpixel">getPixel</a></strong>(const <a href="/dakku/Namespaces/namespacedakku/#using-point2i">Point2i</a> &amp; p)<br>Get the Pixel object.</td>
+<td></td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1ConstantTexture/#function-constanttexture">ConstantTexture</a></strong>(<a href="/dakku/Namespaces/namespacedakku/#using-spectrum">Spectrum</a> v)</td>
 </tr>
 <tr>
-<td>const <a href="/dakku/Classes/structdakku_1_1FilmTilePixel/">FilmTilePixel</a> &amp;</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1FilmTile/#function-getpixel">getPixel</a></strong>(const <a href="/dakku/Namespaces/namespacedakku/#using-point2i">Point2i</a> &amp; p) const<br>Get the Pixel object.</td>
-</tr>
-<tr>
-<td><a href="/dakku/Namespaces/namespacedakku/#using-bounds2i">Bounds2i</a></td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1FilmTile/#function-getpixelbounds">getPixelBounds</a></strong>() const<br>Get the Pixel Bounds object.</td>
-</tr>
-<tr>
-<td>void</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1FilmTile/#function-addsample">addSample</a></strong>(const <a href="/dakku/Namespaces/namespacedakku/#using-point2f">Point2f</a> &amp; pFilm, <a href="/dakku/Namespaces/namespacedakku/#using-spectrum">Spectrum</a> L, float sampleWeight =1)<br>add sample to the film tile</td>
+<td>virtual <a href="/dakku/Namespaces/namespacedakku/#using-spectrum">Spectrum</a></td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1ConstantTexture/#function-evaluate">evaluate</a></strong>() const override</td>
 </tr>
 </tbody>
 </table>
-<h2 id="friends">Friends</h2>
+<h2 id="additional-inherited-members">Additional inherited members</h2>
+<p><strong>Public Functions inherited from <a href="/dakku/Classes/classdakku_1_1Texture/">dakku::Texture</a></strong></p>
 <table>
 <thead>
 <tr>
@@ -471,51 +430,88 @@
 </thead>
 <tbody>
 <tr>
-<td>class</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1FilmTile/#friend-film">Film</a></strong></td>
+<td></td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Texture/#function-dakku-declare-object">DAKKU_DECLARE_OBJECT</a></strong>(<a href="/dakku/Classes/classdakku_1_1Texture/">Texture</a> , <a href="/dakku/Classes/classdakku_1_1Object/">Object</a> )</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Protected Attributes inherited from <a href="/dakku/Classes/classdakku_1_1Texture/">dakku::Texture</a></strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bool</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Texture/#variable-floattype">floatType</a></strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Public Functions inherited from <a href="/dakku/Classes/classdakku_1_1Object/">dakku::Object</a></strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>virtual</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Object/#function-~object">~Object</a></strong>() =default</td>
+</tr>
+<tr>
+<td></td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Object/#function-object">Object</a></strong>(const <a href="/dakku/Classes/classdakku_1_1Property/">Property</a> &amp;  ={})</td>
+</tr>
+<tr>
+<td>virtual std::string</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Object/#function-getclassname">getClassName</a></strong>() const</td>
+</tr>
+<tr>
+<td>virtual std::string</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Object/#function-getparentname">getParentName</a></strong>() const</td>
+</tr>
+<tr>
+<td>virtual std::string</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Object/#function-tostring">toString</a></strong>() const</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Object/#function-isderivedfrom">isDerivedFrom</a></strong>(std::string_view name) const<br>whther the object is derived from <code>name</code> (inclusive)</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Object/#function-isbaseof">isBaseOf</a></strong>(std::string_view name) const<br>whether the object is base of <code>name</code> (inclusive)</td>
+</tr>
+<tr>
+<td>std::string</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Object/#function-getclassnamestatic">getClassNameStatic</a></strong>()</td>
+</tr>
+<tr>
+<td>std::string</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Object/#function-getparentnamestatic">getParentNameStatic</a></strong>()</td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
-<h3 id="function-filmtile">function FilmTile</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kr">inline</span><span class="w"> </span><span class="k">explicit</span><span class="w"> </span><span class="n">FilmTile</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Bounds2i</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">pixelBounds</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Vector2f</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">filterRadius</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">filterTable</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">filterTableSize</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">maxSampleLuminance</span><span class="w"> </span><span class="o">=</span><span class="n">INF</span><span class="w"></span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">)</span><span class="w"></span>
+<h3 id="function-constanttexture">function ConstantTexture</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">explicit</span><span class="w"> </span><span class="n">ConstantTexture</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">v</span><span class="w"></span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
-<h3 id="function-getpixel">function getPixel</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kr">inline</span><span class="w"> </span><span class="n">FilmTilePixel</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">getPixel</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Point2i</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">p</span><span class="w"></span>
+<h3 id="function-constanttexture_1">function ConstantTexture</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">explicit</span><span class="w"> </span><span class="n">ConstantTexture</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="n">Spectrum</span><span class="w"> </span><span class="n">v</span><span class="w"></span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
-<p>Get the Pixel object. </p>
-<h3 id="function-getpixel_1">function getPixel</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kr">inline</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">FilmTilePixel</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">getPixel</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Point2i</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">p</span><span class="w"></span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+<h3 id="function-evaluate">function evaluate</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">Spectrum</span><span class="w"> </span><span class="n">evaluate</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">override</span><span class="w"></span>
 </code></pre></div>
-<p>Get the Pixel object. </p>
-<h3 id="function-getpixelbounds">function getPixelBounds</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kr">inline</span><span class="w"> </span><span class="n">Bounds2i</span><span class="w"> </span><span class="n">getPixelBounds</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
-</code></pre></div>
-<p>Get the Pixel Bounds object. </p>
-<h3 id="function-addsample">function addSample</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">addSample</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Point2f</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">pFilm</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="n">Spectrum</span><span class="w"> </span><span class="n">L</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">sampleWeight</span><span class="w"> </span><span class="o">=</span><span class="mi">1</span><span class="w"></span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">)</span><span class="w"></span>
-</code></pre></div>
-<p>add sample to the film tile </p>
-<h2 id="friends_1">Friends</h2>
-<h3 id="friend-film">friend Film</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">friend</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Film</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="n">Film</span><span class="w"> </span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="p">);</span><span class="w"></span>
-</code></pre></div>
+<p><strong>Reimplements</strong>: <a href="/dakku/Classes/classdakku_1_1Texture/#function-evaluate">dakku::Texture::evaluate</a></p>
 <hr />
 <p>Updated on 2022-04-09 at 06:06:06 +0000</p>
 

@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="classdakku_1_1ConstantTexture" kind="class" language="C++" prot="public">
+    <compoundname>dakku::ConstantTexture</compoundname>
+    <basecompoundref refid="classdakku_1_1Texture" prot="public" virt="non-virtual">dakku::Texture</basecompoundref>
+    <includes refid="constant_8h" local="no">constant.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdakku_1_1ConstantTexture_1a652de9386ebe0eeeb0d42c6808b56e24" prot="private" static="no" mutable="no">
+        <type>const <ref refid="namespacedakku_1a72f253f8c73b2ec7fef8e3c83c0eac17" kindref="member">Spectrum</ref></type>
+        <definition>const Spectrum dakku::ConstantTexture::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/textures/constant.h" line="18" column="18" bodyfile="src/textures/constant.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdakku_1_1ConstantTexture_1a84f1bec89957b9bcdff638aadfc8cbea" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dakku::ConstantTexture::ConstantTexture</definition>
+        <argsstring>(float v)</argsstring>
+        <name>ConstantTexture</name>
+        <param>
+          <type>float</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/textures/constant.h" line="9" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1ConstantTexture_1a0aeadd0c4db60fc0bd81664ef0d23fdb" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dakku::ConstantTexture::ConstantTexture</definition>
+        <argsstring>(Spectrum v)</argsstring>
+        <name>ConstantTexture</name>
+        <param>
+          <type><ref refid="namespacedakku_1a72f253f8c73b2ec7fef8e3c83c0eac17" kindref="member">Spectrum</ref></type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/textures/constant.h" line="10" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1ConstantTexture_1af8a15246419b3a80396a98b63e452371" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="namespacedakku_1a72f253f8c73b2ec7fef8e3c83c0eac17" kindref="member">Spectrum</ref></type>
+        <definition>Spectrum dakku::ConstantTexture::evaluate</definition>
+        <argsstring>() const override</argsstring>
+        <name>evaluate</name>
+        <reimplements refid="classdakku_1_1Texture_1a3acfc7cc9268f7f320b60de7f28029c2">evaluate</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/textures/constant.h" line="11" column="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>dakku::ConstantTexture</label>
+        <link refid="classdakku_1_1ConstantTexture"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>dakku::Object</label>
+        <link refid="classdakku_1_1Object"/>
+      </node>
+      <node id="2">
+        <label>dakku::Texture</label>
+        <link refid="classdakku_1_1Texture"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>dakku::ConstantTexture</label>
+        <link refid="classdakku_1_1ConstantTexture"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>dakku::Object</label>
+        <link refid="classdakku_1_1Object"/>
+      </node>
+      <node id="2">
+        <label>dakku::Texture</label>
+        <link refid="classdakku_1_1Texture"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/textures/constant.h" line="7" column="1" bodyfile="src/textures/constant.h" bodystart="7" bodyend="22"/>
+    <listofallmembers>
+      <member refid="classdakku_1_1ConstantTexture_1a84f1bec89957b9bcdff638aadfc8cbea" prot="public" virt="non-virtual"><scope>dakku::ConstantTexture</scope><name>ConstantTexture</name></member>
+      <member refid="classdakku_1_1ConstantTexture_1a0aeadd0c4db60fc0bd81664ef0d23fdb" prot="public" virt="non-virtual"><scope>dakku::ConstantTexture</scope><name>ConstantTexture</name></member>
+      <member refid="classdakku_1_1Texture_1a34d7f1518a45937548bbfb8e9db857e4" prot="public" virt="non-virtual"><scope>dakku::ConstantTexture</scope><name>DAKKU_DECLARE_OBJECT</name></member>
+      <member refid="classdakku_1_1ConstantTexture_1af8a15246419b3a80396a98b63e452371" prot="public" virt="virtual"><scope>dakku::ConstantTexture</scope><name>evaluate</name></member>
+      <member refid="classdakku_1_1Texture_1a04d50661884334a42b742e1214b77382" prot="protected" virt="non-virtual"><scope>dakku::ConstantTexture</scope><name>floatType</name></member>
+      <member refid="classdakku_1_1Object_1a543f734268f7be81badecee6cf7245cc" prot="public" virt="virtual"><scope>dakku::ConstantTexture</scope><name>getClassName</name></member>
+      <member refid="classdakku_1_1Object_1a247ed68865f464d511b7fdb85467c354" prot="public" virt="non-virtual"><scope>dakku::ConstantTexture</scope><name>getClassNameStatic</name></member>
+      <member refid="classdakku_1_1Object_1accec0632e79097564677055bef4220bd" prot="public" virt="virtual"><scope>dakku::ConstantTexture</scope><name>getParentName</name></member>
+      <member refid="classdakku_1_1Object_1a08ec83c660afb1850455ef30c43fa29c" prot="public" virt="non-virtual"><scope>dakku::ConstantTexture</scope><name>getParentNameStatic</name></member>
+      <member refid="classdakku_1_1Object_1a055e32b0624d9a96fc2014fe5d9d0c81" prot="public" virt="non-virtual"><scope>dakku::ConstantTexture</scope><name>isBaseOf</name></member>
+      <member refid="classdakku_1_1Object_1add47b28fc1878f008bb6664a83faad72" prot="public" virt="non-virtual"><scope>dakku::ConstantTexture</scope><name>isDerivedFrom</name></member>
+      <member refid="classdakku_1_1Object_1a20e78d46fa11d575d63e048279150eac" prot="public" virt="non-virtual"><scope>dakku::ConstantTexture</scope><name>Object</name></member>
+      <member refid="classdakku_1_1Object_1a65d91c04e480b827fa495df96af2826b" prot="public" virt="virtual"><scope>dakku::ConstantTexture</scope><name>toString</name></member>
+      <member refid="classdakku_1_1ConstantTexture_1a652de9386ebe0eeeb0d42c6808b56e24" prot="private" virt="non-virtual"><scope>dakku::ConstantTexture</scope><name>value</name></member>
+      <member refid="classdakku_1_1Object_1a0c792f089351caf3fa7a704c86ce903d" prot="public" virt="virtual"><scope>dakku::ConstantTexture</scope><name>~Object</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

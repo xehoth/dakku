@@ -9,7 +9,7 @@
     <innerclass refid="classdakku_1_1BoxFilter" prot="public">dakku::BoxFilter</innerclass>
     <innerclass refid="classdakku_1_1Class" prot="public">dakku::Class</innerclass>
     <innerclass refid="classdakku_1_1CoefficientSpectrum" prot="public">dakku::CoefficientSpectrum</innerclass>
-    <innerclass refid="classdakku_1_1ContantTexture" prot="public">dakku::ContantTexture</innerclass>
+    <innerclass refid="classdakku_1_1ConstantTexture" prot="public">dakku::ConstantTexture</innerclass>
     <innerclass refid="classdakku_1_1FileInputStream" prot="public">dakku::FileInputStream</innerclass>
     <innerclass refid="classdakku_1_1FileOutputStream" prot="public">dakku::FileOutputStream</innerclass>
     <innerclass refid="classdakku_1_1Film" prot="public">dakku::Film</innerclass>
@@ -605,10 +605,10 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
-      <memberdef kind="function" id="namespacedakku_1a6366bb992a59ee08f6364f16886477b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespacedakku_1a0a6e521b5790d32f876aad2bcc68d011" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>dakku::DAKKU_EXPORT_OBJECTS</definition>
-        <argsstring>(Core, Object, InputStream, OutputStream, SerializableObject, Filter, Film)</argsstring>
+        <argsstring>(Core, Object, InputStream, OutputStream, SerializableObject, Filter, Film, Texture)</argsstring>
         <name>DAKKU_EXPORT_OBJECTS</name>
         <param>
           <type>Core</type>
@@ -630,6 +630,9 @@
         </param>
         <param>
           <type><ref refid="classdakku_1_1Film" kindref="compound">Film</ref></type>
+        </param>
+        <param>
+          <type><ref refid="classdakku_1_1Texture" kindref="compound">Texture</ref></type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -1456,6 +1459,25 @@ the shorter edge mapped to [-1, 1], the longer [-ratio, ratio] left handed </par
         <inbodydescription>
         </inbodydescription>
         <location file="src/stream/api.h" line="13" column="1" declfile="src/stream/api.h" declline="13" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1a19c0457bb4d3e92d540f16e733e88822" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dakku::DAKKU_EXPORT_OBJECTS</definition>
+        <argsstring>(Textures, ConstantTexture)</argsstring>
+        <name>DAKKU_EXPORT_OBJECTS</name>
+        <param>
+          <type>Textures</type>
+        </param>
+        <param>
+          <type><ref refid="classdakku_1_1ConstantTexture" kindref="compound">ConstantTexture</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/textures/api.h" line="13" column="1" declfile="src/textures/api.h" declline="13" declcolumn="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

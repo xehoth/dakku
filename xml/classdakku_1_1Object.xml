@@ -172,8 +172,8 @@
         </childnode>
       </node>
       <node id="13">
-        <label>dakku::ContantTexture</label>
-        <link refid="classdakku_1_1ContantTexture"/>
+        <label>dakku::ConstantTexture</label>
+        <link refid="classdakku_1_1ConstantTexture"/>
         <childnode refid="12" relation="public-inheritance">
         </childnode>
       </node>

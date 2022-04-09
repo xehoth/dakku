@@ -46,7 +46,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1ContantTexture/</loc>
+         <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1ConstantTexture/</loc>
          <lastmod>2022-04-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -382,6 +382,11 @@
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/texture_8h/</loc>
+         <lastmod>2022-04-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Files/textures_2api_8h/</loc>
          <lastmod>2022-04-09</lastmod>
          <changefreq>daily</changefreq>
     </url>

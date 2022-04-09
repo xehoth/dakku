@@ -63,8 +63,11 @@
     <member refid="classdakku_1_1CoefficientSpectrum_1a3419bb7bc9a9f6ab7b2c00c3cee942d1" kind="function"><name>isBlack</name></member>
     <member refid="classdakku_1_1CoefficientSpectrum_1ae9b538dae7b0ef76e17b5b8379d62224" kind="function"><name>clamp</name></member>
   </compound>
-  <compound refid="classdakku_1_1ContantTexture" kind="class"><name>dakku::ContantTexture</name>
-    <member refid="classdakku_1_1ContantTexture_1a7c349eb6b0c98494edd68724b852d4e6" kind="function"><name>evaluate</name></member>
+  <compound refid="classdakku_1_1ConstantTexture" kind="class"><name>dakku::ConstantTexture</name>
+    <member refid="classdakku_1_1ConstantTexture_1a652de9386ebe0eeeb0d42c6808b56e24" kind="variable"><name>value</name></member>
+    <member refid="classdakku_1_1ConstantTexture_1a84f1bec89957b9bcdff638aadfc8cbea" kind="function"><name>ConstantTexture</name></member>
+    <member refid="classdakku_1_1ConstantTexture_1a0aeadd0c4db60fc0bd81664ef0d23fdb" kind="function"><name>ConstantTexture</name></member>
+    <member refid="classdakku_1_1ConstantTexture_1af8a15246419b3a80396a98b63e452371" kind="function"><name>evaluate</name></member>
   </compound>
   <compound refid="classdakku_1_1FileInputStream" kind="class"><name>dakku::FileInputStream</name>
     <member refid="classdakku_1_1FileInputStream_1ad64d091dae724af7202e76219a7eb59e" kind="variable"><name>stream</name></member>
@@ -476,7 +479,7 @@
     <member refid="namespacedakku_1a1bd6403f2998d6f8d22f87c99eca7eed" kind="variable"><name>Film</name></member>
     <member refid="namespacedakku_1ad4c70953467b9d3d22eac250d8655aff" kind="variable"><name>Shape</name></member>
     <member refid="namespacedakku_1a24e2c761467417bba0b7b17b7c0e9f79" kind="variable"><name>Texture</name></member>
-    <member refid="namespacedakku_1a6366bb992a59ee08f6364f16886477b0" kind="function"><name>DAKKU_EXPORT_OBJECTS</name></member>
+    <member refid="namespacedakku_1a0a6e521b5790d32f876aad2bcc68d011" kind="function"><name>DAKKU_EXPORT_OBJECTS</name></member>
     <member refid="namespacedakku_1af0a2453f8db3eb948901c7a0aed18434" kind="function"><name>begin</name></member>
     <member refid="namespacedakku_1a41ae9fcb2290e6ea6f7d4b0fbca86d17" kind="function"><name>end</name></member>
     <member refid="namespacedakku_1af754e4967f947036a0c31c0dbb4bf6e1" kind="function"><name>isNaN</name></member>
@@ -501,6 +504,7 @@
     <member refid="namespacedakku_1aeb8251264c62aa09029e8f63d598e2b3" kind="function"><name>inverseGammaCorrect</name></member>
     <member refid="namespacedakku_1abc410b389b946378187c69b6cbeba1e7" kind="function"><name>writeImage</name></member>
     <member refid="namespacedakku_1a56ee8590ffd24bd3f70b555372fa4697" kind="function"><name>DAKKU_EXPORT_OBJECTS</name></member>
+    <member refid="namespacedakku_1a19c0457bb4d3e92d540f16e733e88822" kind="function"><name>DAKKU_EXPORT_OBJECTS</name></member>
   </compound>
   <compound refid="namespacestd" kind="namespace"><name>std</name>
   </compound>
@@ -569,13 +573,15 @@
     <member refid="platform_8h_1a897c968d2b673f9b096c9dd1ea3740c1" kind="define"><name>DAKKU_TEXTURES_MODULE</name></member>
     <member refid="platform_8h_1a09cd708407b8b153a1c5f21c764c142a" kind="define"><name>DAKKU_MAIN_MODULE</name></member>
   </compound>
+  <compound refid="fstream_8h" kind="file"><name>fstream.h</name>
+  </compound>
   <compound refid="core_2api_8h" kind="file"><name>api.h</name>
   </compound>
   <compound refid="filters_2api_8h" kind="file"><name>api.h</name>
   </compound>
   <compound refid="stream_2api_8h" kind="file"><name>api.h</name>
   </compound>
-  <compound refid="fstream_8h" kind="file"><name>fstream.h</name>
+  <compound refid="textures_2api_8h" kind="file"><name>api.h</name>
   </compound>
   <compound refid="constant_8h" kind="file"><name>constant.h</name>
   </compound>

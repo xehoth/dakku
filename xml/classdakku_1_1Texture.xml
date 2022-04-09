@@ -3,7 +3,7 @@
   <compounddef id="classdakku_1_1Texture" kind="class" language="C++" prot="public" abstract="yes">
     <compoundname>dakku::Texture</compoundname>
     <basecompoundref refid="classdakku_1_1Object" prot="public" virt="non-virtual">dakku::Object</basecompoundref>
-    <derivedcompoundref refid="classdakku_1_1ContantTexture" prot="public" virt="non-virtual">dakku::ContantTexture</derivedcompoundref>
+    <derivedcompoundref refid="classdakku_1_1ConstantTexture" prot="public" virt="non-virtual">dakku::ConstantTexture</derivedcompoundref>
     <includes refid="texture_8h" local="no">texture.h</includes>
       <sectiondef kind="protected-attrib">
       <memberdef kind="variable" id="classdakku_1_1Texture_1a04d50661884334a42b742e1214b77382" prot="protected" static="no" mutable="no">
@@ -46,7 +46,7 @@
         <definition>virtual Spectrum dakku::Texture::evaluate</definition>
         <argsstring>() const =0</argsstring>
         <name>evaluate</name>
-        <reimplementedby refid="classdakku_1_1ContantTexture_1a7c349eb6b0c98494edd68724b852d4e6">evaluate</reimplementedby>
+        <reimplementedby refid="classdakku_1_1ConstantTexture_1af8a15246419b3a80396a98b63e452371">evaluate</reimplementedby>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -62,8 +62,8 @@
     </detaileddescription>
     <inheritancegraph>
       <node id="3">
-        <label>dakku::ContantTexture</label>
-        <link refid="classdakku_1_1ContantTexture"/>
+        <label>dakku::ConstantTexture</label>
+        <link refid="classdakku_1_1ConstantTexture"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>

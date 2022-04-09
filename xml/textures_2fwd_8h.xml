@@ -184,9 +184,15 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
+      <node id="3">
+        <label>src/textures/api.h</label>
+        <link refid="textures_2api_8h"/>
+      </node>
       <node id="2">
         <label>src/textures/constant.h</label>
         <link refid="constant_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
       </node>
       <node id="1">
         <label>src/textures/fwd.h</label>
