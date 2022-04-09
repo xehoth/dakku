@@ -15,7 +15,7 @@ namespace dakku {
  * @tparam T data type
  * @tparam logBlockSize $\log s$ where $s$ is the block size
  */
-template <typename T, int logBlockSize>
+template <typename T, int logBlockSize = 2>
 class BlockedArray {
  public:
   /**
