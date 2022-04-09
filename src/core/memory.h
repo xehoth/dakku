@@ -8,6 +8,8 @@
 #include <alloca.h>
 #endif
 #include <memory_resource>
+#include <oneapi/tbb.h>
+#include <oneapi/tbb/scalable_allocator.h>
 
 namespace dakku {
 /**
@@ -78,9 +80,10 @@ class MemoryArena {
   void release() { resource.release(); }
 
  private:
-  /// upstream resource l1 cache line aligned
-  L1CacheLineAlignedResource upStream;
-  /// pool resource
+  /// cache aligned scalable resource
+  oneapi::tbb::cache_aligned_resource upStream{
+      oneapi::tbb::scalable_memory_resource()};
+  /// cache aligned scalable resource
   std::pmr::unsynchronized_pool_resource resource{&upStream};
 };
 }  // namespace dakku

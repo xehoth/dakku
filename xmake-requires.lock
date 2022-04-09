@@ -115,6 +115,14 @@
             },
             version = "v3.10.5"
         },
+        ["onetbb#31fecfc4"] = {
+            repo = {
+                branch = "master",
+                commit = "ee5a280779ec1b7fc61815ee936de1586b8a52e1",
+                url = "https://github.com/xmake-io/xmake-repo.git"
+            },
+            version = "2021.5.0"
+        },
         ["openexr#31fecfc4"] = {
             repo = {
                 branch = "master",

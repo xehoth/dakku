@@ -36,6 +36,7 @@ jobs:
             ${{ env.XMAKE_PKG_CACHEDIR }}
             ${{ env.XMAKE_PKG_INSTALLDIR }}
           key: ${{ matrix.os }}-${{ hashFiles('xmake-requires.lock') }}
+          restore-keys: ${{ matrix.os }}-
       - name: XMake Config for Clang & Test
         run: 'xmake f --build_test=y -c -y'
       - name: Build

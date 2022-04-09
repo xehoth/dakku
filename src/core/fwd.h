@@ -71,6 +71,40 @@ inline float radians(float deg) { return PI / 180.0f * deg; }
  */
 inline float degrees(float rad) { return 180.0f / PI * rad; }
 
+/**
+ * @brief check whether `v` is power of 2
+ *
+ * @tparam T integer type
+ * @param v value
+ */
+template <typename T>
+requires std::is_integral_v<T>
+inline constexpr bool isPowerOf2(T v) { return v && !(v & (v - 1)); }
+
+/**
+ * @brief round up to nearest value which is power of 2
+ *
+ */
+inline std::int32_t roundUpPow2(std::int32_t v) {
+  --v;
+  v |= v >> 1;
+  v |= v >> 2;
+  v |= v >> 4;
+  v |= v >> 8;
+  v |= v >> 16;
+  return v + 1;
+}
+
+inline float evalLanczos(float x, float tau = 2) {
+  x = std::abs(x);
+  if (x < 1e-5f) return 1;
+  if (x > 1.0f) return 0;
+  x *= PI;
+  float s = std::sin(x * tau) / (x * tau);
+  float lanczos = std::sin(x) / x;
+  return s * lanczos;
+}
+
 class DAKKU_EXPORT_CORE RelativeRoot;
 class DAKKU_EXPORT_CORE InputStream;
 class DAKKU_EXPORT_CORE OutputStream;
