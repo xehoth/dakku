@@ -8,6 +8,8 @@ namespace dakku {
 bool writeImage(const std::filesystem::path &path, const float *rgb,
                 int totalResX, int totalResY, int outBoundsMinX,
                 int outBoundsMinY, int outBoundsMaxX, int outBoundsMaxY) {
+  if (outBoundsMaxX == -1) outBoundsMaxX = totalResX;
+  if (outBoundsMaxY == -1) outBoundsMaxY = totalResY;
   std::string extension = path.extension().string();
   size_t size =
       (outBoundsMaxX - outBoundsMinX) * (outBoundsMaxY - outBoundsMinY);

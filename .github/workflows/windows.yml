@@ -1,0 +1,37 @@
+name: windows
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    name: ${{ matrix.os }}-build
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Get XMake
+        uses: xmake-io/github-action-setup-xmake@v1
+        with:
+          xmake-version: latest
+      - name: Set xmake package cache path
+        run: echo "XMAKE_PKG_CACHEDIR=$(pwd)/xmake-cache" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+      - name: Cache XMake
+        uses: actions/cache@v3
+        with:
+          path: xmake-cache
+          key: ${{ matrix.os }}-${{ matrix.arch }}
+      - name: Config Test
+        run: 'xmake f --build_test=y -c -y -vD'
+      - name: Build
+        run: xmake build -w -y -vD
+      - name: Run Test
+        run: xmake run test

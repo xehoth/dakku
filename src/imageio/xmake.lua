@@ -1,4 +1,4 @@
-add_requires("vcpkg::openimageio", {alias = "openimageio", system = false, configs = {languages = "c++17", shared = true, debug = true}})
+add_requires("openimageio >=2.3.13", {configs = {languages = "c++17", shared = true}})
 target("dakku.imageio")
   set_languages("c++17")
   set_kind("shared")

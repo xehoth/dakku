@@ -1,4 +1,4 @@
-name: build & test
+name: linux
 
 on:
   push:
@@ -13,13 +13,12 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [windows-latest, ubuntu-latest]
+        os: [ubuntu-latest]
 
     steps:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Get Clang
-        if: matrix.os == 'ubuntu-latest'
         uses: egor-tensin/setup-clang@v1
         with:
           version: latest
@@ -28,13 +27,16 @@ jobs:
         uses: xmake-io/github-action-setup-xmake@v1
         with:
           xmake-version: latest
-      - name: XMake Config for Clang
-        if: matrix.os == 'ubuntu-latest'
-        run: 'xmake f --toolchain=clang --build_test=y -c -y'
-      - name: Build Test Windows
-        if: matrix.os != 'ubuntu-latest'
-        run: 'xmake f --build_test=y -c -y'
+      - name: Set xmake package cache path
+        run: echo "XMAKE_PKG_CACHEDIR=`pwd`/xmake-cache" >> $GITHUB_ENV
+      - name: Cache XMake
+        uses: actions/cache@v3
+        with:
+          path: xmake-cache
+          key: ${{ matrix.os }}-${{ matrix.arch }}
+      - name: XMake Config for Clang & Test
+        run: 'xmake f --toolchain=clang --build_test=y -c -y -vD'
       - name: Build
-        run: xmake build -w -y
+        run: xmake build -w -y -vD
       - name: Run Test
         run: xmake run test
