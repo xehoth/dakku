@@ -29,6 +29,8 @@ namespace dakku {
 #define DAKKU_IMAGEIO_MODULE 3
 /// dakku filters module
 #define DAKKU_FILTERS_MODULE 4
+/// dakku textures module
+#define DAKKU_TEXTURES_MODULE 5
 /// dakku main module
 #define DAKKU_MAIN_MODULE 10
 

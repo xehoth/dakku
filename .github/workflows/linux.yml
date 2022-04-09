@@ -14,6 +14,8 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-latest]
+    env:
+      XMAKE_PKG_CACHEDIR: $GITHUB_WORKSPACE/xmake-cache
 
     steps:
       - name: Checkout
@@ -27,12 +29,10 @@ jobs:
         uses: xmake-io/github-action-setup-xmake@v1
         with:
           xmake-version: latest
-      - name: Set xmake package cache path
-        run: echo "XMAKE_PKG_CACHEDIR=`pwd`/xmake-cache" >> $GITHUB_ENV
       - name: Cache XMake
         uses: actions/cache@v3
         with:
-          path: xmake-cache
+          path: ${{ env.XMAKE_PKG_CACHEDIR }}
           key: ${{ matrix.os }}-${{ matrix.arch }}
       - name: XMake Config for Clang & Test
         run: 'xmake f --toolchain=clang --build_test=y -c -y -vD'

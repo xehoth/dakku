@@ -64,9 +64,9 @@ class RayDifferential : public Ray {
    *
    * @param s scale
    *
-   * let $c$ be the camera position  
-   * $o'' = o + s (o \rightarrow o')$  
-   * $d' = c \rightarrow o'$  
+   * let $c$ be the camera position
+   * $o'' = o + s (o \rightarrow o')$
+   * $d' = c \rightarrow o'$
    * $d'' = c \rightarrow o'' = (c \rightarrow o) + (o \rightarrow o'') = d + s
    * (d' - d)$
    */
@@ -88,5 +88,20 @@ class RayDifferential : public Ray {
   /// y sub ray direction
   Vector3f ryDirection;
 };
+
+/**
+ * @brief offset ray origin
+ *
+ * @param p ray origin
+ * @param n normal
+ * @param w direction
+ * @return the origin after offset
+ */
+inline Point3f offsetRayOrigin(const Point3f &p, const Normal3f &n,
+                               const Vector3f &w) {
+  Vector3f offset = SHADOW_EPS * Vector3f(n);
+  if (dot(w, n) < 0) offset = -offset;
+  return p + offset;
+}
 }  // namespace dakku
 #endif

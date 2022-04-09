@@ -23,6 +23,9 @@ static constexpr float PI = std::numbers::pi_v<float>;
 /// L1 cache line size
 static constexpr size_t L1_CACHE_LINE_SIZE = 64;
 
+/// shadow epsilon, used for shadow ray, offset ray origin
+static constexpr float SHADOW_EPS = 1e-4f;
+
 /**
  * @brief concept: `T` is an arithemetic type
  *
@@ -95,5 +98,9 @@ class CoefficientSpectrum;
 class RgbSpectrum;
 /// Spectrum type: use RgbSpectrum
 using Spectrum = RgbSpectrum;
+struct Interaction;
+class SurfaceInteraction;
+class DAKKU_EXPORT_CORE Shape;
+class DAKKU_EXPORT_CORE Texture;
 }  // namespace dakku
 #endif

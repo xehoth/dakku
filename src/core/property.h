@@ -430,6 +430,8 @@ class DAKKU_EXPORT_CORE Property {
       p = j.get<float>();
     } else if (j.is_string()) {
       p = j.get<std::string>();
+    } else if (j.is_boolean()) {
+      p = static_cast<float>(j.get<bool>());
     } else {
       DAKKU_ERR("unknown type in json: {}", j.type_name());
       std::exit(-1);
