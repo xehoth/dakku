@@ -14,7 +14,9 @@ jobs:
       fail-fast: false
       matrix:
         os: [windows-latest]
-
+    env:
+      XMAKE_PKG_CACHEDIR: ${{ env.GITHUB_WORKSPACE }}/../xmake/cache
+      XMAKE_PKG_INSTALLDIR: ${{ env.GITHUB_WORKSPACE }}/../xmake/packages
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -26,8 +28,8 @@ jobs:
         uses: actions/cache@v3
         with:
           path: |
-            "C:/Users/runneradmin/AppData/Local/.xmake/cache"
-            "C:/Users/runneradmin/AppData/Local/.xmake/packages"
+            ${{ env.GITHUB_WORKSPACE }}/../xmake/cache
+            ${{ env.GITHUB_WORKSPACE }}/../xmake/packages
           key: ${{ matrix.os }}-${{ hashFiles('xmake-requires.lock') }}
           restore-keys: ${{ matrix.os }}-
       - name: Config Test
