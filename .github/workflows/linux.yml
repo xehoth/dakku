@@ -14,9 +14,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-latest]
-    env:
-      XMAKE_PKG_CACHEDIR: ${{ env.GITHUB_WORKSPACE }}/../xmake/cache
-      XMAKE_PKG_INSTALLDIR: ${{ env.GITHUB_WORKSPACE }}/../xmake/packages
+
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -29,12 +27,16 @@ jobs:
         uses: xmake-io/github-action-setup-xmake@v1
         with:
           xmake-version: latest
+      - name: Set xmake package cache path
+        run: |
+          echo "XMAKE_PKG_CACHEDIR=${{ runner.workspace }}/../xmake-cache" >> $GITHUB_ENV
+          echo "XMAKE_PKG_INSTALLDIR=${{ runner.workspace }}/../xmake-packages" >> $GITHUB_ENV
       - name: Cache XMake
         uses: actions/cache@v3
         with:
           path: |
-            ${{ env.GITHUB_WORKSPACE }}/../xmake/cache
-            ${{ env.GITHUB_WORKSPACE }}/../xmake/packages
+            ${{ runner.workspace }}/../xmake-cache
+            ${{ runner.workspace }}/../xmake-packages
           key: ${{ matrix.os }}-${{ hashFiles('xmake-requires.lock') }}
       - name: XMake Config for Clang & Test
         run: 'xmake f --build_test=y -c -y'
