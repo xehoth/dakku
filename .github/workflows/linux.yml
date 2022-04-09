@@ -27,11 +27,11 @@ jobs:
         uses: xmake-io/github-action-setup-xmake@v1
         with:
           xmake-version: latest
-      - name: Cache XMake
-        uses: actions/cache@v3
-        with:
-          path: ~/.xmake/cache
-          key: ${{ matrix.os }}-${{ matrix.arch }}
+      # - name: Cache XMake
+      #   uses: actions/cache@v3
+      #   with:
+      #     path: ~/.xmake/cache
+      #     key: ${{ matrix.os }}-${{ matrix.arch }}
       - name: XMake Config for Clang & Test
         run: 'xmake f --toolchain=clang --build_test=y -c -y -vD'
       - name: Build
