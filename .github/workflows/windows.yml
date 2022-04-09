@@ -14,7 +14,9 @@ jobs:
       fail-fast: false
       matrix:
         os: [windows-latest]
-
+    env:
+      XMAKE_PKG_CACHEDIR: "D:/a/xmake/xmake-cache"
+      XMAKE_PKG_INSTALLDIR: "D:/a/xmake/xmake-packages"
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -30,10 +32,9 @@ jobs:
         uses: actions/cache@v3
         with:
           path: |
-            ${{ runner.workspace }}/../xmake-cache
-            ${{ runner.workspace }}/../xmake-packages
+            ${{ env.XMAKE_PKG_CACHEDIR }}
+            ${{ env.XMAKE_PKG_INSTALLDIR }}
           key: ${{ matrix.os }}-${{ hashFiles('xmake-requires.lock') }}
-          restore-keys: ${{ matrix.os }}-
       - name: Config Test
         run: 'xmake f --build_test=y -c -y'
       - name: Build
