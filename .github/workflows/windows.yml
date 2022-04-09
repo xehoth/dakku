@@ -24,10 +24,6 @@ jobs:
         uses: xmake-io/github-action-setup-xmake@v1
         with:
           xmake-version: latest
-      - name: Set xmake package cache path
-        run: |
-          echo "XMAKE_PKG_CACHEDIR=${{ runner.workspace }}/../xmake-cache" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
-          echo "XMAKE_PKG_INSTALLDIR=${{ runner.workspace }}/../xmake-packages" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
       - name: Cache XMake
         uses: actions/cache@v3
         with:
