@@ -6,6 +6,8 @@
     <derivedcompoundref refid="classdakku_1_1InputStream" prot="public" virt="non-virtual">dakku::InputStream</derivedcompoundref>
     <derivedcompoundref refid="classdakku_1_1OutputStream" prot="public" virt="non-virtual">dakku::OutputStream</derivedcompoundref>
     <derivedcompoundref refid="classdakku_1_1SerializableObject" prot="public" virt="non-virtual">dakku::SerializableObject</derivedcompoundref>
+    <derivedcompoundref refid="classdakku_1_1Shape" prot="public" virt="non-virtual">dakku::Shape</derivedcompoundref>
+    <derivedcompoundref refid="classdakku_1_1Texture" prot="public" virt="non-virtual">dakku::Texture</derivedcompoundref>
     <includes refid="object_8h" local="no">object.h</includes>
       <sectiondef kind="public-func">
       <memberdef kind="function" id="classdakku_1_1Object_1a0c792f089351caf3fa7a704c86ce903d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
@@ -169,6 +171,12 @@
         <childnode refid="2" relation="public-inheritance">
         </childnode>
       </node>
+      <node id="13">
+        <label>dakku::ContantTexture</label>
+        <link refid="classdakku_1_1ContantTexture"/>
+        <childnode refid="12" relation="public-inheritance">
+        </childnode>
+      </node>
       <node id="6">
         <label>dakku::FileInputStream</label>
         <link refid="classdakku_1_1FileInputStream"/>
@@ -212,6 +220,18 @@
       <node id="9">
         <label>dakku::SerializableObject</label>
         <link refid="classdakku_1_1SerializableObject"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>dakku::Shape</label>
+        <link refid="classdakku_1_1Shape"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>dakku::Texture</label>
+        <link refid="classdakku_1_1Texture"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>

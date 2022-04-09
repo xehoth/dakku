@@ -9,6 +9,7 @@
     <innerclass refid="classdakku_1_1BoxFilter" prot="public">dakku::BoxFilter</innerclass>
     <innerclass refid="classdakku_1_1Class" prot="public">dakku::Class</innerclass>
     <innerclass refid="classdakku_1_1CoefficientSpectrum" prot="public">dakku::CoefficientSpectrum</innerclass>
+    <innerclass refid="classdakku_1_1ContantTexture" prot="public">dakku::ContantTexture</innerclass>
     <innerclass refid="classdakku_1_1FileInputStream" prot="public">dakku::FileInputStream</innerclass>
     <innerclass refid="classdakku_1_1FileOutputStream" prot="public">dakku::FileOutputStream</innerclass>
     <innerclass refid="classdakku_1_1Film" prot="public">dakku::Film</innerclass>
@@ -16,6 +17,7 @@
     <innerclass refid="structdakku_1_1FilmTilePixel" prot="public">dakku::FilmTilePixel</innerclass>
     <innerclass refid="classdakku_1_1Filter" prot="public">dakku::Filter</innerclass>
     <innerclass refid="classdakku_1_1InputStream" prot="public">dakku::InputStream</innerclass>
+    <innerclass refid="structdakku_1_1Interaction" prot="public">dakku::Interaction</innerclass>
     <innerclass refid="classdakku_1_1L1CacheLineAlignedResource" prot="public">dakku::L1CacheLineAlignedResource</innerclass>
     <innerclass refid="classdakku_1_1Logger" prot="public">dakku::Logger</innerclass>
     <innerclass refid="structdakku_1_1Matrix4x4" prot="public">dakku::Matrix4x4</innerclass>
@@ -30,6 +32,9 @@
     <innerclass refid="classdakku_1_1RelativeRoot" prot="public">dakku::RelativeRoot</innerclass>
     <innerclass refid="classdakku_1_1RgbSpectrum" prot="public">dakku::RgbSpectrum</innerclass>
     <innerclass refid="classdakku_1_1SerializableObject" prot="public">dakku::SerializableObject</innerclass>
+    <innerclass refid="classdakku_1_1Shape" prot="public">dakku::Shape</innerclass>
+    <innerclass refid="classdakku_1_1SurfaceInteraction" prot="public">dakku::SurfaceInteraction</innerclass>
+    <innerclass refid="classdakku_1_1Texture" prot="public">dakku::Texture</innerclass>
     <innerclass refid="classdakku_1_1Transform" prot="public">dakku::Transform</innerclass>
     <innerclass refid="classdakku_1_1TriangleFilter" prot="public">dakku::TriangleFilter</innerclass>
     <innerclass refid="classdakku_1_1Vector" prot="public">dakku::Vector</innerclass>
@@ -152,7 +157,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="97" column="1" bodyfile="src/core/fwd.h" bodystart="97" bodyend="-1"/>
+        <location file="src/core/fwd.h" line="100" column="1" bodyfile="src/core/fwd.h" bodystart="100" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespacedakku_1ae7de7b89895e76d4a3f1c653393dde69" prot="public" static="no">
         <templateparamlist>
@@ -440,6 +445,21 @@
         </inbodydescription>
         <location file="src/core/fwd.h" line="24" column="25" bodyfile="src/core/fwd.h" bodystart="24" bodyend="-1"/>
       </memberdef>
+      <memberdef kind="variable" id="namespacedakku_1a8ecbddd8386198d0dd187cd20b53e42d" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr float</type>
+        <definition>constexpr float dakku::SHADOW_EPS</definition>
+        <argsstring></argsstring>
+        <name>SHADOW_EPS</name>
+        <initializer>= 1e-4f</initializer>
+        <briefdescription>
+<para>shadow epsilon, used for shadow ray, offset ray origin </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/fwd.h" line="27" column="24" bodyfile="src/core/fwd.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="variable" id="namespacedakku_1ab81d04f25c58c43667816d47b70f4734" prot="public" static="no" mutable="no">
         <type>class <ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
         <definition>class DAKKU_EXPORT_CORE dakku::RelativeRoot</definition>
@@ -451,7 +471,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="71" column="24" bodyfile="src/core/fwd.h" bodystart="71" bodyend="-1"/>
+        <location file="src/core/fwd.h" line="74" column="24" bodyfile="src/core/fwd.h" bodystart="74" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacedakku_1a60d80eeb1de44e0299e91a45d8f94446" prot="public" static="no" mutable="no">
         <type>class <ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
@@ -464,7 +484,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="72" column="24" bodyfile="src/core/fwd.h" bodystart="72" bodyend="-1"/>
+        <location file="src/core/fwd.h" line="75" column="24" bodyfile="src/core/fwd.h" bodystart="75" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacedakku_1a04dac11edaf26a2e58c8d00f31e6fa29" prot="public" static="no" mutable="no">
         <type>class <ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
@@ -477,7 +497,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="73" column="24" bodyfile="src/core/fwd.h" bodystart="73" bodyend="-1"/>
+        <location file="src/core/fwd.h" line="76" column="24" bodyfile="src/core/fwd.h" bodystart="76" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacedakku_1a96416914fd138a9ad1724211806eaadc" prot="public" static="no" mutable="no">
         <type>class <ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
@@ -490,7 +510,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="76" column="24" bodyfile="src/core/fwd.h" bodystart="76" bodyend="-1"/>
+        <location file="src/core/fwd.h" line="79" column="24" bodyfile="src/core/fwd.h" bodystart="79" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacedakku_1a5e92e662fd955a5d5e138ec343496ecb" prot="public" static="no" mutable="no">
         <type>class <ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
@@ -503,7 +523,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="77" column="24" bodyfile="src/core/fwd.h" bodystart="77" bodyend="-1"/>
+        <location file="src/core/fwd.h" line="80" column="24" bodyfile="src/core/fwd.h" bodystart="80" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacedakku_1a814749a6cf3cd7575912f5119a5be6ad" prot="public" static="no" mutable="no">
         <type>class <ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
@@ -516,7 +536,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="78" column="24" bodyfile="src/core/fwd.h" bodystart="78" bodyend="-1"/>
+        <location file="src/core/fwd.h" line="81" column="24" bodyfile="src/core/fwd.h" bodystart="81" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacedakku_1afb9578030bac745ae0282d66d44df22c" prot="public" static="no" mutable="no">
         <type>struct <ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
@@ -529,7 +549,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="79" column="24" bodyfile="src/core/fwd.h" bodystart="79" bodyend="-1"/>
+        <location file="src/core/fwd.h" line="82" column="24" bodyfile="src/core/fwd.h" bodystart="82" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacedakku_1ad32aa25f5584289eda626b47ae3525cc" prot="public" static="no" mutable="no">
         <type>class <ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
@@ -542,7 +562,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="90" column="24" bodyfile="src/core/fwd.h" bodystart="90" bodyend="-1"/>
+        <location file="src/core/fwd.h" line="93" column="24" bodyfile="src/core/fwd.h" bodystart="93" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacedakku_1a1bd6403f2998d6f8d22f87c99eca7eed" prot="public" static="no" mutable="no">
         <type>class <ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
@@ -555,7 +575,33 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="91" column="24" bodyfile="src/core/fwd.h" bodystart="91" bodyend="-1"/>
+        <location file="src/core/fwd.h" line="94" column="24" bodyfile="src/core/fwd.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacedakku_1ad4c70953467b9d3d22eac250d8655aff" prot="public" static="no" mutable="no">
+        <type>class <ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
+        <definition>class DAKKU_EXPORT_CORE dakku::Shape</definition>
+        <argsstring></argsstring>
+        <name>Shape</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/fwd.h" line="103" column="24" bodyfile="src/core/fwd.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacedakku_1a24e2c761467417bba0b7b17b7c0e9f79" prot="public" static="no" mutable="no">
+        <type>class <ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
+        <definition>class DAKKU_EXPORT_CORE dakku::Texture</definition>
+        <argsstring></argsstring>
+        <name>Texture</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/fwd.h" line="104" column="24" bodyfile="src/core/fwd.h" bodystart="104" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -672,7 +718,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="42" column="21" bodyfile="src/core/fwd.h" bodystart="42" bodyend="44"/>
+        <location file="src/core/fwd.h" line="45" column="21" bodyfile="src/core/fwd.h" bodystart="45" bodyend="47"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1af703ca0ba560169d1daf114a07175bf4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -707,7 +753,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="53" column="21" bodyfile="src/core/fwd.h" bodystart="53" bodyend="53"/>
+        <location file="src/core/fwd.h" line="56" column="21" bodyfile="src/core/fwd.h" bodystart="56" bodyend="56"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1a2a53414d45143151128b45997c42d7af" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>float</type>
@@ -737,7 +783,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="61" column="14" bodyfile="src/core/fwd.h" bodystart="61" bodyend="61"/>
+        <location file="src/core/fwd.h" line="64" column="14" bodyfile="src/core/fwd.h" bodystart="64" bodyend="64"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1a3d1bddf363d9216df7df7c148f917cd4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>float</type>
@@ -767,7 +813,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="69" column="14" bodyfile="src/core/fwd.h" bodystart="69" bodyend="69"/>
+        <location file="src/core/fwd.h" line="72" column="14" bodyfile="src/core/fwd.h" bodystart="72" bodyend="72"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1ac5c65853b3b4155436da5b4402bebcad" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -788,6 +834,60 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/core/object.h" line="69" column="13" bodyfile="src/core/object.h" bodystart="69" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1ac70f11ace3ab613579837a2d336b38c5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacedakku_1a8323b90fda75af310a40a4e0d6bdb3f0" kindref="member">Point3f</ref></type>
+        <definition>Point3f dakku::offsetRayOrigin</definition>
+        <argsstring>(const Point3f &amp;p, const Normal3f &amp;n, const Vector3f &amp;w)</argsstring>
+        <name>offsetRayOrigin</name>
+        <param>
+          <type>const <ref refid="namespacedakku_1a8323b90fda75af310a40a4e0d6bdb3f0" kindref="member">Point3f</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacedakku_1a9b64e14dceffe6ac84029f1d40d6ec41" kindref="member">Normal3f</ref> &amp;</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacedakku_1aa12b2f1fc9684bf8ba7fbf5b600685c6" kindref="member">Vector3f</ref> &amp;</type>
+          <declname>w</declname>
+        </param>
+        <briefdescription>
+<para>offset ray origin </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ray origin </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>normal </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>w</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>direction </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the origin after offset </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/ray.h" line="100" column="16" bodyfile="src/core/ray.h" bodystart="100" bodyend="105"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1a80d2f8350cdcc84f6586fed5f396f8c7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>

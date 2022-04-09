@@ -153,10 +153,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-let $c$ be the camera position <linebreak/>
- $o&apos;&apos; = o + s (o \rightarrow o&apos;)$ <linebreak/>
- $d&apos; = c \rightarrow o&apos;$ <linebreak/>
- $d&apos;&apos; = c \rightarrow o&apos;&apos; = (c \rightarrow o) + (o \rightarrow o&apos;&apos;) = d + s (d&apos; - d)$ </para>
+let $c$ be the camera position $o&apos;&apos; = o + s (o \rightarrow o&apos;)$ $d&apos; = c \rightarrow o&apos;$ $d&apos;&apos; = c \rightarrow o&apos;&apos; = (c \rightarrow o) + (o \rightarrow o&apos;&apos;) = d + s (d&apos; - d)$ </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>

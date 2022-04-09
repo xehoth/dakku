@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="interaction_8h" kind="file" language="C++">
+    <compoundname>interaction.h</compoundname>
+    <includes refid="vector_8h" local="no">core/vector.h</includes>
+    <includes refid="ray_8h" local="no">core/ray.h</includes>
+    <includes local="no">utility</includes>
+    <incdepgraph>
+      <node id="5">
+        <label>core/fwd.h</label>
+        <link refid="core_2fwd_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/core/interaction.h</label>
+        <link refid="interaction_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>core/logger.h</label>
+        <link refid="logger_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>core/ray.h</label>
+        <link refid="ray_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>core/vector.h</label>
+        <link refid="vector_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>core/vector_base.h</label>
+        <link refid="vector__base_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>platform.h</label>
+        <link refid="platform_8h"/>
+      </node>
+      <node id="15">
+        <label>algorithm</label>
+      </node>
+      <node id="14">
+        <label>array</label>
+      </node>
+      <node id="10">
+        <label>cmath</label>
+      </node>
+      <node id="13">
+        <label>cstdlib</label>
+      </node>
+      <node id="8">
+        <label>limits</label>
+      </node>
+      <node id="9">
+        <label>numbers</label>
+      </node>
+      <node id="18">
+        <label>numeric</label>
+      </node>
+      <node id="17">
+        <label>ostream</label>
+      </node>
+      <node id="19">
+        <label>span</label>
+      </node>
+      <node id="12">
+        <label>spdlog/fmt/ostr.h</label>
+      </node>
+      <node id="11">
+        <label>spdlog/spdlog.h</label>
+      </node>
+      <node id="16">
+        <label>string</label>
+      </node>
+      <node id="7">
+        <label>type_traits</label>
+      </node>
+      <node id="21">
+        <label>utility</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structdakku_1_1Interaction" prot="public">dakku::Interaction</innerclass>
+    <innerclass refid="classdakku_1_1SurfaceInteraction" prot="public">dakku::SurfaceInteraction</innerclass>
+    <innernamespace refid="namespacedakku">dakku</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>DAKKU_CORE_INTERACTION_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DAKKU_CORE_INTERACTION_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="vector_8h" kindref="compound">core/vector.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="ray_8h" kindref="compound">core/ray.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;utility&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacedakku" kindref="compound">dakku</ref><sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="structdakku_1_1Interaction" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdakku_1_1Interaction" kindref="compound">Interaction</ref><sp/>{</highlight></codeline>
+<codeline lineno="14" refid="structdakku_1_1Interaction_1a779a213fff1311416de40299c0a6f3b8" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structdakku_1_1Interaction_1a779a213fff1311416de40299c0a6f3b8" kindref="member">Interaction</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="15" refid="structdakku_1_1Interaction_1a699eb6f8e671ddd0cb7358aefe5474c3" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structdakku_1_1Interaction_1a699eb6f8e671ddd0cb7358aefe5474c3" kindref="member">Interaction</ref>(<ref refid="classdakku_1_1Point" kindref="compound">Point3f</ref><sp/><ref refid="structdakku_1_1Interaction_1afd2ec2651f8d52f175991ee6f51ca02f" kindref="member">p</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Vector" kindref="compound">Vector3f</ref><sp/>&amp;<ref refid="structdakku_1_1Interaction_1a09bac9c0ca5d0e616415f5591a930866" kindref="member">wo</ref>,<sp/><ref refid="classdakku_1_1Normal" kindref="compound">Normal3f</ref><sp/><ref refid="structdakku_1_1Interaction_1ada7d1f731aef826b61f3819cd31453ee" kindref="member">n</ref>)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="structdakku_1_1Interaction_1afd2ec2651f8d52f175991ee6f51ca02f" kindref="member">p</ref>(std::move(<ref refid="structdakku_1_1Interaction_1afd2ec2651f8d52f175991ee6f51ca02f" kindref="member">p</ref>)),<sp/><ref refid="structdakku_1_1Interaction_1a09bac9c0ca5d0e616415f5591a930866" kindref="member">wo</ref>(<ref refid="structdakku_1_1Interaction_1a09bac9c0ca5d0e616415f5591a930866" kindref="member">wo</ref>.normalized()),<sp/><ref refid="structdakku_1_1Interaction_1ada7d1f731aef826b61f3819cd31453ee" kindref="member">n</ref>(std::move(<ref refid="structdakku_1_1Interaction_1ada7d1f731aef826b61f3819cd31453ee" kindref="member">n</ref>))<sp/>{}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="structdakku_1_1Interaction_1a639b8d8d253fa5c86e9af807a9b8559f" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structdakku_1_1Interaction_1a639b8d8d253fa5c86e9af807a9b8559f" kindref="member">isSurfaceInteraction</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structdakku_1_1Interaction_1ada7d1f731aef826b61f3819cd31453ee" kindref="member">n</ref><sp/>!=<sp/><ref refid="classdakku_1_1Normal" kindref="compound">Normal3f</ref>{};<sp/>}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="structdakku_1_1Interaction_1a5e9510b579b3a3b277f57716ce0c6dad" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structdakku_1_1Interaction_1a5e9510b579b3a3b277f57716ce0c6dad" kindref="member">isMediumInteraction</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>!<ref refid="structdakku_1_1Interaction_1a639b8d8d253fa5c86e9af807a9b8559f" kindref="member">isSurfaceInteraction</ref>();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="structdakku_1_1Interaction_1afb8304e8d26f8149bac1ee51ec949b51" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/><ref refid="classdakku_1_1Ray" kindref="compound">Ray</ref><sp/><ref refid="structdakku_1_1Interaction_1afb8304e8d26f8149bac1ee51ec949b51" kindref="member">spawnRay</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Vector" kindref="compound">Vector3f</ref><sp/>&amp;d)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdakku_1_1Point" kindref="compound">Point3f</ref><sp/>o<sp/>=<sp/><ref refid="namespacedakku_1ac70f11ace3ab613579837a2d336b38c5" kindref="member">offsetRayOrigin</ref>(<ref refid="structdakku_1_1Interaction_1afd2ec2651f8d52f175991ee6f51ca02f" kindref="member">p</ref>,<sp/><ref refid="structdakku_1_1Interaction_1ada7d1f731aef826b61f3819cd31453ee" kindref="member">n</ref>,<sp/>d);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Ray" kindref="compound">Ray</ref>(o,<sp/>d,<sp/>INF);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="structdakku_1_1Interaction_1ad991618b3ef561e9f217ccd2075e918e" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/><ref refid="classdakku_1_1Ray" kindref="compound">Ray</ref><sp/><ref refid="structdakku_1_1Interaction_1ad991618b3ef561e9f217ccd2075e918e" kindref="member">spawnRayTo</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Point" kindref="compound">Point3f</ref><sp/>&amp;q)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdakku_1_1Point" kindref="compound">Point3f</ref><sp/>origin<sp/>=<sp/><ref refid="namespacedakku_1ac70f11ace3ab613579837a2d336b38c5" kindref="member">offsetRayOrigin</ref>(<ref refid="structdakku_1_1Interaction_1afd2ec2651f8d52f175991ee6f51ca02f" kindref="member">p</ref>,<sp/><ref refid="structdakku_1_1Interaction_1ada7d1f731aef826b61f3819cd31453ee" kindref="member">n</ref>,<sp/>q<sp/>-<sp/><ref refid="structdakku_1_1Interaction_1afd2ec2651f8d52f175991ee6f51ca02f" kindref="member">p</ref>);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdakku_1_1Vector" kindref="compound">Vector3f</ref><sp/>d<sp/>=<sp/>q<sp/>-<sp/><ref refid="structdakku_1_1Interaction_1afd2ec2651f8d52f175991ee6f51ca02f" kindref="member">p</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Ray" kindref="compound">Ray</ref>(origin,<sp/>d,<sp/>1<sp/>-<sp/>SHADOW_EPS);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="structdakku_1_1Interaction_1a26bc9218867d012021b32a5fc97f2cbd" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/><ref refid="classdakku_1_1Ray" kindref="compound">Ray</ref><sp/><ref refid="structdakku_1_1Interaction_1a26bc9218867d012021b32a5fc97f2cbd" kindref="member">spawnRayTo</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structdakku_1_1Interaction" kindref="compound">Interaction</ref><sp/>&amp;it)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdakku_1_1Point" kindref="compound">Point3f</ref><sp/>origin<sp/>=<sp/><ref refid="namespacedakku_1ac70f11ace3ab613579837a2d336b38c5" kindref="member">offsetRayOrigin</ref>(<ref refid="structdakku_1_1Interaction_1afd2ec2651f8d52f175991ee6f51ca02f" kindref="member">p</ref>,<sp/><ref refid="structdakku_1_1Interaction_1ada7d1f731aef826b61f3819cd31453ee" kindref="member">n</ref>,<sp/>it.<ref refid="structdakku_1_1Interaction_1afd2ec2651f8d52f175991ee6f51ca02f" kindref="member">p</ref><sp/>-<sp/><ref refid="structdakku_1_1Interaction_1afd2ec2651f8d52f175991ee6f51ca02f" kindref="member">p</ref>);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdakku_1_1Point" kindref="compound">Point3f</ref><sp/>target<sp/>=<sp/><ref refid="namespacedakku_1ac70f11ace3ab613579837a2d336b38c5" kindref="member">offsetRayOrigin</ref>(it.<ref refid="structdakku_1_1Interaction_1afd2ec2651f8d52f175991ee6f51ca02f" kindref="member">p</ref>,<sp/>it.<ref refid="structdakku_1_1Interaction_1ada7d1f731aef826b61f3819cd31453ee" kindref="member">n</ref>,<sp/>origin<sp/>-<sp/>it.<ref refid="structdakku_1_1Interaction_1afd2ec2651f8d52f175991ee6f51ca02f" kindref="member">p</ref>);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdakku_1_1Vector" kindref="compound">Vector3f</ref><sp/>d<sp/>=<sp/>target<sp/>-<sp/>origin;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Ray" kindref="compound">Ray</ref>(origin,<sp/>d,<sp/>1<sp/>-<sp/>SHADOW_EPS);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="structdakku_1_1Interaction_1afd2ec2651f8d52f175991ee6f51ca02f" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classdakku_1_1Point" kindref="compound">Point3f</ref><sp/><ref refid="structdakku_1_1Interaction_1afd2ec2651f8d52f175991ee6f51ca02f" kindref="member">p</ref>;</highlight></codeline>
+<codeline lineno="70" refid="structdakku_1_1Interaction_1a09bac9c0ca5d0e616415f5591a930866" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classdakku_1_1Vector" kindref="compound">Vector3f</ref><sp/><ref refid="structdakku_1_1Interaction_1a09bac9c0ca5d0e616415f5591a930866" kindref="member">wo</ref>;</highlight></codeline>
+<codeline lineno="72" refid="structdakku_1_1Interaction_1ada7d1f731aef826b61f3819cd31453ee" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classdakku_1_1Normal" kindref="compound">Normal3f</ref><sp/><ref refid="structdakku_1_1Interaction_1ada7d1f731aef826b61f3819cd31453ee" kindref="member">n</ref>;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="classdakku_1_1SurfaceInteraction" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdakku_1_1SurfaceInteraction" kindref="compound">SurfaceInteraction</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="structdakku_1_1Interaction" kindref="compound">Interaction</ref><sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dakku</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="src/core/interaction.h"/>
+  </compounddef>
+</doxygen>

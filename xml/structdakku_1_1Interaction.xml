@@ -1,0 +1,281 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="structdakku_1_1Interaction" kind="struct" language="C++" prot="public">
+    <compoundname>dakku::Interaction</compoundname>
+    <derivedcompoundref refid="classdakku_1_1SurfaceInteraction" prot="public" virt="non-virtual">dakku::SurfaceInteraction</derivedcompoundref>
+    <includes refid="interaction_8h" local="no">interaction.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structdakku_1_1Interaction_1afd2ec2651f8d52f175991ee6f51ca02f" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacedakku_1a8323b90fda75af310a40a4e0d6bdb3f0" kindref="member">Point3f</ref></type>
+        <definition>Point3f dakku::Interaction::p</definition>
+        <argsstring></argsstring>
+        <name>p</name>
+        <briefdescription>
+<para>interaction point </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/interaction.h" line="68" column="11" bodyfile="src/core/interaction.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdakku_1_1Interaction_1a09bac9c0ca5d0e616415f5591a930866" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacedakku_1aa12b2f1fc9684bf8ba7fbf5b600685c6" kindref="member">Vector3f</ref></type>
+        <definition>Vector3f dakku::Interaction::wo</definition>
+        <argsstring></argsstring>
+        <name>wo</name>
+        <briefdescription>
+<para>outgoing direction </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/interaction.h" line="70" column="12" bodyfile="src/core/interaction.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdakku_1_1Interaction_1ada7d1f731aef826b61f3819cd31453ee" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacedakku_1a9b64e14dceffe6ac84029f1d40d6ec41" kindref="member">Normal3f</ref></type>
+        <definition>Normal3f dakku::Interaction::n</definition>
+        <argsstring></argsstring>
+        <name>n</name>
+        <briefdescription>
+<para>normal </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/interaction.h" line="72" column="12" bodyfile="src/core/interaction.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structdakku_1_1Interaction_1a779a213fff1311416de40299c0a6f3b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dakku::Interaction::Interaction</definition>
+        <argsstring>()=default</argsstring>
+        <name>Interaction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/interaction.h" line="14" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="structdakku_1_1Interaction_1a699eb6f8e671ddd0cb7358aefe5474c3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>dakku::Interaction::Interaction</definition>
+        <argsstring>(Point3f p, const Vector3f &amp;wo, Normal3f n)</argsstring>
+        <name>Interaction</name>
+        <param>
+          <type><ref refid="namespacedakku_1a8323b90fda75af310a40a4e0d6bdb3f0" kindref="member">Point3f</ref></type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacedakku_1aa12b2f1fc9684bf8ba7fbf5b600685c6" kindref="member">Vector3f</ref> &amp;</type>
+          <declname>wo</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacedakku_1a9b64e14dceffe6ac84029f1d40d6ec41" kindref="member">Normal3f</ref></type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/interaction.h" line="15" column="3" bodyfile="src/core/interaction.h" bodystart="15" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="structdakku_1_1Interaction_1a639b8d8d253fa5c86e9af807a9b8559f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool dakku::Interaction::isSurfaceInteraction</definition>
+        <argsstring>() const</argsstring>
+        <name>isSurfaceInteraction</name>
+        <briefdescription>
+<para>check whether the interaction is surface interaction surface interaction contains non-zero normal $\vec n$ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/interaction.h" line="23" column="9" bodyfile="src/core/interaction.h" bodystart="23" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="structdakku_1_1Interaction_1a5e9510b579b3a3b277f57716ce0c6dad" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool dakku::Interaction::isMediumInteraction</definition>
+        <argsstring>() const</argsstring>
+        <name>isMediumInteraction</name>
+        <briefdescription>
+<para>check whether the interaction is medium interaction </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/interaction.h" line="29" column="9" bodyfile="src/core/interaction.h" bodystart="29" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="structdakku_1_1Interaction_1afb8304e8d26f8149bac1ee51ec949b51" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classdakku_1_1Ray" kindref="compound">Ray</ref></type>
+        <definition>Ray dakku::Interaction::spawnRay</definition>
+        <argsstring>(const Vector3f &amp;d) const</argsstring>
+        <name>spawnRay</name>
+        <param>
+          <type>const <ref refid="namespacedakku_1aa12b2f1fc9684bf8ba7fbf5b600685c6" kindref="member">Vector3f</ref> &amp;</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+<para>spawn a ray to the given direction </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the direction </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the ray toward <computeroutput>d</computeroutput> after origin offset </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/interaction.h" line="39" column="8" bodyfile="src/core/interaction.h" bodystart="39" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="structdakku_1_1Interaction_1ad991618b3ef561e9f217ccd2075e918e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classdakku_1_1Ray" kindref="compound">Ray</ref></type>
+        <definition>Ray dakku::Interaction::spawnRayTo</definition>
+        <argsstring>(const Point3f &amp;q) const</argsstring>
+        <name>spawnRayTo</name>
+        <param>
+          <type>const <ref refid="namespacedakku_1a8323b90fda75af310a40a4e0d6bdb3f0" kindref="member">Point3f</ref> &amp;</type>
+          <declname>q</declname>
+        </param>
+        <briefdescription>
+<para>spawn ray $p \rightarrow q$ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>q</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the target point </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/interaction.h" line="49" column="8" bodyfile="src/core/interaction.h" bodystart="49" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="structdakku_1_1Interaction_1a26bc9218867d012021b32a5fc97f2cbd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classdakku_1_1Ray" kindref="compound">Ray</ref></type>
+        <definition>Ray dakku::Interaction::spawnRayTo</definition>
+        <argsstring>(const Interaction &amp;it) const</argsstring>
+        <name>spawnRayTo</name>
+        <param>
+          <type>const <ref refid="structdakku_1_1Interaction" kindref="compound">Interaction</ref> &amp;</type>
+          <declname>it</declname>
+        </param>
+        <briefdescription>
+<para>spawn ray $p \rightarrow it.p$ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>it</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the given target interaction </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/interaction.h" line="60" column="8" bodyfile="src/core/interaction.h" bodystart="60" bodyend="65"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>interaction </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>dakku::Interaction</label>
+        <link refid="structdakku_1_1Interaction"/>
+      </node>
+      <node id="2">
+        <label>dakku::SurfaceInteraction</label>
+        <link refid="classdakku_1_1SurfaceInteraction"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="6">
+        <label>dakku::Normal&lt; float &gt;</label>
+        <link refid="classdakku_1_1Normal"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dakku::Point&lt; float &gt;</label>
+        <link refid="classdakku_1_1Point"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>dakku::Vector&lt; float &gt;</label>
+        <link refid="classdakku_1_1Vector"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>dakku::VectorBase&lt; T, S, Normal&lt; T, S &gt; &gt;</label>
+        <link refid="classdakku_1_1VectorBase"/>
+      </node>
+      <node id="3">
+        <label>dakku::VectorBase&lt; T, S, Point&lt; T, S &gt; &gt;</label>
+        <link refid="classdakku_1_1VectorBase"/>
+      </node>
+      <node id="5">
+        <label>dakku::VectorBase&lt; T, S, Vector&lt; T, S &gt; &gt;</label>
+        <link refid="classdakku_1_1VectorBase"/>
+      </node>
+      <node id="1">
+        <label>dakku::Interaction</label>
+        <link refid="structdakku_1_1Interaction"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>p</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>wo</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>n</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/core/interaction.h" line="13" column="1" bodyfile="src/core/interaction.h" bodystart="13" bodyend="73"/>
+    <listofallmembers>
+      <member refid="structdakku_1_1Interaction_1a779a213fff1311416de40299c0a6f3b8" prot="public" virt="non-virtual"><scope>dakku::Interaction</scope><name>Interaction</name></member>
+      <member refid="structdakku_1_1Interaction_1a699eb6f8e671ddd0cb7358aefe5474c3" prot="public" virt="non-virtual"><scope>dakku::Interaction</scope><name>Interaction</name></member>
+      <member refid="structdakku_1_1Interaction_1a5e9510b579b3a3b277f57716ce0c6dad" prot="public" virt="non-virtual"><scope>dakku::Interaction</scope><name>isMediumInteraction</name></member>
+      <member refid="structdakku_1_1Interaction_1a639b8d8d253fa5c86e9af807a9b8559f" prot="public" virt="non-virtual"><scope>dakku::Interaction</scope><name>isSurfaceInteraction</name></member>
+      <member refid="structdakku_1_1Interaction_1ada7d1f731aef826b61f3819cd31453ee" prot="public" virt="non-virtual"><scope>dakku::Interaction</scope><name>n</name></member>
+      <member refid="structdakku_1_1Interaction_1afd2ec2651f8d52f175991ee6f51ca02f" prot="public" virt="non-virtual"><scope>dakku::Interaction</scope><name>p</name></member>
+      <member refid="structdakku_1_1Interaction_1afb8304e8d26f8149bac1ee51ec949b51" prot="public" virt="non-virtual"><scope>dakku::Interaction</scope><name>spawnRay</name></member>
+      <member refid="structdakku_1_1Interaction_1ad991618b3ef561e9f217ccd2075e918e" prot="public" virt="non-virtual"><scope>dakku::Interaction</scope><name>spawnRayTo</name></member>
+      <member refid="structdakku_1_1Interaction_1a26bc9218867d012021b32a5fc97f2cbd" prot="public" virt="non-virtual"><scope>dakku::Interaction</scope><name>spawnRayTo</name></member>
+      <member refid="structdakku_1_1Interaction_1a09bac9c0ca5d0e616415f5591a930866" prot="public" virt="non-virtual"><scope>dakku::Interaction</scope><name>wo</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

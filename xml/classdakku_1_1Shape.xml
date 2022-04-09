@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="classdakku_1_1Shape" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>dakku::Shape</compoundname>
+    <basecompoundref refid="classdakku_1_1Object" prot="public" virt="non-virtual">dakku::Object</basecompoundref>
+    <includes refid="shape_8h" local="no">shape.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdakku_1_1Shape_1aac110048040df95b607cc505ad2eb218" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dakku::Shape::DAKKU_DECLARE_OBJECT</definition>
+        <argsstring>(Shape, Object)</argsstring>
+        <name>DAKKU_DECLARE_OBJECT</name>
+        <param>
+          <type><ref refid="classdakku_1_1Shape" kindref="compound">Shape</ref></type>
+        </param>
+        <param>
+          <type><ref refid="classdakku_1_1Object" kindref="compound">Object</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/shape.h" line="11" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1Shape_1acb5e66e646d6fd0709ef4b8d6179142f" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dakku::Shape::Shape</definition>
+        <argsstring>(const Transform *objectToWorld, const Transform *worldToObject)</argsstring>
+        <name>Shape</name>
+        <param>
+          <type>const <ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref> *</type>
+          <declname>objectToWorld</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref> *</type>
+          <declname>worldToObject</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classdakku_1_1Shape" kindref="compound">Shape</ref> object with given transform. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/shape.h" line="17" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1Shape_1a5a9fd700c1e56cf18784384ba0eeb5e0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="namespacedakku_1a19129587abbff965c2c15bab5723e208" kindref="member">Bounds3f</ref></type>
+        <definition>virtual Bounds3f dakku::Shape::objectBound</definition>
+        <argsstring>() const =0</argsstring>
+        <name>objectBound</name>
+        <briefdescription>
+<para>get object bounding box </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/shape.h" line="23" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1Shape_1ae328d65d3afe8558e9e63ddc3fa44164" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="namespacedakku_1a19129587abbff965c2c15bab5723e208" kindref="member">Bounds3f</ref></type>
+        <definition>virtual Bounds3f dakku::Shape::worldBound</definition>
+        <argsstring>() const =0</argsstring>
+        <name>worldBound</name>
+        <briefdescription>
+<para>get world bounding box </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/shape.h" line="29" column="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>dakku::Object</label>
+        <link refid="classdakku_1_1Object"/>
+      </node>
+      <node id="1">
+        <label>dakku::Shape</label>
+        <link refid="classdakku_1_1Shape"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>dakku::Object</label>
+        <link refid="classdakku_1_1Object"/>
+      </node>
+      <node id="1">
+        <label>dakku::Shape</label>
+        <link refid="classdakku_1_1Shape"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/core/shape.h" line="9" column="1" bodyfile="src/core/shape.h" bodystart="9" bodyend="30"/>
+    <listofallmembers>
+      <member refid="classdakku_1_1Shape_1aac110048040df95b607cc505ad2eb218" prot="public" virt="non-virtual"><scope>dakku::Shape</scope><name>DAKKU_DECLARE_OBJECT</name></member>
+      <member refid="classdakku_1_1Object_1a543f734268f7be81badecee6cf7245cc" prot="public" virt="virtual"><scope>dakku::Shape</scope><name>getClassName</name></member>
+      <member refid="classdakku_1_1Object_1a247ed68865f464d511b7fdb85467c354" prot="public" virt="non-virtual"><scope>dakku::Shape</scope><name>getClassNameStatic</name></member>
+      <member refid="classdakku_1_1Object_1accec0632e79097564677055bef4220bd" prot="public" virt="virtual"><scope>dakku::Shape</scope><name>getParentName</name></member>
+      <member refid="classdakku_1_1Object_1a08ec83c660afb1850455ef30c43fa29c" prot="public" virt="non-virtual"><scope>dakku::Shape</scope><name>getParentNameStatic</name></member>
+      <member refid="classdakku_1_1Object_1a055e32b0624d9a96fc2014fe5d9d0c81" prot="public" virt="non-virtual"><scope>dakku::Shape</scope><name>isBaseOf</name></member>
+      <member refid="classdakku_1_1Object_1add47b28fc1878f008bb6664a83faad72" prot="public" virt="non-virtual"><scope>dakku::Shape</scope><name>isDerivedFrom</name></member>
+      <member refid="classdakku_1_1Object_1a20e78d46fa11d575d63e048279150eac" prot="public" virt="non-virtual"><scope>dakku::Shape</scope><name>Object</name></member>
+      <member refid="classdakku_1_1Shape_1a5a9fd700c1e56cf18784384ba0eeb5e0" prot="public" virt="pure-virtual"><scope>dakku::Shape</scope><name>objectBound</name></member>
+      <member refid="classdakku_1_1Shape_1acb5e66e646d6fd0709ef4b8d6179142f" prot="public" virt="non-virtual"><scope>dakku::Shape</scope><name>Shape</name></member>
+      <member refid="classdakku_1_1Object_1a65d91c04e480b827fa495df96af2826b" prot="public" virt="virtual"><scope>dakku::Shape</scope><name>toString</name></member>
+      <member refid="classdakku_1_1Shape_1ae328d65d3afe8558e9e63ddc3fa44164" prot="public" virt="pure-virtual"><scope>dakku::Shape</scope><name>worldBound</name></member>
+      <member refid="classdakku_1_1Object_1a0c792f089351caf3fa7a704c86ce903d" prot="public" virt="virtual"><scope>dakku::Shape</scope><name>~Object</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

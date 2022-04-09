@@ -4,6 +4,7 @@
     <compoundname>ray.h</compoundname>
     <includes refid="vector_8h" local="no">core/vector.h</includes>
     <includes local="no">utility</includes>
+    <includedby refid="interaction_8h" local="no">src/core/interaction.h</includedby>
     <includedby refid="transform_8h" local="no">src/core/transform.h</includedby>
     <incdepgraph>
       <node id="5">
@@ -112,46 +113,54 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="6">
+      <node id="7">
         <label>src/core/api.h</label>
         <link refid="core_2api_8h"/>
       </node>
-      <node id="4">
+      <node id="5">
         <label>src/core/class.h</label>
         <link refid="class_8h"/>
-        <childnode refid="5" relation="include">
+        <childnode refid="6" relation="include">
         </childnode>
       </node>
-      <node id="12">
+      <node id="13">
         <label>src/core/film.h</label>
         <link refid="film_8h"/>
-        <childnode refid="6" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
-      <node id="7">
+      <node id="8">
         <label>src/core/filter.h</label>
         <link refid="filter_8h"/>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-      </node>
-      <node id="5">
-        <label>src/core/object.h</label>
-        <link refid="object_8h"/>
-        <childnode refid="6" relation="include">
-        </childnode>
         <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
       </node>
-      <node id="3">
+      <node id="2">
+        <label>src/core/interaction.h</label>
+        <link refid="interaction_8h"/>
+      </node>
+      <node id="6">
+        <label>src/core/object.h</label>
+        <link refid="object_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
         <label>src/core/property.h</label>
         <link refid="property_8h"/>
-        <childnode refid="4" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -159,63 +168,87 @@
         <link refid="ray_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
       </node>
-      <node id="11">
+      <node id="12">
         <label>src/core/serialization.h</label>
         <link refid="serialization_8h"/>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="13" relation="include">
         </childnode>
         <childnode refid="14" relation="include">
         </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
       </node>
-      <node id="2">
+      <node id="18">
+        <label>src/core/shape.h</label>
+        <link refid="shape_8h"/>
+      </node>
+      <node id="19">
+        <label>src/core/texture.h</label>
+        <link refid="texture_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
         <label>src/core/transform.h</label>
         <link refid="transform_8h"/>
-        <childnode refid="3" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
-      </node>
-      <node id="9">
-        <label>src/filters/api.h</label>
-        <link refid="filters_2api_8h"/>
-      </node>
-      <node id="8">
-        <label>src/filters/box.h</label>
-        <link refid="box_8h"/>
-        <childnode refid="9" relation="include">
-        </childnode>
-      </node>
-      <node id="13">
-        <label>src/filters/fwd.h</label>
-        <link refid="filters_2fwd_8h"/>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
+        <childnode refid="18" relation="include">
         </childnode>
       </node>
       <node id="10">
-        <label>src/filters/triangle.h</label>
-        <link refid="triangle_8h"/>
-        <childnode refid="9" relation="include">
-        </childnode>
+        <label>src/filters/api.h</label>
+        <link refid="filters_2api_8h"/>
       </node>
-      <node id="16">
-        <label>src/stream/api.h</label>
-        <link refid="stream_2api_8h"/>
-      </node>
-      <node id="15">
-        <label>src/stream/fstream.h</label>
-        <link refid="fstream_8h"/>
-        <childnode refid="16" relation="include">
+      <node id="9">
+        <label>src/filters/box.h</label>
+        <link refid="box_8h"/>
+        <childnode refid="10" relation="include">
         </childnode>
       </node>
       <node id="14">
+        <label>src/filters/fwd.h</label>
+        <link refid="filters_2fwd_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>src/filters/triangle.h</label>
+        <link refid="triangle_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>src/stream/api.h</label>
+        <link refid="stream_2api_8h"/>
+      </node>
+      <node id="16">
+        <label>src/stream/fstream.h</label>
+        <link refid="fstream_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
         <label>src/stream/fwd.h</label>
         <link refid="stream_2fwd_8h"/>
-        <childnode refid="15" relation="include">
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>src/textures/constant.h</label>
+        <link refid="constant_8h"/>
+      </node>
+      <node id="20">
+        <label>src/textures/fwd.h</label>
+        <link refid="textures_2fwd_8h"/>
+        <childnode refid="21" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -279,8 +312,15 @@
 <codeline lineno="87" refid="classdakku_1_1RayDifferential_1acf47caf596e05e6d6e0997db09639166" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classdakku_1_1Vector" kindref="compound">Vector3f</ref><sp/><ref refid="classdakku_1_1RayDifferential_1acf47caf596e05e6d6e0997db09639166" kindref="member">rxDirection</ref>;</highlight></codeline>
 <codeline lineno="89" refid="classdakku_1_1RayDifferential_1a6592c3850275eb045ce8584d4f671019" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classdakku_1_1Vector" kindref="compound">Vector3f</ref><sp/><ref refid="classdakku_1_1RayDifferential_1a6592c3850275eb045ce8584d4f671019" kindref="member">ryDirection</ref>;</highlight></codeline>
 <codeline lineno="90"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="91"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dakku</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="92"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="namespacedakku_1ac70f11ace3ab613579837a2d336b38c5" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Point" kindref="compound">Point3f</ref><sp/><ref refid="namespacedakku_1ac70f11ace3ab613579837a2d336b38c5" kindref="member">offsetRayOrigin</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Point" kindref="compound">Point3f</ref><sp/>&amp;p,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Normal" kindref="compound">Normal3f</ref><sp/>&amp;n,</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Vector" kindref="compound">Vector3f</ref><sp/>&amp;w)<sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><ref refid="classdakku_1_1Vector" kindref="compound">Vector3f</ref><sp/>offset<sp/>=<sp/>SHADOW_EPS<sp/>*<sp/><ref refid="namespacedakku_1aa12b2f1fc9684bf8ba7fbf5b600685c6" kindref="member">Vector3f</ref>(n);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="namespacedakku_1a2016f3c3a16c069a055a7017eacb0e66" kindref="member">dot</ref>(w,<sp/>n)<sp/>&lt;<sp/>0)<sp/>offset<sp/>=<sp/>-offset;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>p<sp/>+<sp/>offset;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dakku</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="src/core/ray.h"/>
   </compounddef>

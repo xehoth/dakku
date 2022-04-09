@@ -63,6 +63,9 @@
     <member refid="classdakku_1_1CoefficientSpectrum_1a3419bb7bc9a9f6ab7b2c00c3cee942d1" kind="function"><name>isBlack</name></member>
     <member refid="classdakku_1_1CoefficientSpectrum_1ae9b538dae7b0ef76e17b5b8379d62224" kind="function"><name>clamp</name></member>
   </compound>
+  <compound refid="classdakku_1_1ContantTexture" kind="class"><name>dakku::ContantTexture</name>
+    <member refid="classdakku_1_1ContantTexture_1a7c349eb6b0c98494edd68724b852d4e6" kind="function"><name>evaluate</name></member>
+  </compound>
   <compound refid="classdakku_1_1FileInputStream" kind="class"><name>dakku::FileInputStream</name>
     <member refid="classdakku_1_1FileInputStream_1ad64d091dae724af7202e76219a7eb59e" kind="variable"><name>stream</name></member>
     <member refid="classdakku_1_1FileInputStream_1a78fcbd9bd3066af2b2d91e9f07f3b2d6" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
@@ -128,6 +131,18 @@
     <member refid="classdakku_1_1InputStream_1a72f97ed2ffd8176e418dc962de184ade" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
     <member refid="classdakku_1_1InputStream_1a2740268624ee2642cc70b419831153cd" kind="function"><name>readByte</name></member>
     <member refid="classdakku_1_1InputStream_1a38473aafb15173995f837b818903ad47" kind="function"><name>readBytes</name></member>
+  </compound>
+  <compound refid="structdakku_1_1Interaction" kind="struct"><name>dakku::Interaction</name>
+    <member refid="structdakku_1_1Interaction_1afd2ec2651f8d52f175991ee6f51ca02f" kind="variable"><name>p</name></member>
+    <member refid="structdakku_1_1Interaction_1a09bac9c0ca5d0e616415f5591a930866" kind="variable"><name>wo</name></member>
+    <member refid="structdakku_1_1Interaction_1ada7d1f731aef826b61f3819cd31453ee" kind="variable"><name>n</name></member>
+    <member refid="structdakku_1_1Interaction_1a779a213fff1311416de40299c0a6f3b8" kind="function"><name>Interaction</name></member>
+    <member refid="structdakku_1_1Interaction_1a699eb6f8e671ddd0cb7358aefe5474c3" kind="function"><name>Interaction</name></member>
+    <member refid="structdakku_1_1Interaction_1a639b8d8d253fa5c86e9af807a9b8559f" kind="function"><name>isSurfaceInteraction</name></member>
+    <member refid="structdakku_1_1Interaction_1a5e9510b579b3a3b277f57716ce0c6dad" kind="function"><name>isMediumInteraction</name></member>
+    <member refid="structdakku_1_1Interaction_1afb8304e8d26f8149bac1ee51ec949b51" kind="function"><name>spawnRay</name></member>
+    <member refid="structdakku_1_1Interaction_1ad991618b3ef561e9f217ccd2075e918e" kind="function"><name>spawnRayTo</name></member>
+    <member refid="structdakku_1_1Interaction_1a26bc9218867d012021b32a5fc97f2cbd" kind="function"><name>spawnRayTo</name></member>
   </compound>
   <compound refid="classdakku_1_1L1CacheLineAlignedResource" kind="class"><name>dakku::L1CacheLineAlignedResource</name>
     <member refid="classdakku_1_1L1CacheLineAlignedResource_1a510e0f8a82300e3cf0c6ee6fa8a889ed" kind="variable"><name>upStream</name></member>
@@ -293,6 +308,19 @@
     <member refid="classdakku_1_1SerializableObject_1afbd8e48383b89c71132d091c9cd8b023" kind="function"><name>serialize</name></member>
     <member refid="classdakku_1_1SerializableObject_1af130034b07c1f5dc21fd84e0cbefbbb4" kind="function"><name>deserialize</name></member>
   </compound>
+  <compound refid="classdakku_1_1Shape" kind="class"><name>dakku::Shape</name>
+    <member refid="classdakku_1_1Shape_1aac110048040df95b607cc505ad2eb218" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
+    <member refid="classdakku_1_1Shape_1acb5e66e646d6fd0709ef4b8d6179142f" kind="function"><name>Shape</name></member>
+    <member refid="classdakku_1_1Shape_1a5a9fd700c1e56cf18784384ba0eeb5e0" kind="function"><name>objectBound</name></member>
+    <member refid="classdakku_1_1Shape_1ae328d65d3afe8558e9e63ddc3fa44164" kind="function"><name>worldBound</name></member>
+  </compound>
+  <compound refid="classdakku_1_1SurfaceInteraction" kind="class"><name>dakku::SurfaceInteraction</name>
+  </compound>
+  <compound refid="classdakku_1_1Texture" kind="class"><name>dakku::Texture</name>
+    <member refid="classdakku_1_1Texture_1a04d50661884334a42b742e1214b77382" kind="variable"><name>floatType</name></member>
+    <member refid="classdakku_1_1Texture_1a34d7f1518a45937548bbfb8e9db857e4" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
+    <member refid="classdakku_1_1Texture_1a3acfc7cc9268f7f320b60de7f28029c2" kind="function"><name>evaluate</name></member>
+  </compound>
   <compound refid="classdakku_1_1Transform" kind="class"><name>dakku::Transform</name>
     <member refid="classdakku_1_1Transform_1ae48463c594e04791689e017baa5478ea" kind="variable"><name>m</name></member>
     <member refid="classdakku_1_1Transform_1aca0318c51a88c3abee67e5d749b47d44" kind="variable"><name>mInv</name></member>
@@ -436,6 +464,7 @@
     <member refid="namespacedakku_1a53c476552ecb27caba955675d8efb680" kind="variable"><name>INF</name></member>
     <member refid="namespacedakku_1af7aa9dc8532b3506d50b84f932560eb0" kind="variable"><name>PI</name></member>
     <member refid="namespacedakku_1a09eee35861f6da88754b5645e5703ec4" kind="variable"><name>L1_CACHE_LINE_SIZE</name></member>
+    <member refid="namespacedakku_1a8ecbddd8386198d0dd187cd20b53e42d" kind="variable"><name>SHADOW_EPS</name></member>
     <member refid="namespacedakku_1ab81d04f25c58c43667816d47b70f4734" kind="variable"><name>RelativeRoot</name></member>
     <member refid="namespacedakku_1a60d80eeb1de44e0299e91a45d8f94446" kind="variable"><name>InputStream</name></member>
     <member refid="namespacedakku_1a04dac11edaf26a2e58c8d00f31e6fa29" kind="variable"><name>OutputStream</name></member>
@@ -445,6 +474,8 @@
     <member refid="namespacedakku_1afb9578030bac745ae0282d66d44df22c" kind="variable"><name>Matrix4x4</name></member>
     <member refid="namespacedakku_1ad32aa25f5584289eda626b47ae3525cc" kind="variable"><name>Filter</name></member>
     <member refid="namespacedakku_1a1bd6403f2998d6f8d22f87c99eca7eed" kind="variable"><name>Film</name></member>
+    <member refid="namespacedakku_1ad4c70953467b9d3d22eac250d8655aff" kind="variable"><name>Shape</name></member>
+    <member refid="namespacedakku_1a24e2c761467417bba0b7b17b7c0e9f79" kind="variable"><name>Texture</name></member>
     <member refid="namespacedakku_1a6366bb992a59ee08f6364f16886477b0" kind="function"><name>DAKKU_EXPORT_OBJECTS</name></member>
     <member refid="namespacedakku_1af0a2453f8db3eb948901c7a0aed18434" kind="function"><name>begin</name></member>
     <member refid="namespacedakku_1a41ae9fcb2290e6ea6f7d4b0fbca86d17" kind="function"><name>end</name></member>
@@ -453,6 +484,7 @@
     <member refid="namespacedakku_1a2a53414d45143151128b45997c42d7af" kind="function"><name>radians</name></member>
     <member refid="namespacedakku_1a3d1bddf363d9216df7df7c148f917cd4" kind="function"><name>degrees</name></member>
     <member refid="namespacedakku_1ac5c65853b3b4155436da5b4402bebcad" kind="function"><name>registerObjects</name></member>
+    <member refid="namespacedakku_1ac70f11ace3ab613579837a2d336b38c5" kind="function"><name>offsetRayOrigin</name></member>
     <member refid="namespacedakku_1a80d2f8350cdcc84f6586fed5f396f8c7" kind="function"><name>xyzToRgb</name></member>
     <member refid="namespacedakku_1a4eafe1eaa4b431b45c002f81b793b46f" kind="function"><name>rgbToXyz</name></member>
     <member refid="namespacedakku_1a1e461427d5e700eff84e148509b7fcba" kind="function"><name>translate</name></member>
@@ -482,6 +514,8 @@
   </compound>
   <compound refid="filter_8h" kind="file"><name>filter.h</name>
   </compound>
+  <compound refid="interaction_8h" kind="file"><name>interaction.h</name>
+  </compound>
   <compound refid="logger_8h" kind="file"><name>logger.h</name>
     <member refid="logger_8h_1a9edd762e54e3ce43a70ddfe81b6e2fc5" kind="define"><name>DAKKU_ERR</name></member>
     <member refid="logger_8h_1a845073641399be84136c0143bedbde77" kind="define"><name>DAKKU_INFO</name></member>
@@ -504,9 +538,13 @@
   </compound>
   <compound refid="serialization_8h" kind="file"><name>serialization.h</name>
   </compound>
+  <compound refid="shape_8h" kind="file"><name>shape.h</name>
+  </compound>
   <compound refid="spectrum_8h" kind="file"><name>spectrum.h</name>
   </compound>
   <compound refid="stream_8h" kind="file"><name>stream.h</name>
+  </compound>
+  <compound refid="texture_8h" kind="file"><name>texture.h</name>
   </compound>
   <compound refid="transform_8h" kind="file"><name>transform.h</name>
   </compound>
@@ -528,6 +566,7 @@
     <member refid="platform_8h_1a6a1a04663120344778813d08185b6edb" kind="define"><name>DAKKU_STREAM_MODULE</name></member>
     <member refid="platform_8h_1af38869f447ed6e8768ab41a8b2d4f7e9" kind="define"><name>DAKKU_IMAGEIO_MODULE</name></member>
     <member refid="platform_8h_1ac321229e879d4e468e1eb21d57344d58" kind="define"><name>DAKKU_FILTERS_MODULE</name></member>
+    <member refid="platform_8h_1a897c968d2b673f9b096c9dd1ea3740c1" kind="define"><name>DAKKU_TEXTURES_MODULE</name></member>
     <member refid="platform_8h_1a09cd708407b8b153a1c5f21c764c142a" kind="define"><name>DAKKU_MAIN_MODULE</name></member>
   </compound>
   <compound refid="core_2api_8h" kind="file"><name>api.h</name>
@@ -537,6 +576,8 @@
   <compound refid="stream_2api_8h" kind="file"><name>api.h</name>
   </compound>
   <compound refid="fstream_8h" kind="file"><name>fstream.h</name>
+  </compound>
+  <compound refid="constant_8h" kind="file"><name>constant.h</name>
   </compound>
   <compound refid="core_2fwd_8h" kind="file"><name>fwd.h</name>
     <member refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kind="define"><name>DAKKU_EXPORT_CORE</name></member>
@@ -550,6 +591,9 @@
   <compound refid="stream_2fwd_8h" kind="file"><name>fwd.h</name>
     <member refid="stream_2fwd_8h_1aaa6b0e6f6a552de3f9f6bb40ed162e36" kind="define"><name>DAKKU_EXPORT_STREAM</name></member>
   </compound>
+  <compound refid="textures_2fwd_8h" kind="file"><name>fwd.h</name>
+    <member refid="textures_2fwd_8h_1aa6f8c6479da7d7bc597c87b9fe242d9e" kind="define"><name>DAKKU_EXPORT_TEXTURES</name></member>
+  </compound>
   <compound refid="vector_base" kind="page"><name>vector_base</name>
   </compound>
   <compound refid="dir_aebb8dcc11953d78e620bbef0b9e2183" kind="dir"><name>src/core</name>
@@ -561,6 +605,8 @@
   <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
   </compound>
   <compound refid="dir_090521d29e73b40f7fc0a63254d8965e" kind="dir"><name>src/stream</name>
+  </compound>
+  <compound refid="dir_0a15cfbbecb5f97b1f4d0d4d1ae63ab7" kind="dir"><name>src/textures</name>
   </compound>
   <compound refid="indexpage" kind="page"><name>index</name>
   </compound>

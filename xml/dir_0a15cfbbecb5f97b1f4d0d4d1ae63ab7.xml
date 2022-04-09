@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="dir_0a15cfbbecb5f97b1f4d0d4d1ae63ab7" kind="dir">
+    <compoundname>src/textures</compoundname>
+    <innerfile refid="constant_8h">constant.h</innerfile>
+    <innerfile refid="textures_2fwd_8h">fwd.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/textures/"/>
+  </compounddef>
+</doxygen>

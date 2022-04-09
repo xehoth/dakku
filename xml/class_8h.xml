@@ -203,6 +203,10 @@
         </childnode>
         <childnode refid="8" relation="include">
         </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
       </node>
       <node id="8">
         <label>src/core/serialization.h</label>
@@ -214,6 +218,16 @@
         <childnode refid="10" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>src/core/shape.h</label>
+        <link refid="shape_8h"/>
+      </node>
+      <node id="15">
+        <label>src/core/texture.h</label>
+        <link refid="texture_8h"/>
+        <childnode refid="16" relation="include">
         </childnode>
       </node>
       <node id="6">
@@ -254,6 +268,16 @@
         <label>src/stream/fwd.h</label>
         <link refid="stream_2fwd_8h"/>
         <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>src/textures/constant.h</label>
+        <link refid="constant_8h"/>
+      </node>
+      <node id="16">
+        <label>src/textures/fwd.h</label>
+        <link refid="textures_2fwd_8h"/>
+        <childnode refid="17" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
