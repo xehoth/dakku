@@ -6,6 +6,7 @@
 #include <numbers>
 #include <cmath>
 #include <cstdint>
+#include <bit>
 
 namespace dakku {
 
@@ -104,6 +105,22 @@ inline float evalLanczos(float x, float tau = 2) {
   float s = std::sin(x * tau) / (x * tau);
   float lanczos = std::sin(x) / x;
   return s * lanczos;
+}
+
+/**
+ * @brief $\lfloor \log_2 v \rfloor$
+ *
+ */
+inline int log2Int(std::int32_t v) {
+  return 31 - std::countl_zero(static_cast<std::uint32_t>(v));
+}
+
+/**
+ * @brief $\lfloor \log_2 v \rfloor$
+ *
+ */
+inline int log2Int(std::int64_t v) {
+  return 63 - std::countl_zero(static_cast<std::uint64_t>(v));
 }
 
 class DAKKU_EXPORT_CORE RelativeRoot;

@@ -41,6 +41,13 @@ requires(std::is_same_v<T, float> || std::is_same_v<T, Spectrum>) class MipMap {
   [[nodiscard]] int height() const { return resolution.y(); }
   [[nodiscard]] size_t levels() const { return pyramid.size(); }
 
+  /**
+   * @brief get texel value
+   *
+   * @param level mipmap level
+   */
+  const T &texel(int level, int s, int t) const;
+
  private:
   /// do trilinear interpolation
   const bool doTrilinear;
@@ -159,7 +166,60 @@ requires(std::is_same_v<T, float> ||
     for (auto ptr : resampleBufs) delete[] ptr;
     resolution = resPow2;
   }
-  // TODO: init pyramid
+  // initialize levels of mipmap from image
+  int nLevels = 1 + log2Int(std::max(resolution[0], resolution[1]));
+  pyramid.resize(nLevels);
+
+  // initialize the bottom level (most detailed)
+  pyramid[0] = std::make_unique<BlockedArray<T>>(
+      resolution[0], resolution[1],
+      std::span<T>{resampledImage ? resampledImage.get() : img,
+                   resolution.x() * resolution.y()});
+
+  for (int i = 1; i < nLevels; ++i) {
+    // next level: / 2
+    int sRes = std::max(1, pyramid[i - 1]->uSize() / 2);
+    int tRes = std::max(1, pyramid[i - 1]->vSize() / 2);
+    pyramid[i] = std::make_unique<BlockedArray<T>>(sRes, tRes);
+
+    // filter four texels from finer level of pyramid
+    oneapi::tbb::parallel_for(0, tRes, [&](int t) {
+      for (int s = 0; s < sRes; ++s) {
+        (*pyramid[i])(s, t) = 0.25f * (texel(i - 1, 2 * s, 2 * t) +
+                                       texel(i - 1, 2 * s + 1, 2 * t) +
+                                       texel(i - 1, 2 * s, 2 * t + 1) +
+                                       texel(i - 1, 2 * s + 1, 2 * t + 1));
+      }
+    });
+  }
+
+  // TODO: initialize EWA filter weights
+}
+
+template <typename T>
+requires(std::is_same_v<T, float> ||
+         std::is_same_v<T, Spectrum>) const T &MipMap<T>::texel(int level,
+                                                                int s,
+                                                                int t) const {
+  DAKKU_CHECK(level < pyramid.size(), "level out of range: {} >= {}", level,
+              pyramid.size());
+  const BlockedArray<T> &l = *pyramid[level];
+  switch (wrapMode) {
+    case ImageWrapMode::REPEAT:
+      s %= l.uSize();
+      t %= l.vSize();
+      break;
+    case ImageWrapMode::CLAMP:
+      s = std::clamp(s, 0, l.uSize() - 1);
+      t = std::clamp(t, 0, l.vSize() - 1);
+      break;
+    case ImageWrapMode::BLACK: {
+      static const T black{0.0f};
+      if (s < 0 || s >= l.uSize() || t < 0 || t >= l.vSize()) return black;
+      break;
+    }
+  }
+  return l(s, t);
 }
 }  // namespace dakku
 #endif
