@@ -11,6 +11,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://xehoth.github.io/dakku/Classes/classMainWindow/</loc>
+         <lastmod>2022-04-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1BlockedArray/</loc>
          <lastmod>2022-04-10</lastmod>
          <changefreq>daily</changefreq>
@@ -286,6 +291,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://xehoth.github.io/dakku/Files/dir_99d0482cf009f9d97a0877749b817f19/</loc>
+         <lastmod>2022-04-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://xehoth.github.io/dakku/Files/dir_a0ac0340ed7c73c764f7b19b1e0fdeee/</loc>
          <lastmod>2022-04-10</lastmod>
          <changefreq>daily</changefreq>
@@ -337,6 +347,11 @@
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/logger_8h/</loc>
+         <lastmod>2022-04-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Files/mainwindow_8h/</loc>
          <lastmod>2022-04-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -447,6 +462,11 @@
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Namespaces/</loc>
+         <lastmod>2022-04-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Namespaces/namespaceUi/</loc>
          <lastmod>2022-04-10</lastmod>
          <changefreq>daily</changefreq>
     </url>

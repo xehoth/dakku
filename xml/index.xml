@@ -178,6 +178,11 @@
     <member refid="classdakku_1_1Logger_1a323f22b6d56d140abe5a41da4daff699" kind="function"><name>handle</name></member>
     <member refid="classdakku_1_1Logger_1a25793d0b435146d8e4a813dd39a486e1" kind="function"><name>Logger</name></member>
   </compound>
+  <compound refid="classMainWindow" kind="class"><name>MainWindow</name>
+    <member refid="classMainWindow_1a35466a70ed47252a0191168126a352a5" kind="variable"><name>ui</name></member>
+    <member refid="classMainWindow_1a996c5a2b6f77944776856f08ec30858d" kind="function"><name>MainWindow</name></member>
+    <member refid="classMainWindow_1a1f7d2c56410fc1bfa135bb907d43313f" kind="function"><name>~MainWindow</name></member>
+  </compound>
   <compound refid="structdakku_1_1Matrix4x4" kind="struct"><name>dakku::Matrix4x4</name>
     <member refid="structdakku_1_1Matrix4x4_1a3580dce7dc2c230e59203cecd2760635" kind="variable"><name>m</name></member>
     <member refid="structdakku_1_1Matrix4x4_1a04ffa0470a01980b11bd71b15a698fa0" kind="function"><name>Matrix4x4</name></member>
@@ -560,6 +565,8 @@
   </compound>
   <compound refid="namespacestd_1_1pmr" kind="namespace"><name>std::pmr</name>
   </compound>
+  <compound refid="namespaceUi" kind="namespace"><name>Ui</name>
+  </compound>
   <compound refid="blocked__array_8h" kind="file"><name>blocked_array.h</name>
   </compound>
   <compound refid="bounds_8h" kind="file"><name>bounds.h</name>
@@ -614,6 +621,8 @@
   </compound>
   <compound refid="triangle_8h" kind="file"><name>triangle.h</name>
   </compound>
+  <compound refid="mainwindow_8h" kind="file"><name>mainwindow.h</name>
+  </compound>
   <compound refid="imageio_8h" kind="file"><name>imageio.h</name>
   </compound>
   <compound refid="platform_8h" kind="file"><name>platform.h</name>
@@ -659,6 +668,8 @@
   <compound refid="dir_aebb8dcc11953d78e620bbef0b9e2183" kind="dir"><name>src/core</name>
   </compound>
   <compound refid="dir_1bc13244e26df1e1f069a1fd18e36da3" kind="dir"><name>src/filters</name>
+  </compound>
+  <compound refid="dir_99d0482cf009f9d97a0877749b817f19" kind="dir"><name>src/gui</name>
   </compound>
   <compound refid="dir_a0ac0340ed7c73c764f7b19b1e0fdeee" kind="dir"><name>src/imageio</name>
   </compound>
