@@ -20,6 +20,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Install Qt
+        uses: jurplel/install-qt-action@v2
+        version: 6.2.4
       - name: Get XMake
         uses: xmake-io/github-action-setup-xmake@v1
         with:
