@@ -28,8 +28,8 @@ class BlockedArray {
   explicit BlockedArray(int uRes, int vRes, std::span<const T> d = {})
       : uRes(uRes), vRes(vRes) {
     int nAlloc = roundUp(uRes) * roundUp(vRes);
-    data = new (std::max(alignof(T), std::align_val_t(L1_CACHE_LINE_SIZE)))
-        T[nAlloc]();
+    data = new (std::max(static_cast<std::align_val_t>(alignof(T)),
+                         std::align_val_t(L1_CACHE_LINE_SIZE))) T[nAlloc]();
     if (!d.empty()) {
       for (int v = 0; v < vRes; ++v)
         for (int u = 0; u < uRes; ++u) (*this)(u, v) = d[v * uRes + u];
@@ -37,7 +37,8 @@ class BlockedArray {
   }
 
   ~BlockedArray() {
-    delete[]((std::max(alignof(T), std::align_val_t(L1_CACHE_LINE_SIZE))),
+    delete[](std::max(static_cast<std::align_val_t>(alignof(T)),
+                      std::align_val_t(L1_CACHE_LINE_SIZE)),
              data);
   }
 
