@@ -49,7 +49,7 @@ requires(std::is_same_v<T, float> || std::is_same_v<T, Spectrum>) class MipMap {
   const T &texel(int level, int s, int t) const;
 
   /**
-   * @brief trilinear lookup
+   * @brief trilinear triangle filter lookup
    * $\frac 1 w = 2 ^ {n - 1 - l}$
    *
    */
