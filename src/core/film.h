@@ -66,10 +66,31 @@ class DAKKU_EXPORT_CORE Film : public SerializableObject {
    *
    * @param splatScale scale splat values
    */
-  void writeImage(float splatScale = 1);
+  void writeImage(float splatScale = 1) const;
+
+  /**
+   * @brief write image to `buffer`
+   *
+   * @param splatScale scale splat values
+   */
+  void writeImageTo(std::span<float> buffer, float splatScale = 1) const;
+
+  /**
+   * @brief write image to `buffer`
+   *
+   * @param splatScale scale splat values
+   */
+  void writeImageTo(std::vector<std::uint8_t> &buffer,
+                    float splatScale = 1) const;
 
   void serialize(OutputStream *stream) const override;
   void deserialize(InputStream *stream) override;
+
+  /**
+   * @brief Get the Cropped Pixel Bounds object
+   * 
+   */
+  [[nodiscard]] Bounds2i getCroppedPixelBounds() const;
 
  private:
 #if defined(_MSC_VER)
@@ -121,6 +142,10 @@ class DAKKU_EXPORT_CORE Film : public SerializableObject {
 #endif
 
   Pixel &getPixel(const Point2i &p) {
+    return const_cast<Pixel &>(static_cast<const Film &>(*this).getPixel(p));
+  }
+
+  [[nodiscard]] const Pixel &getPixel(const Point2i &p) const {
     DAKKU_CHECK(insideExclusive(p, croppedPixelBounds), "index out of range");
     int width = croppedPixelBounds.pMax.x() - croppedPixelBounds.pMin.x();
     int offset = (p.x() - croppedPixelBounds.pMin.x()) +

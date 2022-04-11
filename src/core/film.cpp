@@ -35,6 +35,10 @@ Film::Film(const Point2i &fullResolution, const Bounds2f &cropWindow,
   }
 }
 
+Bounds2i Film::getCroppedPixelBounds() const {
+  return this->croppedPixelBounds;
+}
+
 /**
  * @brief Get the Crop Window object, if not have, return the `value`
  *
@@ -107,21 +111,23 @@ void Film::mergeFilmTile(std::unique_ptr<FilmTile> tile) {
   }
 }
 
-void Film::writeImage(float splatScale) {
-  auto rgb = std::make_unique<float[]>(3 * croppedPixelBounds.area());
+void Film::writeImageTo(std::span<float> buffer, float splatScale) const {
+  DAKKU_CHECK(
+      buffer.size() == static_cast<size_t>(3 * croppedPixelBounds.area()),
+      "invalid buffer size");
   int offset = 0;
   for (const Point2i &p : croppedPixelBounds) {
     // convert pixel XYZ color to RGB
-    Pixel &pixel = getPixel(p);
-    xyzToRgb(pixel.xyz, std::span<float, 3>{&rgb[3 * offset], 3});
+    const Pixel &pixel = getPixel(p);
+    xyzToRgb(pixel.xyz, std::span<float, 3>{&buffer[3 * offset], 3});
 
     // normalize pixel with weight sum
     float filterWeightSum = pixel.filterWeightSum;
     if (filterWeightSum != 0) {
       float invWt = 1.0f / filterWeightSum;
-      rgb[3 * offset] = std::max(0.0f, rgb[3 * offset] * invWt);
-      rgb[3 * offset + 1] = std::max(0.0f, rgb[3 * offset + 1] * invWt);
-      rgb[3 * offset + 2] = std::max(0.0f, rgb[3 * offset + 2] * invWt);
+      buffer[3 * offset] = std::max(0.0f, buffer[3 * offset] * invWt);
+      buffer[3 * offset + 1] = std::max(0.0f, buffer[3 * offset + 1] * invWt);
+      buffer[3 * offset + 2] = std::max(0.0f, buffer[3 * offset + 2] * invWt);
     }
 
     // add splat value at pixel
@@ -129,16 +135,35 @@ void Film::writeImage(float splatScale) {
     float splatXyz[3] = {pixel.splatXyz[0], pixel.splatXyz[1],
                          pixel.splatXyz[2]};
     xyzToRgb(splatXyz, splatRgb);
-    rgb[3 * offset] += splatScale * splatRgb[0];
-    rgb[3 * offset + 1] += splatScale * splatRgb[1];
-    rgb[3 * offset + 2] += splatScale * splatRgb[2];
+    buffer[3 * offset] += splatScale * splatRgb[0];
+    buffer[3 * offset + 1] += splatScale * splatRgb[1];
+    buffer[3 * offset + 2] += splatScale * splatRgb[2];
 
     // scale pixel value by scale
-    rgb[3 * offset] *= scale;
-    rgb[3 * offset + 1] *= scale;
-    rgb[3 * offset + 2] *= scale;
+    buffer[3 * offset] *= scale;
+    buffer[3 * offset + 1] *= scale;
+    buffer[3 * offset + 2] *= scale;
     ++offset;
   }
+}
+
+void Film::writeImageTo(std::vector<std::uint8_t> &buffer,
+                        float splatScale) const {
+  std::vector<float> tmp(3 * croppedPixelBounds.area());
+  this->writeImageTo(tmp, splatScale);
+  buffer.resize(tmp.size());
+  std::transform(tmp.begin(), tmp.end(), buffer.begin(), [](float v) {
+    return static_cast<std::uint8_t>(
+        std::clamp(gammaCorrect(v) * 256, 0.0f, 255.0f));
+  });
+}
+
+void Film::writeImage(float splatScale) const {
+  auto rgb = std::make_unique<float[]>(3 * croppedPixelBounds.area());
+  this->writeImageTo(
+      std::span<float>{rgb.get(),
+                       static_cast<size_t>(3 * croppedPixelBounds.area())},
+      splatScale);
   std::string path = RelativeRoot::instance().get() + fileName;
   dakku::writeImage(path, rgb.get(), fullResolution.x(), fullResolution.y(),
                     croppedPixelBounds.pMin.x(), croppedPixelBounds.pMin.y(),
