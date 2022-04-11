@@ -21,7 +21,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/mipmap.h" line="53" column="14" bodyfile="src/core/mipmap.h" bodystart="53" bodyend="-1"/>
+        <location file="src/core/mipmap.h" line="60" column="14" bodyfile="src/core/mipmap.h" bodystart="60" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classdakku_1_1MipMap_1a042ae1aae7c70c65cbb89d6a49ec7ed9" prot="private" static="no" mutable="no">
         <type>const float</type>
@@ -35,7 +35,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/mipmap.h" line="55" column="15" bodyfile="src/core/mipmap.h" bodystart="55" bodyend="-1"/>
+        <location file="src/core/mipmap.h" line="62" column="15" bodyfile="src/core/mipmap.h" bodystart="62" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classdakku_1_1MipMap_1ada7958bd81d9742463689df8dc6371e8" prot="private" static="no" mutable="no">
         <type>const <ref refid="namespacedakku_1a9f69e6875268e5345a38fd61108935dc" kindref="member">ImageWrapMode</ref></type>
@@ -49,7 +49,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/mipmap.h" line="57" column="23" bodyfile="src/core/mipmap.h" bodystart="57" bodyend="-1"/>
+        <location file="src/core/mipmap.h" line="64" column="23" bodyfile="src/core/mipmap.h" bodystart="64" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classdakku_1_1MipMap_1abe2aa9f5f186ccfedfe9aa58385bbd40" prot="private" static="no" mutable="no">
         <type><ref refid="namespacedakku_1a059653c441fcfa28e3b00de3709176e9" kindref="member">Point2i</ref></type>
@@ -63,7 +63,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/mipmap.h" line="59" column="11" bodyfile="src/core/mipmap.h" bodystart="59" bodyend="-1"/>
+        <location file="src/core/mipmap.h" line="66" column="11" bodyfile="src/core/mipmap.h" bodystart="66" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classdakku_1_1MipMap_1aa61ecf5582cca022c002e42cdfe97e11" prot="private" static="no" mutable="no">
         <type>std::vector&lt; std::unique_ptr&lt; <ref refid="classdakku_1_1BlockedArray" kindref="compound">BlockedArray</ref>&lt; T &gt; &gt; &gt;</type>
@@ -77,7 +77,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/mipmap.h" line="61" column="15" bodyfile="src/core/mipmap.h" bodystart="61" bodyend="-1"/>
+        <location file="src/core/mipmap.h" line="68" column="15" bodyfile="src/core/mipmap.h" bodystart="68" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -191,7 +191,30 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/mipmap.h" line="49" column="11" bodyfile="src/core/mipmap.h" bodystart="201" bodyend="223"/>
+        <location file="src/core/mipmap.h" line="49" column="11" bodyfile="src/core/mipmap.h" bodystart="213" bodyend="235"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1MipMap_1ad25a7c8b822b665377740f296bd06a40" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>T</type>
+        <definition>T dakku::MipMap&lt; T &gt;::lookup</definition>
+        <argsstring>(const Point2f &amp;st, float width) const</argsstring>
+        <name>lookup</name>
+        <param>
+          <type>const <ref refid="namespacedakku_1a9910f23501fd2ef5e9a829cdab0992be" kindref="member">Point2f</ref> &amp;</type>
+          <declname>st</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>width</declname>
+        </param>
+    <requiresclause>(std::is_same_v&lt;T, float&gt; || std::is_same_v&lt;T, Spectrum&gt;)    </requiresclause>
+        <briefdescription>
+<para>trilinear triangle filter lookup $\frac 1 w = 2 ^ {n - 1 - l}$ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/mipmap.h" line="56" column="5" bodyfile="src/core/mipmap.h" bodystart="239" bodyend="253"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -215,7 +238,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/mipmap.h" line="67" column="19" bodyfile="src/core/mipmap.h" bodystart="67" bodyend="89"/>
+        <location file="src/core/mipmap.h" line="74" column="19" bodyfile="src/core/mipmap.h" bodystart="74" bodyend="96"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1MipMap_1abb83b1d932d1416a8d11ae568f7192d6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>float</type>
@@ -232,7 +255,30 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/mipmap.h" line="91" column="9" bodyfile="src/core/mipmap.h" bodystart="91" bodyend="91"/>
+        <location file="src/core/mipmap.h" line="98" column="9" bodyfile="src/core/mipmap.h" bodystart="98" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1MipMap_1a37d1f785acc945b501cc3ee7f34027f6" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>T</type>
+        <definition>T dakku::MipMap&lt; T &gt;::triangle</definition>
+        <argsstring>(int level, const Point2f &amp;st) const</argsstring>
+        <name>triangle</name>
+        <param>
+          <type>int</type>
+          <declname>level</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacedakku_1a9910f23501fd2ef5e9a829cdab0992be" kindref="member">Point2f</ref> &amp;</type>
+          <declname>st</declname>
+        </param>
+    <requiresclause>(std::is_same_v&lt;T, float&gt; || std::is_same_v&lt;T, Spectrum&gt;)    </requiresclause>
+        <briefdescription>
+<para>triangle filter </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/mipmap.h" line="103" column="5" bodyfile="src/core/mipmap.h" bodystart="257" bodyend="269"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1MipMap_1af7005d286fc2af45aa51a4b929ddfa87" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classdakku_1_1RgbSpectrum" kindref="compound">RgbSpectrum</ref></type>
@@ -249,7 +295,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/mipmap.h" line="92" column="15" bodyfile="src/core/mipmap.h" bodystart="92" bodyend="92"/>
+        <location file="src/core/mipmap.h" line="104" column="15" bodyfile="src/core/mipmap.h" bodystart="104" bodyend="104"/>
       </memberdef>
       </sectiondef>
     <requiresclause>(std::is_same_v&lt;T, float&gt; || std::is_same_v&lt;T, <ref refid="namespacedakku_1a72f253f8c73b2ec7fef8e3c83c0eac17" kindref="member">Spectrum</ref>&gt;)    </requiresclause>
@@ -268,19 +314,21 @@
 </parameterlist>
 </para>
     </detaileddescription>
-    <location file="src/core/mipmap.h" line="34" column="2" bodyfile="src/core/mipmap.h" bodystart="34" bodyend="93"/>
+    <location file="src/core/mipmap.h" line="34" column="2" bodyfile="src/core/mipmap.h" bodystart="34" bodyend="105"/>
     <listofallmembers>
       <member refid="classdakku_1_1MipMap_1abb83b1d932d1416a8d11ae568f7192d6" prot="private" virt="non-virtual"><scope>dakku::MipMap</scope><name>clamp</name></member>
       <member refid="classdakku_1_1MipMap_1af7005d286fc2af45aa51a4b929ddfa87" prot="private" virt="non-virtual"><scope>dakku::MipMap</scope><name>clamp</name></member>
       <member refid="classdakku_1_1MipMap_1ac6ca8840ae5bddcf0fd045f2a50fa414" prot="private" virt="non-virtual"><scope>dakku::MipMap</scope><name>doTrilinear</name></member>
       <member refid="classdakku_1_1MipMap_1a4134445335c6d3badf60022c7b7efb7c" prot="public" virt="non-virtual"><scope>dakku::MipMap</scope><name>height</name></member>
       <member refid="classdakku_1_1MipMap_1a1bdc88cec0a68524a7fd14ccc8f1c6bf" prot="public" virt="non-virtual"><scope>dakku::MipMap</scope><name>levels</name></member>
+      <member refid="classdakku_1_1MipMap_1ad25a7c8b822b665377740f296bd06a40" prot="public" virt="non-virtual"><scope>dakku::MipMap</scope><name>lookup</name></member>
       <member refid="classdakku_1_1MipMap_1a042ae1aae7c70c65cbb89d6a49ec7ed9" prot="private" virt="non-virtual"><scope>dakku::MipMap</scope><name>maxAnisotropy</name></member>
       <member refid="classdakku_1_1MipMap_1ad450a8b3b03fffeb74ff96856bcb0b4f" prot="public" virt="non-virtual"><scope>dakku::MipMap</scope><name>MipMap</name></member>
       <member refid="classdakku_1_1MipMap_1aa61ecf5582cca022c002e42cdfe97e11" prot="private" virt="non-virtual"><scope>dakku::MipMap</scope><name>pyramid</name></member>
       <member refid="classdakku_1_1MipMap_1a0fc81d9a52721498646375c374d8577e" prot="private" virt="non-virtual"><scope>dakku::MipMap</scope><name>resampleWeights</name></member>
       <member refid="classdakku_1_1MipMap_1abe2aa9f5f186ccfedfe9aa58385bbd40" prot="private" virt="non-virtual"><scope>dakku::MipMap</scope><name>resolution</name></member>
       <member refid="classdakku_1_1MipMap_1ac3c0905111e2b6d7d5440fe858eb8a37" prot="public" virt="non-virtual"><scope>dakku::MipMap</scope><name>texel</name></member>
+      <member refid="classdakku_1_1MipMap_1a37d1f785acc945b501cc3ee7f34027f6" prot="private" virt="non-virtual"><scope>dakku::MipMap</scope><name>triangle</name></member>
       <member refid="classdakku_1_1MipMap_1a6b6aaee191275ccfb13805dc1759d819" prot="public" virt="non-virtual"><scope>dakku::MipMap</scope><name>width</name></member>
       <member refid="classdakku_1_1MipMap_1ada7958bd81d9742463689df8dc6371e8" prot="private" virt="non-virtual"><scope>dakku::MipMap</scope><name>wrapMode</name></member>
     </listofallmembers>

@@ -384,6 +384,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#function-lookup" class="md-nav__link">
+    function lookup
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -439,6 +446,10 @@
 <td>const T &amp;</td>
 <td><strong><a href="/dakku/Classes/classdakku_1_1MipMap/#function-texel">texel</a></strong>(int level, int s, int t) const<br>get texel value</td>
 </tr>
+<tr>
+<td>T</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1MipMap/#function-lookup">lookup</a></strong>(const <a href="/dakku/Namespaces/namespacedakku/#using-point2f">Point2f</a> &amp; st, float width) const<br>trilinear triangle filter lookup <span class="arithmatex">\(\frac 1 w = 2 ^ {n - 1 - l}\)</span></td>
+</tr>
 </tbody>
 </table>
 <h2 id="detailed-description">Detailed Description</h2>
@@ -481,8 +492,15 @@
 <ul>
 <li><strong>level</strong> mipmap level </li>
 </ul>
+<h3 id="function-lookup">function lookup</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">T</span><span class="w"> </span><span class="n">lookup</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Point2f</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">st</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">width</span><span class="w"></span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+</code></pre></div>
+<p>trilinear triangle filter lookup <span class="arithmatex">\(\frac 1 w = 2 ^ {n - 1 - l}\)</span> </p>
 <hr />
-<p>Updated on 2022-04-11 at 10:48:03 +0000</p>
+<p>Updated on 2022-04-11 at 11:30:01 +0000</p>
 
               
             </article>

@@ -243,8 +243,10 @@
     <member refid="classdakku_1_1MipMap_1a4134445335c6d3badf60022c7b7efb7c" kind="function"><name>height</name></member>
     <member refid="classdakku_1_1MipMap_1a1bdc88cec0a68524a7fd14ccc8f1c6bf" kind="function"><name>levels</name></member>
     <member refid="classdakku_1_1MipMap_1ac3c0905111e2b6d7d5440fe858eb8a37" kind="function"><name>texel</name></member>
+    <member refid="classdakku_1_1MipMap_1ad25a7c8b822b665377740f296bd06a40" kind="function"><name>lookup</name></member>
     <member refid="classdakku_1_1MipMap_1a0fc81d9a52721498646375c374d8577e" kind="function"><name>resampleWeights</name></member>
     <member refid="classdakku_1_1MipMap_1abb83b1d932d1416a8d11ae568f7192d6" kind="function"><name>clamp</name></member>
+    <member refid="classdakku_1_1MipMap_1a37d1f785acc945b501cc3ee7f34027f6" kind="function"><name>triangle</name></member>
     <member refid="classdakku_1_1MipMap_1af7005d286fc2af45aa51a4b929ddfa87" kind="function"><name>clamp</name></member>
   </compound>
   <compound refid="classdakku_1_1Normal" kind="class"><name>dakku::Normal</name>
@@ -492,6 +494,7 @@
     <member refid="classdakku_1_1VectorBase_1afd74fa091a074a68449d1f8e493fd745" kind="friend"><name>exp</name></member>
     <member refid="classdakku_1_1VectorBase_1ac1a4a8247b5394c188dcea147def6a2a" kind="friend"><name>floor</name></member>
     <member refid="classdakku_1_1VectorBase_1ae6e15655167cb8377e29a6cc3198c18e" kind="friend"><name>ceil</name></member>
+    <member refid="classdakku_1_1VectorBase_1aa9cb373efabe5965e5f2f01d0c884084" kind="friend"><name>lerp</name></member>
   </compound>
   <compound refid="conceptdakku_1_1ArithmeticType" kind="concept"><name>dakku::ArithmeticType</name>
   </compound>
@@ -553,6 +556,7 @@
     <member refid="namespacedakku_1af5b2aaaf6403e90c77a4746ff984db8b" kind="function"><name>evalLanczos</name></member>
     <member refid="namespacedakku_1a41d1cd0b3579a6b8c5e22ab4e2146f00" kind="function"><name>log2Int</name></member>
     <member refid="namespacedakku_1a66eb6977bab34786fa743859b0ffc52d" kind="function"><name>log2Int</name></member>
+    <member refid="namespacedakku_1a837463872226179eb46dde52c558f1c1" kind="function"><name>lerp</name></member>
     <member refid="namespacedakku_1a1fd20fa9b44a1620a3ce2a133f53d83d" kind="function"><name>doTrilinear</name></member>
     <member refid="namespacedakku_1a5dc6c62020f3cb484153c43801d71ee0" kind="function"><name>maxAnisotropy</name></member>
     <member refid="namespacedakku_1a3daeac9348858af9dbb1a9c0415f5f84" kind="function"><name>wrapMode</name></member>

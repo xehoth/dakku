@@ -195,7 +195,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="152" column="1" bodyfile="src/core/fwd.h" bodystart="152" bodyend="-1"/>
+        <location file="src/core/fwd.h" line="161" column="1" bodyfile="src/core/fwd.h" bodystart="161" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespacedakku_1ae7de7b89895e76d4a3f1c653393dde69" prot="public" static="no">
         <templateparamlist>
@@ -509,7 +509,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="126" column="24" bodyfile="src/core/fwd.h" bodystart="126" bodyend="-1"/>
+        <location file="src/core/fwd.h" line="135" column="24" bodyfile="src/core/fwd.h" bodystart="135" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacedakku_1a60d80eeb1de44e0299e91a45d8f94446" prot="public" static="no" mutable="no">
         <type>class <ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
@@ -522,7 +522,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="127" column="24" bodyfile="src/core/fwd.h" bodystart="127" bodyend="-1"/>
+        <location file="src/core/fwd.h" line="136" column="24" bodyfile="src/core/fwd.h" bodystart="136" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacedakku_1a04dac11edaf26a2e58c8d00f31e6fa29" prot="public" static="no" mutable="no">
         <type>class <ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
@@ -535,7 +535,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="128" column="24" bodyfile="src/core/fwd.h" bodystart="128" bodyend="-1"/>
+        <location file="src/core/fwd.h" line="137" column="24" bodyfile="src/core/fwd.h" bodystart="137" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacedakku_1a96416914fd138a9ad1724211806eaadc" prot="public" static="no" mutable="no">
         <type>class <ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
@@ -548,7 +548,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="131" column="24" bodyfile="src/core/fwd.h" bodystart="131" bodyend="-1"/>
+        <location file="src/core/fwd.h" line="140" column="24" bodyfile="src/core/fwd.h" bodystart="140" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacedakku_1a5e92e662fd955a5d5e138ec343496ecb" prot="public" static="no" mutable="no">
         <type>class <ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
@@ -561,7 +561,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="132" column="24" bodyfile="src/core/fwd.h" bodystart="132" bodyend="-1"/>
+        <location file="src/core/fwd.h" line="141" column="24" bodyfile="src/core/fwd.h" bodystart="141" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacedakku_1a814749a6cf3cd7575912f5119a5be6ad" prot="public" static="no" mutable="no">
         <type>class <ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
@@ -574,7 +574,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="133" column="24" bodyfile="src/core/fwd.h" bodystart="133" bodyend="-1"/>
+        <location file="src/core/fwd.h" line="142" column="24" bodyfile="src/core/fwd.h" bodystart="142" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacedakku_1afb9578030bac745ae0282d66d44df22c" prot="public" static="no" mutable="no">
         <type>struct <ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
@@ -587,7 +587,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="134" column="24" bodyfile="src/core/fwd.h" bodystart="134" bodyend="-1"/>
+        <location file="src/core/fwd.h" line="143" column="24" bodyfile="src/core/fwd.h" bodystart="143" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacedakku_1ad32aa25f5584289eda626b47ae3525cc" prot="public" static="no" mutable="no">
         <type>class <ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
@@ -600,7 +600,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="145" column="24" bodyfile="src/core/fwd.h" bodystart="145" bodyend="-1"/>
+        <location file="src/core/fwd.h" line="154" column="24" bodyfile="src/core/fwd.h" bodystart="154" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacedakku_1a1bd6403f2998d6f8d22f87c99eca7eed" prot="public" static="no" mutable="no">
         <type>class <ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
@@ -613,7 +613,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="146" column="24" bodyfile="src/core/fwd.h" bodystart="146" bodyend="-1"/>
+        <location file="src/core/fwd.h" line="155" column="24" bodyfile="src/core/fwd.h" bodystart="155" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacedakku_1ad4c70953467b9d3d22eac250d8655aff" prot="public" static="no" mutable="no">
         <type>class <ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
@@ -626,7 +626,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="155" column="24" bodyfile="src/core/fwd.h" bodystart="155" bodyend="-1"/>
+        <location file="src/core/fwd.h" line="164" column="24" bodyfile="src/core/fwd.h" bodystart="164" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacedakku_1a24e2c761467417bba0b7b17b7c0e9f79" prot="public" static="no" mutable="no">
         <type>class <ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
@@ -639,7 +639,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="156" column="24" bodyfile="src/core/fwd.h" bodystart="156" bodyend="-1"/>
+        <location file="src/core/fwd.h" line="165" column="24" bodyfile="src/core/fwd.h" bodystart="165" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacedakku_1ad67fc67650e8ff59c3b25b9e9d462ee4" prot="public" static="no" mutable="no">
         <templateparamlist>
@@ -657,7 +657,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/mipmap.h" line="1" column="0" bodyfile="src/core/mipmap.h" bodystart="102" bodyend="-1"/>
+        <location file="src/core/mipmap.h" line="1" column="0" bodyfile="src/core/mipmap.h" bodystart="114" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -993,6 +993,39 @@
         </inbodydescription>
         <location file="src/core/fwd.h" line="122" column="12" bodyfile="src/core/fwd.h" bodystart="122" bodyend="124"/>
       </memberdef>
+      <memberdef kind="function" id="namespacedakku_1a837463872226179eb46dde52c558f1c1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>ArithmeticType</type>
+            <declname>T</declname>
+            <defname>T</defname>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T dakku::lerp</definition>
+        <argsstring>(T a, T b, T t)</argsstring>
+        <name>lerp</name>
+        <param>
+          <type>T</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>linear interpolation </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/fwd.h" line="131" column="10" bodyfile="src/core/fwd.h" bodystart="131" bodyend="133"/>
+      </memberdef>
       <memberdef kind="function" id="namespacedakku_1a1fd20fa9b44a1620a3ce2a133f53d83d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>dakku::doTrilinear</definition>
@@ -1007,7 +1040,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/mipmap.h" line="103" column="7"/>
+        <location file="src/core/mipmap.h" line="115" column="7"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1a5dc6c62020f3cb484153c43801d71ee0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -1023,7 +1056,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/mipmap.h" line="104" column="7"/>
+        <location file="src/core/mipmap.h" line="116" column="7"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1a3daeac9348858af9dbb1a9c0415f5f84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -1039,7 +1072,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/mipmap.h" line="105" column="7" bodyfile="src/core/mipmap.h" bodystart="105" bodyend="197"/>
+        <location file="src/core/mipmap.h" line="117" column="7" bodyfile="src/core/mipmap.h" bodystart="117" bodyend="209"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1ac5c65853b3b4155436da5b4402bebcad" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -1483,7 +1516,7 @@ the shorter edge mapped to [-1, 1], the longer [-ratio, ratio] left handed </par
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector_base.h" line="787" column="17" bodyfile="src/core/vector_base.h" bodystart="787" bodyend="790"/>
+        <location file="src/core/vector_base.h" line="797" column="17" bodyfile="src/core/vector_base.h" bodystart="797" bodyend="800"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1ab1fd7a566663942d0a6ddc982890d74b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
