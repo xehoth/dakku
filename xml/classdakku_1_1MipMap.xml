@@ -143,9 +143,9 @@
         </inbodydescription>
         <location file="src/core/mipmap.h" line="41" column="8" bodyfile="src/core/mipmap.h" bodystart="41" bodyend="41"/>
       </memberdef>
-      <memberdef kind="function" id="classdakku_1_1MipMap_1a1bdc88cec0a68524a7fd14ccc8f1c6bf" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>size_t</type>
-        <definition>size_t dakku::MipMap&lt; T &gt;::levels</definition>
+      <memberdef kind="function" id="classdakku_1_1MipMap_1a9f68ae9f89caa8b327bdb41813da2e37" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int dakku::MipMap&lt; T &gt;::levels</definition>
         <argsstring>() const</argsstring>
         <name>levels</name>
         <briefdescription>
@@ -154,7 +154,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/mipmap.h" line="42" column="11" bodyfile="src/core/mipmap.h" bodystart="42" bodyend="42"/>
+        <location file="src/core/mipmap.h" line="42" column="8" bodyfile="src/core/mipmap.h" bodystart="42" bodyend="42"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1MipMap_1ac3c0905111e2b6d7d5440fe858eb8a37" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const T &amp;</type>
@@ -240,7 +240,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/mipmap.h" line="57" column="5" bodyfile="src/core/mipmap.h" bodystart="274" bodyend="284"/>
+        <location file="src/core/mipmap.h" line="57" column="5" bodyfile="src/core/mipmap.h" bodystart="274" bodyend="285"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -346,7 +346,7 @@
       <member refid="classdakku_1_1MipMap_1af7005d286fc2af45aa51a4b929ddfa87" prot="private" virt="non-virtual"><scope>dakku::MipMap</scope><name>clamp</name></member>
       <member refid="classdakku_1_1MipMap_1ac6ca8840ae5bddcf0fd045f2a50fa414" prot="private" virt="non-virtual"><scope>dakku::MipMap</scope><name>doTrilinear</name></member>
       <member refid="classdakku_1_1MipMap_1a4134445335c6d3badf60022c7b7efb7c" prot="public" virt="non-virtual"><scope>dakku::MipMap</scope><name>height</name></member>
-      <member refid="classdakku_1_1MipMap_1a1bdc88cec0a68524a7fd14ccc8f1c6bf" prot="public" virt="non-virtual"><scope>dakku::MipMap</scope><name>levels</name></member>
+      <member refid="classdakku_1_1MipMap_1a9f68ae9f89caa8b327bdb41813da2e37" prot="public" virt="non-virtual"><scope>dakku::MipMap</scope><name>levels</name></member>
       <member refid="classdakku_1_1MipMap_1ad25a7c8b822b665377740f296bd06a40" prot="public" virt="non-virtual"><scope>dakku::MipMap</scope><name>lookup</name></member>
       <member refid="classdakku_1_1MipMap_1a130a8b13049ca7fe2525d5b0c3882795" prot="public" virt="non-virtual"><scope>dakku::MipMap</scope><name>lookup</name></member>
       <member refid="classdakku_1_1MipMap_1a042ae1aae7c70c65cbb89d6a49ec7ed9" prot="private" virt="non-virtual"><scope>dakku::MipMap</scope><name>maxAnisotropy</name></member>

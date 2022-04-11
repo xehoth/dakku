@@ -73,12 +73,15 @@
         </inbodydescription>
         <location file="src/textures/constant.h" line="12" column="12"/>
       </memberdef>
-      <memberdef kind="function" id="classdakku_1_1ConstantTexture_1af8a15246419b3a80396a98b63e452371" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+      <memberdef kind="function" id="classdakku_1_1ConstantTexture_1aade90401c3068b8534a84994dcd0acd7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="namespacedakku_1a72f253f8c73b2ec7fef8e3c83c0eac17" kindref="member">Spectrum</ref></type>
         <definition>Spectrum dakku::ConstantTexture::evaluate</definition>
-        <argsstring>() const override</argsstring>
+        <argsstring>(const SurfaceInteraction &amp;) const override</argsstring>
         <name>evaluate</name>
-        <reimplements refid="classdakku_1_1Texture_1a3acfc7cc9268f7f320b60de7f28029c2">evaluate</reimplements>
+        <reimplements refid="classdakku_1_1Texture_1af8a07f117e2286587cc7d06ac54b3ca6">evaluate</reimplements>
+        <param>
+          <type>const <ref refid="classdakku_1_1SurfaceInteraction" kindref="compound">SurfaceInteraction</ref> &amp;</type>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -134,7 +137,7 @@
       <member refid="classdakku_1_1ConstantTexture_1a0aeadd0c4db60fc0bd81664ef0d23fdb" prot="public" virt="non-virtual"><scope>dakku::ConstantTexture</scope><name>ConstantTexture</name></member>
       <member refid="classdakku_1_1ConstantTexture_1ad9eb08983dde4d7ceae32d9396c01720" prot="public" virt="non-virtual"><scope>dakku::ConstantTexture</scope><name>DAKKU_DECLARE_OBJECT</name></member>
       <member refid="classdakku_1_1Texture_1a34d7f1518a45937548bbfb8e9db857e4" prot="public" virt="non-virtual" ambiguityscope="dakku::Texture::"><scope>dakku::ConstantTexture</scope><name>DAKKU_DECLARE_OBJECT</name></member>
-      <member refid="classdakku_1_1ConstantTexture_1af8a15246419b3a80396a98b63e452371" prot="public" virt="virtual"><scope>dakku::ConstantTexture</scope><name>evaluate</name></member>
+      <member refid="classdakku_1_1ConstantTexture_1aade90401c3068b8534a84994dcd0acd7" prot="public" virt="virtual"><scope>dakku::ConstantTexture</scope><name>evaluate</name></member>
       <member refid="classdakku_1_1Texture_1a04d50661884334a42b742e1214b77382" prot="protected" virt="non-virtual"><scope>dakku::ConstantTexture</scope><name>floatType</name></member>
       <member refid="classdakku_1_1Object_1a543f734268f7be81badecee6cf7245cc" prot="public" virt="virtual"><scope>dakku::ConstantTexture</scope><name>getClassName</name></member>
       <member refid="classdakku_1_1Object_1a247ed68865f464d511b7fdb85467c354" prot="public" virt="non-virtual"><scope>dakku::ConstantTexture</scope><name>getClassNameStatic</name></member>
@@ -143,6 +146,7 @@
       <member refid="classdakku_1_1Object_1a055e32b0624d9a96fc2014fe5d9d0c81" prot="public" virt="non-virtual"><scope>dakku::ConstantTexture</scope><name>isBaseOf</name></member>
       <member refid="classdakku_1_1Object_1add47b28fc1878f008bb6664a83faad72" prot="public" virt="non-virtual"><scope>dakku::ConstantTexture</scope><name>isDerivedFrom</name></member>
       <member refid="classdakku_1_1Object_1a20e78d46fa11d575d63e048279150eac" prot="public" virt="non-virtual"><scope>dakku::ConstantTexture</scope><name>Object</name></member>
+      <member refid="classdakku_1_1Texture_1ad4e3b656e62b600a89b39b25501deded" prot="public" virt="non-virtual"><scope>dakku::ConstantTexture</scope><name>Texture</name></member>
       <member refid="classdakku_1_1Object_1a65d91c04e480b827fa495df96af2826b" prot="public" virt="virtual"><scope>dakku::ConstantTexture</scope><name>toString</name></member>
       <member refid="classdakku_1_1ConstantTexture_1af4dc898baf51be9db4582df096e3067d" prot="private" virt="non-virtual"><scope>dakku::ConstantTexture</scope><name>value</name></member>
       <member refid="classdakku_1_1Object_1a0c792f089351caf3fa7a704c86ce903d" prot="public" virt="virtual"><scope>dakku::ConstantTexture</scope><name>~Object</name></member>

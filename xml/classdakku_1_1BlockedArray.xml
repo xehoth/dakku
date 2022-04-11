@@ -27,7 +27,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/blocked_array.h" line="113" column="5" bodyfile="src/core/blocked_array.h" bodystart="113" bodyend="-1"/>
+        <location file="src/core/blocked_array.h" line="112" column="5" bodyfile="src/core/blocked_array.h" bodystart="112" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classdakku_1_1BlockedArray_1ac0741d200cf5e107805b8973faa25c5a" prot="private" static="no" mutable="no">
         <type>const int</type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/blocked_array.h" line="115" column="13" bodyfile="src/core/blocked_array.h" bodystart="115" bodyend="-1"/>
+        <location file="src/core/blocked_array.h" line="114" column="13" bodyfile="src/core/blocked_array.h" bodystart="114" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classdakku_1_1BlockedArray_1a687d76d2769fd88b846662389057989f" prot="private" static="no" mutable="no">
         <type>const int</type>
@@ -55,7 +55,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/blocked_array.h" line="117" column="13" bodyfile="src/core/blocked_array.h" bodystart="117" bodyend="-1"/>
+        <location file="src/core/blocked_array.h" line="116" column="13" bodyfile="src/core/blocked_array.h" bodystart="116" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classdakku_1_1BlockedArray_1a4167d153925c2a35446a920df32533ce" prot="private" static="no" mutable="no">
         <type>const int</type>
@@ -69,7 +69,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/blocked_array.h" line="119" column="13" bodyfile="src/core/blocked_array.h" bodystart="119" bodyend="-1"/>
+        <location file="src/core/blocked_array.h" line="118" column="13" bodyfile="src/core/blocked_array.h" bodystart="118" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -124,7 +124,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/blocked_array.h" line="28" column="12" bodyfile="src/core/blocked_array.h" bodystart="28" bodyend="37"/>
+        <location file="src/core/blocked_array.h" line="29" column="12" bodyfile="src/core/blocked_array.h" bodystart="29" bodyend="37"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1BlockedArray_1ad5d1543d19412b247cfa7baab90e42ef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -137,7 +137,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/blocked_array.h" line="39" column="3" bodyfile="src/core/blocked_array.h" bodystart="39" bodyend="43"/>
+        <location file="src/core/blocked_array.h" line="39" column="3" bodyfile="src/core/blocked_array.h" bodystart="39" bodyend="42"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1BlockedArray_1ae216af42c6652377e419936650dd0b3f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -167,7 +167,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/blocked_array.h" line="51" column="8" bodyfile="src/core/blocked_array.h" bodystart="51" bodyend="51"/>
+        <location file="src/core/blocked_array.h" line="50" column="8" bodyfile="src/core/blocked_array.h" bodystart="50" bodyend="50"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1BlockedArray_1a4578be96d100f192600a8097145df17e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -197,7 +197,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/blocked_array.h" line="59" column="8" bodyfile="src/core/blocked_array.h" bodystart="59" bodyend="59"/>
+        <location file="src/core/blocked_array.h" line="58" column="8" bodyfile="src/core/blocked_array.h" bodystart="58" bodyend="58"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1BlockedArray_1a4f2ff6014a4a3da937ac35fa15c26174" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>constexpr int</type>
@@ -211,7 +211,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/blocked_array.h" line="65" column="18" bodyfile="src/core/blocked_array.h" bodystart="65" bodyend="65"/>
+        <location file="src/core/blocked_array.h" line="64" column="18" bodyfile="src/core/blocked_array.h" bodystart="64" bodyend="64"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1BlockedArray_1ab77aaff960362bd8167084053416879a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -241,7 +241,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/blocked_array.h" line="74" column="8" bodyfile="src/core/blocked_array.h" bodystart="74" bodyend="76"/>
+        <location file="src/core/blocked_array.h" line="73" column="8" bodyfile="src/core/blocked_array.h" bodystart="73" bodyend="75"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1BlockedArray_1af9cd727849a0f2fff54bee55d0aeb41f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -254,7 +254,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/blocked_array.h" line="78" column="8" bodyfile="src/core/blocked_array.h" bodystart="78" bodyend="78"/>
+        <location file="src/core/blocked_array.h" line="77" column="8" bodyfile="src/core/blocked_array.h" bodystart="77" bodyend="77"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1BlockedArray_1aef7832e591051516bf31fd42ed6b446c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -267,7 +267,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/blocked_array.h" line="79" column="8" bodyfile="src/core/blocked_array.h" bodystart="79" bodyend="79"/>
+        <location file="src/core/blocked_array.h" line="78" column="8" bodyfile="src/core/blocked_array.h" bodystart="78" bodyend="78"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1BlockedArray_1abb0eb492d206324b7ae2f7cb1d2c9cc0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const T &amp;</type>
@@ -289,7 +289,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/blocked_array.h" line="85" column="11" bodyfile="src/core/blocked_array.h" bodystart="85" bodyend="91"/>
+        <location file="src/core/blocked_array.h" line="84" column="11" bodyfile="src/core/blocked_array.h" bodystart="84" bodyend="90"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1BlockedArray_1afc5c7e0d533d8988acbad8dbbd7a2a6c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>T &amp;</type>
@@ -311,7 +311,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/blocked_array.h" line="97" column="5" bodyfile="src/core/blocked_array.h" bodystart="97" bodyend="99"/>
+        <location file="src/core/blocked_array.h" line="96" column="5" bodyfile="src/core/blocked_array.h" bodystart="96" bodyend="98"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1BlockedArray_1a0ca6195f068c9bb256df5b0b7c2123f0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -329,7 +329,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/blocked_array.h" line="105" column="8" bodyfile="src/core/blocked_array.h" bodystart="105" bodyend="109"/>
+        <location file="src/core/blocked_array.h" line="104" column="8" bodyfile="src/core/blocked_array.h" bodystart="104" bodyend="108"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -355,7 +355,7 @@
 </parameterlist>
 </para>
     </detaileddescription>
-    <location file="src/core/blocked_array.h" line="19" column="1" bodyfile="src/core/blocked_array.h" bodystart="19" bodyend="120"/>
+    <location file="src/core/blocked_array.h" line="20" column="1" bodyfile="src/core/blocked_array.h" bodystart="20" bodyend="119"/>
     <listofallmembers>
       <member refid="classdakku_1_1BlockedArray_1a03591132bf9c0e8adbb3f0257d5294e1" prot="public" virt="non-virtual"><scope>dakku::BlockedArray</scope><name>BlockedArray</name></member>
       <member refid="classdakku_1_1BlockedArray_1ae216af42c6652377e419936650dd0b3f" prot="public" virt="non-virtual"><scope>dakku::BlockedArray</scope><name>blockIdx</name></member>

@@ -1,0 +1,181 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="classdakku_1_1ImageTexture" kind="class" language="C++" prot="public">
+    <compoundname>dakku::ImageTexture</compoundname>
+    <basecompoundref refid="classdakku_1_1Texture" prot="public" virt="non-virtual">dakku::Texture</basecompoundref>
+    <includes refid="image_8h" local="no">image.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdakku_1_1ImageTexture_1a6760ffc4f832c5d18ca3a96178c8ef1a" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="classdakku_1_1TextureMapping2D" kindref="compound">TextureMapping2D</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;TextureMapping2D&gt; dakku::ImageTexture::mapping</definition>
+        <argsstring></argsstring>
+        <name>mapping</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/textures/image.h" line="19" column="19" bodyfile="src/textures/image.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdakku_1_1ImageTexture_1a205e6c8865159b8de73a594ecba02bb6" prot="private" static="no" mutable="no">
+        <type>std::variant&lt; std::unique_ptr&lt; <ref refid="classdakku_1_1MipMap" kindref="compound">MipMap</ref>&lt; float &gt; &gt;, std::unique_ptr&lt; <ref refid="classdakku_1_1MipMap" kindref="compound">MipMap</ref>&lt; <ref refid="namespacedakku_1a72f253f8c73b2ec7fef8e3c83c0eac17" kindref="member">Spectrum</ref> &gt; &gt; &gt;</type>
+        <definition>std::variant&lt;std::unique_ptr&lt;MipMap&lt;float&gt; &gt;, std::unique_ptr&lt;MipMap&lt;Spectrum&gt; &gt; &gt; dakku::ImageTexture::mipmap</definition>
+        <argsstring></argsstring>
+        <name>mipmap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/textures/image.h" line="22" column="7" bodyfile="src/textures/image.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdakku_1_1ImageTexture_1ab92c8d48435998844e940e6da4259402" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dakku::ImageTexture::DAKKU_DECLARE_OBJECT</definition>
+        <argsstring>(ImageTexture, Texture)</argsstring>
+        <name>DAKKU_DECLARE_OBJECT</name>
+        <param>
+          <type><ref refid="classdakku_1_1ImageTexture" kindref="compound">ImageTexture</ref></type>
+        </param>
+        <param>
+          <type><ref refid="classdakku_1_1Texture" kindref="compound">Texture</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/textures/image.h" line="11" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1ImageTexture_1a5bdd4ddb6aaa38e4e5318559d5c0ead3" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dakku::ImageTexture::ImageTexture</definition>
+        <argsstring>(std::unique_ptr&lt; TextureMapping2D &gt; m, const std::filesystem::path &amp;fileName, bool doTrilinear, float maxAnisotropy, ImageWrapMode mode, float scale, bool gamma, bool floatType=false)</argsstring>
+        <name>ImageTexture</name>
+        <param>
+          <type>std::unique_ptr&lt; <ref refid="classdakku_1_1TextureMapping2D" kindref="compound">TextureMapping2D</ref> &gt;</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>const std::filesystem::path &amp;</type>
+          <declname>fileName</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>doTrilinear</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>maxAnisotropy</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacedakku_1a9f69e6875268e5345a38fd61108935dc" kindref="member">ImageWrapMode</ref></type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>scale</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>gamma</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>floatType</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/textures/image.h" line="12" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1ImageTexture_1a1c8b8cb8b6ee872474195f8e71d47529" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="namespacedakku_1a72f253f8c73b2ec7fef8e3c83c0eac17" kindref="member">Spectrum</ref></type>
+        <definition>Spectrum dakku::ImageTexture::evaluate</definition>
+        <argsstring>(const SurfaceInteraction &amp;si) const override</argsstring>
+        <name>evaluate</name>
+        <reimplements refid="classdakku_1_1Texture_1af8a07f117e2286587cc7d06ac54b3ca6">evaluate</reimplements>
+        <param>
+          <type>const <ref refid="classdakku_1_1SurfaceInteraction" kindref="compound">SurfaceInteraction</ref> &amp;</type>
+          <declname>si</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/textures/image.h" line="16" column="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>dakku::ImageTexture</label>
+        <link refid="classdakku_1_1ImageTexture"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>dakku::Object</label>
+        <link refid="classdakku_1_1Object"/>
+      </node>
+      <node id="2">
+        <label>dakku::Texture</label>
+        <link refid="classdakku_1_1Texture"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>dakku::ImageTexture</label>
+        <link refid="classdakku_1_1ImageTexture"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>dakku::Object</label>
+        <link refid="classdakku_1_1Object"/>
+      </node>
+      <node id="2">
+        <label>dakku::Texture</label>
+        <link refid="classdakku_1_1Texture"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/textures/image.h" line="9" column="1" bodyfile="src/textures/image.h" bodystart="9" bodyend="23"/>
+    <listofallmembers>
+      <member refid="classdakku_1_1ImageTexture_1ab92c8d48435998844e940e6da4259402" prot="public" virt="non-virtual"><scope>dakku::ImageTexture</scope><name>DAKKU_DECLARE_OBJECT</name></member>
+      <member refid="classdakku_1_1Texture_1a34d7f1518a45937548bbfb8e9db857e4" prot="public" virt="non-virtual" ambiguityscope="dakku::Texture::"><scope>dakku::ImageTexture</scope><name>DAKKU_DECLARE_OBJECT</name></member>
+      <member refid="classdakku_1_1ImageTexture_1a1c8b8cb8b6ee872474195f8e71d47529" prot="public" virt="virtual"><scope>dakku::ImageTexture</scope><name>evaluate</name></member>
+      <member refid="classdakku_1_1Texture_1a04d50661884334a42b742e1214b77382" prot="protected" virt="non-virtual"><scope>dakku::ImageTexture</scope><name>floatType</name></member>
+      <member refid="classdakku_1_1Object_1a543f734268f7be81badecee6cf7245cc" prot="public" virt="virtual"><scope>dakku::ImageTexture</scope><name>getClassName</name></member>
+      <member refid="classdakku_1_1Object_1a247ed68865f464d511b7fdb85467c354" prot="public" virt="non-virtual"><scope>dakku::ImageTexture</scope><name>getClassNameStatic</name></member>
+      <member refid="classdakku_1_1Object_1accec0632e79097564677055bef4220bd" prot="public" virt="virtual"><scope>dakku::ImageTexture</scope><name>getParentName</name></member>
+      <member refid="classdakku_1_1Object_1a08ec83c660afb1850455ef30c43fa29c" prot="public" virt="non-virtual"><scope>dakku::ImageTexture</scope><name>getParentNameStatic</name></member>
+      <member refid="classdakku_1_1ImageTexture_1a5bdd4ddb6aaa38e4e5318559d5c0ead3" prot="public" virt="non-virtual"><scope>dakku::ImageTexture</scope><name>ImageTexture</name></member>
+      <member refid="classdakku_1_1Object_1a055e32b0624d9a96fc2014fe5d9d0c81" prot="public" virt="non-virtual"><scope>dakku::ImageTexture</scope><name>isBaseOf</name></member>
+      <member refid="classdakku_1_1Object_1add47b28fc1878f008bb6664a83faad72" prot="public" virt="non-virtual"><scope>dakku::ImageTexture</scope><name>isDerivedFrom</name></member>
+      <member refid="classdakku_1_1ImageTexture_1a6760ffc4f832c5d18ca3a96178c8ef1a" prot="private" virt="non-virtual"><scope>dakku::ImageTexture</scope><name>mapping</name></member>
+      <member refid="classdakku_1_1ImageTexture_1a205e6c8865159b8de73a594ecba02bb6" prot="private" virt="non-virtual"><scope>dakku::ImageTexture</scope><name>mipmap</name></member>
+      <member refid="classdakku_1_1Object_1a20e78d46fa11d575d63e048279150eac" prot="public" virt="non-virtual"><scope>dakku::ImageTexture</scope><name>Object</name></member>
+      <member refid="classdakku_1_1Texture_1ad4e3b656e62b600a89b39b25501deded" prot="public" virt="non-virtual"><scope>dakku::ImageTexture</scope><name>Texture</name></member>
+      <member refid="classdakku_1_1Object_1a65d91c04e480b827fa495df96af2826b" prot="public" virt="virtual"><scope>dakku::ImageTexture</scope><name>toString</name></member>
+      <member refid="classdakku_1_1Object_1a0c792f089351caf3fa7a704c86ce903d" prot="public" virt="virtual"><scope>dakku::ImageTexture</scope><name>~Object</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

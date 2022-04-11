@@ -5,6 +5,7 @@
     <innerfile refid="textures_2api_8h">api.h</innerfile>
     <innerfile refid="constant_8h">constant.h</innerfile>
     <innerfile refid="textures_2fwd_8h">fwd.h</innerfile>
+    <innerfile refid="image_8h">image.h</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

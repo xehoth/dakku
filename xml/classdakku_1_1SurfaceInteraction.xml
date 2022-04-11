@@ -4,6 +4,77 @@
     <compoundname>dakku::SurfaceInteraction</compoundname>
     <basecompoundref refid="structdakku_1_1Interaction" prot="public" virt="non-virtual">dakku::Interaction</basecompoundref>
     <includes refid="interaction_8h" local="no">interaction.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classdakku_1_1SurfaceInteraction_1a7774eb557414ba464259463b5ab7962f" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacedakku_1a9910f23501fd2ef5e9a829cdab0992be" kindref="member">Point2f</ref></type>
+        <definition>Point2f dakku::SurfaceInteraction::uv</definition>
+        <argsstring></argsstring>
+        <name>uv</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/interaction.h" line="81" column="11" bodyfile="src/core/interaction.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdakku_1_1SurfaceInteraction_1a07a0b261007cd1ca320be68615699e4a" prot="public" static="no" mutable="yes">
+        <type>float</type>
+        <definition>float dakku::SurfaceInteraction::dudx</definition>
+        <argsstring></argsstring>
+        <name>dudx</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/interaction.h" line="82" column="17" bodyfile="src/core/interaction.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdakku_1_1SurfaceInteraction_1ac577146c7a6332fca84741431f26bab3" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float dakku::SurfaceInteraction::dvdx</definition>
+        <argsstring></argsstring>
+        <name>dvdx</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/interaction.h" line="82" column="23" bodyfile="src/core/interaction.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdakku_1_1SurfaceInteraction_1a06588edddf126d096896a9dccd32e3de" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float dakku::SurfaceInteraction::dudy</definition>
+        <argsstring></argsstring>
+        <name>dudy</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/interaction.h" line="82" column="29" bodyfile="src/core/interaction.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdakku_1_1SurfaceInteraction_1a067307528f3c62dcceb6fe003cca1e1a" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float dakku::SurfaceInteraction::dvdy</definition>
+        <argsstring></argsstring>
+        <name>dvdy</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/interaction.h" line="82" column="35" bodyfile="src/core/interaction.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
     <briefdescription>
 <para>surface interaction </para>
     </briefdescription>
@@ -70,10 +141,17 @@
         <link refid="classdakku_1_1SurfaceInteraction"/>
         <childnode refid="2" relation="public-inheritance">
         </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>uv</edgelabel>
+        </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/core/interaction.h" line="79" column="1" bodyfile="src/core/interaction.h" bodystart="79" bodyend="81"/>
+    <location file="src/core/interaction.h" line="79" column="1" bodyfile="src/core/interaction.h" bodystart="79" bodyend="83"/>
     <listofallmembers>
+      <member refid="classdakku_1_1SurfaceInteraction_1a07a0b261007cd1ca320be68615699e4a" prot="public" virt="non-virtual"><scope>dakku::SurfaceInteraction</scope><name>dudx</name></member>
+      <member refid="classdakku_1_1SurfaceInteraction_1a06588edddf126d096896a9dccd32e3de" prot="public" virt="non-virtual"><scope>dakku::SurfaceInteraction</scope><name>dudy</name></member>
+      <member refid="classdakku_1_1SurfaceInteraction_1ac577146c7a6332fca84741431f26bab3" prot="public" virt="non-virtual"><scope>dakku::SurfaceInteraction</scope><name>dvdx</name></member>
+      <member refid="classdakku_1_1SurfaceInteraction_1a067307528f3c62dcceb6fe003cca1e1a" prot="public" virt="non-virtual"><scope>dakku::SurfaceInteraction</scope><name>dvdy</name></member>
       <member refid="structdakku_1_1Interaction_1a779a213fff1311416de40299c0a6f3b8" prot="public" virt="non-virtual"><scope>dakku::SurfaceInteraction</scope><name>Interaction</name></member>
       <member refid="structdakku_1_1Interaction_1a699eb6f8e671ddd0cb7358aefe5474c3" prot="public" virt="non-virtual"><scope>dakku::SurfaceInteraction</scope><name>Interaction</name></member>
       <member refid="structdakku_1_1Interaction_1a5e9510b579b3a3b277f57716ce0c6dad" prot="public" virt="non-virtual"><scope>dakku::SurfaceInteraction</scope><name>isMediumInteraction</name></member>
@@ -83,6 +161,7 @@
       <member refid="structdakku_1_1Interaction_1afb8304e8d26f8149bac1ee51ec949b51" prot="public" virt="non-virtual"><scope>dakku::SurfaceInteraction</scope><name>spawnRay</name></member>
       <member refid="structdakku_1_1Interaction_1ad991618b3ef561e9f217ccd2075e918e" prot="public" virt="non-virtual"><scope>dakku::SurfaceInteraction</scope><name>spawnRayTo</name></member>
       <member refid="structdakku_1_1Interaction_1a26bc9218867d012021b32a5fc97f2cbd" prot="public" virt="non-virtual"><scope>dakku::SurfaceInteraction</scope><name>spawnRayTo</name></member>
+      <member refid="classdakku_1_1SurfaceInteraction_1a7774eb557414ba464259463b5ab7962f" prot="public" virt="non-virtual"><scope>dakku::SurfaceInteraction</scope><name>uv</name></member>
       <member refid="structdakku_1_1Interaction_1a09bac9c0ca5d0e616415f5591a930866" prot="public" virt="non-virtual"><scope>dakku::SurfaceInteraction</scope><name>wo</name></member>
     </listofallmembers>
   </compounddef>

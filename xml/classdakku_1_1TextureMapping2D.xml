@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="classdakku_1_1TextureMapping2D" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>dakku::TextureMapping2D</compoundname>
+    <basecompoundref refid="classdakku_1_1Object" prot="public" virt="non-virtual">dakku::Object</basecompoundref>
+    <derivedcompoundref refid="classdakku_1_1UvMapping2D" prot="public" virt="non-virtual">dakku::UvMapping2D</derivedcompoundref>
+    <includes refid="texture_8h" local="no">texture.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdakku_1_1TextureMapping2D_1ae978410835f07f3806e4618f5271d248" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dakku::TextureMapping2D::DAKKU_DECLARE_OBJECT</definition>
+        <argsstring>(TextureMapping2D, Object)</argsstring>
+        <name>DAKKU_DECLARE_OBJECT</name>
+        <param>
+          <type><ref refid="classdakku_1_1TextureMapping2D" kindref="compound">TextureMapping2D</ref></type>
+        </param>
+        <param>
+          <type><ref refid="classdakku_1_1Object" kindref="compound">Object</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/texture.h" line="13" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1TextureMapping2D_1a5949962731e12cc33f18af3245436f95" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="namespacedakku_1a9910f23501fd2ef5e9a829cdab0992be" kindref="member">Point2f</ref></type>
+        <definition>virtual Point2f dakku::TextureMapping2D::map</definition>
+        <argsstring>(const SurfaceInteraction &amp;si, Vector2f &amp;dstdx, Vector2f &amp;dstdy) const =0</argsstring>
+        <name>map</name>
+        <reimplementedby refid="classdakku_1_1UvMapping2D_1a04c457d53676eceee2ee7016ed0ebfcf">map</reimplementedby>
+        <param>
+          <type>const <ref refid="classdakku_1_1SurfaceInteraction" kindref="compound">SurfaceInteraction</ref> &amp;</type>
+          <declname>si</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacedakku_1abfd5a177365f8ffec7ab23d6cb6db8c0" kindref="member">Vector2f</ref> &amp;</type>
+          <declname>dstdx</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacedakku_1abfd5a177365f8ffec7ab23d6cb6db8c0" kindref="member">Vector2f</ref> &amp;</type>
+          <declname>dstdy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/texture.h" line="15" column="19"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>2d texture mapping </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>dakku::Object</label>
+        <link refid="classdakku_1_1Object"/>
+      </node>
+      <node id="1">
+        <label>dakku::TextureMapping2D</label>
+        <link refid="classdakku_1_1TextureMapping2D"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>dakku::UvMapping2D</label>
+        <link refid="classdakku_1_1UvMapping2D"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>dakku::Object</label>
+        <link refid="classdakku_1_1Object"/>
+      </node>
+      <node id="1">
+        <label>dakku::TextureMapping2D</label>
+        <link refid="classdakku_1_1TextureMapping2D"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/core/texture.h" line="11" column="1" bodyfile="src/core/texture.h" bodystart="11" bodyend="17"/>
+    <listofallmembers>
+      <member refid="classdakku_1_1TextureMapping2D_1ae978410835f07f3806e4618f5271d248" prot="public" virt="non-virtual"><scope>dakku::TextureMapping2D</scope><name>DAKKU_DECLARE_OBJECT</name></member>
+      <member refid="classdakku_1_1Object_1a543f734268f7be81badecee6cf7245cc" prot="public" virt="virtual"><scope>dakku::TextureMapping2D</scope><name>getClassName</name></member>
+      <member refid="classdakku_1_1Object_1a247ed68865f464d511b7fdb85467c354" prot="public" virt="non-virtual"><scope>dakku::TextureMapping2D</scope><name>getClassNameStatic</name></member>
+      <member refid="classdakku_1_1Object_1accec0632e79097564677055bef4220bd" prot="public" virt="virtual"><scope>dakku::TextureMapping2D</scope><name>getParentName</name></member>
+      <member refid="classdakku_1_1Object_1a08ec83c660afb1850455ef30c43fa29c" prot="public" virt="non-virtual"><scope>dakku::TextureMapping2D</scope><name>getParentNameStatic</name></member>
+      <member refid="classdakku_1_1Object_1a055e32b0624d9a96fc2014fe5d9d0c81" prot="public" virt="non-virtual"><scope>dakku::TextureMapping2D</scope><name>isBaseOf</name></member>
+      <member refid="classdakku_1_1Object_1add47b28fc1878f008bb6664a83faad72" prot="public" virt="non-virtual"><scope>dakku::TextureMapping2D</scope><name>isDerivedFrom</name></member>
+      <member refid="classdakku_1_1TextureMapping2D_1a5949962731e12cc33f18af3245436f95" prot="public" virt="pure-virtual"><scope>dakku::TextureMapping2D</scope><name>map</name></member>
+      <member refid="classdakku_1_1Object_1a20e78d46fa11d575d63e048279150eac" prot="public" virt="non-virtual"><scope>dakku::TextureMapping2D</scope><name>Object</name></member>
+      <member refid="classdakku_1_1Object_1a65d91c04e480b827fa495df96af2826b" prot="public" virt="virtual"><scope>dakku::TextureMapping2D</scope><name>toString</name></member>
+      <member refid="classdakku_1_1Object_1a0c792f089351caf3fa7a704c86ce903d" prot="public" virt="virtual"><scope>dakku::TextureMapping2D</scope><name>~Object</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

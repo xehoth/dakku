@@ -19,6 +19,7 @@
     <innerclass refid="structdakku_1_1FilmTilePixel" prot="public">dakku::FilmTilePixel</innerclass>
     <innerclass refid="classdakku_1_1Filter" prot="public">dakku::Filter</innerclass>
     <innerclass refid="classdakku_1_1GuiEngine" prot="public">dakku::GuiEngine</innerclass>
+    <innerclass refid="classdakku_1_1ImageTexture" prot="public">dakku::ImageTexture</innerclass>
     <innerclass refid="classdakku_1_1InputStream" prot="public">dakku::InputStream</innerclass>
     <innerclass refid="structdakku_1_1Interaction" prot="public">dakku::Interaction</innerclass>
     <innerclass refid="classdakku_1_1L1CacheLineAlignedResource" prot="public">dakku::L1CacheLineAlignedResource</innerclass>
@@ -40,8 +41,10 @@
     <innerclass refid="classdakku_1_1Shape" prot="public">dakku::Shape</innerclass>
     <innerclass refid="classdakku_1_1SurfaceInteraction" prot="public">dakku::SurfaceInteraction</innerclass>
     <innerclass refid="classdakku_1_1Texture" prot="public">dakku::Texture</innerclass>
+    <innerclass refid="classdakku_1_1TextureMapping2D" prot="public">dakku::TextureMapping2D</innerclass>
     <innerclass refid="classdakku_1_1Transform" prot="public">dakku::Transform</innerclass>
     <innerclass refid="classdakku_1_1TriangleFilter" prot="public">dakku::TriangleFilter</innerclass>
+    <innerclass refid="classdakku_1_1UvMapping2D" prot="public">dakku::UvMapping2D</innerclass>
     <innerclass refid="classdakku_1_1Vector" prot="public">dakku::Vector</innerclass>
     <innerclass refid="classdakku_1_1VectorBase" prot="public">dakku::VectorBase</innerclass>
       <sectiondef kind="enum">
@@ -1631,14 +1634,6 @@ the shorter edge mapped to [-1, 1], the longer [-ratio, ratio] left handed </par
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>rgb</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>image data </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
 <parametername>totalResX</parametername>
 </parameternamelist>
 <parameterdescription>
@@ -1686,13 +1681,110 @@ the shorter edge mapped to [-1, 1], the longer [-ratio, ratio] left handed </par
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>DAKKU_EXPORT_IMAGEIO </para>
-</simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/imageio/imageio.h" line="21" column="27" declfile="src/imageio/imageio.h" declline="21" declcolumn="27"/>
+        <location file="src/imageio/imageio.h" line="20" column="27" declfile="src/imageio/imageio.h" declline="20" declcolumn="27"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1a2dd1a538eac12b436aad8012e5af1268" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="imageio_2fwd_8h_1ab0769d84ea09188408c5c02f1e8d42aa" kindref="member">DAKKU_EXPORT_IMAGEIO</ref> float *</type>
+        <definition>DAKKU_EXPORT_IMAGEIO float * dakku::readImage</definition>
+        <argsstring>(const std::filesystem::path &amp;path, int &amp;resX, int &amp;resY, bool flipVertical=true, int gamma=-1, float scale=1)</argsstring>
+        <name>readImage</name>
+        <param>
+          <type>const std::filesystem::path &amp;</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>resX</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>resY</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>flipVertical</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>gamma</declname>
+          <defval>-1</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>scale</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+<para>read image from file <bold>need to free memory manually</bold> </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>image file path </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rgb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>image buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">resX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>image resolution x (width) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">resY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>image resolution y (height) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flipVertical</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>flip y </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gamma</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>do inverse gamma correction: -1 auto, 0 not, 1 do </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>scale the image value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/imageio/imageio.h" line="39" column="28" declfile="src/imageio/imageio.h" declline="39" declcolumn="28"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1a56ee8590ffd24bd3f70b555372fa4697" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -1733,7 +1825,7 @@ the shorter edge mapped to [-1, 1], the longer [-ratio, ratio] left handed </par
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/textures/api.h" line="13" column="1" declfile="src/textures/api.h" declline="13" declcolumn="1"/>
+        <location file="src/textures/api.h" line="14" column="1" declfile="src/textures/api.h" declline="14" declcolumn="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

@@ -8,6 +8,7 @@
     <derivedcompoundref refid="classdakku_1_1SerializableObject" prot="public" virt="non-virtual">dakku::SerializableObject</derivedcompoundref>
     <derivedcompoundref refid="classdakku_1_1Shape" prot="public" virt="non-virtual">dakku::Shape</derivedcompoundref>
     <derivedcompoundref refid="classdakku_1_1Texture" prot="public" virt="non-virtual">dakku::Texture</derivedcompoundref>
+    <derivedcompoundref refid="classdakku_1_1TextureMapping2D" prot="public" virt="non-virtual">dakku::TextureMapping2D</derivedcompoundref>
     <includes refid="object_8h" local="no">object.h</includes>
       <sectiondef kind="public-func">
       <memberdef kind="function" id="classdakku_1_1Object_1a0c792f089351caf3fa7a704c86ce903d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
@@ -201,6 +202,12 @@
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
+      <node id="14">
+        <label>dakku::ImageTexture</label>
+        <link refid="classdakku_1_1ImageTexture"/>
+        <childnode refid="12" relation="public-inheritance">
+        </childnode>
+      </node>
       <node id="5">
         <label>dakku::InputStream</label>
         <link refid="classdakku_1_1InputStream"/>
@@ -235,10 +242,22 @@
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
+      <node id="15">
+        <label>dakku::TextureMapping2D</label>
+        <link refid="classdakku_1_1TextureMapping2D"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
       <node id="4">
         <label>dakku::TriangleFilter</label>
         <link refid="classdakku_1_1TriangleFilter"/>
         <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>dakku::UvMapping2D</label>
+        <link refid="classdakku_1_1UvMapping2D"/>
+        <childnode refid="15" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>

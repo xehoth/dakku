@@ -364,6 +364,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#function-texture" class="md-nav__link">
+    function Texture
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#function-evaluate" class="md-nav__link">
     function evaluate
   </a>
@@ -416,7 +423,7 @@
 <h1 id="dakkutexture">dakku::Texture</h1>
 <p><code>#include &lt;texture.h&gt;</code></p>
 <p>Inherits from <a href="/dakku/Classes/classdakku_1_1Object/">dakku::Object</a></p>
-<p>Inherited by <a href="/dakku/Classes/classdakku_1_1ConstantTexture/">dakku::ConstantTexture</a></p>
+<p>Inherited by <a href="/dakku/Classes/classdakku_1_1ConstantTexture/">dakku::ConstantTexture</a>, <a href="/dakku/Classes/classdakku_1_1ImageTexture/">dakku::ImageTexture</a></p>
 <h2 id="public-functions">Public Functions</h2>
 <table>
 <thead>
@@ -431,8 +438,12 @@
 <td><strong><a href="/dakku/Classes/classdakku_1_1Texture/#function-dakku-declare-object">DAKKU_DECLARE_OBJECT</a></strong>(<a href="/dakku/Classes/classdakku_1_1Texture/">Texture</a> , <a href="/dakku/Classes/classdakku_1_1Object/">Object</a> )</td>
 </tr>
 <tr>
+<td></td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Texture/#function-texture">Texture</a></strong>(bool floatType)</td>
+</tr>
+<tr>
 <td>virtual <a href="/dakku/Namespaces/namespacedakku/#using-spectrum">Spectrum</a></td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1Texture/#function-evaluate">evaluate</a></strong>() const =0</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Texture/#function-evaluate">evaluate</a></strong>(const <a href="/dakku/Classes/classdakku_1_1SurfaceInteraction/">SurfaceInteraction</a> &amp; ) const =0</td>
 </tr>
 </tbody>
 </table>
@@ -506,16 +517,23 @@
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">Object</span><span class="w"> </span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
-<h3 id="function-evaluate">function evaluate</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">Spectrum</span><span class="w"> </span><span class="n">evaluate</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">=</span><span class="mi">0</span><span class="w"></span>
+<h3 id="function-texture">function Texture</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">explicit</span><span class="w"> </span><span class="n">Texture</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">floatType</span><span class="w"></span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
-<p><strong>Reimplemented by</strong>: <a href="/dakku/Classes/classdakku_1_1ConstantTexture/#function-evaluate">dakku::ConstantTexture::evaluate</a></p>
+<h3 id="function-evaluate">function evaluate</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">Spectrum</span><span class="w"> </span><span class="n">evaluate</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">SurfaceInteraction</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">=</span><span class="mi">0</span><span class="w"></span>
+</code></pre></div>
+<p><strong>Reimplemented by</strong>: <a href="/dakku/Classes/classdakku_1_1ConstantTexture/#function-evaluate">dakku::ConstantTexture::evaluate</a>, <a href="/dakku/Classes/classdakku_1_1ImageTexture/#function-evaluate">dakku::ImageTexture::evaluate</a></p>
 <h2 id="protected-attributes-documentation">Protected Attributes Documentation</h2>
 <h3 id="variable-floattype">variable floatType</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">floatType</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">floatType</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 </code></pre></div>
 <hr />
-<p>Updated on 2022-04-11 at 12:07:51 +0000</p>
+<p>Updated on 2022-04-11 at 14:49:47 +0000</p>
 
               
             </article>

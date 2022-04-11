@@ -727,6 +727,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#function-readimage" class="md-nav__link">
+    function readImage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#function-dakku_export_objects_2" class="md-nav__link">
     function DAKKU_EXPORT_OBJECTS
   </a>
@@ -969,6 +976,10 @@
 </tr>
 <tr>
 <td>class</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1ImageTexture/">dakku::ImageTexture</a></strong></td>
+</tr>
+<tr>
+<td>class</td>
 <td><strong><a href="/dakku/Classes/classdakku_1_1InputStream/">dakku::InputStream</a></strong> <br>input stream</td>
 </tr>
 <tr>
@@ -1053,11 +1064,19 @@
 </tr>
 <tr>
 <td>class</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1TextureMapping2D/">dakku::TextureMapping2D</a></strong> <br>2d texture mapping</td>
+</tr>
+<tr>
+<td>class</td>
 <td><strong><a href="/dakku/Classes/classdakku_1_1Transform/">dakku::Transform</a></strong></td>
 </tr>
 <tr>
 <td>class</td>
 <td><strong><a href="/dakku/Classes/classdakku_1_1TriangleFilter/">dakku::TriangleFilter</a></strong> <br>triangle filter the weight falls off linearly from the filter center over the square extent of the filter</td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1UvMapping2D/">dakku::UvMapping2D</a></strong></td>
 </tr>
 <tr>
 <td>class</td>
@@ -1288,6 +1307,10 @@
 <tr>
 <td><a href="/dakku/Files/imageio_2fwd_8h/#define-dakku-export-imageio">DAKKU_EXPORT_IMAGEIO</a> bool</td>
 <td><strong><a href="/dakku/Namespaces/namespacedakku/#function-writeimage">writeImage</a></strong>(const std::filesystem::path &amp; path, const float * rgb, int totalResX, int totalResY, int outBoundsMinX =0, int outBoundsMinY =0, int outBoundsMaxX =-1, int outBoundsMaxY =-1)<br>write image to path</td>
+</tr>
+<tr>
+<td><a href="/dakku/Files/imageio_2fwd_8h/#define-dakku-export-imageio">DAKKU_EXPORT_IMAGEIO</a> float *</td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#function-readimage">readImage</a></strong>(const std::filesystem::path &amp; path, int &amp; resX, int &amp; resY, bool flipVertical =true, int gamma =-1, float scale =1)<br>read image from file <strong>need to free memory manually</strong></td>
 </tr>
 <tr>
 <td></td>
@@ -1842,7 +1865,6 @@
 <p><strong>Parameters</strong>: </p>
 <ul>
 <li><strong>path</strong> file path </li>
-<li><strong>rgb</strong> image data </li>
 <li><strong>totalResX</strong> total resolution x (width) </li>
 <li><strong>totalResY</strong> total resolution y (height) </li>
 <li><strong>outBoundsMinX</strong> crop window bounds (pMin.x) </li>
@@ -1850,75 +1872,95 @@
 <li><strong>outBoundsMaxX</strong> crop window bounds (pMax.x) </li>
 <li><strong>outBoundsMaxY</strong> crop window bounds (pMax.y) </li>
 </ul>
-<p><strong>Return</strong>: DAKKU_EXPORT_IMAGEIO </p>
+<h3 id="function-readimage">function readImage</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a><span class="n">DAKKU_EXPORT_IMAGEIO</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">readImage</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">filesystem</span><span class="o">::</span><span class="n">path</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">path</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-48-3" name="__codelineno-48-3" href="#__codelineno-48-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">resX</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-48-4" name="__codelineno-48-4" href="#__codelineno-48-4"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">resY</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-48-5" name="__codelineno-48-5" href="#__codelineno-48-5"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">flipVertical</span><span class="w"> </span><span class="o">=</span><span class="nb">true</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-48-6" name="__codelineno-48-6" href="#__codelineno-48-6"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">gamma</span><span class="w"> </span><span class="o">=</span><span class="mi">-1</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-48-7" name="__codelineno-48-7" href="#__codelineno-48-7"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">scale</span><span class="w"> </span><span class="o">=</span><span class="mi">1</span><span class="w"></span>
+<a id="__codelineno-48-8" name="__codelineno-48-8" href="#__codelineno-48-8"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>read image from file <strong>need to free memory manually</strong></p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>path</strong> image file path </li>
+<li><strong>rgb</strong> image buffer </li>
+<li><strong>resX</strong> image resolution x (width) </li>
+<li><strong>resY</strong> image resolution y (height) </li>
+<li><strong>flipVertical</strong> flip y </li>
+<li><strong>gamma</strong> do inverse gamma correction: -1 auto, 0 not, 1 do </li>
+<li><strong>scale</strong> scale the image value </li>
+</ul>
 <h3 id="function-dakku_export_objects_2">function DAKKU_EXPORT_OBJECTS</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a><span class="n">DAKKU_EXPORT_OBJECTS</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a><span class="w">    </span><span class="n">Stream</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-48-3" name="__codelineno-48-3" href="#__codelineno-48-3"></a><span class="w">    </span><span class="n">FileOutputStream</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-48-4" name="__codelineno-48-4" href="#__codelineno-48-4"></a><span class="w">    </span><span class="n">FileInputStream</span><span class="w"> </span>
-<a id="__codelineno-48-5" name="__codelineno-48-5" href="#__codelineno-48-5"></a><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a><span class="n">DAKKU_EXPORT_OBJECTS</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-49-2" name="__codelineno-49-2" href="#__codelineno-49-2"></a><span class="w">    </span><span class="n">Stream</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-49-3" name="__codelineno-49-3" href="#__codelineno-49-3"></a><span class="w">    </span><span class="n">FileOutputStream</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-49-4" name="__codelineno-49-4" href="#__codelineno-49-4"></a><span class="w">    </span><span class="n">FileInputStream</span><span class="w"> </span>
+<a id="__codelineno-49-5" name="__codelineno-49-5" href="#__codelineno-49-5"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 <h3 id="function-dakku_export_objects_3">function DAKKU_EXPORT_OBJECTS</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a><span class="n">DAKKU_EXPORT_OBJECTS</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-49-2" name="__codelineno-49-2" href="#__codelineno-49-2"></a><span class="w">    </span><span class="n">Textures</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-49-3" name="__codelineno-49-3" href="#__codelineno-49-3"></a><span class="w">    </span><span class="n">ConstantTexture</span><span class="w"> </span>
-<a id="__codelineno-49-4" name="__codelineno-49-4" href="#__codelineno-49-4"></a><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a><span class="n">DAKKU_EXPORT_OBJECTS</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-50-2" name="__codelineno-50-2" href="#__codelineno-50-2"></a><span class="w">    </span><span class="n">Textures</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-50-3" name="__codelineno-50-3" href="#__codelineno-50-3"></a><span class="w">    </span><span class="n">ConstantTexture</span><span class="w"> </span>
+<a id="__codelineno-50-4" name="__codelineno-50-4" href="#__codelineno-50-4"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 <h2 id="attributes-documentation">Attributes Documentation</h2>
 <h3 id="variable-inf">variable INF</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">INF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;::</span><span class="n">infinity</span><span class="p">();</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">INF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;::</span><span class="n">infinity</span><span class="p">();</span><span class="w"></span>
 </code></pre></div>
 <p>infinity </p>
 <h3 id="variable-pi">variable PI</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">PI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">numbers</span><span class="o">::</span><span class="n">pi_v</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">PI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">numbers</span><span class="o">::</span><span class="n">pi_v</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <p>PI. </p>
 <h3 id="variable-l1_cache_line_size">variable L1_CACHE_LINE_SIZE</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">L1_CACHE_LINE_SIZE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">64</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">L1_CACHE_LINE_SIZE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">64</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <p>L1 cache line size. </p>
 <h3 id="variable-shadow_eps">variable SHADOW_EPS</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">SHADOW_EPS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1e-4f</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">SHADOW_EPS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1e-4f</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <p>shadow epsilon, used for shadow ray, offset ray origin </p>
 <h3 id="variable-relativeroot">variable RelativeRoot</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">DAKKU_EXPORT_CORE</span><span class="w"> </span><span class="n">RelativeRoot</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">DAKKU_EXPORT_CORE</span><span class="w"> </span><span class="n">RelativeRoot</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <h3 id="variable-inputstream">variable InputStream</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">DAKKU_EXPORT_CORE</span><span class="w"> </span><span class="n">InputStream</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">DAKKU_EXPORT_CORE</span><span class="w"> </span><span class="n">InputStream</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <h3 id="variable-outputstream">variable OutputStream</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">DAKKU_EXPORT_CORE</span><span class="w"> </span><span class="n">OutputStream</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">DAKKU_EXPORT_CORE</span><span class="w"> </span><span class="n">OutputStream</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <h3 id="variable-property">variable Property</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">DAKKU_EXPORT_CORE</span><span class="w"> </span><span class="n">Property</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">DAKKU_EXPORT_CORE</span><span class="w"> </span><span class="n">Property</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <h3 id="variable-class">variable Class</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">DAKKU_EXPORT_CORE</span><span class="w"> </span><span class="n">Class</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-59-1" name="__codelineno-59-1" href="#__codelineno-59-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">DAKKU_EXPORT_CORE</span><span class="w"> </span><span class="n">Class</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <h3 id="variable-object">variable Object</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-59-1" name="__codelineno-59-1" href="#__codelineno-59-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">DAKKU_EXPORT_CORE</span><span class="w"> </span><span class="n">Object</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">DAKKU_EXPORT_CORE</span><span class="w"> </span><span class="n">Object</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <h3 id="variable-matrix4x4">variable Matrix4x4</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">DAKKU_EXPORT_CORE</span><span class="w"> </span><span class="n">Matrix4x4</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-61-1" name="__codelineno-61-1" href="#__codelineno-61-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">DAKKU_EXPORT_CORE</span><span class="w"> </span><span class="n">Matrix4x4</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <h3 id="variable-filter">variable Filter</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-61-1" name="__codelineno-61-1" href="#__codelineno-61-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">DAKKU_EXPORT_CORE</span><span class="w"> </span><span class="n">Filter</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-62-1" name="__codelineno-62-1" href="#__codelineno-62-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">DAKKU_EXPORT_CORE</span><span class="w"> </span><span class="n">Filter</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <h3 id="variable-film">variable Film</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-62-1" name="__codelineno-62-1" href="#__codelineno-62-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">DAKKU_EXPORT_CORE</span><span class="w"> </span><span class="n">Film</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-63-1" name="__codelineno-63-1" href="#__codelineno-63-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">DAKKU_EXPORT_CORE</span><span class="w"> </span><span class="n">Film</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <h3 id="variable-shape">variable Shape</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-63-1" name="__codelineno-63-1" href="#__codelineno-63-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">DAKKU_EXPORT_CORE</span><span class="w"> </span><span class="n">Shape</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-64-1" name="__codelineno-64-1" href="#__codelineno-64-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">DAKKU_EXPORT_CORE</span><span class="w"> </span><span class="n">Shape</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <h3 id="variable-texture">variable Texture</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-64-1" name="__codelineno-64-1" href="#__codelineno-64-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">DAKKU_EXPORT_CORE</span><span class="w"> </span><span class="n">Texture</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-65-1" name="__codelineno-65-1" href="#__codelineno-65-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">DAKKU_EXPORT_CORE</span><span class="w"> </span><span class="n">Texture</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <h3 id="variable-pad0">variable <strong>pad0</strong></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-65-1" name="__codelineno-65-1" href="#__codelineno-65-1"></a><span class="n">__pad0__</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-66-1" name="__codelineno-66-1" href="#__codelineno-66-1"></a><span class="n">__pad0__</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <hr />
-<p>Updated on 2022-04-11 at 12:07:51 +0000</p>
+<p>Updated on 2022-04-11 at 14:49:47 +0000</p>
 
               
             </article>

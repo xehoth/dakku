@@ -183,9 +183,11 @@
 <codeline lineno="74"><highlight class="normal"></highlight></codeline>
 <codeline lineno="79" refid="classdakku_1_1SurfaceInteraction" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdakku_1_1SurfaceInteraction" kindref="compound">SurfaceInteraction</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="structdakku_1_1Interaction" kindref="compound">Interaction</ref><sp/>{</highlight></codeline>
 <codeline lineno="80"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="81"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="82"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dakku</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="81" refid="classdakku_1_1SurfaceInteraction_1a7774eb557414ba464259463b5ab7962f" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classdakku_1_1Point" kindref="compound">Point2f</ref><sp/><ref refid="classdakku_1_1SurfaceInteraction_1a7774eb557414ba464259463b5ab7962f" kindref="member">uv</ref>;</highlight></codeline>
+<codeline lineno="82" refid="classdakku_1_1SurfaceInteraction_1a07a0b261007cd1ca320be68615699e4a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">mutable</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1SurfaceInteraction_1a07a0b261007cd1ca320be68615699e4a" kindref="member">dudx</ref><sp/>=<sp/>0,<sp/><ref refid="classdakku_1_1SurfaceInteraction_1ac577146c7a6332fca84741431f26bab3" kindref="member">dvdx</ref><sp/>=<sp/>0,<sp/><ref refid="classdakku_1_1SurfaceInteraction_1a06588edddf126d096896a9dccd32e3de" kindref="member">dudy</ref><sp/>=<sp/>0,<sp/><ref refid="classdakku_1_1SurfaceInteraction_1a067307528f3c62dcceb6fe003cca1e1a" kindref="member">dvdy</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dakku</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="src/core/interaction.h"/>
   </compounddef>

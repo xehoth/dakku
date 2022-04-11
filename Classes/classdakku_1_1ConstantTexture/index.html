@@ -426,11 +426,26 @@
 </tr>
 <tr>
 <td>virtual <a href="/dakku/Namespaces/namespacedakku/#using-spectrum">Spectrum</a></td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1ConstantTexture/#function-evaluate">evaluate</a></strong>() const override</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1ConstantTexture/#function-evaluate">evaluate</a></strong>(const <a href="/dakku/Classes/classdakku_1_1SurfaceInteraction/">SurfaceInteraction</a> &amp; ) const override</td>
 </tr>
 </tbody>
 </table>
 <h2 id="additional-inherited-members">Additional inherited members</h2>
+<p><strong>Public Functions inherited from <a href="/dakku/Classes/classdakku_1_1Texture/">dakku::Texture</a></strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Texture/#function-texture">Texture</a></strong>(bool floatType)</td>
+</tr>
+</tbody>
+</table>
 <p><strong>Protected Attributes inherited from <a href="/dakku/Classes/classdakku_1_1Texture/">dakku::Texture</a></strong></p>
 <table>
 <thead>
@@ -511,11 +526,13 @@
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 <h3 id="function-evaluate">function evaluate</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">Spectrum</span><span class="w"> </span><span class="n">evaluate</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">override</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">Spectrum</span><span class="w"> </span><span class="n">evaluate</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">SurfaceInteraction</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">override</span><span class="w"></span>
 </code></pre></div>
 <p><strong>Reimplements</strong>: <a href="/dakku/Classes/classdakku_1_1Texture/#function-evaluate">dakku::Texture::evaluate</a></p>
 <hr />
-<p>Updated on 2022-04-11 at 12:07:51 +0000</p>
+<p>Updated on 2022-04-11 at 14:49:47 +0000</p>
 
               
             </article>

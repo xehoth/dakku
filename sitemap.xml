@@ -91,6 +91,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1ImageTexture/</loc>
+         <lastmod>2022-04-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1InputStream/</loc>
          <lastmod>2022-04-11</lastmod>
          <changefreq>daily</changefreq>
@@ -181,12 +186,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1TextureMapping2D/</loc>
+         <lastmod>2022-04-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1Transform/</loc>
          <lastmod>2022-04-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1TriangleFilter/</loc>
+         <lastmod>2022-04-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1UvMapping2D/</loc>
          <lastmod>2022-04-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -342,6 +357,11 @@
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/gui_2film_8h/</loc>
+         <lastmod>2022-04-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Files/image_8h/</loc>
          <lastmod>2022-04-11</lastmod>
          <changefreq>daily</changefreq>
     </url>

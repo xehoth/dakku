@@ -1,0 +1,293 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="image_8h" kind="file" language="C++">
+    <compoundname>image.h</compoundname>
+    <includes refid="textures_2fwd_8h" local="no">textures/fwd.h</includes>
+    <includes refid="mipmap_8h" local="no">core/mipmap.h</includes>
+    <includes local="no">filesystem</includes>
+    <includedby refid="textures_2api_8h" local="no">src/textures/api.h</includedby>
+    <incdepgraph>
+      <node id="35">
+        <label>core/blocked_array.h</label>
+        <link refid="blocked__array_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>core/class.h</label>
+        <link refid="class_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>core/fwd.h</label>
+        <link refid="core_2fwd_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>core/logger.h</label>
+        <link refid="logger_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>core/mipmap.h</label>
+        <link refid="mipmap_8h"/>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>core/object.h</label>
+        <link refid="object_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>core/property.h</label>
+        <link refid="property_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>core/ray.h</label>
+        <link refid="ray_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>core/spectrum.h</label>
+        <link refid="spectrum_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>core/texture.h</label>
+        <link refid="texture_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>core/transform.h</label>
+        <link refid="transform_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>core/vector.h</label>
+        <link refid="vector_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>core/vector_base.h</label>
+        <link refid="vector__base_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>platform.h</label>
+        <link refid="platform_8h"/>
+      </node>
+      <node id="2">
+        <label>textures/fwd.h</label>
+        <link refid="textures_2fwd_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/textures/image.h</label>
+        <link refid="image_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>algorithm</label>
+      </node>
+      <node id="21">
+        <label>array</label>
+      </node>
+      <node id="10">
+        <label>bit</label>
+      </node>
+      <node id="8">
+        <label>cmath</label>
+      </node>
+      <node id="9">
+        <label>cstdint</label>
+      </node>
+      <node id="17">
+        <label>cstdlib</label>
+      </node>
+      <node id="39">
+        <label>filesystem</label>
+      </node>
+      <node id="6">
+        <label>limits</label>
+      </node>
+      <node id="31">
+        <label>map</label>
+      </node>
+      <node id="30">
+        <label>nlohmann/json.hpp</label>
+      </node>
+      <node id="7">
+        <label>numbers</label>
+      </node>
+      <node id="25">
+        <label>numeric</label>
+      </node>
+      <node id="38">
+        <label>oneapi/tbb.h</label>
+      </node>
+      <node id="36">
+        <label>oneapi/tbb/cache_aligned_allocator.h</label>
+      </node>
+      <node id="24">
+        <label>ostream</label>
+      </node>
+      <node id="26">
+        <label>span</label>
+      </node>
+      <node id="16">
+        <label>spdlog/fmt/ostr.h</label>
+      </node>
+      <node id="15">
+        <label>spdlog/spdlog.h</label>
+      </node>
+      <node id="23">
+        <label>string</label>
+      </node>
+      <node id="33">
+        <label>string_view</label>
+      </node>
+      <node id="5">
+        <label>type_traits</label>
+      </node>
+      <node id="29">
+        <label>utility</label>
+      </node>
+      <node id="32">
+        <label>variant</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>src/textures/api.h</label>
+        <link refid="textures_2api_8h"/>
+      </node>
+      <node id="1">
+        <label>src/textures/image.h</label>
+        <link refid="image_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classdakku_1_1ImageTexture" prot="public">dakku::ImageTexture</innerclass>
+    <innernamespace refid="namespacedakku">dakku</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>DAKKU_TEXTURES_IMAGE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DAKKU_TEXTURES_IMAGE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="textures_2fwd_8h" kindref="compound">textures/fwd.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="mipmap_8h" kindref="compound">core/mipmap.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;filesystem&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacedakku" kindref="compound">dakku</ref><sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="classdakku_1_1ImageTexture" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdakku_1_1ImageTexture" kindref="compound">ImageTexture</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Texture" kindref="compound">Texture</ref><sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="11" refid="classdakku_1_1ImageTexture_1ab92c8d48435998844e940e6da4259402" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classdakku_1_1ImageTexture_1ab92c8d48435998844e940e6da4259402" kindref="member">DAKKU_DECLARE_OBJECT</ref>(<ref refid="classdakku_1_1ImageTexture" kindref="compound">ImageTexture</ref>,<sp/><ref refid="classdakku_1_1Texture" kindref="compound">Texture</ref>);</highlight></codeline>
+<codeline lineno="12" refid="classdakku_1_1ImageTexture_1a5bdd4ddb6aaa38e4e5318559d5c0ead3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1ImageTexture_1a5bdd4ddb6aaa38e4e5318559d5c0ead3" kindref="member">ImageTexture</ref>(std::unique_ptr&lt;TextureMapping2D&gt;<sp/>m,</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::filesystem::path<sp/>&amp;fileName,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespacedakku_1a1fd20fa9b44a1620a3ce2a133f53d83d" kindref="member">doTrilinear</ref>,</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="namespacedakku_1a5dc6c62020f3cb484153c43801d71ee0" kindref="member">maxAnisotropy</ref>,<sp/><ref refid="namespacedakku_1a9f69e6875268e5345a38fd61108935dc" kindref="member">ImageWrapMode</ref><sp/>mode,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="namespacedakku_1a7acbd19453bccf5b94cfa1133df02981" kindref="member">scale</ref>,</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>gamma,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Texture_1a04d50661884334a42b742e1214b77382" kindref="member">floatType</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="16" refid="classdakku_1_1ImageTexture_1a1c8b8cb8b6ee872474195f8e71d47529" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/><ref refid="classdakku_1_1RgbSpectrum" kindref="compound">Spectrum</ref><sp/><ref refid="classdakku_1_1ImageTexture_1a1c8b8cb8b6ee872474195f8e71d47529" kindref="member">evaluate</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1SurfaceInteraction" kindref="compound">SurfaceInteraction</ref><sp/>&amp;si)<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>std::unique_ptr&lt;TextureMapping2D&gt;<sp/>mapping;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/>std::variant&lt;std::unique_ptr&lt;MipMap&lt;float&gt;&gt;,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::unique_ptr&lt;MipMap&lt;Spectrum&gt;&gt;&gt;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>mipmap;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dakku</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="src/textures/image.h"/>
+  </compounddef>
+</doxygen>
