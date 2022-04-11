@@ -2,6 +2,7 @@
 #include <core/api.h>
 #include <stream/api.h>
 #include <filters/api.h>
+#include <textures/api.h>
 
 using namespace dakku;
 
@@ -15,4 +16,7 @@ TEST(Object, Register) {
   EXPECT_TRUE(Class::instance().contains("Filter"));
   EXPECT_TRUE(Class::instance().contains("BoxFilter"));
   EXPECT_TRUE(Class::instance().contains("TriangleFilter"));
+  EXPECT_TRUE(Class::instance().contains("Texture"));
+  EXPECT_TRUE(Class::instance().contains("ImageTexture"));
+  EXPECT_TRUE(Class::instance().contains("ConstantTexture"));
 }

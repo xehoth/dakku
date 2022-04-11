@@ -11,6 +11,6 @@
 
 namespace dakku {
 
-DAKKU_EXPORT_OBJECTS(Textures, ConstantTexture);
+DAKKU_EXPORT_OBJECTS(Textures, ConstantTexture, ImageTexture);
 }
 #endif

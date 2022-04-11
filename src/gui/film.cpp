@@ -33,16 +33,16 @@ void FilmImageProvider::setImage(const Film &film) {
   Q_EMIT updateGui(currentIndex++);
 }
 
-void FilmImageProvider::setImage(std::span<const float> data, int width,
-                                 int height) {
-  std::vector<std::uint8_t> img(3 * width * height);
+void FilmImageProvider::setImage(std::span<const float> data, int w,
+                                 int h) {
+  std::vector<std::uint8_t> img(3 * w * h);
   std::transform(data.begin(), data.end(), img.begin(), [](float v) {
     return static_cast<std::uint8_t>(
         std::clamp(gammaCorrect(v) * 256, 0.0f, 255.0f));
   });
-  this->width = width;
-  this->height = height;
-  image = QImage(img.data(), width, height, 3 * width,
+  this->width = w;
+  this->height = h;
+  image = QImage(img.data(), w, h, 3 * w,
                  QImage::Format::Format_RGB888);
   pixmap.convertFromImage(image);
 

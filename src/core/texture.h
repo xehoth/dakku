@@ -8,7 +8,7 @@ namespace dakku {
  * @brief 2d texture mapping
  *
  */
-class TextureMapping2D : public Object {
+class DAKKU_EXPORT_CORE TextureMapping2D : public Object {
  public:
   DAKKU_DECLARE_OBJECT(TextureMapping2D, Object);
 
@@ -16,11 +16,11 @@ class TextureMapping2D : public Object {
                       Vector2f &dstdy) const = 0;
 };
 
-class UvMapping2D : public TextureMapping2D {
+class DAKKU_EXPORT_CORE UvMapping2D : public TextureMapping2D {
  public:
   DAKKU_DECLARE_OBJECT(UvMapping2D, TextureMapping2D);
 
-  explicit UvMapping2D(float su = 1, float sv = 1, float du = 0, float dv = 0);
+  explicit UvMapping2D(float su, float, float du, float dv);
 
   Point2f map(const SurfaceInteraction &si, Vector2f &dstdx,
               Vector2f &dstdy) const override;

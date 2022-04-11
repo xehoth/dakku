@@ -6,7 +6,7 @@
 
 namespace dakku {
 
-class ImageTexture : public Texture {
+class DAKKU_EXPORT_TEXTURES ImageTexture : public Texture {
  public:
   DAKKU_DECLARE_OBJECT(ImageTexture, Texture);
   explicit ImageTexture(std::unique_ptr<TextureMapping2D> m,
@@ -16,10 +16,17 @@ class ImageTexture : public Texture {
   [[nodiscard]] Spectrum evaluate(const SurfaceInteraction &si) const override;
 
  private:
+#if defined(_MSC_VER)
+#pragma warning(push)
+#pragma warning(disable : 4251)
+#endif
   std::unique_ptr<TextureMapping2D> mapping;
   std::variant<std::unique_ptr<MipMap<float>>,
                std::unique_ptr<MipMap<Spectrum>>>
       mipmap;
+#if defined(_MSC_VER)
+#pragma warning(pop)
+#endif
 };
 }  // namespace dakku
 #endif
