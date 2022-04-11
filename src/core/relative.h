@@ -24,6 +24,19 @@ class DAKKU_EXPORT_CORE RelativeRoot final {
   [[nodiscard]] const std::string &get() const;
 
   /**
+   * @brief add relative path to the given path
+   *
+   */
+  [[nodiscard]] std::filesystem::path get(
+      const std::filesystem::path &path) const;
+
+  /**
+   * @brief add relative path to the given path
+   *
+   */
+  [[nodiscard]] std::string get(const std::string &path) const;
+
+  /**
    * @brief set the relative root
    *
    */

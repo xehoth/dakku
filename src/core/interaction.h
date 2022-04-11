@@ -78,6 +78,8 @@ struct Interaction {
  */
 class SurfaceInteraction : public Interaction {
  public:
+  Point2f uv;
+  mutable float dudx = 0, dvdx = 0, dudy = 0, dvdy = 0;
 };
 }  // namespace dakku
 #endif

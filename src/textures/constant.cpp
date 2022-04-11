@@ -16,5 +16,5 @@ ConstantTexture::ConstantTexture(const Property &p) : Texture(p) {
   }
 }
 
-Spectrum ConstantTexture::evaluate() const { return this->value; }
+Spectrum ConstantTexture::evaluate(const SurfaceInteraction &) const { return this->value; }
 }  // namespace dakku

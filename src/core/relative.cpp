@@ -15,4 +15,12 @@ void RelativeRoot::set(const std::filesystem::path &root) {
   dir = path;
 }
 
+std::filesystem::path RelativeRoot::get(
+    const std::filesystem::path &path) const {
+  return std::filesystem::path{dir + path.string()};
+}
+
+std::string RelativeRoot::get(const std::string &path) const {
+  return dir + path;
+}
 }  // namespace dakku

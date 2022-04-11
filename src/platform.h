@@ -1,7 +1,7 @@
 #ifndef DAKKU_PLATFORM_H_
 #define DAKKU_PLATFORM_H_
 #if defined(_MSC_VER)
-#if !defined(_USE_MATH_DEFINES)
+#if !defined(_USE_MATH_DEFINES) &&!defined(M_PI)
 #define _USE_MATH_DEFINES
 #endif
 #endif

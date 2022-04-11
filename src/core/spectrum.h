@@ -46,7 +46,7 @@ class CoefficientSpectrum : public VectorBase<float, S, Derived> {
    *
    */
   [[nodiscard]] Derived clamp(float low = 0, float high = INF) const {
-    Derived ret = *this;
+    Derived ret = static_cast<const Derived &>(*this);
     for (size_t i = 0; i < S; ++i) ret[i] = std::clamp(ret[i], low, high);
     return ret;
   }

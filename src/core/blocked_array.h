@@ -2,6 +2,7 @@
 #define DAKKU_CORE_BLOCKED_ARRAY_H_
 #include <core/fwd.h>
 #include <span>
+#include <oneapi/tbb/cache_aligned_allocator.h>
 
 namespace dakku {
 
@@ -26,10 +27,9 @@ class BlockedArray {
    * @param d data
    */
   explicit BlockedArray(int uRes, int vRes, std::span<const T> d = {})
-      : uRes(uRes), vRes(vRes) {
+      : uRes(uRes), vRes(vRes), uBlocks(roundUp(uRes) >> logBlockSize) {
     int nAlloc = roundUp(uRes) * roundUp(vRes);
-    data = new (std::max(static_cast<std::align_val_t>(alignof(T)),
-                         std::align_val_t(L1_CACHE_LINE_SIZE))) T[nAlloc]();
+    data = oneapi::tbb::cache_aligned_allocator<T>().allocate(nAlloc);
     if (!d.empty()) {
       for (int v = 0; v < vRes; ++v)
         for (int u = 0; u < uRes; ++u) (*this)(u, v) = d[v * uRes + u];
@@ -37,9 +37,8 @@ class BlockedArray {
   }
 
   ~BlockedArray() {
-    delete[](std::max(static_cast<std::align_val_t>(alignof(T)),
-                      std::align_val_t(L1_CACHE_LINE_SIZE)),
-             data);
+    int nAlloc = roundUp(uRes) * roundUp(vRes);
+    oneapi::tbb::cache_aligned_allocator<T>().deallocate(data, nAlloc);
   }
 
   /**

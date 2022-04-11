@@ -7,6 +7,7 @@
 #ifndef DAKKU_TEXTURES_API_H_
 #define DAKKU_TEXTURES_API_H_
 #include <textures/constant.h>
+#include <textures/image.h>
 
 namespace dakku {
 

@@ -39,7 +39,7 @@ requires(std::is_same_v<T, float> || std::is_same_v<T, Spectrum>) class MipMap {
 
   [[nodiscard]] int width() const { return resolution.x(); }
   [[nodiscard]] int height() const { return resolution.y(); }
-  [[nodiscard]] size_t levels() const { return pyramid.size(); }
+  [[nodiscard]] int levels() const { return static_cast<int>(pyramid.size()); }
 
   /**
    * @brief get texel value
@@ -81,7 +81,7 @@ requires(std::is_same_v<T, float> || std::is_same_v<T, Spectrum>) class MipMap {
     for (int i = 0; i < newRes; ++i) {
       float center = (static_cast<float>(i) + 0.5f) /
                      static_cast<float>(newRes) * static_cast<float>(oldRes);
-      wt[i].firstTexel = std::floor((center - filterWidth) * 0.5f);
+      wt[i].firstTexel = static_cast<int>(std::floor((center - filterWidth) * 0.5f));
       // nearby four texels
       for (int j = 0; j < 4; ++j) {
         float pos = static_cast<float>(wt[i].firstTexel + j) + 0.5f;
@@ -165,7 +165,7 @@ requires(std::is_same_v<T, float> ||
               if (wrapMode == ImageWrapMode::REPEAT) {
                 offset = offset % resolution[1];
               } else if (wrapMode == ImageWrapMode::CLAMP) {
-                offset = clamp(offset, 0, resolution[1] - 1);
+                offset = std::clamp(offset, 0, resolution[1] - 1);
               }
               if (offset >= 0 && offset < resolution[1]) {
                 workData[t] += tWeights[t].weight[j] *
@@ -186,8 +186,8 @@ requires(std::is_same_v<T, float> ||
   // initialize the bottom level (most detailed)
   pyramid[0] = std::make_unique<BlockedArray<T>>(
       resolution[0], resolution[1],
-      std::span<T>{resampledImage ? resampledImage.get() : img,
-                   resolution.x() * resolution.y()});
+      std::span<const T>{resampledImage ? resampledImage.get() : img.data(),
+                         static_cast<size_t>(resolution.x() * resolution.y())});
 
   for (int i = 1; i < nLevels; ++i) {
     // next level: / 2
@@ -247,7 +247,7 @@ const {
   } else if (level >= levels() - 1) {
     return texel(levels() - 1, 0, 0);
   } else {
-    int floorLevel = std::floor(level);
+    int floorLevel = static_cast<int>(std::floor(level));
     float delta = level - static_cast<float>(floorLevel);
     return lerp(triangle(floorLevel, st), triangle(floorLevel + 1, st), delta);
   }
@@ -261,7 +261,7 @@ const {
   level = std::clamp(level, 0, levels() - 1);
   float s = st[0] * pyramid[level]->uSize() - 0.5f;
   float t = st[1] * pyramid[level]->vSize() - 0.5f;
-  int s0 = std::floor(s), t0 = std::floor(t);
+  int s0 = static_cast<int>(std::floor(s)), t0 = static_cast<int>(std::floor(t));
   float ds = s - static_cast<float>(s0), dt = t - static_cast<float>(t0);
   return (1 - ds) * (1 - dt) * texel(level, s0, t0) +
          (1 - ds) * dt * texel(level, s0, t0 + 1) +
@@ -281,6 +281,7 @@ const {
     return lookup(st, width);
   }
   DAKKU_ERR("EWA unimplemented");
+  return T{};
 }
 
 }  // namespace dakku

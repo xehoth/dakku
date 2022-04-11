@@ -10,7 +10,7 @@ class DAKKU_EXPORT_TEXTURES ConstantTexture : public Texture {
 
   explicit ConstantTexture(float v);
   explicit ConstantTexture(Spectrum v);
-  [[nodiscard]] Spectrum evaluate() const override;
+  [[nodiscard]] Spectrum evaluate(const SurfaceInteraction &) const override;
 
  private:
 #if defined(_MSC_VER)
