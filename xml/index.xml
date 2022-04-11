@@ -238,12 +238,13 @@
     <member refid="classdakku_1_1MipMap_1ada7958bd81d9742463689df8dc6371e8" kind="variable"><name>wrapMode</name></member>
     <member refid="classdakku_1_1MipMap_1abe2aa9f5f186ccfedfe9aa58385bbd40" kind="variable"><name>resolution</name></member>
     <member refid="classdakku_1_1MipMap_1aa61ecf5582cca022c002e42cdfe97e11" kind="variable"><name>pyramid</name></member>
-    <member refid="classdakku_1_1MipMap_1ad450a8b3b03fffeb74ff96856bcb0b4f" kind="function"><name>MipMap</name></member>
+    <member refid="classdakku_1_1MipMap_1aba3ce8e11e111e692cf1eac85984ba8e" kind="function"><name>MipMap</name></member>
     <member refid="classdakku_1_1MipMap_1a6b6aaee191275ccfb13805dc1759d819" kind="function"><name>width</name></member>
     <member refid="classdakku_1_1MipMap_1a4134445335c6d3badf60022c7b7efb7c" kind="function"><name>height</name></member>
     <member refid="classdakku_1_1MipMap_1a1bdc88cec0a68524a7fd14ccc8f1c6bf" kind="function"><name>levels</name></member>
     <member refid="classdakku_1_1MipMap_1ac3c0905111e2b6d7d5440fe858eb8a37" kind="function"><name>texel</name></member>
     <member refid="classdakku_1_1MipMap_1ad25a7c8b822b665377740f296bd06a40" kind="function"><name>lookup</name></member>
+    <member refid="classdakku_1_1MipMap_1a130a8b13049ca7fe2525d5b0c3882795" kind="function"><name>lookup</name></member>
     <member refid="classdakku_1_1MipMap_1a0fc81d9a52721498646375c374d8577e" kind="function"><name>resampleWeights</name></member>
     <member refid="classdakku_1_1MipMap_1abb83b1d932d1416a8d11ae568f7192d6" kind="function"><name>clamp</name></member>
     <member refid="classdakku_1_1MipMap_1a37d1f785acc945b501cc3ee7f34027f6" kind="function"><name>triangle</name></member>

@@ -657,7 +657,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/mipmap.h" line="1" column="0" bodyfile="src/core/mipmap.h" bodystart="114" bodyend="-1"/>
+        <location file="src/core/mipmap.h" line="1" column="0" bodyfile="src/core/mipmap.h" bodystart="115" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -1040,7 +1040,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/mipmap.h" line="115" column="7"/>
+        <location file="src/core/mipmap.h" line="116" column="7"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1a5dc6c62020f3cb484153c43801d71ee0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -1056,7 +1056,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/mipmap.h" line="116" column="7"/>
+        <location file="src/core/mipmap.h" line="117" column="7"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1a3daeac9348858af9dbb1a9c0415f5f84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -1072,7 +1072,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/mipmap.h" line="117" column="7" bodyfile="src/core/mipmap.h" bodystart="117" bodyend="209"/>
+        <location file="src/core/mipmap.h" line="118" column="7" bodyfile="src/core/mipmap.h" bodystart="118" bodyend="210"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1ac5c65853b3b4155436da5b4402bebcad" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
