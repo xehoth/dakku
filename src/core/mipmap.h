@@ -34,7 +34,7 @@ template <typename T>
 requires(std::is_same_v<T, float> || std::is_same_v<T, Spectrum>) class MipMap {
  public:
   explicit MipMap(Point2i resolution, std::span<const T> data,
-                  bool doTrilinear = false, float maxAnisotropy = 8.0f,
+                  bool doTrilinear = true, float maxAnisotropy = 8.0f,
                   ImageWrapMode wrapMode = ImageWrapMode::REPEAT);
 
   [[nodiscard]] int width() const { return resolution.x(); }
@@ -54,6 +54,7 @@ requires(std::is_same_v<T, float> || std::is_same_v<T, Spectrum>) class MipMap {
    *
    */
   T lookup(const Point2f &st, float width) const;
+  T lookup(const Point2f &st, Vector2f dst0, Vector2f dst1) const;
 
  private:
   /// do trilinear interpolation
@@ -205,7 +206,7 @@ requires(std::is_same_v<T, float> ||
     });
   }
 
-  // TODO: initialize EWA filter weights
+  // TODO: EWA
 }
 
 template <typename T>
@@ -267,5 +268,20 @@ const {
          ds * (1 - dt) * texel(level, s0 + 1, t0) +
          ds * dt * texel(level, s0 + 1, t0 + 1);
 }
+
+template <typename T>
+requires(std::is_same_v<T, float> ||
+         std::is_same_v<T, Spectrum>) T MipMap<T>::lookup(const Point2f &st,
+                                                          Vector2f dst0,
+                                                          Vector2f dst1)
+const {
+  if (doTrilinear) {
+    float width = std::max(std::max(std::abs(dst0[0]), std::abs(dst0[1])),
+                           std::max(std::abs(dst1[0]), std::abs(dst1[1])));
+    return lookup(st, width);
+  }
+  DAKKU_ERR("EWA unimplemented");
+}
+
 }  // namespace dakku
 #endif
