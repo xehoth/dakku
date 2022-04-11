@@ -4,7 +4,7 @@
     <compoundname>serialization.h</compoundname>
     <includes refid="object_8h" local="no">core/object.h</includes>
     <includedby refid="core_2api_8h" local="no">src/core/api.h</includedby>
-    <includedby refid="film_8h" local="no">src/core/film.h</includedby>
+    <includedby refid="core_2film_8h" local="no">src/core/film.h</includedby>
     <includedby refid="filters_2fwd_8h" local="no">src/filters/fwd.h</includedby>
     <includedby refid="stream_2fwd_8h" local="no">src/stream/fwd.h</includedby>
     <incdepgraph>
@@ -194,7 +194,7 @@
       </node>
       <node id="3">
         <label>src/core/film.h</label>
-        <link refid="film_8h"/>
+        <link refid="core_2film_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>

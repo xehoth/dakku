@@ -6,7 +6,7 @@
     <includes local="no">memory_resource</includes>
     <includes local="no">oneapi/tbb.h</includes>
     <includes local="no">oneapi/tbb/scalable_allocator.h</includes>
-    <includedby refid="film_8h" local="no">src/core/film.h</includedby>
+    <includedby refid="core_2film_8h" local="no">src/core/film.h</includedby>
     <incdepgraph>
       <node id="3">
         <label>core/fwd.h</label>
@@ -98,7 +98,7 @@
       </node>
       <node id="2">
         <label>src/core/film.h</label>
-        <link refid="film_8h"/>
+        <link refid="core_2film_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>

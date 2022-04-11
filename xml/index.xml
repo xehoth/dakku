@@ -117,10 +117,25 @@
     <member refid="classdakku_1_1Film_1ab9c52d3813f1c4182aee9188a3f70651" kind="function"><name>getSampleBounds</name></member>
     <member refid="classdakku_1_1Film_1ad9c09087e70ccaac1c152da26d064f1d" kind="function"><name>getFilmTile</name></member>
     <member refid="classdakku_1_1Film_1a36494dc9faa8017ffefb68564d4c52e8" kind="function"><name>mergeFilmTile</name></member>
-    <member refid="classdakku_1_1Film_1a3f25d31dcc0086c6f0f0f02a093827e6" kind="function"><name>writeImage</name></member>
+    <member refid="classdakku_1_1Film_1ad946ef8b95c381e09413d18e4be3e0da" kind="function"><name>writeImage</name></member>
+    <member refid="classdakku_1_1Film_1a415a2a47e1f79349a0ee9b8968b3e4af" kind="function"><name>writeImageTo</name></member>
+    <member refid="classdakku_1_1Film_1a36e7bf6e4d3e5f606bfe8ab2e7fd374c" kind="function"><name>writeImageTo</name></member>
     <member refid="classdakku_1_1Film_1abd5500d780cda9eb7b512dc7ac1740d5" kind="function"><name>serialize</name></member>
     <member refid="classdakku_1_1Film_1a5c376ccf9abcdb293db2e9b9935b785c" kind="function"><name>deserialize</name></member>
+    <member refid="classdakku_1_1Film_1a56c7a227f4e4b163e52b04f4cf286ccf" kind="function"><name>getCroppedPixelBounds</name></member>
     <member refid="classdakku_1_1Film_1a8a5b6b0f27f82805309c7f6600f0e7bb" kind="function"><name>getPixel</name></member>
+    <member refid="classdakku_1_1Film_1a2fd13089b42eba1f36bc4f94f8e19357" kind="function"><name>getPixel</name></member>
+  </compound>
+  <compound refid="classdakku_1_1FilmImageProvider" kind="class"><name>dakku::FilmImageProvider</name>
+    <member refid="classdakku_1_1FilmImageProvider_1a2d96f2e2c0b91cf67b1478eec80e959e" kind="variable"><name>image</name></member>
+    <member refid="classdakku_1_1FilmImageProvider_1a5f08965e463895ded371b7d78d3ec21c" kind="variable"><name>pixmap</name></member>
+    <member refid="classdakku_1_1FilmImageProvider_1a65cb6a36076140e4078bd0a92dacba19" kind="variable"><name>width</name></member>
+    <member refid="classdakku_1_1FilmImageProvider_1a0ef64883afef39f92f497e3ea4c15931" kind="variable"><name>height</name></member>
+    <member refid="classdakku_1_1FilmImageProvider_1a994df4048d6055475c15d40d36eaf84a" kind="variable"><name>currentIndex</name></member>
+    <member refid="classdakku_1_1FilmImageProvider_1a2c0930e0544d8771a8144537a2340e0b" kind="function"><name>FilmImageProvider</name></member>
+    <member refid="classdakku_1_1FilmImageProvider_1adb0b20604e5ee6507d2fa5fb9f80a4d5" kind="function"><name>requestPixmap</name></member>
+    <member refid="classdakku_1_1FilmImageProvider_1ae46a0b0191553c1f702810be0228dd76" kind="function"><name>update</name></member>
+    <member refid="classdakku_1_1FilmImageProvider_1a267eb4af2ea3a85a73ab2c830eecac6a" kind="signal"><name>updateGui</name></member>
   </compound>
   <compound refid="classdakku_1_1FilmTile" kind="class"><name>dakku::FilmTile</name>
     <member refid="classdakku_1_1FilmTile_1a1508a6fd2a92c50b745f618f727c9a42" kind="variable"><name>pixelBounds</name></member>
@@ -147,6 +162,11 @@
     <member refid="classdakku_1_1Filter_1af5facbb86027fe03ecc4c9d6e4ae6a17" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
     <member refid="classdakku_1_1Filter_1a41c4e564d4f720c22852f36412836574" kind="function"><name>Filter</name></member>
     <member refid="classdakku_1_1Filter_1abe92aa3911e6856f7abcb1ed841ff3e9" kind="function"><name>evaluate</name></member>
+  </compound>
+  <compound refid="classdakku_1_1GuiEngine" kind="class"><name>dakku::GuiEngine</name>
+    <member refid="classdakku_1_1GuiEngine_1a5ebd622d488e711360fa7dcbbe3aa8f5" kind="variable"><name>filmImageProvider</name></member>
+    <member refid="classdakku_1_1GuiEngine_1a135f9195dc943e6d9a81eea5acb0ead4" kind="function"><name>GuiEngine</name></member>
+    <member refid="classdakku_1_1GuiEngine_1a900dcdab4265fd19406805c654ace0b9" kind="slot"><name>updateFilmImage</name></member>
   </compound>
   <compound refid="classdakku_1_1InputStream" kind="class"><name>dakku::InputStream</name>
     <member refid="classdakku_1_1InputStream_1a72f97ed2ffd8176e418dc962de184ade" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
@@ -177,11 +197,6 @@
     <member refid="classdakku_1_1Logger_1a75e95ca57e099bb7992724feec106edf" kind="function"><name>get</name></member>
     <member refid="classdakku_1_1Logger_1a323f22b6d56d140abe5a41da4daff699" kind="function"><name>handle</name></member>
     <member refid="classdakku_1_1Logger_1a25793d0b435146d8e4a813dd39a486e1" kind="function"><name>Logger</name></member>
-  </compound>
-  <compound refid="classMainWindow" kind="class"><name>MainWindow</name>
-    <member refid="classMainWindow_1a35466a70ed47252a0191168126a352a5" kind="variable"><name>ui</name></member>
-    <member refid="classMainWindow_1a996c5a2b6f77944776856f08ec30858d" kind="function"><name>MainWindow</name></member>
-    <member refid="classMainWindow_1a1f7d2c56410fc1bfa135bb907d43313f" kind="function"><name>~MainWindow</name></member>
   </compound>
   <compound refid="structdakku_1_1Matrix4x4" kind="struct"><name>dakku::Matrix4x4</name>
     <member refid="structdakku_1_1Matrix4x4_1a3580dce7dc2c230e59203cecd2760635" kind="variable"><name>m</name></member>
@@ -565,15 +580,11 @@
   </compound>
   <compound refid="namespacestd_1_1pmr" kind="namespace"><name>std::pmr</name>
   </compound>
-  <compound refid="namespaceUi" kind="namespace"><name>Ui</name>
-  </compound>
   <compound refid="blocked__array_8h" kind="file"><name>blocked_array.h</name>
   </compound>
   <compound refid="bounds_8h" kind="file"><name>bounds.h</name>
   </compound>
   <compound refid="class_8h" kind="file"><name>class.h</name>
-  </compound>
-  <compound refid="film_8h" kind="file"><name>film.h</name>
   </compound>
   <compound refid="filter_8h" kind="file"><name>filter.h</name>
   </compound>
@@ -621,7 +632,11 @@
   </compound>
   <compound refid="triangle_8h" kind="file"><name>triangle.h</name>
   </compound>
-  <compound refid="mainwindow_8h" kind="file"><name>mainwindow.h</name>
+  <compound refid="engine_8h" kind="file"><name>engine.h</name>
+  </compound>
+  <compound refid="core_2film_8h" kind="file"><name>film.h</name>
+  </compound>
+  <compound refid="gui_2film_8h" kind="file"><name>film.h</name>
   </compound>
   <compound refid="imageio_8h" kind="file"><name>imageio.h</name>
   </compound>

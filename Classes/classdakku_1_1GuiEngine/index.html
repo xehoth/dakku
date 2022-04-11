@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://xehoth.github.io/dakku/Namespaces/namespaceUi/">
+        <link rel="canonical" href="https://xehoth.github.io/dakku/Classes/classdakku_1_1GuiEngine/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.9">
     
     
       
-        <title>Ui - dakku documentation</title>
+        <title>dakku::GuiEngine - dakku documentation</title>
       
     
     
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ui" class="md-skip">
+        <a href="#dakkuguiengine" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Ui
+              dakku::GuiEngine
             
           </span>
         </div>
@@ -321,6 +321,95 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#public-slots" class="md-nav__link">
+    Public Slots
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-functions" class="md-nav__link">
+    Public Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-attributes" class="md-nav__link">
+    Public Attributes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-slots-documentation" class="md-nav__link">
+    Public Slots Documentation
+  </a>
+  
+    <nav class="md-nav" aria-label="Public Slots Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#slot-updatefilmimage" class="md-nav__link">
+    slot updateFilmImage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-functions-documentation" class="md-nav__link">
+    Public Functions Documentation
+  </a>
+  
+    <nav class="md-nav" aria-label="Public Functions Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-guiengine" class="md-nav__link">
+    function GuiEngine
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-attributes-documentation" class="md-nav__link">
+    Public Attributes Documentation
+  </a>
+  
+    <nav class="md-nav" aria-label="Public Attributes Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variable-filmimageprovider" class="md-nav__link">
+    variable filmImageProvider
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -331,15 +420,76 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/xehoth/dakku/edit/master/docs/Namespaces/namespaceUi.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/xehoth/dakku/edit/master/docs/Classes/classdakku_1_1GuiEngine.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="ui">Ui</h1>
+<h1 id="dakkuguiengine">dakku::GuiEngine</h1>
+<p><code>#include &lt;engine.h&gt;</code></p>
+<p>Inherits from QQmlApplicationEngine</p>
+<h2 id="public-slots">Public Slots</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>void</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1GuiEngine/#slot-updatefilmimage">updateFilmImage</a></strong>(int id)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="public-functions">Public Functions</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1GuiEngine/#function-guiengine">GuiEngine</a></strong>()</td>
+</tr>
+</tbody>
+</table>
+<h2 id="public-attributes">Public Attributes</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/dakku/Classes/classdakku_1_1FilmImageProvider/">FilmImageProvider</a> *</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1GuiEngine/#variable-filmimageprovider">filmImageProvider</a></strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="public-slots-documentation">Public Slots Documentation</h2>
+<h3 id="slot-updatefilmimage">slot updateFilmImage</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">updateFilmImage</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="w"></span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h2 id="public-functions-documentation">Public Functions Documentation</h2>
+<h3 id="function-guiengine">function GuiEngine</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">GuiEngine</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<h2 id="public-attributes-documentation">Public Attributes Documentation</h2>
+<h3 id="variable-filmimageprovider">variable filmImageProvider</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">FilmImageProvider</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">filmImageProvider</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</code></pre></div>
 <hr />
-<p>Updated on 2022-04-10 at 11:21:42 +0000</p>
+<p>Updated on 2022-04-11 at 10:48:03 +0000</p>
 
               
             </article>

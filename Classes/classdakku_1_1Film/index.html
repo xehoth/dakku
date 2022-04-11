@@ -392,6 +392,20 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#function-writeimageto" class="md-nav__link">
+    function writeImageTo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-writeimageto_1" class="md-nav__link">
+    function writeImageTo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#function-serialize" class="md-nav__link">
     function serialize
   </a>
@@ -401,6 +415,13 @@
           <li class="md-nav__item">
   <a href="#function-deserialize" class="md-nav__link">
     function deserialize
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-getcroppedpixelbounds" class="md-nav__link">
+    function getCroppedPixelBounds
   </a>
   
 </li>
@@ -463,7 +484,15 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1Film/#function-writeimage">writeImage</a></strong>(float splatScale =1)<br>write image to <code>fileName</code></td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Film/#function-writeimage">writeImage</a></strong>(float splatScale =1) const<br>write image to <code>fileName</code></td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Film/#function-writeimageto">writeImageTo</a></strong>(std::span&lt; float &gt; buffer, float splatScale =1) const<br>write image to <code>buffer</code></td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Film/#function-writeimageto">writeImageTo</a></strong>(std::vector&lt; std::uint8_t &gt; &amp; buffer, float splatScale =1) const<br>write image to <code>buffer</code></td>
 </tr>
 <tr>
 <td>virtual void</td>
@@ -472,6 +501,10 @@
 <tr>
 <td>virtual void</td>
 <td><strong><a href="/dakku/Classes/classdakku_1_1Film/#function-deserialize">deserialize</a></strong>(<a href="/dakku/Classes/classdakku_1_1InputStream/">InputStream</a> * stream) override<br>deserialize the object (do not include the property part)</td>
+</tr>
+<tr>
+<td><a href="/dakku/Namespaces/namespacedakku/#using-bounds2i">Bounds2i</a></td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Film/#function-getcroppedpixelbounds">getCroppedPixelBounds</a></strong>() const<br>Get the Cropped Pixel Bounds object.</td>
 </tr>
 </tbody>
 </table>
@@ -579,17 +612,39 @@
 <h3 id="function-writeimage">function writeImage</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">writeImage</span><span class="p">(</span><span class="w"></span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">splatScale</span><span class="w"> </span><span class="o">=</span><span class="mi">1</span><span class="w"></span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
 </code></pre></div>
 <p>write image to <code>fileName</code></p>
 <p><strong>Parameters</strong>: </p>
 <ul>
 <li><strong>splatScale</strong> scale splat values </li>
 </ul>
+<h3 id="function-writeimageto">function writeImageTo</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">writeImageTo</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">buffer</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">splatScale</span><span class="w"> </span><span class="o">=</span><span class="mi">1</span><span class="w"></span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+</code></pre></div>
+<p>write image to <code>buffer</code></p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>splatScale</strong> scale splat values </li>
+</ul>
+<h3 id="function-writeimageto_1">function writeImageTo</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">writeImageTo</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">buffer</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">splatScale</span><span class="w"> </span><span class="o">=</span><span class="mi">1</span><span class="w"></span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+</code></pre></div>
+<p>write image to <code>buffer</code></p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>splatScale</strong> scale splat values </li>
+</ul>
 <h3 id="function-serialize">function serialize</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">serialize</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="n">OutputStream</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">stream</span><span class="w"></span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">override</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">serialize</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="n">OutputStream</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">stream</span><span class="w"></span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">override</span><span class="w"></span>
 </code></pre></div>
 <p>serialize the object (do not include the property part) </p>
 <p><strong>Parameters</strong>: </p>
@@ -598,9 +653,9 @@
 </ul>
 <p><strong>Reimplements</strong>: <a href="/dakku/Classes/classdakku_1_1SerializableObject/#function-serialize">dakku::SerializableObject::serialize</a></p>
 <h3 id="function-deserialize">function deserialize</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">deserialize</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="n">InputStream</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">stream</span><span class="w"></span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">deserialize</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="n">InputStream</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">stream</span><span class="w"></span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"></span>
 </code></pre></div>
 <p>deserialize the object (do not include the property part) </p>
 <p><strong>Parameters</strong>: </p>
@@ -608,8 +663,12 @@
 <li><strong>stream</strong> </li>
 </ul>
 <p><strong>Reimplements</strong>: <a href="/dakku/Classes/classdakku_1_1SerializableObject/#function-deserialize">dakku::SerializableObject::deserialize</a></p>
+<h3 id="function-getcroppedpixelbounds">function getCroppedPixelBounds</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">Bounds2i</span><span class="w"> </span><span class="n">getCroppedPixelBounds</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+</code></pre></div>
+<p>Get the Cropped Pixel Bounds object. </p>
 <hr />
-<p>Updated on 2022-04-10 at 11:21:42 +0000</p>
+<p>Updated on 2022-04-11 at 10:48:03 +0000</p>
 
               
             </article>

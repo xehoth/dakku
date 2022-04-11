@@ -135,7 +135,7 @@
       </node>
       <node id="13">
         <label>src/core/film.h</label>
-        <link refid="film_8h"/>
+        <link refid="core_2film_8h"/>
         <childnode refid="7" relation="include">
         </childnode>
       </node>

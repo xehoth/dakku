@@ -2,7 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
   <compounddef id="structdakku_1_1FilmTilePixel" kind="struct" language="C++" prot="public">
     <compoundname>dakku::FilmTilePixel</compoundname>
-    <includes refid="film_8h" local="no">film.h</includes>
+    <includes refid="core_2film_8h" local="no">film.h</includes>
       <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="structdakku_1_1FilmTilePixel_1af4beb8c6536598bd0233bcfa7b836f03" prot="public" static="no" mutable="no">
         <type><ref refid="namespacedakku_1a72f253f8c73b2ec7fef8e3c83c0eac17" kindref="member">Spectrum</ref></type>

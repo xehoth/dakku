@@ -13,6 +13,7 @@
     <includedby refid="class_8h" local="no">src/core/class.h</includedby>
     <includedby refid="logger_8h" local="no">src/core/logger.h</includedby>
     <includedby refid="relative_8h" local="no">src/core/relative.h</includedby>
+    <includedby refid="gui_2film_8h" local="no">src/gui/film.h</includedby>
     <includedby refid="textures_2fwd_8h" local="no">src/textures/fwd.h</includedby>
     <incdepgraph>
       <node id="1">
@@ -83,7 +84,7 @@
       </node>
       <node id="12">
         <label>src/core/film.h</label>
-        <link refid="film_8h"/>
+        <link refid="core_2film_8h"/>
         <childnode refid="6" relation="include">
         </childnode>
       </node>
@@ -107,6 +108,8 @@
         <childnode refid="22" relation="include">
         </childnode>
         <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
         </childnode>
         <childnode refid="19" relation="include">
         </childnode>
@@ -255,6 +258,16 @@
         <label>src/filters/triangle.h</label>
         <link refid="triangle_8h"/>
         <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>src/gui/engine.h</label>
+        <link refid="engine_8h"/>
+      </node>
+      <node id="33">
+        <label>src/gui/film.h</label>
+        <link refid="gui_2film_8h"/>
+        <childnode refid="34" relation="include">
         </childnode>
       </node>
       <node id="16">

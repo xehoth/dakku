@@ -1,0 +1,191 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="classdakku_1_1FilmImageProvider" kind="class" language="C++" prot="public">
+    <compoundname>dakku::FilmImageProvider</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">QQuickImageProvider</basecompoundref>
+    <includes refid="gui_2film_8h" local="no">film.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdakku_1_1FilmImageProvider_1a2d96f2e2c0b91cf67b1478eec80e959e" prot="private" static="no" mutable="no">
+        <type>QImage</type>
+        <definition>QImage dakku::FilmImageProvider::image</definition>
+        <argsstring></argsstring>
+        <name>image</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/gui/film.h" line="22" column="10" bodyfile="src/gui/film.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdakku_1_1FilmImageProvider_1a5f08965e463895ded371b7d78d3ec21c" prot="private" static="no" mutable="no">
+        <type>QPixmap</type>
+        <definition>QPixmap dakku::FilmImageProvider::pixmap</definition>
+        <argsstring></argsstring>
+        <name>pixmap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/gui/film.h" line="23" column="11" bodyfile="src/gui/film.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdakku_1_1FilmImageProvider_1a65cb6a36076140e4078bd0a92dacba19" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int dakku::FilmImageProvider::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/gui/film.h" line="24" column="7" bodyfile="src/gui/film.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdakku_1_1FilmImageProvider_1a0ef64883afef39f92f497e3ea4c15931" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int dakku::FilmImageProvider::height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/gui/film.h" line="25" column="7" bodyfile="src/gui/film.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdakku_1_1FilmImageProvider_1a994df4048d6055475c15d40d36eaf84a" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int dakku::FilmImageProvider::currentIndex</definition>
+        <argsstring></argsstring>
+        <name>currentIndex</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/gui/film.h" line="26" column="7" bodyfile="src/gui/film.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdakku_1_1FilmImageProvider_1a2c0930e0544d8771a8144537a2340e0b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>dakku::FilmImageProvider::FilmImageProvider</definition>
+        <argsstring>()</argsstring>
+        <name>FilmImageProvider</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/gui/film.h" line="11" column="3" bodyfile="src/gui/film.h" bodystart="11" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1FilmImageProvider_1adb0b20604e5ee6507d2fa5fb9f80a4d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>QPixmap</type>
+        <definition>QPixmap dakku::FilmImageProvider::requestPixmap</definition>
+        <argsstring>(const QString &amp;, QSize *size, const QSize &amp;requestedSize)</argsstring>
+        <name>requestPixmap</name>
+        <param>
+          <type>const QString &amp;</type>
+        </param>
+        <param>
+          <type>QSize *</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const QSize &amp;</type>
+          <declname>requestedSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/gui/film.h" line="13" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1FilmImageProvider_1ae46a0b0191553c1f702810be0228dd76" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dakku::FilmImageProvider::update</definition>
+        <argsstring>(const Film &amp;film)</argsstring>
+        <name>update</name>
+        <param>
+          <type>const <ref refid="classdakku_1_1Film" kindref="compound">Film</ref> &amp;</type>
+          <declname>film</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/gui/film.h" line="16" column="8"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="signal">
+      <memberdef kind="signal" id="classdakku_1_1FilmImageProvider_1a267eb4af2ea3a85a73ab2c830eecac6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dakku::FilmImageProvider::updateGui</definition>
+        <argsstring>(int id)</argsstring>
+        <name>updateGui</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/gui/film.h" line="19" column="8"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>QQuickImageProvider</label>
+      </node>
+      <node id="1">
+        <label>dakku::FilmImageProvider</label>
+        <link refid="classdakku_1_1FilmImageProvider"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>QQuickImageProvider</label>
+      </node>
+      <node id="1">
+        <label>dakku::FilmImageProvider</label>
+        <link refid="classdakku_1_1FilmImageProvider"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/gui/film.h" line="8" column="1" bodyfile="src/gui/film.h" bodystart="8" bodyend="27"/>
+    <listofallmembers>
+      <member refid="classdakku_1_1FilmImageProvider_1a994df4048d6055475c15d40d36eaf84a" prot="private" virt="non-virtual"><scope>dakku::FilmImageProvider</scope><name>currentIndex</name></member>
+      <member refid="classdakku_1_1FilmImageProvider_1a2c0930e0544d8771a8144537a2340e0b" prot="public" virt="non-virtual"><scope>dakku::FilmImageProvider</scope><name>FilmImageProvider</name></member>
+      <member refid="classdakku_1_1FilmImageProvider_1a0ef64883afef39f92f497e3ea4c15931" prot="private" virt="non-virtual"><scope>dakku::FilmImageProvider</scope><name>height</name></member>
+      <member refid="classdakku_1_1FilmImageProvider_1a2d96f2e2c0b91cf67b1478eec80e959e" prot="private" virt="non-virtual"><scope>dakku::FilmImageProvider</scope><name>image</name></member>
+      <member refid="classdakku_1_1FilmImageProvider_1a5f08965e463895ded371b7d78d3ec21c" prot="private" virt="non-virtual"><scope>dakku::FilmImageProvider</scope><name>pixmap</name></member>
+      <member refid="classdakku_1_1FilmImageProvider_1adb0b20604e5ee6507d2fa5fb9f80a4d5" prot="public" virt="non-virtual"><scope>dakku::FilmImageProvider</scope><name>requestPixmap</name></member>
+      <member refid="classdakku_1_1FilmImageProvider_1ae46a0b0191553c1f702810be0228dd76" prot="public" virt="non-virtual"><scope>dakku::FilmImageProvider</scope><name>update</name></member>
+      <member refid="classdakku_1_1FilmImageProvider_1a267eb4af2ea3a85a73ab2c830eecac6a" prot="public" virt="non-virtual"><scope>dakku::FilmImageProvider</scope><name>updateGui</name></member>
+      <member refid="classdakku_1_1FilmImageProvider_1a65cb6a36076140e4078bd0a92dacba19" prot="private" virt="non-virtual"><scope>dakku::FilmImageProvider</scope><name>width</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

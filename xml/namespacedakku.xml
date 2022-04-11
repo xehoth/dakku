@@ -14,9 +14,11 @@
     <innerclass refid="classdakku_1_1FileInputStream" prot="public">dakku::FileInputStream</innerclass>
     <innerclass refid="classdakku_1_1FileOutputStream" prot="public">dakku::FileOutputStream</innerclass>
     <innerclass refid="classdakku_1_1Film" prot="public">dakku::Film</innerclass>
+    <innerclass refid="classdakku_1_1FilmImageProvider" prot="public">dakku::FilmImageProvider</innerclass>
     <innerclass refid="classdakku_1_1FilmTile" prot="public">dakku::FilmTile</innerclass>
     <innerclass refid="structdakku_1_1FilmTilePixel" prot="public">dakku::FilmTilePixel</innerclass>
     <innerclass refid="classdakku_1_1Filter" prot="public">dakku::Filter</innerclass>
+    <innerclass refid="classdakku_1_1GuiEngine" prot="public">dakku::GuiEngine</innerclass>
     <innerclass refid="classdakku_1_1InputStream" prot="public">dakku::InputStream</innerclass>
     <innerclass refid="structdakku_1_1Interaction" prot="public">dakku::Interaction</innerclass>
     <innerclass refid="classdakku_1_1L1CacheLineAlignedResource" prot="public">dakku::L1CacheLineAlignedResource</innerclass>

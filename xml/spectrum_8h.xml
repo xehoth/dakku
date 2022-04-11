@@ -3,7 +3,7 @@
   <compounddef id="spectrum_8h" kind="file" language="C++">
     <compoundname>spectrum.h</compoundname>
     <includes refid="vector__base_8h" local="no">core/vector_base.h</includes>
-    <includedby refid="film_8h" local="no">src/core/film.h</includedby>
+    <includedby refid="core_2film_8h" local="no">src/core/film.h</includedby>
     <includedby refid="mipmap_8h" local="no">src/core/mipmap.h</includedby>
     <includedby refid="constant_8h" local="no">src/textures/constant.h</includedby>
     <incdepgraph>
@@ -118,7 +118,7 @@
       </node>
       <node id="2">
         <label>src/core/film.h</label>
-        <link refid="film_8h"/>
+        <link refid="core_2film_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>

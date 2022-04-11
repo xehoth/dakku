@@ -189,7 +189,7 @@
       </node>
       <node id="8">
         <label>src/core/film.h</label>
-        <link refid="film_8h"/>
+        <link refid="core_2film_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>

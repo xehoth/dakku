@@ -6,7 +6,7 @@
     <innerfile refid="blocked__array_8h">blocked_array.h</innerfile>
     <innerfile refid="bounds_8h">bounds.h</innerfile>
     <innerfile refid="class_8h">class.h</innerfile>
-    <innerfile refid="film_8h">film.h</innerfile>
+    <innerfile refid="core_2film_8h">film.h</innerfile>
     <innerfile refid="filter_8h">filter.h</innerfile>
     <innerfile refid="core_2fwd_8h">fwd.h</innerfile>
     <innerfile refid="interaction_8h">interaction.h</innerfile>

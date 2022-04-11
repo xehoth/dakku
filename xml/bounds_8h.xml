@@ -5,7 +5,7 @@
     <includes refid="vector_8h" local="no">core/vector.h</includes>
     <includes local="no">iterator</includes>
     <includes local="no">utility</includes>
-    <includedby refid="film_8h" local="no">src/core/film.h</includedby>
+    <includedby refid="core_2film_8h" local="no">src/core/film.h</includedby>
     <includedby refid="shape_8h" local="no">src/core/shape.h</includedby>
     <incdepgraph>
       <node id="1">
@@ -143,7 +143,7 @@
       </node>
       <node id="2">
         <label>src/core/film.h</label>
-        <link refid="film_8h"/>
+        <link refid="core_2film_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>

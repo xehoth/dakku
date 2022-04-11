@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="gui_2film_8h" kind="file" language="C++">
+    <compoundname>film.h</compoundname>
+    <includes refid="core_2fwd_8h" local="no">core/fwd.h</includes>
+    <includes local="no">QQuickImageProvider</includes>
+    <includedby refid="engine_8h" local="no">src/gui/engine.h</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>core/fwd.h</label>
+        <link refid="core_2fwd_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/gui/film.h</label>
+        <link refid="gui_2film_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>platform.h</label>
+        <link refid="platform_8h"/>
+      </node>
+      <node id="10">
+        <label>QQuickImageProvider</label>
+      </node>
+      <node id="9">
+        <label>bit</label>
+      </node>
+      <node id="7">
+        <label>cmath</label>
+      </node>
+      <node id="8">
+        <label>cstdint</label>
+      </node>
+      <node id="5">
+        <label>limits</label>
+      </node>
+      <node id="6">
+        <label>numbers</label>
+      </node>
+      <node id="4">
+        <label>type_traits</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>src/gui/engine.h</label>
+        <link refid="engine_8h"/>
+      </node>
+      <node id="1">
+        <label>src/gui/film.h</label>
+        <link refid="gui_2film_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classdakku_1_1FilmImageProvider" prot="public">dakku::FilmImageProvider</innerclass>
+    <innernamespace refid="namespacedakku">dakku</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>DAKKU_GUI_FILM_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DAKKU_GUI_FILM_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="core_2fwd_8h" kindref="compound">core/fwd.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QQuickImageProvider&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacedakku" kindref="compound">dakku</ref><sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="classdakku_1_1FilmImageProvider" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdakku_1_1FilmImageProvider" kindref="compound">FilmImageProvider</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>QQuickImageProvider<sp/>{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/>Q_OBJECT</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="11" refid="classdakku_1_1FilmImageProvider_1a2c0930e0544d8771a8144537a2340e0b" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classdakku_1_1FilmImageProvider_1a2c0930e0544d8771a8144537a2340e0b" kindref="member">FilmImageProvider</ref>()<sp/>:<sp/>QQuickImageProvider(QQuickImageProvider::Pixmap)<sp/>{}</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="classdakku_1_1FilmImageProvider_1adb0b20604e5ee6507d2fa5fb9f80a4d5" refkind="member"><highlight class="normal"><sp/><sp/>QPixmap<sp/><ref refid="classdakku_1_1FilmImageProvider_1adb0b20604e5ee6507d2fa5fb9f80a4d5" kindref="member">requestPixmap</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QString<sp/>&amp;,<sp/>QSize<sp/>*size,</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QSize<sp/>&amp;requestedSize);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="classdakku_1_1FilmImageProvider_1ae46a0b0191553c1f702810be0228dd76" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1FilmImageProvider_1ae46a0b0191553c1f702810be0228dd76" kindref="member">update</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Film" kindref="compound">Film</ref><sp/>&amp;film);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/>Q_SIGNALS:</highlight></codeline>
+<codeline lineno="19" refid="classdakku_1_1FilmImageProvider_1a267eb4af2ea3a85a73ab2c830eecac6a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1FilmImageProvider_1a267eb4af2ea3a85a73ab2c830eecac6a" kindref="member">updateGui</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/>QImage<sp/>image;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/>QPixmap<sp/>pixmap;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>width{};</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>height{};</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>currentIndex{};</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dakku</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="src/gui/film.h"/>
+  </compounddef>
+</doxygen>

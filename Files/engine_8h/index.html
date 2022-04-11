@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://xehoth.github.io/dakku/Classes/classMainWindow/">
+        <link rel="canonical" href="https://xehoth.github.io/dakku/Files/engine_8h/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.9">
     
     
       
-        <title>MainWindow - dakku documentation</title>
+        <title>src/gui/engine.h - dakku documentation</title>
       
     
     
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#mainwindow" class="md-skip">
+        <a href="#srcguiengineh" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              MainWindow
+              src/gui/engine.h
             
           </span>
         </div>
@@ -328,36 +328,23 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#public-functions" class="md-nav__link">
-    Public Functions
+  <a href="#namespaces" class="md-nav__link">
+    Namespaces
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#public-functions-documentation" class="md-nav__link">
-    Public Functions Documentation
-  </a>
-  
-    <nav class="md-nav" aria-label="Public Functions Documentation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#function-mainwindow" class="md-nav__link">
-    function MainWindow
+  <a href="#classes" class="md-nav__link">
+    Classes
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#function-mainwindow_1" class="md-nav__link">
-    function ~MainWindow
+      
+        <li class="md-nav__item">
+  <a href="#source-code" class="md-nav__link">
+    Source code
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -373,16 +360,27 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/xehoth/dakku/edit/master/docs/Classes/classMainWindow.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/xehoth/dakku/edit/master/docs/Files/engine_8h.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="mainwindow">MainWindow</h1>
-<p><code>#include &lt;mainwindow.h&gt;</code></p>
-<p>Inherits from QMainWindow</p>
-<h2 id="public-functions">Public Functions</h2>
+<h1 id="srcguiengineh">src/gui/engine.h</h1>
+<h2 id="namespaces">Namespaces</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/">dakku</a></strong> <br>dakku namespace</td>
+</tr>
+</tbody>
+</table>
+<h2 id="classes">Classes</h2>
 <table>
 <thead>
 <tr>
@@ -392,26 +390,37 @@
 </thead>
 <tbody>
 <tr>
-<td></td>
-<td><strong><a href="/dakku/Classes/classMainWindow/#function-mainwindow">MainWindow</a></strong>(QWidget * parent =nullptr)</td>
-</tr>
-<tr>
-<td></td>
-<td><strong><a href="/dakku/Classes/classMainWindow/#function-~mainwindow">~MainWindow</a></strong>() override</td>
+<td>class</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1GuiEngine/">dakku::GuiEngine</a></strong></td>
 </tr>
 </tbody>
 </table>
-<h2 id="public-functions-documentation">Public Functions Documentation</h2>
-<h3 id="function-mainwindow">function MainWindow</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">MainWindow</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="n">QWidget</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">parent</span><span class="w"> </span><span class="o">=</span><span class="k">nullptr</span><span class="w"></span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">)</span><span class="w"></span>
-</code></pre></div>
-<h3 id="function-mainwindow_1">function ~MainWindow</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="o">~</span><span class="n">MainWindow</span><span class="p">()</span><span class="w"> </span><span class="k">override</span><span class="w"></span>
+<h2 id="source-code">Source code</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#ifndef DAKKU_GUI_ENGINE_H_</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cp">#define DAKKU_GUI_ENGINE_H_</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;QQmlApplicationEngine&gt;</span><span class="cp"></span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;gui/film.h&gt;</span><span class="cp"></span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;thread&gt;</span><span class="cp"></span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;chrono&gt;</span><span class="cp"></span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">dakku</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="k">class</span><span class="w"> </span><span class="nc">GuiEngine</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">QQmlApplicationEngine</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="n">Q_OBJECT</span><span class="w"></span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w"> </span><span class="k">public</span><span class="o">:</span><span class="w"></span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span><span class="n">GuiEngine</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">Q_SLOTS</span><span class="o">:</span><span class="w"></span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">updateFilmImage</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w"> </span><span class="k">public</span><span class="o">:</span><span class="w"></span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">  </span><span class="n">FilmImageProvider</span><span class="w"> </span><span class="o">*</span><span class="n">filmImageProvider</span><span class="p">{};</span><span class="w"></span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="p">};</span><span class="w"></span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="p">}</span><span class="w">  </span><span class="c1">// namespace dakku</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="cp">#endif</span>
 </code></pre></div>
 <hr />
-<p>Updated on 2022-04-10 at 11:21:42 +0000</p>
+<p>Updated on 2022-04-11 at 10:48:04 +0000</p>
 
               
             </article>

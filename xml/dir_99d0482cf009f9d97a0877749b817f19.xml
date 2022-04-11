@@ -2,7 +2,8 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
   <compounddef id="dir_99d0482cf009f9d97a0877749b817f19" kind="dir">
     <compoundname>src/gui</compoundname>
-    <innerfile refid="mainwindow_8h">mainwindow.h</innerfile>
+    <innerfile refid="engine_8h">engine.h</innerfile>
+    <innerfile refid="gui_2film_8h">film.h</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
