@@ -123,6 +123,15 @@ inline int log2Int(std::int64_t v) {
   return 63 - std::countl_zero(static_cast<std::uint64_t>(v));
 }
 
+/**
+ * @brief linear interpolation
+ * 
+ */
+template <ArithmeticType T>
+inline T lerp(T a, T b, T t) {
+  return std::lerp(a, b, t);
+}
+
 class DAKKU_EXPORT_CORE RelativeRoot;
 class DAKKU_EXPORT_CORE InputStream;
 class DAKKU_EXPORT_CORE OutputStream;

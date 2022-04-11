@@ -750,7 +750,7 @@ class VectorBase {
 
   /**
    * @brief element-wise floor
-   * 
+   *
    */
   friend Derived floor(const Derived &v) {
     Derived ret = v;
@@ -760,7 +760,7 @@ class VectorBase {
 
   /**
    * @brief element-wise ceil
-   * 
+   *
    */
   friend Derived ceil(const Derived &v) {
     Derived ret = v;
@@ -770,6 +770,16 @@ class VectorBase {
 
   operator std::span<T, S>() { return std::span{_data}; }
   operator std::span<const T, S>() const { return std::span{_data}; }
+
+  /**
+   * @brief element-wise linear interpolation
+   *
+   */
+  friend Derived lerp(const Derived &a, const Derived &b, T t) {
+    Derived ret;
+    for (size_t i = 0; i < S; ++i) ret[i] = lerp(a[i], b[i], t);
+    return ret;
+  }
 
  protected:
   /// vector base data

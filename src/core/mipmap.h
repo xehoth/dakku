@@ -48,6 +48,13 @@ requires(std::is_same_v<T, float> || std::is_same_v<T, Spectrum>) class MipMap {
    */
   const T &texel(int level, int s, int t) const;
 
+  /**
+   * @brief trilinear lookup
+   * $\frac 1 w = 2 ^ {n - 1 - l}$
+   *
+   */
+  T lookup(const Point2f &st, float width) const;
+
  private:
   /// do trilinear interpolation
   const bool doTrilinear;
@@ -89,6 +96,11 @@ requires(std::is_same_v<T, float> || std::is_same_v<T, Spectrum>) class MipMap {
   }
 
   float clamp(float v) { return std::clamp(v, 0.0f, INF); }
+  /**
+   * @brief triangle filter
+   *
+   */
+  T triangle(int level, const Point2f &st) const;
   RgbSpectrum clamp(const RgbSpectrum &v) { return v.clamp(); }
 };
 
@@ -220,6 +232,40 @@ requires(std::is_same_v<T, float> ||
     }
   }
   return l(s, t);
+}
+
+template <typename T>
+requires(std::is_same_v<T, float> ||
+         std::is_same_v<T, Spectrum>) T MipMap<T>::lookup(const Point2f &st,
+                                                          float width)
+const {
+  // compute mipmap level for trilinear filtering
+  float level = levels() - 1 + std::log2(std::max(width, 1e-8f));
+  if (level < 0) {
+    return triangle(0, st);
+  } else if (level >= levels() - 1) {
+    return texel(levels() - 1, 0, 0);
+  } else {
+    int floorLevel = std::floor(level);
+    float delta = level - static_cast<float>(floorLevel);
+    return lerp(triangle(floorLevel, st), triangle(floorLevel + 1, st), delta);
+  }
+}
+
+template <typename T>
+requires(std::is_same_v<T, float> ||
+         std::is_same_v<T, Spectrum>) T MipMap<T>::triangle(int level,
+                                                            const Point2f &st)
+const {
+  level = std::clamp(level, 0, levels() - 1);
+  float s = st[0] * pyramid[level]->uSize() - 0.5f;
+  float t = st[1] * pyramid[level]->vSize() - 0.5f;
+  int s0 = std::floor(s), t0 = std::floor(t);
+  float ds = s - static_cast<float>(s0), dt = t - static_cast<float>(t0);
+  return (1 - ds) * (1 - dt) * texel(level, s0, t0) +
+         (1 - ds) * dt * texel(level, s0, t0 + 1) +
+         ds * (1 - dt) * texel(level, s0 + 1, t0) +
+         ds * dt * texel(level, s0 + 1, t0 + 1);
 }
 }  // namespace dakku
 #endif
