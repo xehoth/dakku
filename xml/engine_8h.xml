@@ -32,9 +32,9 @@
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="13" relation="include">
-        </childnode>
         <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
         </childnode>
       </node>
       <node id="3">
@@ -43,6 +43,8 @@
         <childnode refid="4" relation="include">
         </childnode>
         <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
         </childnode>
       </node>
       <node id="5">
@@ -58,7 +60,7 @@
       <node id="11">
         <label>bit</label>
       </node>
-      <node id="14">
+      <node id="15">
         <label>chrono</label>
       </node>
       <node id="9">
@@ -74,6 +76,9 @@
         <label>numbers</label>
       </node>
       <node id="13">
+        <label>span</label>
+      </node>
+      <node id="14">
         <label>thread</label>
       </node>
       <node id="6">
@@ -100,15 +105,16 @@
 <codeline lineno="11"><highlight class="normal"></highlight></codeline>
 <codeline lineno="12"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="13" refid="classdakku_1_1GuiEngine_1a135f9195dc943e6d9a81eea5acb0ead4" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classdakku_1_1GuiEngine_1a135f9195dc943e6d9a81eea5acb0ead4" kindref="member">GuiEngine</ref>();</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"></highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Q_SLOTS:</highlight></codeline>
-<codeline lineno="16" refid="classdakku_1_1GuiEngine_1a900dcdab4265fd19406805c654ace0b9" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1GuiEngine_1a900dcdab4265fd19406805c654ace0b9" kindref="member">updateFilmImage</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"></highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="19" refid="classdakku_1_1GuiEngine_1a5ebd622d488e711360fa7dcbbe3aa8f5" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classdakku_1_1FilmImageProvider" kindref="compound">FilmImageProvider</ref><sp/>*<ref refid="classdakku_1_1GuiEngine_1a5ebd622d488e711360fa7dcbbe3aa8f5" kindref="member">filmImageProvider</ref>{};</highlight></codeline>
-<codeline lineno="20"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="21"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dakku</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="14" refid="classdakku_1_1GuiEngine_1a5f58820656543c972b970eb0a1ee4984" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/><ref refid="classdakku_1_1FilmImageProvider" kindref="compound">FilmImageProvider</ref><sp/>*<ref refid="classdakku_1_1GuiEngine_1a5f58820656543c972b970eb0a1ee4984" kindref="member">getProvider</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Q_SLOTS:</highlight></codeline>
+<codeline lineno="17" refid="classdakku_1_1GuiEngine_1a900dcdab4265fd19406805c654ace0b9" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1GuiEngine_1a900dcdab4265fd19406805c654ace0b9" kindref="member">updateFilmImage</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><ref refid="classdakku_1_1FilmImageProvider" kindref="compound">FilmImageProvider</ref><sp/>*filmImageProvider{};</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dakku</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="src/gui/engine.h"/>
   </compounddef>

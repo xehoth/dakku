@@ -384,8 +384,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#function-update" class="md-nav__link">
-    function update
+  <a href="#function-setimage" class="md-nav__link">
+    function setImage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setimage_1" class="md-nav__link">
+    function setImage
   </a>
   
 </li>
@@ -446,11 +453,15 @@
 </tr>
 <tr>
 <td>QPixmap</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1FilmImageProvider/#function-requestpixmap">requestPixmap</a></strong>(const QString &amp; , QSize * size, const QSize &amp; requestedSize)</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1FilmImageProvider/#function-requestpixmap">requestPixmap</a></strong>(const QString &amp; , QSize * size, const QSize &amp; requestedSize) override</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1FilmImageProvider/#function-update">update</a></strong>(const <a href="/dakku/Classes/classdakku_1_1Film/">Film</a> &amp; film)</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1FilmImageProvider/#function-setimage">setImage</a></strong>(const <a href="/dakku/Classes/classdakku_1_1Film/">Film</a> &amp; film)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1FilmImageProvider/#function-setimage">setImage</a></strong>(std::span&lt; const float &gt; data, int width, int height)</td>
 </tr>
 </tbody>
 </table>
@@ -469,15 +480,22 @@
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">QString</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="n">QSize</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">size</span><span class="p">,</span><span class="w"></span>
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">QSize</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">requestedSize</span><span class="w"></span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"></span>
 </code></pre></div>
-<h3 id="function-update">function update</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">update</span><span class="p">(</span><span class="w"></span>
+<h3 id="function-setimage">function setImage</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">setImage</span><span class="p">(</span><span class="w"></span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Film</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">film</span><span class="w"></span>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
+<h3 id="function-setimage_1">function setImage</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">setImage</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">data</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">height</span><span class="w"></span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
 <hr />
-<p>Updated on 2022-04-11 at 14:49:47 +0000</p>
+<p>Updated on 2022-04-11 at 15:27:23 +0000</p>
 
               
             </article>
