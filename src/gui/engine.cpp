@@ -10,8 +10,11 @@ GuiEngine::GuiEngine() {
 }
 
 void GuiEngine::updateFilmImage(int id) {
-  printf("update");
   rootObjects().back()->findChild<QObject *>("film")->setProperty(
       "source", QString("image://film/") + QString::number(id));
+}
+
+FilmImageProvider *GuiEngine::getProvider() const {
+  return this->filmImageProvider;
 }
 }  // namespace dakku

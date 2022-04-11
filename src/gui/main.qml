@@ -14,7 +14,7 @@ Window {
         y: 0
         objectName: "film"
         cache: false
-        source: "image://film/"
+        source: "image://film/film"
         fillMode: Image.PreserveAspectFit
         asynchronous: true
         scale: 1.0

@@ -11,11 +11,12 @@ class GuiEngine : public QQmlApplicationEngine {
 
  public:
   GuiEngine();
+  [[nodiscard]] FilmImageProvider *getProvider() const;
 
  public Q_SLOTS:
   void updateFilmImage(int id);
 
- public:
+ private:
   FilmImageProvider *filmImageProvider{};
 };
 }  // namespace dakku
