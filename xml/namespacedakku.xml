@@ -664,10 +664,10 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
-      <memberdef kind="function" id="namespacedakku_1a0a6e521b5790d32f876aad2bcc68d011" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespacedakku_1ab50c0250dddfef69fbc2e63059ef3bf3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>dakku::DAKKU_EXPORT_OBJECTS</definition>
-        <argsstring>(Core, Object, InputStream, OutputStream, SerializableObject, Filter, Film, Texture)</argsstring>
+        <argsstring>(Core, Object, InputStream, OutputStream, SerializableObject, Filter, Film, Texture, TextureMapping2D, UvMapping2D)</argsstring>
         <name>DAKKU_EXPORT_OBJECTS</name>
         <param>
           <type>Core</type>
@@ -692,6 +692,12 @@
         </param>
         <param>
           <type><ref refid="classdakku_1_1Texture" kindref="compound">Texture</ref></type>
+        </param>
+        <param>
+          <type><ref refid="classdakku_1_1TextureMapping2D" kindref="compound">TextureMapping2D</ref></type>
+        </param>
+        <param>
+          <type><ref refid="classdakku_1_1UvMapping2D" kindref="compound">UvMapping2D</ref></type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -1808,16 +1814,19 @@ the shorter edge mapped to [-1, 1], the longer [-ratio, ratio] left handed </par
         </inbodydescription>
         <location file="src/stream/api.h" line="13" column="1" declfile="src/stream/api.h" declline="13" declcolumn="1"/>
       </memberdef>
-      <memberdef kind="function" id="namespacedakku_1a19c0457bb4d3e92d540f16e733e88822" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespacedakku_1a84c83f6f4de090b0ef57c9298b8d91d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>dakku::DAKKU_EXPORT_OBJECTS</definition>
-        <argsstring>(Textures, ConstantTexture)</argsstring>
+        <argsstring>(Textures, ConstantTexture, ImageTexture)</argsstring>
         <name>DAKKU_EXPORT_OBJECTS</name>
         <param>
           <type>Textures</type>
         </param>
         <param>
           <type><ref refid="classdakku_1_1ConstantTexture" kindref="compound">ConstantTexture</ref></type>
+        </param>
+        <param>
+          <type><ref refid="classdakku_1_1ImageTexture" kindref="compound">ImageTexture</ref></type>
         </param>
         <briefdescription>
         </briefdescription>

@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/textures/image.h" line="19" column="19" bodyfile="src/textures/image.h" bodystart="19" bodyend="-1"/>
+        <location file="src/textures/image.h" line="23" column="19" bodyfile="src/textures/image.h" bodystart="23" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classdakku_1_1ImageTexture_1a205e6c8865159b8de73a594ecba02bb6" prot="private" static="no" mutable="no">
         <type>std::variant&lt; std::unique_ptr&lt; <ref refid="classdakku_1_1MipMap" kindref="compound">MipMap</ref>&lt; float &gt; &gt;, std::unique_ptr&lt; <ref refid="classdakku_1_1MipMap" kindref="compound">MipMap</ref>&lt; <ref refid="namespacedakku_1a72f253f8c73b2ec7fef8e3c83c0eac17" kindref="member">Spectrum</ref> &gt; &gt; &gt;</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/textures/image.h" line="22" column="7" bodyfile="src/textures/image.h" bodystart="22" bodyend="-1"/>
+        <location file="src/textures/image.h" line="26" column="7" bodyfile="src/textures/image.h" bodystart="26" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -157,7 +157,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/textures/image.h" line="9" column="1" bodyfile="src/textures/image.h" bodystart="9" bodyend="23"/>
+    <location file="src/textures/image.h" line="9" column="1" bodyfile="src/textures/image.h" bodystart="9" bodyend="30"/>
     <listofallmembers>
       <member refid="classdakku_1_1ImageTexture_1ab92c8d48435998844e940e6da4259402" prot="public" virt="non-virtual"><scope>dakku::ImageTexture</scope><name>DAKKU_DECLARE_OBJECT</name></member>
       <member refid="classdakku_1_1Texture_1a34d7f1518a45937548bbfb8e9db857e4" prot="public" virt="non-virtual" ambiguityscope="dakku::Texture::"><scope>dakku::ImageTexture</scope><name>DAKKU_DECLARE_OBJECT</name></member>

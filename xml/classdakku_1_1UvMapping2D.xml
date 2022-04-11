@@ -78,30 +78,25 @@
         </inbodydescription>
         <location file="src/core/texture.h" line="21" column="3"/>
       </memberdef>
-      <memberdef kind="function" id="classdakku_1_1UvMapping2D_1a60df20fbec24334a276a1f2c5a0584f0" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classdakku_1_1UvMapping2D_1a776814664aeb2df9bf0c2c1a76de3632" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
         <type></type>
         <definition>dakku::UvMapping2D::UvMapping2D</definition>
-        <argsstring>(float su=1, float sv=1, float du=0, float dv=0)</argsstring>
+        <argsstring>(float su, float, float du, float dv)</argsstring>
         <name>UvMapping2D</name>
         <param>
           <type>float</type>
           <declname>su</declname>
-          <defval>1</defval>
         </param>
         <param>
           <type>float</type>
-          <declname>sv</declname>
-          <defval>1</defval>
         </param>
         <param>
           <type>float</type>
           <declname>du</declname>
-          <defval>0</defval>
         </param>
         <param>
           <type>float</type>
           <declname>dv</declname>
-          <defval>0</defval>
         </param>
         <briefdescription>
         </briefdescription>
@@ -195,7 +190,7 @@
       <member refid="classdakku_1_1UvMapping2D_1aeb53e469d40b1151af3ef5a9c6a4cc3c" prot="private" virt="non-virtual"><scope>dakku::UvMapping2D</scope><name>su</name></member>
       <member refid="classdakku_1_1UvMapping2D_1af8db90320189b9ace72b7cac222ae530" prot="private" virt="non-virtual"><scope>dakku::UvMapping2D</scope><name>sv</name></member>
       <member refid="classdakku_1_1Object_1a65d91c04e480b827fa495df96af2826b" prot="public" virt="virtual"><scope>dakku::UvMapping2D</scope><name>toString</name></member>
-      <member refid="classdakku_1_1UvMapping2D_1a60df20fbec24334a276a1f2c5a0584f0" prot="public" virt="non-virtual"><scope>dakku::UvMapping2D</scope><name>UvMapping2D</name></member>
+      <member refid="classdakku_1_1UvMapping2D_1a776814664aeb2df9bf0c2c1a76de3632" prot="public" virt="non-virtual"><scope>dakku::UvMapping2D</scope><name>UvMapping2D</name></member>
       <member refid="classdakku_1_1Object_1a0c792f089351caf3fa7a704c86ce903d" prot="public" virt="virtual"><scope>dakku::UvMapping2D</scope><name>~Object</name></member>
     </listofallmembers>
   </compounddef>
