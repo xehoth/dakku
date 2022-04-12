@@ -9,7 +9,7 @@ ImageTexture::ImageTexture(std::unique_ptr<TextureMapping2D> m,
                            bool doTrilinear, float maxAnisotropy,
                            ImageWrapMode mode, float scale, bool gamma,
                            bool floatType)
-    : Texture(floatType) {
+    : Texture(floatType), mapping(std::move(m)) {
   Point2i resolution;
   if (floatType) {
     std::unique_ptr<float[]> texels{

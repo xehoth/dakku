@@ -81,7 +81,8 @@ requires(std::is_same_v<T, float> || std::is_same_v<T, Spectrum>) class MipMap {
     for (int i = 0; i < newRes; ++i) {
       float center = (static_cast<float>(i) + 0.5f) /
                      static_cast<float>(newRes) * static_cast<float>(oldRes);
-      wt[i].firstTexel = static_cast<int>(std::floor((center - filterWidth) * 0.5f));
+      wt[i].firstTexel =
+          static_cast<int>(std::floor((center - filterWidth) * 0.5f));
       // nearby four texels
       for (int j = 0; j < 4; ++j) {
         float pos = static_cast<float>(wt[i].firstTexel + j) + 0.5f;
@@ -112,10 +113,10 @@ requires(std::is_same_v<T, float> ||
                                                         bool doTrilinear,
                                                         float maxAnisotropy,
                                                         ImageWrapMode wrapMode)
-    : resolution(std::move(resolution)),
-      doTrilinear(doTrilinear),
+    : doTrilinear(doTrilinear),
       maxAnisotropy(maxAnisotropy),
-      wrapMode(wrapMode) {
+      wrapMode(wrapMode),
+      resolution(std::move(resolution)) {
   std::unique_ptr<T[]> resampledImage{};
   if (!isPowerOf2(resolution.x()) || !isPowerOf2(resolution.y())) {
     // not power of 2, resample image to the with the size to the nearest 2 ^ k
@@ -261,7 +262,8 @@ const {
   level = std::clamp(level, 0, levels() - 1);
   float s = st[0] * pyramid[level]->uSize() - 0.5f;
   float t = st[1] * pyramid[level]->vSize() - 0.5f;
-  int s0 = static_cast<int>(std::floor(s)), t0 = static_cast<int>(std::floor(t));
+  int s0 = static_cast<int>(std::floor(s)),
+      t0 = static_cast<int>(std::floor(t));
   float ds = s - static_cast<float>(s0), dt = t - static_cast<float>(t0);
   return (1 - ds) * (1 - dt) * texel(level, s0, t0) +
          (1 - ds) * dt * texel(level, s0, t0 + 1) +
