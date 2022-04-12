@@ -41,6 +41,7 @@ class DAKKU_EXPORT_CORE Film : public SerializableObject {
   explicit Film(const Point2i &fullResolution, const Bounds2f &cropWindow,
                 std::unique_ptr<Filter> filter, std::string fileName,
                 float scale, float maxSampleLuminance = INF);
+  explicit Film(const Property &);
 
   /**
    * @brief get the area to be sampled
@@ -94,10 +95,6 @@ class DAKKU_EXPORT_CORE Film : public SerializableObject {
   [[nodiscard]] Bounds2i getCroppedPixelBounds() const;
 
  private:
-#if defined(_MSC_VER)
-#pragma warning(push)
-#pragma warning(disable : 4251)
-#endif
   /**
    * @brief pixel struct
    *
@@ -137,10 +134,6 @@ class DAKKU_EXPORT_CORE Film : public SerializableObject {
 
   /// max sample luminance
   const float maxSampleLuminance;
-
-#if defined(_MSC_VER)
-#pragma warning(pop)
-#endif
 
   Pixel &getPixel(const Point2i &p) {
     return const_cast<Pixel &>(static_cast<const Film &>(*this).getPixel(p));

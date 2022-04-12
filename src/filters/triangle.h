@@ -12,7 +12,8 @@ namespace dakku {
 class DAKKU_EXPORT_FILTERS TriangleFilter : public Filter {
  public:
   DAKKU_DECLARE_OBJECT(TriangleFilter, Filter);
-  using Filter::Filter;
+  
+  explicit TriangleFilter(const Property &p);
 
   [[nodiscard]] float evaluate(const Point2f &p) const override;
 };

@@ -166,5 +166,8 @@ struct Interaction;
 class SurfaceInteraction;
 class DAKKU_EXPORT_CORE Shape;
 class DAKKU_EXPORT_CORE Texture;
+
+class DAKKU_EXPORT_CORE Camera;
+struct CameraSample;
 }  // namespace dakku
 #endif

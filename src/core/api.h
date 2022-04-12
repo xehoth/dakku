@@ -17,6 +17,6 @@ namespace dakku {
 
 DAKKU_EXPORT_OBJECTS(Core, Object, InputStream, OutputStream,
                      SerializableObject, Filter, Film, Texture,
-                     TextureMapping2D, UvMapping2D, Shape, Camera);
+                     TextureMapping2D, UvMapping2D, Shape, Camera, ProjectiveCamera);
 }  // namespace dakku
 #endif

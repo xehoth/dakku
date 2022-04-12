@@ -20,7 +20,9 @@ class DAKKU_EXPORT_CORE UvMapping2D : public TextureMapping2D {
  public:
   DAKKU_DECLARE_OBJECT(UvMapping2D, TextureMapping2D);
 
-  explicit UvMapping2D(float su, float, float du, float dv);
+  explicit UvMapping2D(float su = 1.0f, float sv = 1.0f, float du = 0.0f,
+                       float dv = 0.0f);
+  explicit UvMapping2D(const Property &p);
 
   Point2f map(const SurfaceInteraction &si, Vector2f &dstdx,
               Vector2f &dstdy) const override;
@@ -34,7 +36,7 @@ class DAKKU_EXPORT_CORE Texture : public Object {
  public:
   DAKKU_DECLARE_OBJECT(Texture, Object);
 
-  explicit Texture(bool floatType);
+  explicit Texture(bool floatType = false);
 
   [[nodiscard]] virtual Spectrum evaluate(const SurfaceInteraction &) const = 0;
 

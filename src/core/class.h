@@ -73,21 +73,15 @@ class DAKKU_EXPORT_CORE Class final {
     std::string parent;
   };
 
-#if defined(_MSC_VER)
-#pragma warning(push)
-#pragma warning(disable : 4251)
-#endif
   std::map<std::string, Metadata, std::less<>> _classMap;
-#if defined(_MSC_VER)
-#pragma warning(pop)
-#endif
 };
 
 template <ObjectType T>
 void Class::registerClass() {
   if (!_classMap.contains(T::getClassNameStatic())) {
-    DAKKU_INFO("register class: {}, parent: {}", T::getClassNameStatic(),
-               T::getParentNameStatic());
+    DAKKU_INFO("register class({}): {}, parent: {}",
+               (std::is_constructible_v<T, const Property &> ? "c" : "u"),
+               T::getClassNameStatic(), T::getParentNameStatic());
     _classMap[T::getClassNameStatic()] = {&constructor<T>,
                                           T::getParentNameStatic()};
   } else {
@@ -97,7 +91,7 @@ void Class::registerClass() {
 
 template <typename T>
 Object *Class::constructor(const Property &property) {
-  if constexpr (std::is_default_constructible_v<T>) {
+  if constexpr (std::is_constructible_v<T, const Property &>) {
     return new T{property};
   } else {
     DAKKU_ERR("cannot construct {}", T::getClassNameStatic());

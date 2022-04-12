@@ -2,8 +2,6 @@
 #include <core/interaction.h>
 namespace dakku {
 
-TextureMapping2D::TextureMapping2D(const Property &) {}
-
 UvMapping2D::UvMapping2D(float su, float sv, float du, float dv)
     : su(su), sv(sv), du(du), dv(dv) {}
 UvMapping2D::UvMapping2D(const Property &p)
@@ -20,6 +18,4 @@ Point2f UvMapping2D::map(const SurfaceInteraction &si, Vector2f &dstdx,
 
 Texture::Texture(bool floatType) : floatType(floatType) {}
 
-Texture::Texture(const Property &p)
-    : Texture(p.getNumberIf("floatType", false)) {}
 }  // namespace dakku

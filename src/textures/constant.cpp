@@ -8,7 +8,8 @@ ConstantTexture::ConstantTexture(Spectrum v) : value(std::move(v)) {
   this->floatType = false;
 }
 
-ConstantTexture::ConstantTexture(const Property &p) : Texture(p) {
+ConstantTexture::ConstantTexture(const Property &p)
+    : Texture(p.getNumberIf("floatType", false)) {
   if (p["value"].isNumberType()) {
     this->value = Spectrum(p["value"].getNumber());
   } else {
@@ -16,5 +17,7 @@ ConstantTexture::ConstantTexture(const Property &p) : Texture(p) {
   }
 }
 
-Spectrum ConstantTexture::evaluate(const SurfaceInteraction &) const { return this->value; }
+Spectrum ConstantTexture::evaluate(const SurfaceInteraction &) const {
+  return this->value;
+}
 }  // namespace dakku

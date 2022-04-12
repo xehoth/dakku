@@ -15,9 +15,6 @@ Shape::Shape(const Transform *objectToWorld)
       worldToObject(TransformCache::instance().lookUp(inverse(*objectToWorld))),
       transformSwapsHandedness(objectToWorld->swapsHandedNess()) {}
 
-Shape::Shape(const Property &p)
-    : Shape(TransformCache::instance().lookUpByProperty(p)) {}
-
 bool Shape::hasIntersection(const Ray &ray, bool testAlphaTexture) const {
   return intersect(ray, nullptr, nullptr, testAlphaTexture);
 }

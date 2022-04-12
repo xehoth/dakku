@@ -2,8 +2,6 @@
 
 namespace dakku {
 
-RenderState::RenderState(const Property &) {}
-
 void RenderState::serialize(OutputStream *) const {
   DAKKU_ERR("unimplemented");
 }

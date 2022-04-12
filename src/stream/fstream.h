@@ -15,6 +15,7 @@ class DAKKU_EXPORT_STREAM FileInputStream : public InputStream {
    * @param path the path of the file
    */
   explicit FileInputStream(const std::filesystem::path &path);
+  explicit FileInputStream(const Property &);
 
   /**
    * @return one byte read from the stream
@@ -30,15 +31,8 @@ class DAKKU_EXPORT_STREAM FileInputStream : public InputStream {
   size_t readBytes(void *ptr, size_t size) override;
 
  protected:
-#if defined(_MSC_VER)
-#pragma warning(push)
-#pragma warning(disable : 4251)
-#endif
   /// ifstream
   std::ifstream stream;
-#if defined(_MSC_VER)
-#pragma warning(pop)
-#endif
 };
 
 /**
@@ -52,6 +46,7 @@ class DAKKU_EXPORT_STREAM FileOutputStream : public OutputStream {
    * @param path the path of the file
    */
   explicit FileOutputStream(const std::filesystem::path &path);
+  explicit FileOutputStream(const Property &);
   /**
    * @brief write one byte
    * @param value the byte to write
@@ -67,15 +62,8 @@ class DAKKU_EXPORT_STREAM FileOutputStream : public OutputStream {
   size_t writeBytes(const void *ptr, size_t size) override;
 
  protected:
-#if defined(_MSC_VER)
-#pragma warning(push)
-#pragma warning(disable : 4251)
-#endif
   /// ofstream
   std::ofstream stream;
-#if defined(_MSC_VER)
-#pragma warning(pop)
-#endif
 };
 }  // namespace dakku
 #endif

@@ -62,8 +62,7 @@ class DAKKU_EXPORT_CORE Object {
   static std::string getParentNameStatic() { return #parent; } \
   [[nodiscard]] std::string getParentName() const override {   \
     return getParentNameStatic();                              \
-  }                                                            \
-  explicit name(const Property & = {})
+  }
 
 template <typename... Args>
 inline void registerObjects() {

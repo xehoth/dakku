@@ -12,8 +12,8 @@ namespace dakku {
 class DAKKU_EXPORT_FILTERS BoxFilter : public Filter {
  public:
   DAKKU_DECLARE_OBJECT(BoxFilter, Filter);
-  using Filter::Filter;
-
+  explicit BoxFilter(const Property &);
+  
   [[nodiscard]] float evaluate(const Point2f &p) const override;
 };
 }  // namespace dakku
