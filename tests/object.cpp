@@ -25,4 +25,6 @@ TEST(Object, Register) {
   EXPECT_TRUE(Class::instance().contains("Shape"));
   EXPECT_TRUE(Class::instance().contains("Camera"));
   EXPECT_TRUE(Class::instance().contains("PerspectiveCamera"));
+  EXPECT_TRUE(Class::instance().contains("Sampler"));
+  EXPECT_TRUE(Class::instance().contains("PixelSampler"));
 }

@@ -12,11 +12,13 @@
 #include <core/texture.h>
 #include <core/shape.h>
 #include <core/camera.h>
+#include <core/sampler.h>
 
 namespace dakku {
 
 DAKKU_EXPORT_OBJECTS(Core, Object, InputStream, OutputStream,
                      SerializableObject, Filter, Film, Texture,
-                     TextureMapping2D, UvMapping2D, Shape, Camera, ProjectiveCamera);
+                     TextureMapping2D, UvMapping2D, Shape, Camera,
+                     ProjectiveCamera, Sampler, PixelSampler);
 }  // namespace dakku
 #endif
