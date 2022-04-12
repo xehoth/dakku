@@ -349,6 +349,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#detailed-description" class="md-nav__link">
+    Detailed Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#public-functions-documentation" class="md-nav__link">
     Public Functions Documentation
   </a>
@@ -366,6 +373,20 @@
           <li class="md-nav__item">
   <a href="#function-camera" class="md-nav__link">
     function Camera
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-generateray" class="md-nav__link">
+    function generateRay
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-generateraydifferential" class="md-nav__link">
+    function generateRayDifferential
   </a>
   
 </li>
@@ -421,9 +442,10 @@
 
 
 <h1 id="dakkucamera">dakku::Camera</h1>
-<p>camera </p>
+<p>camera  <a href="#detailed-description">More...</a></p>
 <p><code>#include &lt;camera.h&gt;</code></p>
 <p>Inherits from <a href="/dakku/Classes/classdakku_1_1Object/">dakku::Object</a></p>
+<p>Inherited by <a href="/dakku/Classes/classdakku_1_1ProjectiveCamera/">dakku::ProjectiveCamera</a></p>
 <h2 id="public-functions">Public Functions</h2>
 <table>
 <thead>
@@ -440,6 +462,14 @@
 <tr>
 <td></td>
 <td><strong><a href="/dakku/Classes/classdakku_1_1Camera/#function-camera">Camera</a></strong>(const <a href="/dakku/Classes/classdakku_1_1Transform/">Transform</a> &amp; cameraToWorld, <a href="/dakku/Classes/classdakku_1_1Film/">Film</a> * film)</td>
+</tr>
+<tr>
+<td>virtual float</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Camera/#function-generateray">generateRay</a></strong>(const <a href="/dakku/Classes/structdakku_1_1CameraSample/">CameraSample</a> &amp; sample, <a href="/dakku/Classes/classdakku_1_1Ray/">Ray</a> &amp; ray) const =0<br>generate ray according to given sample</td>
+</tr>
+<tr>
+<td>virtual float</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Camera/#function-generateraydifferential">generateRayDifferential</a></strong>(const <a href="/dakku/Classes/structdakku_1_1CameraSample/">CameraSample</a> &amp; sample, <a href="/dakku/Classes/classdakku_1_1RayDifferential/">RayDifferential</a> &amp; rayD) const =0<br>generate ray differential according to given sample</td>
 </tr>
 </tbody>
 </table>
@@ -510,30 +540,49 @@
 </tr>
 </tbody>
 </table>
+<h2 id="detailed-description">Detailed Description</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">dakku</span><span class="o">::</span><span class="n">Camera</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>camera </p>
+<p>film must be constructed before constructing camera </p>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-dakku_declare_object">function DAKKU_DECLARE_OBJECT</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">DAKKU_DECLARE_OBJECT</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="n">Camera</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">Object</span><span class="w"> </span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">)</span><span class="w"></span>
-</code></pre></div>
-<h3 id="function-camera">function Camera</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">explicit</span><span class="w"> </span><span class="n">Camera</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Transform</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">cameraToWorld</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="n">Film</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">film</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">DAKKU_DECLARE_OBJECT</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="n">Camera</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="n">Object</span><span class="w"> </span>
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
+<h3 id="function-camera">function Camera</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">explicit</span><span class="w"> </span><span class="n">Camera</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Transform</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">cameraToWorld</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="n">Film</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">film</span><span class="w"></span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-generateray">function generateRay</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">generateRay</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">CameraSample</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">sample</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="n">Ray</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">ray</span><span class="w"></span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">=</span><span class="mi">0</span><span class="w"></span>
+</code></pre></div>
+<p>generate ray according to given sample </p>
+<h3 id="function-generateraydifferential">function generateRayDifferential</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">generateRayDifferential</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">CameraSample</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">sample</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="n">RayDifferential</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">rayD</span><span class="w"></span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">=</span><span class="mi">0</span><span class="w"></span>
+</code></pre></div>
+<p>generate ray differential according to given sample </p>
 <h2 id="public-attributes-documentation">Public Attributes Documentation</h2>
 <h3 id="variable-cameratoworld">variable cameraToWorld</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">Transform</span><span class="w"> </span><span class="n">cameraToWorld</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">Transform</span><span class="w"> </span><span class="n">cameraToWorld</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <p>camera to world transform </p>
 <h3 id="variable-film">variable film</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">Film</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">film</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">Film</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">film</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <p>film </p>
 <hr />
-<p>Updated on 2022-04-12 at 04:37:04 +0000</p>
+<p>Updated on 2022-04-12 at 05:04:30 +0000</p>
 
               
             </article>

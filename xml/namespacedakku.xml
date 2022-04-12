@@ -9,6 +9,7 @@
     <innerclass refid="classdakku_1_1BoundsBase" prot="public">dakku::BoundsBase</innerclass>
     <innerclass refid="classdakku_1_1BoxFilter" prot="public">dakku::BoxFilter</innerclass>
     <innerclass refid="classdakku_1_1Camera" prot="public">dakku::Camera</innerclass>
+    <innerclass refid="structdakku_1_1CameraSample" prot="public">dakku::CameraSample</innerclass>
     <innerclass refid="classdakku_1_1Class" prot="public">dakku::Class</innerclass>
     <innerclass refid="classdakku_1_1CoefficientSpectrum" prot="public">dakku::CoefficientSpectrum</innerclass>
     <innerclass refid="classdakku_1_1ConstantTexture" prot="public">dakku::ConstantTexture</innerclass>
@@ -32,6 +33,7 @@
     <innerclass refid="classdakku_1_1Object" prot="public">dakku::Object</innerclass>
     <innerclass refid="classdakku_1_1OutputStream" prot="public">dakku::OutputStream</innerclass>
     <innerclass refid="classdakku_1_1Point" prot="public">dakku::Point</innerclass>
+    <innerclass refid="classdakku_1_1ProjectiveCamera" prot="public">dakku::ProjectiveCamera</innerclass>
     <innerclass refid="classdakku_1_1Property" prot="public">dakku::Property</innerclass>
     <innerclass refid="classdakku_1_1Ray" prot="public">dakku::Ray</innerclass>
     <innerclass refid="classdakku_1_1RayDifferential" prot="public">dakku::RayDifferential</innerclass>
@@ -664,6 +666,19 @@
         </inbodydescription>
         <location file="src/core/fwd.h" line="168" column="24" bodyfile="src/core/fwd.h" bodystart="168" bodyend="-1"/>
       </memberdef>
+      <memberdef kind="variable" id="namespacedakku_1a91583977767aa3566783f8ab2c0538a7" prot="public" static="no" mutable="no">
+        <type>class <ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
+        <definition>class DAKKU_EXPORT_CORE dakku::Camera</definition>
+        <argsstring></argsstring>
+        <name>Camera</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/fwd.h" line="170" column="24" bodyfile="src/core/fwd.h" bodystart="170" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="variable" id="namespacedakku_1ad67fc67650e8ff59c3b25b9e9d462ee4" prot="public" static="no" mutable="no">
         <templateparamlist>
           <param>
@@ -739,10 +754,10 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
-      <memberdef kind="function" id="namespacedakku_1afb8b3ba43715313b21b2a234c2c2436d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespacedakku_1abd2616d95825cc7983c495b9e79f0afe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>dakku::DAKKU_EXPORT_OBJECTS</definition>
-        <argsstring>(Core, Object, InputStream, OutputStream, SerializableObject, Filter, Film, Texture, TextureMapping2D, UvMapping2D, Shape, Camera)</argsstring>
+        <argsstring>(Core, Object, InputStream, OutputStream, SerializableObject, Filter, Film, Texture, TextureMapping2D, UvMapping2D, Shape, Camera, ProjectiveCamera)</argsstring>
         <name>DAKKU_EXPORT_OBJECTS</name>
         <param>
           <type>Core</type>
@@ -779,6 +794,9 @@
         </param>
         <param>
           <type><ref refid="classdakku_1_1Camera" kindref="compound">Camera</ref></type>
+        </param>
+        <param>
+          <type><ref refid="classdakku_1_1ProjectiveCamera" kindref="compound">ProjectiveCamera</ref></type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -1182,7 +1200,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/object.h" line="69" column="13" bodyfile="src/core/object.h" bodystart="69" bodyend="71"/>
+        <location file="src/core/object.h" line="68" column="13" bodyfile="src/core/object.h" bodystart="68" bodyend="70"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1ac70f11ace3ab613579837a2d336b38c5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="namespacedakku_1a8323b90fda75af310a40a4e0d6bdb3f0" kindref="member">Point3f</ref></type>

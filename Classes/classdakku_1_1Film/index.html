@@ -364,6 +364,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#function-film_1" class="md-nav__link">
+    function Film
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#function-getsamplebounds" class="md-nav__link">
     function getSampleBounds
   </a>
@@ -469,6 +476,10 @@
 <tr>
 <td></td>
 <td><strong><a href="/dakku/Classes/classdakku_1_1Film/#function-film">Film</a></strong>(const <a href="/dakku/Namespaces/namespacedakku/#using-point2i">Point2i</a> &amp; fullResolution, const <a href="/dakku/Namespaces/namespacedakku/#using-bounds2f">Bounds2f</a> &amp; cropWindow, std::unique_ptr&lt; <a href="/dakku/Classes/classdakku_1_1Filter/">Filter</a> &gt; filter, std::string fileName, float scale, float maxSampleLuminance =INF)<br>Construct a new <a href="/dakku/Classes/classdakku_1_1Film/">Film</a> object.</td>
+</tr>
+<tr>
+<td></td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Film/#function-film">Film</a></strong>(const <a href="/dakku/Classes/classdakku_1_1Property/">Property</a> &amp; )</td>
 </tr>
 <tr>
 <td><a href="/dakku/Namespaces/namespacedakku/#using-bounds2i">Bounds2i</a></td>
@@ -583,15 +594,20 @@
 <li><strong>scale</strong> scale the pixel value </li>
 <li><strong>maxSampleLuminance</strong> max sample luminance </li>
 </ul>
+<h3 id="function-film_1">function Film</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">explicit</span><span class="w"> </span><span class="n">Film</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Property</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
 <h3 id="function-getsamplebounds">function getSampleBounds</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">Bounds2i</span><span class="w"> </span><span class="n">getSampleBounds</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">Bounds2i</span><span class="w"> </span><span class="n">getSampleBounds</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
 </code></pre></div>
 <p>get the area to be sampled because the pixel reconstruction filter spans a number of pixels </p>
 <p><strong>Return</strong>: the sample bounds </p>
 <h3 id="function-getfilmtile">function getFilmTile</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="w"> </span><span class="n">FilmTile</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">getFilmTile</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Bounds2i</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">sampleBounds</span><span class="w"></span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="w"> </span><span class="n">FilmTile</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">getFilmTile</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Bounds2i</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">sampleBounds</span><span class="w"></span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 <p>get the film tile according to the given sample bounds </p>
 <p><strong>Parameters</strong>: </p>
@@ -600,9 +616,9 @@
 </ul>
 <p><strong>Return</strong>: the film tile </p>
 <h3 id="function-mergefilmtile">function mergeFilmTile</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">mergeFilmTile</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="w"> </span><span class="n">FilmTile</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">tile</span><span class="w"></span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">mergeFilmTile</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="w"> </span><span class="n">FilmTile</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">tile</span><span class="w"></span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 <p>merge a film tile into the film </p>
 <p><strong>Parameters</strong>: </p>
@@ -610,9 +626,9 @@
 <li><strong>tile</strong> the given film tile </li>
 </ul>
 <h3 id="function-writeimage">function writeImage</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">writeImage</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">splatScale</span><span class="w"> </span><span class="o">=</span><span class="mi">1</span><span class="w"></span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">writeImage</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">splatScale</span><span class="w"> </span><span class="o">=</span><span class="mi">1</span><span class="w"></span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
 </code></pre></div>
 <p>write image to <code>fileName</code></p>
 <p><strong>Parameters</strong>: </p>
@@ -620,19 +636,8 @@
 <li><strong>splatScale</strong> scale splat values </li>
 </ul>
 <h3 id="function-writeimageto">function writeImageTo</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">writeImageTo</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">buffer</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">splatScale</span><span class="w"> </span><span class="o">=</span><span class="mi">1</span><span class="w"></span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
-</code></pre></div>
-<p>write image to <code>buffer</code></p>
-<p><strong>Parameters</strong>: </p>
-<ul>
-<li><strong>splatScale</strong> scale splat values </li>
-</ul>
-<h3 id="function-writeimageto_1">function writeImageTo</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">writeImageTo</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">buffer</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">buffer</span><span class="p">,</span><span class="w"></span>
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">splatScale</span><span class="w"> </span><span class="o">=</span><span class="mi">1</span><span class="w"></span>
 <a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
 </code></pre></div>
@@ -641,10 +646,21 @@
 <ul>
 <li><strong>splatScale</strong> scale splat values </li>
 </ul>
+<h3 id="function-writeimageto_1">function writeImageTo</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">writeImageTo</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">buffer</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">splatScale</span><span class="w"> </span><span class="o">=</span><span class="mi">1</span><span class="w"></span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+</code></pre></div>
+<p>write image to <code>buffer</code></p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>splatScale</strong> scale splat values </li>
+</ul>
 <h3 id="function-serialize">function serialize</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">serialize</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="n">OutputStream</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">stream</span><span class="w"></span>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">override</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">serialize</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="n">OutputStream</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">stream</span><span class="w"></span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">override</span><span class="w"></span>
 </code></pre></div>
 <p>serialize the object (do not include the property part) </p>
 <p><strong>Parameters</strong>: </p>
@@ -653,9 +669,9 @@
 </ul>
 <p><strong>Reimplements</strong>: <a href="/dakku/Classes/classdakku_1_1SerializableObject/#function-serialize">dakku::SerializableObject::serialize</a></p>
 <h3 id="function-deserialize">function deserialize</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">deserialize</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="n">InputStream</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">stream</span><span class="w"></span>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">deserialize</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="n">InputStream</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">stream</span><span class="w"></span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"></span>
 </code></pre></div>
 <p>deserialize the object (do not include the property part) </p>
 <p><strong>Parameters</strong>: </p>
@@ -664,11 +680,11 @@
 </ul>
 <p><strong>Reimplements</strong>: <a href="/dakku/Classes/classdakku_1_1SerializableObject/#function-deserialize">dakku::SerializableObject::deserialize</a></p>
 <h3 id="function-getcroppedpixelbounds">function getCroppedPixelBounds</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">Bounds2i</span><span class="w"> </span><span class="n">getCroppedPixelBounds</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">Bounds2i</span><span class="w"> </span><span class="n">getCroppedPixelBounds</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
 </code></pre></div>
 <p>Get the Cropped Pixel Bounds object. </p>
 <hr />
-<p>Updated on 2022-04-12 at 04:37:04 +0000</p>
+<p>Updated on 2022-04-12 at 05:04:30 +0000</p>
 
               
             </article>

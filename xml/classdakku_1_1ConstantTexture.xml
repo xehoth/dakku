@@ -4,8 +4,8 @@
     <compoundname>dakku::ConstantTexture</compoundname>
     <basecompoundref refid="classdakku_1_1Texture" prot="public" virt="non-virtual">dakku::Texture</basecompoundref>
     <includes refid="constant_8h" local="no">constant.h</includes>
-      <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="classdakku_1_1ConstantTexture_1af4dc898baf51be9db4582df096e3067d" prot="private" static="no" mutable="no">
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classdakku_1_1ConstantTexture_1af4dc898baf51be9db4582df096e3067d" prot="public" static="no" mutable="no">
         <type><ref refid="namespacedakku_1a72f253f8c73b2ec7fef8e3c83c0eac17" kindref="member">Spectrum</ref></type>
         <definition>Spectrum dakku::ConstantTexture::value</definition>
         <argsstring></argsstring>
@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/textures/constant.h" line="20" column="12" bodyfile="src/textures/constant.h" bodystart="20" bodyend="-1"/>
+        <location file="src/textures/constant.h" line="16" column="12" bodyfile="src/textures/constant.h" bodystart="16" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -73,6 +73,22 @@
         </inbodydescription>
         <location file="src/textures/constant.h" line="12" column="12"/>
       </memberdef>
+      <memberdef kind="function" id="classdakku_1_1ConstantTexture_1ace5cc84dff05b8e68aa67fc59af21c4a" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dakku::ConstantTexture::ConstantTexture</definition>
+        <argsstring>(const Property &amp;)</argsstring>
+        <name>ConstantTexture</name>
+        <param>
+          <type>const <ref refid="classdakku_1_1Property" kindref="compound">Property</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/textures/constant.h" line="13" column="12"/>
+      </memberdef>
       <memberdef kind="function" id="classdakku_1_1ConstantTexture_1aade90401c3068b8534a84994dcd0acd7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="namespacedakku_1a72f253f8c73b2ec7fef8e3c83c0eac17" kindref="member">Spectrum</ref></type>
         <definition>Spectrum dakku::ConstantTexture::evaluate</definition>
@@ -88,7 +104,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/textures/constant.h" line="13" column="13"/>
+        <location file="src/textures/constant.h" line="14" column="13"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -114,15 +130,30 @@
       </node>
     </inheritancegraph>
     <collaborationgraph>
+      <node id="5">
+        <label>dakku::CoefficientSpectrum&lt; 3, RgbSpectrum &gt;</label>
+        <link refid="classdakku_1_1CoefficientSpectrum"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
       <node id="1">
         <label>dakku::ConstantTexture</label>
         <link refid="classdakku_1_1ConstantTexture"/>
         <childnode refid="2" relation="public-inheritance">
         </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>value</edgelabel>
+        </childnode>
       </node>
       <node id="3">
         <label>dakku::Object</label>
         <link refid="classdakku_1_1Object"/>
+      </node>
+      <node id="4">
+        <label>dakku::RgbSpectrum</label>
+        <link refid="classdakku_1_1RgbSpectrum"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
       </node>
       <node id="2">
         <label>dakku::Texture</label>
@@ -130,11 +161,16 @@
         <childnode refid="3" relation="public-inheritance">
         </childnode>
       </node>
+      <node id="6">
+        <label>dakku::VectorBase&lt; T, S, Derived &gt;</label>
+        <link refid="classdakku_1_1VectorBase"/>
+      </node>
     </collaborationgraph>
-    <location file="src/textures/constant.h" line="7" column="1" bodyfile="src/textures/constant.h" bodystart="7" bodyend="24"/>
+    <location file="src/textures/constant.h" line="7" column="1" bodyfile="src/textures/constant.h" bodystart="7" bodyend="17"/>
     <listofallmembers>
       <member refid="classdakku_1_1ConstantTexture_1a84f1bec89957b9bcdff638aadfc8cbea" prot="public" virt="non-virtual"><scope>dakku::ConstantTexture</scope><name>ConstantTexture</name></member>
       <member refid="classdakku_1_1ConstantTexture_1a0aeadd0c4db60fc0bd81664ef0d23fdb" prot="public" virt="non-virtual"><scope>dakku::ConstantTexture</scope><name>ConstantTexture</name></member>
+      <member refid="classdakku_1_1ConstantTexture_1ace5cc84dff05b8e68aa67fc59af21c4a" prot="public" virt="non-virtual"><scope>dakku::ConstantTexture</scope><name>ConstantTexture</name></member>
       <member refid="classdakku_1_1ConstantTexture_1ad9eb08983dde4d7ceae32d9396c01720" prot="public" virt="non-virtual"><scope>dakku::ConstantTexture</scope><name>DAKKU_DECLARE_OBJECT</name></member>
       <member refid="classdakku_1_1Texture_1a34d7f1518a45937548bbfb8e9db857e4" prot="public" virt="non-virtual" ambiguityscope="dakku::Texture::"><scope>dakku::ConstantTexture</scope><name>DAKKU_DECLARE_OBJECT</name></member>
       <member refid="classdakku_1_1ConstantTexture_1aade90401c3068b8534a84994dcd0acd7" prot="public" virt="virtual"><scope>dakku::ConstantTexture</scope><name>evaluate</name></member>
@@ -146,9 +182,9 @@
       <member refid="classdakku_1_1Object_1a055e32b0624d9a96fc2014fe5d9d0c81" prot="public" virt="non-virtual"><scope>dakku::ConstantTexture</scope><name>isBaseOf</name></member>
       <member refid="classdakku_1_1Object_1add47b28fc1878f008bb6664a83faad72" prot="public" virt="non-virtual"><scope>dakku::ConstantTexture</scope><name>isDerivedFrom</name></member>
       <member refid="classdakku_1_1Object_1a20e78d46fa11d575d63e048279150eac" prot="public" virt="non-virtual"><scope>dakku::ConstantTexture</scope><name>Object</name></member>
-      <member refid="classdakku_1_1Texture_1ad4e3b656e62b600a89b39b25501deded" prot="public" virt="non-virtual"><scope>dakku::ConstantTexture</scope><name>Texture</name></member>
+      <member refid="classdakku_1_1Texture_1a05fa14ceae94c76bf6c12b7d4a1c0b95" prot="public" virt="non-virtual"><scope>dakku::ConstantTexture</scope><name>Texture</name></member>
       <member refid="classdakku_1_1Object_1a65d91c04e480b827fa495df96af2826b" prot="public" virt="virtual"><scope>dakku::ConstantTexture</scope><name>toString</name></member>
-      <member refid="classdakku_1_1ConstantTexture_1af4dc898baf51be9db4582df096e3067d" prot="private" virt="non-virtual"><scope>dakku::ConstantTexture</scope><name>value</name></member>
+      <member refid="classdakku_1_1ConstantTexture_1af4dc898baf51be9db4582df096e3067d" prot="public" virt="non-virtual"><scope>dakku::ConstantTexture</scope><name>value</name></member>
       <member refid="classdakku_1_1Object_1a0c792f089351caf3fa7a704c86ce903d" prot="public" virt="virtual"><scope>dakku::ConstantTexture</scope><name>~Object</name></member>
     </listofallmembers>
   </compounddef>

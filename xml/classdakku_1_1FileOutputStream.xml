@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/stream/fstream.h" line="75" column="17" bodyfile="src/stream/fstream.h" bodystart="75" bodyend="-1"/>
+        <location file="src/stream/fstream.h" line="66" column="17" bodyfile="src/stream/fstream.h" bodystart="66" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -38,7 +38,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/stream/fstream.h" line="49" column="3"/>
+        <location file="src/stream/fstream.h" line="43" column="3"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1FileOutputStream_1a7a11c66c8938371d28c8f9ddce222f0c" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
         <type></type>
@@ -65,7 +65,23 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/stream/fstream.h" line="54" column="12"/>
+        <location file="src/stream/fstream.h" line="48" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1FileOutputStream_1ab5996fdda5e46c08f414562b85d011df" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dakku::FileOutputStream::FileOutputStream</definition>
+        <argsstring>(const Property &amp;)</argsstring>
+        <name>FileOutputStream</name>
+        <param>
+          <type>const <ref refid="classdakku_1_1Property" kindref="compound">Property</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/stream/fstream.h" line="49" column="12"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1FileOutputStream_1ac793da8372c702f923a5a3f3306367ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -94,7 +110,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/stream/fstream.h" line="59" column="8"/>
+        <location file="src/stream/fstream.h" line="54" column="8"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1FileOutputStream_1a239a3e78d06f170d29b0e0db74e55c8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>size_t</type>
@@ -137,7 +153,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/stream/fstream.h" line="67" column="10"/>
+        <location file="src/stream/fstream.h" line="62" column="10"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -181,11 +197,12 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/stream/fstream.h" line="47" column="1" bodyfile="src/stream/fstream.h" bodystart="47" bodyend="79"/>
+    <location file="src/stream/fstream.h" line="41" column="1" bodyfile="src/stream/fstream.h" bodystart="41" bodyend="67"/>
     <listofallmembers>
       <member refid="classdakku_1_1FileOutputStream_1af0bdc8b8c2e04c6602cc9d4048a4d281" prot="public" virt="non-virtual"><scope>dakku::FileOutputStream</scope><name>DAKKU_DECLARE_OBJECT</name></member>
       <member refid="classdakku_1_1OutputStream_1ac311e62efb5df496e544f8253d016852" prot="public" virt="non-virtual" ambiguityscope="dakku::OutputStream::"><scope>dakku::FileOutputStream</scope><name>DAKKU_DECLARE_OBJECT</name></member>
       <member refid="classdakku_1_1FileOutputStream_1a7a11c66c8938371d28c8f9ddce222f0c" prot="public" virt="non-virtual"><scope>dakku::FileOutputStream</scope><name>FileOutputStream</name></member>
+      <member refid="classdakku_1_1FileOutputStream_1ab5996fdda5e46c08f414562b85d011df" prot="public" virt="non-virtual"><scope>dakku::FileOutputStream</scope><name>FileOutputStream</name></member>
       <member refid="classdakku_1_1Object_1a543f734268f7be81badecee6cf7245cc" prot="public" virt="virtual"><scope>dakku::FileOutputStream</scope><name>getClassName</name></member>
       <member refid="classdakku_1_1Object_1a247ed68865f464d511b7fdb85467c354" prot="public" virt="non-virtual"><scope>dakku::FileOutputStream</scope><name>getClassNameStatic</name></member>
       <member refid="classdakku_1_1Object_1accec0632e79097564677055bef4220bd" prot="public" virt="virtual"><scope>dakku::FileOutputStream</scope><name>getParentName</name></member>

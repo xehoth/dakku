@@ -408,23 +408,16 @@
 <a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
 <a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="k">explicit</span><span class="w"> </span><span class="n">ConstantTexture</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">v</span><span class="p">);</span><span class="w"></span>
 <a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">  </span><span class="k">explicit</span><span class="w"> </span><span class="n">ConstantTexture</span><span class="p">(</span><span class="n">Spectrum</span><span class="w"> </span><span class="n">v</span><span class="p">);</span><span class="w"></span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span><span class="p">[[</span><span class="n">nodiscard</span><span class="p">]]</span><span class="w"> </span><span class="n">Spectrum</span><span class="w"> </span><span class="n">evaluate</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">SurfaceInteraction</span><span class="w"> </span><span class="o">&amp;</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">override</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w"> </span><span class="k">private</span><span class="o">:</span><span class="w"></span>
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="cp">#if defined(_MSC_VER)</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="cp">#pragma warning(push)</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="cp">#pragma warning(disable : 4251)</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span><span class="k">explicit</span><span class="w"> </span><span class="n">ConstantTexture</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Property</span><span class="w"> </span><span class="o">&amp;</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">  </span><span class="p">[[</span><span class="n">nodiscard</span><span class="p">]]</span><span class="w"> </span><span class="n">Spectrum</span><span class="w"> </span><span class="n">evaluate</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">SurfaceInteraction</span><span class="w"> </span><span class="o">&amp;</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">override</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">  </span><span class="n">Spectrum</span><span class="w"> </span><span class="n">value</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="p">};</span><span class="w"></span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="p">}</span><span class="w">  </span><span class="c1">// namespace dakku</span>
 <a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="cp">#endif</span>
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">  </span><span class="n">Spectrum</span><span class="w"> </span><span class="n">value</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="cp">#if defined(_MSC_VER)</span>
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="cp">#pragma warning(pop)</span>
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="cp">#endif</span>
-<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="p">};</span><span class="w"></span>
-<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="p">}</span><span class="w">  </span><span class="c1">// namespace dakku</span>
-<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="cp">#endif</span>
 </code></pre></div>
 <hr />
-<p>Updated on 2022-04-12 at 04:37:04 +0000</p>
+<p>Updated on 2022-04-12 at 05:04:31 +0000</p>
 
               
             </article>

@@ -248,7 +248,7 @@
 <codeline lineno="5"><highlight class="normal"></highlight></codeline>
 <codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacedakku" kindref="compound">dakku</ref><sp/>{</highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight></codeline>
-<codeline lineno="8" refid="namespacedakku_1ab1fd7a566663942d0a6ddc982890d74b" refkind="member"><highlight class="normal"><ref refid="namespacedakku_1afb8b3ba43715313b21b2a234c2c2436d" kindref="member">DAKKU_EXPORT_OBJECTS</ref>(Filters,<sp/><ref refid="classdakku_1_1BoxFilter" kindref="compound">BoxFilter</ref>,<sp/><ref refid="classdakku_1_1TriangleFilter" kindref="compound">TriangleFilter</ref>);</highlight></codeline>
+<codeline lineno="8" refid="namespacedakku_1ab1fd7a566663942d0a6ddc982890d74b" refkind="member"><highlight class="normal"><ref refid="namespacedakku_1abd2616d95825cc7983c495b9e79f0afe" kindref="member">DAKKU_EXPORT_OBJECTS</ref>(Filters,<sp/><ref refid="classdakku_1_1BoxFilter" kindref="compound">BoxFilter</ref>,<sp/><ref refid="classdakku_1_1TriangleFilter" kindref="compound">TriangleFilter</ref>);</highlight></codeline>
 <codeline lineno="9"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>

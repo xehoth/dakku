@@ -364,6 +364,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#function-imagetexture_1" class="md-nav__link">
+    function ImageTexture
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#function-evaluate" class="md-nav__link">
     function evaluate
   </a>
@@ -414,6 +421,10 @@
 <td><strong><a href="/dakku/Classes/classdakku_1_1ImageTexture/#function-imagetexture">ImageTexture</a></strong>(std::unique_ptr&lt; <a href="/dakku/Classes/classdakku_1_1TextureMapping2D/">TextureMapping2D</a> &gt; m, const std::filesystem::path &amp; fileName, bool doTrilinear, float maxAnisotropy, <a href="/dakku/Namespaces/namespacedakku/#enum-imagewrapmode">ImageWrapMode</a> mode, float scale, bool gamma, bool floatType =false)</td>
 </tr>
 <tr>
+<td></td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1ImageTexture/#function-imagetexture">ImageTexture</a></strong>(const <a href="/dakku/Classes/classdakku_1_1Property/">Property</a> &amp; p)</td>
+</tr>
+<tr>
 <td>virtual <a href="/dakku/Namespaces/namespacedakku/#using-spectrum">Spectrum</a></td>
 <td><strong><a href="/dakku/Classes/classdakku_1_1ImageTexture/#function-evaluate">evaluate</a></strong>(const <a href="/dakku/Classes/classdakku_1_1SurfaceInteraction/">SurfaceInteraction</a> &amp; si) const override</td>
 </tr>
@@ -431,7 +442,7 @@
 <tbody>
 <tr>
 <td></td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1Texture/#function-texture">Texture</a></strong>(bool floatType)</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Texture/#function-texture">Texture</a></strong>(bool floatType =false)</td>
 </tr>
 </tbody>
 </table>
@@ -516,14 +527,19 @@
 <a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">floatType</span><span class="w"> </span><span class="o">=</span><span class="nb">false</span><span class="w"></span>
 <a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
+<h3 id="function-imagetexture_1">function ImageTexture</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">explicit</span><span class="w"> </span><span class="n">ImageTexture</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Property</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">p</span><span class="w"></span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
 <h3 id="function-evaluate">function evaluate</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">Spectrum</span><span class="w"> </span><span class="n">evaluate</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">SurfaceInteraction</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">si</span><span class="w"></span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">override</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">Spectrum</span><span class="w"> </span><span class="n">evaluate</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">SurfaceInteraction</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">si</span><span class="w"></span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">override</span><span class="w"></span>
 </code></pre></div>
 <p><strong>Reimplements</strong>: <a href="/dakku/Classes/classdakku_1_1Texture/#function-evaluate">dakku::Texture::evaluate</a></p>
 <hr />
-<p>Updated on 2022-04-12 at 04:37:04 +0000</p>
+<p>Updated on 2022-04-12 at 05:04:30 +0000</p>
 
               
             </article>

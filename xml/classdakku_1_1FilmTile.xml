@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/film.h" line="250" column="18" bodyfile="src/core/film.h" bodystart="250" bodyend="-1"/>
+        <location file="src/core/film.h" line="243" column="18" bodyfile="src/core/film.h" bodystart="243" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classdakku_1_1FilmTile_1a1afd075f21aa8b29c3251c25f9f64c04" prot="private" static="no" mutable="no">
         <type>const <ref refid="namespacedakku_1abfd5a177365f8ffec7ab23d6cb6db8c0" kindref="member">Vector2f</ref></type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/film.h" line="251" column="18" bodyfile="src/core/film.h" bodystart="251" bodyend="-1"/>
+        <location file="src/core/film.h" line="244" column="18" bodyfile="src/core/film.h" bodystart="244" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classdakku_1_1FilmTile_1a481cfd22c362b14f00356a5f5f6af2ca" prot="private" static="no" mutable="no">
         <type>const <ref refid="namespacedakku_1abfd5a177365f8ffec7ab23d6cb6db8c0" kindref="member">Vector2f</ref></type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/film.h" line="251" column="31" bodyfile="src/core/film.h" bodystart="251" bodyend="-1"/>
+        <location file="src/core/film.h" line="244" column="31" bodyfile="src/core/film.h" bodystart="244" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classdakku_1_1FilmTile_1a9e54ced1f78c9175bf3e0557c573149a" prot="private" static="no" mutable="no">
         <type>std::span&lt; const float &gt;</type>
@@ -54,7 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/film.h" line="252" column="13" bodyfile="src/core/film.h" bodystart="252" bodyend="-1"/>
+        <location file="src/core/film.h" line="245" column="13" bodyfile="src/core/film.h" bodystart="245" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classdakku_1_1FilmTile_1a9cf8e3758bd19ae38f73790af53f5733" prot="private" static="no" mutable="no">
         <type>const int</type>
@@ -67,7 +67,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/film.h" line="253" column="13" bodyfile="src/core/film.h" bodystart="253" bodyend="-1"/>
+        <location file="src/core/film.h" line="246" column="13" bodyfile="src/core/film.h" bodystart="246" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classdakku_1_1FilmTile_1aca37384e334a85748bb5cb84e9d9b8d0" prot="private" static="no" mutable="no">
         <type>std::vector&lt; <ref refid="structdakku_1_1FilmTilePixel" kindref="compound">FilmTilePixel</ref> &gt;</type>
@@ -80,7 +80,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/film.h" line="254" column="15" bodyfile="src/core/film.h" bodystart="254" bodyend="-1"/>
+        <location file="src/core/film.h" line="247" column="15" bodyfile="src/core/film.h" bodystart="247" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classdakku_1_1FilmTile_1a950301e119159f8a2bc744dd01618001" prot="private" static="no" mutable="no">
         <type>const float</type>
@@ -93,7 +93,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/film.h" line="255" column="15" bodyfile="src/core/film.h" bodystart="255" bodyend="-1"/>
+        <location file="src/core/film.h" line="248" column="15" bodyfile="src/core/film.h" bodystart="248" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="friend">
@@ -111,7 +111,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/film.h" line="256" column="16" bodyfile="src/core/film.h" bodystart="256" bodyend="-1"/>
+        <location file="src/core/film.h" line="249" column="16" bodyfile="src/core/film.h" bodystart="249" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -147,7 +147,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/film.h" line="163" column="12" bodyfile="src/core/film.h" bodystart="163" bodyend="173"/>
+        <location file="src/core/film.h" line="156" column="12" bodyfile="src/core/film.h" bodystart="156" bodyend="166"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1FilmTile_1a0d8326e3cf8dc31bc9bc6da5ca8a9574" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="structdakku_1_1FilmTilePixel" kindref="compound">FilmTilePixel</ref> &amp;</type>
@@ -165,7 +165,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/film.h" line="179" column="17" bodyfile="src/core/film.h" bodystart="179" bodyend="182"/>
+        <location file="src/core/film.h" line="172" column="17" bodyfile="src/core/film.h" bodystart="172" bodyend="175"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1FilmTile_1a469b9f0732df43d2f056dcbdb996fca8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const <ref refid="structdakku_1_1FilmTilePixel" kindref="compound">FilmTilePixel</ref> &amp;</type>
@@ -183,7 +183,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/film.h" line="188" column="24" bodyfile="src/core/film.h" bodystart="188" bodyend="194"/>
+        <location file="src/core/film.h" line="181" column="24" bodyfile="src/core/film.h" bodystart="181" bodyend="187"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1FilmTile_1a59959fe4403070d8d2bc2d1a22bef92e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="namespacedakku_1ae2cd423e1acf2fd91f4cdf3cc5ad50c6" kindref="member">Bounds2i</ref></type>
@@ -197,7 +197,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/film.h" line="200" column="13" bodyfile="src/core/film.h" bodystart="200" bodyend="200"/>
+        <location file="src/core/film.h" line="193" column="13" bodyfile="src/core/film.h" bodystart="193" bodyend="193"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1FilmTile_1a36ae7d12134c16a3785f4cb1dd0b8cf3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -224,7 +224,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/film.h" line="206" column="8" bodyfile="src/core/film.h" bodystart="206" bodyend="247"/>
+        <location file="src/core/film.h" line="199" column="8" bodyfile="src/core/film.h" bodystart="199" bodyend="240"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -232,7 +232,7 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/core/film.h" line="161" column="1" bodyfile="src/core/film.h" bodystart="161" bodyend="257"/>
+    <location file="src/core/film.h" line="154" column="1" bodyfile="src/core/film.h" bodystart="154" bodyend="250"/>
     <listofallmembers>
       <member refid="classdakku_1_1FilmTile_1a36ae7d12134c16a3785f4cb1dd0b8cf3" prot="public" virt="non-virtual"><scope>dakku::FilmTile</scope><name>addSample</name></member>
       <member refid="classdakku_1_1FilmTile_1a4af0d3c902fcdaafd695e2caec4f25e2" prot="private" virt="non-virtual"><scope>dakku::FilmTile</scope><name>Film</name></member>

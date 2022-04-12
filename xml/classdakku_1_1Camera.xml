@@ -1,8 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
-  <compounddef id="classdakku_1_1Camera" kind="class" language="C++" prot="public">
+  <compounddef id="classdakku_1_1Camera" kind="class" language="C++" prot="public" abstract="yes">
     <compoundname>dakku::Camera</compoundname>
     <basecompoundref refid="classdakku_1_1Object" prot="public" virt="non-virtual">dakku::Object</basecompoundref>
+    <derivedcompoundref refid="classdakku_1_1ProjectiveCamera" prot="public" virt="non-virtual">dakku::ProjectiveCamera</derivedcompoundref>
     <includes refid="camera_8h" local="no">camera.h</includes>
       <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="classdakku_1_1Camera_1a7fc4b592c175e9aed2d06351418a0b0f" prot="public" static="no" mutable="no">
@@ -17,7 +18,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/camera.h" line="18" column="13" bodyfile="src/core/camera.h" bodystart="18" bodyend="-1"/>
+        <location file="src/core/camera.h" line="33" column="13" bodyfile="src/core/camera.h" bodystart="33" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classdakku_1_1Camera_1a028dfc24965474cb15a35a20228e0a6d" prot="public" static="no" mutable="no">
         <type><ref refid="classdakku_1_1Film" kindref="compound">Film</ref> *</type>
@@ -31,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/camera.h" line="20" column="8" bodyfile="src/core/camera.h" bodystart="20" bodyend="-1"/>
+        <location file="src/core/camera.h" line="35" column="8" bodyfile="src/core/camera.h" bodystart="35" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -52,7 +53,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/camera.h" line="13" column="3"/>
+        <location file="src/core/camera.h" line="15" column="3"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Camera_1a4e13deb3c0f9b88a3f36ba20d5dc99ed" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
         <type></type>
@@ -73,13 +74,58 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/camera.h" line="15" column="12"/>
+        <location file="src/core/camera.h" line="17" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1Camera_1af4fe5f80584bfb8ce27ab44475a30241" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>float</type>
+        <definition>virtual float dakku::Camera::generateRay</definition>
+        <argsstring>(const CameraSample &amp;sample, Ray &amp;ray) const =0</argsstring>
+        <name>generateRay</name>
+        <param>
+          <type>const <ref refid="structdakku_1_1CameraSample" kindref="compound">CameraSample</ref> &amp;</type>
+          <declname>sample</declname>
+        </param>
+        <param>
+          <type><ref refid="classdakku_1_1Ray" kindref="compound">Ray</ref> &amp;</type>
+          <declname>ray</declname>
+        </param>
+        <briefdescription>
+<para>generate ray according to given sample </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/camera.h" line="23" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1Camera_1a8ca4c8b01d3ea35c862b51513378917d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>float</type>
+        <definition>virtual float dakku::Camera::generateRayDifferential</definition>
+        <argsstring>(const CameraSample &amp;sample, RayDifferential &amp;rayD) const =0</argsstring>
+        <name>generateRayDifferential</name>
+        <param>
+          <type>const <ref refid="structdakku_1_1CameraSample" kindref="compound">CameraSample</ref> &amp;</type>
+          <declname>sample</declname>
+        </param>
+        <param>
+          <type><ref refid="classdakku_1_1RayDifferential" kindref="compound">RayDifferential</ref> &amp;</type>
+          <declname>rayD</declname>
+        </param>
+        <briefdescription>
+<para>generate ray differential according to given sample </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/camera.h" line="29" column="17"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>camera </para>
     </briefdescription>
     <detaileddescription>
+<para>film must be constructed before constructing camera </para>
     </detaileddescription>
     <inheritancegraph>
       <node id="1">
@@ -91,6 +137,12 @@
       <node id="2">
         <label>dakku::Object</label>
         <link refid="classdakku_1_1Object"/>
+      </node>
+      <node id="3">
+        <label>dakku::ProjectiveCamera</label>
+        <link refid="classdakku_1_1ProjectiveCamera"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
@@ -127,12 +179,14 @@
         <link refid="classdakku_1_1Transform"/>
       </node>
     </collaborationgraph>
-    <location file="src/core/camera.h" line="11" column="1" bodyfile="src/core/camera.h" bodystart="11" bodyend="21"/>
+    <location file="src/core/camera.h" line="13" column="1" bodyfile="src/core/camera.h" bodystart="13" bodyend="36"/>
     <listofallmembers>
       <member refid="classdakku_1_1Camera_1a4e13deb3c0f9b88a3f36ba20d5dc99ed" prot="public" virt="non-virtual"><scope>dakku::Camera</scope><name>Camera</name></member>
       <member refid="classdakku_1_1Camera_1a7fc4b592c175e9aed2d06351418a0b0f" prot="public" virt="non-virtual"><scope>dakku::Camera</scope><name>cameraToWorld</name></member>
       <member refid="classdakku_1_1Camera_1a8363a3f645e4c0c7b1573fe6c846b843" prot="public" virt="non-virtual"><scope>dakku::Camera</scope><name>DAKKU_DECLARE_OBJECT</name></member>
       <member refid="classdakku_1_1Camera_1a028dfc24965474cb15a35a20228e0a6d" prot="public" virt="non-virtual"><scope>dakku::Camera</scope><name>film</name></member>
+      <member refid="classdakku_1_1Camera_1af4fe5f80584bfb8ce27ab44475a30241" prot="public" virt="pure-virtual"><scope>dakku::Camera</scope><name>generateRay</name></member>
+      <member refid="classdakku_1_1Camera_1a8ca4c8b01d3ea35c862b51513378917d" prot="public" virt="pure-virtual"><scope>dakku::Camera</scope><name>generateRayDifferential</name></member>
       <member refid="classdakku_1_1Object_1a543f734268f7be81badecee6cf7245cc" prot="public" virt="virtual"><scope>dakku::Camera</scope><name>getClassName</name></member>
       <member refid="classdakku_1_1Object_1a247ed68865f464d511b7fdb85467c354" prot="public" virt="non-virtual"><scope>dakku::Camera</scope><name>getClassNameStatic</name></member>
       <member refid="classdakku_1_1Object_1accec0632e79097564677055bef4220bd" prot="public" virt="virtual"><scope>dakku::Camera</scope><name>getParentName</name></member>

@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/texture.h" line="29" column="15" bodyfile="src/core/texture.h" bodystart="29" bodyend="-1"/>
+        <location file="src/core/texture.h" line="31" column="15" bodyfile="src/core/texture.h" bodystart="31" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classdakku_1_1UvMapping2D_1af8db90320189b9ace72b7cac222ae530" prot="private" static="no" mutable="no">
         <type>const float</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/texture.h" line="29" column="18" bodyfile="src/core/texture.h" bodystart="29" bodyend="-1"/>
+        <location file="src/core/texture.h" line="31" column="18" bodyfile="src/core/texture.h" bodystart="31" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classdakku_1_1UvMapping2D_1a75121f804ba2674b26c7fd871f2e6106" prot="private" static="no" mutable="no">
         <type>const float</type>
@@ -42,7 +42,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/texture.h" line="30" column="15" bodyfile="src/core/texture.h" bodystart="30" bodyend="-1"/>
+        <location file="src/core/texture.h" line="32" column="15" bodyfile="src/core/texture.h" bodystart="32" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classdakku_1_1UvMapping2D_1af818d0d211e0210abeb4af2afab2e988" prot="private" static="no" mutable="no">
         <type>const float</type>
@@ -55,7 +55,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/texture.h" line="30" column="18" bodyfile="src/core/texture.h" bodystart="30" bodyend="-1"/>
+        <location file="src/core/texture.h" line="32" column="18" bodyfile="src/core/texture.h" bodystart="32" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -78,25 +78,30 @@
         </inbodydescription>
         <location file="src/core/texture.h" line="21" column="3"/>
       </memberdef>
-      <memberdef kind="function" id="classdakku_1_1UvMapping2D_1a776814664aeb2df9bf0c2c1a76de3632" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classdakku_1_1UvMapping2D_1a849b03c1ba565039a4ed91d756a4a830" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
         <type></type>
         <definition>dakku::UvMapping2D::UvMapping2D</definition>
-        <argsstring>(float su, float, float du, float dv)</argsstring>
+        <argsstring>(float su=1.0f, float sv=1.0f, float du=0.0f, float dv=0.0f)</argsstring>
         <name>UvMapping2D</name>
         <param>
           <type>float</type>
           <declname>su</declname>
+          <defval>1.0f</defval>
         </param>
         <param>
           <type>float</type>
+          <declname>sv</declname>
+          <defval>1.0f</defval>
         </param>
         <param>
           <type>float</type>
           <declname>du</declname>
+          <defval>0.0f</defval>
         </param>
         <param>
           <type>float</type>
           <declname>dv</declname>
+          <defval>0.0f</defval>
         </param>
         <briefdescription>
         </briefdescription>
@@ -105,6 +110,23 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/core/texture.h" line="23" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1UvMapping2D_1a127697cef93896ce6aec32fe6fcfeb45" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dakku::UvMapping2D::UvMapping2D</definition>
+        <argsstring>(const Property &amp;p)</argsstring>
+        <name>UvMapping2D</name>
+        <param>
+          <type>const <ref refid="classdakku_1_1Property" kindref="compound">Property</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/texture.h" line="25" column="12"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1UvMapping2D_1a04c457d53676eceee2ee7016ed0ebfcf" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="namespacedakku_1a9910f23501fd2ef5e9a829cdab0992be" kindref="member">Point2f</ref></type>
@@ -130,7 +152,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/texture.h" line="25" column="11"/>
+        <location file="src/core/texture.h" line="27" column="11"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -173,7 +195,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/core/texture.h" line="19" column="1" bodyfile="src/core/texture.h" bodystart="19" bodyend="31"/>
+    <location file="src/core/texture.h" line="19" column="1" bodyfile="src/core/texture.h" bodystart="19" bodyend="33"/>
     <listofallmembers>
       <member refid="classdakku_1_1UvMapping2D_1a8b87584e9f3b1f092590ab24ffc450bb" prot="public" virt="non-virtual"><scope>dakku::UvMapping2D</scope><name>DAKKU_DECLARE_OBJECT</name></member>
       <member refid="classdakku_1_1TextureMapping2D_1ae978410835f07f3806e4618f5271d248" prot="public" virt="non-virtual" ambiguityscope="dakku::TextureMapping2D::"><scope>dakku::UvMapping2D</scope><name>DAKKU_DECLARE_OBJECT</name></member>
@@ -190,7 +212,8 @@
       <member refid="classdakku_1_1UvMapping2D_1aeb53e469d40b1151af3ef5a9c6a4cc3c" prot="private" virt="non-virtual"><scope>dakku::UvMapping2D</scope><name>su</name></member>
       <member refid="classdakku_1_1UvMapping2D_1af8db90320189b9ace72b7cac222ae530" prot="private" virt="non-virtual"><scope>dakku::UvMapping2D</scope><name>sv</name></member>
       <member refid="classdakku_1_1Object_1a65d91c04e480b827fa495df96af2826b" prot="public" virt="virtual"><scope>dakku::UvMapping2D</scope><name>toString</name></member>
-      <member refid="classdakku_1_1UvMapping2D_1a776814664aeb2df9bf0c2c1a76de3632" prot="public" virt="non-virtual"><scope>dakku::UvMapping2D</scope><name>UvMapping2D</name></member>
+      <member refid="classdakku_1_1UvMapping2D_1a849b03c1ba565039a4ed91d756a4a830" prot="public" virt="non-virtual"><scope>dakku::UvMapping2D</scope><name>UvMapping2D</name></member>
+      <member refid="classdakku_1_1UvMapping2D_1a127697cef93896ce6aec32fe6fcfeb45" prot="public" virt="non-virtual"><scope>dakku::UvMapping2D</scope><name>UvMapping2D</name></member>
       <member refid="classdakku_1_1Object_1a0c792f089351caf3fa7a704c86ce903d" prot="public" virt="virtual"><scope>dakku::UvMapping2D</scope><name>~Object</name></member>
     </listofallmembers>
   </compounddef>

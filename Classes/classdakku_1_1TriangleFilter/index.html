@@ -357,15 +357,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#function-evaluate" class="md-nav__link">
-    function evaluate
+  <a href="#function-trianglefilter" class="md-nav__link">
+    function TriangleFilter
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#function-filter" class="md-nav__link">
-    function Filter
+  <a href="#function-evaluate" class="md-nav__link">
+    function evaluate
   </a>
   
 </li>
@@ -411,16 +411,31 @@
 <td><strong><a href="/dakku/Classes/classdakku_1_1TriangleFilter/#function-dakku-declare-object">DAKKU_DECLARE_OBJECT</a></strong>(<a href="/dakku/Classes/classdakku_1_1TriangleFilter/">TriangleFilter</a> , <a href="/dakku/Classes/classdakku_1_1Filter/">Filter</a> )</td>
 </tr>
 <tr>
-<td>virtual float</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1TriangleFilter/#function-evaluate">evaluate</a></strong>(const <a href="/dakku/Namespaces/namespacedakku/#using-point2f">Point2f</a> &amp; p) const override<br>Given a 2D point which is relative to the center of the filter, the filter's value at that point is returned.</td>
+<td></td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1TriangleFilter/#function-trianglefilter">TriangleFilter</a></strong>(const <a href="/dakku/Classes/classdakku_1_1Property/">Property</a> &amp; p)</td>
 </tr>
 <tr>
-<td></td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1TriangleFilter/#function-filter">Filter</a></strong>(const <a href="/dakku/Namespaces/namespacedakku/#using-vector2f">Vector2f</a> &amp; radius)<br>Construct a new <a href="/dakku/Classes/classdakku_1_1Filter/">Filter</a> object The filter's overall extent in each direction is twice the value given in <code>radius</code></td>
+<td>virtual float</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1TriangleFilter/#function-evaluate">evaluate</a></strong>(const <a href="/dakku/Namespaces/namespacedakku/#using-point2f">Point2f</a> &amp; p) const override<br>Given a 2D point which is relative to the center of the filter, the filter's value at that point is returned.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="additional-inherited-members">Additional inherited members</h2>
+<p><strong>Public Functions inherited from <a href="/dakku/Classes/classdakku_1_1Filter/">dakku::Filter</a></strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Filter/#function-filter">Filter</a></strong>(const <a href="/dakku/Namespaces/namespacedakku/#using-vector2f">Vector2f</a> &amp; radius)<br>Construct a new <a href="/dakku/Classes/classdakku_1_1Filter/">Filter</a> object The filter's overall extent in each direction is twice the value given in <code>radius</code></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Public Attributes inherited from <a href="/dakku/Classes/classdakku_1_1Filter/">dakku::Filter</a></strong></p>
 <table>
 <thead>
@@ -494,10 +509,15 @@
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">Filter</span><span class="w"> </span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
+<h3 id="function-trianglefilter">function TriangleFilter</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">explicit</span><span class="w"> </span><span class="n">TriangleFilter</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Property</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">p</span><span class="w"></span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
 <h3 id="function-evaluate">function evaluate</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">evaluate</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Point2f</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">p</span><span class="w"></span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">override</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">evaluate</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Point2f</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">p</span><span class="w"></span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">override</span><span class="w"></span>
 </code></pre></div>
 <p>Given a 2D point which is relative to the center of the filter, the filter's value at that point is returned. </p>
 <p><strong>Parameters</strong>: </p>
@@ -506,18 +526,8 @@
 </ul>
 <p><strong>Return</strong>: float filter's value </p>
 <p><strong>Reimplements</strong>: <a href="/dakku/Classes/classdakku_1_1Filter/#function-evaluate">dakku::Filter::evaluate</a></p>
-<h3 id="function-filter">function Filter</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">explicit</span><span class="w"> </span><span class="n">Filter</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Vector2f</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">radius</span><span class="w"></span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">)</span><span class="w"></span>
-</code></pre></div>
-<p>Construct a new <a href="/dakku/Classes/classdakku_1_1Filter/">Filter</a> object The filter's overall extent in each direction is twice the value given in <code>radius</code></p>
-<p><strong>Parameters</strong>: </p>
-<ul>
-<li><strong>radius</strong> radius of the filter </li>
-</ul>
 <hr />
-<p>Updated on 2022-04-12 at 04:37:04 +0000</p>
+<p>Updated on 2022-04-12 at 05:04:30 +0000</p>
 
               
             </article>

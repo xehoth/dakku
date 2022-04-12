@@ -62,14 +62,19 @@
   </compound>
   <compound refid="classdakku_1_1BoxFilter" kind="class"><name>dakku::BoxFilter</name>
     <member refid="classdakku_1_1BoxFilter_1ac4033f9e7e2cb0eee1b0eb5d8bd299b9" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
+    <member refid="classdakku_1_1BoxFilter_1a28e72cf62d6533cd2768a64d4920ead3" kind="function"><name>BoxFilter</name></member>
     <member refid="classdakku_1_1BoxFilter_1a062696aca56d7f4f1ed238f1df17f95f" kind="function"><name>evaluate</name></member>
-    <member refid="classdakku_1_1BoxFilter_1a41c4e564d4f720c22852f36412836574" kind="function"><name>Filter</name></member>
   </compound>
   <compound refid="classdakku_1_1Camera" kind="class"><name>dakku::Camera</name>
     <member refid="classdakku_1_1Camera_1a7fc4b592c175e9aed2d06351418a0b0f" kind="variable"><name>cameraToWorld</name></member>
     <member refid="classdakku_1_1Camera_1a028dfc24965474cb15a35a20228e0a6d" kind="variable"><name>film</name></member>
     <member refid="classdakku_1_1Camera_1a8363a3f645e4c0c7b1573fe6c846b843" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
     <member refid="classdakku_1_1Camera_1a4e13deb3c0f9b88a3f36ba20d5dc99ed" kind="function"><name>Camera</name></member>
+    <member refid="classdakku_1_1Camera_1af4fe5f80584bfb8ce27ab44475a30241" kind="function"><name>generateRay</name></member>
+    <member refid="classdakku_1_1Camera_1a8ca4c8b01d3ea35c862b51513378917d" kind="function"><name>generateRayDifferential</name></member>
+  </compound>
+  <compound refid="structdakku_1_1CameraSample" kind="struct"><name>dakku::CameraSample</name>
+    <member refid="structdakku_1_1CameraSample_1a01c7c75c01bc38007b424d0d10cd91d7" kind="variable"><name>pFilm</name></member>
   </compound>
   <compound refid="classdakku_1_1Class" kind="class"><name>dakku::Class</name>
     <member refid="classdakku_1_1Class_1a5ca387aebcee4d1363ac17e25749098a" kind="variable"><name>_classMap</name></member>
@@ -91,12 +96,14 @@
     <member refid="classdakku_1_1ConstantTexture_1ad9eb08983dde4d7ceae32d9396c01720" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
     <member refid="classdakku_1_1ConstantTexture_1a84f1bec89957b9bcdff638aadfc8cbea" kind="function"><name>ConstantTexture</name></member>
     <member refid="classdakku_1_1ConstantTexture_1a0aeadd0c4db60fc0bd81664ef0d23fdb" kind="function"><name>ConstantTexture</name></member>
+    <member refid="classdakku_1_1ConstantTexture_1ace5cc84dff05b8e68aa67fc59af21c4a" kind="function"><name>ConstantTexture</name></member>
     <member refid="classdakku_1_1ConstantTexture_1aade90401c3068b8534a84994dcd0acd7" kind="function"><name>evaluate</name></member>
   </compound>
   <compound refid="classdakku_1_1FileInputStream" kind="class"><name>dakku::FileInputStream</name>
     <member refid="classdakku_1_1FileInputStream_1ad64d091dae724af7202e76219a7eb59e" kind="variable"><name>stream</name></member>
     <member refid="classdakku_1_1FileInputStream_1a78fcbd9bd3066af2b2d91e9f07f3b2d6" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
     <member refid="classdakku_1_1FileInputStream_1a061b083cd03658c4a594d1d30d4d0b1b" kind="function"><name>FileInputStream</name></member>
+    <member refid="classdakku_1_1FileInputStream_1a7770c32b92e4f254caf5b728c4eb9f11" kind="function"><name>FileInputStream</name></member>
     <member refid="classdakku_1_1FileInputStream_1a0bca053c299098766dc46f947ea35c52" kind="function"><name>readByte</name></member>
     <member refid="classdakku_1_1FileInputStream_1a157681cafffcb6adadd5de64d8bc918d" kind="function"><name>readBytes</name></member>
   </compound>
@@ -104,6 +111,7 @@
     <member refid="classdakku_1_1FileOutputStream_1a1c607c36adc63bb83817516964c6e72e" kind="variable"><name>stream</name></member>
     <member refid="classdakku_1_1FileOutputStream_1af0bdc8b8c2e04c6602cc9d4048a4d281" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
     <member refid="classdakku_1_1FileOutputStream_1a7a11c66c8938371d28c8f9ddce222f0c" kind="function"><name>FileOutputStream</name></member>
+    <member refid="classdakku_1_1FileOutputStream_1ab5996fdda5e46c08f414562b85d011df" kind="function"><name>FileOutputStream</name></member>
     <member refid="classdakku_1_1FileOutputStream_1ac793da8372c702f923a5a3f3306367ae" kind="function"><name>writeByte</name></member>
     <member refid="classdakku_1_1FileOutputStream_1a239a3e78d06f170d29b0e0db74e55c8c" kind="function"><name>writeBytes</name></member>
   </compound>
@@ -120,6 +128,7 @@
     <member refid="classdakku_1_1Film_1a2761e7f49049136f7641e7eb9992aa3d" kind="variable"><name>filterTableWidth</name></member>
     <member refid="classdakku_1_1Film_1a246c871f2adf1dca61f541a9f8544b4b" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
     <member refid="classdakku_1_1Film_1ad8e4f2a09968ca20e9963575c573ef5d" kind="function"><name>Film</name></member>
+    <member refid="classdakku_1_1Film_1a9c627b36e3139774bd22557230dce664" kind="function"><name>Film</name></member>
     <member refid="classdakku_1_1Film_1ab9c52d3813f1c4182aee9188a3f70651" kind="function"><name>getSampleBounds</name></member>
     <member refid="classdakku_1_1Film_1ad9c09087e70ccaac1c152da26d064f1d" kind="function"><name>getFilmTile</name></member>
     <member refid="classdakku_1_1Film_1a36494dc9faa8017ffefb68564d4c52e8" kind="function"><name>mergeFilmTile</name></member>
@@ -181,6 +190,7 @@
     <member refid="classdakku_1_1ImageTexture_1a205e6c8865159b8de73a594ecba02bb6" kind="variable"><name>mipmap</name></member>
     <member refid="classdakku_1_1ImageTexture_1ab92c8d48435998844e940e6da4259402" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
     <member refid="classdakku_1_1ImageTexture_1a5bdd4ddb6aaa38e4e5318559d5c0ead3" kind="function"><name>ImageTexture</name></member>
+    <member refid="classdakku_1_1ImageTexture_1adb32d1db70667a42940df7212450956b" kind="function"><name>ImageTexture</name></member>
     <member refid="classdakku_1_1ImageTexture_1a1c8b8cb8b6ee872474195f8e71d47529" kind="function"><name>evaluate</name></member>
   </compound>
   <compound refid="classdakku_1_1InputStream" kind="class"><name>dakku::InputStream</name>
@@ -294,6 +304,9 @@
     <member refid="classdakku_1_1Point_1ad8e485617ec76d5775ae2efd79522e29" kind="friend"><name>operator-</name></member>
     <member refid="classdakku_1_1Point_1a8f79a28ee6306ace7ac3e4d7dbee3e22" kind="friend"><name>operator-</name></member>
     <member refid="classdakku_1_1Point_1aa42db7f4fcc358dda0322ad91b45b7e7" kind="friend"><name>operator+</name></member>
+  </compound>
+  <compound refid="classdakku_1_1ProjectiveCamera" kind="class"><name>dakku::ProjectiveCamera</name>
+    <member refid="classdakku_1_1ProjectiveCamera_1a2ff0d0032ed0f7319f5b0422a1741b4d" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
   </compound>
   <compound refid="classdakku_1_1Property" kind="class"><name>dakku::Property</name>
     <member refid="classdakku_1_1Property_1a3572cc83d304fa13a828df071bc1530b" kind="typedef"><name>ObjectType</name></member>
@@ -431,7 +444,7 @@
   <compound refid="classdakku_1_1Texture" kind="class"><name>dakku::Texture</name>
     <member refid="classdakku_1_1Texture_1a04d50661884334a42b742e1214b77382" kind="variable"><name>floatType</name></member>
     <member refid="classdakku_1_1Texture_1a34d7f1518a45937548bbfb8e9db857e4" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
-    <member refid="classdakku_1_1Texture_1ad4e3b656e62b600a89b39b25501deded" kind="function"><name>Texture</name></member>
+    <member refid="classdakku_1_1Texture_1a05fa14ceae94c76bf6c12b7d4a1c0b95" kind="function"><name>Texture</name></member>
     <member refid="classdakku_1_1Texture_1af8a07f117e2286587cc7d06ac54b3ca6" kind="function"><name>evaluate</name></member>
   </compound>
   <compound refid="classdakku_1_1TextureMapping2D" kind="class"><name>dakku::TextureMapping2D</name>
@@ -478,8 +491,8 @@
   </compound>
   <compound refid="classdakku_1_1TriangleFilter" kind="class"><name>dakku::TriangleFilter</name>
     <member refid="classdakku_1_1TriangleFilter_1a960b9a532a2a483637302dcd13925a57" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
+    <member refid="classdakku_1_1TriangleFilter_1afb1ac0aa688899286bc1a738e63578ab" kind="function"><name>TriangleFilter</name></member>
     <member refid="classdakku_1_1TriangleFilter_1acbb6ae521434bdb0336233ca2c79fe9d" kind="function"><name>evaluate</name></member>
-    <member refid="classdakku_1_1TriangleFilter_1a41c4e564d4f720c22852f36412836574" kind="function"><name>Filter</name></member>
   </compound>
   <compound refid="classdakku_1_1UvMapping2D" kind="class"><name>dakku::UvMapping2D</name>
     <member refid="classdakku_1_1UvMapping2D_1aeb53e469d40b1151af3ef5a9c6a4cc3c" kind="variable"><name>su</name></member>
@@ -487,7 +500,8 @@
     <member refid="classdakku_1_1UvMapping2D_1a75121f804ba2674b26c7fd871f2e6106" kind="variable"><name>du</name></member>
     <member refid="classdakku_1_1UvMapping2D_1af818d0d211e0210abeb4af2afab2e988" kind="variable"><name>dv</name></member>
     <member refid="classdakku_1_1UvMapping2D_1a8b87584e9f3b1f092590ab24ffc450bb" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
-    <member refid="classdakku_1_1UvMapping2D_1a776814664aeb2df9bf0c2c1a76de3632" kind="function"><name>UvMapping2D</name></member>
+    <member refid="classdakku_1_1UvMapping2D_1a849b03c1ba565039a4ed91d756a4a830" kind="function"><name>UvMapping2D</name></member>
+    <member refid="classdakku_1_1UvMapping2D_1a127697cef93896ce6aec32fe6fcfeb45" kind="function"><name>UvMapping2D</name></member>
     <member refid="classdakku_1_1UvMapping2D_1a04c457d53676eceee2ee7016ed0ebfcf" kind="function"><name>map</name></member>
   </compound>
   <compound refid="classdakku_1_1Vector" kind="class"><name>dakku::Vector</name>
@@ -624,12 +638,13 @@
     <member refid="namespacedakku_1a1bd6403f2998d6f8d22f87c99eca7eed" kind="variable"><name>Film</name></member>
     <member refid="namespacedakku_1ad4c70953467b9d3d22eac250d8655aff" kind="variable"><name>Shape</name></member>
     <member refid="namespacedakku_1a24e2c761467417bba0b7b17b7c0e9f79" kind="variable"><name>Texture</name></member>
+    <member refid="namespacedakku_1a91583977767aa3566783f8ab2c0538a7" kind="variable"><name>Camera</name></member>
     <member refid="namespacedakku_1ad67fc67650e8ff59c3b25b9e9d462ee4" kind="variable"><name>__pad0__</name></member>
     <member refid="namespacedakku_1a041d325d33710e961b70ab2cf4dbfa11" kind="variable"><name>PCG32_DEFAULT_STATE</name></member>
     <member refid="namespacedakku_1a86dfefa53a11b2cf2d06aaa75171fe3a" kind="variable"><name>PCG32_DEFAULT_STREAM</name></member>
     <member refid="namespacedakku_1ac3bbfb2d54532e5e73bf8206d1323600" kind="variable"><name>PCG32_MULT</name></member>
     <member refid="namespacedakku_1af9f5f7a876a1c02de56e9fa106171eda" kind="variable"><name>renderState</name></member>
-    <member refid="namespacedakku_1afb8b3ba43715313b21b2a234c2c2436d" kind="function"><name>DAKKU_EXPORT_OBJECTS</name></member>
+    <member refid="namespacedakku_1abd2616d95825cc7983c495b9e79f0afe" kind="function"><name>DAKKU_EXPORT_OBJECTS</name></member>
     <member refid="namespacedakku_1af0a2453f8db3eb948901c7a0aed18434" kind="function"><name>begin</name></member>
     <member refid="namespacedakku_1a41ae9fcb2290e6ea6f7d4b0fbca86d17" kind="function"><name>end</name></member>
     <member refid="namespacedakku_1af754e4967f947036a0c31c0dbb4bf6e1" kind="function"><name>isNaN</name></member>
@@ -716,8 +731,6 @@
   <compound refid="spectrum_8h" kind="file"><name>spectrum.h</name>
   </compound>
   <compound refid="state_8h" kind="file"><name>state.h</name>
-  </compound>
-  <compound refid="stream_8h" kind="file"><name>stream.h</name>
   </compound>
   <compound refid="texture_8h" kind="file"><name>texture.h</name>
   </compound>

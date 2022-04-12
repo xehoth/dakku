@@ -24,7 +24,6 @@
     <innerfile refid="shape_8h">shape.h</innerfile>
     <innerfile refid="spectrum_8h">spectrum.h</innerfile>
     <innerfile refid="state_8h">state.h</innerfile>
-    <innerfile refid="stream_8h">stream.h</innerfile>
     <innerfile refid="texture_8h">texture.h</innerfile>
     <innerfile refid="transform_8h">transform.h</innerfile>
     <innerfile refid="transform__cache_8h">transform_cache.h</innerfile>

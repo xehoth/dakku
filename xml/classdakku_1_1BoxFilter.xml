@@ -24,6 +24,22 @@
         </inbodydescription>
         <location file="src/filters/box.h" line="14" column="3"/>
       </memberdef>
+      <memberdef kind="function" id="classdakku_1_1BoxFilter_1a28e72cf62d6533cd2768a64d4920ead3" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dakku::BoxFilter::BoxFilter</definition>
+        <argsstring>(const Property &amp;)</argsstring>
+        <name>BoxFilter</name>
+        <param>
+          <type>const <ref refid="classdakku_1_1Property" kindref="compound">Property</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/filters/box.h" line="15" column="12"/>
+      </memberdef>
       <memberdef kind="function" id="classdakku_1_1BoxFilter_1a062696aca56d7f4f1ed238f1df17f95f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>float</type>
         <definition>float dakku::BoxFilter::evaluate</definition>
@@ -54,34 +70,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/filters/box.h" line="17" column="10"/>
-      </memberdef>
-      <memberdef kind="function" id="classdakku_1_1BoxFilter_1a41c4e564d4f720c22852f36412836574" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>dakku::Filter::Filter</definition>
-        <argsstring>(const Vector2f &amp;radius)</argsstring>
-        <name>Filter</name>
-        <param>
-          <type>const <ref refid="namespacedakku_1abfd5a177365f8ffec7ab23d6cb6db8c0" kindref="member">Vector2f</ref> &amp;</type>
-          <declname>radius</declname>
-        </param>
-        <briefdescription>
-<para>Construct a new <ref refid="classdakku_1_1Filter" kindref="compound">Filter</ref> object The filter&apos;s overall extent in each direction is twice the value given in <computeroutput>radius</computeroutput> </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>radius</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>radius of the filter </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/filters/box.h" line="15" column="3"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -142,10 +130,11 @@
     </collaborationgraph>
     <location file="src/filters/box.h" line="12" column="1" bodyfile="src/filters/box.h" bodystart="12" bodyend="18"/>
     <listofallmembers>
+      <member refid="classdakku_1_1BoxFilter_1a28e72cf62d6533cd2768a64d4920ead3" prot="public" virt="non-virtual"><scope>dakku::BoxFilter</scope><name>BoxFilter</name></member>
       <member refid="classdakku_1_1BoxFilter_1ac4033f9e7e2cb0eee1b0eb5d8bd299b9" prot="public" virt="non-virtual"><scope>dakku::BoxFilter</scope><name>DAKKU_DECLARE_OBJECT</name></member>
       <member refid="classdakku_1_1Filter_1af5facbb86027fe03ecc4c9d6e4ae6a17" prot="public" virt="non-virtual" ambiguityscope="dakku::Filter::"><scope>dakku::BoxFilter</scope><name>DAKKU_DECLARE_OBJECT</name></member>
       <member refid="classdakku_1_1BoxFilter_1a062696aca56d7f4f1ed238f1df17f95f" prot="public" virt="virtual"><scope>dakku::BoxFilter</scope><name>evaluate</name></member>
-      <member refid="classdakku_1_1BoxFilter_1a41c4e564d4f720c22852f36412836574" prot="public" virt="non-virtual"><scope>dakku::BoxFilter</scope><name>Filter</name></member>
+      <member refid="classdakku_1_1Filter_1a41c4e564d4f720c22852f36412836574" prot="public" virt="non-virtual"><scope>dakku::BoxFilter</scope><name>Filter</name></member>
       <member refid="classdakku_1_1Object_1a543f734268f7be81badecee6cf7245cc" prot="public" virt="virtual"><scope>dakku::BoxFilter</scope><name>getClassName</name></member>
       <member refid="classdakku_1_1Object_1a247ed68865f464d511b7fdb85467c354" prot="public" virt="non-virtual"><scope>dakku::BoxFilter</scope><name>getClassNameStatic</name></member>
       <member refid="classdakku_1_1Object_1accec0632e79097564677055bef4220bd" prot="public" virt="virtual"><scope>dakku::BoxFilter</scope><name>getParentName</name></member>

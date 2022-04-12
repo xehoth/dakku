@@ -146,6 +146,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1ProjectiveCamera/</loc>
+         <lastmod>2022-04-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1Property/</loc>
          <lastmod>2022-04-12</lastmod>
          <changefreq>daily</changefreq>
@@ -232,6 +237,11 @@
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1VectorBase/</loc>
+         <lastmod>2022-04-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Classes/structdakku_1_1CameraSample/</loc>
          <lastmod>2022-04-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -492,11 +502,6 @@
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/stream_2fwd_8h/</loc>
-         <lastmod>2022-04-12</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://xehoth.github.io/dakku/Files/stream_8h/</loc>
          <lastmod>2022-04-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
