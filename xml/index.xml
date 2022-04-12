@@ -615,9 +615,9 @@
     <member refid="namespacedakku_1a41d1cd0b3579a6b8c5e22ab4e2146f00" kind="function"><name>log2Int</name></member>
     <member refid="namespacedakku_1a66eb6977bab34786fa743859b0ffc52d" kind="function"><name>log2Int</name></member>
     <member refid="namespacedakku_1a837463872226179eb46dde52c558f1c1" kind="function"><name>lerp</name></member>
-    <member refid="namespacedakku_1a1fd20fa9b44a1620a3ce2a133f53d83d" kind="function"><name>doTrilinear</name></member>
     <member refid="namespacedakku_1a5dc6c62020f3cb484153c43801d71ee0" kind="function"><name>maxAnisotropy</name></member>
     <member refid="namespacedakku_1a3daeac9348858af9dbb1a9c0415f5f84" kind="function"><name>wrapMode</name></member>
+    <member refid="namespacedakku_1ad153e9f37e7a43e9abe4762557e4a187" kind="function"><name>resolution</name></member>
     <member refid="namespacedakku_1ac5c65853b3b4155436da5b4402bebcad" kind="function"><name>registerObjects</name></member>
     <member refid="namespacedakku_1ac70f11ace3ab613579837a2d336b38c5" kind="function"><name>offsetRayOrigin</name></member>
     <member refid="namespacedakku_1a80d2f8350cdcc84f6586fed5f396f8c7" kind="function"><name>xyzToRgb</name></member>

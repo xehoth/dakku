@@ -191,7 +191,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/mipmap.h" line="49" column="11" bodyfile="src/core/mipmap.h" bodystart="214" bodyend="236"/>
+        <location file="src/core/mipmap.h" line="49" column="11" bodyfile="src/core/mipmap.h" bodystart="215" bodyend="237"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1MipMap_1ad25a7c8b822b665377740f296bd06a40" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>T</type>
@@ -214,7 +214,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/mipmap.h" line="56" column="5" bodyfile="src/core/mipmap.h" bodystart="240" bodyend="254"/>
+        <location file="src/core/mipmap.h" line="56" column="5" bodyfile="src/core/mipmap.h" bodystart="241" bodyend="255"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1MipMap_1a130a8b13049ca7fe2525d5b0c3882795" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>T</type>
@@ -240,7 +240,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/mipmap.h" line="57" column="5" bodyfile="src/core/mipmap.h" bodystart="274" bodyend="285"/>
+        <location file="src/core/mipmap.h" line="57" column="5" bodyfile="src/core/mipmap.h" bodystart="276" bodyend="287"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -264,7 +264,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/mipmap.h" line="75" column="19" bodyfile="src/core/mipmap.h" bodystart="75" bodyend="97"/>
+        <location file="src/core/mipmap.h" line="75" column="19" bodyfile="src/core/mipmap.h" bodystart="75" bodyend="98"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1MipMap_1abb83b1d932d1416a8d11ae568f7192d6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>float</type>
@@ -281,7 +281,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/mipmap.h" line="99" column="9" bodyfile="src/core/mipmap.h" bodystart="99" bodyend="99"/>
+        <location file="src/core/mipmap.h" line="100" column="9" bodyfile="src/core/mipmap.h" bodystart="100" bodyend="100"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1MipMap_1a37d1f785acc945b501cc3ee7f34027f6" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>T</type>
@@ -304,7 +304,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/mipmap.h" line="104" column="5" bodyfile="src/core/mipmap.h" bodystart="258" bodyend="270"/>
+        <location file="src/core/mipmap.h" line="105" column="5" bodyfile="src/core/mipmap.h" bodystart="259" bodyend="272"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1MipMap_1af7005d286fc2af45aa51a4b929ddfa87" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classdakku_1_1RgbSpectrum" kindref="compound">RgbSpectrum</ref></type>
@@ -321,7 +321,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/mipmap.h" line="105" column="15" bodyfile="src/core/mipmap.h" bodystart="105" bodyend="105"/>
+        <location file="src/core/mipmap.h" line="106" column="15" bodyfile="src/core/mipmap.h" bodystart="106" bodyend="106"/>
       </memberdef>
       </sectiondef>
     <requiresclause>(std::is_same_v&lt;T, float&gt; || std::is_same_v&lt;T, <ref refid="namespacedakku_1a72f253f8c73b2ec7fef8e3c83c0eac17" kindref="member">Spectrum</ref>&gt;)    </requiresclause>
@@ -340,7 +340,7 @@
 </parameterlist>
 </para>
     </detaileddescription>
-    <location file="src/core/mipmap.h" line="34" column="2" bodyfile="src/core/mipmap.h" bodystart="34" bodyend="106"/>
+    <location file="src/core/mipmap.h" line="34" column="2" bodyfile="src/core/mipmap.h" bodystart="34" bodyend="107"/>
     <listofallmembers>
       <member refid="classdakku_1_1MipMap_1abb83b1d932d1416a8d11ae568f7192d6" prot="private" virt="non-virtual"><scope>dakku::MipMap</scope><name>clamp</name></member>
       <member refid="classdakku_1_1MipMap_1af7005d286fc2af45aa51a4b929ddfa87" prot="private" virt="non-virtual"><scope>dakku::MipMap</scope><name>clamp</name></member>
