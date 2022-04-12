@@ -10,10 +10,12 @@
 #include <core/filter.h>
 #include <core/film.h>
 #include <core/texture.h>
+#include <core/shape.h>
+
 namespace dakku {
 
 DAKKU_EXPORT_OBJECTS(Core, Object, InputStream, OutputStream,
                      SerializableObject, Filter, Film, Texture,
-                     TextureMapping2D, UvMapping2D);
+                     TextureMapping2D, UvMapping2D, Shape);
 }  // namespace dakku
 #endif

@@ -799,6 +799,19 @@ inline decltype(auto) dot(const VectorBase<T, S, D1> &a,
   return a.dot(b);
 }
 
+/**
+ * @brief absolute value of dot product between two vectors
+ *
+ * @param a $\vec a$
+ * @param b $\vec b$
+ * @return $|\vec a \cdot \vec b|$
+ */
+template <ArithmeticType T, size_t S, typename D1, typename D2>
+inline decltype(auto) absDot(const VectorBase<T, S, D1> &a,
+                             const VectorBase<T, S, D2> &b) {
+  return std::abs(dot(a, b));
+}
+
 /*! @page vector_base Vector Base
 
 dakku currently use naive implementation, may use intrinsics and expression

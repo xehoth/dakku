@@ -19,4 +19,7 @@ TEST(Object, Register) {
   EXPECT_TRUE(Class::instance().contains("Texture"));
   EXPECT_TRUE(Class::instance().contains("ImageTexture"));
   EXPECT_TRUE(Class::instance().contains("ConstantTexture"));
+  EXPECT_TRUE(Class::instance().contains("TextureMapping2D"));
+  EXPECT_TRUE(Class::instance().contains("UvMapping2D"));
+  EXPECT_TRUE(Class::instance().contains("Shape"));
 }

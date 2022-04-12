@@ -2,6 +2,7 @@
 #define DAKKU_CORE_TRANSFORM_H_
 #include <core/vector.h>
 #include <core/ray.h>
+#include <core/bounds.h>
 
 namespace dakku {
 
@@ -137,9 +138,9 @@ class Transform {
    * @brief transform inverse
    *
    */
-  friend Transform inverse(Transform &t) { return {t.mInv, t.m}; }
+  friend Transform inverse(const Transform &t) { return {t.mInv, t.m}; }
 
-  friend Transform transpose(Transform &t) {
+  friend Transform transpose(const Transform &t) {
     return {transpose(t.m), transpose(t.mInv)};
   }
 
@@ -212,6 +213,13 @@ class Transform {
    */
   inline RayDifferential operator()(const RayDifferential &r) const;
 
+  /**
+   * @brief transform a bounds
+   *
+   */
+  template <ArithmeticType T>
+  inline Bounds3<T> operator()(const Bounds3<T> &b) const;
+
   Transform operator*(const Transform &rhs) const {
     return {m * rhs.m, rhs.mInv * mInv};
   }
@@ -276,6 +284,20 @@ inline RayDifferential Transform::operator()(const RayDifferential &r) const {
   ret.ryOrigin = (*this)(r.ryOrigin);
   ret.rxDirection = (*this)(r.rxDirection);
   ret.ryDirection = (*this)(r.ryDirection);
+  return ret;
+}
+
+template <ArithmeticType T>
+inline Bounds3<T> Transform::operator()(const Bounds3<T> &b) const {
+  const Transform &M = *this;
+  Bounds3f ret(M(Point3f(b.pMin.x(), b.pMin.y(), b.pMin.z())));
+  ret = ret | M(Point3f(b.pMax.x(), b.pMin.y(), b.pMin.z()));
+  ret = ret | M(Point3f(b.pMin.x(), b.pMax.y(), b.pMin.z()));
+  ret = ret | M(Point3f(b.pMin.x(), b.pMin.y(), b.pMax.z()));
+  ret = ret | M(Point3f(b.pMin.x(), b.pMax.y(), b.pMax.z()));
+  ret = ret | M(Point3f(b.pMax.x(), b.pMax.y(), b.pMin.z()));
+  ret = ret | M(Point3f(b.pMax.x(), b.pMin.y(), b.pMax.z()));
+  ret = ret | M(Point3f(b.pMax.x(), b.pMax.y(), b.pMax.z()));
   return ret;
 }
 

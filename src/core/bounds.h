@@ -178,7 +178,7 @@ class BoundsBase {
   friend BoundsBase operator|(const BoundsBase &b, const Point<T, S> &p) {
     BoundsBase ret;
     ret.pMin = min(b.pMin, p);
-    ret.pMax = max(b.Pmax, p);
+    ret.pMax = max(b.pMax, p);
     return ret;
   }
 
