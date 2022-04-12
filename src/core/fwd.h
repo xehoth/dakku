@@ -100,6 +100,21 @@ inline std::int32_t roundUpPow2(std::int32_t v) {
   return v + 1;
 }
 
+/**
+ * @brief round up to nearest value which is power of 2
+ *
+ */
+inline std::int64_t roundUpPow2(std::int64_t v) {
+  v--;
+  v |= v >> 1;
+  v |= v >> 2;
+  v |= v >> 4;
+  v |= v >> 8;
+  v |= v >> 16;
+  v |= v >> 32;
+  return v + 1;
+}
+
 inline float evalLanczos(float x, float tau = 2) {
   x = std::abs(x);
   if (x < 1e-5f) return 1;
@@ -114,16 +129,28 @@ inline float evalLanczos(float x, float tau = 2) {
  * @brief $\lfloor \log_2 v \rfloor$
  *
  */
+inline int log2Int(std::uint32_t v) { return 31 - std::countl_zero(v); }
+
+/**
+ * @brief $\lfloor \log_2 v \rfloor$
+ *
+ */
 inline int log2Int(std::int32_t v) {
-  return 31 - std::countl_zero(static_cast<std::uint32_t>(v));
+  return log2Int(static_cast<std::uint32_t>(v));
 }
 
 /**
  * @brief $\lfloor \log_2 v \rfloor$
  *
  */
+inline int log2Int(std::uint64_t v) { return 63 - std::countl_zero(v); }
+
+/**
+ * @brief $\lfloor \log_2 v \rfloor$
+ *
+ */
 inline int log2Int(std::int64_t v) {
-  return 63 - std::countl_zero(static_cast<std::uint64_t>(v));
+  return log2Int(static_cast<std::uint64_t>(v));
 }
 
 /**
