@@ -81,6 +81,7 @@
         <definition>virtual float dakku::Camera::generateRay</definition>
         <argsstring>(const CameraSample &amp;sample, Ray &amp;ray) const =0</argsstring>
         <name>generateRay</name>
+        <reimplementedby refid="classdakku_1_1PerspectiveCamera_1add3eb3f906c80d82de3694fcbd822315">generateRay</reimplementedby>
         <param>
           <type>const <ref refid="structdakku_1_1CameraSample" kindref="compound">CameraSample</ref> &amp;</type>
           <declname>sample</declname>
@@ -103,6 +104,7 @@
         <definition>virtual float dakku::Camera::generateRayDifferential</definition>
         <argsstring>(const CameraSample &amp;sample, RayDifferential &amp;rayD) const =0</argsstring>
         <name>generateRayDifferential</name>
+        <reimplementedby refid="classdakku_1_1PerspectiveCamera_1a29a3725de1185c816a05a899601b0da6">generateRayDifferential</reimplementedby>
         <param>
           <type>const <ref refid="structdakku_1_1CameraSample" kindref="compound">CameraSample</ref> &amp;</type>
           <declname>sample</declname>
@@ -137,6 +139,12 @@
       <node id="2">
         <label>dakku::Object</label>
         <link refid="classdakku_1_1Object"/>
+      </node>
+      <node id="4">
+        <label>dakku::PerspectiveCamera</label>
+        <link refid="classdakku_1_1PerspectiveCamera"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
       </node>
       <node id="3">
         <label>dakku::ProjectiveCamera</label>

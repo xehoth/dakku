@@ -167,10 +167,10 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="5">
+      <node id="6">
         <label>dakku::BoxFilter</label>
         <link refid="classdakku_1_1BoxFilter"/>
-        <childnode refid="4" relation="public-inheritance">
+        <childnode refid="5" relation="public-inheritance">
         </childnode>
       </node>
       <node id="2">
@@ -179,43 +179,43 @@
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="16">
+      <node id="17">
         <label>dakku::ConstantTexture</label>
         <link refid="classdakku_1_1ConstantTexture"/>
-        <childnode refid="15" relation="public-inheritance">
+        <childnode refid="16" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8">
+      <node id="9">
         <label>dakku::FileInputStream</label>
         <link refid="classdakku_1_1FileInputStream"/>
-        <childnode refid="7" relation="public-inheritance">
+        <childnode refid="8" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10">
+      <node id="11">
         <label>dakku::FileOutputStream</label>
         <link refid="classdakku_1_1FileOutputStream"/>
-        <childnode refid="9" relation="public-inheritance">
+        <childnode refid="10" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="12">
+      <node id="13">
         <label>dakku::Film</label>
         <link refid="classdakku_1_1Film"/>
-        <childnode refid="11" relation="public-inheritance">
+        <childnode refid="12" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4">
+      <node id="5">
         <label>dakku::Filter</label>
         <link refid="classdakku_1_1Filter"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="17">
+      <node id="18">
         <label>dakku::ImageTexture</label>
         <link refid="classdakku_1_1ImageTexture"/>
-        <childnode refid="15" relation="public-inheritance">
+        <childnode refid="16" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7">
+      <node id="8">
         <label>dakku::InputStream</label>
         <link refid="classdakku_1_1InputStream"/>
         <childnode refid="1" relation="public-inheritance">
@@ -225,10 +225,16 @@
         <label>dakku::Object</label>
         <link refid="classdakku_1_1Object"/>
       </node>
-      <node id="9">
+      <node id="10">
         <label>dakku::OutputStream</label>
         <link refid="classdakku_1_1OutputStream"/>
         <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>dakku::PerspectiveCamera</label>
+        <link refid="classdakku_1_1PerspectiveCamera"/>
+        <childnode refid="3" relation="public-inheritance">
         </childnode>
       </node>
       <node id="3">
@@ -237,46 +243,46 @@
         <childnode refid="2" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="13">
+      <node id="14">
         <label>dakku::RenderState</label>
         <link refid="classdakku_1_1RenderState"/>
-        <childnode refid="11" relation="public-inheritance">
+        <childnode refid="12" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11">
+      <node id="12">
         <label>dakku::SerializableObject</label>
         <link refid="classdakku_1_1SerializableObject"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="14">
+      <node id="15">
         <label>dakku::Shape</label>
         <link refid="classdakku_1_1Shape"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="15">
+      <node id="16">
         <label>dakku::Texture</label>
         <link refid="classdakku_1_1Texture"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="18">
+      <node id="19">
         <label>dakku::TextureMapping2D</label>
         <link refid="classdakku_1_1TextureMapping2D"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6">
+      <node id="7">
         <label>dakku::TriangleFilter</label>
         <link refid="classdakku_1_1TriangleFilter"/>
-        <childnode refid="4" relation="public-inheritance">
+        <childnode refid="5" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="19">
+      <node id="20">
         <label>dakku::UvMapping2D</label>
         <link refid="classdakku_1_1UvMapping2D"/>
-        <childnode refid="18" relation="public-inheritance">
+        <childnode refid="19" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>

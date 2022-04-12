@@ -111,6 +111,22 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
+      <node id="20">
+        <label>src/cameras/api.h</label>
+        <link refid="cameras_2api_8h"/>
+      </node>
+      <node id="18">
+        <label>src/cameras/fwd.h</label>
+        <link refid="cameras_2fwd_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>src/cameras/perspective.h</label>
+        <link refid="perspective_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
       <node id="4">
         <label>src/core/api.h</label>
         <link refid="core_2api_8h"/>
@@ -128,6 +144,8 @@
       <node id="17">
         <label>src/core/camera.h</label>
         <link refid="camera_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
         <childnode refid="4" relation="include">
         </childnode>
       </node>
@@ -145,19 +163,19 @@
         <childnode refid="5" relation="include">
         </childnode>
       </node>
-      <node id="18">
+      <node id="21">
         <label>src/core/filter.h</label>
         <link refid="filter_8h"/>
         <childnode refid="4" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="19" relation="include">
+        <childnode refid="22" relation="include">
         </childnode>
-        <childnode refid="21" relation="include">
+        <childnode refid="24" relation="include">
         </childnode>
       </node>
-      <node id="30">
+      <node id="33">
         <label>src/core/interaction.h</label>
         <link refid="interaction_8h"/>
       </node>
@@ -174,13 +192,13 @@
         </childnode>
         <childnode refid="17" relation="include">
         </childnode>
-        <childnode refid="18" relation="include">
+        <childnode refid="21" relation="include">
         </childnode>
-        <childnode refid="22" relation="include">
+        <childnode refid="25" relation="include">
         </childnode>
         <childnode refid="12" relation="include">
         </childnode>
-        <childnode refid="27" relation="include">
+        <childnode refid="30" relation="include">
         </childnode>
       </node>
       <node id="14">
@@ -189,15 +207,15 @@
         <childnode refid="15" relation="include">
         </childnode>
       </node>
-      <node id="31">
+      <node id="34">
         <label>src/core/ray.h</label>
         <link refid="ray_8h"/>
-        <childnode refid="30" relation="include">
+        <childnode refid="33" relation="include">
         </childnode>
         <childnode refid="13" relation="include">
         </childnode>
       </node>
-      <node id="22">
+      <node id="25">
         <label>src/core/serialization.h</label>
         <link refid="serialization_8h"/>
         <childnode refid="4" relation="include">
@@ -206,9 +224,9 @@
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="23" relation="include">
+        <childnode refid="26" relation="include">
         </childnode>
-        <childnode refid="24" relation="include">
+        <childnode refid="27" relation="include">
         </childnode>
       </node>
       <node id="12">
@@ -231,12 +249,12 @@
         <label>src/core/state.h</label>
         <link refid="state_8h"/>
       </node>
-      <node id="27">
+      <node id="30">
         <label>src/core/texture.h</label>
         <link refid="texture_8h"/>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="28" relation="include">
+        <childnode refid="31" relation="include">
         </childnode>
       </node>
       <node id="13">
@@ -246,10 +264,10 @@
         </childnode>
         <childnode refid="12" relation="include">
         </childnode>
-        <childnode refid="29" relation="include">
+        <childnode refid="32" relation="include">
         </childnode>
       </node>
-      <node id="29">
+      <node id="32">
         <label>src/core/transform_cache.h</label>
         <link refid="transform__cache_8h"/>
       </node>
@@ -258,13 +276,13 @@
         <link refid="vector_8h"/>
         <childnode refid="11" relation="include">
         </childnode>
-        <childnode refid="30" relation="include">
+        <childnode refid="33" relation="include">
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
         <childnode refid="14" relation="include">
         </childnode>
-        <childnode refid="31" relation="include">
+        <childnode refid="34" relation="include">
         </childnode>
         <childnode refid="13" relation="include">
         </childnode>
@@ -277,44 +295,44 @@
         <childnode refid="10" relation="include">
         </childnode>
       </node>
-      <node id="20">
+      <node id="23">
         <label>src/filters/api.h</label>
         <link refid="filters_2api_8h"/>
       </node>
-      <node id="19">
+      <node id="22">
         <label>src/filters/box.h</label>
         <link refid="box_8h"/>
-        <childnode refid="20" relation="include">
-        </childnode>
-      </node>
-      <node id="23">
-        <label>src/filters/fwd.h</label>
-        <link refid="filters_2fwd_8h"/>
-        <childnode refid="19" relation="include">
-        </childnode>
-        <childnode refid="21" relation="include">
-        </childnode>
-      </node>
-      <node id="21">
-        <label>src/filters/triangle.h</label>
-        <link refid="triangle_8h"/>
-        <childnode refid="20" relation="include">
+        <childnode refid="23" relation="include">
         </childnode>
       </node>
       <node id="26">
-        <label>src/stream/api.h</label>
-        <link refid="stream_2api_8h"/>
-      </node>
-      <node id="25">
-        <label>src/stream/fstream.h</label>
-        <link refid="fstream_8h"/>
-        <childnode refid="26" relation="include">
+        <label>src/filters/fwd.h</label>
+        <link refid="filters_2fwd_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
         </childnode>
       </node>
       <node id="24">
+        <label>src/filters/triangle.h</label>
+        <link refid="triangle_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>src/stream/api.h</label>
+        <link refid="stream_2api_8h"/>
+      </node>
+      <node id="28">
+        <label>src/stream/fstream.h</label>
+        <link refid="fstream_8h"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
         <label>src/stream/fwd.h</label>
         <link refid="stream_2fwd_8h"/>
-        <childnode refid="25" relation="include">
+        <childnode refid="28" relation="include">
         </childnode>
       </node>
       <node id="8">
@@ -327,7 +345,7 @@
         <childnode refid="8" relation="include">
         </childnode>
       </node>
-      <node id="28">
+      <node id="31">
         <label>src/textures/fwd.h</label>
         <link refid="textures_2fwd_8h"/>
         <childnode refid="9" relation="include">

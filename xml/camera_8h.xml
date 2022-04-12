@@ -3,6 +3,7 @@
   <compounddef id="camera_8h" kind="file" language="C++">
     <compoundname>camera.h</compoundname>
     <includes refid="object_8h" local="no">core/object.h</includes>
+    <includedby refid="cameras_2fwd_8h" local="no">src/cameras/fwd.h</includedby>
     <includedby refid="core_2api_8h" local="no">src/core/api.h</includedby>
     <incdepgraph>
       <node id="28">
@@ -200,7 +201,23 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
+      <node id="4">
+        <label>src/cameras/api.h</label>
+        <link refid="cameras_2api_8h"/>
+      </node>
       <node id="2">
+        <label>src/cameras/fwd.h</label>
+        <link refid="cameras_2fwd_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>src/cameras/perspective.h</label>
+        <link refid="perspective_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
         <label>src/core/api.h</label>
         <link refid="core_2api_8h"/>
       </node>
@@ -208,6 +225,8 @@
         <label>src/core/camera.h</label>
         <link refid="camera_8h"/>
         <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
         </childnode>
       </node>
     </invincdepgraph>

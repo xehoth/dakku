@@ -3,6 +3,7 @@
   <compounddef id="classdakku_1_1ProjectiveCamera" kind="class" language="C++" prot="public">
     <compoundname>dakku::ProjectiveCamera</compoundname>
     <basecompoundref refid="classdakku_1_1Camera" prot="public" virt="non-virtual">dakku::Camera</basecompoundref>
+    <derivedcompoundref refid="classdakku_1_1PerspectiveCamera" prot="public" virt="non-virtual">dakku::PerspectiveCamera</derivedcompoundref>
     <includes refid="camera_8h" local="no">camera.h</includes>
       <sectiondef kind="protected-attrib">
       <memberdef kind="variable" id="classdakku_1_1ProjectiveCamera_1a890b5514e65900976e66b73817ee485d" prot="protected" static="no" mutable="no">
@@ -125,6 +126,12 @@
       <node id="3">
         <label>dakku::Object</label>
         <link refid="classdakku_1_1Object"/>
+      </node>
+      <node id="4">
+        <label>dakku::PerspectiveCamera</label>
+        <link refid="classdakku_1_1PerspectiveCamera"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
       </node>
       <node id="1">
         <label>dakku::ProjectiveCamera</label>

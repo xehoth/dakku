@@ -5,6 +5,22 @@
     <includedby refid="core_2fwd_8h" local="no">src/core/fwd.h</includedby>
     <includedby refid="imageio_2fwd_8h" local="no">src/imageio/fwd.h</includedby>
     <invincdepgraph>
+      <node id="13">
+        <label>src/cameras/api.h</label>
+        <link refid="cameras_2api_8h"/>
+      </node>
+      <node id="11">
+        <label>src/cameras/fwd.h</label>
+        <link refid="cameras_2fwd_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>src/cameras/perspective.h</label>
+        <link refid="perspective_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
       <node id="9">
         <label>src/core/api.h</label>
         <link refid="core_2api_8h"/>
@@ -15,19 +31,21 @@
         <childnode refid="4" relation="include">
         </childnode>
       </node>
-      <node id="32">
+      <node id="35">
         <label>src/core/bounds.h</label>
         <link refid="bounds_8h"/>
-        <childnode refid="12" relation="include">
+        <childnode refid="15" relation="include">
         </childnode>
-        <childnode refid="22" relation="include">
+        <childnode refid="25" relation="include">
         </childnode>
-        <childnode refid="33" relation="include">
+        <childnode refid="36" relation="include">
         </childnode>
       </node>
       <node id="10">
         <label>src/core/camera.h</label>
         <link refid="camera_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
         <childnode refid="9" relation="include">
         </childnode>
       </node>
@@ -37,24 +55,24 @@
         <childnode refid="8" relation="include">
         </childnode>
       </node>
-      <node id="12">
+      <node id="15">
         <label>src/core/film.h</label>
         <link refid="core_2film_8h"/>
         <childnode refid="9" relation="include">
         </childnode>
-        <childnode refid="13" relation="include">
+        <childnode refid="16" relation="include">
         </childnode>
       </node>
-      <node id="11">
+      <node id="14">
         <label>src/core/filter.h</label>
         <link refid="filter_8h"/>
         <childnode refid="9" relation="include">
         </childnode>
-        <childnode refid="12" relation="include">
+        <childnode refid="15" relation="include">
         </childnode>
-        <childnode refid="14" relation="include">
+        <childnode refid="17" relation="include">
         </childnode>
-        <childnode refid="16" relation="include">
+        <childnode refid="19" relation="include">
         </childnode>
       </node>
       <node id="2">
@@ -64,43 +82,43 @@
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="26" relation="include">
-        </childnode>
-        <childnode refid="37" relation="include">
-        </childnode>
-        <childnode refid="38" relation="include">
-        </childnode>
-        <childnode refid="39" relation="include">
+        <childnode refid="29" relation="include">
         </childnode>
         <childnode refid="40" relation="include">
         </childnode>
-        <childnode refid="24" relation="include">
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
         </childnode>
       </node>
-      <node id="35">
+      <node id="38">
         <label>src/core/interaction.h</label>
         <link refid="interaction_8h"/>
       </node>
-      <node id="26">
+      <node id="29">
         <label>src/core/logger.h</label>
         <link refid="logger_8h"/>
         <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="27" relation="include">
+        <childnode refid="30" relation="include">
         </childnode>
-        <childnode refid="29" relation="include">
+        <childnode refid="32" relation="include">
         </childnode>
       </node>
-      <node id="37">
+      <node id="40">
         <label>src/core/math.h</label>
         <link refid="math_8h"/>
       </node>
-      <node id="27">
+      <node id="30">
         <label>src/core/memory.h</label>
         <link refid="memory_8h"/>
-        <childnode refid="12" relation="include">
+        <childnode refid="15" relation="include">
         </childnode>
-        <childnode refid="28" relation="include">
+        <childnode refid="31" relation="include">
         </childnode>
       </node>
       <node id="4">
@@ -116,158 +134,158 @@
         </childnode>
         <childnode refid="10" relation="include">
         </childnode>
-        <childnode refid="11" relation="include">
+        <childnode refid="14" relation="include">
         </childnode>
-        <childnode refid="17" relation="include">
+        <childnode refid="20" relation="include">
         </childnode>
-        <childnode refid="22" relation="include">
+        <childnode refid="25" relation="include">
         </childnode>
-        <childnode refid="23" relation="include">
+        <childnode refid="26" relation="include">
         </childnode>
       </node>
-      <node id="34">
+      <node id="37">
         <label>src/core/property.h</label>
         <link refid="property_8h"/>
         <childnode refid="7" relation="include">
         </childnode>
       </node>
-      <node id="36">
+      <node id="39">
         <label>src/core/ray.h</label>
         <link refid="ray_8h"/>
-        <childnode refid="35" relation="include">
+        <childnode refid="38" relation="include">
         </childnode>
-        <childnode refid="33" relation="include">
+        <childnode refid="36" relation="include">
         </childnode>
       </node>
-      <node id="38">
+      <node id="41">
         <label>src/core/relative.h</label>
         <link refid="relative_8h"/>
       </node>
-      <node id="39">
+      <node id="42">
         <label>src/core/rng.h</label>
         <link refid="rng_8h"/>
       </node>
-      <node id="17">
+      <node id="20">
         <label>src/core/serialization.h</label>
         <link refid="serialization_8h"/>
         <childnode refid="9" relation="include">
         </childnode>
-        <childnode refid="12" relation="include">
+        <childnode refid="15" relation="include">
         </childnode>
-        <childnode refid="13" relation="include">
+        <childnode refid="16" relation="include">
         </childnode>
-        <childnode refid="18" relation="include">
+        <childnode refid="21" relation="include">
         </childnode>
-        <childnode refid="19" relation="include">
+        <childnode refid="22" relation="include">
         </childnode>
       </node>
-      <node id="22">
+      <node id="25">
         <label>src/core/shape.h</label>
         <link refid="shape_8h"/>
         <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="30">
+      <node id="33">
         <label>src/core/spectrum.h</label>
         <link refid="spectrum_8h"/>
-        <childnode refid="12" relation="include">
+        <childnode refid="15" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="25" relation="include">
-        </childnode>
-      </node>
-      <node id="13">
-        <label>src/core/state.h</label>
-        <link refid="state_8h"/>
-      </node>
-      <node id="23">
-        <label>src/core/texture.h</label>
-        <link refid="texture_8h"/>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="24" relation="include">
-        </childnode>
-      </node>
-      <node id="33">
-        <label>src/core/transform.h</label>
-        <link refid="transform_8h"/>
-        <childnode refid="34" relation="include">
-        </childnode>
-        <childnode refid="22" relation="include">
         </childnode>
         <childnode refid="28" relation="include">
         </childnode>
       </node>
-      <node id="28">
-        <label>src/core/transform_cache.h</label>
-        <link refid="transform__cache_8h"/>
+      <node id="16">
+        <label>src/core/state.h</label>
+        <link refid="state_8h"/>
       </node>
-      <node id="31">
-        <label>src/core/vector.h</label>
-        <link refid="vector_8h"/>
-        <childnode refid="32" relation="include">
+      <node id="26">
+        <label>src/core/texture.h</label>
+        <link refid="texture_8h"/>
+        <childnode refid="9" relation="include">
         </childnode>
-        <childnode refid="35" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="34" relation="include">
-        </childnode>
-        <childnode refid="36" relation="include">
-        </childnode>
-        <childnode refid="33" relation="include">
+        <childnode refid="27" relation="include">
         </childnode>
       </node>
-      <node id="29">
-        <label>src/core/vector_base.h</label>
-        <link refid="vector__base_8h"/>
-        <childnode refid="30" relation="include">
+      <node id="36">
+        <label>src/core/transform.h</label>
+        <link refid="transform_8h"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
         </childnode>
         <childnode refid="31" relation="include">
         </childnode>
       </node>
-      <node id="15">
-        <label>src/filters/api.h</label>
-        <link refid="filters_2api_8h"/>
+      <node id="31">
+        <label>src/core/transform_cache.h</label>
+        <link refid="transform__cache_8h"/>
       </node>
-      <node id="14">
-        <label>src/filters/box.h</label>
-        <link refid="box_8h"/>
-        <childnode refid="15" relation="include">
+      <node id="34">
+        <label>src/core/vector.h</label>
+        <link refid="vector_8h"/>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>src/core/vector_base.h</label>
+        <link refid="vector__base_8h"/>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
         </childnode>
       </node>
       <node id="18">
+        <label>src/filters/api.h</label>
+        <link refid="filters_2api_8h"/>
+      </node>
+      <node id="17">
+        <label>src/filters/box.h</label>
+        <link refid="box_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
         <label>src/filters/fwd.h</label>
         <link refid="filters_2fwd_8h"/>
-        <childnode refid="14" relation="include">
+        <childnode refid="17" relation="include">
         </childnode>
-        <childnode refid="16" relation="include">
+        <childnode refid="19" relation="include">
         </childnode>
       </node>
-      <node id="16">
+      <node id="19">
         <label>src/filters/triangle.h</label>
         <link refid="triangle_8h"/>
-        <childnode refid="15" relation="include">
+        <childnode refid="18" relation="include">
         </childnode>
       </node>
-      <node id="41">
+      <node id="44">
         <label>src/gui/engine.h</label>
         <link refid="engine_8h"/>
       </node>
-      <node id="40">
+      <node id="43">
         <label>src/gui/film.h</label>
         <link refid="gui_2film_8h"/>
-        <childnode refid="41" relation="include">
+        <childnode refid="44" relation="include">
         </childnode>
       </node>
-      <node id="42">
+      <node id="45">
         <label>src/imageio/fwd.h</label>
         <link refid="imageio_2fwd_8h"/>
-        <childnode refid="43" relation="include">
+        <childnode refid="46" relation="include">
         </childnode>
       </node>
-      <node id="43">
+      <node id="46">
         <label>src/imageio/imageio.h</label>
         <link refid="imageio_8h"/>
       </node>
@@ -276,39 +294,39 @@
         <link refid="platform_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="42" relation="include">
+        <childnode refid="45" relation="include">
         </childnode>
       </node>
-      <node id="21">
+      <node id="24">
         <label>src/stream/api.h</label>
         <link refid="stream_2api_8h"/>
       </node>
-      <node id="20">
+      <node id="23">
         <label>src/stream/fstream.h</label>
         <link refid="fstream_8h"/>
-        <childnode refid="21" relation="include">
+        <childnode refid="24" relation="include">
         </childnode>
       </node>
-      <node id="19">
+      <node id="22">
         <label>src/stream/fwd.h</label>
         <link refid="stream_2fwd_8h"/>
-        <childnode refid="20" relation="include">
+        <childnode refid="23" relation="include">
         </childnode>
       </node>
       <node id="6">
         <label>src/textures/api.h</label>
         <link refid="textures_2api_8h"/>
       </node>
-      <node id="25">
+      <node id="28">
         <label>src/textures/constant.h</label>
         <link refid="constant_8h"/>
         <childnode refid="6" relation="include">
         </childnode>
       </node>
-      <node id="24">
+      <node id="27">
         <label>src/textures/fwd.h</label>
         <link refid="textures_2fwd_8h"/>
-        <childnode refid="25" relation="include">
+        <childnode refid="28" relation="include">
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
@@ -414,6 +432,18 @@
         </inbodydescription>
         <location file="src/platform.h" line="33" column="9" bodyfile="src/platform.h" bodystart="33" bodyend="-1"/>
       </memberdef>
+      <memberdef kind="define" id="platform_8h_1a309a1930cb36a3536864199ed5bcb4f9" prot="public" static="no">
+        <name>DAKKU_CAMERAS_MODULE</name>
+        <initializer>5</initializer>
+        <briefdescription>
+<para>dakku textures module </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/platform.h" line="35" column="9" bodyfile="src/platform.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="define" id="platform_8h_1a09cd708407b8b153a1c5f21c764c142a" prot="public" static="no">
         <name>DAKKU_MAIN_MODULE</name>
         <initializer>10</initializer>
@@ -424,7 +454,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/platform.h" line="35" column="9" bodyfile="src/platform.h" bodystart="35" bodyend="-1"/>
+        <location file="src/platform.h" line="37" column="9" bodyfile="src/platform.h" bodystart="37" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -457,15 +487,16 @@
 <codeline lineno="29" refid="platform_8h_1af38869f447ed6e8768ab41a8b2d4f7e9" refkind="member"><highlight class="preprocessor">#define<sp/>DAKKU_IMAGEIO_MODULE<sp/>3</highlight></codeline>
 <codeline lineno="31" refid="platform_8h_1ac321229e879d4e468e1eb21d57344d58" refkind="member"><highlight class="preprocessor">#define<sp/>DAKKU_FILTERS_MODULE<sp/>4</highlight></codeline>
 <codeline lineno="33" refid="platform_8h_1a897c968d2b673f9b096c9dd1ea3740c1" refkind="member"><highlight class="preprocessor">#define<sp/>DAKKU_TEXTURES_MODULE<sp/>5</highlight></codeline>
-<codeline lineno="35" refid="platform_8h_1a09cd708407b8b153a1c5f21c764c142a" refkind="member"><highlight class="preprocessor">#define<sp/>DAKKU_MAIN_MODULE<sp/>10</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(_MSC_VER)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>warning(disable<sp/>:<sp/>4251)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dakku</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="platform_8h_1a309a1930cb36a3536864199ed5bcb4f9" refkind="member"><highlight class="preprocessor">#define<sp/>DAKKU_CAMERAS_MODULE<sp/>5</highlight></codeline>
+<codeline lineno="37" refid="platform_8h_1a09cd708407b8b153a1c5f21c764c142a" refkind="member"><highlight class="preprocessor">#define<sp/>DAKKU_MAIN_MODULE<sp/>10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(_MSC_VER)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>warning(disable<sp/>:<sp/>4251)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dakku</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="src/platform.h"/>
   </compounddef>

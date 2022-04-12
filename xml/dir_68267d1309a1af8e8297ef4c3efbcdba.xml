@@ -2,6 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
   <compounddef id="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir">
     <compoundname>src</compoundname>
+    <innerdir refid="dir_21bfb5c276f03895ab43337665096837">src/cameras</innerdir>
     <innerdir refid="dir_aebb8dcc11953d78e620bbef0b9e2183">src/core</innerdir>
     <innerdir refid="dir_1bc13244e26df1e1f069a1fd18e36da3">src/filters</innerdir>
     <innerdir refid="dir_99d0482cf009f9d97a0877749b817f19">src/gui</innerdir>

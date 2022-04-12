@@ -141,6 +141,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1PerspectiveCamera/</loc>
+         <lastmod>2022-04-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1Point/</loc>
          <lastmod>2022-04-12</lastmod>
          <changefreq>daily</changefreq>
@@ -316,6 +321,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://xehoth.github.io/dakku/Files/cameras_2api_8h/</loc>
+         <lastmod>2022-04-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Files/cameras_2fwd_8h/</loc>
+         <lastmod>2022-04-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://xehoth.github.io/dakku/Files/class_8h/</loc>
          <lastmod>2022-04-12</lastmod>
          <changefreq>daily</changefreq>
@@ -352,6 +367,11 @@
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/dir_1bc13244e26df1e1f069a1fd18e36da3/</loc>
+         <lastmod>2022-04-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Files/dir_21bfb5c276f03895ab43337665096837/</loc>
          <lastmod>2022-04-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -447,6 +467,11 @@
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/object_8h/</loc>
+         <lastmod>2022-04-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Files/perspective_8h/</loc>
          <lastmod>2022-04-12</lastmod>
          <changefreq>daily</changefreq>
     </url>

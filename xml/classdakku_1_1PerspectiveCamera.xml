@@ -1,0 +1,319 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="classdakku_1_1PerspectiveCamera" kind="class" language="C++" prot="public">
+    <compoundname>dakku::PerspectiveCamera</compoundname>
+    <basecompoundref refid="classdakku_1_1ProjectiveCamera" prot="public" virt="non-virtual">dakku::ProjectiveCamera</basecompoundref>
+    <includes refid="perspective_8h" local="no">perspective.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdakku_1_1PerspectiveCamera_1a580b9e853a6974d4f5ab2a8babfdf967" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacedakku_1aa12b2f1fc9684bf8ba7fbf5b600685c6" kindref="member">Vector3f</ref></type>
+        <definition>Vector3f dakku::PerspectiveCamera::dxCamera</definition>
+        <argsstring></argsstring>
+        <name>dxCamera</name>
+        <briefdescription>
+<para>differential changes in origin </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cameras/perspective.h" line="32" column="12" bodyfile="src/cameras/perspective.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdakku_1_1PerspectiveCamera_1a98daef7e3c8040e02d2b0eb834bea77c" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacedakku_1aa12b2f1fc9684bf8ba7fbf5b600685c6" kindref="member">Vector3f</ref></type>
+        <definition>Vector3f dakku::PerspectiveCamera::dyCamera</definition>
+        <argsstring></argsstring>
+        <name>dyCamera</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cameras/perspective.h" line="32" column="21" bodyfile="src/cameras/perspective.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdakku_1_1PerspectiveCamera_1aec4c1672de8d081a922c5eca3eee70f9" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float dakku::PerspectiveCamera::A</definition>
+        <argsstring></argsstring>
+        <name>A</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cameras/perspective.h" line="33" column="9" bodyfile="src/cameras/perspective.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdakku_1_1PerspectiveCamera_1af40d66b95aff6d291c6966aa02660f9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dakku::PerspectiveCamera::DAKKU_DECLARE_OBJECT</definition>
+        <argsstring>(PerspectiveCamera, ProjectiveCamera)</argsstring>
+        <name>DAKKU_DECLARE_OBJECT</name>
+        <param>
+          <type><ref refid="classdakku_1_1PerspectiveCamera" kindref="compound">PerspectiveCamera</ref></type>
+        </param>
+        <param>
+          <type><ref refid="classdakku_1_1ProjectiveCamera" kindref="compound">ProjectiveCamera</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cameras/perspective.h" line="12" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1PerspectiveCamera_1aee6f7b6d66a2c5acca0e55629545c50e" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dakku::PerspectiveCamera::PerspectiveCamera</definition>
+        <argsstring>(const Transform &amp;cameraToWorld, const Bounds2f &amp;screenWindow, float fov, Film *film)</argsstring>
+        <name>PerspectiveCamera</name>
+        <param>
+          <type>const <ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref> &amp;</type>
+          <declname>cameraToWorld</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacedakku_1abcc743bdeb62068a56f14ac3ef9963b7" kindref="member">Bounds2f</ref> &amp;</type>
+          <declname>screenWindow</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>fov</declname>
+        </param>
+        <param>
+          <type><ref refid="classdakku_1_1Film" kindref="compound">Film</ref> *</type>
+          <declname>film</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new Perspective <ref refid="classdakku_1_1Camera" kindref="compound">Camera</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>screenWindow</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>screen bounds </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fov</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vertical fov </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cameras/perspective.h" line="20" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1PerspectiveCamera_1aee244e2d79c04391fd59bcf7091863ab" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dakku::PerspectiveCamera::PerspectiveCamera</definition>
+        <argsstring>(const Property &amp;p)</argsstring>
+        <name>PerspectiveCamera</name>
+        <param>
+          <type>const <ref refid="classdakku_1_1Property" kindref="compound">Property</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cameras/perspective.h" line="23" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1PerspectiveCamera_1add3eb3f906c80d82de3694fcbd822315" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>float</type>
+        <definition>float dakku::PerspectiveCamera::generateRay</definition>
+        <argsstring>(const CameraSample &amp;sample, Ray &amp;ray) const override</argsstring>
+        <name>generateRay</name>
+        <reimplements refid="classdakku_1_1Camera_1af4fe5f80584bfb8ce27ab44475a30241">generateRay</reimplements>
+        <param>
+          <type>const <ref refid="structdakku_1_1CameraSample" kindref="compound">CameraSample</ref> &amp;</type>
+          <declname>sample</declname>
+        </param>
+        <param>
+          <type><ref refid="classdakku_1_1Ray" kindref="compound">Ray</ref> &amp;</type>
+          <declname>ray</declname>
+        </param>
+        <briefdescription>
+<para>generate ray according to given sample </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cameras/perspective.h" line="25" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1PerspectiveCamera_1a29a3725de1185c816a05a899601b0da6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>float</type>
+        <definition>float dakku::PerspectiveCamera::generateRayDifferential</definition>
+        <argsstring>(const CameraSample &amp;sample, RayDifferential &amp;rayD) const override</argsstring>
+        <name>generateRayDifferential</name>
+        <reimplements refid="classdakku_1_1Camera_1a8ca4c8b01d3ea35c862b51513378917d">generateRayDifferential</reimplements>
+        <param>
+          <type>const <ref refid="structdakku_1_1CameraSample" kindref="compound">CameraSample</ref> &amp;</type>
+          <declname>sample</declname>
+        </param>
+        <param>
+          <type><ref refid="classdakku_1_1RayDifferential" kindref="compound">RayDifferential</ref> &amp;</type>
+          <declname>rayD</declname>
+        </param>
+        <briefdescription>
+<para>generate ray differential according to given sample </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cameras/perspective.h" line="27" column="9"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>perspective camera </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>dakku::Camera</label>
+        <link refid="classdakku_1_1Camera"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>dakku::Object</label>
+        <link refid="classdakku_1_1Object"/>
+      </node>
+      <node id="1">
+        <label>dakku::PerspectiveCamera</label>
+        <link refid="classdakku_1_1PerspectiveCamera"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dakku::ProjectiveCamera</label>
+        <link refid="classdakku_1_1ProjectiveCamera"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="10">
+        <label>dakku::Bounds2&lt; int &gt;</label>
+        <link refid="classdakku_1_1Bounds2"/>
+        <childnode refid="11" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>dakku::BoundsBase&lt; T, 2 &gt;</label>
+        <link refid="classdakku_1_1BoundsBase"/>
+      </node>
+      <node id="8">
+        <label>dakku::Point&lt; int &gt;</label>
+        <link refid="classdakku_1_1Point"/>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>dakku::VectorBase&lt; T, S, Point&lt; T, S &gt; &gt;</label>
+        <link refid="classdakku_1_1VectorBase"/>
+      </node>
+      <node id="3">
+        <label>dakku::Camera</label>
+        <link refid="classdakku_1_1Camera"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>cameraToWorld</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>film</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>dakku::Film</label>
+        <link refid="classdakku_1_1Film"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>fullResolution</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>croppedPixelBounds</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>dakku::Object</label>
+        <link refid="classdakku_1_1Object"/>
+      </node>
+      <node id="1">
+        <label>dakku::PerspectiveCamera</label>
+        <link refid="classdakku_1_1PerspectiveCamera"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dakku::ProjectiveCamera</label>
+        <link refid="classdakku_1_1ProjectiveCamera"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>cameraToScreen</edgelabel>
+          <edgelabel>rasterToCamera</edgelabel>
+          <edgelabel>rasterToScreen</edgelabel>
+          <edgelabel>screenToRaster</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>dakku::SerializableObject</label>
+        <link refid="classdakku_1_1SerializableObject"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>dakku::Transform</label>
+        <link refid="classdakku_1_1Transform"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/cameras/perspective.h" line="10" column="1" bodyfile="src/cameras/perspective.h" bodystart="10" bodyend="34"/>
+    <listofallmembers>
+      <member refid="classdakku_1_1PerspectiveCamera_1aec4c1672de8d081a922c5eca3eee70f9" prot="private" virt="non-virtual"><scope>dakku::PerspectiveCamera</scope><name>A</name></member>
+      <member refid="classdakku_1_1Camera_1a4e13deb3c0f9b88a3f36ba20d5dc99ed" prot="public" virt="non-virtual"><scope>dakku::PerspectiveCamera</scope><name>Camera</name></member>
+      <member refid="classdakku_1_1ProjectiveCamera_1a890b5514e65900976e66b73817ee485d" prot="protected" virt="non-virtual"><scope>dakku::PerspectiveCamera</scope><name>cameraToScreen</name></member>
+      <member refid="classdakku_1_1Camera_1a7fc4b592c175e9aed2d06351418a0b0f" prot="public" virt="non-virtual"><scope>dakku::PerspectiveCamera</scope><name>cameraToWorld</name></member>
+      <member refid="classdakku_1_1PerspectiveCamera_1af40d66b95aff6d291c6966aa02660f9d" prot="public" virt="non-virtual"><scope>dakku::PerspectiveCamera</scope><name>DAKKU_DECLARE_OBJECT</name></member>
+      <member refid="classdakku_1_1ProjectiveCamera_1a2ff0d0032ed0f7319f5b0422a1741b4d" prot="public" virt="non-virtual" ambiguityscope="dakku::ProjectiveCamera::"><scope>dakku::PerspectiveCamera</scope><name>DAKKU_DECLARE_OBJECT</name></member>
+      <member refid="classdakku_1_1Camera_1a8363a3f645e4c0c7b1573fe6c846b843" prot="public" virt="non-virtual" ambiguityscope="dakku::Camera::"><scope>dakku::PerspectiveCamera</scope><name>DAKKU_DECLARE_OBJECT</name></member>
+      <member refid="classdakku_1_1PerspectiveCamera_1a580b9e853a6974d4f5ab2a8babfdf967" prot="private" virt="non-virtual"><scope>dakku::PerspectiveCamera</scope><name>dxCamera</name></member>
+      <member refid="classdakku_1_1PerspectiveCamera_1a98daef7e3c8040e02d2b0eb834bea77c" prot="private" virt="non-virtual"><scope>dakku::PerspectiveCamera</scope><name>dyCamera</name></member>
+      <member refid="classdakku_1_1Camera_1a028dfc24965474cb15a35a20228e0a6d" prot="public" virt="non-virtual"><scope>dakku::PerspectiveCamera</scope><name>film</name></member>
+      <member refid="classdakku_1_1PerspectiveCamera_1add3eb3f906c80d82de3694fcbd822315" prot="public" virt="virtual"><scope>dakku::PerspectiveCamera</scope><name>generateRay</name></member>
+      <member refid="classdakku_1_1PerspectiveCamera_1a29a3725de1185c816a05a899601b0da6" prot="public" virt="virtual"><scope>dakku::PerspectiveCamera</scope><name>generateRayDifferential</name></member>
+      <member refid="classdakku_1_1Object_1a543f734268f7be81badecee6cf7245cc" prot="public" virt="virtual"><scope>dakku::PerspectiveCamera</scope><name>getClassName</name></member>
+      <member refid="classdakku_1_1Object_1a247ed68865f464d511b7fdb85467c354" prot="public" virt="non-virtual"><scope>dakku::PerspectiveCamera</scope><name>getClassNameStatic</name></member>
+      <member refid="classdakku_1_1Object_1accec0632e79097564677055bef4220bd" prot="public" virt="virtual"><scope>dakku::PerspectiveCamera</scope><name>getParentName</name></member>
+      <member refid="classdakku_1_1Object_1a08ec83c660afb1850455ef30c43fa29c" prot="public" virt="non-virtual"><scope>dakku::PerspectiveCamera</scope><name>getParentNameStatic</name></member>
+      <member refid="classdakku_1_1Object_1a055e32b0624d9a96fc2014fe5d9d0c81" prot="public" virt="non-virtual"><scope>dakku::PerspectiveCamera</scope><name>isBaseOf</name></member>
+      <member refid="classdakku_1_1Object_1add47b28fc1878f008bb6664a83faad72" prot="public" virt="non-virtual"><scope>dakku::PerspectiveCamera</scope><name>isDerivedFrom</name></member>
+      <member refid="classdakku_1_1Object_1a20e78d46fa11d575d63e048279150eac" prot="public" virt="non-virtual"><scope>dakku::PerspectiveCamera</scope><name>Object</name></member>
+      <member refid="classdakku_1_1PerspectiveCamera_1aee6f7b6d66a2c5acca0e55629545c50e" prot="public" virt="non-virtual"><scope>dakku::PerspectiveCamera</scope><name>PerspectiveCamera</name></member>
+      <member refid="classdakku_1_1PerspectiveCamera_1aee244e2d79c04391fd59bcf7091863ab" prot="public" virt="non-virtual"><scope>dakku::PerspectiveCamera</scope><name>PerspectiveCamera</name></member>
+      <member refid="classdakku_1_1ProjectiveCamera_1ae25222d3c2004b039da5d4890315201f" prot="public" virt="non-virtual"><scope>dakku::PerspectiveCamera</scope><name>ProjectiveCamera</name></member>
+      <member refid="classdakku_1_1ProjectiveCamera_1a80eabb36d5c13f9a8a71d05cbf8850c0" prot="protected" virt="non-virtual"><scope>dakku::PerspectiveCamera</scope><name>rasterToCamera</name></member>
+      <member refid="classdakku_1_1ProjectiveCamera_1adc49572681d9d4db67106bec5d223f7e" prot="protected" virt="non-virtual"><scope>dakku::PerspectiveCamera</scope><name>rasterToScreen</name></member>
+      <member refid="classdakku_1_1ProjectiveCamera_1ad382d5c8b3a8e800f753e9570b71eb5e" prot="protected" virt="non-virtual"><scope>dakku::PerspectiveCamera</scope><name>screenToRaster</name></member>
+      <member refid="classdakku_1_1Object_1a65d91c04e480b827fa495df96af2826b" prot="public" virt="virtual"><scope>dakku::PerspectiveCamera</scope><name>toString</name></member>
+      <member refid="classdakku_1_1Object_1a0c792f089351caf3fa7a704c86ce903d" prot="public" virt="virtual"><scope>dakku::PerspectiveCamera</scope><name>~Object</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

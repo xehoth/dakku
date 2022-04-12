@@ -32,6 +32,7 @@
     <innerclass refid="classdakku_1_1Normal" prot="public">dakku::Normal</innerclass>
     <innerclass refid="classdakku_1_1Object" prot="public">dakku::Object</innerclass>
     <innerclass refid="classdakku_1_1OutputStream" prot="public">dakku::OutputStream</innerclass>
+    <innerclass refid="classdakku_1_1PerspectiveCamera" prot="public">dakku::PerspectiveCamera</innerclass>
     <innerclass refid="classdakku_1_1Point" prot="public">dakku::Point</innerclass>
     <innerclass refid="classdakku_1_1ProjectiveCamera" prot="public">dakku::ProjectiveCamera</innerclass>
     <innerclass refid="classdakku_1_1Property" prot="public">dakku::Property</innerclass>
@@ -754,6 +755,25 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
+      <memberdef kind="function" id="namespacedakku_1a4289fc5c55c00b2a466d37dfdacc67dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dakku::DAKKU_EXPORT_OBJECTS</definition>
+        <argsstring>(Cameras, PerspectiveCamera)</argsstring>
+        <name>DAKKU_EXPORT_OBJECTS</name>
+        <param>
+          <type>Cameras</type>
+        </param>
+        <param>
+          <type><ref refid="classdakku_1_1PerspectiveCamera" kindref="compound">PerspectiveCamera</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/cameras/api.h" line="7" column="1" declfile="src/cameras/api.h" declline="7" declcolumn="1"/>
+      </memberdef>
       <memberdef kind="function" id="namespacedakku_1abd2616d95825cc7983c495b9e79f0afe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>dakku::DAKKU_EXPORT_OBJECTS</definition>
@@ -2001,6 +2021,6 @@ the shorter edge mapped to [-1, 1], the longer [-ratio, ratio] left handed </par
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/core/api.h" line="16" column="1"/>
+    <location file="src/cameras/api.h" line="5" column="1"/>
   </compounddef>
 </doxygen>
