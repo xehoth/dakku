@@ -146,6 +146,26 @@
       </node>
     </inheritancegraph>
     <collaborationgraph>
+      <node id="8">
+        <label>dakku::Bounds2&lt; int &gt;</label>
+        <link refid="classdakku_1_1Bounds2"/>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>dakku::BoundsBase&lt; T, 2 &gt;</label>
+        <link refid="classdakku_1_1BoundsBase"/>
+      </node>
+      <node id="6">
+        <label>dakku::Point&lt; int &gt;</label>
+        <link refid="classdakku_1_1Point"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>dakku::VectorBase&lt; T, S, Point&lt; T, S &gt; &gt;</label>
+        <link refid="classdakku_1_1VectorBase"/>
+      </node>
       <node id="1">
         <label>dakku::Camera</label>
         <link refid="classdakku_1_1Camera"/>
@@ -162,6 +182,12 @@
         <label>dakku::Film</label>
         <link refid="classdakku_1_1Film"/>
         <childnode refid="5" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>fullResolution</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>croppedPixelBounds</edgelabel>
         </childnode>
       </node>
       <node id="2">

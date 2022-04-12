@@ -4,6 +4,60 @@
     <compoundname>dakku::ProjectiveCamera</compoundname>
     <basecompoundref refid="classdakku_1_1Camera" prot="public" virt="non-virtual">dakku::Camera</basecompoundref>
     <includes refid="camera_8h" local="no">camera.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classdakku_1_1ProjectiveCamera_1a890b5514e65900976e66b73817ee485d" prot="protected" static="no" mutable="no">
+        <type><ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref></type>
+        <definition>Transform dakku::ProjectiveCamera::cameraToScreen</definition>
+        <argsstring></argsstring>
+        <name>cameraToScreen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/camera.h" line="65" column="13" bodyfile="src/core/camera.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdakku_1_1ProjectiveCamera_1a80eabb36d5c13f9a8a71d05cbf8850c0" prot="protected" static="no" mutable="no">
+        <type><ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref></type>
+        <definition>Transform dakku::ProjectiveCamera::rasterToCamera</definition>
+        <argsstring></argsstring>
+        <name>rasterToCamera</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/camera.h" line="65" column="28" bodyfile="src/core/camera.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdakku_1_1ProjectiveCamera_1ad382d5c8b3a8e800f753e9570b71eb5e" prot="protected" static="no" mutable="no">
+        <type><ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref></type>
+        <definition>Transform dakku::ProjectiveCamera::screenToRaster</definition>
+        <argsstring></argsstring>
+        <name>screenToRaster</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/camera.h" line="66" column="13" bodyfile="src/core/camera.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdakku_1_1ProjectiveCamera_1adc49572681d9d4db67106bec5d223f7e" prot="protected" static="no" mutable="no">
+        <type><ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref></type>
+        <definition>Transform dakku::ProjectiveCamera::rasterToScreen</definition>
+        <argsstring></argsstring>
+        <name>rasterToScreen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/camera.h" line="66" column="28" bodyfile="src/core/camera.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
       <sectiondef kind="public-func">
       <memberdef kind="function" id="classdakku_1_1ProjectiveCamera_1a2ff0d0032ed0f7319f5b0422a1741b4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -22,12 +76,44 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/camera.h" line="49" column="3"/>
+        <location file="src/core/camera.h" line="58" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1ProjectiveCamera_1ae25222d3c2004b039da5d4890315201f" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dakku::ProjectiveCamera::ProjectiveCamera</definition>
+        <argsstring>(const Transform &amp;cameraToWorld, const Transform &amp;cameraToScreen, const Bounds2f &amp;screenWindow, Film *film)</argsstring>
+        <name>ProjectiveCamera</name>
+        <param>
+          <type>const <ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref> &amp;</type>
+          <declname>cameraToWorld</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref> &amp;</type>
+          <declname>cameraToScreen</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacedakku_1abcc743bdeb62068a56f14ac3ef9963b7" kindref="member">Bounds2f</ref> &amp;</type>
+          <declname>screenWindow</declname>
+        </param>
+        <param>
+          <type><ref refid="classdakku_1_1Film" kindref="compound">Film</ref> *</type>
+          <declname>film</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/camera.h" line="60" column="12"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
+<para>projective camera </para>
     </briefdescription>
     <detaileddescription>
+<para>screen space: shorter edge normalize to $1$, the ratio is $r$, $(-1, -r) \sim (1, r)$ or $(-r, -1) \sim (r, 1)$</para>
+<para>raster: (0, 0) left-up corner, resolution: width $\times$ height </para>
     </detaileddescription>
     <inheritancegraph>
       <node id="2">
@@ -48,6 +134,26 @@
       </node>
     </inheritancegraph>
     <collaborationgraph>
+      <node id="9">
+        <label>dakku::Bounds2&lt; int &gt;</label>
+        <link refid="classdakku_1_1Bounds2"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>dakku::BoundsBase&lt; T, 2 &gt;</label>
+        <link refid="classdakku_1_1BoundsBase"/>
+      </node>
+      <node id="7">
+        <label>dakku::Point&lt; int &gt;</label>
+        <link refid="classdakku_1_1Point"/>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>dakku::VectorBase&lt; T, S, Point&lt; T, S &gt; &gt;</label>
+        <link refid="classdakku_1_1VectorBase"/>
+      </node>
       <node id="2">
         <label>dakku::Camera</label>
         <link refid="classdakku_1_1Camera"/>
@@ -65,6 +171,12 @@
         <link refid="classdakku_1_1Film"/>
         <childnode refid="6" relation="public-inheritance">
         </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>fullResolution</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>croppedPixelBounds</edgelabel>
+        </childnode>
       </node>
       <node id="3">
         <label>dakku::Object</label>
@@ -74,6 +186,12 @@
         <label>dakku::ProjectiveCamera</label>
         <link refid="classdakku_1_1ProjectiveCamera"/>
         <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>cameraToScreen</edgelabel>
+          <edgelabel>rasterToCamera</edgelabel>
+          <edgelabel>rasterToScreen</edgelabel>
+          <edgelabel>screenToRaster</edgelabel>
         </childnode>
       </node>
       <node id="6">
@@ -87,9 +205,10 @@
         <link refid="classdakku_1_1Transform"/>
       </node>
     </collaborationgraph>
-    <location file="src/core/camera.h" line="47" column="1" bodyfile="src/core/camera.h" bodystart="47" bodyend="52"/>
+    <location file="src/core/camera.h" line="56" column="1" bodyfile="src/core/camera.h" bodystart="56" bodyend="67"/>
     <listofallmembers>
       <member refid="classdakku_1_1Camera_1a4e13deb3c0f9b88a3f36ba20d5dc99ed" prot="public" virt="non-virtual"><scope>dakku::ProjectiveCamera</scope><name>Camera</name></member>
+      <member refid="classdakku_1_1ProjectiveCamera_1a890b5514e65900976e66b73817ee485d" prot="protected" virt="non-virtual"><scope>dakku::ProjectiveCamera</scope><name>cameraToScreen</name></member>
       <member refid="classdakku_1_1Camera_1a7fc4b592c175e9aed2d06351418a0b0f" prot="public" virt="non-virtual"><scope>dakku::ProjectiveCamera</scope><name>cameraToWorld</name></member>
       <member refid="classdakku_1_1ProjectiveCamera_1a2ff0d0032ed0f7319f5b0422a1741b4d" prot="public" virt="non-virtual"><scope>dakku::ProjectiveCamera</scope><name>DAKKU_DECLARE_OBJECT</name></member>
       <member refid="classdakku_1_1Camera_1a8363a3f645e4c0c7b1573fe6c846b843" prot="public" virt="non-virtual" ambiguityscope="dakku::Camera::"><scope>dakku::ProjectiveCamera</scope><name>DAKKU_DECLARE_OBJECT</name></member>
@@ -103,6 +222,10 @@
       <member refid="classdakku_1_1Object_1a055e32b0624d9a96fc2014fe5d9d0c81" prot="public" virt="non-virtual"><scope>dakku::ProjectiveCamera</scope><name>isBaseOf</name></member>
       <member refid="classdakku_1_1Object_1add47b28fc1878f008bb6664a83faad72" prot="public" virt="non-virtual"><scope>dakku::ProjectiveCamera</scope><name>isDerivedFrom</name></member>
       <member refid="classdakku_1_1Object_1a20e78d46fa11d575d63e048279150eac" prot="public" virt="non-virtual"><scope>dakku::ProjectiveCamera</scope><name>Object</name></member>
+      <member refid="classdakku_1_1ProjectiveCamera_1ae25222d3c2004b039da5d4890315201f" prot="public" virt="non-virtual"><scope>dakku::ProjectiveCamera</scope><name>ProjectiveCamera</name></member>
+      <member refid="classdakku_1_1ProjectiveCamera_1a80eabb36d5c13f9a8a71d05cbf8850c0" prot="protected" virt="non-virtual"><scope>dakku::ProjectiveCamera</scope><name>rasterToCamera</name></member>
+      <member refid="classdakku_1_1ProjectiveCamera_1adc49572681d9d4db67106bec5d223f7e" prot="protected" virt="non-virtual"><scope>dakku::ProjectiveCamera</scope><name>rasterToScreen</name></member>
+      <member refid="classdakku_1_1ProjectiveCamera_1ad382d5c8b3a8e800f753e9570b71eb5e" prot="protected" virt="non-virtual"><scope>dakku::ProjectiveCamera</scope><name>screenToRaster</name></member>
       <member refid="classdakku_1_1Object_1a65d91c04e480b827fa495df96af2826b" prot="public" virt="virtual"><scope>dakku::ProjectiveCamera</scope><name>toString</name></member>
       <member refid="classdakku_1_1Object_1a0c792f089351caf3fa7a704c86ce903d" prot="public" virt="virtual"><scope>dakku::ProjectiveCamera</scope><name>~Object</name></member>
     </listofallmembers>

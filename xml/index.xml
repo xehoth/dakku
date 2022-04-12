@@ -116,11 +116,11 @@
     <member refid="classdakku_1_1FileOutputStream_1a239a3e78d06f170d29b0e0db74e55c8c" kind="function"><name>writeBytes</name></member>
   </compound>
   <compound refid="classdakku_1_1Film" kind="class"><name>dakku::Film</name>
-    <member refid="classdakku_1_1Film_1a428fa06a95483622e24fef64a6d8255a" kind="variable"><name>pixels</name></member>
     <member refid="classdakku_1_1Film_1ad88e45f878fce2f808efa02e0d4d15f1" kind="variable"><name>fullResolution</name></member>
     <member refid="classdakku_1_1Film_1af37a20765786993f8e85f693da1aabae" kind="variable"><name>filter</name></member>
     <member refid="classdakku_1_1Film_1a4e50af430a0965655502f18ebcd3a720" kind="variable"><name>fileName</name></member>
     <member refid="classdakku_1_1Film_1ab903557a26253b8d83313dcc8d082162" kind="variable"><name>croppedPixelBounds</name></member>
+    <member refid="classdakku_1_1Film_1a428fa06a95483622e24fef64a6d8255a" kind="variable"><name>pixels</name></member>
     <member refid="classdakku_1_1Film_1a6fd4d08f6a29e54713a3972cd5a86afa" kind="variable"><name>filterTable</name></member>
     <member refid="classdakku_1_1Film_1a189e65e1fdac41477f8c4fbc953a6c79" kind="variable"><name>mutex</name></member>
     <member refid="classdakku_1_1Film_1a59fba870ff465e7f3611cef64074c3f1" kind="variable"><name>scale</name></member>
@@ -306,7 +306,12 @@
     <member refid="classdakku_1_1Point_1aa42db7f4fcc358dda0322ad91b45b7e7" kind="friend"><name>operator+</name></member>
   </compound>
   <compound refid="classdakku_1_1ProjectiveCamera" kind="class"><name>dakku::ProjectiveCamera</name>
+    <member refid="classdakku_1_1ProjectiveCamera_1a890b5514e65900976e66b73817ee485d" kind="variable"><name>cameraToScreen</name></member>
+    <member refid="classdakku_1_1ProjectiveCamera_1a80eabb36d5c13f9a8a71d05cbf8850c0" kind="variable"><name>rasterToCamera</name></member>
+    <member refid="classdakku_1_1ProjectiveCamera_1ad382d5c8b3a8e800f753e9570b71eb5e" kind="variable"><name>screenToRaster</name></member>
+    <member refid="classdakku_1_1ProjectiveCamera_1adc49572681d9d4db67106bec5d223f7e" kind="variable"><name>rasterToScreen</name></member>
     <member refid="classdakku_1_1ProjectiveCamera_1a2ff0d0032ed0f7319f5b0422a1741b4d" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
+    <member refid="classdakku_1_1ProjectiveCamera_1ae25222d3c2004b039da5d4890315201f" kind="function"><name>ProjectiveCamera</name></member>
   </compound>
   <compound refid="classdakku_1_1Property" kind="class"><name>dakku::Property</name>
     <member refid="classdakku_1_1Property_1a3572cc83d304fa13a828df071bc1530b" kind="typedef"><name>ObjectType</name></member>
