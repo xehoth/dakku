@@ -4,6 +4,7 @@
     <compoundname>filter.h</compoundname>
     <includes refid="object_8h" local="no">core/object.h</includes>
     <includedby refid="core_2api_8h" local="no">src/core/api.h</includedby>
+    <includedby refid="core_2film_8h" local="no">src/core/film.h</includedby>
     <includedby refid="box_8h" local="no">src/filters/box.h</includedby>
     <includedby refid="triangle_8h" local="no">src/filters/triangle.h</includedby>
     <incdepgraph>
@@ -206,6 +207,14 @@
         <label>src/core/api.h</label>
         <link refid="core_2api_8h"/>
       </node>
+      <node id="3">
+        <label>src/core/film.h</label>
+        <link refid="core_2film_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
       <node id="1">
         <label>src/core/filter.h</label>
         <link refid="filter_8h"/>
@@ -215,21 +224,27 @@
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
       </node>
       <node id="4">
+        <label>src/core/state.h</label>
+        <link refid="state_8h"/>
+      </node>
+      <node id="6">
         <label>src/filters/api.h</label>
         <link refid="filters_2api_8h"/>
       </node>
-      <node id="3">
+      <node id="5">
         <label>src/filters/box.h</label>
         <link refid="box_8h"/>
-        <childnode refid="4" relation="include">
+        <childnode refid="6" relation="include">
         </childnode>
       </node>
-      <node id="5">
+      <node id="7">
         <label>src/filters/triangle.h</label>
         <link refid="triangle_8h"/>
-        <childnode refid="4" relation="include">
+        <childnode refid="6" relation="include">
         </childnode>
       </node>
     </invincdepgraph>

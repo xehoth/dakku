@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="classdakku_1_1RenderState" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>dakku::RenderState</compoundname>
+    <basecompoundref refid="classdakku_1_1SerializableObject" prot="public" virt="non-virtual">dakku::SerializableObject</basecompoundref>
+    <includes refid="state_8h" local="no">state.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classdakku_1_1RenderState_1a57162465eb96495a4ea2240bf431d290" prot="public" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="classdakku_1_1Film" kindref="compound">Film</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;Film&gt; dakku::RenderState::film</definition>
+        <argsstring></argsstring>
+        <name>film</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/state.h" line="17" column="19" bodyfile="src/core/state.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdakku_1_1RenderState_1a0260170ded95ed7eff205897080d3731" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dakku::RenderState::DAKKU_DECLARE_OBJECT</definition>
+        <argsstring>(RenderState, SerializableObject)</argsstring>
+        <name>DAKKU_DECLARE_OBJECT</name>
+        <param>
+          <type><ref refid="classdakku_1_1RenderState" kindref="compound">RenderState</ref></type>
+        </param>
+        <param>
+          <type><ref refid="classdakku_1_1SerializableObject" kindref="compound">SerializableObject</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/state.h" line="8" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1RenderState_1a80b0c92cd0b7d9127ee1a65cc6129519" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void dakku::RenderState::serialize</definition>
+        <argsstring>(OutputStream *stream) const override</argsstring>
+        <name>serialize</name>
+        <reimplements refid="classdakku_1_1SerializableObject_1afbd8e48383b89c71132d091c9cd8b023">serialize</reimplements>
+        <param>
+          <type><ref refid="classdakku_1_1OutputStream" kindref="compound">OutputStream</ref> *</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+<para>serialize the object (do not include the property part) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/state.h" line="10" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1RenderState_1a4f75443e255bbfd9152ef9ba1d7485a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void dakku::RenderState::deserialize</definition>
+        <argsstring>(InputStream *stream) override</argsstring>
+        <name>deserialize</name>
+        <reimplements refid="classdakku_1_1SerializableObject_1af130034b07c1f5dc21fd84e0cbefbbb4">deserialize</reimplements>
+        <param>
+          <type><ref refid="classdakku_1_1InputStream" kindref="compound">InputStream</ref> *</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+<para>deserialize the object (do not include the property part) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/state.h" line="11" column="8"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>dakku::Object</label>
+        <link refid="classdakku_1_1Object"/>
+      </node>
+      <node id="1">
+        <label>dakku::RenderState</label>
+        <link refid="classdakku_1_1RenderState"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dakku::SerializableObject</label>
+        <link refid="classdakku_1_1SerializableObject"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>dakku::Object</label>
+        <link refid="classdakku_1_1Object"/>
+      </node>
+      <node id="1">
+        <label>dakku::RenderState</label>
+        <link refid="classdakku_1_1RenderState"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dakku::SerializableObject</label>
+        <link refid="classdakku_1_1SerializableObject"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/core/state.h" line="6" column="1" bodyfile="src/core/state.h" bodystart="6" bodyend="21"/>
+    <listofallmembers>
+      <member refid="classdakku_1_1RenderState_1a0260170ded95ed7eff205897080d3731" prot="public" virt="non-virtual"><scope>dakku::RenderState</scope><name>DAKKU_DECLARE_OBJECT</name></member>
+      <member refid="classdakku_1_1SerializableObject_1a20425307e474662b2825ca6fe0c3e1fc" prot="public" virt="non-virtual" ambiguityscope="dakku::SerializableObject::"><scope>dakku::RenderState</scope><name>DAKKU_DECLARE_OBJECT</name></member>
+      <member refid="classdakku_1_1RenderState_1a4f75443e255bbfd9152ef9ba1d7485a6" prot="public" virt="virtual"><scope>dakku::RenderState</scope><name>deserialize</name></member>
+      <member refid="classdakku_1_1RenderState_1a57162465eb96495a4ea2240bf431d290" prot="public" virt="non-virtual"><scope>dakku::RenderState</scope><name>film</name></member>
+      <member refid="classdakku_1_1Object_1a543f734268f7be81badecee6cf7245cc" prot="public" virt="virtual"><scope>dakku::RenderState</scope><name>getClassName</name></member>
+      <member refid="classdakku_1_1Object_1a247ed68865f464d511b7fdb85467c354" prot="public" virt="non-virtual"><scope>dakku::RenderState</scope><name>getClassNameStatic</name></member>
+      <member refid="classdakku_1_1Object_1accec0632e79097564677055bef4220bd" prot="public" virt="virtual"><scope>dakku::RenderState</scope><name>getParentName</name></member>
+      <member refid="classdakku_1_1Object_1a08ec83c660afb1850455ef30c43fa29c" prot="public" virt="non-virtual"><scope>dakku::RenderState</scope><name>getParentNameStatic</name></member>
+      <member refid="classdakku_1_1Object_1a055e32b0624d9a96fc2014fe5d9d0c81" prot="public" virt="non-virtual"><scope>dakku::RenderState</scope><name>isBaseOf</name></member>
+      <member refid="classdakku_1_1Object_1add47b28fc1878f008bb6664a83faad72" prot="public" virt="non-virtual"><scope>dakku::RenderState</scope><name>isDerivedFrom</name></member>
+      <member refid="classdakku_1_1Object_1a20e78d46fa11d575d63e048279150eac" prot="public" virt="non-virtual"><scope>dakku::RenderState</scope><name>Object</name></member>
+      <member refid="classdakku_1_1RenderState_1a80b0c92cd0b7d9127ee1a65cc6129519" prot="public" virt="virtual"><scope>dakku::RenderState</scope><name>serialize</name></member>
+      <member refid="classdakku_1_1Object_1a65d91c04e480b827fa495df96af2826b" prot="public" virt="virtual"><scope>dakku::RenderState</scope><name>toString</name></member>
+      <member refid="classdakku_1_1Object_1a0c792f089351caf3fa7a704c86ce903d" prot="public" virt="virtual"><scope>dakku::RenderState</scope><name>~Object</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

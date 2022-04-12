@@ -4,6 +4,7 @@
     <compoundname>object.h</compoundname>
     <includes refid="class_8h" local="no">core/class.h</includes>
     <includedby refid="core_2api_8h" local="no">src/core/api.h</includedby>
+    <includedby refid="camera_8h" local="no">src/core/camera.h</includedby>
     <includedby refid="filter_8h" local="no">src/core/filter.h</includedby>
     <includedby refid="serialization_8h" local="no">src/core/serialization.h</includedby>
     <includedby refid="shape_8h" local="no">src/core/shape.h</includedby>
@@ -202,20 +203,30 @@
         <label>src/core/api.h</label>
         <link refid="core_2api_8h"/>
       </node>
-      <node id="8">
+      <node id="3">
+        <label>src/core/camera.h</label>
+        <link refid="camera_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
         <label>src/core/film.h</label>
         <link refid="core_2film_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
       </node>
-      <node id="3">
+      <node id="4">
         <label>src/core/filter.h</label>
         <link refid="filter_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="4" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -225,101 +236,109 @@
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="13" relation="include">
+        <childnode refid="10" relation="include">
         </childnode>
-        <childnode refid="14" relation="include">
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
         </childnode>
       </node>
-      <node id="7">
+      <node id="10">
         <label>src/core/serialization.h</label>
         <link refid="serialization_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
+        <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="10" relation="include">
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
         </childnode>
       </node>
-      <node id="13">
+      <node id="15">
         <label>src/core/shape.h</label>
         <link refid="shape_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="14">
+      <node id="6">
+        <label>src/core/state.h</label>
+        <link refid="state_8h"/>
+      </node>
+      <node id="16">
         <label>src/core/texture.h</label>
         <link refid="texture_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="15" relation="include">
+        <childnode refid="17" relation="include">
         </childnode>
       </node>
-      <node id="5">
+      <node id="8">
         <label>src/filters/api.h</label>
         <link refid="filters_2api_8h"/>
       </node>
-      <node id="4">
+      <node id="7">
         <label>src/filters/box.h</label>
         <link refid="box_8h"/>
-        <childnode refid="5" relation="include">
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>src/filters/fwd.h</label>
+        <link refid="filters_2fwd_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
         </childnode>
       </node>
       <node id="9">
-        <label>src/filters/fwd.h</label>
-        <link refid="filters_2fwd_8h"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-      </node>
-      <node id="6">
         <label>src/filters/triangle.h</label>
         <link refid="triangle_8h"/>
-        <childnode refid="5" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
-      <node id="12">
+      <node id="14">
         <label>src/stream/api.h</label>
         <link refid="stream_2api_8h"/>
       </node>
-      <node id="11">
+      <node id="13">
         <label>src/stream/fstream.h</label>
         <link refid="fstream_8h"/>
-        <childnode refid="12" relation="include">
+        <childnode refid="14" relation="include">
         </childnode>
       </node>
-      <node id="10">
+      <node id="12">
         <label>src/stream/fwd.h</label>
         <link refid="stream_2fwd_8h"/>
-        <childnode refid="11" relation="include">
+        <childnode refid="13" relation="include">
         </childnode>
       </node>
-      <node id="17">
+      <node id="19">
         <label>src/textures/api.h</label>
         <link refid="textures_2api_8h"/>
       </node>
-      <node id="16">
+      <node id="18">
         <label>src/textures/constant.h</label>
         <link refid="constant_8h"/>
-        <childnode refid="17" relation="include">
+        <childnode refid="19" relation="include">
         </childnode>
       </node>
-      <node id="15">
+      <node id="17">
         <label>src/textures/fwd.h</label>
         <link refid="textures_2fwd_8h"/>
-        <childnode refid="16" relation="include">
-        </childnode>
         <childnode refid="18" relation="include">
         </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
       </node>
-      <node id="18">
+      <node id="20">
         <label>src/textures/image.h</label>
         <link refid="image_8h"/>
-        <childnode refid="17" relation="include">
+        <childnode refid="19" relation="include">
         </childnode>
       </node>
     </invincdepgraph>

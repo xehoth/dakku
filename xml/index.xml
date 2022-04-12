@@ -65,6 +65,12 @@
     <member refid="classdakku_1_1BoxFilter_1a062696aca56d7f4f1ed238f1df17f95f" kind="function"><name>evaluate</name></member>
     <member refid="classdakku_1_1BoxFilter_1a41c4e564d4f720c22852f36412836574" kind="function"><name>Filter</name></member>
   </compound>
+  <compound refid="classdakku_1_1Camera" kind="class"><name>dakku::Camera</name>
+    <member refid="classdakku_1_1Camera_1a7fc4b592c175e9aed2d06351418a0b0f" kind="variable"><name>cameraToWorld</name></member>
+    <member refid="classdakku_1_1Camera_1a028dfc24965474cb15a35a20228e0a6d" kind="variable"><name>film</name></member>
+    <member refid="classdakku_1_1Camera_1a8363a3f645e4c0c7b1573fe6c846b843" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
+    <member refid="classdakku_1_1Camera_1a4e13deb3c0f9b88a3f36ba20d5dc99ed" kind="function"><name>Camera</name></member>
+  </compound>
   <compound refid="classdakku_1_1Class" kind="class"><name>dakku::Class</name>
     <member refid="classdakku_1_1Class_1a5ca387aebcee4d1363ac17e25749098a" kind="variable"><name>_classMap</name></member>
     <member refid="classdakku_1_1Class_1a38f609682794eb8644448c458c9679cb" kind="function"><name>instance</name></member>
@@ -367,6 +373,12 @@
     <member refid="classdakku_1_1RelativeRoot_1a808e9343f1b0aaec20fbf0b41d1738d6" kind="function"><name>set</name></member>
     <member refid="classdakku_1_1RelativeRoot_1a6dec67b72433b4d4a169fd0006792c61" kind="function"><name>RelativeRoot</name></member>
   </compound>
+  <compound refid="classdakku_1_1RenderState" kind="class"><name>dakku::RenderState</name>
+    <member refid="classdakku_1_1RenderState_1a57162465eb96495a4ea2240bf431d290" kind="variable"><name>film</name></member>
+    <member refid="classdakku_1_1RenderState_1a0260170ded95ed7eff205897080d3731" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
+    <member refid="classdakku_1_1RenderState_1a80b0c92cd0b7d9127ee1a65cc6129519" kind="function"><name>serialize</name></member>
+    <member refid="classdakku_1_1RenderState_1a4f75443e255bbfd9152ef9ba1d7485a6" kind="function"><name>deserialize</name></member>
+  </compound>
   <compound refid="structdakku_1_1ResampleWeight" kind="struct"><name>dakku::ResampleWeight</name>
     <member refid="structdakku_1_1ResampleWeight_1abc89fe6d4568cfb82e062d82898fca6f" kind="variable"><name>firstTexel</name></member>
     <member refid="structdakku_1_1ResampleWeight_1abe9d0c7de12b36bd2f0ac68e490cd6aa" kind="variable"><name>weight</name></member>
@@ -376,6 +388,16 @@
     <member refid="classdakku_1_1RgbSpectrum_1a840645ae729c87f3d95ec559dce855db" kind="function"><name>fromXyz</name></member>
     <member refid="classdakku_1_1RgbSpectrum_1acad4b7dbdb3732a8e88029254ecdbca6" kind="function"><name>toRgb</name></member>
     <member refid="classdakku_1_1RgbSpectrum_1a0b49739ae4a25e2954b07ba8b531d991" kind="function"><name>toXyz</name></member>
+  </compound>
+  <compound refid="classdakku_1_1RNG" kind="class"><name>dakku::RNG</name>
+    <member refid="classdakku_1_1RNG_1a2c43d5cb68d2d8d916975273f2a96c69" kind="variable"><name>state</name></member>
+    <member refid="classdakku_1_1RNG_1aae4ff6ee4409cb3a73fe9f6311c270c1" kind="variable"><name>inc</name></member>
+    <member refid="classdakku_1_1RNG_1a60a4df7bce09a12570d945cc5671ef12" kind="function"><name>RNG</name></member>
+    <member refid="classdakku_1_1RNG_1a91e29e4de22f6c2b40b3815828b895ef" kind="function"><name>RNG</name></member>
+    <member refid="classdakku_1_1RNG_1a9882a1720e68db403e2c592954d072bf" kind="function"><name>setSequence</name></member>
+    <member refid="classdakku_1_1RNG_1a6aee8cf23d2433e6886b5a49956969fa" kind="function"><name>uniformUInt32</name></member>
+    <member refid="classdakku_1_1RNG_1affe6ab66ec7f8bde975e14370fbf9a8f" kind="function"><name>uniformUInt32</name></member>
+    <member refid="classdakku_1_1RNG_1abaa85824d4779a1793a6f2d895e79549" kind="function"><name>uniformFloat</name></member>
   </compound>
   <compound refid="classdakku_1_1SerializableObject" kind="class"><name>dakku::SerializableObject</name>
     <member refid="classdakku_1_1SerializableObject_1a20425307e474662b2825ca6fe0c3e1fc" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
@@ -590,6 +612,7 @@
     <member refid="namespacedakku_1af7aa9dc8532b3506d50b84f932560eb0" kind="variable"><name>PI</name></member>
     <member refid="namespacedakku_1a09eee35861f6da88754b5645e5703ec4" kind="variable"><name>L1_CACHE_LINE_SIZE</name></member>
     <member refid="namespacedakku_1a8ecbddd8386198d0dd187cd20b53e42d" kind="variable"><name>SHADOW_EPS</name></member>
+    <member refid="namespacedakku_1a204f33930db458865d7f796fd768055d" kind="variable"><name>ONE_MINUS_EPSILON</name></member>
     <member refid="namespacedakku_1ab81d04f25c58c43667816d47b70f4734" kind="variable"><name>RelativeRoot</name></member>
     <member refid="namespacedakku_1a60d80eeb1de44e0299e91a45d8f94446" kind="variable"><name>InputStream</name></member>
     <member refid="namespacedakku_1a04dac11edaf26a2e58c8d00f31e6fa29" kind="variable"><name>OutputStream</name></member>
@@ -602,7 +625,11 @@
     <member refid="namespacedakku_1ad4c70953467b9d3d22eac250d8655aff" kind="variable"><name>Shape</name></member>
     <member refid="namespacedakku_1a24e2c761467417bba0b7b17b7c0e9f79" kind="variable"><name>Texture</name></member>
     <member refid="namespacedakku_1ad67fc67650e8ff59c3b25b9e9d462ee4" kind="variable"><name>__pad0__</name></member>
-    <member refid="namespacedakku_1aad4974366612a68984e0def8555c26e4" kind="function"><name>DAKKU_EXPORT_OBJECTS</name></member>
+    <member refid="namespacedakku_1a041d325d33710e961b70ab2cf4dbfa11" kind="variable"><name>PCG32_DEFAULT_STATE</name></member>
+    <member refid="namespacedakku_1a86dfefa53a11b2cf2d06aaa75171fe3a" kind="variable"><name>PCG32_DEFAULT_STREAM</name></member>
+    <member refid="namespacedakku_1ac3bbfb2d54532e5e73bf8206d1323600" kind="variable"><name>PCG32_MULT</name></member>
+    <member refid="namespacedakku_1af9f5f7a876a1c02de56e9fa106171eda" kind="variable"><name>renderState</name></member>
+    <member refid="namespacedakku_1afb8b3ba43715313b21b2a234c2c2436d" kind="function"><name>DAKKU_EXPORT_OBJECTS</name></member>
     <member refid="namespacedakku_1af0a2453f8db3eb948901c7a0aed18434" kind="function"><name>begin</name></member>
     <member refid="namespacedakku_1a41ae9fcb2290e6ea6f7d4b0fbca86d17" kind="function"><name>end</name></member>
     <member refid="namespacedakku_1af754e4967f947036a0c31c0dbb4bf6e1" kind="function"><name>isNaN</name></member>
@@ -648,6 +675,8 @@
   </compound>
   <compound refid="bounds_8h" kind="file"><name>bounds.h</name>
   </compound>
+  <compound refid="camera_8h" kind="file"><name>camera.h</name>
+  </compound>
   <compound refid="class_8h" kind="file"><name>class.h</name>
   </compound>
   <compound refid="filter_8h" kind="file"><name>filter.h</name>
@@ -660,6 +689,8 @@
     <member refid="logger_8h_1a614d277e34773e7302c6a2cda6909867" kind="define"><name>DAKKU_WARN</name></member>
     <member refid="logger_8h_1a9c5edb9052d4e1a515276aef0afef3e3" kind="define"><name>DAKKU_DEBUG</name></member>
     <member refid="logger_8h_1ad7e55cac030fb7ab38ebcfce264c1b3e" kind="define"><name>DAKKU_CHECK</name></member>
+  </compound>
+  <compound refid="math_8h" kind="file"><name>math.h</name>
   </compound>
   <compound refid="memory_8h" kind="file"><name>memory.h</name>
     <member refid="memory_8h_1a75ff6894fe90bba774fb4636c96c0031" kind="define"><name>DAKKU_ALLOCA</name></member>
@@ -676,11 +707,15 @@
   </compound>
   <compound refid="relative_8h" kind="file"><name>relative.h</name>
   </compound>
+  <compound refid="rng_8h" kind="file"><name>rng.h</name>
+  </compound>
   <compound refid="serialization_8h" kind="file"><name>serialization.h</name>
   </compound>
   <compound refid="shape_8h" kind="file"><name>shape.h</name>
   </compound>
   <compound refid="spectrum_8h" kind="file"><name>spectrum.h</name>
+  </compound>
+  <compound refid="state_8h" kind="file"><name>state.h</name>
   </compound>
   <compound refid="stream_8h" kind="file"><name>stream.h</name>
   </compound>

@@ -121,11 +121,13 @@
         <link refid="core_2film_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
       </node>
-      <node id="4">
+      <node id="5">
         <label>src/core/mipmap.h</label>
         <link refid="mipmap_8h"/>
-        <childnode refid="5" relation="include">
+        <childnode refid="6" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -133,25 +135,29 @@
         <link refid="spectrum_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="4" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>src/core/state.h</label>
+        <link refid="state_8h"/>
+      </node>
+      <node id="7">
+        <label>src/textures/api.h</label>
+        <link refid="textures_2api_8h"/>
+      </node>
+      <node id="8">
+        <label>src/textures/constant.h</label>
+        <link refid="constant_8h"/>
         <childnode refid="7" relation="include">
         </childnode>
       </node>
       <node id="6">
-        <label>src/textures/api.h</label>
-        <link refid="textures_2api_8h"/>
-      </node>
-      <node id="7">
-        <label>src/textures/constant.h</label>
-        <link refid="constant_8h"/>
-        <childnode refid="6" relation="include">
-        </childnode>
-      </node>
-      <node id="5">
         <label>src/textures/image.h</label>
         <link refid="image_8h"/>
-        <childnode refid="6" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
     </invincdepgraph>

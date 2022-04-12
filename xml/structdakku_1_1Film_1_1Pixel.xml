@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/film.h" line="106" column="11" bodyfile="src/core/film.h" bodystart="106" bodyend="-1"/>
+        <location file="src/core/film.h" line="107" column="11" bodyfile="src/core/film.h" bodystart="107" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structdakku_1_1Film_1_1Pixel_1accd87822d3b67fbf4a0014915acc6cf2" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/film.h" line="108" column="11" bodyfile="src/core/film.h" bodystart="108" bodyend="-1"/>
+        <location file="src/core/film.h" line="109" column="11" bodyfile="src/core/film.h" bodystart="109" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structdakku_1_1Film_1_1Pixel_1acfbbbf1e8a707f1c10b73ba2d9215473" prot="public" static="no" mutable="no">
         <type>std::atomic&lt; float &gt;</type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/film.h" line="110" column="17" bodyfile="src/core/film.h" bodystart="110" bodyend="-1"/>
+        <location file="src/core/film.h" line="111" column="17" bodyfile="src/core/film.h" bodystart="111" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structdakku_1_1Film_1_1Pixel_1a4261a021d7b18f7c621e5344ab164b19" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -56,7 +56,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/film.h" line="111" column="11" bodyfile="src/core/film.h" bodystart="111" bodyend="-1"/>
+        <location file="src/core/film.h" line="112" column="11" bodyfile="src/core/film.h" bodystart="112" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -64,7 +64,7 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/core/film.h" line="104" column="3" bodyfile="src/core/film.h" bodystart="104" bodyend="112"/>
+    <location file="src/core/film.h" line="105" column="3" bodyfile="src/core/film.h" bodystart="105" bodyend="113"/>
     <listofallmembers>
       <member refid="structdakku_1_1Film_1_1Pixel_1a4261a021d7b18f7c621e5344ab164b19" prot="public" virt="non-virtual"><scope>dakku::Film::Pixel</scope><name>_padding</name></member>
       <member refid="structdakku_1_1Film_1_1Pixel_1accd87822d3b67fbf4a0014915acc6cf2" prot="public" virt="non-virtual"><scope>dakku::Film::Pixel</scope><name>filterWeightSum</name></member>

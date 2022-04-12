@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/shape.h" line="106" column="19" bodyfile="src/core/shape.h" bodystart="106" bodyend="-1"/>
+        <location file="src/core/shape.h" line="110" column="19" bodyfile="src/core/shape.h" bodystart="110" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classdakku_1_1Shape_1ac1c407215b941bade1fb229e74c58d2f" prot="public" static="no" mutable="no">
         <type>const <ref refid="classdakku_1_1Transform" kindref="compound">Transform</ref> *</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/shape.h" line="106" column="33" bodyfile="src/core/shape.h" bodystart="106" bodyend="-1"/>
+        <location file="src/core/shape.h" line="110" column="33" bodyfile="src/core/shape.h" bodystart="110" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classdakku_1_1Shape_1aad943a4507cb9b01f0103981c847e19b" prot="public" static="no" mutable="no">
         <type>const bool</type>
@@ -42,7 +42,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/shape.h" line="107" column="14" bodyfile="src/core/shape.h" bodystart="107" bodyend="-1"/>
+        <location file="src/core/shape.h" line="111" column="14" bodyfile="src/core/shape.h" bodystart="111" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -63,7 +63,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/shape.h" line="11" column="3"/>
+        <location file="src/core/shape.h" line="15" column="3"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Shape_1acb5e66e646d6fd0709ef4b8d6179142f" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
         <type></type>
@@ -85,7 +85,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/shape.h" line="17" column="12"/>
+        <location file="src/core/shape.h" line="21" column="12"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Shape_1aa36bbef60c9caa01503d5fd50f47388a" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
         <type></type>
@@ -103,7 +103,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/shape.h" line="24" column="12"/>
+        <location file="src/core/shape.h" line="28" column="12"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Shape_1a5a9fd700c1e56cf18784384ba0eeb5e0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="namespacedakku_1a19129587abbff965c2c15bab5723e208" kindref="member">Bounds3f</ref></type>
@@ -117,7 +117,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/shape.h" line="30" column="21"/>
+        <location file="src/core/shape.h" line="34" column="21"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Shape_1ad7d19f6b59f7cb7e333a43d3f0eaacf8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="namespacedakku_1a19129587abbff965c2c15bab5723e208" kindref="member">Bounds3f</ref></type>
@@ -131,7 +131,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/shape.h" line="36" column="21"/>
+        <location file="src/core/shape.h" line="40" column="21"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Shape_1a8994ddc5864708868642720c2561a179" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
@@ -188,7 +188,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/shape.h" line="45" column="16"/>
+        <location file="src/core/shape.h" line="49" column="16"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Shape_1aabda589a8380ec7b9f48c03693de58df" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -211,7 +211,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/shape.h" line="52" column="17"/>
+        <location file="src/core/shape.h" line="56" column="17"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Shape_1adfc5caa3d24760f7f76db43b343be1d3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>float</type>
@@ -225,7 +225,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/shape.h" line="59" column="18"/>
+        <location file="src/core/shape.h" line="63" column="18"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Shape_1a2ab207143d959280b029b464d7ba18e7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="structdakku_1_1Interaction" kindref="compound">Interaction</ref></type>
@@ -267,7 +267,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/shape.h" line="69" column="23"/>
+        <location file="src/core/shape.h" line="73" column="23"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Shape_1a350c4ead757cc7b6caefc91829ed0eff" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>float</type>
@@ -284,7 +284,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/shape.h" line="76" column="18"/>
+        <location file="src/core/shape.h" line="80" column="18"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Shape_1a78022e0a960761b2ef450dc049cd9dc5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="structdakku_1_1Interaction" kindref="compound">Interaction</ref></type>
@@ -339,7 +339,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/shape.h" line="93" column="23"/>
+        <location file="src/core/shape.h" line="97" column="23"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Shape_1ae1c6ed9269dc96d83b38a0f9a2cb4aa2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>float</type>
@@ -379,10 +379,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/shape.h" line="103" column="18"/>
+        <location file="src/core/shape.h" line="107" column="18"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
+<para>shape </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
@@ -418,7 +419,7 @@
         <link refid="classdakku_1_1Transform"/>
       </node>
     </collaborationgraph>
-    <location file="src/core/shape.h" line="9" column="1" bodyfile="src/core/shape.h" bodystart="9" bodyend="108"/>
+    <location file="src/core/shape.h" line="13" column="1" bodyfile="src/core/shape.h" bodystart="13" bodyend="112"/>
     <listofallmembers>
       <member refid="classdakku_1_1Shape_1adfc5caa3d24760f7f76db43b343be1d3" prot="public" virt="pure-virtual"><scope>dakku::Shape</scope><name>area</name></member>
       <member refid="classdakku_1_1Shape_1aac110048040df95b607cc505ad2eb218" prot="public" virt="non-virtual"><scope>dakku::Shape</scope><name>DAKKU_DECLARE_OBJECT</name></member>

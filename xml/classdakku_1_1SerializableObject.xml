@@ -4,6 +4,7 @@
     <compoundname>dakku::SerializableObject</compoundname>
     <basecompoundref refid="classdakku_1_1Object" prot="public" virt="non-virtual">dakku::Object</basecompoundref>
     <derivedcompoundref refid="classdakku_1_1Film" prot="public" virt="non-virtual">dakku::Film</derivedcompoundref>
+    <derivedcompoundref refid="classdakku_1_1RenderState" prot="public" virt="non-virtual">dakku::RenderState</derivedcompoundref>
     <includes refid="serialization_8h" local="no">serialization.h</includes>
       <sectiondef kind="public-func">
       <memberdef kind="function" id="classdakku_1_1SerializableObject_1a20425307e474662b2825ca6fe0c3e1fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -31,6 +32,7 @@
         <argsstring>(OutputStream *stream) const =0</argsstring>
         <name>serialize</name>
         <reimplementedby refid="classdakku_1_1Film_1abd5500d780cda9eb7b512dc7ac1740d5">serialize</reimplementedby>
+        <reimplementedby refid="classdakku_1_1RenderState_1a80b0c92cd0b7d9127ee1a65cc6129519">serialize</reimplementedby>
         <param>
           <type><ref refid="classdakku_1_1OutputStream" kindref="compound">OutputStream</ref> *</type>
           <declname>stream</declname>
@@ -60,6 +62,7 @@
         <argsstring>(InputStream *stream)=0</argsstring>
         <name>deserialize</name>
         <reimplementedby refid="classdakku_1_1Film_1a5c376ccf9abcdb293db2e9b9935b785c">deserialize</reimplementedby>
+        <reimplementedby refid="classdakku_1_1RenderState_1a4f75443e255bbfd9152ef9ba1d7485a6">deserialize</reimplementedby>
         <param>
           <type><ref refid="classdakku_1_1InputStream" kindref="compound">InputStream</ref> *</type>
           <declname>stream</declname>
@@ -99,6 +102,12 @@
       <node id="2">
         <label>dakku::Object</label>
         <link refid="classdakku_1_1Object"/>
+      </node>
+      <node id="4">
+        <label>dakku::RenderState</label>
+        <link refid="classdakku_1_1RenderState"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
       </node>
       <node id="1">
         <label>dakku::SerializableObject</label>

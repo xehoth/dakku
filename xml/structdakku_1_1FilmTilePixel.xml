@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/film.h" line="17" column="12" bodyfile="src/core/film.h" bodystart="17" bodyend="-1"/>
+        <location file="src/core/film.h" line="18" column="12" bodyfile="src/core/film.h" bodystart="18" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structdakku_1_1FilmTilePixel_1a4df7e5e93e3e44818913bb0e0fe3a97d" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/film.h" line="19" column="9" bodyfile="src/core/film.h" bodystart="19" bodyend="-1"/>
+        <location file="src/core/film.h" line="20" column="9" bodyfile="src/core/film.h" bodystart="20" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -63,7 +63,7 @@
         <link refid="classdakku_1_1VectorBase"/>
       </node>
     </collaborationgraph>
-    <location file="src/core/film.h" line="15" column="1" bodyfile="src/core/film.h" bodystart="15" bodyend="20"/>
+    <location file="src/core/film.h" line="16" column="1" bodyfile="src/core/film.h" bodystart="16" bodyend="21"/>
     <listofallmembers>
       <member refid="structdakku_1_1FilmTilePixel_1af4beb8c6536598bd0233bcfa7b836f03" prot="public" virt="non-virtual"><scope>dakku::FilmTilePixel</scope><name>contribSum</name></member>
       <member refid="structdakku_1_1FilmTilePixel_1a4df7e5e93e3e44818913bb0e0fe3a97d" prot="public" virt="non-virtual"><scope>dakku::FilmTilePixel</scope><name>filterWeightSum</name></member>
