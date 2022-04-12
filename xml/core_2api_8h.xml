@@ -7,27 +7,30 @@
     <includes refid="filter_8h" local="no">core/filter.h</includes>
     <includes refid="core_2film_8h" local="no">core/film.h</includes>
     <includes refid="texture_8h" local="no">core/texture.h</includes>
+    <includes refid="shape_8h" local="no">core/shape.h</includes>
     <incdepgraph>
       <node id="1">
         <label>src/core/api.h</label>
         <link refid="core_2api_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="32" relation="include">
-        </childnode>
-        <childnode refid="33" relation="include">
-        </childnode>
         <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
         </childnode>
         <childnode refid="43" relation="include">
         </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
       </node>
-      <node id="35">
+      <node id="28">
         <label>core/bounds.h</label>
         <link refid="bounds_8h"/>
         <childnode refid="17" relation="include">
         </childnode>
-        <childnode refid="36" relation="include">
+        <childnode refid="29" relation="include">
         </childnode>
         <childnode refid="27" relation="include">
         </childnode>
@@ -43,17 +46,17 @@
         </childnode>
         <childnode refid="21" relation="include">
         </childnode>
-        <childnode refid="29" relation="include">
-        </childnode>
         <childnode refid="31" relation="include">
         </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
       </node>
-      <node id="34">
+      <node id="36">
         <label>core/film.h</label>
         <link refid="core_2film_8h"/>
-        <childnode refid="32" relation="include">
+        <childnode refid="34" relation="include">
         </childnode>
-        <childnode refid="35" relation="include">
+        <childnode refid="28" relation="include">
         </childnode>
         <childnode refid="37" relation="include">
         </childnode>
@@ -62,7 +65,7 @@
         <childnode refid="42" relation="include">
         </childnode>
       </node>
-      <node id="33">
+      <node id="35">
         <label>core/filter.h</label>
         <link refid="filter_8h"/>
         <childnode refid="2" relation="include">
@@ -123,13 +126,13 @@
         </childnode>
         <childnode refid="25" relation="include">
         </childnode>
-        <childnode refid="28" relation="include">
+        <childnode refid="30" relation="include">
         </childnode>
-        <childnode refid="29" relation="include">
+        <childnode refid="31" relation="include">
         </childnode>
         <childnode refid="21" relation="include">
         </childnode>
-        <childnode refid="30" relation="include">
+        <childnode refid="32" relation="include">
         </childnode>
       </node>
       <node id="26">
@@ -140,10 +143,20 @@
         <childnode refid="27" relation="include">
         </childnode>
       </node>
-      <node id="32">
+      <node id="34">
         <label>core/serialization.h</label>
         <link refid="serialization_8h"/>
         <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>core/shape.h</label>
+        <link refid="shape_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
         </childnode>
       </node>
       <node id="37">
@@ -164,6 +177,8 @@
         <childnode refid="17" relation="include">
         </childnode>
         <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
         </childnode>
       </node>
       <node id="17">
@@ -212,13 +227,13 @@
       <node id="15">
         <label>cstdlib</label>
       </node>
-      <node id="36">
+      <node id="29">
         <label>iterator</label>
       </node>
       <node id="7">
         <label>limits</label>
       </node>
-      <node id="29">
+      <node id="31">
         <label>map</label>
       </node>
       <node id="39">
@@ -227,7 +242,7 @@
       <node id="42">
         <label>mutex</label>
       </node>
-      <node id="28">
+      <node id="30">
         <label>nlohmann/json.hpp</label>
       </node>
       <node id="8">
@@ -257,7 +272,7 @@
       <node id="21">
         <label>string</label>
       </node>
-      <node id="31">
+      <node id="33">
         <label>string_view</label>
       </node>
       <node id="6">
@@ -266,7 +281,7 @@
       <node id="27">
         <label>utility</label>
       </node>
-      <node id="30">
+      <node id="32">
         <label>variant</label>
       </node>
     </incdepgraph>
@@ -285,13 +300,15 @@
 <codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="filter_8h" kindref="compound">core/filter.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="core_2film_8h" kindref="compound">core/film.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="texture_8h" kindref="compound">core/texture.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="13" refid="namespacedakku" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacedakku" kindref="compound">dakku</ref><sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="shape_8h" kindref="compound">core/shape.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="14"><highlight class="normal"></highlight></codeline>
-<codeline lineno="15" refid="namespacedakku_1ab50c0250dddfef69fbc2e63059ef3bf3" refkind="member"><highlight class="normal"><ref refid="namespacedakku_1ab50c0250dddfef69fbc2e63059ef3bf3" kindref="member">DAKKU_EXPORT_OBJECTS</ref>(Core,<sp/><ref refid="classdakku_1_1Object" kindref="compound">Object</ref>,<sp/><ref refid="classdakku_1_1InputStream" kindref="compound">InputStream</ref>,<sp/><ref refid="classdakku_1_1OutputStream" kindref="compound">OutputStream</ref>,</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdakku_1_1SerializableObject" kindref="compound">SerializableObject</ref>,<sp/><ref refid="classdakku_1_1Filter" kindref="compound">Filter</ref>,<sp/><ref refid="classdakku_1_1Film" kindref="compound">Film</ref>,<sp/><ref refid="classdakku_1_1Texture" kindref="compound">Texture</ref>,</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdakku_1_1TextureMapping2D" kindref="compound">TextureMapping2D</ref>,<sp/><ref refid="classdakku_1_1UvMapping2D" kindref="compound">UvMapping2D</ref>);</highlight></codeline>
-<codeline lineno="18"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dakku</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="15" refid="namespacedakku" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacedakku" kindref="compound">dakku</ref><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="namespacedakku_1aad4974366612a68984e0def8555c26e4" refkind="member"><highlight class="normal"><ref refid="namespacedakku_1aad4974366612a68984e0def8555c26e4" kindref="member">DAKKU_EXPORT_OBJECTS</ref>(Core,<sp/><ref refid="classdakku_1_1Object" kindref="compound">Object</ref>,<sp/><ref refid="classdakku_1_1InputStream" kindref="compound">InputStream</ref>,<sp/><ref refid="classdakku_1_1OutputStream" kindref="compound">OutputStream</ref>,</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdakku_1_1SerializableObject" kindref="compound">SerializableObject</ref>,<sp/><ref refid="classdakku_1_1Filter" kindref="compound">Filter</ref>,<sp/><ref refid="classdakku_1_1Film" kindref="compound">Film</ref>,<sp/><ref refid="classdakku_1_1Texture" kindref="compound">Texture</ref>,</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdakku_1_1TextureMapping2D" kindref="compound">TextureMapping2D</ref>,<sp/><ref refid="classdakku_1_1UvMapping2D" kindref="compound">UvMapping2D</ref>,<sp/><ref refid="classdakku_1_1Shape" kindref="compound">Shape</ref>);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dakku</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="src/core/api.h"/>
   </compounddef>

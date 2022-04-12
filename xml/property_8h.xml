@@ -10,6 +10,16 @@
     <includes local="no">variant</includes>
     <includedby refid="class_8h" local="no">src/core/class.h</includedby>
     <incdepgraph>
+      <node id="25">
+        <label>core/bounds.h</label>
+        <link refid="bounds_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
       <node id="5">
         <label>core/fwd.h</label>
         <link refid="core_2fwd_8h"/>
@@ -47,13 +57,13 @@
         </childnode>
         <childnode refid="22" relation="include">
         </childnode>
-        <childnode refid="25" relation="include">
+        <childnode refid="27" relation="include">
         </childnode>
-        <childnode refid="26" relation="include">
+        <childnode refid="28" relation="include">
         </childnode>
         <childnode refid="18" relation="include">
         </childnode>
-        <childnode refid="27" relation="include">
+        <childnode refid="29" relation="include">
         </childnode>
       </node>
       <node id="23">
@@ -70,6 +80,8 @@
         <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
         </childnode>
       </node>
       <node id="2">
@@ -118,13 +130,16 @@
       <node id="15">
         <label>cstdlib</label>
       </node>
+      <node id="26">
+        <label>iterator</label>
+      </node>
       <node id="8">
         <label>limits</label>
       </node>
-      <node id="26">
+      <node id="28">
         <label>map</label>
       </node>
-      <node id="25">
+      <node id="27">
         <label>nlohmann/json.hpp</label>
       </node>
       <node id="9">
@@ -154,7 +169,7 @@
       <node id="24">
         <label>utility</label>
       </node>
-      <node id="27">
+      <node id="29">
         <label>variant</label>
       </node>
     </incdepgraph>
@@ -220,6 +235,8 @@
       <node id="15">
         <label>src/core/shape.h</label>
         <link refid="shape_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
       </node>
       <node id="16">
         <label>src/core/texture.h</label>

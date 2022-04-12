@@ -449,6 +449,13 @@
         
           <li class="md-nav__item">
   <a href="#function-operator_8" class="md-nav__link">
+    function operator()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-operator_9" class="md-nav__link">
     function operator*
   </a>
   
@@ -579,6 +586,10 @@
 <td><strong><a href="/dakku/Classes/classdakku_1_1Transform/#function-operator()">operator()</a></strong>(const <a href="/dakku/Classes/classdakku_1_1RayDifferential/">RayDifferential</a> &amp; r) const<br>transform a ray differential</td>
 </tr>
 <tr>
+<td>template &lt;ArithmeticType T> <br><a href="/dakku/Classes/classdakku_1_1Bounds3/">Bounds3</a>&lt; T &gt;</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Transform/#function-operator()">operator()</a></strong>(const <a href="/dakku/Classes/classdakku_1_1Bounds3/">Bounds3</a>&lt; T &gt; &amp; b) const<br>transform a bounds</td>
+</tr>
+<tr>
 <td><a href="/dakku/Classes/classdakku_1_1Transform/">Transform</a></td>
 <td><strong><a href="/dakku/Classes/classdakku_1_1Transform/#function-operator*">operator*</a></strong>(const <a href="/dakku/Classes/classdakku_1_1Transform/">Transform</a> &amp; rhs) const</td>
 </tr>
@@ -599,11 +610,11 @@
 <tbody>
 <tr>
 <td><a href="/dakku/Classes/classdakku_1_1Transform/">Transform</a></td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1Transform/#friend-inverse">inverse</a></strong>(<a href="/dakku/Classes/classdakku_1_1Transform/">Transform</a> &amp; t) <br>transform inverse</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Transform/#friend-inverse">inverse</a></strong>(const <a href="/dakku/Classes/classdakku_1_1Transform/">Transform</a> &amp; t) <br>transform inverse</td>
 </tr>
 <tr>
 <td><a href="/dakku/Classes/classdakku_1_1Transform/">Transform</a></td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1Transform/#friend-transpose">transpose</a></strong>(<a href="/dakku/Classes/classdakku_1_1Transform/">Transform</a> &amp; t)</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Transform/#friend-transpose">transpose</a></strong>(const <a href="/dakku/Classes/classdakku_1_1Transform/">Transform</a> &amp; t)</td>
 </tr>
 </tbody>
 </table>
@@ -682,29 +693,36 @@
 <a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
 </code></pre></div>
 <p>transform a ray differential </p>
-<h3 id="function-operator_8">function operator*</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kr">inline</span><span class="w"> </span><span class="n">Transform</span><span class="w"> </span><span class="k">operator</span><span class="o">*</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Transform</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">rhs</span><span class="w"></span>
-<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+<h3 id="function-operator_8">function operator()</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="n">ArithmeticType</span><span class="w"> </span><span class="n">T</span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="kr">inline</span><span class="w"> </span><span class="n">Bounds3</span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="k">operator</span><span class="p">()(</span><span class="w"></span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Bounds3</span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">b</span><span class="w"></span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+</code></pre></div>
+<p>transform a bounds </p>
+<h3 id="function-operator_9">function operator*</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kr">inline</span><span class="w"> </span><span class="n">Transform</span><span class="w"> </span><span class="k">operator</span><span class="o">*</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Transform</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">rhs</span><span class="w"></span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
 </code></pre></div>
 <h3 id="function-swapshandedness">function swapsHandedNess</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kr">inline</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">swapsHandedNess</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kr">inline</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">swapsHandedNess</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
 </code></pre></div>
 <p>whether the transform swaps handedness </p>
 <h2 id="friends_1">Friends</h2>
 <h3 id="friend-inverse">friend inverse</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">friend</span><span class="w"> </span><span class="n">Transform</span><span class="w"> </span><span class="nf">inverse</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">    </span><span class="n">Transform</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">t</span><span class="w"></span>
-<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="p">);</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">friend</span><span class="w"> </span><span class="n">Transform</span><span class="w"> </span><span class="nf">inverse</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Transform</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">t</span><span class="w"></span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 <p>transform inverse </p>
 <h3 id="friend-transpose">friend transpose</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">friend</span><span class="w"> </span><span class="n">Transform</span><span class="w"> </span><span class="nf">transpose</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">    </span><span class="n">Transform</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">t</span><span class="w"></span>
-<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="p">);</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">friend</span><span class="w"> </span><span class="n">Transform</span><span class="w"> </span><span class="nf">transpose</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Transform</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">t</span><span class="w"></span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 <hr />
-<p>Updated on 2022-04-11 at 16:11:26 +0000</p>
+<p>Updated on 2022-04-12 at 02:15:46 +0000</p>
 
               
             </article>

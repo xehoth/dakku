@@ -196,6 +196,8 @@
       <node id="18">
         <label>src/core/shape.h</label>
         <link refid="shape_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
       </node>
       <node id="19">
         <label>src/core/texture.h</label>
@@ -212,6 +214,12 @@
         </childnode>
         <childnode refid="18" relation="include">
         </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>src/core/transform_cache.h</label>
+        <link refid="transform__cache_8h"/>
       </node>
       <node id="10">
         <label>src/filters/api.h</label>

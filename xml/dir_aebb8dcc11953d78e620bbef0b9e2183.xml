@@ -23,6 +23,7 @@
     <innerfile refid="stream_8h">stream.h</innerfile>
     <innerfile refid="texture_8h">texture.h</innerfile>
     <innerfile refid="transform_8h">transform.h</innerfile>
+    <innerfile refid="transform__cache_8h">transform_cache.h</innerfile>
     <innerfile refid="vector_8h">vector.h</innerfile>
     <innerfile refid="vector__base_8h">vector_base.h</innerfile>
     <briefdescription>

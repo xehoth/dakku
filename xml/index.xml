@@ -383,10 +383,21 @@
     <member refid="classdakku_1_1SerializableObject_1af130034b07c1f5dc21fd84e0cbefbbb4" kind="function"><name>deserialize</name></member>
   </compound>
   <compound refid="classdakku_1_1Shape" kind="class"><name>dakku::Shape</name>
+    <member refid="classdakku_1_1Shape_1af14c5ad6380191698502a5b6ebfe30fe" kind="variable"><name>objectToWorld</name></member>
+    <member refid="classdakku_1_1Shape_1ac1c407215b941bade1fb229e74c58d2f" kind="variable"><name>worldToObject</name></member>
+    <member refid="classdakku_1_1Shape_1aad943a4507cb9b01f0103981c847e19b" kind="variable"><name>transformSwapsHandedness</name></member>
     <member refid="classdakku_1_1Shape_1aac110048040df95b607cc505ad2eb218" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
     <member refid="classdakku_1_1Shape_1acb5e66e646d6fd0709ef4b8d6179142f" kind="function"><name>Shape</name></member>
+    <member refid="classdakku_1_1Shape_1aa36bbef60c9caa01503d5fd50f47388a" kind="function"><name>Shape</name></member>
     <member refid="classdakku_1_1Shape_1a5a9fd700c1e56cf18784384ba0eeb5e0" kind="function"><name>objectBound</name></member>
-    <member refid="classdakku_1_1Shape_1ae328d65d3afe8558e9e63ddc3fa44164" kind="function"><name>worldBound</name></member>
+    <member refid="classdakku_1_1Shape_1ad7d19f6b59f7cb7e333a43d3f0eaacf8" kind="function"><name>worldBound</name></member>
+    <member refid="classdakku_1_1Shape_1a8994ddc5864708868642720c2561a179" kind="function"><name>intersect</name></member>
+    <member refid="classdakku_1_1Shape_1aabda589a8380ec7b9f48c03693de58df" kind="function"><name>hasIntersection</name></member>
+    <member refid="classdakku_1_1Shape_1adfc5caa3d24760f7f76db43b343be1d3" kind="function"><name>area</name></member>
+    <member refid="classdakku_1_1Shape_1a2ab207143d959280b029b464d7ba18e7" kind="function"><name>samplePosition</name></member>
+    <member refid="classdakku_1_1Shape_1a350c4ead757cc7b6caefc91829ed0eff" kind="function"><name>pdfPosition</name></member>
+    <member refid="classdakku_1_1Shape_1a78022e0a960761b2ef450dc049cd9dc5" kind="function"><name>sampleDirection</name></member>
+    <member refid="classdakku_1_1Shape_1ae1c6ed9269dc96d83b38a0f9a2cb4aa2" kind="function"><name>pdfDirection</name></member>
   </compound>
   <compound refid="classdakku_1_1SurfaceInteraction" kind="class"><name>dakku::SurfaceInteraction</name>
     <member refid="classdakku_1_1SurfaceInteraction_1a7774eb557414ba464259463b5ab7962f" kind="variable"><name>uv</name></member>
@@ -422,10 +433,26 @@
     <member refid="classdakku_1_1Transform_1a17520267cbc3c89b0aef0943596dc3a2" kind="function"><name>operator()</name></member>
     <member refid="classdakku_1_1Transform_1a78da0df5b5d2b335d7c71346cdc727de" kind="function"><name>operator()</name></member>
     <member refid="classdakku_1_1Transform_1af1de7e6eabb7e21d00d2d424979f93d6" kind="function"><name>operator()</name></member>
+    <member refid="classdakku_1_1Transform_1ab7508f08a840c2dd4aa8a5fe6b82440f" kind="function"><name>operator()</name></member>
     <member refid="classdakku_1_1Transform_1ac37fe5a9c1d271ad939d813cf6862043" kind="function"><name>operator*</name></member>
     <member refid="classdakku_1_1Transform_1a5bc005e21588a6ae9f81eadbd312a38c" kind="function"><name>swapsHandedNess</name></member>
-    <member refid="classdakku_1_1Transform_1aa2b52f8ec5f9c6049e79d35e0b9e3716" kind="friend"><name>inverse</name></member>
-    <member refid="classdakku_1_1Transform_1a3f1c4a4501cc53bf76979899c6da9498" kind="friend"><name>transpose</name></member>
+    <member refid="classdakku_1_1Transform_1a31b9af404ee2dd732645cf796dc1aa62" kind="friend"><name>inverse</name></member>
+    <member refid="classdakku_1_1Transform_1a10d88784f95b7d578a498fe5d3ee6fa8" kind="friend"><name>transpose</name></member>
+  </compound>
+  <compound refid="classdakku_1_1TransformCache" kind="class"><name>dakku::TransformCache</name>
+    <member refid="classdakku_1_1TransformCache_1a3f5a68ef77dc94f615091af1cd6e053a" kind="variable"><name>cache</name></member>
+    <member refid="classdakku_1_1TransformCache_1ac97233f733cc4bbafa15944502430468" kind="variable"><name>arena</name></member>
+    <member refid="classdakku_1_1TransformCache_1af52ef4edff21443c20d6f1112f350884" kind="function"><name>instance</name></member>
+    <member refid="classdakku_1_1TransformCache_1ae36d3d769e844c9e053a55127005b030" kind="function"><name>lookUp</name></member>
+    <member refid="classdakku_1_1TransformCache_1a98c0568c222694cf1476e80d043c490a" kind="function"><name>clear</name></member>
+    <member refid="classdakku_1_1TransformCache_1a0be845b89b12d34508d21dc03567af16" kind="function"><name>lookUpByProperty</name></member>
+    <member refid="classdakku_1_1TransformCache_1a586b7be859d6129971b556079568998e" kind="function"><name>TransformCache</name></member>
+  </compound>
+  <compound refid="structdakku_1_1TransformCache_1_1TransformCacheEqual" kind="struct"><name>dakku::TransformCache::TransformCacheEqual</name>
+    <member refid="structdakku_1_1TransformCache_1_1TransformCacheEqual_1aaedd698609884d499ac0a978366202a9" kind="function"><name>operator()</name></member>
+  </compound>
+  <compound refid="structdakku_1_1TransformCache_1_1TransformCacheHash" kind="struct"><name>dakku::TransformCache::TransformCacheHash</name>
+    <member refid="structdakku_1_1TransformCache_1_1TransformCacheHash_1a6c50f38dfdf53361077f9ce524d56567" kind="function"><name>operator()</name></member>
   </compound>
   <compound refid="classdakku_1_1TriangleFilter" kind="class"><name>dakku::TriangleFilter</name>
     <member refid="classdakku_1_1TriangleFilter_1a960b9a532a2a483637302dcd13925a57" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
@@ -575,7 +602,7 @@
     <member refid="namespacedakku_1ad4c70953467b9d3d22eac250d8655aff" kind="variable"><name>Shape</name></member>
     <member refid="namespacedakku_1a24e2c761467417bba0b7b17b7c0e9f79" kind="variable"><name>Texture</name></member>
     <member refid="namespacedakku_1ad67fc67650e8ff59c3b25b9e9d462ee4" kind="variable"><name>__pad0__</name></member>
-    <member refid="namespacedakku_1ab50c0250dddfef69fbc2e63059ef3bf3" kind="function"><name>DAKKU_EXPORT_OBJECTS</name></member>
+    <member refid="namespacedakku_1aad4974366612a68984e0def8555c26e4" kind="function"><name>DAKKU_EXPORT_OBJECTS</name></member>
     <member refid="namespacedakku_1af0a2453f8db3eb948901c7a0aed18434" kind="function"><name>begin</name></member>
     <member refid="namespacedakku_1a41ae9fcb2290e6ea6f7d4b0fbca86d17" kind="function"><name>end</name></member>
     <member refid="namespacedakku_1af754e4967f947036a0c31c0dbb4bf6e1" kind="function"><name>isNaN</name></member>
@@ -604,6 +631,7 @@
     <member refid="namespacedakku_1aaa536865ee7be0b7a4ed6109f261eeb7" kind="function"><name>lookAt</name></member>
     <member refid="namespacedakku_1afd935f8b4f1ca9b28257d07b7f276739" kind="function"><name>perspective</name></member>
     <member refid="namespacedakku_1a2016f3c3a16c069a055a7017eacb0e66" kind="function"><name>dot</name></member>
+    <member refid="namespacedakku_1a8416c1b8bf26cb7dedb7fe0c886662dd" kind="function"><name>absDot</name></member>
     <member refid="namespacedakku_1ab1fd7a566663942d0a6ddc982890d74b" kind="function"><name>DAKKU_EXPORT_OBJECTS</name></member>
     <member refid="namespacedakku_1af6341cd9dee71fb7731ce988277fea7c" kind="function"><name>gammaCorrect</name></member>
     <member refid="namespacedakku_1aeb8251264c62aa09029e8f63d598e2b3" kind="function"><name>inverseGammaCorrect</name></member>
@@ -659,6 +687,8 @@
   <compound refid="texture_8h" kind="file"><name>texture.h</name>
   </compound>
   <compound refid="transform_8h" kind="file"><name>transform.h</name>
+  </compound>
+  <compound refid="transform__cache_8h" kind="file"><name>transform_cache.h</name>
   </compound>
   <compound refid="vector_8h" kind="file"><name>vector.h</name>
   </compound>

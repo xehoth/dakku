@@ -335,6 +335,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#public-attributes" class="md-nav__link">
+    Public Attributes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#additional-inherited-members" class="md-nav__link">
     Additional inherited members
   </a>
@@ -364,6 +371,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#function-shape_1" class="md-nav__link">
+    function Shape
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#function-objectbound" class="md-nav__link">
     function objectBound
   </a>
@@ -373,6 +387,89 @@
           <li class="md-nav__item">
   <a href="#function-worldbound" class="md-nav__link">
     function worldBound
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-intersect" class="md-nav__link">
+    function intersect
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-hasintersection" class="md-nav__link">
+    function hasIntersection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-area" class="md-nav__link">
+    function area
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-sampleposition" class="md-nav__link">
+    function samplePosition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-pdfposition" class="md-nav__link">
+    function pdfPosition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-sampledirection" class="md-nav__link">
+    function sampleDirection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-pdfdirection" class="md-nav__link">
+    function pdfDirection
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-attributes-documentation" class="md-nav__link">
+    Public Attributes Documentation
+  </a>
+  
+    <nav class="md-nav" aria-label="Public Attributes Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variable-objecttoworld" class="md-nav__link">
+    variable objectToWorld
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-worldtoobject" class="md-nav__link">
+    variable worldToObject
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-transformswapshandedness" class="md-nav__link">
+    variable transformSwapsHandedness
   </a>
   
 </li>
@@ -421,12 +518,67 @@
 <td><strong><a href="/dakku/Classes/classdakku_1_1Shape/#function-shape">Shape</a></strong>(const <a href="/dakku/Classes/classdakku_1_1Transform/">Transform</a> * objectToWorld, const <a href="/dakku/Classes/classdakku_1_1Transform/">Transform</a> * worldToObject)<br>Construct a new <a href="/dakku/Classes/classdakku_1_1Shape/">Shape</a> object with given transform.</td>
 </tr>
 <tr>
+<td></td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Shape/#function-shape">Shape</a></strong>(const <a href="/dakku/Classes/classdakku_1_1Transform/">Transform</a> * objectToWorld)<br>given objectToWorld, calculate inverse for worldToObject</td>
+</tr>
+<tr>
 <td>virtual <a href="/dakku/Namespaces/namespacedakku/#using-bounds3f">Bounds3f</a></td>
 <td><strong><a href="/dakku/Classes/classdakku_1_1Shape/#function-objectbound">objectBound</a></strong>() const =0<br>get object bounding box</td>
 </tr>
 <tr>
 <td>virtual <a href="/dakku/Namespaces/namespacedakku/#using-bounds3f">Bounds3f</a></td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1Shape/#function-worldbound">worldBound</a></strong>() const =0<br>get world bounding box</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Shape/#function-worldbound">worldBound</a></strong>() const<br>get world bounding box</td>
+</tr>
+<tr>
+<td>virtual bool</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Shape/#function-intersect">intersect</a></strong>(const <a href="/dakku/Classes/classdakku_1_1Ray/">Ray</a> &amp; ray, float * tHit, <a href="/dakku/Classes/classdakku_1_1SurfaceInteraction/">SurfaceInteraction</a> * isect, bool testAlphaTexture =true) const =0<br>shape-ray intersection</td>
+</tr>
+<tr>
+<td>virtual bool</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Shape/#function-hasintersection">hasIntersection</a></strong>(const <a href="/dakku/Classes/classdakku_1_1Ray/">Ray</a> &amp; ray, bool testAlphaTexture =true) const<br>check whether ray and shape has intersection</td>
+</tr>
+<tr>
+<td>virtual float</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Shape/#function-area">area</a></strong>() const =0<br>get shape area</td>
+</tr>
+<tr>
+<td>virtual <a href="/dakku/Classes/structdakku_1_1Interaction/">Interaction</a></td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Shape/#function-sampleposition">samplePosition</a></strong>(const <a href="/dakku/Namespaces/namespacedakku/#using-point2f">Point2f</a> &amp; u, float &amp; pdf) const =0<br>sample a point on the shape and return the pdf with respect to the area of the surface</td>
+</tr>
+<tr>
+<td>virtual float</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Shape/#function-pdfposition">pdfPosition</a></strong>(const <a href="/dakku/Classes/structdakku_1_1Interaction/">Interaction</a> &amp; ) const<br>the pdf of sampling a point on the shape with respect to the area of the surface</td>
+</tr>
+<tr>
+<td>virtual <a href="/dakku/Classes/structdakku_1_1Interaction/">Interaction</a></td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Shape/#function-sampledirection">sampleDirection</a></strong>(const <a href="/dakku/Classes/structdakku_1_1Interaction/">Interaction</a> &amp; ref, const <a href="/dakku/Namespaces/namespacedakku/#using-point2f">Point2f</a> &amp; u, float &amp; pdf) const<br>sample a point on the shape and return the pdf with respect to solid angle from given <code>ref</code></td>
+</tr>
+<tr>
+<td>virtual float</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Shape/#function-pdfdirection">pdfDirection</a></strong>(const <a href="/dakku/Classes/structdakku_1_1Interaction/">Interaction</a> &amp; ref, const <a href="/dakku/Namespaces/namespacedakku/#using-vector3f">Vector3f</a> &amp; wi) const<br>the pdf of sampling a point on the shape with respect to the area of the surface</td>
+</tr>
+</tbody>
+</table>
+<h2 id="public-attributes">Public Attributes</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>const <a href="/dakku/Classes/classdakku_1_1Transform/">Transform</a> *</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Shape/#variable-objecttoworld">objectToWorld</a></strong></td>
+</tr>
+<tr>
+<td>const <a href="/dakku/Classes/classdakku_1_1Transform/">Transform</a> *</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Shape/#variable-worldtoobject">worldToObject</a></strong></td>
+</tr>
+<tr>
+<td>const bool</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Shape/#variable-transformswapshandedness">transformSwapsHandedness</a></strong></td>
 </tr>
 </tbody>
 </table>
@@ -492,16 +644,106 @@
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 <p>Construct a new <a href="/dakku/Classes/classdakku_1_1Shape/">Shape</a> object with given transform. </p>
+<h3 id="function-shape_1">function Shape</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">explicit</span><span class="w"> </span><span class="n">Shape</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Transform</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">objectToWorld</span><span class="w"></span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>given objectToWorld, calculate inverse for worldToObject </p>
 <h3 id="function-objectbound">function objectBound</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">Bounds3f</span><span class="w"> </span><span class="n">objectBound</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">=</span><span class="mi">0</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">Bounds3f</span><span class="w"> </span><span class="n">objectBound</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">=</span><span class="mi">0</span><span class="w"></span>
 </code></pre></div>
 <p>get object bounding box </p>
 <h3 id="function-worldbound">function worldBound</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">Bounds3f</span><span class="w"> </span><span class="n">worldBound</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">=</span><span class="mi">0</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">Bounds3f</span><span class="w"> </span><span class="n">worldBound</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
 </code></pre></div>
 <p>get world bounding box </p>
+<h3 id="function-intersect">function intersect</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">intersect</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Ray</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">ray</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">tHit</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="n">SurfaceInteraction</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">isect</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">testAlphaTexture</span><span class="w"> </span><span class="o">=</span><span class="nb">true</span><span class="w"></span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">=</span><span class="mi">0</span><span class="w"></span>
+</code></pre></div>
+<p>shape-ray intersection </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>ray</strong> given ray </li>
+<li><strong>tHit</strong> hit ray time </li>
+<li><strong>isect</strong> intersect info </li>
+</ul>
+<h3 id="function-hasintersection">function hasIntersection</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">hasIntersection</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Ray</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">ray</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">testAlphaTexture</span><span class="w"> </span><span class="o">=</span><span class="nb">true</span><span class="w"></span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+</code></pre></div>
+<p>check whether ray and shape has intersection </p>
+<h3 id="function-area">function area</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">area</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">=</span><span class="mi">0</span><span class="w"></span>
+</code></pre></div>
+<p>get shape area </p>
+<h3 id="function-sampleposition">function samplePosition</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">Interaction</span><span class="w"> </span><span class="n">samplePosition</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Point2f</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">u</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">pdf</span><span class="w"></span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">=</span><span class="mi">0</span><span class="w"></span>
+</code></pre></div>
+<p>sample a point on the shape and return the pdf with respect to the area of the surface </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>u</strong> random sample </li>
+<li><strong>pdf</strong> pdf </li>
+</ul>
+<p><strong>Return</strong>: the sampled point </p>
+<h3 id="function-pdfposition">function pdfPosition</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">pdfPosition</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Interaction</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+</code></pre></div>
+<p>the pdf of sampling a point on the shape with respect to the area of the surface </p>
+<h3 id="function-sampledirection">function sampleDirection</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">Interaction</span><span class="w"> </span><span class="n">sampleDirection</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Interaction</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">ref</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Point2f</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">u</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">pdf</span><span class="w"></span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+</code></pre></div>
+<p>sample a point on the shape and return the pdf with respect to solid angle from given <code>ref</code></p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>ref</strong> reference point </li>
+<li><strong>u</strong> random sample </li>
+<li><strong>pdf</strong> pdf </li>
+</ul>
+<p><span class="arithmatex">\(p(\omega) = \left(\frac{\mathrm d \omega}{\mathrm d x}\right) ^ {-1} p(x)\)</span></p>
+<p><span class="arithmatex">\(\mathrm d \omega = \mathrm d x \frac{|N(x) \cdot -\vec r|}{||\vec r|| ^ 2}\)</span> where <span class="arithmatex">\(\vec r = x - \text{ref}.x\)</span></p>
+<p><span class="arithmatex">\(\Longrightarrow p(\omega) = \frac{||\vec r|| ^ 2}{|N(x) \cdot -\vec r|}p(x)\)</span></p>
+<h3 id="function-pdfdirection">function pdfDirection</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">pdfDirection</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Interaction</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">ref</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3f</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">wi</span><span class="w"></span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+</code></pre></div>
+<p>the pdf of sampling a point on the shape with respect to the area of the surface </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>ref</strong> the ref point </li>
+<li><strong>wi</strong> direction </li>
+</ul>
+<h2 id="public-attributes-documentation">Public Attributes Documentation</h2>
+<h3 id="variable-objecttoworld">variable objectToWorld</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">const</span><span class="w"> </span><span class="n">Transform</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">objectToWorld</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h3 id="variable-worldtoobject">variable worldToObject</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">const</span><span class="w"> </span><span class="n">Transform</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">worldToObject</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h3 id="variable-transformswapshandedness">variable transformSwapsHandedness</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">transformSwapsHandedness</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
 <hr />
-<p>Updated on 2022-04-11 at 16:11:26 +0000</p>
+<p>Updated on 2022-04-12 at 02:15:46 +0000</p>
 
               
             </article>

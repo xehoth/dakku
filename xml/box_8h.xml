@@ -6,6 +6,16 @@
     <includes refid="filter_8h" local="no">core/filter.h</includes>
     <includedby refid="filters_2api_8h" local="no">src/filters/api.h</includedby>
     <incdepgraph>
+      <node id="30">
+        <label>core/bounds.h</label>
+        <link refid="bounds_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
       <node id="5">
         <label>core/class.h</label>
         <link refid="class_8h"/>
@@ -17,12 +27,12 @@
         </childnode>
         <childnode refid="23" relation="include">
         </childnode>
-        <childnode refid="31" relation="include">
-        </childnode>
         <childnode refid="33" relation="include">
         </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
       </node>
-      <node id="34">
+      <node id="36">
         <label>core/filter.h</label>
         <link refid="filter_8h"/>
         <childnode refid="4" relation="include">
@@ -71,13 +81,13 @@
         </childnode>
         <childnode refid="27" relation="include">
         </childnode>
-        <childnode refid="30" relation="include">
+        <childnode refid="32" relation="include">
         </childnode>
-        <childnode refid="31" relation="include">
+        <childnode refid="33" relation="include">
         </childnode>
         <childnode refid="23" relation="include">
         </childnode>
-        <childnode refid="32" relation="include">
+        <childnode refid="34" relation="include">
         </childnode>
       </node>
       <node id="28">
@@ -100,6 +110,8 @@
         <childnode refid="19" relation="include">
         </childnode>
         <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
         </childnode>
       </node>
       <node id="19">
@@ -131,7 +143,7 @@
         <link refid="box_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="34" relation="include">
+        <childnode refid="36" relation="include">
         </childnode>
       </node>
       <node id="2">
@@ -162,13 +174,16 @@
       <node id="17">
         <label>cstdlib</label>
       </node>
+      <node id="31">
+        <label>iterator</label>
+      </node>
       <node id="9">
         <label>limits</label>
       </node>
-      <node id="31">
+      <node id="33">
         <label>map</label>
       </node>
-      <node id="30">
+      <node id="32">
         <label>nlohmann/json.hpp</label>
       </node>
       <node id="10">
@@ -192,7 +207,7 @@
       <node id="23">
         <label>string</label>
       </node>
-      <node id="33">
+      <node id="35">
         <label>string_view</label>
       </node>
       <node id="8">
@@ -201,7 +216,7 @@
       <node id="29">
         <label>utility</label>
       </node>
-      <node id="32">
+      <node id="34">
         <label>variant</label>
       </node>
     </incdepgraph>

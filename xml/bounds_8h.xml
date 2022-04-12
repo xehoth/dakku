@@ -7,6 +7,7 @@
     <includes local="no">utility</includes>
     <includedby refid="core_2film_8h" local="no">src/core/film.h</includedby>
     <includedby refid="shape_8h" local="no">src/core/shape.h</includedby>
+    <includedby refid="transform_8h" local="no">src/core/transform.h</includedby>
     <incdepgraph>
       <node id="1">
         <label>src/core/bounds.h</label>
@@ -140,6 +141,14 @@
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>src/core/class.h</label>
+        <link refid="class_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
       </node>
       <node id="2">
         <label>src/core/film.h</label>
@@ -147,9 +156,139 @@
         <childnode refid="3" relation="include">
         </childnode>
       </node>
+      <node id="9">
+        <label>src/core/filter.h</label>
+        <link refid="filter_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>src/core/object.h</label>
+        <link refid="object_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>src/core/property.h</label>
+        <link refid="property_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>src/core/serialization.h</label>
+        <link refid="serialization_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
       <node id="4">
         <label>src/core/shape.h</label>
         <link refid="shape_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>src/core/texture.h</label>
+        <link refid="texture_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>src/core/transform.h</label>
+        <link refid="transform_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>src/core/transform_cache.h</label>
+        <link refid="transform__cache_8h"/>
+      </node>
+      <node id="11">
+        <label>src/filters/api.h</label>
+        <link refid="filters_2api_8h"/>
+      </node>
+      <node id="10">
+        <label>src/filters/box.h</label>
+        <link refid="box_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>src/filters/fwd.h</label>
+        <link refid="filters_2fwd_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>src/filters/triangle.h</label>
+        <link refid="triangle_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>src/stream/api.h</label>
+        <link refid="stream_2api_8h"/>
+      </node>
+      <node id="16">
+        <label>src/stream/fstream.h</label>
+        <link refid="fstream_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>src/stream/fwd.h</label>
+        <link refid="stream_2fwd_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>src/textures/api.h</label>
+        <link refid="textures_2api_8h"/>
+      </node>
+      <node id="20">
+        <label>src/textures/constant.h</label>
+        <link refid="constant_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>src/textures/fwd.h</label>
+        <link refid="textures_2fwd_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>src/textures/image.h</label>
+        <link refid="image_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
       </node>
     </invincdepgraph>
     <innerclass refid="classdakku_1_1BoundsBase" prot="public">dakku::BoundsBase</innerclass>
@@ -253,7 +392,7 @@
 <codeline lineno="178" refid="classdakku_1_1BoundsBase_1a775827382a4cfcd6d7e18741bb7236f8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1BoundsBase" kindref="compound">BoundsBase</ref><sp/><ref refid="classdakku_1_1BoundsBase_1a775827382a4cfcd6d7e18741bb7236f8" kindref="member">operator|</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1BoundsBase" kindref="compound">BoundsBase</ref><sp/>&amp;b,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Point" kindref="compound">Point&lt;T, S&gt;</ref><sp/>&amp;p)<sp/>{</highlight></codeline>
 <codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdakku_1_1BoundsBase" kindref="compound">BoundsBase</ref><sp/>ret;</highlight></codeline>
 <codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>ret.<ref refid="classdakku_1_1BoundsBase_1abd7c34bec0f05f1dfb494b76eed47622" kindref="member">pMin</ref><sp/>=<sp/>min(b.<ref refid="classdakku_1_1BoundsBase_1abd7c34bec0f05f1dfb494b76eed47622" kindref="member">pMin</ref>,<sp/>p);</highlight></codeline>
-<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>ret.<ref refid="classdakku_1_1BoundsBase_1a1df49abc60c6cee7febd54aa46d04aa8" kindref="member">pMax</ref><sp/>=<sp/>max(b.Pmax,<sp/>p);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>ret.<ref refid="classdakku_1_1BoundsBase_1a1df49abc60c6cee7febd54aa46d04aa8" kindref="member">pMax</ref><sp/>=<sp/>max(b.<ref refid="classdakku_1_1BoundsBase_1a1df49abc60c6cee7febd54aa46d04aa8" kindref="member">pMax</ref>,<sp/>p);</highlight></codeline>
 <codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
 <codeline lineno="183"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="184"><highlight class="normal"></highlight></codeline>

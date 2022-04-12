@@ -5,6 +5,16 @@
     <includes refid="serialization_8h" local="no">core/serialization.h</includes>
     <includedby refid="fstream_8h" local="no">src/stream/fstream.h</includedby>
     <incdepgraph>
+      <node id="29">
+        <label>core/bounds.h</label>
+        <link refid="bounds_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
       <node id="4">
         <label>core/class.h</label>
         <link refid="class_8h"/>
@@ -16,9 +26,9 @@
         </childnode>
         <childnode refid="22" relation="include">
         </childnode>
-        <childnode refid="30" relation="include">
-        </childnode>
         <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
         </childnode>
       </node>
       <node id="5">
@@ -64,13 +74,13 @@
         </childnode>
         <childnode refid="26" relation="include">
         </childnode>
-        <childnode refid="29" relation="include">
+        <childnode refid="31" relation="include">
         </childnode>
-        <childnode refid="30" relation="include">
+        <childnode refid="32" relation="include">
         </childnode>
         <childnode refid="22" relation="include">
         </childnode>
-        <childnode refid="31" relation="include">
+        <childnode refid="33" relation="include">
         </childnode>
       </node>
       <node id="27">
@@ -93,6 +103,8 @@
         <childnode refid="18" relation="include">
         </childnode>
         <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
         </childnode>
       </node>
       <node id="18">
@@ -147,13 +159,16 @@
       <node id="16">
         <label>cstdlib</label>
       </node>
+      <node id="30">
+        <label>iterator</label>
+      </node>
       <node id="8">
         <label>limits</label>
       </node>
-      <node id="30">
+      <node id="32">
         <label>map</label>
       </node>
-      <node id="29">
+      <node id="31">
         <label>nlohmann/json.hpp</label>
       </node>
       <node id="9">
@@ -177,7 +192,7 @@
       <node id="22">
         <label>string</label>
       </node>
-      <node id="32">
+      <node id="34">
         <label>string_view</label>
       </node>
       <node id="7">
@@ -186,7 +201,7 @@
       <node id="28">
         <label>utility</label>
       </node>
-      <node id="31">
+      <node id="33">
         <label>variant</label>
       </node>
     </incdepgraph>
