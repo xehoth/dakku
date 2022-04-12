@@ -20,6 +20,7 @@
     <innerfile refid="ray_8h">ray.h</innerfile>
     <innerfile refid="relative_8h">relative.h</innerfile>
     <innerfile refid="rng_8h">rng.h</innerfile>
+    <innerfile refid="sampler_8h">sampler.h</innerfile>
     <innerfile refid="serialization_8h">serialization.h</innerfile>
     <innerfile refid="shape_8h">shape.h</innerfile>
     <innerfile refid="spectrum_8h">spectrum.h</innerfile>

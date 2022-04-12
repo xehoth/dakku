@@ -5,6 +5,7 @@
     <basecompoundref refid="classdakku_1_1Object" prot="public" virt="non-virtual">dakku::Object</basecompoundref>
     <derivedcompoundref refid="classdakku_1_1Film" prot="public" virt="non-virtual">dakku::Film</derivedcompoundref>
     <derivedcompoundref refid="classdakku_1_1RenderState" prot="public" virt="non-virtual">dakku::RenderState</derivedcompoundref>
+    <derivedcompoundref refid="classdakku_1_1Sampler" prot="public" virt="non-virtual">dakku::Sampler</derivedcompoundref>
     <includes refid="serialization_8h" local="no">serialization.h</includes>
       <sectiondef kind="public-func">
       <memberdef kind="function" id="classdakku_1_1SerializableObject_1a20425307e474662b2825ca6fe0c3e1fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -103,9 +104,21 @@
         <label>dakku::Object</label>
         <link refid="classdakku_1_1Object"/>
       </node>
+      <node id="6">
+        <label>dakku::PixelSampler</label>
+        <link refid="classdakku_1_1PixelSampler"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
       <node id="4">
         <label>dakku::RenderState</label>
         <link refid="classdakku_1_1RenderState"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>dakku::Sampler</label>
+        <link refid="classdakku_1_1Sampler"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>

@@ -146,6 +146,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1PixelSampler/</loc>
+         <lastmod>2022-04-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1Point/</loc>
          <lastmod>2022-04-12</lastmod>
          <changefreq>daily</changefreq>
@@ -187,6 +192,11 @@
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1RgbSpectrum/</loc>
+         <lastmod>2022-04-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1Sampler/</loc>
          <lastmod>2022-04-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -497,6 +507,11 @@
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/rng_8h/</loc>
+         <lastmod>2022-04-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Files/sampler_8h/</loc>
          <lastmod>2022-04-12</lastmod>
          <changefreq>daily</changefreq>
     </url>

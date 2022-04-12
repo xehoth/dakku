@@ -1088,6 +1088,10 @@
 </tr>
 <tr>
 <td>class</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1PixelSampler/">dakku::PixelSampler</a></strong></td>
+</tr>
+<tr>
+<td>class</td>
 <td><strong><a href="/dakku/Classes/classdakku_1_1Point/">dakku::Point</a></strong> <br>point</td>
 </tr>
 <tr>
@@ -1125,6 +1129,10 @@
 <tr>
 <td>class</td>
 <td><strong><a href="/dakku/Classes/classdakku_1_1RNG/">dakku::RNG</a></strong> <br>PCG32.</td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Sampler/">dakku::Sampler</a></strong></td>
 </tr>
 <tr>
 <td>class</td>
@@ -1266,7 +1274,7 @@
 </tr>
 <tr>
 <td></td>
-<td><strong><a href="/dakku/Namespaces/namespacedakku/#function-dakku-export-objects">DAKKU_EXPORT_OBJECTS</a></strong>(Core , <a href="/dakku/Classes/classdakku_1_1Object/">Object</a> , <a href="/dakku/Classes/classdakku_1_1InputStream/">InputStream</a> , <a href="/dakku/Classes/classdakku_1_1OutputStream/">OutputStream</a> , <a href="/dakku/Classes/classdakku_1_1SerializableObject/">SerializableObject</a> , <a href="/dakku/Classes/classdakku_1_1Filter/">Filter</a> , <a href="/dakku/Classes/classdakku_1_1Film/">Film</a> , <a href="/dakku/Classes/classdakku_1_1Texture/">Texture</a> , <a href="/dakku/Classes/classdakku_1_1TextureMapping2D/">TextureMapping2D</a> , <a href="/dakku/Classes/classdakku_1_1UvMapping2D/">UvMapping2D</a> , <a href="/dakku/Classes/classdakku_1_1Shape/">Shape</a> , <a href="/dakku/Classes/classdakku_1_1Camera/">Camera</a> , <a href="/dakku/Classes/classdakku_1_1ProjectiveCamera/">ProjectiveCamera</a> )</td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#function-dakku-export-objects">DAKKU_EXPORT_OBJECTS</a></strong>(Core , <a href="/dakku/Classes/classdakku_1_1Object/">Object</a> , <a href="/dakku/Classes/classdakku_1_1InputStream/">InputStream</a> , <a href="/dakku/Classes/classdakku_1_1OutputStream/">OutputStream</a> , <a href="/dakku/Classes/classdakku_1_1SerializableObject/">SerializableObject</a> , <a href="/dakku/Classes/classdakku_1_1Filter/">Filter</a> , <a href="/dakku/Classes/classdakku_1_1Film/">Film</a> , <a href="/dakku/Classes/classdakku_1_1Texture/">Texture</a> , <a href="/dakku/Classes/classdakku_1_1TextureMapping2D/">TextureMapping2D</a> , <a href="/dakku/Classes/classdakku_1_1UvMapping2D/">UvMapping2D</a> , <a href="/dakku/Classes/classdakku_1_1Shape/">Shape</a> , <a href="/dakku/Classes/classdakku_1_1Camera/">Camera</a> , <a href="/dakku/Classes/classdakku_1_1ProjectiveCamera/">ProjectiveCamera</a> , <a href="/dakku/Classes/classdakku_1_1Sampler/">Sampler</a> , <a href="/dakku/Classes/classdakku_1_1PixelSampler/">PixelSampler</a> )</td>
 </tr>
 <tr>
 <td><a href="/dakku/Classes/classdakku_1_1Bounds2iIterator/">Bounds2iIterator</a></td>
@@ -1696,8 +1704,10 @@
 <a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="w">    </span><span class="n">UvMapping2D</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
 <a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a><span class="w">    </span><span class="n">Shape</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
 <a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a><span class="w">    </span><span class="n">Camera</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a><span class="w">    </span><span class="n">ProjectiveCamera</span><span class="w"> </span>
-<a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a><span class="w">    </span><span class="n">ProjectiveCamera</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a><span class="w">    </span><span class="n">Sampler</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a><span class="w">    </span><span class="n">PixelSampler</span><span class="w"> </span>
+<a id="__codelineno-16-17" name="__codelineno-16-17" href="#__codelineno-16-17"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 <h3 id="function-begin">function begin</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kr">inline</span><span class="w"> </span><span class="n">Bounds2iIterator</span><span class="w"> </span><span class="n">begin</span><span class="p">(</span><span class="w"></span>
@@ -2125,7 +2135,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-74-1" name="__codelineno-74-1" href="#__codelineno-74-1"></a><span class="n">DAKKU_EXPORT_CORERenderState</span><span class="w"> </span><span class="n">renderState</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <hr />
-<p>Updated on 2022-04-12 at 05:51:59 +0000</p>
+<p>Updated on 2022-04-12 at 06:02:41 +0000</p>
 
               
             </article>

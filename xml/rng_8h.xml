@@ -3,6 +3,7 @@
   <compounddef id="rng_8h" kind="file" language="C++">
     <compoundname>rng.h</compoundname>
     <includes refid="core_2fwd_8h" local="no">core/fwd.h</includes>
+    <includedby refid="sampler_8h" local="no">src/core/sampler.h</includedby>
     <incdepgraph>
       <node id="2">
         <label>core/fwd.h</label>
@@ -51,6 +52,24 @@
         <label>type_traits</label>
       </node>
     </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>src/core/api.h</label>
+        <link refid="core_2api_8h"/>
+      </node>
+      <node id="1">
+        <label>src/core/rng.h</label>
+        <link refid="rng_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>src/core/sampler.h</label>
+        <link refid="sampler_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
     <innerclass refid="classdakku_1_1RNG" prot="public">dakku::RNG</innerclass>
     <innernamespace refid="namespacedakku">dakku</innernamespace>
     <briefdescription>

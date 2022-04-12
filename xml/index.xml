@@ -310,6 +310,18 @@
     <member refid="structdakku_1_1Film_1_1Pixel_1acfbbbf1e8a707f1c10b73ba2d9215473" kind="variable"><name>splatXyz</name></member>
     <member refid="structdakku_1_1Film_1_1Pixel_1a4261a021d7b18f7c621e5344ab164b19" kind="variable"><name>_padding</name></member>
   </compound>
+  <compound refid="classdakku_1_1PixelSampler" kind="class"><name>dakku::PixelSampler</name>
+    <member refid="classdakku_1_1PixelSampler_1aa27ea2abe937bf569c67838e75cbb3ba" kind="variable"><name>samples1D</name></member>
+    <member refid="classdakku_1_1PixelSampler_1a299da72f4d88821c44e41f765dc7a220" kind="variable"><name>samples2D</name></member>
+    <member refid="classdakku_1_1PixelSampler_1a76a0155347484dc71279a32000d6a189" kind="variable"><name>current1DDimension</name></member>
+    <member refid="classdakku_1_1PixelSampler_1aa720d4ef8598bbe42385c78b6c9a5125" kind="variable"><name>current2DDimension</name></member>
+    <member refid="classdakku_1_1PixelSampler_1a0043798965029fc6f5641ea9ca751b63" kind="variable"><name>rng</name></member>
+    <member refid="classdakku_1_1PixelSampler_1ac7993b270440783bfd3bc673510d0f16" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
+    <member refid="classdakku_1_1PixelSampler_1a7d90e9bef5d1661157c5f703bfa7182f" kind="function"><name>startNextSample</name></member>
+    <member refid="classdakku_1_1PixelSampler_1a7e86a30e3e73ae1b9903d5fb0e3421ef" kind="function"><name>setSampleNumber</name></member>
+    <member refid="classdakku_1_1PixelSampler_1acae4bb493e68f22343dc3e73c0e83d0e" kind="function"><name>get1D</name></member>
+    <member refid="classdakku_1_1PixelSampler_1a6ca8f0482c43fabb839628b4ca2627df" kind="function"><name>get2D</name></member>
+  </compound>
   <compound refid="classdakku_1_1Point" kind="class"><name>dakku::Point</name>
     <member refid="classdakku_1_1Point_1ad8e485617ec76d5775ae2efd79522e29" kind="friend"><name>operator-</name></member>
     <member refid="classdakku_1_1Point_1a8f79a28ee6306ace7ac3e4d7dbee3e22" kind="friend"><name>operator-</name></member>
@@ -426,6 +438,31 @@
     <member refid="classdakku_1_1RNG_1a6aee8cf23d2433e6886b5a49956969fa" kind="function"><name>uniformUInt32</name></member>
     <member refid="classdakku_1_1RNG_1affe6ab66ec7f8bde975e14370fbf9a8f" kind="function"><name>uniformUInt32</name></member>
     <member refid="classdakku_1_1RNG_1abaa85824d4779a1793a6f2d895e79549" kind="function"><name>uniformFloat</name></member>
+  </compound>
+  <compound refid="classdakku_1_1Sampler" kind="class"><name>dakku::Sampler</name>
+    <member refid="classdakku_1_1Sampler_1acdde307c6f496f28030d201d66611d80" kind="variable"><name>samplesPerPixel</name></member>
+    <member refid="classdakku_1_1Sampler_1a4c61b5fd19a6d1672c4742396804dfd4" kind="variable"><name>currentPixel</name></member>
+    <member refid="classdakku_1_1Sampler_1a671fb7b7228cb0f0e2bce280dcb643a9" kind="variable"><name>currentPixelSampleIndex</name></member>
+    <member refid="classdakku_1_1Sampler_1a807899c47f7117d6346f1ca5f4938dce" kind="variable"><name>samples1DArraySizes</name></member>
+    <member refid="classdakku_1_1Sampler_1a63158f6b2eb685906b31adf6399f19bf" kind="variable"><name>samples2DArraySizes</name></member>
+    <member refid="classdakku_1_1Sampler_1a7f53b7c7adadb6fc6a186de67fb90cc7" kind="variable"><name>sampleArray1D</name></member>
+    <member refid="classdakku_1_1Sampler_1a57c04456b070fa4dc07c70dbbb58252f" kind="variable"><name>sampleArray2D</name></member>
+    <member refid="classdakku_1_1Sampler_1ad3cae7489dc755fa1a867d52d354b5fb" kind="variable"><name>array1DOffset</name></member>
+    <member refid="classdakku_1_1Sampler_1afe89bf9a709f57f8e9a3a7b789291da0" kind="variable"><name>array2DOffset</name></member>
+    <member refid="classdakku_1_1Sampler_1a87a0a0e6ccbb2cfb44d4f9e812e602d7" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
+    <member refid="classdakku_1_1Sampler_1a1a4d3ba6a714afffb7c43837ac261a59" kind="function"><name>startPixel</name></member>
+    <member refid="classdakku_1_1Sampler_1ac5ed00e711106a8d52ec900279049545" kind="function"><name>get1D</name></member>
+    <member refid="classdakku_1_1Sampler_1a7feafc6bdc72041d97c4386d3ad04ee8" kind="function"><name>get2D</name></member>
+    <member refid="classdakku_1_1Sampler_1a13457b675c8b2f1c289e971daf688e6b" kind="function"><name>getCameraSample</name></member>
+    <member refid="classdakku_1_1Sampler_1a7d01589a839077c9aa8a714cc0f1c832" kind="function"><name>requestArray1D</name></member>
+    <member refid="classdakku_1_1Sampler_1a1681a439af954f9d7aaa8abf1cbcc7a9" kind="function"><name>requestArray2D</name></member>
+    <member refid="classdakku_1_1Sampler_1a9b150ed3c57754b074c76d4ef572c37b" kind="function"><name>roundCount</name></member>
+    <member refid="classdakku_1_1Sampler_1ad06bc5d5e33cec08785dfa9eeb3359b6" kind="function"><name>getArray1D</name></member>
+    <member refid="classdakku_1_1Sampler_1a4d6edef64da5e8f48a899e879873d4b0" kind="function"><name>getArray2D</name></member>
+    <member refid="classdakku_1_1Sampler_1a9ef74ec88ab34f09d92395361c3a5646" kind="function"><name>startNextSample</name></member>
+    <member refid="classdakku_1_1Sampler_1a6db4ea6e64512e53bcedd8e05d44f4da" kind="function"><name>clone</name></member>
+    <member refid="classdakku_1_1Sampler_1afa18394cead083d70cced88a81a4b353" kind="function"><name>setSampleNumber</name></member>
+    <member refid="classdakku_1_1Sampler_1a8e9bfb6f80a8a5c05f939b2723fc0af3" kind="function"><name>currentSampleNumber</name></member>
   </compound>
   <compound refid="classdakku_1_1SerializableObject" kind="class"><name>dakku::SerializableObject</name>
     <member refid="classdakku_1_1SerializableObject_1a20425307e474662b2825ca6fe0c3e1fc" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
@@ -660,7 +697,7 @@
     <member refid="namespacedakku_1ac3bbfb2d54532e5e73bf8206d1323600" kind="variable"><name>PCG32_MULT</name></member>
     <member refid="namespacedakku_1af9f5f7a876a1c02de56e9fa106171eda" kind="variable"><name>renderState</name></member>
     <member refid="namespacedakku_1a4289fc5c55c00b2a466d37dfdacc67dc" kind="function"><name>DAKKU_EXPORT_OBJECTS</name></member>
-    <member refid="namespacedakku_1abd2616d95825cc7983c495b9e79f0afe" kind="function"><name>DAKKU_EXPORT_OBJECTS</name></member>
+    <member refid="namespacedakku_1ad38f3dc8712fc913b351b2143d85fe79" kind="function"><name>DAKKU_EXPORT_OBJECTS</name></member>
     <member refid="namespacedakku_1af0a2453f8db3eb948901c7a0aed18434" kind="function"><name>begin</name></member>
     <member refid="namespacedakku_1a41ae9fcb2290e6ea6f7d4b0fbca86d17" kind="function"><name>end</name></member>
     <member refid="namespacedakku_1af754e4967f947036a0c31c0dbb4bf6e1" kind="function"><name>isNaN</name></member>
@@ -741,6 +778,8 @@
   <compound refid="relative_8h" kind="file"><name>relative.h</name>
   </compound>
   <compound refid="rng_8h" kind="file"><name>rng.h</name>
+  </compound>
+  <compound refid="sampler_8h" kind="file"><name>sampler.h</name>
   </compound>
   <compound refid="serialization_8h" kind="file"><name>serialization.h</name>
   </compound>

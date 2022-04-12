@@ -33,6 +33,7 @@
     <innerclass refid="classdakku_1_1Object" prot="public">dakku::Object</innerclass>
     <innerclass refid="classdakku_1_1OutputStream" prot="public">dakku::OutputStream</innerclass>
     <innerclass refid="classdakku_1_1PerspectiveCamera" prot="public">dakku::PerspectiveCamera</innerclass>
+    <innerclass refid="classdakku_1_1PixelSampler" prot="public">dakku::PixelSampler</innerclass>
     <innerclass refid="classdakku_1_1Point" prot="public">dakku::Point</innerclass>
     <innerclass refid="classdakku_1_1ProjectiveCamera" prot="public">dakku::ProjectiveCamera</innerclass>
     <innerclass refid="classdakku_1_1Property" prot="public">dakku::Property</innerclass>
@@ -43,6 +44,7 @@
     <innerclass refid="structdakku_1_1ResampleWeight" prot="public">dakku::ResampleWeight</innerclass>
     <innerclass refid="classdakku_1_1RgbSpectrum" prot="public">dakku::RgbSpectrum</innerclass>
     <innerclass refid="classdakku_1_1RNG" prot="public">dakku::RNG</innerclass>
+    <innerclass refid="classdakku_1_1Sampler" prot="public">dakku::Sampler</innerclass>
     <innerclass refid="classdakku_1_1SerializableObject" prot="public">dakku::SerializableObject</innerclass>
     <innerclass refid="classdakku_1_1Shape" prot="public">dakku::Shape</innerclass>
     <innerclass refid="classdakku_1_1SurfaceInteraction" prot="public">dakku::SurfaceInteraction</innerclass>
@@ -774,10 +776,10 @@
         </inbodydescription>
         <location file="src/cameras/api.h" line="7" column="1" declfile="src/cameras/api.h" declline="7" declcolumn="1"/>
       </memberdef>
-      <memberdef kind="function" id="namespacedakku_1abd2616d95825cc7983c495b9e79f0afe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespacedakku_1ad38f3dc8712fc913b351b2143d85fe79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>dakku::DAKKU_EXPORT_OBJECTS</definition>
-        <argsstring>(Core, Object, InputStream, OutputStream, SerializableObject, Filter, Film, Texture, TextureMapping2D, UvMapping2D, Shape, Camera, ProjectiveCamera)</argsstring>
+        <argsstring>(Core, Object, InputStream, OutputStream, SerializableObject, Filter, Film, Texture, TextureMapping2D, UvMapping2D, Shape, Camera, ProjectiveCamera, Sampler, PixelSampler)</argsstring>
         <name>DAKKU_EXPORT_OBJECTS</name>
         <param>
           <type>Core</type>
@@ -818,13 +820,19 @@
         <param>
           <type><ref refid="classdakku_1_1ProjectiveCamera" kindref="compound">ProjectiveCamera</ref></type>
         </param>
+        <param>
+          <type><ref refid="classdakku_1_1Sampler" kindref="compound">Sampler</ref></type>
+        </param>
+        <param>
+          <type><ref refid="classdakku_1_1PixelSampler" kindref="compound">PixelSampler</ref></type>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/api.h" line="18" column="1" declfile="src/core/api.h" declline="18" declcolumn="1"/>
+        <location file="src/core/api.h" line="19" column="1" declfile="src/core/api.h" declline="19" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1af0a2453f8db3eb948901c7a0aed18434" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classdakku_1_1Bounds2iIterator" kindref="compound">Bounds2iIterator</ref></type>

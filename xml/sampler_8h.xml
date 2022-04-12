@@ -1,0 +1,298 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="sampler_8h" kind="file" language="C++">
+    <compoundname>sampler.h</compoundname>
+    <includes refid="serialization_8h" local="no">core/serialization.h</includes>
+    <includes refid="rng_8h" local="no">core/rng.h</includes>
+    <includedby refid="core_2api_8h" local="no">src/core/api.h</includedby>
+    <incdepgraph>
+      <node id="29">
+        <label>core/bounds.h</label>
+        <link refid="bounds_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>core/class.h</label>
+        <link refid="class_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>core/fwd.h</label>
+        <link refid="core_2fwd_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>core/logger.h</label>
+        <link refid="logger_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>core/object.h</label>
+        <link refid="object_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>core/property.h</label>
+        <link refid="property_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>core/ray.h</label>
+        <link refid="ray_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>core/rng.h</label>
+        <link refid="rng_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/core/sampler.h</label>
+        <link refid="sampler_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>core/serialization.h</label>
+        <link refid="serialization_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>core/transform.h</label>
+        <link refid="transform_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>core/vector.h</label>
+        <link refid="vector_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>core/vector_base.h</label>
+        <link refid="vector__base_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>platform.h</label>
+        <link refid="platform_8h"/>
+      </node>
+      <node id="21">
+        <label>algorithm</label>
+      </node>
+      <node id="20">
+        <label>array</label>
+      </node>
+      <node id="12">
+        <label>bit</label>
+      </node>
+      <node id="10">
+        <label>cmath</label>
+      </node>
+      <node id="11">
+        <label>cstdint</label>
+      </node>
+      <node id="16">
+        <label>cstdlib</label>
+      </node>
+      <node id="30">
+        <label>iterator</label>
+      </node>
+      <node id="8">
+        <label>limits</label>
+      </node>
+      <node id="32">
+        <label>map</label>
+      </node>
+      <node id="31">
+        <label>nlohmann/json.hpp</label>
+      </node>
+      <node id="9">
+        <label>numbers</label>
+      </node>
+      <node id="24">
+        <label>numeric</label>
+      </node>
+      <node id="23">
+        <label>ostream</label>
+      </node>
+      <node id="25">
+        <label>span</label>
+      </node>
+      <node id="15">
+        <label>spdlog/fmt/ostr.h</label>
+      </node>
+      <node id="14">
+        <label>spdlog/spdlog.h</label>
+      </node>
+      <node id="22">
+        <label>string</label>
+      </node>
+      <node id="34">
+        <label>string_view</label>
+      </node>
+      <node id="7">
+        <label>type_traits</label>
+      </node>
+      <node id="28">
+        <label>utility</label>
+      </node>
+      <node id="33">
+        <label>variant</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>src/core/api.h</label>
+        <link refid="core_2api_8h"/>
+      </node>
+      <node id="1">
+        <label>src/core/sampler.h</label>
+        <link refid="sampler_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classdakku_1_1Sampler" prot="public">dakku::Sampler</innerclass>
+    <innerclass refid="classdakku_1_1PixelSampler" prot="public">dakku::PixelSampler</innerclass>
+    <innernamespace refid="namespacedakku">dakku</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>DAKKU_CORE_SAMPLER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DAKKU_CORE_SAMPLER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="serialization_8h" kindref="compound">core/serialization.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="rng_8h" kindref="compound">core/rng.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacedakku" kindref="compound">dakku</ref><sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="classdakku_1_1Sampler" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref><sp/><ref refid="classdakku_1_1Sampler" kindref="compound">Sampler</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1SerializableObject" kindref="compound">SerializableObject</ref><sp/>{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="10" refid="classdakku_1_1Sampler_1a87a0a0e6ccbb2cfb44d4f9e812e602d7" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classdakku_1_1Sampler_1a87a0a0e6ccbb2cfb44d4f9e812e602d7" kindref="member">DAKKU_DECLARE_OBJECT</ref>(<ref refid="classdakku_1_1Sampler" kindref="compound">Sampler</ref>,<sp/><ref refid="classdakku_1_1SerializableObject" kindref="compound">SerializableObject</ref>);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="classdakku_1_1Sampler_1a1a4d3ba6a714afffb7c43837ac261a59" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Sampler_1a1a4d3ba6a714afffb7c43837ac261a59" kindref="member">startPixel</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Point" kindref="compound">Point2i</ref><sp/>&amp;p);</highlight></codeline>
+<codeline lineno="13" refid="classdakku_1_1Sampler_1ac5ed00e711106a8d52ec900279049545" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Sampler_1ac5ed00e711106a8d52ec900279049545" kindref="member">get1D</ref>()<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="14" refid="classdakku_1_1Sampler_1a7feafc6bdc72041d97c4386d3ad04ee8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Point" kindref="compound">Point2f</ref><sp/><ref refid="classdakku_1_1Sampler_1a7feafc6bdc72041d97c4386d3ad04ee8" kindref="member">get2D</ref>()<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="15" refid="classdakku_1_1Sampler_1a13457b675c8b2f1c289e971daf688e6b" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structdakku_1_1CameraSample" kindref="compound">CameraSample</ref><sp/><ref refid="classdakku_1_1Sampler_1a13457b675c8b2f1c289e971daf688e6b" kindref="member">getCameraSample</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Point" kindref="compound">Point2i</ref><sp/>&amp;pRaster);</highlight></codeline>
+<codeline lineno="16" refid="classdakku_1_1Sampler_1a7d01589a839077c9aa8a714cc0f1c832" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Sampler_1a7d01589a839077c9aa8a714cc0f1c832" kindref="member">requestArray1D</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n);</highlight></codeline>
+<codeline lineno="17" refid="classdakku_1_1Sampler_1a1681a439af954f9d7aaa8abf1cbcc7a9" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Sampler_1a1681a439af954f9d7aaa8abf1cbcc7a9" kindref="member">requestArray2D</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n);</highlight></codeline>
+<codeline lineno="18" refid="classdakku_1_1Sampler_1a9b150ed3c57754b074c76d4ef572c37b" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Sampler_1a9b150ed3c57754b074c76d4ef572c37b" kindref="member">roundCount</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>n;<sp/>}</highlight></codeline>
+<codeline lineno="19" refid="classdakku_1_1Sampler_1ad06bc5d5e33cec08785dfa9eeb3359b6" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*<ref refid="classdakku_1_1Sampler_1ad06bc5d5e33cec08785dfa9eeb3359b6" kindref="member">getArray1D</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n);</highlight></codeline>
+<codeline lineno="20" refid="classdakku_1_1Sampler_1a4d6edef64da5e8f48a899e879873d4b0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Point" kindref="compound">Point2f</ref><sp/>*<ref refid="classdakku_1_1Sampler_1a4d6edef64da5e8f48a899e879873d4b0" kindref="member">getArray2D</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n);</highlight></codeline>
+<codeline lineno="21" refid="classdakku_1_1Sampler_1a9ef74ec88ab34f09d92395361c3a5646" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Sampler_1a9ef74ec88ab34f09d92395361c3a5646" kindref="member">startNextSample</ref>();</highlight></codeline>
+<codeline lineno="22" refid="classdakku_1_1Sampler_1a6db4ea6e64512e53bcedd8e05d44f4da" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>std::unique_ptr&lt;Sampler&gt;<sp/><ref refid="classdakku_1_1Sampler_1a6db4ea6e64512e53bcedd8e05d44f4da" kindref="member">clone</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>seed)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="23" refid="classdakku_1_1Sampler_1afa18394cead083d70cced88a81a4b353" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Sampler_1afa18394cead083d70cced88a81a4b353" kindref="member">setSampleNumber</ref>(std::int64_t<sp/>sampleNum);</highlight></codeline>
+<codeline lineno="24" refid="classdakku_1_1Sampler_1a8e9bfb6f80a8a5c05f939b2723fc0af3" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/>std::int64_t<sp/><ref refid="classdakku_1_1Sampler_1a8e9bfb6f80a8a5c05f939b2723fc0af3" kindref="member">currentSampleNumber</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>currentPixelSampleIndex;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="classdakku_1_1Sampler_1acdde307c6f496f28030d201d66611d80" refkind="member"><highlight class="normal"><sp/><sp/>std::int64_t<sp/>samplesPerPixel{};</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="31" refid="classdakku_1_1Sampler_1a4c61b5fd19a6d1672c4742396804dfd4" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classdakku_1_1Point" kindref="compound">Point2i</ref><sp/><ref refid="classdakku_1_1Sampler_1a4c61b5fd19a6d1672c4742396804dfd4" kindref="member">currentPixel</ref>;</highlight></codeline>
+<codeline lineno="32" refid="classdakku_1_1Sampler_1a671fb7b7228cb0f0e2bce280dcb643a9" refkind="member"><highlight class="normal"><sp/><sp/>std::int64_t<sp/>currentPixelSampleIndex{};</highlight></codeline>
+<codeline lineno="33" refid="classdakku_1_1Sampler_1a807899c47f7117d6346f1ca5f4938dce" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;int&gt;<sp/><ref refid="classdakku_1_1Sampler_1a807899c47f7117d6346f1ca5f4938dce" kindref="member">samples1DArraySizes</ref>,<sp/>samples2DArraySizes;</highlight></codeline>
+<codeline lineno="34" refid="classdakku_1_1Sampler_1a7f53b7c7adadb6fc6a186de67fb90cc7" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;std::vector&lt;float&gt;&gt;<sp/><ref refid="classdakku_1_1Sampler_1a7f53b7c7adadb6fc6a186de67fb90cc7" kindref="member">sampleArray1D</ref>;</highlight></codeline>
+<codeline lineno="35" refid="classdakku_1_1Sampler_1a57c04456b070fa4dc07c70dbbb58252f" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;std::vector&lt;Point2f&gt;&gt;<sp/><ref refid="classdakku_1_1Sampler_1a57c04456b070fa4dc07c70dbbb58252f" kindref="member">sampleArray2D</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>array1DOffset{},<sp/>array2DOffset{};</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="classdakku_1_1PixelSampler" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref><sp/><ref refid="classdakku_1_1PixelSampler" kindref="compound">PixelSampler</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Sampler" kindref="compound">Sampler</ref><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="43" refid="classdakku_1_1PixelSampler_1ac7993b270440783bfd3bc673510d0f16" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classdakku_1_1PixelSampler_1ac7993b270440783bfd3bc673510d0f16" kindref="member">DAKKU_DECLARE_OBJECT</ref>(<ref refid="classdakku_1_1PixelSampler" kindref="compound">PixelSampler</ref>,<sp/><ref refid="classdakku_1_1Sampler" kindref="compound">Sampler</ref>);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="classdakku_1_1PixelSampler_1a7d90e9bef5d1661157c5f703bfa7182f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1PixelSampler_1a7d90e9bef5d1661157c5f703bfa7182f" kindref="member">startNextSample</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="46" refid="classdakku_1_1PixelSampler_1a7e86a30e3e73ae1b9903d5fb0e3421ef" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1PixelSampler_1a7e86a30e3e73ae1b9903d5fb0e3421ef" kindref="member">setSampleNumber</ref>(std::int64_t<sp/>sampleNum)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="47" refid="classdakku_1_1PixelSampler_1acae4bb493e68f22343dc3e73c0e83d0e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1PixelSampler_1acae4bb493e68f22343dc3e73c0e83d0e" kindref="member">get1D</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="48" refid="classdakku_1_1PixelSampler_1a6ca8f0482c43fabb839628b4ca2627df" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classdakku_1_1Point" kindref="compound">Point2f</ref><sp/><ref refid="classdakku_1_1PixelSampler_1a6ca8f0482c43fabb839628b4ca2627df" kindref="member">get2D</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="51" refid="classdakku_1_1PixelSampler_1aa27ea2abe937bf569c67838e75cbb3ba" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;std::vector&lt;float&gt;&gt;<sp/><ref refid="classdakku_1_1PixelSampler_1aa27ea2abe937bf569c67838e75cbb3ba" kindref="member">samples1D</ref>;</highlight></codeline>
+<codeline lineno="52" refid="classdakku_1_1PixelSampler_1a299da72f4d88821c44e41f765dc7a220" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;std::vector&lt;Point2f&gt;&gt;<sp/><ref refid="classdakku_1_1PixelSampler_1a299da72f4d88821c44e41f765dc7a220" kindref="member">samples2D</ref>;</highlight></codeline>
+<codeline lineno="53" refid="classdakku_1_1PixelSampler_1a76a0155347484dc71279a32000d6a189" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>current1DDimension{};</highlight></codeline>
+<codeline lineno="54" refid="classdakku_1_1PixelSampler_1aa720d4ef8598bbe42385c78b6c9a5125" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>current2DDimension{};</highlight></codeline>
+<codeline lineno="55" refid="classdakku_1_1PixelSampler_1a0043798965029fc6f5641ea9ca751b63" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classdakku_1_1RNG" kindref="compound">RNG</ref><sp/><ref refid="classdakku_1_1PixelSampler_1a0043798965029fc6f5641ea9ca751b63" kindref="member">rng</ref>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="src/core/sampler.h"/>
+  </compounddef>
+</doxygen>
