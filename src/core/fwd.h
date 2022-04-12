@@ -27,6 +27,9 @@ static constexpr size_t L1_CACHE_LINE_SIZE = 64;
 
 /// shadow epsilon, used for shadow ray, offset ray origin
 static constexpr float SHADOW_EPS = 1e-4f;
+/// 1 - eps
+static constexpr float ONE_MINUS_EPSILON =
+    1 - std::numeric_limits<float>::epsilon();
 
 /**
  * @brief concept: `T` is an arithemetic type
@@ -125,7 +128,7 @@ inline int log2Int(std::int64_t v) {
 
 /**
  * @brief linear interpolation
- * 
+ *
  */
 template <ArithmeticType T>
 inline T lerp(T a, T b, T t) {

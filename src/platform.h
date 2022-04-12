@@ -1,7 +1,7 @@
 #ifndef DAKKU_PLATFORM_H_
 #define DAKKU_PLATFORM_H_
 #if defined(_MSC_VER)
-#if !defined(_USE_MATH_DEFINES) &&!defined(M_PI)
+#if !defined(_USE_MATH_DEFINES) && !defined(M_PI)
 #define _USE_MATH_DEFINES
 #endif
 #endif
@@ -34,6 +34,9 @@ namespace dakku {
 /// dakku main module
 #define DAKKU_MAIN_MODULE 10
 
+#if defined(_MSC_VER)
+#pragma warning(disable : 4251)
+#endif
 
 }  // namespace dakku
 

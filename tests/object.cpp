@@ -22,4 +22,5 @@ TEST(Object, Register) {
   EXPECT_TRUE(Class::instance().contains("TextureMapping2D"));
   EXPECT_TRUE(Class::instance().contains("UvMapping2D"));
   EXPECT_TRUE(Class::instance().contains("Shape"));
+  EXPECT_TRUE(Class::instance().contains("Camera"));
 }

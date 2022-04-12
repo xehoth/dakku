@@ -4,6 +4,7 @@
 #include <core/bounds.h>
 #include <core/spectrum.h>
 #include <core/memory.h>
+#include <core/filter.h>
 #include <mutex>
 
 namespace dakku {

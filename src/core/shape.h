@@ -6,6 +6,10 @@
 
 namespace dakku {
 
+/**
+ * @brief shape
+ * 
+ */
 class DAKKU_EXPORT_CORE Shape : public Object {
  public:
   DAKKU_DECLARE_OBJECT(Shape, Object);
