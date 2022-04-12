@@ -2,6 +2,7 @@
 #include <stream/api.h>
 #include <filters/api.h>
 #include <textures/api.h>
+#include <cameras/api.h>
 #include <iostream>
 #include <core/mipmap.h>
 using namespace dakku;

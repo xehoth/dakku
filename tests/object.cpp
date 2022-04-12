@@ -3,6 +3,7 @@
 #include <stream/api.h>
 #include <filters/api.h>
 #include <textures/api.h>
+#include <cameras/api.h>
 
 using namespace dakku;
 
@@ -23,4 +24,5 @@ TEST(Object, Register) {
   EXPECT_TRUE(Class::instance().contains("UvMapping2D"));
   EXPECT_TRUE(Class::instance().contains("Shape"));
   EXPECT_TRUE(Class::instance().contains("Camera"));
+  EXPECT_TRUE(Class::instance().contains("PerspectiveCamera"));
 }

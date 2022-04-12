@@ -1,0 +1,6 @@
+target("dakku.cameras")
+  set_kind("shared")
+  add_defines("DAKKU_BUILD_MODULE=DAKKU_CAMERAS_MODULE")
+  add_includedirs(os.projectdir() .. "/src", {public = true})
+  add_files("*.cpp")
+  add_deps("dakku.core")
