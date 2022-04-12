@@ -44,11 +44,26 @@ struct CameraSample {
   Point2f pFilm;
 };
 
+/**
+ * @brief projective camera
+ *
+ * screen space: shorter edge normalize to $1$, the ratio is $r$, $(-1, -r) \sim
+ * (1, r)$ or $(-r, -1) \sim (r, 1)$
+ *
+ * raster: (0, 0) left-up corner, resolution: width $\times$ height
+ *
+ */
 class DAKKU_EXPORT_CORE ProjectiveCamera : public Camera {
  public:
   DAKKU_DECLARE_OBJECT(ProjectiveCamera, Camera);
 
-  // explicit ProjectiveCamera(const Transform &cameraToWorld, const Transform &cameraToScreen, const Bounds2f &screenWindow)
+  explicit ProjectiveCamera(const Transform &cameraToWorld,
+                            const Transform &cameraToScreen,
+                            const Bounds2f &screenWindow, Film *film);
+
+ protected:
+  Transform cameraToScreen, rasterToCamera;
+  Transform screenToRaster, rasterToScreen;
 };
 }  // namespace dakku
 #endif

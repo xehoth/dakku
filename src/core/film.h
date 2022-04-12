@@ -90,9 +90,18 @@ class DAKKU_EXPORT_CORE Film : public SerializableObject {
 
   /**
    * @brief Get the Cropped Pixel Bounds object
-   * 
+   *
    */
   [[nodiscard]] Bounds2i getCroppedPixelBounds() const;
+
+  /// full resolution of the film
+  Point2i fullResolution;
+  /// filter
+  std::unique_ptr<Filter> filter{};
+  /// file name to save image
+  const std::string fileName;
+  /// film crop window bounds
+  Bounds2i croppedPixelBounds;
 
  private:
   /**
@@ -111,14 +120,6 @@ class DAKKU_EXPORT_CORE Film : public SerializableObject {
 
   /// pixels data
   std::unique_ptr<Pixel[]> pixels{};
-  /// full resolution of the film
-  Point2i fullResolution;
-  /// filter
-  std::unique_ptr<Filter> filter{};
-  /// file name to save image
-  const std::string fileName;
-  /// film crop window bounds
-  Bounds2i croppedPixelBounds;
 
   /// filter table width
   static constexpr size_t filterTableWidth = 16;
