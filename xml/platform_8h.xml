@@ -84,13 +84,13 @@
         </childnode>
         <childnode refid="30" relation="include">
         </childnode>
-        <childnode refid="41" relation="include">
-        </childnode>
-        <childnode refid="42" relation="include">
-        </childnode>
         <childnode refid="43" relation="include">
         </childnode>
         <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
         </childnode>
         <childnode refid="28" relation="include">
         </childnode>
@@ -109,7 +109,7 @@
         <childnode refid="33" relation="include">
         </childnode>
       </node>
-      <node id="41">
+      <node id="43">
         <label>src/core/math.h</label>
         <link refid="math_8h"/>
       </node>
@@ -157,11 +157,15 @@
         <childnode refid="37" relation="include">
         </childnode>
       </node>
-      <node id="42">
+      <node id="41">
+        <label>src/core/reflection.h</label>
+        <link refid="reflection_8h"/>
+      </node>
+      <node id="44">
         <label>src/core/relative.h</label>
         <link refid="relative_8h"/>
       </node>
-      <node id="43">
+      <node id="45">
         <label>src/core/rng.h</label>
         <link refid="rng_8h"/>
         <childnode refid="21" relation="include">
@@ -172,6 +176,10 @@
         <link refid="sampler_8h"/>
         <childnode refid="9" relation="include">
         </childnode>
+      </node>
+      <node id="42">
+        <label>src/core/sampling.h</label>
+        <link refid="sampling_8h"/>
       </node>
       <node id="20">
         <label>src/core/serialization.h</label>
@@ -244,6 +252,10 @@
         </childnode>
         <childnode refid="40" relation="include">
         </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
         <childnode refid="37" relation="include">
         </childnode>
       </node>
@@ -279,23 +291,23 @@
         <childnode refid="18" relation="include">
         </childnode>
       </node>
-      <node id="45">
+      <node id="47">
         <label>src/gui/engine.h</label>
         <link refid="engine_8h"/>
       </node>
-      <node id="44">
+      <node id="46">
         <label>src/gui/film.h</label>
         <link refid="gui_2film_8h"/>
-        <childnode refid="45" relation="include">
-        </childnode>
-      </node>
-      <node id="46">
-        <label>src/imageio/fwd.h</label>
-        <link refid="imageio_2fwd_8h"/>
         <childnode refid="47" relation="include">
         </childnode>
       </node>
-      <node id="47">
+      <node id="48">
+        <label>src/imageio/fwd.h</label>
+        <link refid="imageio_2fwd_8h"/>
+        <childnode refid="49" relation="include">
+        </childnode>
+      </node>
+      <node id="49">
         <label>src/imageio/imageio.h</label>
         <link refid="imageio_8h"/>
       </node>
@@ -304,7 +316,7 @@
         <link refid="platform_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="46" relation="include">
+        <childnode refid="48" relation="include">
         </childnode>
       </node>
       <node id="25">
@@ -506,7 +518,7 @@
 <codeline lineno="42"><highlight class="normal"></highlight></codeline>
 <codeline lineno="43"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dakku</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="44"><highlight class="normal"></highlight></codeline>
-<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="src/platform.h"/>
   </compounddef>

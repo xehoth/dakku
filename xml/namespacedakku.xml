@@ -8,6 +8,8 @@
     <innerclass refid="classdakku_1_1Bounds3" prot="public">dakku::Bounds3</innerclass>
     <innerclass refid="classdakku_1_1BoundsBase" prot="public">dakku::BoundsBase</innerclass>
     <innerclass refid="classdakku_1_1BoxFilter" prot="public">dakku::BoxFilter</innerclass>
+    <innerclass refid="classdakku_1_1BSDF" prot="public">dakku::BSDF</innerclass>
+    <innerclass refid="classdakku_1_1BxDF" prot="public">dakku::BxDF</innerclass>
     <innerclass refid="classdakku_1_1Camera" prot="public">dakku::Camera</innerclass>
     <innerclass refid="structdakku_1_1CameraSample" prot="public">dakku::CameraSample</innerclass>
     <innerclass refid="classdakku_1_1Class" prot="public">dakku::Class</innerclass>
@@ -151,6 +153,67 @@
         </inbodydescription>
         <location file="src/core/property.h" line="15" column="1" bodyfile="src/core/property.h" bodystart="15" bodyend="23"/>
       </memberdef>
+      <memberdef kind="enum" id="namespacedakku_1a6ee44a156e67a6dd3f3d70609f10a12d" prot="public" static="no" strong="yes">
+        <type>int</type>
+        <name>BxDFType</name>
+        <enumvalue id="namespacedakku_1a6ee44a156e67a6dd3f3d70609f10a12da356402ab98f54dd6f9952d489019fd94" prot="public">
+          <name>BSDF_REFLECTION</name>
+          <initializer>= 1 &lt;&lt; 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacedakku_1a6ee44a156e67a6dd3f3d70609f10a12dad4b2381d05d0eff37cab70f4b32d09b4" prot="public">
+          <name>BSDF_TRANSMISSION</name>
+          <initializer>= 1 &lt;&lt; 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacedakku_1a6ee44a156e67a6dd3f3d70609f10a12da89e47090c25e812346446e1fc9d025d3" prot="public">
+          <name>BSDF_DIFFUSE</name>
+          <initializer>= 1 &lt;&lt; 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacedakku_1a6ee44a156e67a6dd3f3d70609f10a12da0446199c5b80a38b659b688b2ecf6b83" prot="public">
+          <name>BSDF_GLOSSY</name>
+          <initializer>= 1 &lt;&lt; 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacedakku_1a6ee44a156e67a6dd3f3d70609f10a12da90b0abfd8625757492aea7d047aea985" prot="public">
+          <name>BSDF_SPECULAR</name>
+          <initializer>= 1 &lt;&lt; 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacedakku_1a6ee44a156e67a6dd3f3d70609f10a12daa3f83dc1510822e8b71fd10be02a3186" prot="public">
+          <name>BSDF_ALL</name>
+          <initializer>= BSDF_DIFFUSE | BSDF_GLOSSY | BSDF_SPECULAR | BSDF_REFLECTION |
+             BSDF_TRANSMISSION</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>bsdf types </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/reflection.h" line="89" column="1" bodyfile="src/core/reflection.h" bodystart="89" bodyend="97"/>
+      </memberdef>
       </sectiondef>
       <sectiondef kind="typedef">
       <memberdef kind="typedef" id="namespacedakku_1abcc743bdeb62068a56f14ac3ef9963b7" prot="public" static="no">
@@ -207,7 +270,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="191" column="1" bodyfile="src/core/fwd.h" bodystart="191" bodyend="-1"/>
+        <location file="src/core/fwd.h" line="203" column="1" bodyfile="src/core/fwd.h" bodystart="203" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespacedakku_1ae7de7b89895e76d4a3f1c653393dde69" prot="public" static="no">
         <templateparamlist>
@@ -480,6 +543,54 @@
         </inbodydescription>
         <location file="src/core/fwd.h" line="23" column="24" bodyfile="src/core/fwd.h" bodystart="23" bodyend="-1"/>
       </memberdef>
+      <memberdef kind="variable" id="namespacedakku_1a4e370f12ecabfcf4c169ca0eb199f19a" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr float</type>
+        <definition>constexpr float dakku::INV_PI</definition>
+        <argsstring></argsstring>
+        <name>INV_PI</name>
+        <initializer>=
+    static_cast&lt;float&gt;(1.0 / std::numbers::pi_v&lt;double&gt;)</initializer>
+        <briefdescription>
+<para>$\frac 1 \pi$ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/fwd.h" line="26" column="24" bodyfile="src/core/fwd.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacedakku_1adae866489e43019f6aa30b0f577f8311" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr float</type>
+        <definition>constexpr float dakku::PI_OVER_2</definition>
+        <argsstring></argsstring>
+        <name>PI_OVER_2</name>
+        <initializer>=
+    static_cast&lt;float&gt;(std::numbers::pi_v&lt;double&gt; / 2.0)</initializer>
+        <briefdescription>
+<para>$\frac \pi 2$ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/fwd.h" line="30" column="24" bodyfile="src/core/fwd.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacedakku_1a2922918eae4cac3a44006897e878daf7" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr float</type>
+        <definition>constexpr float dakku::PI_OVER_4</definition>
+        <argsstring></argsstring>
+        <name>PI_OVER_4</name>
+        <initializer>=
+    static_cast&lt;float&gt;(std::numbers::pi_v&lt;double&gt; / 4)</initializer>
+        <briefdescription>
+<para>$\frac \pi 4$ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/fwd.h" line="34" column="24" bodyfile="src/core/fwd.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="variable" id="namespacedakku_1a09eee35861f6da88754b5645e5703ec4" prot="public" static="yes" constexpr="yes" mutable="no">
         <type>constexpr size_t</type>
         <definition>constexpr size_t dakku::L1_CACHE_LINE_SIZE</definition>
@@ -493,7 +604,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="26" column="25" bodyfile="src/core/fwd.h" bodystart="26" bodyend="-1"/>
+        <location file="src/core/fwd.h" line="38" column="25" bodyfile="src/core/fwd.h" bodystart="38" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacedakku_1a8ecbddd8386198d0dd187cd20b53e42d" prot="public" static="yes" constexpr="yes" mutable="no">
         <type>constexpr float</type>
@@ -508,7 +619,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="29" column="24" bodyfile="src/core/fwd.h" bodystart="29" bodyend="-1"/>
+        <location file="src/core/fwd.h" line="41" column="24" bodyfile="src/core/fwd.h" bodystart="41" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacedakku_1a204f33930db458865d7f796fd768055d" prot="public" static="yes" constexpr="yes" mutable="no">
         <type>constexpr float</type>
@@ -524,7 +635,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="31" column="24" bodyfile="src/core/fwd.h" bodystart="31" bodyend="-1"/>
+        <location file="src/core/fwd.h" line="43" column="24" bodyfile="src/core/fwd.h" bodystart="43" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacedakku_1ab81d04f25c58c43667816d47b70f4734" prot="public" static="no" mutable="no">
         <type>class <ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
@@ -537,7 +648,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="165" column="24" bodyfile="src/core/fwd.h" bodystart="165" bodyend="-1"/>
+        <location file="src/core/fwd.h" line="177" column="24" bodyfile="src/core/fwd.h" bodystart="177" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacedakku_1a60d80eeb1de44e0299e91a45d8f94446" prot="public" static="no" mutable="no">
         <type>class <ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
@@ -550,7 +661,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="166" column="24" bodyfile="src/core/fwd.h" bodystart="166" bodyend="-1"/>
+        <location file="src/core/fwd.h" line="178" column="24" bodyfile="src/core/fwd.h" bodystart="178" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacedakku_1a04dac11edaf26a2e58c8d00f31e6fa29" prot="public" static="no" mutable="no">
         <type>class <ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
@@ -563,7 +674,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="167" column="24" bodyfile="src/core/fwd.h" bodystart="167" bodyend="-1"/>
+        <location file="src/core/fwd.h" line="179" column="24" bodyfile="src/core/fwd.h" bodystart="179" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacedakku_1a96416914fd138a9ad1724211806eaadc" prot="public" static="no" mutable="no">
         <type>class <ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
@@ -576,7 +687,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="170" column="24" bodyfile="src/core/fwd.h" bodystart="170" bodyend="-1"/>
+        <location file="src/core/fwd.h" line="182" column="24" bodyfile="src/core/fwd.h" bodystart="182" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacedakku_1a5e92e662fd955a5d5e138ec343496ecb" prot="public" static="no" mutable="no">
         <type>class <ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
@@ -589,7 +700,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="171" column="24" bodyfile="src/core/fwd.h" bodystart="171" bodyend="-1"/>
+        <location file="src/core/fwd.h" line="183" column="24" bodyfile="src/core/fwd.h" bodystart="183" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacedakku_1a814749a6cf3cd7575912f5119a5be6ad" prot="public" static="no" mutable="no">
         <type>class <ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
@@ -602,7 +713,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="172" column="24" bodyfile="src/core/fwd.h" bodystart="172" bodyend="-1"/>
+        <location file="src/core/fwd.h" line="184" column="24" bodyfile="src/core/fwd.h" bodystart="184" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacedakku_1afb9578030bac745ae0282d66d44df22c" prot="public" static="no" mutable="no">
         <type>struct <ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
@@ -615,7 +726,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="173" column="24" bodyfile="src/core/fwd.h" bodystart="173" bodyend="-1"/>
+        <location file="src/core/fwd.h" line="185" column="24" bodyfile="src/core/fwd.h" bodystart="185" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacedakku_1ad32aa25f5584289eda626b47ae3525cc" prot="public" static="no" mutable="no">
         <type>class <ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
@@ -628,7 +739,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="184" column="24" bodyfile="src/core/fwd.h" bodystart="184" bodyend="-1"/>
+        <location file="src/core/fwd.h" line="196" column="24" bodyfile="src/core/fwd.h" bodystart="196" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacedakku_1a1bd6403f2998d6f8d22f87c99eca7eed" prot="public" static="no" mutable="no">
         <type>class <ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
@@ -641,7 +752,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="185" column="24" bodyfile="src/core/fwd.h" bodystart="185" bodyend="-1"/>
+        <location file="src/core/fwd.h" line="197" column="24" bodyfile="src/core/fwd.h" bodystart="197" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacedakku_1ad4c70953467b9d3d22eac250d8655aff" prot="public" static="no" mutable="no">
         <type>class <ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
@@ -654,7 +765,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="194" column="24" bodyfile="src/core/fwd.h" bodystart="194" bodyend="-1"/>
+        <location file="src/core/fwd.h" line="206" column="24" bodyfile="src/core/fwd.h" bodystart="206" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacedakku_1a24e2c761467417bba0b7b17b7c0e9f79" prot="public" static="no" mutable="no">
         <type>class <ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
@@ -667,7 +778,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="195" column="24" bodyfile="src/core/fwd.h" bodystart="195" bodyend="-1"/>
+        <location file="src/core/fwd.h" line="207" column="24" bodyfile="src/core/fwd.h" bodystart="207" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacedakku_1a91583977767aa3566783f8ab2c0538a7" prot="public" static="no" mutable="no">
         <type>class <ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
@@ -680,7 +791,33 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="197" column="24" bodyfile="src/core/fwd.h" bodystart="197" bodyend="-1"/>
+        <location file="src/core/fwd.h" line="209" column="24" bodyfile="src/core/fwd.h" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacedakku_1a13ba1e815be59eb9032a805e6a99bd95" prot="public" static="no" mutable="no">
+        <type>class <ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
+        <definition>class DAKKU_EXPORT_CORE dakku::BSDF</definition>
+        <argsstring></argsstring>
+        <name>BSDF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/fwd.h" line="212" column="24" bodyfile="src/core/fwd.h" bodystart="212" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacedakku_1a431a533ecd56199d41177b9192908e5b" prot="public" static="no" mutable="no">
+        <type>class <ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
+        <definition>class DAKKU_EXPORT_CORE dakku::BxDF</definition>
+        <argsstring></argsstring>
+        <name>BxDF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/fwd.h" line="213" column="24" bodyfile="src/core/fwd.h" bodystart="213" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacedakku_1ad67fc67650e8ff59c3b25b9e9d462ee4" prot="public" static="no" mutable="no">
         <templateparamlist>
@@ -913,7 +1050,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="50" column="21" bodyfile="src/core/fwd.h" bodystart="50" bodyend="52"/>
+        <location file="src/core/fwd.h" line="62" column="21" bodyfile="src/core/fwd.h" bodystart="62" bodyend="64"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1af703ca0ba560169d1daf114a07175bf4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -948,7 +1085,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="61" column="21" bodyfile="src/core/fwd.h" bodystart="61" bodyend="61"/>
+        <location file="src/core/fwd.h" line="73" column="21" bodyfile="src/core/fwd.h" bodystart="73" bodyend="73"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1a2a53414d45143151128b45997c42d7af" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>float</type>
@@ -978,7 +1115,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="69" column="14" bodyfile="src/core/fwd.h" bodystart="69" bodyend="69"/>
+        <location file="src/core/fwd.h" line="81" column="14" bodyfile="src/core/fwd.h" bodystart="81" bodyend="81"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1a3d1bddf363d9216df7df7c148f917cd4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>float</type>
@@ -1008,7 +1145,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="77" column="14" bodyfile="src/core/fwd.h" bodystart="77" bodyend="77"/>
+        <location file="src/core/fwd.h" line="89" column="14" bodyfile="src/core/fwd.h" bodystart="89" bodyend="89"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1a7b74e38fede77ac78a98a577ae8eff7c" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -1051,7 +1188,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="87" column="23" bodyfile="src/core/fwd.h" bodystart="87" bodyend="87"/>
+        <location file="src/core/fwd.h" line="99" column="23" bodyfile="src/core/fwd.h" bodystart="99" bodyend="99"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1a0d82bdc5016a1bcbb43a0a37c068be53" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::int32_t</type>
@@ -1069,7 +1206,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="93" column="21" bodyfile="src/core/fwd.h" bodystart="93" bodyend="101"/>
+        <location file="src/core/fwd.h" line="105" column="21" bodyfile="src/core/fwd.h" bodystart="105" bodyend="113"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1a1142b7cee4727248dd7911c3d3f93d79" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::int64_t</type>
@@ -1087,7 +1224,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="107" column="21" bodyfile="src/core/fwd.h" bodystart="107" bodyend="116"/>
+        <location file="src/core/fwd.h" line="119" column="21" bodyfile="src/core/fwd.h" bodystart="119" bodyend="128"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1af5b2aaaf6403e90c77a4746ff984db8b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>float</type>
@@ -1109,7 +1246,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="118" column="14" bodyfile="src/core/fwd.h" bodystart="118" bodyend="126"/>
+        <location file="src/core/fwd.h" line="130" column="14" bodyfile="src/core/fwd.h" bodystart="130" bodyend="138"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1a08fa951dfb5b1584b36175563f648627" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -1127,7 +1264,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="132" column="12" bodyfile="src/core/fwd.h" bodystart="132" bodyend="132"/>
+        <location file="src/core/fwd.h" line="144" column="12" bodyfile="src/core/fwd.h" bodystart="144" bodyend="144"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1a41d1cd0b3579a6b8c5e22ab4e2146f00" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -1145,7 +1282,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="138" column="12" bodyfile="src/core/fwd.h" bodystart="138" bodyend="140"/>
+        <location file="src/core/fwd.h" line="150" column="12" bodyfile="src/core/fwd.h" bodystart="150" bodyend="152"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1acc81c85fd43a6c63486282435d8aecf1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -1163,7 +1300,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="146" column="12" bodyfile="src/core/fwd.h" bodystart="146" bodyend="146"/>
+        <location file="src/core/fwd.h" line="158" column="12" bodyfile="src/core/fwd.h" bodystart="158" bodyend="158"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1a66eb6977bab34786fa743859b0ffc52d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -1181,7 +1318,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="152" column="12" bodyfile="src/core/fwd.h" bodystart="152" bodyend="154"/>
+        <location file="src/core/fwd.h" line="164" column="12" bodyfile="src/core/fwd.h" bodystart="164" bodyend="166"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1a837463872226179eb46dde52c558f1c1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -1214,7 +1351,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/fwd.h" line="161" column="10" bodyfile="src/core/fwd.h" bodystart="161" bodyend="163"/>
+        <location file="src/core/fwd.h" line="173" column="10" bodyfile="src/core/fwd.h" bodystart="173" bodyend="175"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1a5dc6c62020f3cb484153c43801d71ee0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -1337,6 +1474,681 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/core/ray.h" line="100" column="16" bodyfile="src/core/ray.h" bodystart="100" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1afff271d6755ba6c5bce88e472b0fda97" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float dakku::cosTheta</definition>
+        <argsstring>(const Vector3f &amp;w)</argsstring>
+        <name>cosTheta</name>
+        <param>
+          <type>const <ref refid="namespacedakku_1aa12b2f1fc9684bf8ba7fbf5b600685c6" kindref="member">Vector3f</ref> &amp;</type>
+          <declname>w</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/reflection.h" line="6" column="14" bodyfile="src/core/reflection.h" bodystart="6" bodyend="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1af1be72fe6812bf50fc174613feb27653" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float dakku::cos2Theta</definition>
+        <argsstring>(const Vector3f &amp;w)</argsstring>
+        <name>cos2Theta</name>
+        <param>
+          <type>const <ref refid="namespacedakku_1aa12b2f1fc9684bf8ba7fbf5b600685c6" kindref="member">Vector3f</ref> &amp;</type>
+          <declname>w</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/reflection.h" line="7" column="14" bodyfile="src/core/reflection.h" bodystart="7" bodyend="7"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1a879ba33876b48280366546d864b543f2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float dakku::absCosTheta</definition>
+        <argsstring>(const Vector3f &amp;w)</argsstring>
+        <name>absCosTheta</name>
+        <param>
+          <type>const <ref refid="namespacedakku_1aa12b2f1fc9684bf8ba7fbf5b600685c6" kindref="member">Vector3f</ref> &amp;</type>
+          <declname>w</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/reflection.h" line="8" column="14" bodyfile="src/core/reflection.h" bodystart="8" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1aea86efd5024447271fd1b82566f21879" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float dakku::sin2Theta</definition>
+        <argsstring>(const Vector3f &amp;w)</argsstring>
+        <name>sin2Theta</name>
+        <param>
+          <type>const <ref refid="namespacedakku_1aa12b2f1fc9684bf8ba7fbf5b600685c6" kindref="member">Vector3f</ref> &amp;</type>
+          <declname>w</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/reflection.h" line="9" column="14" bodyfile="src/core/reflection.h" bodystart="9" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1ad8019351269f1f3f694d08469157e0a5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float dakku::sinTheta</definition>
+        <argsstring>(const Vector3f &amp;w)</argsstring>
+        <name>sinTheta</name>
+        <param>
+          <type>const <ref refid="namespacedakku_1aa12b2f1fc9684bf8ba7fbf5b600685c6" kindref="member">Vector3f</ref> &amp;</type>
+          <declname>w</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/reflection.h" line="12" column="14" bodyfile="src/core/reflection.h" bodystart="12" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1ac7b4842ad43512dfab7c97697743872b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float dakku::tanTheta</definition>
+        <argsstring>(const Vector3f &amp;w)</argsstring>
+        <name>tanTheta</name>
+        <param>
+          <type>const <ref refid="namespacedakku_1aa12b2f1fc9684bf8ba7fbf5b600685c6" kindref="member">Vector3f</ref> &amp;</type>
+          <declname>w</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/reflection.h" line="13" column="14" bodyfile="src/core/reflection.h" bodystart="13" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1a3eea109f743777a1225937b8e80add49" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float dakku::tan2Theta</definition>
+        <argsstring>(const Vector3f &amp;w)</argsstring>
+        <name>tan2Theta</name>
+        <param>
+          <type>const <ref refid="namespacedakku_1aa12b2f1fc9684bf8ba7fbf5b600685c6" kindref="member">Vector3f</ref> &amp;</type>
+          <declname>w</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/reflection.h" line="14" column="14" bodyfile="src/core/reflection.h" bodystart="14" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1a06e3b9f59237e8dc78bb02794fa80b04" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float dakku::cosPhi</definition>
+        <argsstring>(const Vector3f &amp;w)</argsstring>
+        <name>cosPhi</name>
+        <param>
+          <type>const <ref refid="namespacedakku_1aa12b2f1fc9684bf8ba7fbf5b600685c6" kindref="member">Vector3f</ref> &amp;</type>
+          <declname>w</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/reflection.h" line="17" column="14" bodyfile="src/core/reflection.h" bodystart="17" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1a841c3518071695ee54986494313d1803" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float dakku::sinPhi</definition>
+        <argsstring>(const Vector3f &amp;w)</argsstring>
+        <name>sinPhi</name>
+        <param>
+          <type>const <ref refid="namespacedakku_1aa12b2f1fc9684bf8ba7fbf5b600685c6" kindref="member">Vector3f</ref> &amp;</type>
+          <declname>w</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/reflection.h" line="21" column="14" bodyfile="src/core/reflection.h" bodystart="21" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1a8871f526c772a63c8aa084c2a4a5ed07" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float dakku::cos2Phi</definition>
+        <argsstring>(const Vector3f &amp;w)</argsstring>
+        <name>cos2Phi</name>
+        <param>
+          <type>const <ref refid="namespacedakku_1aa12b2f1fc9684bf8ba7fbf5b600685c6" kindref="member">Vector3f</ref> &amp;</type>
+          <declname>w</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/reflection.h" line="25" column="14" bodyfile="src/core/reflection.h" bodystart="25" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1accd4ed8e0230cdf8f420e33dcc532311" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float dakku::sin2Phi</definition>
+        <argsstring>(const Vector3f &amp;w)</argsstring>
+        <name>sin2Phi</name>
+        <param>
+          <type>const <ref refid="namespacedakku_1aa12b2f1fc9684bf8ba7fbf5b600685c6" kindref="member">Vector3f</ref> &amp;</type>
+          <declname>w</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/reflection.h" line="26" column="14" bodyfile="src/core/reflection.h" bodystart="26" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1acba70ca995b749f7ef8daa9379d22153" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool dakku::sameHemisphere</definition>
+        <argsstring>(const Vector3f &amp;w, const Vector3f &amp;n)</argsstring>
+        <name>sameHemisphere</name>
+        <param>
+          <type>const <ref refid="namespacedakku_1aa12b2f1fc9684bf8ba7fbf5b600685c6" kindref="member">Vector3f</ref> &amp;</type>
+          <declname>w</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacedakku_1aa12b2f1fc9684bf8ba7fbf5b600685c6" kindref="member">Vector3f</ref> &amp;</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/reflection.h" line="27" column="13" bodyfile="src/core/reflection.h" bodystart="27" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1a89dbbdf1e8f3a5b8b0e813d8242541a3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool dakku::sameHemisphere</definition>
+        <argsstring>(const Vector3f &amp;w, const Normal3f &amp;n)</argsstring>
+        <name>sameHemisphere</name>
+        <param>
+          <type>const <ref refid="namespacedakku_1aa12b2f1fc9684bf8ba7fbf5b600685c6" kindref="member">Vector3f</ref> &amp;</type>
+          <declname>w</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacedakku_1a9b64e14dceffe6ac84029f1d40d6ec41" kindref="member">Normal3f</ref> &amp;</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/reflection.h" line="30" column="13" bodyfile="src/core/reflection.h" bodystart="30" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1a3bb200e88e63690051e6bad2afab6bb2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float dakku::frDielectric</definition>
+        <argsstring>(float cosThetaI, float etaI, float etaT)</argsstring>
+        <name>frDielectric</name>
+        <param>
+          <type>float</type>
+          <declname>cosThetaI</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>etaI</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>etaT</declname>
+        </param>
+        <briefdescription>
+<para>fresnel reflectance of conductor sin(thetaI) / sin(thetaT) = (etaT - i kT) / etaI eta = etaT / etaI etaK = kT / etaI </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cosThetaI</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>incident cos theta </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>k</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>kT </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/reflection.h" line="42" column="7" declfile="src/core/reflection.h" declline="42" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1af4d59c83a86090d6b80cf663c39fbf85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacedakku_1a72f253f8c73b2ec7fef8e3c83c0eac17" kindref="member">Spectrum</ref></type>
+        <definition>Spectrum dakku::frConductor</definition>
+        <argsstring>(float cosThetaI, const Spectrum &amp;etaI, const Spectrum &amp;etaT, const Spectrum &amp;k)</argsstring>
+        <name>frConductor</name>
+        <param>
+          <type>float</type>
+          <declname>cosThetaI</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacedakku_1a72f253f8c73b2ec7fef8e3c83c0eac17" kindref="member">Spectrum</ref> &amp;</type>
+          <declname>etaI</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacedakku_1a72f253f8c73b2ec7fef8e3c83c0eac17" kindref="member">Spectrum</ref> &amp;</type>
+          <declname>etaT</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacedakku_1a72f253f8c73b2ec7fef8e3c83c0eac17" kindref="member">Spectrum</ref> &amp;</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>fresnel reflectance of conductor<itemizedlist>
+<listitem><para>sin(thetaI) / sin(thetaT) = (etaT - i kT) / etaI eta = etaT / etaI etaK = kT / etaI <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cosThetaI</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>incident cos theta @k kT </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/reflection.h" line="52" column="10" declfile="src/core/reflection.h" declline="52" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1a8495aaad546987b3e302208282517a15" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacedakku_1aa12b2f1fc9684bf8ba7fbf5b600685c6" kindref="member">Vector3f</ref></type>
+        <definition>Vector3f dakku::reflect</definition>
+        <argsstring>(const Vector3f &amp;wo, const Vector3f &amp;n)</argsstring>
+        <name>reflect</name>
+        <param>
+          <type>const <ref refid="namespacedakku_1aa12b2f1fc9684bf8ba7fbf5b600685c6" kindref="member">Vector3f</ref> &amp;</type>
+          <declname>wo</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacedakku_1aa12b2f1fc9684bf8ba7fbf5b600685c6" kindref="member">Vector3f</ref> &amp;</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>calculate reflection ray </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/reflection.h" line="59" column="17" bodyfile="src/core/reflection.h" bodystart="59" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1ad46911925bf23eb15e4f60875257ed9f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool dakku::refract</definition>
+        <argsstring>(const Vector3f &amp;wi, const Normal3f &amp;n, float eta, Vector3f &amp;wt)</argsstring>
+        <name>refract</name>
+        <param>
+          <type>const <ref refid="namespacedakku_1aa12b2f1fc9684bf8ba7fbf5b600685c6" kindref="member">Vector3f</ref> &amp;</type>
+          <declname>wi</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacedakku_1a9b64e14dceffe6ac84029f1d40d6ec41" kindref="member">Normal3f</ref> &amp;</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>eta</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacedakku_1aa12b2f1fc9684bf8ba7fbf5b600685c6" kindref="member">Vector3f</ref> &amp;</type>
+          <declname>wt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>calculate the refraction ray <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>wi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>incident direction </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the normal </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>eta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>etaI / etaT </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>refraction direction </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>whether it refracts </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/reflection.h" line="71" column="13" bodyfile="src/core/reflection.h" bodystart="71" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1ad12f3d2e3190c7aa08c22de45de621a9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacedakku_1a6ee44a156e67a6dd3f3d70609f10a12d" kindref="member">BxDFType</ref></type>
+        <definition>BxDFType dakku::operator&amp;</definition>
+        <argsstring>(const BxDFType &amp;a, const BxDFType &amp;b)</argsstring>
+        <name>operator&amp;</name>
+        <param>
+          <type>const <ref refid="namespacedakku_1a6ee44a156e67a6dd3f3d70609f10a12d" kindref="member">BxDFType</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacedakku_1a6ee44a156e67a6dd3f3d70609f10a12d" kindref="member">BxDFType</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/reflection.h" line="99" column="17" bodyfile="src/core/reflection.h" bodystart="99" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1afd5aa3a8929d78feb77aea41fae4f997" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacedakku_1a6ee44a156e67a6dd3f3d70609f10a12d" kindref="member">BxDFType</ref></type>
+        <definition>BxDFType dakku::operator|</definition>
+        <argsstring>(const BxDFType &amp;a, const BxDFType &amp;b)</argsstring>
+        <name>operator|</name>
+        <param>
+          <type>const <ref refid="namespacedakku_1a6ee44a156e67a6dd3f3d70609f10a12d" kindref="member">BxDFType</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacedakku_1a6ee44a156e67a6dd3f3d70609f10a12d" kindref="member">BxDFType</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/reflection.h" line="103" column="17" bodyfile="src/core/reflection.h" bodystart="103" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1ad73ccae1cd088ac5d10ec643bc15eb82" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacedakku_1a6ee44a156e67a6dd3f3d70609f10a12d" kindref="member">BxDFType</ref></type>
+        <definition>BxDFType dakku::operator&amp;</definition>
+        <argsstring>(const BxDFType &amp;a, int b)</argsstring>
+        <name>operator&amp;</name>
+        <param>
+          <type>const <ref refid="namespacedakku_1a6ee44a156e67a6dd3f3d70609f10a12d" kindref="member">BxDFType</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/reflection.h" line="107" column="17" bodyfile="src/core/reflection.h" bodystart="107" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1aa24d67eab0201ec6b4f849fa11592eb2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacedakku_1a6ee44a156e67a6dd3f3d70609f10a12d" kindref="member">BxDFType</ref></type>
+        <definition>BxDFType dakku::operator&amp;</definition>
+        <argsstring>(int a, const BxDFType &amp;b)</argsstring>
+        <name>operator&amp;</name>
+        <param>
+          <type>int</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacedakku_1a6ee44a156e67a6dd3f3d70609f10a12d" kindref="member">BxDFType</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/reflection.h" line="111" column="17" bodyfile="src/core/reflection.h" bodystart="111" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1a48a0c304ff8eac7ee3d67fbd229c6307" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacedakku_1a6ee44a156e67a6dd3f3d70609f10a12d" kindref="member">BxDFType</ref></type>
+        <definition>BxDFType dakku::operator|</definition>
+        <argsstring>(const BxDFType &amp;a, int b)</argsstring>
+        <name>operator|</name>
+        <param>
+          <type>const <ref refid="namespacedakku_1a6ee44a156e67a6dd3f3d70609f10a12d" kindref="member">BxDFType</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/reflection.h" line="115" column="17" bodyfile="src/core/reflection.h" bodystart="115" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1a93adc4d20e18e33bc3904f0eb9658961" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacedakku_1a6ee44a156e67a6dd3f3d70609f10a12d" kindref="member">BxDFType</ref></type>
+        <definition>BxDFType dakku::operator|</definition>
+        <argsstring>(int a, const BxDFType &amp;b)</argsstring>
+        <name>operator|</name>
+        <param>
+          <type>int</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacedakku_1a6ee44a156e67a6dd3f3d70609f10a12d" kindref="member">BxDFType</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/reflection.h" line="119" column="17" bodyfile="src/core/reflection.h" bodystart="119" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1a972fe24ecab810defaab710b05a1d30a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacedakku_1a9910f23501fd2ef5e9a829cdab0992be" kindref="member">Point2f</ref></type>
+        <definition>Point2f dakku::uniformSampleTriangle</definition>
+        <argsstring>(const Point2f &amp;u)</argsstring>
+        <name>uniformSampleTriangle</name>
+        <param>
+          <type>const <ref refid="namespacedakku_1a9910f23501fd2ef5e9a829cdab0992be" kindref="member">Point2f</ref> &amp;</type>
+          <declname>u</declname>
+        </param>
+        <briefdescription>
+<para>uniform sample a triangle </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>u</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>2d random number </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the barycentric coordinate of the sampled point </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/sampling.h" line="13" column="9" declfile="src/core/sampling.h" declline="13" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1a656594e267b6cd6917580e34ed50ee01" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacedakku_1a9910f23501fd2ef5e9a829cdab0992be" kindref="member">Point2f</ref></type>
+        <definition>Point2f dakku::concentricSampleDisk</definition>
+        <argsstring>(const Point2f &amp;u)</argsstring>
+        <name>concentricSampleDisk</name>
+        <param>
+          <type>const <ref refid="namespacedakku_1a9910f23501fd2ef5e9a829cdab0992be" kindref="member">Point2f</ref> &amp;</type>
+          <declname>u</declname>
+        </param>
+        <briefdescription>
+<para>sample disk </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>u</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>2d random number </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/sampling.h" line="20" column="9" declfile="src/core/sampling.h" declline="20" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1a457a044effa42ab1afd0dc61ff2ddc71" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacedakku_1aa12b2f1fc9684bf8ba7fbf5b600685c6" kindref="member">Vector3f</ref></type>
+        <definition>Vector3f dakku::cosineSampleHemisphere</definition>
+        <argsstring>(const Point2f &amp;u)</argsstring>
+        <name>cosineSampleHemisphere</name>
+        <param>
+          <type>const <ref refid="namespacedakku_1a9910f23501fd2ef5e9a829cdab0992be" kindref="member">Point2f</ref> &amp;</type>
+          <declname>u</declname>
+        </param>
+        <briefdescription>
+<para>cosine weighted sample hemisphere </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>u</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>2d random number </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the sampled w in the hemisphere </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/sampling.h" line="28" column="17" bodyfile="src/core/sampling.h" bodystart="28" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1a8d0a8a38a5884ff0cf4397214bd22378" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacedakku_1aa12b2f1fc9684bf8ba7fbf5b600685c6" kindref="member">Vector3f</ref></type>
+        <definition>Vector3f dakku::uniformSampleSphere</definition>
+        <argsstring>(const Point2f &amp;u)</argsstring>
+        <name>uniformSampleSphere</name>
+        <param>
+          <type>const <ref refid="namespacedakku_1a9910f23501fd2ef5e9a829cdab0992be" kindref="member">Point2f</ref> &amp;</type>
+          <declname>u</declname>
+        </param>
+        <briefdescription>
+<para>uniform sample a sphere </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>u</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>2d random number </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the sampled point </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/sampling.h" line="41" column="10" declfile="src/core/sampling.h" declline="41" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1a7c3e7ee0be950fb7fbfb62fceb80eec5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float dakku::powerHeuristic</definition>
+        <argsstring>(int nf, float fPdf, int ng, float gPdf)</argsstring>
+        <name>powerHeuristic</name>
+        <param>
+          <type>int</type>
+          <declname>nf</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>fPdf</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ng</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>gPdf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/sampling.h" line="43" column="14" bodyfile="src/core/sampling.h" bodystart="43" bodyend="46"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1a80d2f8350cdcc84f6586fed5f396f8c7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>

@@ -1,0 +1,374 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="classdakku_1_1BSDF" kind="class" language="C++" prot="public">
+    <compoundname>dakku::BSDF</compoundname>
+    <includes refid="reflection_8h" local="no">reflection.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classdakku_1_1BSDF_1a7ab07005a7e1a9cb8e1c72727932bef3" prot="public" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float dakku::BSDF::eta</definition>
+        <argsstring></argsstring>
+        <name>eta</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/reflection.h" line="168" column="15" bodyfile="src/core/reflection.h" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdakku_1_1BSDF_1a9dd0f085b38b411a16bf3add2ca407bd" prot="private" static="no" mutable="no">
+        <type>const <ref refid="namespacedakku_1a9b64e14dceffe6ac84029f1d40d6ec41" kindref="member">Normal3f</ref></type>
+        <definition>const Normal3f dakku::BSDF::ns</definition>
+        <argsstring></argsstring>
+        <name>ns</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/reflection.h" line="172" column="18" bodyfile="src/core/reflection.h" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdakku_1_1BSDF_1ad9407348acecb3a7d6523b0c26733c1b" prot="private" static="no" mutable="no">
+        <type>const <ref refid="namespacedakku_1a9b64e14dceffe6ac84029f1d40d6ec41" kindref="member">Normal3f</ref></type>
+        <definition>const Normal3f dakku::BSDF::ng</definition>
+        <argsstring></argsstring>
+        <name>ng</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/reflection.h" line="172" column="21" bodyfile="src/core/reflection.h" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdakku_1_1BSDF_1a3ba15a4c499986d97b2aab241e31084e" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacedakku_1aa12b2f1fc9684bf8ba7fbf5b600685c6" kindref="member">Vector3f</ref></type>
+        <definition>Vector3f dakku::BSDF::ss</definition>
+        <argsstring></argsstring>
+        <name>ss</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/reflection.h" line="174" column="12" bodyfile="src/core/reflection.h" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdakku_1_1BSDF_1ae42573203cfeeb3d4cb3105592ff390c" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacedakku_1aa12b2f1fc9684bf8ba7fbf5b600685c6" kindref="member">Vector3f</ref></type>
+        <definition>Vector3f dakku::BSDF::ts</definition>
+        <argsstring></argsstring>
+        <name>ts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/reflection.h" line="174" column="15" bodyfile="src/core/reflection.h" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdakku_1_1BSDF_1a34c6aabf0f93bd53c665705ec0a6e734" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int dakku::BSDF::nBxDFs</definition>
+        <argsstring></argsstring>
+        <name>nBxDFs</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/reflection.h" line="175" column="7" bodyfile="src/core/reflection.h" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdakku_1_1BSDF_1aed692d33a06390f27db8d05485874ebc" prot="private" static="no" mutable="no">
+        <type><ref refid="classdakku_1_1BxDF" kindref="compound">BxDF</ref> *</type>
+        <definition>BxDF* dakku::BSDF::bxdfs[MAX_BXDFS]</definition>
+        <argsstring>[MAX_BXDFS]</argsstring>
+        <name>bxdfs</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/reflection.h" line="177" column="8" bodyfile="src/core/reflection.h" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classdakku_1_1BSDF_1a9dc08946f513a58833e47a724e4126d5" prot="private" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int dakku::BSDF::MAX_BXDFS</definition>
+        <argsstring></argsstring>
+        <name>MAX_BXDFS</name>
+        <initializer>= 8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/reflection.h" line="176" column="24" bodyfile="src/core/reflection.h" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdakku_1_1BSDF_1a126894c3deb1ad280865b2a4f00af23c" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dakku::BSDF::BSDF</definition>
+        <argsstring>(const SurfaceInteraction &amp;si, float eta=1)</argsstring>
+        <name>BSDF</name>
+        <param>
+          <type>const <ref refid="classdakku_1_1SurfaceInteraction" kindref="compound">SurfaceInteraction</ref> &amp;</type>
+          <declname>si</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>eta</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>si</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>geometry information </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>eta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>relative index of refraction over the boundary </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/reflection.h" line="133" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1BSDF_1a41722d90c317ad5eea521cfc4dec42f6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void dakku::BSDF::add</definition>
+        <argsstring>(BxDF *b)</argsstring>
+        <name>add</name>
+        <param>
+          <type><ref refid="classdakku_1_1BxDF" kindref="compound">BxDF</ref> *</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/reflection.h" line="135" column="8" bodyfile="src/core/reflection.h" bodystart="135" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1BSDF_1aff581f3e97964d29aec2e10b7548a265" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacedakku_1aa12b2f1fc9684bf8ba7fbf5b600685c6" kindref="member">Vector3f</ref></type>
+        <definition>Vector3f dakku::BSDF::worldToLocal</definition>
+        <argsstring>(const Vector3f &amp;v) const</argsstring>
+        <name>worldToLocal</name>
+        <param>
+          <type>const <ref refid="namespacedakku_1aa12b2f1fc9684bf8ba7fbf5b600685c6" kindref="member">Vector3f</ref> &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/reflection.h" line="139" column="13" bodyfile="src/core/reflection.h" bodystart="139" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1BSDF_1a5d63e7ea9cb6790be6f6c88c03781b44" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacedakku_1aa12b2f1fc9684bf8ba7fbf5b600685c6" kindref="member">Vector3f</ref></type>
+        <definition>Vector3f dakku::BSDF::localToWorld</definition>
+        <argsstring>(const Vector3f &amp;v) const</argsstring>
+        <name>localToWorld</name>
+        <param>
+          <type>const <ref refid="namespacedakku_1aa12b2f1fc9684bf8ba7fbf5b600685c6" kindref="member">Vector3f</ref> &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/reflection.h" line="142" column="13" bodyfile="src/core/reflection.h" bodystart="142" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1BSDF_1ad3aa7ac3f3f868ee333cb04067124459" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int dakku::BSDF::numComponents</definition>
+        <argsstring>(BxDFType flags) const</argsstring>
+        <name>numComponents</name>
+        <param>
+          <type><ref refid="namespacedakku_1a6ee44a156e67a6dd3f3d70609f10a12d" kindref="member">BxDFType</ref></type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>calculate the number of components which match the flags </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/reflection.h" line="148" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1BSDF_1a1d54c9cbd6d3048b2a9c03f55a0d1708" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacedakku_1a72f253f8c73b2ec7fef8e3c83c0eac17" kindref="member">Spectrum</ref></type>
+        <definition>Spectrum dakku::BSDF::f</definition>
+        <argsstring>(const Vector3f &amp;woW, const Vector3f &amp;wiW, BxDFType flags=BxDFType::BSDF_ALL) const</argsstring>
+        <name>f</name>
+        <param>
+          <type>const <ref refid="namespacedakku_1aa12b2f1fc9684bf8ba7fbf5b600685c6" kindref="member">Vector3f</ref> &amp;</type>
+          <declname>woW</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacedakku_1aa12b2f1fc9684bf8ba7fbf5b600685c6" kindref="member">Vector3f</ref> &amp;</type>
+          <declname>wiW</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacedakku_1a6ee44a156e67a6dd3f3d70609f10a12d" kindref="member">BxDFType</ref></type>
+          <declname>flags</declname>
+          <defval><ref refid="namespacedakku_1a6ee44a156e67a6dd3f3d70609f10a12daa3f83dc1510822e8b71fd10be02a3186" kindref="member">BxDFType::BSDF_ALL</ref></defval>
+        </param>
+        <briefdescription>
+<para>evaluate the <ref refid="classdakku_1_1BSDF" kindref="compound">BSDF</ref> with given flags </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/reflection.h" line="152" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1BSDF_1ade79e649ea561dbd1fb22946feba2abd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacedakku_1a72f253f8c73b2ec7fef8e3c83c0eac17" kindref="member">Spectrum</ref></type>
+        <definition>Spectrum dakku::BSDF::sampleF</definition>
+        <argsstring>(const Vector3f &amp;wo, Vector3f &amp;wi, const Point2f &amp;sample, float &amp;pdf, BxDFType type=BxDFType::BSDF_ALL, BxDFType *sampledType=nullptr) const</argsstring>
+        <name>sampleF</name>
+        <param>
+          <type>const <ref refid="namespacedakku_1aa12b2f1fc9684bf8ba7fbf5b600685c6" kindref="member">Vector3f</ref> &amp;</type>
+          <declname>wo</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacedakku_1aa12b2f1fc9684bf8ba7fbf5b600685c6" kindref="member">Vector3f</ref> &amp;</type>
+          <declname>wi</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacedakku_1a9910f23501fd2ef5e9a829cdab0992be" kindref="member">Point2f</ref> &amp;</type>
+          <declname>sample</declname>
+        </param>
+        <param>
+          <type>float &amp;</type>
+          <declname>pdf</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacedakku_1a6ee44a156e67a6dd3f3d70609f10a12d" kindref="member">BxDFType</ref></type>
+          <declname>type</declname>
+          <defval><ref refid="namespacedakku_1a6ee44a156e67a6dd3f3d70609f10a12daa3f83dc1510822e8b71fd10be02a3186" kindref="member">BxDFType::BSDF_ALL</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="namespacedakku_1a6ee44a156e67a6dd3f3d70609f10a12d" kindref="member">BxDFType</ref> *</type>
+          <declname>sampledType</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+<para>sample &amp; evaluate the <ref refid="classdakku_1_1BSDF" kindref="compound">BSDF</ref> with given flags </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">wi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the sampled direction </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">sample</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the random sample </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">pdf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the pdf </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/reflection.h" line="161" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1BSDF_1a97af40d797653a84e77ae0dc9eb2c54c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float dakku::BSDF::pdf</definition>
+        <argsstring>(const Vector3f &amp;wo, const Vector3f &amp;wi, BxDFType flags=BxDFType::BSDF_ALL) const</argsstring>
+        <name>pdf</name>
+        <param>
+          <type>const <ref refid="namespacedakku_1aa12b2f1fc9684bf8ba7fbf5b600685c6" kindref="member">Vector3f</ref> &amp;</type>
+          <declname>wo</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacedakku_1aa12b2f1fc9684bf8ba7fbf5b600685c6" kindref="member">Vector3f</ref> &amp;</type>
+          <declname>wi</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacedakku_1a6ee44a156e67a6dd3f3d70609f10a12d" kindref="member">BxDFType</ref></type>
+          <declname>flags</declname>
+          <defval><ref refid="namespacedakku_1a6ee44a156e67a6dd3f3d70609f10a12daa3f83dc1510822e8b71fd10be02a3186" kindref="member">BxDFType::BSDF_ALL</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/reflection.h" line="164" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>bsdf </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/core/reflection.h" line="127" column="1" bodyfile="src/core/reflection.h" bodystart="127" bodyend="178"/>
+    <listofallmembers>
+      <member refid="classdakku_1_1BSDF_1a41722d90c317ad5eea521cfc4dec42f6" prot="public" virt="non-virtual"><scope>dakku::BSDF</scope><name>add</name></member>
+      <member refid="classdakku_1_1BSDF_1a126894c3deb1ad280865b2a4f00af23c" prot="public" virt="non-virtual"><scope>dakku::BSDF</scope><name>BSDF</name></member>
+      <member refid="classdakku_1_1BSDF_1aed692d33a06390f27db8d05485874ebc" prot="private" virt="non-virtual"><scope>dakku::BSDF</scope><name>bxdfs</name></member>
+      <member refid="classdakku_1_1BSDF_1a7ab07005a7e1a9cb8e1c72727932bef3" prot="public" virt="non-virtual"><scope>dakku::BSDF</scope><name>eta</name></member>
+      <member refid="classdakku_1_1BSDF_1a1d54c9cbd6d3048b2a9c03f55a0d1708" prot="public" virt="non-virtual"><scope>dakku::BSDF</scope><name>f</name></member>
+      <member refid="classdakku_1_1BSDF_1a5d63e7ea9cb6790be6f6c88c03781b44" prot="public" virt="non-virtual"><scope>dakku::BSDF</scope><name>localToWorld</name></member>
+      <member refid="classdakku_1_1BSDF_1a9dc08946f513a58833e47a724e4126d5" prot="private" virt="non-virtual"><scope>dakku::BSDF</scope><name>MAX_BXDFS</name></member>
+      <member refid="classdakku_1_1BSDF_1a34c6aabf0f93bd53c665705ec0a6e734" prot="private" virt="non-virtual"><scope>dakku::BSDF</scope><name>nBxDFs</name></member>
+      <member refid="classdakku_1_1BSDF_1ad9407348acecb3a7d6523b0c26733c1b" prot="private" virt="non-virtual"><scope>dakku::BSDF</scope><name>ng</name></member>
+      <member refid="classdakku_1_1BSDF_1a9dd0f085b38b411a16bf3add2ca407bd" prot="private" virt="non-virtual"><scope>dakku::BSDF</scope><name>ns</name></member>
+      <member refid="classdakku_1_1BSDF_1ad3aa7ac3f3f868ee333cb04067124459" prot="public" virt="non-virtual"><scope>dakku::BSDF</scope><name>numComponents</name></member>
+      <member refid="classdakku_1_1BSDF_1a97af40d797653a84e77ae0dc9eb2c54c" prot="public" virt="non-virtual"><scope>dakku::BSDF</scope><name>pdf</name></member>
+      <member refid="classdakku_1_1BSDF_1ade79e649ea561dbd1fb22946feba2abd" prot="public" virt="non-virtual"><scope>dakku::BSDF</scope><name>sampleF</name></member>
+      <member refid="classdakku_1_1BSDF_1a3ba15a4c499986d97b2aab241e31084e" prot="private" virt="non-virtual"><scope>dakku::BSDF</scope><name>ss</name></member>
+      <member refid="classdakku_1_1BSDF_1ae42573203cfeeb3d4cb3105592ff390c" prot="private" virt="non-virtual"><scope>dakku::BSDF</scope><name>ts</name></member>
+      <member refid="classdakku_1_1BSDF_1aff581f3e97964d29aec2e10b7548a265" prot="public" virt="non-virtual"><scope>dakku::BSDF</scope><name>worldToLocal</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

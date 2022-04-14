@@ -20,7 +20,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/spectrum.h" line="63" column="22" bodyfile="src/core/spectrum.h" bodystart="63" bodyend="65"/>
+        <location file="src/core/spectrum.h" line="73" column="22" bodyfile="src/core/spectrum.h" bodystart="73" bodyend="75"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1RgbSpectrum_1a840645ae729c87f3d95ec559dce855db" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classdakku_1_1RgbSpectrum" kindref="compound">RgbSpectrum</ref></type>
@@ -37,7 +37,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/spectrum.h" line="67" column="22" bodyfile="src/core/spectrum.h" bodystart="67" bodyend="71"/>
+        <location file="src/core/spectrum.h" line="77" column="22" bodyfile="src/core/spectrum.h" bodystart="77" bodyend="81"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -56,7 +56,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/spectrum.h" line="73" column="8" bodyfile="src/core/spectrum.h" bodystart="73" bodyend="77"/>
+        <location file="src/core/spectrum.h" line="83" column="8" bodyfile="src/core/spectrum.h" bodystart="83" bodyend="87"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1RgbSpectrum_1a0b49739ae4a25e2954b07ba8b531d991" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -73,7 +73,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/spectrum.h" line="79" column="8" bodyfile="src/core/spectrum.h" bodystart="79" bodyend="79"/>
+        <location file="src/core/spectrum.h" line="89" column="8" bodyfile="src/core/spectrum.h" bodystart="89" bodyend="89"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -117,7 +117,7 @@
         <link refid="classdakku_1_1VectorBase"/>
       </node>
     </collaborationgraph>
-    <location file="src/core/spectrum.h" line="59" column="1" bodyfile="src/core/spectrum.h" bodystart="59" bodyend="80"/>
+    <location file="src/core/spectrum.h" line="69" column="1" bodyfile="src/core/spectrum.h" bodystart="69" bodyend="90"/>
     <listofallmembers>
       <member refid="classdakku_1_1VectorBase_1adfeaa30c58620f0e4e8cbc9bc911c60c" prot="protected" virt="non-virtual"><scope>dakku::RgbSpectrum</scope><name>_data</name></member>
       <member refid="classdakku_1_1VectorBase_1ae4f16b45f3696a2c75abcbe8c09120df" prot="public" virt="non-virtual"><scope>dakku::RgbSpectrum</scope><name>begin</name></member>
@@ -147,7 +147,7 @@
       <member refid="classdakku_1_1VectorBase_1ad4136ad736840507f9fc902d9d6c6dfd" prot="public" virt="non-virtual"><scope>dakku::RgbSpectrum</scope><name>operator*=</name></member>
       <member refid="classdakku_1_1VectorBase_1ae64bc6bd658a94d08f3b407fcb0e7fba" prot="public" virt="non-virtual"><scope>dakku::RgbSpectrum</scope><name>operator+=</name></member>
       <member refid="classdakku_1_1VectorBase_1a3351845012fbb55d54623d8af9c44a79" prot="public" virt="non-virtual"><scope>dakku::RgbSpectrum</scope><name>operator+=</name></member>
-      <member refid="classdakku_1_1VectorBase_1a838ade15abc3b13923aa49d191c1b796" prot="public" virt="non-virtual"><scope>dakku::RgbSpectrum</scope><name>operator-</name></member>
+      <member refid="classdakku_1_1VectorBase_1a838ade15abc3b13923aa49d191c1b796" prot="public" virt="non-virtual" ambiguityscope="dakku::VectorBase::"><scope>dakku::RgbSpectrum</scope><name>operator-</name></member>
       <member refid="classdakku_1_1VectorBase_1ad6e6b4c4275de701f79d952ed56fe9ff" prot="public" virt="non-virtual"><scope>dakku::RgbSpectrum</scope><name>operator-=</name></member>
       <member refid="classdakku_1_1VectorBase_1a846dad82a5cd66baba195846d3da7c9d" prot="public" virt="non-virtual"><scope>dakku::RgbSpectrum</scope><name>operator-=</name></member>
       <member refid="classdakku_1_1VectorBase_1add8d1fe3254c662f2c6bfc6beb541c9e" prot="public" virt="non-virtual"><scope>dakku::RgbSpectrum</scope><name>operator/=</name></member>

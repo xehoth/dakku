@@ -335,6 +335,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#friends" class="md-nav__link">
+    Friends
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#additional-inherited-members" class="md-nav__link">
     Additional inherited members
   </a>
@@ -366,6 +373,26 @@
           <li class="md-nav__item">
   <a href="#function-clamp" class="md-nav__link">
     function clamp
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#friends_1" class="md-nav__link">
+    Friends
+  </a>
+  
+    <nav class="md-nav" aria-label="Friends">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#friend-operator-" class="md-nav__link">
+    friend operator-
   </a>
   
 </li>
@@ -413,6 +440,21 @@
 <tr>
 <td>Derived</td>
 <td><strong><a href="/dakku/Classes/classdakku_1_1CoefficientSpectrum/#function-clamp">clamp</a></strong>(float low =0, float high =INF) const<br>element-wise clamp</td>
+</tr>
+</tbody>
+</table>
+<h2 id="friends">Friends</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Derived</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1CoefficientSpectrum/#friend-operator-">operator-</a></strong>(const Derived &amp; a, const Derived &amp; b) <br>subtraction between spectrums</td>
 </tr>
 </tbody>
 </table>
@@ -497,10 +539,6 @@
 <tr>
 <td>T &amp;</td>
 <td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-operator[]">operator[]</a></strong>(size_t i)<br>get i'th value</td>
-</tr>
-<tr>
-<td>Derived</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-operator-">operator-</a></strong>() const<br>negation of the vector</td>
 </tr>
 <tr>
 <td>const Derived &amp;</td>
@@ -690,14 +728,6 @@
 </tr>
 <tr>
 <td>Derived</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-operator-">operator-</a></strong>(const Derived &amp; a, const U &amp; b) <br>subtraction</td>
-</tr>
-<tr>
-<td>Derived</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-operator-">operator-</a></strong>(const U &amp; a, const Derived &amp; b) <br>subtraction</td>
-</tr>
-<tr>
-<td>Derived</td>
 <td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-operator*">operator*</a></strong>(const Derived &amp; a, const Derived &amp; b) <br>multiplication</td>
 </tr>
 <tr>
@@ -797,8 +827,17 @@
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
 </code></pre></div>
 <p>element-wise clamp </p>
+<h2 id="friends_1">Friends</h2>
+<h3 id="friend-operator-">friend operator-</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">friend</span><span class="w"> </span><span class="n">Derived</span><span class="w"> </span><span class="k">operator</span><span class="o">-</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Derived</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Derived</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">b</span><span class="w"></span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p>subtraction between spectrums </p>
 <hr />
-<p>Updated on 2022-04-12 at 06:09:15 +0000</p>
+<p>Updated on 2022-04-14 at 12:27:16 +0000</p>
 
               
             </article>

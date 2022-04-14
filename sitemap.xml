@@ -2,622 +2,647 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://xehoth.github.io/dakku/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1BSDF/</loc>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1BlockedArray/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1Bounds2/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1Bounds2iIterator/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1Bounds3/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1BoundsBase/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1BoxFilter/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1BxDF/</loc>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1Camera/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1Class/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1CoefficientSpectrum/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1ConstantTexture/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1FileInputStream/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1FileOutputStream/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1Film/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1FilmImageProvider/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1FilmTile/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1Filter/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1GuiEngine/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1ImageTexture/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1InputStream/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1L1CacheLineAlignedResource/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1Logger/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1MemoryArena/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1MipMap/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1Normal/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1Object/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1OutputStream/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1PerspectiveCamera/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1PixelSampler/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1Point/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1ProjectiveCamera/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1Property/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1RNG/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1Ray/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1RayDifferential/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1RelativeRoot/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1RenderState/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1RgbSpectrum/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1Sampler/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1SerializableObject/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1Shape/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1SurfaceInteraction/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1Texture/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1TextureMapping2D/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1Transform/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1TransformCache/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1TriangleFilter/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1UvMapping2D/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1Vector/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1VectorBase/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/structdakku_1_1CameraSample/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/structdakku_1_1Class_1_1Metadata/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/structdakku_1_1FilmTilePixel/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/structdakku_1_1Film_1_1Pixel/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/structdakku_1_1Interaction/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/structdakku_1_1Matrix4x4/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/structdakku_1_1ResampleWeight/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/structdakku_1_1TransformCache_1_1TransformCacheEqual/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Classes/structdakku_1_1TransformCache_1_1TransformCacheHash/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Examples/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/blocked__array_8h/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/bounds_8h/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/box_8h/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/camera_8h/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/cameras_2api_8h/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/cameras_2fwd_8h/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/class_8h/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/constant_8h/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/core_2api_8h/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/core_2film_8h/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/core_2fwd_8h/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/dir_090521d29e73b40f7fc0a63254d8965e/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/dir_0a15cfbbecb5f97b1f4d0d4d1ae63ab7/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/dir_1bc13244e26df1e1f069a1fd18e36da3/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/dir_21bfb5c276f03895ab43337665096837/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/dir_68267d1309a1af8e8297ef4c3efbcdba/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/dir_99d0482cf009f9d97a0877749b817f19/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/dir_a0ac0340ed7c73c764f7b19b1e0fdeee/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/dir_aebb8dcc11953d78e620bbef0b9e2183/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/engine_8h/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/filter_8h/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/filters_2api_8h/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/filters_2fwd_8h/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/fstream_8h/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/gui_2film_8h/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/image_8h/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/imageio_2fwd_8h/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/imageio_8h/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/interaction_8h/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/logger_8h/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/math_8h/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/memory_8h/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/mipmap_8h/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/object_8h/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/perspective_8h/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/platform_8h/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/property_8h/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/ray_8h/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Files/reflection_8h/</loc>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/relative_8h/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/rng_8h/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/sampler_8h/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Files/sampling_8h/</loc>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/serialization_8h/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/shape_8h/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/spectrum_8h/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/state_8h/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/stream_2api_8h/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/stream_2fwd_8h/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/texture_8h/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/textures_2api_8h/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/textures_2fwd_8h/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/transform_8h/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/transform__cache_8h/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/triangle_8h/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/vector_8h/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/vector__base_8h/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Modules/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Namespaces/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Namespaces/namespacedakku/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Namespaces/namespacestd/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Namespaces/namespacestd_1_1pmr/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Pages/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Pages/reflection/</loc>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Pages/vector_base/</loc>
-         <lastmod>2022-04-12</lastmod>
+         <lastmod>2022-04-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

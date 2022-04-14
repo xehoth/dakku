@@ -54,6 +54,30 @@
         <location file="src/core/spectrum.h" line="48" column="12" bodyfile="src/core/spectrum.h" bodystart="48" bodyend="52"/>
       </memberdef>
       </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classdakku_1_1CoefficientSpectrum_1abfe0542a52a0c8473465f9e7b2b96cfd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Derived</type>
+        <definition>Derived operator-</definition>
+        <argsstring>(const Derived &amp;a, const Derived &amp;b)</argsstring>
+        <name>operator-</name>
+        <param>
+          <type>const Derived &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const Derived &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>subtraction between spectrums </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/spectrum.h" line="58" column="18" bodyfile="src/core/spectrum.h" bodystart="58" bodyend="62"/>
+      </memberdef>
+      </sectiondef>
     <briefdescription>
 <para>coefficient spectrum </para>
     </briefdescription>
@@ -101,7 +125,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/core/spectrum.h" line="34" column="1" bodyfile="src/core/spectrum.h" bodystart="34" bodyend="53"/>
+    <location file="src/core/spectrum.h" line="34" column="1" bodyfile="src/core/spectrum.h" bodystart="34" bodyend="63"/>
     <listofallmembers>
       <member refid="classdakku_1_1VectorBase_1adfeaa30c58620f0e4e8cbc9bc911c60c" prot="protected" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>_data</name></member>
       <member refid="classdakku_1_1VectorBase_1ae4f16b45f3696a2c75abcbe8c09120df" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>begin</name></member>
@@ -129,7 +153,8 @@
       <member refid="classdakku_1_1VectorBase_1ad4136ad736840507f9fc902d9d6c6dfd" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>operator*=</name></member>
       <member refid="classdakku_1_1VectorBase_1ae64bc6bd658a94d08f3b407fcb0e7fba" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>operator+=</name></member>
       <member refid="classdakku_1_1VectorBase_1a3351845012fbb55d54623d8af9c44a79" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>operator+=</name></member>
-      <member refid="classdakku_1_1VectorBase_1a838ade15abc3b13923aa49d191c1b796" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>operator-</name></member>
+      <member refid="classdakku_1_1CoefficientSpectrum_1abfe0542a52a0c8473465f9e7b2b96cfd" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>operator-</name></member>
+      <member refid="classdakku_1_1VectorBase_1a838ade15abc3b13923aa49d191c1b796" prot="public" virt="non-virtual" ambiguityscope="VectorBase&lt; float, S, Derived &gt;::"><scope>dakku::CoefficientSpectrum</scope><name>operator-</name></member>
       <member refid="classdakku_1_1VectorBase_1ad6e6b4c4275de701f79d952ed56fe9ff" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>operator-=</name></member>
       <member refid="classdakku_1_1VectorBase_1a846dad82a5cd66baba195846d3da7c9d" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>operator-=</name></member>
       <member refid="classdakku_1_1VectorBase_1add8d1fe3254c662f2c6bfc6beb541c9e" prot="public" virt="non-virtual"><scope>dakku::CoefficientSpectrum</scope><name>operator/=</name></member>

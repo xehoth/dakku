@@ -65,6 +65,33 @@
     <member refid="classdakku_1_1BoxFilter_1a28e72cf62d6533cd2768a64d4920ead3" kind="function"><name>BoxFilter</name></member>
     <member refid="classdakku_1_1BoxFilter_1a062696aca56d7f4f1ed238f1df17f95f" kind="function"><name>evaluate</name></member>
   </compound>
+  <compound refid="classdakku_1_1BSDF" kind="class"><name>dakku::BSDF</name>
+    <member refid="classdakku_1_1BSDF_1a7ab07005a7e1a9cb8e1c72727932bef3" kind="variable"><name>eta</name></member>
+    <member refid="classdakku_1_1BSDF_1a9dd0f085b38b411a16bf3add2ca407bd" kind="variable"><name>ns</name></member>
+    <member refid="classdakku_1_1BSDF_1ad9407348acecb3a7d6523b0c26733c1b" kind="variable"><name>ng</name></member>
+    <member refid="classdakku_1_1BSDF_1a3ba15a4c499986d97b2aab241e31084e" kind="variable"><name>ss</name></member>
+    <member refid="classdakku_1_1BSDF_1ae42573203cfeeb3d4cb3105592ff390c" kind="variable"><name>ts</name></member>
+    <member refid="classdakku_1_1BSDF_1a34c6aabf0f93bd53c665705ec0a6e734" kind="variable"><name>nBxDFs</name></member>
+    <member refid="classdakku_1_1BSDF_1aed692d33a06390f27db8d05485874ebc" kind="variable"><name>bxdfs</name></member>
+    <member refid="classdakku_1_1BSDF_1a9dc08946f513a58833e47a724e4126d5" kind="variable"><name>MAX_BXDFS</name></member>
+    <member refid="classdakku_1_1BSDF_1a126894c3deb1ad280865b2a4f00af23c" kind="function"><name>BSDF</name></member>
+    <member refid="classdakku_1_1BSDF_1a41722d90c317ad5eea521cfc4dec42f6" kind="function"><name>add</name></member>
+    <member refid="classdakku_1_1BSDF_1aff581f3e97964d29aec2e10b7548a265" kind="function"><name>worldToLocal</name></member>
+    <member refid="classdakku_1_1BSDF_1a5d63e7ea9cb6790be6f6c88c03781b44" kind="function"><name>localToWorld</name></member>
+    <member refid="classdakku_1_1BSDF_1ad3aa7ac3f3f868ee333cb04067124459" kind="function"><name>numComponents</name></member>
+    <member refid="classdakku_1_1BSDF_1a1d54c9cbd6d3048b2a9c03f55a0d1708" kind="function"><name>f</name></member>
+    <member refid="classdakku_1_1BSDF_1ade79e649ea561dbd1fb22946feba2abd" kind="function"><name>sampleF</name></member>
+    <member refid="classdakku_1_1BSDF_1a97af40d797653a84e77ae0dc9eb2c54c" kind="function"><name>pdf</name></member>
+  </compound>
+  <compound refid="classdakku_1_1BxDF" kind="class"><name>dakku::BxDF</name>
+    <member refid="classdakku_1_1BxDF_1af4e3363340c6ce72932ccc7303107f84" kind="variable"><name>type</name></member>
+    <member refid="classdakku_1_1BxDF_1a2985c5c9e8d7b6d743475ac13f651923" kind="function"><name>~BxDF</name></member>
+    <member refid="classdakku_1_1BxDF_1a2f834b64a6323b941fed1b5f21d450a6" kind="function"><name>BxDF</name></member>
+    <member refid="classdakku_1_1BxDF_1ad4e188a72bdf539443ecafa16e34b22e" kind="function"><name>matchesFlags</name></member>
+    <member refid="classdakku_1_1BxDF_1aa9a72f802cdc8f468bfb42e9e44415ca" kind="function"><name>f</name></member>
+    <member refid="classdakku_1_1BxDF_1a653ac17b4941a3b3ffdd0e1b53a4961f" kind="function"><name>sampleF</name></member>
+    <member refid="classdakku_1_1BxDF_1a57aed4a4de49f434b72cbf8a002e78cf" kind="function"><name>pdf</name></member>
+  </compound>
   <compound refid="classdakku_1_1Camera" kind="class"><name>dakku::Camera</name>
     <member refid="classdakku_1_1Camera_1a7fc4b592c175e9aed2d06351418a0b0f" kind="variable"><name>cameraToWorld</name></member>
     <member refid="classdakku_1_1Camera_1a028dfc24965474cb15a35a20228e0a6d" kind="variable"><name>film</name></member>
@@ -90,6 +117,7 @@
   <compound refid="classdakku_1_1CoefficientSpectrum" kind="class"><name>dakku::CoefficientSpectrum</name>
     <member refid="classdakku_1_1CoefficientSpectrum_1a3419bb7bc9a9f6ab7b2c00c3cee942d1" kind="function"><name>isBlack</name></member>
     <member refid="classdakku_1_1CoefficientSpectrum_1ae9b538dae7b0ef76e17b5b8379d62224" kind="function"><name>clamp</name></member>
+    <member refid="classdakku_1_1CoefficientSpectrum_1abfe0542a52a0c8473465f9e7b2b96cfd" kind="friend"><name>operator-</name></member>
   </compound>
   <compound refid="classdakku_1_1ConstantTexture" kind="class"><name>dakku::ConstantTexture</name>
     <member refid="classdakku_1_1ConstantTexture_1af4dc898baf51be9db4582df096e3067d" kind="variable"><name>value</name></member>
@@ -488,6 +516,12 @@
   </compound>
   <compound refid="classdakku_1_1SurfaceInteraction" kind="class"><name>dakku::SurfaceInteraction</name>
     <member refid="classdakku_1_1SurfaceInteraction_1a7774eb557414ba464259463b5ab7962f" kind="variable"><name>uv</name></member>
+    <member refid="classdakku_1_1SurfaceInteraction_1a68c93d85489d5d63a7f82a5c3f97a4dd" kind="variable"><name>n</name></member>
+    <member refid="classdakku_1_1SurfaceInteraction_1a4ae03f5b7ae7b1507a9667b6dfdf583d" kind="variable"><name>dpdu</name></member>
+    <member refid="classdakku_1_1SurfaceInteraction_1a3dce532f1359e1b092e6cac180509158" kind="variable"><name>dpdv</name></member>
+    <member refid="classdakku_1_1SurfaceInteraction_1af929217ce4fab197cc44620e1f677d4c" kind="variable"><name>dndu</name></member>
+    <member refid="classdakku_1_1SurfaceInteraction_1aff18cf41f92ffe80abdca7d7be3723e3" kind="variable"><name>dndv</name></member>
+    <member refid="classdakku_1_1SurfaceInteraction_1aab45461afd26056c1fea1694773111e7" kind="variable"><name>shading</name></member>
     <member refid="classdakku_1_1SurfaceInteraction_1a07a0b261007cd1ca320be68615699e4a" kind="variable"><name>dudx</name></member>
     <member refid="classdakku_1_1SurfaceInteraction_1ac577146c7a6332fca84741431f26bab3" kind="variable"><name>dvdx</name></member>
     <member refid="classdakku_1_1SurfaceInteraction_1a06588edddf126d096896a9dccd32e3de" kind="variable"><name>dudy</name></member>
@@ -659,6 +693,13 @@
     <member refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaa63b588d5559f64f89a416e656880b949" kind="enumvalue"><name>STRING</name></member>
     <member refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaa87752381b583740610f1dfeb07fdad7e" kind="enumvalue"><name>VECTOR</name></member>
     <member refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaadceae9409e3ff24c6c0af99860ba44ac" kind="enumvalue"><name>TRANSFORM</name></member>
+    <member refid="namespacedakku_1a6ee44a156e67a6dd3f3d70609f10a12d" kind="enum"><name>BxDFType</name></member>
+    <member refid="namespacedakku_1a6ee44a156e67a6dd3f3d70609f10a12da356402ab98f54dd6f9952d489019fd94" kind="enumvalue"><name>BSDF_REFLECTION</name></member>
+    <member refid="namespacedakku_1a6ee44a156e67a6dd3f3d70609f10a12dad4b2381d05d0eff37cab70f4b32d09b4" kind="enumvalue"><name>BSDF_TRANSMISSION</name></member>
+    <member refid="namespacedakku_1a6ee44a156e67a6dd3f3d70609f10a12da89e47090c25e812346446e1fc9d025d3" kind="enumvalue"><name>BSDF_DIFFUSE</name></member>
+    <member refid="namespacedakku_1a6ee44a156e67a6dd3f3d70609f10a12da0446199c5b80a38b659b688b2ecf6b83" kind="enumvalue"><name>BSDF_GLOSSY</name></member>
+    <member refid="namespacedakku_1a6ee44a156e67a6dd3f3d70609f10a12da90b0abfd8625757492aea7d047aea985" kind="enumvalue"><name>BSDF_SPECULAR</name></member>
+    <member refid="namespacedakku_1a6ee44a156e67a6dd3f3d70609f10a12daa3f83dc1510822e8b71fd10be02a3186" kind="enumvalue"><name>BSDF_ALL</name></member>
     <member refid="namespacedakku_1abcc743bdeb62068a56f14ac3ef9963b7" kind="typedef"><name>Bounds2f</name></member>
     <member refid="namespacedakku_1ae2cd423e1acf2fd91f4cdf3cc5ad50c6" kind="typedef"><name>Bounds2i</name></member>
     <member refid="namespacedakku_1a19129587abbff965c2c15bab5723e208" kind="typedef"><name>Bounds3f</name></member>
@@ -676,6 +717,9 @@
     <member refid="namespacedakku_1a9b64e14dceffe6ac84029f1d40d6ec41" kind="typedef"><name>Normal3f</name></member>
     <member refid="namespacedakku_1a53c476552ecb27caba955675d8efb680" kind="variable"><name>INF</name></member>
     <member refid="namespacedakku_1af7aa9dc8532b3506d50b84f932560eb0" kind="variable"><name>PI</name></member>
+    <member refid="namespacedakku_1a4e370f12ecabfcf4c169ca0eb199f19a" kind="variable"><name>INV_PI</name></member>
+    <member refid="namespacedakku_1adae866489e43019f6aa30b0f577f8311" kind="variable"><name>PI_OVER_2</name></member>
+    <member refid="namespacedakku_1a2922918eae4cac3a44006897e878daf7" kind="variable"><name>PI_OVER_4</name></member>
     <member refid="namespacedakku_1a09eee35861f6da88754b5645e5703ec4" kind="variable"><name>L1_CACHE_LINE_SIZE</name></member>
     <member refid="namespacedakku_1a8ecbddd8386198d0dd187cd20b53e42d" kind="variable"><name>SHADOW_EPS</name></member>
     <member refid="namespacedakku_1a204f33930db458865d7f796fd768055d" kind="variable"><name>ONE_MINUS_EPSILON</name></member>
@@ -691,6 +735,8 @@
     <member refid="namespacedakku_1ad4c70953467b9d3d22eac250d8655aff" kind="variable"><name>Shape</name></member>
     <member refid="namespacedakku_1a24e2c761467417bba0b7b17b7c0e9f79" kind="variable"><name>Texture</name></member>
     <member refid="namespacedakku_1a91583977767aa3566783f8ab2c0538a7" kind="variable"><name>Camera</name></member>
+    <member refid="namespacedakku_1a13ba1e815be59eb9032a805e6a99bd95" kind="variable"><name>BSDF</name></member>
+    <member refid="namespacedakku_1a431a533ecd56199d41177b9192908e5b" kind="variable"><name>BxDF</name></member>
     <member refid="namespacedakku_1ad67fc67650e8ff59c3b25b9e9d462ee4" kind="variable"><name>__pad0__</name></member>
     <member refid="namespacedakku_1a041d325d33710e961b70ab2cf4dbfa11" kind="variable"><name>PCG32_DEFAULT_STATE</name></member>
     <member refid="namespacedakku_1a86dfefa53a11b2cf2d06aaa75171fe3a" kind="variable"><name>PCG32_DEFAULT_STREAM</name></member>
@@ -718,6 +764,34 @@
     <member refid="namespacedakku_1ad153e9f37e7a43e9abe4762557e4a187" kind="function"><name>resolution</name></member>
     <member refid="namespacedakku_1ac5c65853b3b4155436da5b4402bebcad" kind="function"><name>registerObjects</name></member>
     <member refid="namespacedakku_1ac70f11ace3ab613579837a2d336b38c5" kind="function"><name>offsetRayOrigin</name></member>
+    <member refid="namespacedakku_1afff271d6755ba6c5bce88e472b0fda97" kind="function"><name>cosTheta</name></member>
+    <member refid="namespacedakku_1af1be72fe6812bf50fc174613feb27653" kind="function"><name>cos2Theta</name></member>
+    <member refid="namespacedakku_1a879ba33876b48280366546d864b543f2" kind="function"><name>absCosTheta</name></member>
+    <member refid="namespacedakku_1aea86efd5024447271fd1b82566f21879" kind="function"><name>sin2Theta</name></member>
+    <member refid="namespacedakku_1ad8019351269f1f3f694d08469157e0a5" kind="function"><name>sinTheta</name></member>
+    <member refid="namespacedakku_1ac7b4842ad43512dfab7c97697743872b" kind="function"><name>tanTheta</name></member>
+    <member refid="namespacedakku_1a3eea109f743777a1225937b8e80add49" kind="function"><name>tan2Theta</name></member>
+    <member refid="namespacedakku_1a06e3b9f59237e8dc78bb02794fa80b04" kind="function"><name>cosPhi</name></member>
+    <member refid="namespacedakku_1a841c3518071695ee54986494313d1803" kind="function"><name>sinPhi</name></member>
+    <member refid="namespacedakku_1a8871f526c772a63c8aa084c2a4a5ed07" kind="function"><name>cos2Phi</name></member>
+    <member refid="namespacedakku_1accd4ed8e0230cdf8f420e33dcc532311" kind="function"><name>sin2Phi</name></member>
+    <member refid="namespacedakku_1acba70ca995b749f7ef8daa9379d22153" kind="function"><name>sameHemisphere</name></member>
+    <member refid="namespacedakku_1a89dbbdf1e8f3a5b8b0e813d8242541a3" kind="function"><name>sameHemisphere</name></member>
+    <member refid="namespacedakku_1a3bb200e88e63690051e6bad2afab6bb2" kind="function"><name>frDielectric</name></member>
+    <member refid="namespacedakku_1af4d59c83a86090d6b80cf663c39fbf85" kind="function"><name>frConductor</name></member>
+    <member refid="namespacedakku_1a8495aaad546987b3e302208282517a15" kind="function"><name>reflect</name></member>
+    <member refid="namespacedakku_1ad46911925bf23eb15e4f60875257ed9f" kind="function"><name>refract</name></member>
+    <member refid="namespacedakku_1ad12f3d2e3190c7aa08c22de45de621a9" kind="function"><name>operator&amp;</name></member>
+    <member refid="namespacedakku_1afd5aa3a8929d78feb77aea41fae4f997" kind="function"><name>operator|</name></member>
+    <member refid="namespacedakku_1ad73ccae1cd088ac5d10ec643bc15eb82" kind="function"><name>operator&amp;</name></member>
+    <member refid="namespacedakku_1aa24d67eab0201ec6b4f849fa11592eb2" kind="function"><name>operator&amp;</name></member>
+    <member refid="namespacedakku_1a48a0c304ff8eac7ee3d67fbd229c6307" kind="function"><name>operator|</name></member>
+    <member refid="namespacedakku_1a93adc4d20e18e33bc3904f0eb9658961" kind="function"><name>operator|</name></member>
+    <member refid="namespacedakku_1a972fe24ecab810defaab710b05a1d30a" kind="function"><name>uniformSampleTriangle</name></member>
+    <member refid="namespacedakku_1a656594e267b6cd6917580e34ed50ee01" kind="function"><name>concentricSampleDisk</name></member>
+    <member refid="namespacedakku_1a457a044effa42ab1afd0dc61ff2ddc71" kind="function"><name>cosineSampleHemisphere</name></member>
+    <member refid="namespacedakku_1a8d0a8a38a5884ff0cf4397214bd22378" kind="function"><name>uniformSampleSphere</name></member>
+    <member refid="namespacedakku_1a7c3e7ee0be950fb7fbfb62fceb80eec5" kind="function"><name>powerHeuristic</name></member>
     <member refid="namespacedakku_1a80d2f8350cdcc84f6586fed5f396f8c7" kind="function"><name>xyzToRgb</name></member>
     <member refid="namespacedakku_1a4eafe1eaa4b431b45c002f81b793b46f" kind="function"><name>rgbToXyz</name></member>
     <member refid="namespacedakku_1a1e461427d5e700eff84e148509b7fcba" kind="function"><name>translate</name></member>
@@ -778,11 +852,15 @@
   </compound>
   <compound refid="ray_8h" kind="file"><name>ray.h</name>
   </compound>
+  <compound refid="reflection_8h" kind="file"><name>reflection.h</name>
+  </compound>
   <compound refid="relative_8h" kind="file"><name>relative.h</name>
   </compound>
   <compound refid="rng_8h" kind="file"><name>rng.h</name>
   </compound>
   <compound refid="sampler_8h" kind="file"><name>sampler.h</name>
+  </compound>
+  <compound refid="sampling_8h" kind="file"><name>sampling.h</name>
   </compound>
   <compound refid="serialization_8h" kind="file"><name>serialization.h</name>
   </compound>
@@ -859,6 +937,8 @@
     <member refid="textures_2fwd_8h_1aa6f8c6479da7d7bc597c87b9fe242d9e" kind="define"><name>DAKKU_EXPORT_TEXTURES</name></member>
   </compound>
   <compound refid="image_8h" kind="file"><name>image.h</name>
+  </compound>
+  <compound refid="reflection" kind="page"><name>reflection</name>
   </compound>
   <compound refid="vector_base" kind="page"><name>vector_base</name>
   </compound>
