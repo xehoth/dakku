@@ -22,6 +22,18 @@ static constexpr float INF = std::numeric_limits<float>::infinity();
 /// PI
 static constexpr float PI = std::numbers::pi_v<float>;
 
+/// $\frac 1 \pi$
+static constexpr float INV_PI =
+    static_cast<float>(1.0 / std::numbers::pi_v<double>);
+
+/// $\frac \pi 2$
+static constexpr float PI_OVER_2 =
+    static_cast<float>(std::numbers::pi_v<double> / 2.0);
+
+/// $\frac \pi 4$
+static constexpr float PI_OVER_4 =
+    static_cast<float>(std::numbers::pi_v<double> / 4);
+
 /// L1 cache line size
 static constexpr size_t L1_CACHE_LINE_SIZE = 64;
 
@@ -196,5 +208,8 @@ class DAKKU_EXPORT_CORE Texture;
 
 class DAKKU_EXPORT_CORE Camera;
 struct CameraSample;
+
+class DAKKU_EXPORT_CORE BSDF;
+class DAKKU_EXPORT_CORE BxDF;
 }  // namespace dakku
 #endif

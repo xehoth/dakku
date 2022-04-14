@@ -79,6 +79,11 @@ struct Interaction {
 class SurfaceInteraction : public Interaction {
  public:
   Point2f uv;
+  struct {
+    Normal3f n;  // shading normal (interpolated)
+    Vector3f dpdu, dpdv;
+    Normal3f dndu, dndv;
+  } shading;
   mutable float dudx = 0, dvdx = 0, dudy = 0, dvdy = 0;
 };
 }  // namespace dakku

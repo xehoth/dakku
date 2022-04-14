@@ -50,6 +50,16 @@ class CoefficientSpectrum : public VectorBase<float, S, Derived> {
     for (size_t i = 0; i < S; ++i) ret[i] = std::clamp(ret[i], low, high);
     return ret;
   }
+
+  /**
+   * @brief subtraction between spectrums
+   *
+   */
+  friend Derived operator-(const Derived &a, const Derived &b) {
+    Derived ret = a;
+    ret -= b;
+    return ret;
+  }
 };
 
 /**
