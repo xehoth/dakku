@@ -4,12 +4,14 @@
 #include <core/lua.h>
 
 #include <array>
+#include <numeric>
+#include <span>
 
 namespace dakku {
 
 /**
  * @brief vector base
- * 
+ *
  * @tparam T type
  * @tparam S size
  * @tparam D derived
@@ -459,6 +461,318 @@ class DAKKU_EXPORT_CORE VectorBase {
   friend std::ostream &operator<<(std::ostream &os, const VectorBase &vec) {
     return os << vec.to_string();
   }
+
+  bool operator==(const VectorBase &rhs) const { return _data == rhs._data; }
+
+  bool operator!=(const VectorBase &rhs) const { return _data != rhs._data; }
+
+  /**
+   * @brief get the first element
+   *
+   */
+  decltype(auto) x() const {
+    static_assert(S >= 1, "not enough size to get x");
+    return _data[0];
+  }
+
+  /**
+   * @brief get the first element
+   *
+   */
+  decltype(auto) x() {
+    static_assert(S >= 1, "not enough size to get x");
+    return _data[0];
+  }
+
+  /**
+   * @brief get the second element
+   *
+   */
+  decltype(auto) y() const {
+    static_assert(S >= 2, "not enough size to get y");
+    return _data[1];
+  }
+
+  /**
+   * @brief get the second element
+   *
+   */
+  decltype(auto) y() {
+    static_assert(S >= 2, "not enough size to get y");
+    return _data[1];
+  }
+
+  /**
+   * @brief get the third element
+   *
+   */
+  decltype(auto) z() const {
+    static_assert(S >= 3, "not enough size to get z");
+    return _data[2];
+  }
+
+  /**
+   * @brief get the fourth element
+   *
+   */
+  decltype(auto) z() {
+    static_assert(S >= 3, "not enough size to get w");
+    return _data[2];
+  }
+
+  /**
+   * @brief get the fourth element
+   *
+   */
+  decltype(auto) w() const {
+    static_assert(S >= 4, "not enough size to get w");
+    return _data[3];
+  }
+
+  /**
+   * @brief get the third element
+   *
+   */
+  decltype(auto) w() {
+    static_assert(S >= 4, "not enough size to get z");
+    return _data[3];
+  }
+
+  /**
+   * @brief get the index of the max element
+   *
+   * @return the index
+   */
+  [[nodiscard]] size_t max_element_index() const {
+    return std::distance(_data.begin(),
+                         std::max_element(_data.begin(), _data.end()));
+  }
+
+  /**
+   * @brief get the max element in the vector
+   *
+   * @return the max value
+   */
+  decltype(auto) max_element() const { return _data[max_element_index()]; }
+
+  /**
+   * @brief element wise max
+   *
+   */
+  friend D max(const D &v1, const D &v2) {
+    D ret = v1;
+    for (size_t i = 0; i < S; ++i) ret[i] = std::max(ret[i], v2[i]);
+    return ret;
+  }
+
+  /**
+   * @brief element wise max
+   *
+   */
+  D max(const D &rhs) const { return max(derived(), rhs); }
+
+  /**
+   * @brief element wise min
+   *
+   */
+  friend D min(const D &v1, const D &v2) {
+    D ret = v1;
+    for (size_t i = 0; i < S; ++i) ret[i] = std::min(ret[i], v2[i]);
+    return ret;
+  }
+
+  /**
+   * @brief element wise min
+   *
+   */
+  D min(const D &rhs) const { return min(derived(), rhs); }
+
+  /**
+   * @brief dot product between two vectors
+   *
+   * @return $\vec a \cdot \vec b$
+   */
+  template <typename OtherDerived>
+  decltype(auto) dot(const VectorBase<T, S, OtherDerived> &rhs) const {
+    return std::inner_product(_data.begin(), _data.end(), rhs._data.begin(),
+                              T{});
+  }
+
+  /**
+   * @brief squared norm
+   *
+   * @return $||v|| ^ 2$
+   */
+  decltype(auto) squaredNorm() const { return this->dot(*this); }
+
+  /**
+   * @brief norm
+   *
+   * @return $||v||$
+   */
+  decltype(auto) norm() const { return std::sqrt(squaredNorm()); }
+
+  /**
+   * @brief length
+   *
+   * @return $||v||$
+   */
+  decltype(auto) length() const { return norm(); }
+
+  /**
+   * @brief the distance
+   *
+   */
+  friend decltype(auto) distance(const D &a, const D &b) {
+    return (a - b).length();
+  }
+
+  /**
+   * @brief the distance
+   *
+   */
+  decltype(auto) distance(const D &rhs) const {
+    return distance(derived(), rhs);
+  }
+
+  /**
+   * @brief abs
+   *
+   */
+  friend D abs(const D &v) {
+    D ret = v;
+    for (size_t i = 0; i < S; ++i) ret[i] = std::abs(ret[i]);
+    return ret;
+  }
+
+  /**
+   * @brief abs
+   *
+   */
+  D abs() const { return abs(derived()); }
+
+  /**
+   * @brief cross product
+   *
+   */
+  D cross(const D &rhs) const {
+    static_assert(S == 3, "only 3d vector support cross product");
+    return D{(y() * rhs.z()) - (z() * rhs.y()),
+             (z() * rhs.x()) - (x() * rhs.z()),
+             (x() * rhs.y()) - (y() * rhs.x())};
+  }
+
+  /**
+   * @brief check whether all components are zero
+   *
+   */
+  [[nodiscard]] bool is_zero() const {
+    return std::all_of(_data.begin(), _data.end(),
+                       [](const T &v) { return v == 0; });
+  }
+
+  /**
+   * @brief element-wise sqrt
+   *
+   */
+  friend D sqrt(const D &v) {
+    D ret = v;
+    for (size_t i = 0; i < S; ++i) ret[i] = static_cast<T>(std::sqrt(ret[i]));
+    return ret;
+  }
+
+  /**
+   * @brief element-wise sqrt
+   *
+   */
+  D sqrt() const { return sqrt(derived()); }
+
+  /**
+   * @brief element-wise power
+   *
+   */
+  template <ArithmeticType E>
+  friend D pow(const D &v, E e) {
+    D ret = v;
+    for (size_t i = 0; i < S; ++i) ret[i] = static_cast<T>(std::pow(ret[i], e));
+    return ret;
+  }
+
+  /**
+   * @brief element-wise power
+   *
+   */
+  template <ArithmeticType E>
+  D pow(E e) const {
+    return pow(derived(), e);
+  }
+
+  /**
+   * @brief element-wise exp
+   *
+   */
+  friend D exp(const D &v) {
+    D ret = v;
+    for (size_t i = 0; i < S; ++i) ret[i] = static_cast<T>(std::exp(ret[i]));
+    return ret;
+  }
+
+  /**
+   * @brief element-wise exp
+   *
+   */
+  D exp() const { return exp(derived()); }
+
+  /**
+   * @brief element-wise floor
+   *
+   */
+  friend D floor(const D &v) {
+    D ret = v;
+    for (size_t i = 0; i < S; ++i) ret[i] = std::floor(ret[i]);
+    return ret;
+  }
+
+  /**
+   * @brief element-wise floor
+   *
+   */
+  D floor() const { return floor(derived()); }
+
+  /**
+   * @brief element-wise ceil
+   *
+   */
+  friend D ceil(const D &v) {
+    D ret = v;
+    for (size_t i = 0; i < S; ++i) ret[i] = std::ceil(ret[i]);
+    return ret;
+  }
+
+  /**
+   * @brief element-wise ceil
+   *
+   */
+  D ceil() const { return ceil(derived()); }
+
+  /**
+   * @brief element-wise linear interpolation
+   *
+   */
+  friend D lerp(const D &a, const D &b, T t) {
+    D ret;
+    for (size_t i = 0; i < S; ++i) ret[i] = std::lerp(a[i], b[i], t);
+    return ret;
+  }
+
+  /**
+   * @brief element-wise linear interpolation
+   *
+   */
+  D lerp(const D &b, T t) const { return lerp(derived(), b, t); }
+
+  operator std::span<T, S>() { return std::span{_data}; }
+  operator std::span<const T, S>() const { return std::span{_data}; }
 
  private:
   /// vector base data
