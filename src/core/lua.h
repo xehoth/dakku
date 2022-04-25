@@ -31,9 +31,13 @@ class DAKKU_EXPORT_CORE Lua {
   sol::state state;
 };
 
-#define DAKKU_DECLARE_LUA_OBJECT(name) static int _##name##_bind_lua
+#define DAKKU_DECLARE_LUA_OBJECT(name) \
+  struct _##name##_lua_bind_wrapper {  \
+    static int _##name##_bind_lua;     \
+  }
+
 #define DAKKU_IMPLEMENT_LUA_OBJECT(name, func) \
-  int name::_##name##_bind_lua = (func)()
+  int _##name##_lua_bind_wrapper::_##name##_bind_lua = (func)()
 
 }  // namespace dakku
 #endif
