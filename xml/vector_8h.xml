@@ -50,6 +50,10 @@
         </childnode>
         <childnode refid="12" relation="include">
         </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
       </node>
       <node id="5">
         <label>platform.h</label>
@@ -61,8 +65,14 @@
       <node id="7">
         <label>memory</label>
       </node>
+      <node id="13">
+        <label>numeric</label>
+      </node>
       <node id="11">
         <label>sol/sol.hpp</label>
+      </node>
+      <node id="14">
+        <label>span</label>
       </node>
       <node id="9">
         <label>spdlog/fmt/ostr.h</label>

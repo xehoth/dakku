@@ -61,11 +61,51 @@
     <member refid="classdakku_1_1VectorBase_1aa6a95ff2d4d223c4481873bbf3896039" kind="function"><name>operator/=</name></member>
     <member refid="classdakku_1_1VectorBase_1aff2b2b32f14b1bf96bf233549bad1dca" kind="function"><name>operator/</name></member>
     <member refid="classdakku_1_1VectorBase_1aa6a930e0cb5c2acbcaaf605a8dea115e" kind="function"><name>operator/</name></member>
+    <member refid="classdakku_1_1VectorBase_1a7b639096de4d497be959f86bb81dcb42" kind="function"><name>operator==</name></member>
+    <member refid="classdakku_1_1VectorBase_1ad3b93aa391759a05ed093fb9a4ab7190" kind="function"><name>operator!=</name></member>
+    <member refid="classdakku_1_1VectorBase_1a7c96ab9adab7789b7277cc810ccd3b46" kind="function"><name>x</name></member>
+    <member refid="classdakku_1_1VectorBase_1a3ce0167e993358212dd25549459a0e2a" kind="function"><name>x</name></member>
+    <member refid="classdakku_1_1VectorBase_1aeeda8f27cb03e971aecaf9fa9f3ea004" kind="function"><name>y</name></member>
+    <member refid="classdakku_1_1VectorBase_1a28e0bf009314c595f98c2914dd5dff90" kind="function"><name>y</name></member>
+    <member refid="classdakku_1_1VectorBase_1ada16ac57afc93c1f9c6fa6f161d00b55" kind="function"><name>z</name></member>
+    <member refid="classdakku_1_1VectorBase_1a6206f62427dcaca9d8c9dbe3bf1e9f4f" kind="function"><name>z</name></member>
+    <member refid="classdakku_1_1VectorBase_1ae8cc16293f1cc603cf5eb0beccb73ebf" kind="function"><name>w</name></member>
+    <member refid="classdakku_1_1VectorBase_1a3d2b826ae1bd7a56274f7b666398602f" kind="function"><name>w</name></member>
+    <member refid="classdakku_1_1VectorBase_1a3370bf3cdb04f7b7fe2fd4dfff99b467" kind="function"><name>max_element_index</name></member>
+    <member refid="classdakku_1_1VectorBase_1a6978e5a82402fefd693ba0a40350e81f" kind="function"><name>max_element</name></member>
+    <member refid="classdakku_1_1VectorBase_1a5faa98660f37740b64ef81284094e00d" kind="function"><name>max</name></member>
+    <member refid="classdakku_1_1VectorBase_1af6df1e7009d07c459a909de6977feb77" kind="function"><name>min</name></member>
+    <member refid="classdakku_1_1VectorBase_1a97be0d4ece0397e7530aa6d20c4da767" kind="function"><name>dot</name></member>
+    <member refid="classdakku_1_1VectorBase_1a58552f7cd0c136e62226ef92e853df08" kind="function"><name>squaredNorm</name></member>
+    <member refid="classdakku_1_1VectorBase_1a2c7e37c52217414c026114cec751aaf5" kind="function"><name>norm</name></member>
+    <member refid="classdakku_1_1VectorBase_1a3ed9c567c79813b05d6cf6aec8268022" kind="function"><name>length</name></member>
+    <member refid="classdakku_1_1VectorBase_1a79e4af0ff3a2c83c4a662f1f6108d533" kind="function"><name>distance</name></member>
+    <member refid="classdakku_1_1VectorBase_1a1001be586e231d6dae084d4b209f8e97" kind="function"><name>abs</name></member>
+    <member refid="classdakku_1_1VectorBase_1ae3c08448e87e550e12a761d07d9dcc49" kind="function"><name>cross</name></member>
+    <member refid="classdakku_1_1VectorBase_1afd5e7c493a6e1e6f6d4315ae63cf7a8c" kind="function"><name>is_zero</name></member>
+    <member refid="classdakku_1_1VectorBase_1a6645604f639d9830941013fc71601fd6" kind="function"><name>sqrt</name></member>
+    <member refid="classdakku_1_1VectorBase_1af3c12d0c8f110a4d07f727d38c0bffd8" kind="function"><name>pow</name></member>
+    <member refid="classdakku_1_1VectorBase_1a8c95b56cdc03848c86835b3f710ff81c" kind="function"><name>exp</name></member>
+    <member refid="classdakku_1_1VectorBase_1a7789b37d2540654e0eaea2091aee12de" kind="function"><name>floor</name></member>
+    <member refid="classdakku_1_1VectorBase_1abdd1df2e4dc893221408c1fb4ff0ef7e" kind="function"><name>ceil</name></member>
+    <member refid="classdakku_1_1VectorBase_1a0e4bafc1510f9bd50aaf316a2b3e2cb7" kind="function"><name>lerp</name></member>
+    <member refid="classdakku_1_1VectorBase_1adc5263e46ab511dba05f9e3154abe693" kind="function"><name>operator std::span&lt; T, S &gt;</name></member>
+    <member refid="classdakku_1_1VectorBase_1adb5d42053668e7673da77b886af9e943" kind="function"><name>operator std::span&lt; const T, S &gt;</name></member>
     <member refid="classdakku_1_1VectorBase_1a134cfc3963f540464c94205f742b29bd" kind="friend"><name>operator+</name></member>
     <member refid="classdakku_1_1VectorBase_1a2b6a039c78a601cd7704d57ff1169d99" kind="friend"><name>operator-</name></member>
     <member refid="classdakku_1_1VectorBase_1ae86ea43d8aa945505be5032018751b34" kind="friend"><name>operator*</name></member>
     <member refid="classdakku_1_1VectorBase_1a9bb674f8e431d95d1f2388d28519472b" kind="friend"><name>operator/</name></member>
     <member refid="classdakku_1_1VectorBase_1a531ed133257631916fc3384392b2ab7f" kind="friend"><name>operator&lt;&lt;</name></member>
+    <member refid="classdakku_1_1VectorBase_1a8e460c1cf24cea009621945ec0ebd681" kind="friend"><name>max</name></member>
+    <member refid="classdakku_1_1VectorBase_1a6e140fd435ea0f73e62ad2ff1ab928e8" kind="friend"><name>min</name></member>
+    <member refid="classdakku_1_1VectorBase_1a70d0d10c920fee38754d600ea6037b33" kind="friend"><name>distance</name></member>
+    <member refid="classdakku_1_1VectorBase_1a2db92192cedfddb5bda7029d3ebe927b" kind="friend"><name>abs</name></member>
+    <member refid="classdakku_1_1VectorBase_1acfe633742ae050e594219880d8f9671e" kind="friend"><name>sqrt</name></member>
+    <member refid="classdakku_1_1VectorBase_1a05239844639787f0bacd0139b408a73e" kind="friend"><name>pow</name></member>
+    <member refid="classdakku_1_1VectorBase_1ad09c264b8f0b92419f4c77ebef41e068" kind="friend"><name>exp</name></member>
+    <member refid="classdakku_1_1VectorBase_1a202b2b4dae4f10f5222263f45773aca2" kind="friend"><name>floor</name></member>
+    <member refid="classdakku_1_1VectorBase_1a59894e45bd1ba2bb0893bb2213468607" kind="friend"><name>ceil</name></member>
+    <member refid="classdakku_1_1VectorBase_1a69202c970f43a6faa3c931187d78d0ad" kind="friend"><name>lerp</name></member>
   </compound>
   <compound refid="conceptdakku_1_1ArithmeticType" kind="concept"><name>dakku::ArithmeticType</name>
   </compound>
