@@ -11,6 +11,21 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1Bounds2/</loc>
+         <lastmod>2022-04-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1Bounds2iIterator/</loc>
+         <lastmod>2022-04-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1Bounds3/</loc>
+         <lastmod>2022-04-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1BoundsBase/</loc>
          <lastmod>2022-04-25</lastmod>
          <changefreq>daily</changefreq>
@@ -122,6 +137,11 @@
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Namespaces/namespacedakku/</loc>
+         <lastmod>2022-04-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Namespaces/namespacestd/</loc>
          <lastmod>2022-04-25</lastmod>
          <changefreq>daily</changefreq>
     </url>

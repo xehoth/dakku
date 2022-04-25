@@ -357,6 +357,27 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#using-bounds2f" class="md-nav__link">
+    using Bounds2f
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-bounds2i" class="md-nav__link">
+    using Bounds2i
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-bounds3f" class="md-nav__link">
+    using Bounds3f
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#using-vector2i" class="md-nav__link">
     using Vector2i
   </a>
@@ -433,6 +454,27 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#function-begin" class="md-nav__link">
+    function begin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-end" class="md-nav__link">
+    function end
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-dakku_declare_lua_object" class="md-nav__link">
+    function DAKKU_DECLARE_LUA_OBJECT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#function-isnan" class="md-nav__link">
     function isnan
   </a>
@@ -442,13 +484,6 @@
           <li class="md-nav__item">
   <a href="#function-isnan_1" class="md-nav__link">
     function isnan
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-dakku_declare_lua_object" class="md-nav__link">
-    function DAKKU_DECLARE_LUA_OBJECT
   </a>
   
 </li>
@@ -509,6 +544,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#function-dakku_declare_lua_object_9" class="md-nav__link">
+    function DAKKU_DECLARE_LUA_OBJECT
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -543,6 +585,18 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>class</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Bounds2/">dakku::Bounds2</a></strong> <br>2d bounding box</td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Bounds2iIterator/">dakku::Bounds2iIterator</a></strong> <br>2d integer bounds iterator, iterate all pixels inside</td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Bounds3/">dakku::Bounds3</a></strong> <br>3d bounding box</td>
+</tr>
 <tr>
 <td>class</td>
 <td><strong><a href="/dakku/Classes/classdakku_1_1BoundsBase/">dakku::BoundsBase</a></strong> <br>bounding box base</td>
@@ -583,40 +637,52 @@
 </thead>
 <tbody>
 <tr>
+<td>using <a href="/dakku/Classes/classdakku_1_1Bounds2/">Bounds2</a>&lt; float &gt;</td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#using-bounds2f">Bounds2f</a></strong> <br>2d float bounds</td>
+</tr>
+<tr>
+<td>using <a href="/dakku/Classes/classdakku_1_1Bounds2/">Bounds2</a>&lt; int &gt;</td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#using-bounds2i">Bounds2i</a></strong> <br>2d int bounds</td>
+</tr>
+<tr>
+<td>using <a href="/dakku/Classes/classdakku_1_1Bounds3/">Bounds3</a>&lt; float &gt;</td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#using-bounds3f">Bounds3f</a></strong> <br>3d float bounds</td>
+</tr>
+<tr>
 <td>using <a href="/dakku/Classes/classdakku_1_1Vector/">Vector</a>&lt; int, 2 &gt;</td>
-<td><strong><a href="/dakku/Namespaces/namespacedakku/#using-vector2i">Vector2i</a></strong></td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#using-vector2i">Vector2i</a></strong> <br>2d int vector</td>
 </tr>
 <tr>
 <td>using <a href="/dakku/Classes/classdakku_1_1Vector/">Vector</a>&lt; float, 2 &gt;</td>
-<td><strong><a href="/dakku/Namespaces/namespacedakku/#using-vector2f">Vector2f</a></strong></td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#using-vector2f">Vector2f</a></strong> <br>2d float vector</td>
 </tr>
 <tr>
 <td>using <a href="/dakku/Classes/classdakku_1_1Vector/">Vector</a>&lt; int, 3 &gt;</td>
-<td><strong><a href="/dakku/Namespaces/namespacedakku/#using-vector3i">Vector3i</a></strong></td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#using-vector3i">Vector3i</a></strong> <br>3d int vector</td>
 </tr>
 <tr>
 <td>using <a href="/dakku/Classes/classdakku_1_1Vector/">Vector</a>&lt; float, 3 &gt;</td>
-<td><strong><a href="/dakku/Namespaces/namespacedakku/#using-vector3f">Vector3f</a></strong></td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#using-vector3f">Vector3f</a></strong> <br>3d float vector</td>
 </tr>
 <tr>
 <td>using <a href="/dakku/Classes/classdakku_1_1Point/">Point</a>&lt; float, 3 &gt;</td>
-<td><strong><a href="/dakku/Namespaces/namespacedakku/#using-point3f">Point3f</a></strong></td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#using-point3f">Point3f</a></strong> <br>3d float point</td>
 </tr>
 <tr>
 <td>using <a href="/dakku/Classes/classdakku_1_1Point/">Point</a>&lt; int, 3 &gt;</td>
-<td><strong><a href="/dakku/Namespaces/namespacedakku/#using-point3i">Point3i</a></strong></td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#using-point3i">Point3i</a></strong> <br>3d int point</td>
 </tr>
 <tr>
 <td>using <a href="/dakku/Classes/classdakku_1_1Point/">Point</a>&lt; float, 2 &gt;</td>
-<td><strong><a href="/dakku/Namespaces/namespacedakku/#using-point2f">Point2f</a></strong></td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#using-point2f">Point2f</a></strong> <br>2d float point</td>
 </tr>
 <tr>
 <td>using <a href="/dakku/Classes/classdakku_1_1Point/">Point</a>&lt; int, 2 &gt;</td>
-<td><strong><a href="/dakku/Namespaces/namespacedakku/#using-point2i">Point2i</a></strong></td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#using-point2i">Point2i</a></strong> <br>2d int point</td>
 </tr>
 <tr>
 <td>using <a href="/dakku/Classes/classdakku_1_1Normal/">Normal</a>&lt; float, 3 &gt;</td>
-<td><strong><a href="/dakku/Namespaces/namespacedakku/#using-normal3f">Normal3f</a></strong></td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#using-normal3f">Normal3f</a></strong> <br>3d float normal</td>
 </tr>
 </tbody>
 </table>
@@ -630,6 +696,18 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="/dakku/Classes/classdakku_1_1Bounds2iIterator/">Bounds2iIterator</a></td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#function-begin">begin</a></strong>(const <a href="/dakku/Namespaces/namespacedakku/#using-bounds2i">Bounds2i</a> &amp; b)<br>begin of the bounds2i iteration</td>
+</tr>
+<tr>
+<td><a href="/dakku/Classes/classdakku_1_1Bounds2iIterator/">Bounds2iIterator</a></td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#function-end">end</a></strong>(const <a href="/dakku/Namespaces/namespacedakku/#using-bounds2i">Bounds2i</a> &amp; b)<br>end of the bounds2i iteration</td>
+</tr>
+<tr>
+<td></td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#function-dakku-declare-lua-object">DAKKU_DECLARE_LUA_OBJECT</a></strong>(Bounds , <a href="/dakku/Files/fwd_8h/#define-dakku-export-core">DAKKU_EXPORT_CORE</a> )</td>
+</tr>
+<tr>
 <td>template &lt;typename T > <br><a href="/dakku/Files/platform_8h/#define-dakku-inline">DAKKU_INLINE</a> bool</td>
 <td><strong><a href="/dakku/Namespaces/namespacedakku/#function-isnan">isnan</a></strong>(T x)<br>check whether <code>x</code> is not a number</td>
 </tr>
@@ -639,76 +717,115 @@
 </tr>
 <tr>
 <td></td>
-<td><strong><a href="/dakku/Namespaces/namespacedakku/#function-dakku-declare-lua-object">DAKKU_DECLARE_LUA_OBJECT</a></strong>(<a href="/dakku/Namespaces/namespacedakku/#using-vector2i">Vector2i</a> )</td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#function-dakku-declare-lua-object">DAKKU_DECLARE_LUA_OBJECT</a></strong>(<a href="/dakku/Namespaces/namespacedakku/#using-vector2i">Vector2i</a> , <a href="/dakku/Files/fwd_8h/#define-dakku-export-core">DAKKU_EXPORT_CORE</a> )</td>
 </tr>
 <tr>
 <td></td>
-<td><strong><a href="/dakku/Namespaces/namespacedakku/#function-dakku-declare-lua-object">DAKKU_DECLARE_LUA_OBJECT</a></strong>(<a href="/dakku/Namespaces/namespacedakku/#using-vector2f">Vector2f</a> )</td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#function-dakku-declare-lua-object">DAKKU_DECLARE_LUA_OBJECT</a></strong>(<a href="/dakku/Namespaces/namespacedakku/#using-vector2f">Vector2f</a> , <a href="/dakku/Files/fwd_8h/#define-dakku-export-core">DAKKU_EXPORT_CORE</a> )</td>
 </tr>
 <tr>
 <td></td>
-<td><strong><a href="/dakku/Namespaces/namespacedakku/#function-dakku-declare-lua-object">DAKKU_DECLARE_LUA_OBJECT</a></strong>(<a href="/dakku/Namespaces/namespacedakku/#using-vector3i">Vector3i</a> )</td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#function-dakku-declare-lua-object">DAKKU_DECLARE_LUA_OBJECT</a></strong>(<a href="/dakku/Namespaces/namespacedakku/#using-vector3i">Vector3i</a> , <a href="/dakku/Files/fwd_8h/#define-dakku-export-core">DAKKU_EXPORT_CORE</a> )</td>
 </tr>
 <tr>
 <td></td>
-<td><strong><a href="/dakku/Namespaces/namespacedakku/#function-dakku-declare-lua-object">DAKKU_DECLARE_LUA_OBJECT</a></strong>(<a href="/dakku/Namespaces/namespacedakku/#using-vector3f">Vector3f</a> )</td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#function-dakku-declare-lua-object">DAKKU_DECLARE_LUA_OBJECT</a></strong>(<a href="/dakku/Namespaces/namespacedakku/#using-vector3f">Vector3f</a> , <a href="/dakku/Files/fwd_8h/#define-dakku-export-core">DAKKU_EXPORT_CORE</a> )</td>
 </tr>
 <tr>
 <td></td>
-<td><strong><a href="/dakku/Namespaces/namespacedakku/#function-dakku-declare-lua-object">DAKKU_DECLARE_LUA_OBJECT</a></strong>(<a href="/dakku/Namespaces/namespacedakku/#using-point3f">Point3f</a> )</td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#function-dakku-declare-lua-object">DAKKU_DECLARE_LUA_OBJECT</a></strong>(<a href="/dakku/Namespaces/namespacedakku/#using-point3f">Point3f</a> , <a href="/dakku/Files/fwd_8h/#define-dakku-export-core">DAKKU_EXPORT_CORE</a> )</td>
 </tr>
 <tr>
 <td></td>
-<td><strong><a href="/dakku/Namespaces/namespacedakku/#function-dakku-declare-lua-object">DAKKU_DECLARE_LUA_OBJECT</a></strong>(<a href="/dakku/Namespaces/namespacedakku/#using-point3i">Point3i</a> )</td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#function-dakku-declare-lua-object">DAKKU_DECLARE_LUA_OBJECT</a></strong>(<a href="/dakku/Namespaces/namespacedakku/#using-point3i">Point3i</a> , <a href="/dakku/Files/fwd_8h/#define-dakku-export-core">DAKKU_EXPORT_CORE</a> )</td>
 </tr>
 <tr>
 <td></td>
-<td><strong><a href="/dakku/Namespaces/namespacedakku/#function-dakku-declare-lua-object">DAKKU_DECLARE_LUA_OBJECT</a></strong>(<a href="/dakku/Namespaces/namespacedakku/#using-point2f">Point2f</a> )</td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#function-dakku-declare-lua-object">DAKKU_DECLARE_LUA_OBJECT</a></strong>(<a href="/dakku/Namespaces/namespacedakku/#using-point2f">Point2f</a> , <a href="/dakku/Files/fwd_8h/#define-dakku-export-core">DAKKU_EXPORT_CORE</a> )</td>
 </tr>
 <tr>
 <td></td>
-<td><strong><a href="/dakku/Namespaces/namespacedakku/#function-dakku-declare-lua-object">DAKKU_DECLARE_LUA_OBJECT</a></strong>(<a href="/dakku/Namespaces/namespacedakku/#using-point2i">Point2i</a> )</td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#function-dakku-declare-lua-object">DAKKU_DECLARE_LUA_OBJECT</a></strong>(<a href="/dakku/Namespaces/namespacedakku/#using-point2i">Point2i</a> , <a href="/dakku/Files/fwd_8h/#define-dakku-export-core">DAKKU_EXPORT_CORE</a> )</td>
 </tr>
 <tr>
 <td></td>
-<td><strong><a href="/dakku/Namespaces/namespacedakku/#function-dakku-declare-lua-object">DAKKU_DECLARE_LUA_OBJECT</a></strong>(<a href="/dakku/Namespaces/namespacedakku/#using-normal3f">Normal3f</a> )</td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#function-dakku-declare-lua-object">DAKKU_DECLARE_LUA_OBJECT</a></strong>(<a href="/dakku/Namespaces/namespacedakku/#using-normal3f">Normal3f</a> , <a href="/dakku/Files/fwd_8h/#define-dakku-export-core">DAKKU_EXPORT_CORE</a> )</td>
 </tr>
 </tbody>
 </table>
 <h2 id="types-documentation">Types Documentation</h2>
+<h3 id="using-bounds2f">using Bounds2f</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">using</span><span class="w"> </span><span class="n">dakku</span><span class="o">::</span><span class="n">Bounds2f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Bounds2</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>2d float bounds </p>
+<h3 id="using-bounds2i">using Bounds2i</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">using</span><span class="w"> </span><span class="n">dakku</span><span class="o">::</span><span class="n">Bounds2i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Bounds2</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>2d int bounds </p>
+<h3 id="using-bounds3f">using Bounds3f</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">using</span><span class="w"> </span><span class="n">dakku</span><span class="o">::</span><span class="n">Bounds3f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Bounds3</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>3d float bounds </p>
 <h3 id="using-vector2i">using Vector2i</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">using</span><span class="w"> </span><span class="n">dakku</span><span class="o">::</span><span class="n">Vector2i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">using</span><span class="w"> </span><span class="n">dakku</span><span class="o">::</span><span class="n">Vector2i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
+<p>2d int vector </p>
 <h3 id="using-vector2f">using Vector2f</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">using</span><span class="w"> </span><span class="n">dakku</span><span class="o">::</span><span class="n">Vector2f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Vector</span><span class="o">&lt;</span><span class="kt">float</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">using</span><span class="w"> </span><span class="n">dakku</span><span class="o">::</span><span class="n">Vector2f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Vector</span><span class="o">&lt;</span><span class="kt">float</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
+<p>2d float vector </p>
 <h3 id="using-vector3i">using Vector3i</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">using</span><span class="w"> </span><span class="n">dakku</span><span class="o">::</span><span class="n">Vector3i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">using</span><span class="w"> </span><span class="n">dakku</span><span class="o">::</span><span class="n">Vector3i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
+<p>3d int vector </p>
 <h3 id="using-vector3f">using Vector3f</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">using</span><span class="w"> </span><span class="n">dakku</span><span class="o">::</span><span class="n">Vector3f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Vector</span><span class="o">&lt;</span><span class="kt">float</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">using</span><span class="w"> </span><span class="n">dakku</span><span class="o">::</span><span class="n">Vector3f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Vector</span><span class="o">&lt;</span><span class="kt">float</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
+<p>3d float vector </p>
 <h3 id="using-point3f">using Point3f</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">using</span><span class="w"> </span><span class="n">dakku</span><span class="o">::</span><span class="n">Point3f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Point</span><span class="o">&lt;</span><span class="kt">float</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">using</span><span class="w"> </span><span class="n">dakku</span><span class="o">::</span><span class="n">Point3f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Point</span><span class="o">&lt;</span><span class="kt">float</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
+<p>3d float point </p>
 <h3 id="using-point3i">using Point3i</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">using</span><span class="w"> </span><span class="n">dakku</span><span class="o">::</span><span class="n">Point3i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Point</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">using</span><span class="w"> </span><span class="n">dakku</span><span class="o">::</span><span class="n">Point3i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Point</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
+<p>3d int point </p>
 <h3 id="using-point2f">using Point2f</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">using</span><span class="w"> </span><span class="n">dakku</span><span class="o">::</span><span class="n">Point2f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Point</span><span class="o">&lt;</span><span class="kt">float</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">using</span><span class="w"> </span><span class="n">dakku</span><span class="o">::</span><span class="n">Point2f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Point</span><span class="o">&lt;</span><span class="kt">float</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
+<p>2d float point </p>
 <h3 id="using-point2i">using Point2i</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">using</span><span class="w"> </span><span class="n">dakku</span><span class="o">::</span><span class="n">Point2i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Point</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">using</span><span class="w"> </span><span class="n">dakku</span><span class="o">::</span><span class="n">Point2i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Point</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
+<p>2d int point </p>
 <h3 id="using-normal3f">using Normal3f</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">using</span><span class="w"> </span><span class="n">dakku</span><span class="o">::</span><span class="n">Normal3f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Normal</span><span class="o">&lt;</span><span class="kt">float</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">using</span><span class="w"> </span><span class="n">dakku</span><span class="o">::</span><span class="n">Normal3f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">Normal</span><span class="o">&lt;</span><span class="kt">float</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
+<p>3d float normal </p>
 <h2 id="functions-documentation">Functions Documentation</h2>
+<h3 id="function-begin">function begin</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kr">inline</span><span class="w"> </span><span class="n">Bounds2iIterator</span><span class="w"> </span><span class="n">begin</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Bounds2i</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">b</span><span class="w"></span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>begin of the bounds2i iteration </p>
+<h3 id="function-end">function end</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kr">inline</span><span class="w"> </span><span class="n">Bounds2iIterator</span><span class="w"> </span><span class="n">end</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Bounds2i</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">b</span><span class="w"></span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>end of the bounds2i iteration </p>
+<h3 id="function-dakku_declare_lua_object">function DAKKU_DECLARE_LUA_OBJECT</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">DAKKU_DECLARE_LUA_OBJECT</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">    </span><span class="n">Bounds</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">    </span><span class="n">DAKKU_EXPORT_CORE</span><span class="w"> </span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
 <h3 id="function-isnan">function isnan</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">DAKKU_INLINE</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">isnan</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="n">T</span><span class="w"> </span><span class="n">x</span><span class="w"></span>
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="n">DAKKU_INLINE</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">isnan</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">    </span><span class="n">T</span><span class="w"> </span><span class="n">x</span><span class="w"></span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 <p>check whether <code>x</code> is not a number </p>
 <p><strong>Parameters</strong>: </p>
@@ -721,10 +838,10 @@
 </ul>
 <p><strong>Return</strong>: whether <code>x</code> is nan </p>
 <h3 id="function-isnan_1">function isnan</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="n">DAKKU_INLINE</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">isnan</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="n">T</span><span class="w"> </span>
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="n">DAKKU_INLINE</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">isnan</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">    </span><span class="n">T</span><span class="w"> </span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 <p>check whether <code>x</code> is not a number </p>
 <p><strong>Template Parameters</strong>: </p>
@@ -732,53 +849,62 @@
 <li><strong>T</strong> type (integer) </li>
 </ul>
 <p><strong>Return</strong>: false (all integers are not nans) </p>
-<h3 id="function-dakku_declare_lua_object">function DAKKU_DECLARE_LUA_OBJECT</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">DAKKU_DECLARE_LUA_OBJECT</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="n">Vector2i</span><span class="w"> </span>
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="p">)</span><span class="w"></span>
-</code></pre></div>
 <h3 id="function-dakku_declare_lua_object_1">function DAKKU_DECLARE_LUA_OBJECT</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">DAKKU_DECLARE_LUA_OBJECT</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="n">Vector2f</span><span class="w"> </span>
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">DAKKU_DECLARE_LUA_OBJECT</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">    </span><span class="n">Vector2i</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="w">    </span><span class="n">DAKKU_EXPORT_CORE</span><span class="w"> </span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 <h3 id="function-dakku_declare_lua_object_2">function DAKKU_DECLARE_LUA_OBJECT</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">DAKKU_DECLARE_LUA_OBJECT</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="n">Vector3i</span><span class="w"> </span>
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">DAKKU_DECLARE_LUA_OBJECT</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">    </span><span class="n">Vector2f</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="w">    </span><span class="n">DAKKU_EXPORT_CORE</span><span class="w"> </span>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 <h3 id="function-dakku_declare_lua_object_3">function DAKKU_DECLARE_LUA_OBJECT</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">DAKKU_DECLARE_LUA_OBJECT</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">    </span><span class="n">Vector3f</span><span class="w"> </span>
-<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="n">DAKKU_DECLARE_LUA_OBJECT</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">    </span><span class="n">Vector3i</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">    </span><span class="n">DAKKU_EXPORT_CORE</span><span class="w"> </span>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 <h3 id="function-dakku_declare_lua_object_4">function DAKKU_DECLARE_LUA_OBJECT</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">DAKKU_DECLARE_LUA_OBJECT</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">    </span><span class="n">Point3f</span><span class="w"> </span>
-<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="n">DAKKU_DECLARE_LUA_OBJECT</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">    </span><span class="n">Vector3f</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="w">    </span><span class="n">DAKKU_EXPORT_CORE</span><span class="w"> </span>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 <h3 id="function-dakku_declare_lua_object_5">function DAKKU_DECLARE_LUA_OBJECT</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">DAKKU_DECLARE_LUA_OBJECT</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">    </span><span class="n">Point3i</span><span class="w"> </span>
-<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="n">DAKKU_DECLARE_LUA_OBJECT</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">    </span><span class="n">Point3f</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="w">    </span><span class="n">DAKKU_EXPORT_CORE</span><span class="w"> </span>
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 <h3 id="function-dakku_declare_lua_object_6">function DAKKU_DECLARE_LUA_OBJECT</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">DAKKU_DECLARE_LUA_OBJECT</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">    </span><span class="n">Point2f</span><span class="w"> </span>
-<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="n">DAKKU_DECLARE_LUA_OBJECT</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="w">    </span><span class="n">Point3i</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="w">    </span><span class="n">DAKKU_EXPORT_CORE</span><span class="w"> </span>
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 <h3 id="function-dakku_declare_lua_object_7">function DAKKU_DECLARE_LUA_OBJECT</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">DAKKU_DECLARE_LUA_OBJECT</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">    </span><span class="n">Point2i</span><span class="w"> </span>
-<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="n">DAKKU_DECLARE_LUA_OBJECT</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w">    </span><span class="n">Point2f</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="w">    </span><span class="n">DAKKU_EXPORT_CORE</span><span class="w"> </span>
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 <h3 id="function-dakku_declare_lua_object_8">function DAKKU_DECLARE_LUA_OBJECT</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="n">DAKKU_DECLARE_LUA_OBJECT</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">    </span><span class="n">Normal3f</span><span class="w"> </span>
-<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="n">DAKKU_DECLARE_LUA_OBJECT</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="w">    </span><span class="n">Point2i</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="w">    </span><span class="n">DAKKU_EXPORT_CORE</span><span class="w"> </span>
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-dakku_declare_lua_object_9">function DAKKU_DECLARE_LUA_OBJECT</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="n">DAKKU_DECLARE_LUA_OBJECT</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="w">    </span><span class="n">Normal3f</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="w">    </span><span class="n">DAKKU_EXPORT_CORE</span><span class="w"> </span>
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 <hr />
-<p>Updated on 2022-04-25 at 11:08:30 +0000</p>
+<p>Updated on 2022-04-25 at 12:01:56 +0000</p>
 
               
             </article>

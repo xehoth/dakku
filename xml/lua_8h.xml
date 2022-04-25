@@ -74,11 +74,12 @@
         </inbodydescription>
         <location file="src/core/lua.h" line="6" column="9" bodyfile="src/core/lua.h" bodystart="6" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="define" id="lua_8h_1aafa5778caba2207c6f0fa9571e9c97d9" prot="public" static="no">
+      <memberdef kind="define" id="lua_8h_1a0ec990f90c34473d19516716c69bea03" prot="public" static="no">
         <name>DAKKU_DECLARE_LUA_OBJECT</name>
         <param><defname>name</defname></param>
-        <initializer>  struct _##name##_lua_bind_wrapper {  \
-    static int _##name##_bind_lua;     \
+        <param><defname>export</defname></param>
+        <initializer>  struct export _##name##_lua_bind_wrapper {   \
+    static int _##name##_bind_lua;             \
   }</initializer>
         <briefdescription>
         </briefdescription>
@@ -128,9 +129,9 @@
 <codeline lineno="31"><highlight class="normal"><sp/><sp/>sol::state<sp/>state;</highlight></codeline>
 <codeline lineno="32"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34" refid="lua_8h_1aafa5778caba2207c6f0fa9571e9c97d9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DAKKU_DECLARE_LUA_OBJECT(name)<sp/>\</highlight></codeline>
-<codeline lineno="35"><highlight class="preprocessor"><sp/><sp/>struct<sp/>_##name##_lua_bind_wrapper<sp/>{<sp/><sp/>\</highlight></codeline>
-<codeline lineno="36"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>static<sp/>int<sp/>_##name##_bind_lua;<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="34" refid="lua_8h_1a0ec990f90c34473d19516716c69bea03" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DAKKU_DECLARE_LUA_OBJECT(name,<sp/>export)<sp/>\</highlight></codeline>
+<codeline lineno="35"><highlight class="preprocessor"><sp/><sp/>struct<sp/>export<sp/>_##name##_lua_bind_wrapper<sp/>{<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="36"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>static<sp/>int<sp/>_##name##_bind_lua;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
 <codeline lineno="37"><highlight class="preprocessor"><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="38"><highlight class="normal"></highlight></codeline>
 <codeline lineno="39" refid="lua_8h_1a0587e5b4f4419faac9ccf7c9cd36d22d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DAKKU_IMPLEMENT_LUA_OBJECT(name,<sp/>func)<sp/>\</highlight></codeline>

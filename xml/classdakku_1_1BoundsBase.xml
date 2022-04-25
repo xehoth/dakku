@@ -16,11 +16,11 @@
       </param>
     </templateparamlist>
       <sectiondef kind="public-attrib">
-      <memberdef kind="variable" id="classdakku_1_1BoundsBase_1abd7c34bec0f05f1dfb494b76eed47622" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="classdakku_1_1BoundsBase_1a4184a0ed585016f497a84e9d69f65230" prot="public" static="no" mutable="no">
         <type><ref refid="classdakku_1_1Point" kindref="compound">Point</ref>&lt; T, S &gt;</type>
-        <definition>Point&lt;T, S&gt; dakku::BoundsBase&lt; T, S &gt;::pMin</definition>
+        <definition>Point&lt;T, S&gt; dakku::BoundsBase&lt; T, S &gt;::p_min</definition>
         <argsstring></argsstring>
-        <name>pMin</name>
+        <name>p_min</name>
         <initializer>{std::numeric_limits&lt;T&gt;::max()}</initializer>
         <briefdescription>
 <para>left bottom corner of the bounds </para>
@@ -29,13 +29,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/bounds.h" line="26" column="9" bodyfile="src/core/bounds.h" bodystart="26" bodyend="-1"/>
+        <location file="src/core/bounds.h" line="264" column="9" bodyfile="src/core/bounds.h" bodystart="264" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="classdakku_1_1BoundsBase_1a1df49abc60c6cee7febd54aa46d04aa8" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="classdakku_1_1BoundsBase_1a5dd935e5034611b72d2d9b348db09dd7" prot="public" static="no" mutable="no">
         <type><ref refid="classdakku_1_1Point" kindref="compound">Point</ref>&lt; T, S &gt;</type>
-        <definition>Point&lt;T, S&gt; dakku::BoundsBase&lt; T, S &gt;::pMax</definition>
+        <definition>Point&lt;T, S&gt; dakku::BoundsBase&lt; T, S &gt;::p_max</definition>
         <argsstring></argsstring>
-        <name>pMax</name>
+        <name>p_max</name>
         <initializer>{std::numeric_limits&lt;T&gt;::lowest()}</initializer>
         <briefdescription>
 <para>right top corner of the bounds </para>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/bounds.h" line="28" column="9" bodyfile="src/core/bounds.h" bodystart="28" bodyend="-1"/>
+        <location file="src/core/bounds.h" line="266" column="9" bodyfile="src/core/bounds.h" bodystart="266" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -61,6 +61,677 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/core/bounds.h" line="23" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1BoundsBase_1a4707e959360ddbc591c0645854575ad9" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>dakku::BoundsBase&lt; T, S &gt;::BoundsBase</definition>
+        <argsstring>(const Point&lt; T, S &gt; &amp;p)</argsstring>
+        <name>BoundsBase</name>
+        <param>
+          <type>const <ref refid="classdakku_1_1Point" kindref="compound">Point</ref>&lt; T, S &gt; &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classdakku_1_1Bounds2" kindref="compound">Bounds2</ref> with a point. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the given point </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/bounds.h" line="30" column="12" bodyfile="src/core/bounds.h" bodystart="30" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1BoundsBase_1ab17dcf1e9998aeb07b29614aaeb42118" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>ArithmeticType</type>
+            <declname>U</declname>
+            <defname>U</defname>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>dakku::BoundsBase&lt; T, S &gt;::BoundsBase</definition>
+        <argsstring>(const BoundsBase&lt; U, S &gt; &amp;b)</argsstring>
+        <name>BoundsBase</name>
+        <param>
+          <type>const <ref refid="classdakku_1_1BoundsBase" kindref="compound">BoundsBase</ref>&lt; U, S &gt; &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>type conversion </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/bounds.h" line="37" column="12" bodyfile="src/core/bounds.h" bodystart="37" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1BoundsBase_1ac2e934c9361722edb8bb081686feff62" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>dakku::BoundsBase&lt; T, S &gt;::BoundsBase</definition>
+        <argsstring>(const Point&lt; T, S &gt; &amp;p1, const Point&lt; T, S &gt; &amp;p2)</argsstring>
+        <name>BoundsBase</name>
+        <param>
+          <type>const <ref refid="classdakku_1_1Point" kindref="compound">Point</ref>&lt; T, S &gt; &amp;</type>
+          <declname>p1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classdakku_1_1Point" kindref="compound">Point</ref>&lt; T, S &gt; &amp;</type>
+          <declname>p2</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new Bounds Base object with two points (take min/max of them to pMin and pMax) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/bounds.h" line="45" column="3" bodyfile="src/core/bounds.h" bodystart="45" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1BoundsBase_1a96253971453dc2be29858bc7eb1b6d63" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>dakku::BoundsBase&lt; T, S &gt;::BoundsBase</definition>
+        <argsstring>(const sol::table &amp;table)</argsstring>
+        <name>BoundsBase</name>
+        <param>
+          <type>const sol::table &amp;</type>
+          <declname>table</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/bounds.h" line="48" column="3" bodyfile="src/core/bounds.h" bodystart="48" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1BoundsBase_1a07b1800b4e56f7f2daf1f59785215aee" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classdakku_1_1Vector" kindref="compound">Vector</ref>&lt; T, S &gt;</type>
+        <definition>Vector&lt; T, S &gt; dakku::BoundsBase&lt; T, S &gt;::diagonal</definition>
+        <argsstring>() const</argsstring>
+        <name>diagonal</name>
+        <briefdescription>
+<para>get the diagonal of the bounding box </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/bounds.h" line="55" column="11" bodyfile="src/core/bounds.h" bodystart="55" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1BoundsBase_1a656597780f88506a2ea69c9aab4f3af9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t dakku::BoundsBase&lt; T, S &gt;::max_extent</definition>
+        <argsstring>() const</argsstring>
+        <name>max_extent</name>
+        <briefdescription>
+<para>get the dimension who has the maximum extent </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the dimension </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/bounds.h" line="62" column="11" bodyfile="src/core/bounds.h" bodystart="62" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1BoundsBase_1acd1339c39870cd9bac4a0c2ee3726d20" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool dakku::BoundsBase&lt; T, S &gt;::operator==</definition>
+        <argsstring>(const BoundsBase &amp;rhs) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classdakku_1_1BoundsBase" kindref="compound">BoundsBase</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/bounds.h" line="66" column="8" bodyfile="src/core/bounds.h" bodystart="66" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1BoundsBase_1a06fb31654a6571636ccab3b28d4edbaf" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool dakku::BoundsBase&lt; T, S &gt;::operator!=</definition>
+        <argsstring>(const BoundsBase &amp;rhs) const</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classdakku_1_1BoundsBase" kindref="compound">BoundsBase</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/bounds.h" line="70" column="8" bodyfile="src/core/bounds.h" bodystart="70" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1BoundsBase_1ac3a04d4a5ba9884d9ab2734c5c94248f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classdakku_1_1Point" kindref="compound">Point</ref>&lt; T, S &gt;</type>
+        <definition>Point&lt; T, S &gt; dakku::BoundsBase&lt; T, S &gt;::lerp</definition>
+        <argsstring>(const Point&lt; float, S &gt; &amp;t) const</argsstring>
+        <name>lerp</name>
+        <param>
+          <type>const <ref refid="classdakku_1_1Point" kindref="compound">Point</ref>&lt; float, S &gt; &amp;</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>linera interpolation between pMin and pMax </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>interpolate $t$ (element wise) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/bounds.h" line="79" column="10" bodyfile="src/core/bounds.h" bodystart="79" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1BoundsBase_1a91d113dc02fe1d57163f8b2cee408ed1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classdakku_1_1Vector" kindref="compound">Vector</ref>&lt; T, S &gt;</type>
+        <definition>Vector&lt; T, S &gt; dakku::BoundsBase&lt; T, S &gt;::offset</definition>
+        <argsstring>(const Point&lt; T, S &gt; &amp;p) const</argsstring>
+        <name>offset</name>
+        <param>
+          <type>const <ref refid="classdakku_1_1Point" kindref="compound">Point</ref>&lt; T, S &gt; &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>get the offset $v$ of a point, p = o + v * d </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the point </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the offset </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/bounds.h" line="91" column="11" bodyfile="src/core/bounds.h" bodystart="91" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1BoundsBase_1a7e616e975e5a9e433de10b6b629421e0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool dakku::BoundsBase&lt; T, S &gt;::overlaps</definition>
+        <argsstring>(const BoundsBase &amp;rhs) const</argsstring>
+        <name>overlaps</name>
+        <param>
+          <type>const <ref refid="classdakku_1_1BoundsBase" kindref="compound">BoundsBase</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>check whether two bounds overlaps </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/bounds.h" line="112" column="9" bodyfile="src/core/bounds.h" bodystart="112" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1BoundsBase_1a83ffa96540655887bd9fa6ff3fdf3960" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool dakku::BoundsBase&lt; T, S &gt;::inside</definition>
+        <argsstring>(const Point&lt; T, S &gt; &amp;p) const</argsstring>
+        <name>inside</name>
+        <param>
+          <type>const <ref refid="classdakku_1_1Point" kindref="compound">Point</ref>&lt; T, S &gt; &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>check whether point is inside the bounds (inclusive) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the point </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/bounds.h" line="133" column="9" bodyfile="src/core/bounds.h" bodystart="133" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1BoundsBase_1ab6ee4089c4580fd50ff1e100e7ef0467" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool dakku::BoundsBase&lt; T, S &gt;::inside_exclusive</definition>
+        <argsstring>(const Point&lt; T, S &gt; &amp;p) const</argsstring>
+        <name>inside_exclusive</name>
+        <param>
+          <type>const <ref refid="classdakku_1_1Point" kindref="compound">Point</ref>&lt; T, S &gt; &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>check whether point is inside the bounds (exclusive) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the point </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/bounds.h" line="154" column="9" bodyfile="src/core/bounds.h" bodystart="154" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1BoundsBase_1aa16a238d3e3aba4de878de640b87375d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void dakku::BoundsBase&lt; T, S &gt;::bounding_sphere</definition>
+        <argsstring>(Point&lt; T, S &gt; &amp;center, float &amp;rad)</argsstring>
+        <name>bounding_sphere</name>
+        <param>
+          <type><ref refid="classdakku_1_1Point" kindref="compound">Point</ref>&lt; T, S &gt; &amp;</type>
+          <declname>center</declname>
+        </param>
+        <param>
+          <type>float &amp;</type>
+          <declname>rad</declname>
+        </param>
+        <briefdescription>
+<para>get the bounding sphere of the bounds </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">center</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the center of the sphere </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">rad</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the radius of the sphere </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/bounds.h" line="164" column="8" bodyfile="src/core/bounds.h" bodystart="164" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1BoundsBase_1a1765776002e65c8b01432993fc2fd556" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classdakku_1_1BoundsBase" kindref="compound">BoundsBase</ref></type>
+        <definition>BoundsBase dakku::BoundsBase&lt; T, S &gt;::union_bounds</definition>
+        <argsstring>(const BoundsBase &amp;rhs) const</argsstring>
+        <name>union_bounds</name>
+        <param>
+          <type>const <ref refid="classdakku_1_1BoundsBase" kindref="compound">BoundsBase</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>take the union of the two bounds </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/bounds.h" line="184" column="15" bodyfile="src/core/bounds.h" bodystart="184" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1BoundsBase_1a70550031ac4e7fa4a1a176787ba32cf3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classdakku_1_1BoundsBase" kindref="compound">BoundsBase</ref></type>
+        <definition>BoundsBase dakku::BoundsBase&lt; T, S &gt;::union_bounds</definition>
+        <argsstring>(const Point&lt; T, S &gt; &amp;p) const</argsstring>
+        <name>union_bounds</name>
+        <param>
+          <type>const <ref refid="classdakku_1_1Point" kindref="compound">Point</ref>&lt; T, S &gt; &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>take the union between bounds and a point </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/bounds.h" line="203" column="15" bodyfile="src/core/bounds.h" bodystart="203" bodyend="205"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1BoundsBase_1ada07d62a712c1545b08400cc79838341" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classdakku_1_1BoundsBase" kindref="compound">BoundsBase</ref></type>
+        <definition>BoundsBase dakku::BoundsBase&lt; T, S &gt;::intersect</definition>
+        <argsstring>(const BoundsBase &amp;rhs) const</argsstring>
+        <name>intersect</name>
+        <param>
+          <type>const <ref refid="classdakku_1_1BoundsBase" kindref="compound">BoundsBase</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>take the intersect between two bounds </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/bounds.h" line="226" column="15" bodyfile="src/core/bounds.h" bodystart="226" bodyend="228"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1BoundsBase_1abe96cae5641f9237d6e6ec7e5144f787" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string dakku::BoundsBase&lt; T, S &gt;::to_string</definition>
+        <argsstring>() const</argsstring>
+        <name>to_string</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/bounds.h" line="255" column="16" bodyfile="src/core/bounds.h" bodystart="255" bodyend="257"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classdakku_1_1BoundsBase_1a354b7ef9e0dc908b9eca0a47f64cd37c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool overlaps</definition>
+        <argsstring>(const BoundsBase &amp;a, const BoundsBase &amp;b)</argsstring>
+        <name>overlaps</name>
+        <param>
+          <type>const <ref refid="classdakku_1_1BoundsBase" kindref="compound">BoundsBase</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classdakku_1_1BoundsBase" kindref="compound">BoundsBase</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>check whether two bounds overlaps </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/bounds.h" line="102" column="15" bodyfile="src/core/bounds.h" bodystart="102" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="friend" id="classdakku_1_1BoundsBase_1a4ba0780dc5fab304376d54affb497ae8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool inside</definition>
+        <argsstring>(const Point&lt; T, S &gt; &amp;p, const BoundsBase &amp;b)</argsstring>
+        <name>inside</name>
+        <param>
+          <type>const <ref refid="classdakku_1_1Point" kindref="compound">Point</ref>&lt; T, S &gt; &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classdakku_1_1BoundsBase" kindref="compound">BoundsBase</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>check whether point is inside the bounds (inclusive) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the bounds </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/bounds.h" line="122" column="15" bodyfile="src/core/bounds.h" bodystart="122" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="friend" id="classdakku_1_1BoundsBase_1a2ebda061b9528176e0f4037960aae9ce" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool inside_exclusive</definition>
+        <argsstring>(const Point&lt; T, S &gt; &amp;p, const BoundsBase &amp;b)</argsstring>
+        <name>inside_exclusive</name>
+        <param>
+          <type>const <ref refid="classdakku_1_1Point" kindref="compound">Point</ref>&lt; T, S &gt; &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classdakku_1_1BoundsBase" kindref="compound">BoundsBase</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>check whether point is inside the bounds (exclusive) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the bounds </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/bounds.h" line="143" column="15" bodyfile="src/core/bounds.h" bodystart="143" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="friend" id="classdakku_1_1BoundsBase_1a911ebeb367646117e45b81b7c3fceb02" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classdakku_1_1BoundsBase" kindref="compound">BoundsBase</ref></type>
+        <definition>BoundsBase operator|</definition>
+        <argsstring>(const BoundsBase &amp;a, const BoundsBase &amp;b)</argsstring>
+        <name>operator|</name>
+        <param>
+          <type>const <ref refid="classdakku_1_1BoundsBase" kindref="compound">BoundsBase</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classdakku_1_1BoundsBase" kindref="compound">BoundsBase</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>take the union of the two bounds </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/bounds.h" line="173" column="21" bodyfile="src/core/bounds.h" bodystart="173" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="friend" id="classdakku_1_1BoundsBase_1a775827382a4cfcd6d7e18741bb7236f8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classdakku_1_1BoundsBase" kindref="compound">BoundsBase</ref></type>
+        <definition>BoundsBase operator|</definition>
+        <argsstring>(const BoundsBase &amp;b, const Point&lt; T, S &gt; &amp;p)</argsstring>
+        <name>operator|</name>
+        <param>
+          <type>const <ref refid="classdakku_1_1BoundsBase" kindref="compound">BoundsBase</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classdakku_1_1Point" kindref="compound">Point</ref>&lt; T, S &gt; &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>take the union between bounds and a point </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/bounds.h" line="192" column="21" bodyfile="src/core/bounds.h" bodystart="192" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="friend" id="classdakku_1_1BoundsBase_1aabca5f08125e27d64b79bcb2cd1e7704" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classdakku_1_1BoundsBase" kindref="compound">BoundsBase</ref></type>
+        <definition>BoundsBase operator&amp;</definition>
+        <argsstring>(const BoundsBase &amp;a, const BoundsBase &amp;b)</argsstring>
+        <name>operator&amp;</name>
+        <param>
+          <type>const <ref refid="classdakku_1_1BoundsBase" kindref="compound">BoundsBase</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classdakku_1_1BoundsBase" kindref="compound">BoundsBase</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>take the intersect between two bounds </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/bounds.h" line="211" column="21" bodyfile="src/core/bounds.h" bodystart="211" bodyend="220"/>
+      </memberdef>
+      <memberdef kind="friend" id="classdakku_1_1BoundsBase_1ab2594d571cb5799e89caf4e00bd9fcb4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>decltype(auto)</type>
+        <definition>decltype(auto) distance_squared</definition>
+        <argsstring>(const Point&lt; T, S &gt; &amp;p, const BoundsBase&lt; T, S &gt; &amp;b)</argsstring>
+        <name>distance_squared</name>
+        <param>
+          <type>const <ref refid="classdakku_1_1Point" kindref="compound">Point</ref>&lt; T, S &gt; &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classdakku_1_1BoundsBase" kindref="compound">BoundsBase</ref>&lt; T, S &gt; &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>minimum squared distance between point and bounds, if inside return 0 </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the bounds </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the squared distance </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/bounds.h" line="238" column="19" bodyfile="src/core/bounds.h" bodystart="238" bodyend="241"/>
+      </memberdef>
+      <memberdef kind="friend" id="classdakku_1_1BoundsBase_1aa2d4df3cf0ab3272dc058aedc3a7942f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>decltype(auto)</type>
+        <definition>decltype(auto) distance</definition>
+        <argsstring>(const Point&lt; T, S &gt; &amp;p, const BoundsBase&lt; T, S &gt; &amp;b)</argsstring>
+        <name>distance</name>
+        <param>
+          <type>const <ref refid="classdakku_1_1Point" kindref="compound">Point</ref>&lt; T, S &gt; &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classdakku_1_1BoundsBase" kindref="compound">BoundsBase</ref>&lt; T, S &gt; &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>minimum distance between point and bounds, if inside return 0 </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the bounds </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the distance </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/bounds.h" line="250" column="19" bodyfile="src/core/bounds.h" bodystart="250" bodyend="253"/>
+      </memberdef>
+      <memberdef kind="friend" id="classdakku_1_1BoundsBase_1a02d61000d3d0599081a30bafc71bf758" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream &amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;os, const BoundsBase &amp;b)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classdakku_1_1BoundsBase" kindref="compound">BoundsBase</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/bounds.h" line="259" column="10" bodyfile="src/core/bounds.h" bodystart="259" bodyend="261"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -86,11 +757,38 @@
 </parameterlist>
 </para>
     </detaileddescription>
-    <location file="src/core/bounds.h" line="17" column="1" bodyfile="src/core/bounds.h" bodystart="17" bodyend="29"/>
+    <location file="src/core/bounds.h" line="17" column="1" bodyfile="src/core/bounds.h" bodystart="17" bodyend="267"/>
     <listofallmembers>
+      <member refid="classdakku_1_1BoundsBase_1aa16a238d3e3aba4de878de640b87375d" prot="public" virt="non-virtual"><scope>dakku::BoundsBase</scope><name>bounding_sphere</name></member>
       <member refid="classdakku_1_1BoundsBase_1a4dea00502d665d2f3e6657507a9b03fb" prot="public" virt="non-virtual"><scope>dakku::BoundsBase</scope><name>BoundsBase</name></member>
-      <member refid="classdakku_1_1BoundsBase_1a1df49abc60c6cee7febd54aa46d04aa8" prot="public" virt="non-virtual"><scope>dakku::BoundsBase</scope><name>pMax</name></member>
-      <member refid="classdakku_1_1BoundsBase_1abd7c34bec0f05f1dfb494b76eed47622" prot="public" virt="non-virtual"><scope>dakku::BoundsBase</scope><name>pMin</name></member>
+      <member refid="classdakku_1_1BoundsBase_1a4707e959360ddbc591c0645854575ad9" prot="public" virt="non-virtual"><scope>dakku::BoundsBase</scope><name>BoundsBase</name></member>
+      <member refid="classdakku_1_1BoundsBase_1ab17dcf1e9998aeb07b29614aaeb42118" prot="public" virt="non-virtual"><scope>dakku::BoundsBase</scope><name>BoundsBase</name></member>
+      <member refid="classdakku_1_1BoundsBase_1ac2e934c9361722edb8bb081686feff62" prot="public" virt="non-virtual"><scope>dakku::BoundsBase</scope><name>BoundsBase</name></member>
+      <member refid="classdakku_1_1BoundsBase_1a96253971453dc2be29858bc7eb1b6d63" prot="public" virt="non-virtual"><scope>dakku::BoundsBase</scope><name>BoundsBase</name></member>
+      <member refid="classdakku_1_1BoundsBase_1a07b1800b4e56f7f2daf1f59785215aee" prot="public" virt="non-virtual"><scope>dakku::BoundsBase</scope><name>diagonal</name></member>
+      <member refid="classdakku_1_1BoundsBase_1aa2d4df3cf0ab3272dc058aedc3a7942f" prot="public" virt="non-virtual"><scope>dakku::BoundsBase</scope><name>distance</name></member>
+      <member refid="classdakku_1_1BoundsBase_1ab2594d571cb5799e89caf4e00bd9fcb4" prot="public" virt="non-virtual"><scope>dakku::BoundsBase</scope><name>distance_squared</name></member>
+      <member refid="classdakku_1_1BoundsBase_1a4ba0780dc5fab304376d54affb497ae8" prot="public" virt="non-virtual"><scope>dakku::BoundsBase</scope><name>inside</name></member>
+      <member refid="classdakku_1_1BoundsBase_1a83ffa96540655887bd9fa6ff3fdf3960" prot="public" virt="non-virtual"><scope>dakku::BoundsBase</scope><name>inside</name></member>
+      <member refid="classdakku_1_1BoundsBase_1a2ebda061b9528176e0f4037960aae9ce" prot="public" virt="non-virtual"><scope>dakku::BoundsBase</scope><name>inside_exclusive</name></member>
+      <member refid="classdakku_1_1BoundsBase_1ab6ee4089c4580fd50ff1e100e7ef0467" prot="public" virt="non-virtual"><scope>dakku::BoundsBase</scope><name>inside_exclusive</name></member>
+      <member refid="classdakku_1_1BoundsBase_1ada07d62a712c1545b08400cc79838341" prot="public" virt="non-virtual"><scope>dakku::BoundsBase</scope><name>intersect</name></member>
+      <member refid="classdakku_1_1BoundsBase_1ac3a04d4a5ba9884d9ab2734c5c94248f" prot="public" virt="non-virtual"><scope>dakku::BoundsBase</scope><name>lerp</name></member>
+      <member refid="classdakku_1_1BoundsBase_1a656597780f88506a2ea69c9aab4f3af9" prot="public" virt="non-virtual"><scope>dakku::BoundsBase</scope><name>max_extent</name></member>
+      <member refid="classdakku_1_1BoundsBase_1a91d113dc02fe1d57163f8b2cee408ed1" prot="public" virt="non-virtual"><scope>dakku::BoundsBase</scope><name>offset</name></member>
+      <member refid="classdakku_1_1BoundsBase_1a06fb31654a6571636ccab3b28d4edbaf" prot="public" virt="non-virtual"><scope>dakku::BoundsBase</scope><name>operator!=</name></member>
+      <member refid="classdakku_1_1BoundsBase_1aabca5f08125e27d64b79bcb2cd1e7704" prot="public" virt="non-virtual"><scope>dakku::BoundsBase</scope><name>operator&amp;</name></member>
+      <member refid="classdakku_1_1BoundsBase_1a02d61000d3d0599081a30bafc71bf758" prot="public" virt="non-virtual"><scope>dakku::BoundsBase</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classdakku_1_1BoundsBase_1acd1339c39870cd9bac4a0c2ee3726d20" prot="public" virt="non-virtual"><scope>dakku::BoundsBase</scope><name>operator==</name></member>
+      <member refid="classdakku_1_1BoundsBase_1a911ebeb367646117e45b81b7c3fceb02" prot="public" virt="non-virtual"><scope>dakku::BoundsBase</scope><name>operator|</name></member>
+      <member refid="classdakku_1_1BoundsBase_1a775827382a4cfcd6d7e18741bb7236f8" prot="public" virt="non-virtual"><scope>dakku::BoundsBase</scope><name>operator|</name></member>
+      <member refid="classdakku_1_1BoundsBase_1a354b7ef9e0dc908b9eca0a47f64cd37c" prot="public" virt="non-virtual"><scope>dakku::BoundsBase</scope><name>overlaps</name></member>
+      <member refid="classdakku_1_1BoundsBase_1a7e616e975e5a9e433de10b6b629421e0" prot="public" virt="non-virtual"><scope>dakku::BoundsBase</scope><name>overlaps</name></member>
+      <member refid="classdakku_1_1BoundsBase_1a5dd935e5034611b72d2d9b348db09dd7" prot="public" virt="non-virtual"><scope>dakku::BoundsBase</scope><name>p_max</name></member>
+      <member refid="classdakku_1_1BoundsBase_1a4184a0ed585016f497a84e9d69f65230" prot="public" virt="non-virtual"><scope>dakku::BoundsBase</scope><name>p_min</name></member>
+      <member refid="classdakku_1_1BoundsBase_1abe96cae5641f9237d6e6ec7e5144f787" prot="public" virt="non-virtual"><scope>dakku::BoundsBase</scope><name>to_string</name></member>
+      <member refid="classdakku_1_1BoundsBase_1a1765776002e65c8b01432993fc2fd556" prot="public" virt="non-virtual"><scope>dakku::BoundsBase</scope><name>union_bounds</name></member>
+      <member refid="classdakku_1_1BoundsBase_1a70550031ac4e7fa4a1a176787ba32cf3" prot="public" virt="non-virtual"><scope>dakku::BoundsBase</scope><name>union_bounds</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

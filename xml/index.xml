@@ -1,9 +1,54 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.2" xml:lang="en-US">
+  <compound refid="classdakku_1_1Bounds2" kind="class"><name>dakku::Bounds2</name>
+    <member refid="classdakku_1_1Bounds2_1a6ae823c1ed9889a5ac8ca8a0af4da79e" kind="function"><name>Bounds2</name></member>
+    <member refid="classdakku_1_1Bounds2_1ae986c4aae4bed669564ea89613984356" kind="function"><name>area</name></member>
+  </compound>
+  <compound refid="classdakku_1_1Bounds2iIterator" kind="class"><name>dakku::Bounds2iIterator</name>
+    <member refid="classdakku_1_1Bounds2iIterator_1a25db7490f2d16d4ce72ad2701535ffae" kind="variable"><name>b</name></member>
+    <member refid="classdakku_1_1Bounds2iIterator_1a03a906289f14103e080bc463642aeba3" kind="variable"><name>p</name></member>
+    <member refid="classdakku_1_1Bounds2iIterator_1a5c7da4004ef177e5726790240a2191aa" kind="function"><name>Bounds2iIterator</name></member>
+    <member refid="classdakku_1_1Bounds2iIterator_1ad19c79cc44f5407ffedd8fee2e74b873" kind="function"><name>operator++</name></member>
+    <member refid="classdakku_1_1Bounds2iIterator_1abba748bffd9de14381de7393279e0ab1" kind="function"><name>operator++</name></member>
+    <member refid="classdakku_1_1Bounds2iIterator_1aabbc42d3b83e2b025e1a8540ff62314b" kind="function"><name>operator==</name></member>
+    <member refid="classdakku_1_1Bounds2iIterator_1aec365c1c605c7f12c463b13668a6fa5b" kind="function"><name>operator!=</name></member>
+    <member refid="classdakku_1_1Bounds2iIterator_1a6b917d1a9e146470819a369ee789c65d" kind="function"><name>operator*</name></member>
+    <member refid="classdakku_1_1Bounds2iIterator_1aa30d8017ae278532454b1dacf52d1807" kind="function"><name>advance</name></member>
+  </compound>
+  <compound refid="classdakku_1_1Bounds3" kind="class"><name>dakku::Bounds3</name>
+    <member refid="classdakku_1_1Bounds3_1a46c718e38bed601047044a6f1c1b7d7c" kind="function"><name>Bounds3</name></member>
+  </compound>
   <compound refid="classdakku_1_1BoundsBase" kind="class"><name>dakku::BoundsBase</name>
-    <member refid="classdakku_1_1BoundsBase_1abd7c34bec0f05f1dfb494b76eed47622" kind="variable"><name>pMin</name></member>
-    <member refid="classdakku_1_1BoundsBase_1a1df49abc60c6cee7febd54aa46d04aa8" kind="variable"><name>pMax</name></member>
+    <member refid="classdakku_1_1BoundsBase_1a4184a0ed585016f497a84e9d69f65230" kind="variable"><name>p_min</name></member>
+    <member refid="classdakku_1_1BoundsBase_1a5dd935e5034611b72d2d9b348db09dd7" kind="variable"><name>p_max</name></member>
     <member refid="classdakku_1_1BoundsBase_1a4dea00502d665d2f3e6657507a9b03fb" kind="function"><name>BoundsBase</name></member>
+    <member refid="classdakku_1_1BoundsBase_1a4707e959360ddbc591c0645854575ad9" kind="function"><name>BoundsBase</name></member>
+    <member refid="classdakku_1_1BoundsBase_1ab17dcf1e9998aeb07b29614aaeb42118" kind="function"><name>BoundsBase</name></member>
+    <member refid="classdakku_1_1BoundsBase_1ac2e934c9361722edb8bb081686feff62" kind="function"><name>BoundsBase</name></member>
+    <member refid="classdakku_1_1BoundsBase_1a96253971453dc2be29858bc7eb1b6d63" kind="function"><name>BoundsBase</name></member>
+    <member refid="classdakku_1_1BoundsBase_1a07b1800b4e56f7f2daf1f59785215aee" kind="function"><name>diagonal</name></member>
+    <member refid="classdakku_1_1BoundsBase_1a656597780f88506a2ea69c9aab4f3af9" kind="function"><name>max_extent</name></member>
+    <member refid="classdakku_1_1BoundsBase_1acd1339c39870cd9bac4a0c2ee3726d20" kind="function"><name>operator==</name></member>
+    <member refid="classdakku_1_1BoundsBase_1a06fb31654a6571636ccab3b28d4edbaf" kind="function"><name>operator!=</name></member>
+    <member refid="classdakku_1_1BoundsBase_1ac3a04d4a5ba9884d9ab2734c5c94248f" kind="function"><name>lerp</name></member>
+    <member refid="classdakku_1_1BoundsBase_1a91d113dc02fe1d57163f8b2cee408ed1" kind="function"><name>offset</name></member>
+    <member refid="classdakku_1_1BoundsBase_1a7e616e975e5a9e433de10b6b629421e0" kind="function"><name>overlaps</name></member>
+    <member refid="classdakku_1_1BoundsBase_1a83ffa96540655887bd9fa6ff3fdf3960" kind="function"><name>inside</name></member>
+    <member refid="classdakku_1_1BoundsBase_1ab6ee4089c4580fd50ff1e100e7ef0467" kind="function"><name>inside_exclusive</name></member>
+    <member refid="classdakku_1_1BoundsBase_1aa16a238d3e3aba4de878de640b87375d" kind="function"><name>bounding_sphere</name></member>
+    <member refid="classdakku_1_1BoundsBase_1a1765776002e65c8b01432993fc2fd556" kind="function"><name>union_bounds</name></member>
+    <member refid="classdakku_1_1BoundsBase_1a70550031ac4e7fa4a1a176787ba32cf3" kind="function"><name>union_bounds</name></member>
+    <member refid="classdakku_1_1BoundsBase_1ada07d62a712c1545b08400cc79838341" kind="function"><name>intersect</name></member>
+    <member refid="classdakku_1_1BoundsBase_1abe96cae5641f9237d6e6ec7e5144f787" kind="function"><name>to_string</name></member>
+    <member refid="classdakku_1_1BoundsBase_1a354b7ef9e0dc908b9eca0a47f64cd37c" kind="friend"><name>overlaps</name></member>
+    <member refid="classdakku_1_1BoundsBase_1a4ba0780dc5fab304376d54affb497ae8" kind="friend"><name>inside</name></member>
+    <member refid="classdakku_1_1BoundsBase_1a2ebda061b9528176e0f4037960aae9ce" kind="friend"><name>inside_exclusive</name></member>
+    <member refid="classdakku_1_1BoundsBase_1a911ebeb367646117e45b81b7c3fceb02" kind="friend"><name>operator|</name></member>
+    <member refid="classdakku_1_1BoundsBase_1a775827382a4cfcd6d7e18741bb7236f8" kind="friend"><name>operator|</name></member>
+    <member refid="classdakku_1_1BoundsBase_1aabca5f08125e27d64b79bcb2cd1e7704" kind="friend"><name>operator&amp;</name></member>
+    <member refid="classdakku_1_1BoundsBase_1ab2594d571cb5799e89caf4e00bd9fcb4" kind="friend"><name>distance_squared</name></member>
+    <member refid="classdakku_1_1BoundsBase_1aa2d4df3cf0ab3272dc058aedc3a7942f" kind="friend"><name>distance</name></member>
+    <member refid="classdakku_1_1BoundsBase_1a02d61000d3d0599081a30bafc71bf758" kind="friend"><name>operator&lt;&lt;</name></member>
   </compound>
   <compound refid="classdakku_1_1Logger" kind="class"><name>dakku::Logger</name>
     <member refid="classdakku_1_1Logger_1aa6afc845ad6d0bcec3849515afc971cd" kind="variable"><name>_logger</name></member>
@@ -85,7 +130,7 @@
     <member refid="classdakku_1_1VectorBase_1a5faa98660f37740b64ef81284094e00d" kind="function"><name>max</name></member>
     <member refid="classdakku_1_1VectorBase_1af6df1e7009d07c459a909de6977feb77" kind="function"><name>min</name></member>
     <member refid="classdakku_1_1VectorBase_1a97be0d4ece0397e7530aa6d20c4da767" kind="function"><name>dot</name></member>
-    <member refid="classdakku_1_1VectorBase_1a58552f7cd0c136e62226ef92e853df08" kind="function"><name>squaredNorm</name></member>
+    <member refid="classdakku_1_1VectorBase_1ac7f2d1336f046fb56af33c9dcbcc5d6f" kind="function"><name>squared_norm</name></member>
     <member refid="classdakku_1_1VectorBase_1a2c7e37c52217414c026114cec751aaf5" kind="function"><name>norm</name></member>
     <member refid="classdakku_1_1VectorBase_1a3ed9c567c79813b05d6cf6aec8268022" kind="function"><name>length</name></member>
     <member refid="classdakku_1_1VectorBase_1a79e4af0ff3a2c83c4a662f1f6108d533" kind="function"><name>distance</name></member>
@@ -119,6 +164,9 @@
   <compound refid="conceptdakku_1_1ArithmeticType" kind="concept"><name>dakku::ArithmeticType</name>
   </compound>
   <compound refid="namespacedakku" kind="namespace"><name>dakku</name>
+    <member refid="namespacedakku_1abcc743bdeb62068a56f14ac3ef9963b7" kind="typedef"><name>Bounds2f</name></member>
+    <member refid="namespacedakku_1ae2cd423e1acf2fd91f4cdf3cc5ad50c6" kind="typedef"><name>Bounds2i</name></member>
+    <member refid="namespacedakku_1a19129587abbff965c2c15bab5723e208" kind="typedef"><name>Bounds3f</name></member>
     <member refid="namespacedakku_1a2431c33b3d39e5cf0d0f8e952ea2b834" kind="typedef"><name>Vector2i</name></member>
     <member refid="namespacedakku_1a99b4c761ebbe92955e167b5e27cb5992" kind="typedef"><name>Vector2f</name></member>
     <member refid="namespacedakku_1ad924c9ec2e2e6a86ebb00f41aedc3e77" kind="typedef"><name>Vector3i</name></member>
@@ -128,17 +176,22 @@
     <member refid="namespacedakku_1aa5c5407fb67da06d222ad3881949e9b6" kind="typedef"><name>Point2f</name></member>
     <member refid="namespacedakku_1a8a5f9e6a937f1534e71801592fcab641" kind="typedef"><name>Point2i</name></member>
     <member refid="namespacedakku_1ae27019e27a867bc17249704ed8dcb5d8" kind="typedef"><name>Normal3f</name></member>
+    <member refid="namespacedakku_1af0a2453f8db3eb948901c7a0aed18434" kind="function"><name>begin</name></member>
+    <member refid="namespacedakku_1a41ae9fcb2290e6ea6f7d4b0fbca86d17" kind="function"><name>end</name></member>
+    <member refid="namespacedakku_1a79bc914e02b7226466716239448fbe68" kind="function"><name>DAKKU_DECLARE_LUA_OBJECT</name></member>
     <member refid="namespacedakku_1a08f737017abfd03bfaeb4b0c0d1d8928" kind="function"><name>isnan</name></member>
     <member refid="namespacedakku_1a63937ef3cf02827d924baad7b2e783ab" kind="function"><name>isnan</name></member>
-    <member refid="namespacedakku_1af5ee18e804d8bfac2bf21f93a2f63aa6" kind="function"><name>DAKKU_DECLARE_LUA_OBJECT</name></member>
-    <member refid="namespacedakku_1a961c6cc58ef365112319c499f1c16bd5" kind="function"><name>DAKKU_DECLARE_LUA_OBJECT</name></member>
-    <member refid="namespacedakku_1a9ee2a15c54c05140193e2a18b16498fd" kind="function"><name>DAKKU_DECLARE_LUA_OBJECT</name></member>
-    <member refid="namespacedakku_1a4f5d78b55c1f6a5571a05304a9aa3779" kind="function"><name>DAKKU_DECLARE_LUA_OBJECT</name></member>
-    <member refid="namespacedakku_1a4cf6521b6823380ec60ccca3cfcfaa46" kind="function"><name>DAKKU_DECLARE_LUA_OBJECT</name></member>
-    <member refid="namespacedakku_1a796d8a3dc7c0dbe90129fb0e15b313e3" kind="function"><name>DAKKU_DECLARE_LUA_OBJECT</name></member>
-    <member refid="namespacedakku_1aabd06d61579de54a32a03434e895d8e1" kind="function"><name>DAKKU_DECLARE_LUA_OBJECT</name></member>
-    <member refid="namespacedakku_1a8155d9e5e0dbeef953fe78f3d1c534e7" kind="function"><name>DAKKU_DECLARE_LUA_OBJECT</name></member>
-    <member refid="namespacedakku_1a774abf706b01f9f62b922949f68c3f28" kind="function"><name>DAKKU_DECLARE_LUA_OBJECT</name></member>
+    <member refid="namespacedakku_1a900ed7dca6a21cb95298e35672c2b9f0" kind="function"><name>DAKKU_DECLARE_LUA_OBJECT</name></member>
+    <member refid="namespacedakku_1a7a86c290217042e6a4d4d27cc8bd536f" kind="function"><name>DAKKU_DECLARE_LUA_OBJECT</name></member>
+    <member refid="namespacedakku_1a85e3ffeca46c3d1f69f035b034ecabca" kind="function"><name>DAKKU_DECLARE_LUA_OBJECT</name></member>
+    <member refid="namespacedakku_1a40090f4d7f9156a610dff4a42487b3f1" kind="function"><name>DAKKU_DECLARE_LUA_OBJECT</name></member>
+    <member refid="namespacedakku_1a5a50c43d745f1df08aa87f9667801708" kind="function"><name>DAKKU_DECLARE_LUA_OBJECT</name></member>
+    <member refid="namespacedakku_1a8ade4f916825f1624881833323159391" kind="function"><name>DAKKU_DECLARE_LUA_OBJECT</name></member>
+    <member refid="namespacedakku_1aeeaf3a4bc599ed441b0b5d440649d8f0" kind="function"><name>DAKKU_DECLARE_LUA_OBJECT</name></member>
+    <member refid="namespacedakku_1aad468b217fadca156b426897b4fddb7a" kind="function"><name>DAKKU_DECLARE_LUA_OBJECT</name></member>
+    <member refid="namespacedakku_1ab0a1c15a5d93b5e9775b90bd199f91e3" kind="function"><name>DAKKU_DECLARE_LUA_OBJECT</name></member>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
   </compound>
   <compound refid="bounds_8h" kind="file"><name>bounds.h</name>
   </compound>
@@ -156,7 +209,7 @@
   </compound>
   <compound refid="lua_8h" kind="file"><name>lua.h</name>
     <member refid="lua_8h_1af49a65454b3af6c3580a532b5f86028e" kind="define"><name>SOL_ALL_SAFETIES_ON</name></member>
-    <member refid="lua_8h_1aafa5778caba2207c6f0fa9571e9c97d9" kind="define"><name>DAKKU_DECLARE_LUA_OBJECT</name></member>
+    <member refid="lua_8h_1a0ec990f90c34473d19516716c69bea03" kind="define"><name>DAKKU_DECLARE_LUA_OBJECT</name></member>
     <member refid="lua_8h_1a0587e5b4f4419faac9ccf7c9cd36d22d" kind="define"><name>DAKKU_IMPLEMENT_LUA_OBJECT</name></member>
   </compound>
   <compound refid="math__func_8h" kind="file"><name>math_func.h</name>
