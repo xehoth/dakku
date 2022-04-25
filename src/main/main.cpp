@@ -1,13 +1,15 @@
-#include <core/api.h>
-#include <stream/api.h>
-#include <filters/api.h>
-#include <textures/api.h>
-#include <cameras/api.h>
+#include <core/logger.h>
+#include <core/vector.h>
+#include <core/lua.h>
+
 #include <iostream>
-#include <core/mipmap.h>
+
 using namespace dakku;
 
 int main(int argc, const char *argv[]) {
-  std::cout << "Hello World!" << std::endl;
+  Lua::instance().get_state().open_libraries(sol::lib::base);
+  Vector3f test =
+      Lua::instance().get_state().script_file("../../../../scenes/test.lua");
+  std::cout << test;
   return 0;
 }

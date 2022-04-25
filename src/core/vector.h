@@ -1,141 +1,162 @@
 #ifndef DAKKU_CORE_VECTOR_H_
 #define DAKKU_CORE_VECTOR_H_
 #include <core/vector_base.h>
+#include <core/lua.h>
 
 namespace dakku {
 
 /**
  * @brief vector
  *
- * @tparam T data type
+ * @tparam T type
  * @tparam S size
+ * @tparam D derived
  */
-template <ArithmeticType T, size_t S>
-class Vector : public VectorBase<T, S, Vector<T, S>> {
+template <typename T, size_t S, typename D>
+class DAKKU_EXPORT_CORE Vector : public VectorBase<T, S, D> {
  public:
-  using VectorBase<T, S, Vector<T, S>>::VectorBase;
+  using VectorBase<T, S, D>::VectorBase;
 
   /**
-   * @brief subtraction between vectors
+   * @brief negation of the vector
+   *
+   * @return $-\vec v$
+   */
+  D operator-() const {
+    D ret = this->derived();
+    for (size_t i = 0; i < S; ++i) ret[i] = -ret[i];
+    return ret;
+  }
+
+  /**
+   * @brief subtraction
    *
    */
-  friend Vector operator-(const Vector &a, const Vector &b) {
-    Vector ret = a;
-    ret -= b;
+  D operator-(const D &rhs) const {
+    D ret = this->derived();
+    ret -= rhs;
+    return ret;
+  }
+
+  /**
+   * @brief subtraction
+   *
+   */
+  template <ArithmeticType V>
+  D operator-(V rhs) const {
+    D ret = this->derived();
+    ret -= rhs;
     return ret;
   }
 };
+
+#define DAKKU_DECLARE_VECTOR_TYPE(name, base, T, S)        \
+  class DAKKU_EXPORT_CORE name : public base<T, S, name> { \
+   public:                                                 \
+    using base<T, S, name>::base;                          \
+                                                           \
+   private:                                                \
+    DAKKU_DECLARE_LUA_OBJECT(name);                        \
+  }
+
+DAKKU_DECLARE_VECTOR_TYPE(Vector2i, Vector, int, 2);
+DAKKU_DECLARE_VECTOR_TYPE(Vector2f, Vector, float, 2);
+DAKKU_DECLARE_VECTOR_TYPE(Vector3i, Vector, int, 3);
+DAKKU_DECLARE_VECTOR_TYPE(Vector3f, Vector, float, 3);
 
 /**
  * @brief point
  *
- * @tparam T data type
+ * @tparam T type
  * @tparam S size
+ * @tparam D derived
  */
-template <ArithmeticType T, size_t S>
-class Point : public VectorBase<T, S, Point<T, S>> {
+template <typename T, size_t S, typename D>
+class DAKKU_EXPORT_CORE Point : public VectorBase<T, S, D> {
  public:
-  using VectorBase<T, S, Point<T, S>>::VectorBase;
-
-  /**
-   * @brief subtraction between two points yields vectors
-   *
-   */
-  friend Vector<T, S> operator-(const Point &a, const Point &b) {
-    return Vector<T, S>(a) - Vector<T, S>(b);
-  }
-
-  /**
-   * @brief point - vector => point
-   *
-   */
-  friend Point operator-(const Point &a, const Vector<T, S> &b) {
-    return Point(Vector<T, S>(a) - b);
-  }
-
-  /**
-   * @brief point + vector => point
-   *
-   */
-  friend Point operator+(const Point &a, const Vector<T, S> &b) {
-    return Point(Vector<T, S>(a) + b);
-  }
+  using VectorBase<T, S, D>::VectorBase;
 };
+
+#define DAKKU_DECLARE_POINT_TYPE(name, base, T, S, vector_type) \
+  class DAKKU_EXPORT_CORE name : public base<T, S, name> {      \
+   public:                                                      \
+    using base<T, S, name>::base;                               \
+    name operator-() const {                                    \
+      name ret = *this;                                         \
+      for (size_t i = 0; i < size(); ++i) ret[i] = -ret[i];     \
+      return ret;                                               \
+    }                                                           \
+    template <ArithmeticType V>                                 \
+    name operator-(V rhs) const {                               \
+      name ret = *this;                                         \
+      ret -= rhs;                                               \
+      return ret;                                               \
+    }                                                           \
+    vector_type operator-(const name &rhs) const {              \
+      name ret = *this;                                         \
+      ret -= rhs;                                               \
+      return vector_type{ret};                                  \
+    }                                                           \
+    name operator-(const vector_type &rhs) const {              \
+      name ret = *this;                                         \
+      ret -= name(rhs);                                         \
+      return ret;                                               \
+    }                                                           \
+                                                                \
+   private:                                                     \
+    DAKKU_DECLARE_LUA_OBJECT(name);                             \
+  }
+
+DAKKU_DECLARE_POINT_TYPE(Point3f, Point, float, 3, Vector3f);
+DAKKU_DECLARE_POINT_TYPE(Point3i, Point, int, 3, Vector3i);
+DAKKU_DECLARE_POINT_TYPE(Point2f, Point, float, 2, Vector2f);
+DAKKU_DECLARE_POINT_TYPE(Point2i, Point, int, 2, Vector2i);
 
 /**
  * @brief normal
  *
- * @tparam T data type
+ * @tparam T type
  * @tparam S size
+ * @tparam D derived
  */
-template <ArithmeticType T, size_t S>
-class Normal : public VectorBase<T, S, Normal<T, S>> {
+template <typename T, size_t S, typename D>
+class DAKKU_EXPORT_CORE Normal : public VectorBase<T, S, D> {
  public:
-  using VectorBase<T, S, Normal<T, S>>::VectorBase;
+  using VectorBase<T, S, D>::VectorBase;
 
   /**
-   * @brief subtraction between two normals
+   * @brief negation of the vector
+   *
+   * @return $-\vec v$
+   */
+  D operator-() const {
+    D ret = this->derived();
+    for (size_t i = 0; i < S; ++i) ret[i] = -ret[i];
+    return ret;
+  }
+
+  /**
+   * @brief subtraction
    *
    */
-  friend Normal operator-(const Normal &a, const Normal &b) {
-    Normal ret = a;
-    ret -= b;
+  D operator-(const D &rhs) const {
+    D ret = this->derived();
+    ret -= rhs;
+    return ret;
+  }
+
+  /**
+   * @brief subtraction
+   *
+   */
+  template <ArithmeticType V>
+  D operator-(V rhs) const {
+    D ret = this->derived();
+    ret -= rhs;
     return ret;
   }
 };
 
-/**
- * @brief 2d vectors
- *
- * @tparam T data type
- */
-template <ArithmeticType T>
-using Vector2 = Vector<T, 2>;
-
-/**
- * @brief 3d vectors
- *
- * @tparam T data type
- */
-template <ArithmeticType T>
-using Vector3 = Vector<T, 3>;
-
-/// 2d float vector
-using Vector2f = Vector2<float>;
-/// 3d float vector
-using Vector3f = Vector3<float>;
-
-/**
- * @brief 2d point
- *
- * @tparam T data type
- */
-template <ArithmeticType T>
-using Point2 = Point<T, 2>;
-
-/**
- * @brief 3d point
- *
- * @tparam T data type
- */
-template <ArithmeticType T>
-using Point3 = Point<T, 3>;
-
-/// 2d float point
-using Point2f = Point2<float>;
-/// 2d int point
-using Point2i = Point2<int>;
-/// 3d float point
-using Point3f = Point3<float>;
-
-/**
- * @brief 3d normal
- *
- * @tparam T data type
- */
-template <ArithmeticType T>
-using Normal3 = Normal<T, 3>;
-/// 3d float normal
-using Normal3f = Normal3<float>;
+DAKKU_DECLARE_VECTOR_TYPE(Normal3f, Normal, float, 3);
 }  // namespace dakku
 #endif

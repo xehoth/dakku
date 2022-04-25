@@ -1,8 +1,0 @@
-add_requires("openimageio")
-target("dakku.imageio")
-  set_languages("c++17")
-  set_kind("shared")
-  add_defines("DAKKU_BUILD_MODULE=DAKKU_IMAGEIO_MODULE")
-  add_includedirs(os.projectdir() .. "/src", {public = true})
-  add_packages("openimageio")
-  add_files("*.cpp")

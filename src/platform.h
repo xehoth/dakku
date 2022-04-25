@@ -23,16 +23,6 @@ namespace dakku {
 
 /// dakku core module
 #define DAKKU_CORE_MODULE 1
-/// dakku stream module
-#define DAKKU_STREAM_MODULE 2
-/// dakku imageio module
-#define DAKKU_IMAGEIO_MODULE 3
-/// dakku filters module
-#define DAKKU_FILTERS_MODULE 4
-/// dakku textures module
-#define DAKKU_TEXTURES_MODULE 5
-/// dakku textures module
-#define DAKKU_CAMERAS_MODULE 5
 /// dakku main module
 #define DAKKU_MAIN_MODULE 10
 
@@ -47,8 +37,5 @@ This is the documentation of dakku renderer.
 
 ![cornell_box](cornell_box.png)
 
-@subpage vector_base
-
-@subpage reflection
 */
 #endif

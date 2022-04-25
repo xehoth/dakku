@@ -1,12 +1,13 @@
 #ifndef DAKKU_CORE_LOGGER_H_
 #define DAKKU_CORE_LOGGER_H_
 #include <core/fwd.h>
+
+#include <memory>
+
 #include <spdlog/spdlog.h>
 #include <spdlog/fmt/ostr.h>
-#include <cstdlib>
 
 namespace dakku {
-
 /**
  * @brief logger class
  *
@@ -35,17 +36,8 @@ class DAKKU_EXPORT_CORE Logger {
    */
   explicit Logger(std::shared_ptr<spdlog::logger> _logger);
 
-#if defined(_MSC_VER)
-#pragma warning(push)
-#pragma warning(disable : 4251)
-#endif
-
   /// spdlog logger
   std::shared_ptr<spdlog::logger> _logger;
-
-#if defined(_MSC_VER)
-#pragma warning(pop)
-#endif
 };
 
 /// log error message
@@ -79,6 +71,5 @@ class DAKKU_EXPORT_CORE Logger {
 /// check whether the condition `val` is true, if not log error messages
 #define DAKKU_CHECK(...) static_cast<void>(0)
 #endif
-
 }  // namespace dakku
 #endif

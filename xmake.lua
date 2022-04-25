@@ -8,11 +8,15 @@ if is_mode("debug") then
   add_defines("DAKKU_BUILD_DEBUG", "DAKKU_BUILD_CHECK")
 end
 
+if is_plat("windows") then
+  add_defines("NOMINMAX")
+end
+
 add_vectorexts("mmx", "sse", "sse2", "sse3", "ssse3", "avx", "avx2")
 includes("src")
 
 option("build_test")
-  set_default(true)
+  set_default(false)
   set_showmenu(true)
   set_description("build with tests or not")
 

@@ -1,35 +1,32 @@
 #ifndef DAKKU_CORE_VECTOR_BASE_H_
 #define DAKKU_CORE_VECTOR_BASE_H_
 #include <core/logger.h>
+#include <core/lua.h>
+
 #include <array>
-#include <algorithm>
-#include <string>
-#include <ostream>
-#include <numeric>
-#include <span>
 
 namespace dakku {
 
 /**
- * @brief vector base class
- *
+ * @brief vector base
+ * 
  * @tparam T type
- * @tparam size dimension of the vector
- * @tparam Derived derived class type
+ * @tparam S size
+ * @tparam D derived
  */
-template <ArithmeticType T, size_t S, typename Derived>
-class VectorBase {
+template <ArithmeticType T, size_t S, typename D>
+class DAKKU_EXPORT_CORE VectorBase {
  public:
   /**
-   * @brief Construct a new Vector Base object with
+   * @brief Construct a new Vector Base object
    * all components initialized to zero
    *
    */
-  explicit VectorBase() : _data() {}
+  VectorBase() : _data() {}
 
   /**
-   * @brief Construct a new Vector Base object with
-   * all components initialized to `value`
+   * @brief Construct a new Vector Base object
+   * all components initalized to `value`
    *
    * @tparam Arg value type
    * @param value init value
@@ -37,7 +34,28 @@ class VectorBase {
   template <ArithmeticType Arg>
   VectorBase(Arg value) {
     set(value);
-    DAKKU_CHECK(!hasNaNs(), "has nan");
+    DAKKU_CHECK(!has_nans(), "has nan");
+  }
+
+  /**
+   * @brief Construct a new Vector Base object
+   * all components initalized to table
+   *
+   */
+  VectorBase(const sol::table &table) {
+    for (size_t i = 0; i < S; ++i) _data[i] = table.get_or(i + 1, T{0});
+    DAKKU_CHECK(!has_nans(), "has nan");
+  }
+
+  /**
+   * @brief Construct a new Vector Base object with given values
+   *
+   * @tparam Args value types
+   * @param args init values
+   */
+  template <ArithmeticType... Args>
+  requires(sizeof...(Args) == S) VectorBase(Args &&...args) {
+    set(std::forward<Args>(args)...);
   }
 
   /**
@@ -51,37 +69,40 @@ class VectorBase {
   template <ArithmeticType Other, typename OtherDerived>
   explicit VectorBase(const VectorBase<Other, S, OtherDerived> &other) {
     set(other);
-    DAKKU_CHECK(!hasNaNs(), "has nan");
+    DAKKU_CHECK(!has_nans(), "has nan");
   }
 
   VectorBase(const VectorBase &other) : _data(other._data) {
-    DAKKU_CHECK(!hasNaNs(), "has nan");
+    DAKKU_CHECK(!has_nans(), "has nan");
   }
   VectorBase(VectorBase &&other) noexcept : _data(std::move(other._data)) {
-    DAKKU_CHECK(!hasNaNs(), "has nan");
+    DAKKU_CHECK(!has_nans(), "has nan");
   }
   VectorBase &operator=(const VectorBase &other) {
     if (this == &other) return *this;
     _data = other._data;
-    DAKKU_CHECK(!hasNaNs(), "has nan");
+    DAKKU_CHECK(!has_nans(), "has nan");
     return *this;
   }
   VectorBase &operator=(VectorBase &&other) noexcept {
     if (this == &other) return *this;
     _data = std::move(other._data);
-    DAKKU_CHECK(!hasNaNs(), "has nan");
+    DAKKU_CHECK(!has_nans(), "has nan");
     return *this;
   }
 
   /**
-   * @brief Construct a new Vector Base object with given values
+   * @brief convert to derived type
    *
-   * @tparam Args value types
-   * @param args init values
    */
-  template <ArithmeticType... Args>
-  requires(sizeof...(Args) == S) VectorBase(Args &&...args) {
-    set(std::forward<Args>(args)...);
+  const D &derived() const { return static_cast<const D &>(*this); }
+
+  /**
+   * @brief convert to derived type
+   *
+   */
+  D &derived() {
+    return const_cast<D &>(static_cast<const VectorBase &>(*this).derived());
   }
 
   /**
@@ -103,7 +124,7 @@ class VectorBase {
    * @param value the given value
    */
   template <ArithmeticType Arg>
-  void setByIndex(size_t index, Arg value) {
+  void set_by_index(size_t index, Arg value) {
     DAKKU_CHECK(0 <= index && index < S, "index out of range: {} >= {}", index,
                 S);
     _data[index] = static_cast<T>(value);
@@ -119,7 +140,7 @@ class VectorBase {
   template <ArithmeticType... Args, size_t... Is>
   requires(sizeof...(Args) == S) void set(std::index_sequence<Is...>,
                                           Args &&...args) {
-    (setByIndex(Is, std::forward<Args>(args)), ...);
+    (set_by_index(Is, std::forward<Args>(args)), ...);
   }
 
   /**
@@ -146,30 +167,29 @@ class VectorBase {
   }
 
   /**
-   * @brief check whether there are nan components
-   *
-   * @return true vector contains nan
-   * @return false vector does not contain nans
-   */
-  [[nodiscard]] bool hasNaNs() const {
-    return std::any_of(std::begin(_data), std::end(_data),
-                       [](T x) { return isNaN(x); });
-  }
-
-  /**
    * @brief get i'th component
    *
    * @param i the index
    * @return the value
    */
-  const T &get(size_t i) const { return _data[i]; }
+  const T &get(size_t i) const {
+    DAKKU_CHECK(0 <= i && i < S, "index out of range {} >= {}", i, S);
+    return _data[i];
+  }
+
+  /**
+   * @brief size of the vector
+   *
+   * @return size
+   */
+  [[nodiscard]] size_t size() const { return S; }
 
   /**
    * @brief convert vector to string
    *
    * @return the converted string
    */
-  [[nodiscard]] std::string toString() const {
+  [[nodiscard]] std::string to_string() const {
     std::string ret{"["};
     for (size_t i = 0; i < _data.size(); ++i) {
       ret += std::to_string(_data[i]);
@@ -179,22 +199,21 @@ class VectorBase {
   }
 
   /**
-   * @brief output the vector
+   * @brief check whether there are nan components
    *
-   * @param os ostream
-   * @param vec the vector to output
-   * @return ostream
+   * @return true vector contains nan
+   * @return false vector does not contain nans
    */
-  friend std::ostream &operator<<(std::ostream &os, const VectorBase &vec) {
-    return os << vec.toString();
+  [[nodiscard]] bool has_nans() const {
+    return std::any_of(std::begin(_data), std::end(_data),
+                       [](T x) { return isnan(x); });
   }
 
   /**
-   * @brief size of the vector
+   * @brief get a copy
    *
-   * @return size
    */
-  [[nodiscard]] size_t size() const { return S; }
+  D clone() const { return D{derived()}; }
 
   /**
    * @brief get i'th value
@@ -215,38 +234,12 @@ class VectorBase {
   }
 
   /**
-   * @brief negation of the vector
-   *
-   * @return $-\vec v$
-   */
-  Derived operator-() const {
-    Derived ret = derived();
-    for (size_t i = 0; i < S; ++i) ret[i] = -ret[i];
-    return ret;
-  }
-
-  /**
-   * @brief get derived class
-   *
-   */
-  const Derived &derived() const { return static_cast<const Derived &>(*this); }
-
-  /**
-   * @brief get derived class
-   *
-   */
-  Derived &derived() {
-    return const_cast<Derived &>(
-        static_cast<const VectorBase &>(*this).derived());
-  }
-
-  /**
    * @brief addition
    *
    * @param rhs another vector
    * @return this
    */
-  Derived &operator+=(const Derived &rhs) {
+  D &operator+=(const D &rhs) {
     for (size_t i = 0; i < S; ++i) _data[i] += rhs[i];
     return derived();
   }
@@ -258,7 +251,7 @@ class VectorBase {
    * @return this
    */
   template <ArithmeticType V>
-  Derived &operator+=(const V &rhs) {
+  D &operator+=(V rhs) {
     for (size_t i = 0; i < S; ++i) _data[i] += rhs;
     return derived();
   }
@@ -266,27 +259,25 @@ class VectorBase {
   /**
    * @brief addition
    *
-   * @param a vector $\vec a$
-   * @param b vector $\vec b$
-   * @return $\vec a + \vec b$
+   * @param rhs another vector
+   * @return result
    */
-  friend Derived operator+(const Derived &a, const Derived &b) {
-    Derived ret = a;
-    ret += b;
+  D operator+(const D &rhs) const {
+    D ret = derived();
+    ret += rhs;
     return ret;
   }
 
   /**
    * @brief addition
    *
-   * @param a $\vec a$
-   * @param b $b$
-   * @return elementwise add b
+   * @param rhs another vector
+   * @return result
    */
-  template <ArithmeticType U>
-  friend Derived operator+(const Derived &a, const U &b) {
-    Derived ret = a;
-    ret += b;
+  template <ArithmeticType V>
+  D operator+(V rhs) const {
+    D ret = derived();
+    ret += rhs;
     return ret;
   }
 
@@ -298,7 +289,7 @@ class VectorBase {
    * @return elementwise add a
    */
   template <ArithmeticType U>
-  friend Derived operator+(const U &a, const Derived &b) {
+  friend D operator+(U a, const D &b) {
     return b + a;
   }
 
@@ -308,7 +299,7 @@ class VectorBase {
    * @param rhs another vector
    * @return this
    */
-  Derived &operator-=(const Derived &rhs) {
+  D &operator-=(const D &rhs) {
     for (size_t i = 0; i < S; ++i) _data[i] -= rhs[i];
     return derived();
   }
@@ -320,23 +311,9 @@ class VectorBase {
    * @return this
    */
   template <ArithmeticType V>
-  Derived &operator-=(const V &rhs) {
+  D &operator-=(V rhs) {
     for (size_t i = 0; i < S; ++i) _data[i] -= rhs;
     return derived();
-  }
-
-  /**
-   * @brief subtraction
-   *
-   * @param a $\vec a$
-   * @param b $b$
-   * @return elementwise sub
-   */
-  template <ArithmeticType U>
-  friend Derived operator-(const Derived &a, const U &b) {
-    Derived ret = a;
-    ret -= b;
-    return ret;
   }
 
   /**
@@ -347,8 +324,8 @@ class VectorBase {
    * @return elementwise sub
    */
   template <ArithmeticType U>
-  friend Derived operator-(const U &a, const Derived &b) {
-    Derived ret = -b;
+  friend D operator-(U a, const D &b) {
+    D ret = -b;
     ret += a;
     return ret;
   }
@@ -359,7 +336,7 @@ class VectorBase {
    * @param rhs another vector
    * @return this
    */
-  Derived &operator*=(const Derived &rhs) {
+  D &operator*=(const D &rhs) {
     for (size_t i = 0; i < S; ++i) _data[i] *= rhs[i];
     return derived();
   }
@@ -371,7 +348,7 @@ class VectorBase {
    * @return this
    */
   template <ArithmeticType V>
-  Derived &operator*=(const V &rhs) {
+  D &operator*=(V rhs) {
     for (size_t i = 0; i < S; ++i) _data[i] *= rhs;
     return derived();
   }
@@ -379,27 +356,25 @@ class VectorBase {
   /**
    * @brief multiplication
    *
-   * @param a vector $\vec a$
-   * @param b vector $\vec b$
-   * @return elementwise mul
+   * @param rhs another vector
+   * @return result
    */
-  friend Derived operator*(const Derived &a, const Derived &b) {
-    Derived ret = a;
-    ret *= b;
+  D operator*(const D &rhs) const {
+    D ret = derived();
+    ret *= rhs;
     return ret;
   }
 
   /**
    * @brief multiplication
    *
-   * @param a $\vec a$
-   * @param b $b$
-   * @return $b\vec a$
+   * @param rhs scalar
+   * @return result
    */
-  template <ArithmeticType U>
-  friend Derived operator*(const Derived &a, const U &b) {
-    Derived ret = a;
-    ret *= b;
+  template <ArithmeticType V>
+  D operator*(V rhs) const {
+    D ret = derived();
+    ret *= rhs;
     return ret;
   }
 
@@ -411,7 +386,7 @@ class VectorBase {
    * @return elementwise mul
    */
   template <ArithmeticType U>
-  friend Derived operator*(const U &a, const Derived &b) {
+  friend D operator*(U a, const D &b) {
     return b * a;
   }
 
@@ -421,7 +396,7 @@ class VectorBase {
    * @param rhs another vector
    * @return this
    */
-  Derived &operator/=(const Derived &rhs) {
+  D &operator/=(const D &rhs) {
     for (size_t i = 0; i < S; ++i) _data[i] /= rhs[i];
     return derived();
   }
@@ -433,34 +408,32 @@ class VectorBase {
    * @return this
    */
   template <ArithmeticType V>
-  Derived &operator/=(const V &rhs) {
+  D &operator/=(V rhs) {
     return derived() *= static_cast<T>(T{1} / rhs);
   }
 
   /**
    * @brief division
    *
-   * @param a vector $\vec a$
-   * @param b vector $\vec b$
-   * @return elementwise div
+   * @param rhs another vector
+   * @return result
    */
-  friend Derived operator/(const Derived &a, const Derived &b) {
-    Derived ret = a;
-    ret /= b;
+  D operator/(const D &rhs) const {
+    D ret = derived();
+    ret /= rhs;
     return ret;
   }
 
   /**
    * @brief division
    *
-   * @param a $\vec a$
-   * @param b $b$
-   * @return $\vec a / b$
+   * @param rhs scalar
+   * @return result
    */
   template <ArithmeticType U>
-  friend Derived operator/(const Derived &a, const U &b) {
-    Derived ret = a;
-    ret /= b;
+  D operator/(U rhs) const {
+    D ret = derived();
+    ret /= rhs;
     return ret;
   }
 
@@ -472,350 +445,25 @@ class VectorBase {
    * @return elementwise div (broad cast $a$)
    */
   template <ArithmeticType U>
-  friend Derived operator/(const U &a, const Derived &b) {
-    return Derived(a) / b;
+  friend D operator/(U a, const D &b) {
+    return D(a) / b;
   }
 
   /**
-   * @brief convert this to float vector (Property::VECTOR)
+   * @brief output the vector
    *
-   * @return the float vector
+   * @param os ostream
+   * @param vec the vector to output
+   * @return ostream
    */
-  [[nodiscard]] std::vector<float> toFloatVector() const {
-    std::vector<float> ret(S);
-    for (size_t i = 0; i < S; ++i) ret[i] = static_cast<float>(_data[i]);
-    return ret;
+  friend std::ostream &operator<<(std::ostream &os, const VectorBase &vec) {
+    return os << vec.to_string();
   }
 
-  /**
-   * @brief Construct a new Vector Base object with std::vector<float>
-   * (Property::VECTOR)
-   *
-   * @param v the float vector
-   */
-  VectorBase(const std::vector<float> &v) {
-    DAKKU_CHECK(v.size() == S, "invalid vector size: {}, expected: {}",
-                v.size(), S);
-    for (size_t i = 0; i < S; ++i) _data[i] = static_cast<T>(v[i]);
-  }
-
-  /**
-   * @brief get the first element
-   *
-   */
-  decltype(auto) x() const {
-    static_assert(S >= 1, "not enough size to get x");
-    return _data[0];
-  }
-
-  /**
-   * @brief get the first element
-   *
-   */
-  decltype(auto) x() {
-    static_assert(S >= 1, "not enough size to get x");
-    return _data[0];
-  }
-
-  /**
-   * @brief get the second element
-   *
-   */
-  decltype(auto) y() const {
-    static_assert(S >= 2, "not enough size to get y");
-    return _data[1];
-  }
-
-  /**
-   * @brief get the second element
-   *
-   */
-  decltype(auto) y() {
-    static_assert(S >= 2, "not enough size to get y");
-    return _data[1];
-  }
-
-  /**
-   * @brief get the third element
-   *
-   */
-  decltype(auto) z() const {
-    static_assert(S >= 3, "not enough size to get z");
-    return _data[2];
-  }
-
-  /**
-   * @brief get the fourth element
-   *
-   */
-  decltype(auto) z() {
-    static_assert(S >= 3, "not enough size to get w");
-    return _data[2];
-  }
-
-  /**
-   * @brief get the fourth element
-   *
-   */
-  decltype(auto) w() const {
-    static_assert(S >= 4, "not enough size to get w");
-    return _data[3];
-  }
-
-  /**
-   * @brief get the third element
-   *
-   */
-  decltype(auto) w() {
-    static_assert(S >= 4, "not enough size to get z");
-    return _data[3];
-  }
-
-  /**
-   * @brief get the index of the max element
-   *
-   * @return the index
-   */
-  [[nodiscard]] size_t maxElementIndex() const {
-    return std::distance(begin(), std::max_element(begin(), end()));
-  }
-
-  /**
-   * @brief get the max element in the vector
-   *
-   * @return the max value
-   */
-  decltype(auto) maxElement() const { return _data[maxElementIndex()]; }
-
-  decltype(auto) begin() { return _data.begin(); }
-  decltype(auto) begin() const { return _data.begin(); }
-  decltype(auto) end() { return _data.end(); }
-  decltype(auto) end() const { return _data.end(); }
-
-  /**
-   * @brief a == b (element wise)
-   *
-   */
-  friend bool operator==(const Derived &a, const Derived &b) {
-    return a._data == b._data;
-  }
-
-  /**
-   * @brief a != b (element wise)
-   *
-   */
-  friend bool operator!=(const Derived &a, const Derived &b) {
-    return a._data != b._data;
-  }
-
-  /**
-   * @brief element wise max
-   *
-   */
-  friend Derived max(const Derived &v1, const Derived &v2) {
-    Derived ret = v1;
-    for (size_t i = 0; i < S; ++i) ret[i] = std::max(ret[i], v2[i]);
-    return ret;
-  }
-
-  /**
-   * @brief element wise min
-   *
-   */
-  friend Derived min(const Derived &v1, const Derived &v2) {
-    Derived ret = v1;
-    for (size_t i = 0; i < S; ++i) ret[i] = std::min(ret[i], v2[i]);
-    return ret;
-  }
-
-  /**
-   * @brief normalized vector
-   *
-   */
-  friend Derived normalize(const Derived &v) { return v.normalized(); }
-
-  /**
-   * @brief normalized vector
-   *
-   */
-  decltype(auto) normalized() const { return derived() / norm(); }
-
-  /**
-   * @brief normalize this
-   *
-   */
-  Derived &normalize() {
-    derived() = normalized();
-    return derived();
-  }
-
-  /**
-   * @brief dot product between two vectors
-   *
-   * @return $\vec a \cdot \vec b$
-   */
-  template <typename OtherDerived>
-  decltype(auto) dot(const VectorBase<T, S, OtherDerived> &rhs) const {
-    return std::inner_product(begin(), end(), rhs.begin(), T{});
-  }
-
-  /**
-   * @brief squared norm
-   *
-   * @return $||v|| ^ 2$
-   */
-  decltype(auto) squaredNorm() const { return this->dot(*this); }
-
-  /**
-   * @brief norm
-   *
-   * @return $||v||$
-   */
-  decltype(auto) norm() const { return std::sqrt(squaredNorm()); }
-
-  /**
-   * @brief length
-   *
-   * @return $||v||$
-   */
-  decltype(auto) length() const { return norm(); }
-
-  /**
-   * @brief the distance
-   *
-   */
-  friend decltype(auto) distance(const Derived &a, const Derived &b) {
-    return (a - b).length();
-  }
-
-  /**
-   * @brief abs
-   *
-   */
-  friend decltype(auto) abs(const Derived &v) {
-    Derived ret = v;
-    for (size_t i = 0; i < S; ++i) ret[i] = std::abs(ret[i]);
-    return ret;
-  }
-
-  /**
-   * @brief cross product
-   *
-   */
-  Derived cross(const Derived &rhs) const {
-    static_assert(S == 3, "only 3d vector support cross product");
-    return Derived{(y() * rhs.z()) - (z() * rhs.y()),
-                   (z() * rhs.x()) - (x() * rhs.z()),
-                   (x() * rhs.y()) - (y() * rhs.x())};
-  }
-
-  /**
-   * @brief check whether all components are zero
-   *
-   */
-  [[nodiscard]] bool isZero() const {
-    return std::all_of(begin(), end(), [](const T &v) { return v == 0; });
-  }
-
-  /**
-   * @brief element-wise sqrt
-   *
-   */
-  friend Derived sqrt(const Derived &v) {
-    Derived ret = v;
-    for (size_t i = 0; i < S; ++i) ret[i] = static_cast<T>(std::sqrt(ret[i]));
-    return ret;
-  }
-
-  /**
-   * @brief element-wise power
-   *
-   */
-  template <ArithmeticType E>
-  friend Derived pow(const Derived &v, E e) {
-    Derived ret = v;
-    for (size_t i = 0; i < S; ++i) ret[i] = static_cast<T>(std::pow(ret[i], e));
-    return ret;
-  }
-
-  /**
-   * @brief element-wise exp
-   *
-   */
-  friend Derived exp(const Derived &v) {
-    Derived ret = v;
-    for (size_t i = 0; i < S; ++i) ret[i] = static_cast<T>(std::exp(ret[i]));
-    return ret;
-  }
-
-  /**
-   * @brief element-wise floor
-   *
-   */
-  friend Derived floor(const Derived &v) {
-    Derived ret = v;
-    for (size_t i = 0; i < S; ++i) ret[i] = std::floor(ret[i]);
-    return ret;
-  }
-
-  /**
-   * @brief element-wise ceil
-   *
-   */
-  friend Derived ceil(const Derived &v) {
-    Derived ret = v;
-    for (size_t i = 0; i < S; ++i) ret[i] = std::ceil(ret[i]);
-    return ret;
-  }
-
-  operator std::span<T, S>() { return std::span{_data}; }
-  operator std::span<const T, S>() const { return std::span{_data}; }
-
-  /**
-   * @brief element-wise linear interpolation
-   *
-   */
-  friend Derived lerp(const Derived &a, const Derived &b, T t) {
-    Derived ret;
-    for (size_t i = 0; i < S; ++i) ret[i] = lerp(a[i], b[i], t);
-    return ret;
-  }
-
- protected:
+ private:
   /// vector base data
   std::array<T, S> _data;
 };
-
-/**
- * @brief dot product between two vectors
- *
- * @param a $\vec a$
- * @param b $\vec b$
- * @return $\vec a \cdot \vec b$
- */
-template <ArithmeticType T, size_t S, typename D1, typename D2>
-inline decltype(auto) dot(const VectorBase<T, S, D1> &a,
-                          const VectorBase<T, S, D2> &b) {
-  return a.dot(b);
-}
-
-/**
- * @brief absolute value of dot product between two vectors
- *
- * @param a $\vec a$
- * @param b $\vec b$
- * @return $|\vec a \cdot \vec b|$
- */
-template <ArithmeticType T, size_t S, typename D1, typename D2>
-inline decltype(auto) absDot(const VectorBase<T, S, D1> &a,
-                             const VectorBase<T, S, D2> &b) {
-  return std::abs(dot(a, b));
-}
-
-/*! @page vector_base Vector Base
-
-dakku currently use naive implementation, may use intrinsics and expression
-templates later.
-*/
 }  // namespace dakku
+
 #endif
