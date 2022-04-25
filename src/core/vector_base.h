@@ -17,7 +17,7 @@ namespace dakku {
  * @tparam D derived
  */
 template <ArithmeticType T, size_t S, typename D>
-class DAKKU_EXPORT_CORE VectorBase {
+class VectorBase {
  public:
   /**
    * @brief Construct a new Vector Base object
@@ -603,14 +603,14 @@ class DAKKU_EXPORT_CORE VectorBase {
    *
    * @return $||v|| ^ 2$
    */
-  decltype(auto) squaredNorm() const { return this->dot(*this); }
+  decltype(auto) squared_norm() const { return this->dot(*this); }
 
   /**
    * @brief norm
    *
    * @return $||v||$
    */
-  decltype(auto) norm() const { return std::sqrt(squaredNorm()); }
+  decltype(auto) norm() const { return std::sqrt(squared_norm()); }
 
   /**
    * @brief length

@@ -12,7 +12,7 @@ namespace dakku {
  * @tparam S size
  */
 template <typename T, size_t S>
-class DAKKU_EXPORT_CORE Vector : public VectorBase<T, S, Vector<T, S>> {
+class Vector : public VectorBase<T, S, Vector<T, S>> {
  public:
   using VectorBase<T, S, Vector<T, S>>::VectorBase;
 
@@ -49,15 +49,19 @@ class DAKKU_EXPORT_CORE Vector : public VectorBase<T, S, Vector<T, S>> {
   }
 };
 
+/// 2d int vector
 using Vector2i = Vector<int, 2>;
+/// 2d float vector
 using Vector2f = Vector<float, 2>;
+/// 3d int vector
 using Vector3i = Vector<int, 3>;
+/// 3d float vector
 using Vector3f = Vector<float, 3>;
 
-DAKKU_DECLARE_LUA_OBJECT(Vector2i);
-DAKKU_DECLARE_LUA_OBJECT(Vector2f);
-DAKKU_DECLARE_LUA_OBJECT(Vector3i);
-DAKKU_DECLARE_LUA_OBJECT(Vector3f);
+DAKKU_DECLARE_LUA_OBJECT(Vector2i, DAKKU_EXPORT_CORE);
+DAKKU_DECLARE_LUA_OBJECT(Vector2f, DAKKU_EXPORT_CORE);
+DAKKU_DECLARE_LUA_OBJECT(Vector3i, DAKKU_EXPORT_CORE);
+DAKKU_DECLARE_LUA_OBJECT(Vector3f, DAKKU_EXPORT_CORE);
 
 /**
  * @brief point
@@ -66,7 +70,7 @@ DAKKU_DECLARE_LUA_OBJECT(Vector3f);
  * @tparam S size
  */
 template <typename T, size_t S>
-class DAKKU_EXPORT_CORE Point : public VectorBase<T, S, Point<T, S>> {
+class Point : public VectorBase<T, S, Point<T, S>> {
  public:
   using VectorBase<T, S, Point<T, S>>::VectorBase;
 
@@ -113,14 +117,18 @@ class DAKKU_EXPORT_CORE Point : public VectorBase<T, S, Point<T, S>> {
   }
 };
 
+/// 3d float point
 using Point3f = Point<float, 3>;
+/// 3d int point
 using Point3i = Point<int, 3>;
+/// 2d float point
 using Point2f = Point<float, 2>;
+/// 2d int point
 using Point2i = Point<int, 2>;
-DAKKU_DECLARE_LUA_OBJECT(Point3f);
-DAKKU_DECLARE_LUA_OBJECT(Point3i);
-DAKKU_DECLARE_LUA_OBJECT(Point2f);
-DAKKU_DECLARE_LUA_OBJECT(Point2i);
+DAKKU_DECLARE_LUA_OBJECT(Point3f, DAKKU_EXPORT_CORE);
+DAKKU_DECLARE_LUA_OBJECT(Point3i, DAKKU_EXPORT_CORE);
+DAKKU_DECLARE_LUA_OBJECT(Point2f, DAKKU_EXPORT_CORE);
+DAKKU_DECLARE_LUA_OBJECT(Point2i, DAKKU_EXPORT_CORE);
 
 /**
  * @brief normal
@@ -129,7 +137,7 @@ DAKKU_DECLARE_LUA_OBJECT(Point2i);
  * @tparam S size
  */
 template <typename T, size_t S>
-class DAKKU_EXPORT_CORE Normal : public VectorBase<T, S, Normal<T, S>> {
+class Normal : public VectorBase<T, S, Normal<T, S>> {
  public:
   using VectorBase<T, S, Normal<T, S>>::VectorBase;
 
@@ -166,7 +174,8 @@ class DAKKU_EXPORT_CORE Normal : public VectorBase<T, S, Normal<T, S>> {
   }
 };
 
+/// 3d float normal
 using Normal3f = Normal<float, 3>;
-DAKKU_DECLARE_LUA_OBJECT(Normal3f);
+DAKKU_DECLARE_LUA_OBJECT(Normal3f, DAKKU_EXPORT_CORE);
 }  // namespace dakku
 #endif
