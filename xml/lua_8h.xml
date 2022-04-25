@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="lua_8h" kind="file" language="C++">
+    <compoundname>lua.h</compoundname>
+    <includes refid="fwd_8h" local="no">core/fwd.h</includes>
+    <includes local="no">sol/sol.hpp</includes>
+    <includedby refid="vector_8h" local="no">src/core/vector.h</includedby>
+    <includedby refid="vector__base_8h" local="no">src/core/vector_base.h</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>core/fwd.h</label>
+        <link refid="fwd_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/core/lua.h</label>
+        <link refid="lua_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>platform.h</label>
+        <link refid="platform_8h"/>
+      </node>
+      <node id="5">
+        <label>sol/sol.hpp</label>
+      </node>
+      <node id="4">
+        <label>type_traits</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>src/core/lua.h</label>
+        <link refid="lua_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>src/core/vector.h</label>
+        <link refid="vector_8h"/>
+      </node>
+      <node id="3">
+        <label>src/core/vector_base.h</label>
+        <link refid="vector__base_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classdakku_1_1Lua" prot="public">dakku::Lua</innerclass>
+    <innernamespace refid="namespacedakku">dakku</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="lua_8h_1af49a65454b3af6c3580a532b5f86028e" prot="public" static="no">
+        <name>SOL_ALL_SAFETIES_ON</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/lua.h" line="6" column="9" bodyfile="src/core/lua.h" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lua_8h_1aafa5778caba2207c6f0fa9571e9c97d9" prot="public" static="no">
+        <name>DAKKU_DECLARE_LUA_OBJECT</name>
+        <param><defname>name</defname></param>
+        <initializer>static int _##name##_bind_lua</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/lua.h" line="34" column="9" bodyfile="src/core/lua.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lua_8h_1a0587e5b4f4419faac9ccf7c9cd36d22d" prot="public" static="no">
+        <name>DAKKU_IMPLEMENT_LUA_OBJECT</name>
+        <param><defname>name</defname></param>
+        <param><defname>func</defname></param>
+        <initializer>  int name::_##name##_bind_lua = (func)()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/lua.h" line="35" column="9" bodyfile="src/core/lua.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>DAKKU_CORE_LUA_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DAKKU_CORE_LUA_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="fwd_8h" kindref="compound">core/fwd.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(SOL_ALL_SAFETIES_ON)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="lua_8h_1af49a65454b3af6c3580a532b5f86028e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SOL_ALL_SAFETIES_ON<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sol/sol.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacedakku" kindref="compound">dakku</ref><sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="classdakku_1_1Lua" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref><sp/><ref refid="classdakku_1_1Lua" kindref="compound">Lua</ref><sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="22" refid="classdakku_1_1Lua_1ac3145c27d97b2c4cb342c5935e41fb62" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Lua" kindref="compound">Lua</ref><sp/>&amp;<ref refid="classdakku_1_1Lua_1ac3145c27d97b2c4cb342c5935e41fb62" kindref="member">instance</ref>();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="classdakku_1_1Lua_1a04a19bad0e52044a0422a23eee0ffc8c" refkind="member"><highlight class="normal"><sp/><sp/>sol::state<sp/>&amp;<ref refid="classdakku_1_1Lua_1a04a19bad0e52044a0422a23eee0ffc8c" kindref="member">get_state</ref>();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>sol::state<sp/>state;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="lua_8h_1aafa5778caba2207c6f0fa9571e9c97d9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DAKKU_DECLARE_LUA_OBJECT(name)<sp/>static<sp/>int<sp/>_##name##_bind_lua</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="lua_8h_1a0587e5b4f4419faac9ccf7c9cd36d22d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DAKKU_IMPLEMENT_LUA_OBJECT(name,<sp/>func)<sp/>\</highlight></codeline>
+<codeline lineno="36"><highlight class="preprocessor"><sp/><sp/>int<sp/>name::_##name##_bind_lua<sp/>=<sp/>(func)()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dakku</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="src/core/lua.h"/>
+  </compounddef>
+</doxygen>

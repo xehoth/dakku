@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://xehoth.github.io/dakku/Classes/classdakku_1_1Point/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.9">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.10">
     
     
       
@@ -19,7 +19,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.120efc48.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.df45aa19.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.9647289d.min.css">
@@ -328,13 +328,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#friends" class="md-nav__link">
-    Friends
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#additional-inherited-members" class="md-nav__link">
     Additional inherited members
   </a>
@@ -345,40 +338,6 @@
   <a href="#detailed-description" class="md-nav__link">
     Detailed Description
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#friends_1" class="md-nav__link">
-    Friends
-  </a>
-  
-    <nav class="md-nav" aria-label="Friends">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#friend-operator-" class="md-nav__link">
-    friend operator-
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#friend-operator-_1" class="md-nav__link">
-    friend operator-
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#friend-operator" class="md-nav__link">
-    friend operator+
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -403,32 +362,9 @@
 <h1 id="dakkupoint">dakku::Point</h1>
 <p>point  <a href="#detailed-description">More...</a></p>
 <p><code>#include &lt;vector.h&gt;</code></p>
-<p>Inherits from <a href="/dakku/Classes/classdakku_1_1VectorBase/">dakku::VectorBase&lt; T, S, Point&lt; T, S &gt; &gt;</a></p>
-<h2 id="friends">Friends</h2>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>Name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="/dakku/Classes/classdakku_1_1Vector/">Vector</a>&lt; T, S &gt;</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1Point/#friend-operator-">operator-</a></strong>(const <a href="/dakku/Classes/classdakku_1_1Point/">Point</a> &amp; a, const <a href="/dakku/Classes/classdakku_1_1Point/">Point</a> &amp; b) <br>subtraction between two points yields vectors</td>
-</tr>
-<tr>
-<td><a href="/dakku/Classes/classdakku_1_1Point/">Point</a></td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1Point/#friend-operator-">operator-</a></strong>(const <a href="/dakku/Classes/classdakku_1_1Point/">Point</a> &amp; a, const <a href="/dakku/Classes/classdakku_1_1Vector/">Vector</a>&lt; T, S &gt; &amp; b) <br>point - vector =&gt; point</td>
-</tr>
-<tr>
-<td><a href="/dakku/Classes/classdakku_1_1Point/">Point</a></td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1Point/#friend-operator+">operator+</a></strong>(const <a href="/dakku/Classes/classdakku_1_1Point/">Point</a> &amp; a, const <a href="/dakku/Classes/classdakku_1_1Vector/">Vector</a>&lt; T, S &gt; &amp; b) <br>point + vector =&gt; point</td>
-</tr>
-</tbody>
-</table>
+<p>Inherits from <a href="/dakku/Classes/classdakku_1_1VectorBase/">dakku::VectorBase&lt; T, S, D &gt;</a></p>
 <h2 id="additional-inherited-members">Additional inherited members</h2>
-<p><strong>Public Functions inherited from <a href="/dakku/Classes/classdakku_1_1VectorBase/">dakku::VectorBase&lt; T, S, Point&lt; T, S &gt; &gt;</a></strong></p>
+<p><strong>Public Functions inherited from <a href="/dakku/Classes/classdakku_1_1VectorBase/">dakku::VectorBase&lt; T, S, D &gt;</a></strong></p>
 <table>
 <thead>
 <tr>
@@ -439,15 +375,19 @@
 <tbody>
 <tr>
 <td></td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-vectorbase">VectorBase</a></strong>()<br>Construct a new <a href="/dakku/Classes/classdakku_1_1Vector/">Vector</a> Base object with all components initialized to zero.</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-vectorbase">VectorBase</a></strong>()<br>Construct a new <a href="/dakku/Classes/classdakku_1_1Vector/">Vector</a> Base object all components initialized to zero.</td>
 </tr>
 <tr>
 <td>template &lt;ArithmeticType Arg> <br></td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-vectorbase">VectorBase</a></strong>(Arg value)<br>Construct a new <a href="/dakku/Classes/classdakku_1_1Vector/">Vector</a> Base object with all components initialized to <code>value</code></td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-vectorbase">VectorBase</a></strong>(Arg value)<br>Construct a new <a href="/dakku/Classes/classdakku_1_1Vector/">Vector</a> Base object all components initalized to <code>value</code></td>
+</tr>
+<tr>
+<td></td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-vectorbase">VectorBase</a></strong>(const sol::table &amp; table)<br>Construct a new <a href="/dakku/Classes/classdakku_1_1Vector/">Vector</a> Base object all components initalized to table.</td>
 </tr>
 <tr>
 <td>template &lt;ArithmeticType Other,typename OtherDerived > <br></td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-vectorbase">VectorBase</a></strong>(const <a href="/dakku/Classes/classdakku_1_1VectorBase/">VectorBase</a>&lt; Other, S, OtherDerived &gt; &amp; other)<br>Construct a new <a href="/dakku/Classes/classdakku_1_1Vector/">Vector</a> Base object with a vector expression.</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-vectorbase">VectorBase</a></strong>(const <a href="/dakku/Classes/classdakku_1_1VectorBase/">VectorBase</a>&lt; Other, S, OtherDerived &gt; &amp; other)<br>Construct a new <a href="/dakku/Classes/classdakku_1_1Vector/">Vector</a> Base object with given values.</td>
 </tr>
 <tr>
 <td></td>
@@ -466,12 +406,20 @@
 <td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-operator=">operator=</a></strong>(<a href="/dakku/Classes/classdakku_1_1VectorBase/">VectorBase</a> &amp;&amp; other)</td>
 </tr>
 <tr>
-<td>template &lt;ArithmeticType Arg> <br>void</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-set">set</a></strong>(Arg value)<br>Construct a new <a href="/dakku/Classes/classdakku_1_1Vector/">Vector</a> Base object with given values.</td>
+<td>const D &amp;</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-derived">derived</a></strong>() const<br>convert to derived type</td>
+</tr>
+<tr>
+<td>D &amp;</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-derived">derived</a></strong>()<br>convert to derived type</td>
 </tr>
 <tr>
 <td>template &lt;ArithmeticType Arg> <br>void</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-setbyindex">setByIndex</a></strong>(size_t index, Arg value)<br>set data[index] to value</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-set">set</a></strong>(Arg value)<br>set all components to <code>value</code></td>
+</tr>
+<tr>
+<td>template &lt;ArithmeticType Arg> <br>void</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-set-by-index">set_by_index</a></strong>(size_t index, Arg value)<br>set data[index] to value</td>
 </tr>
 <tr>
 <td>template &lt;ArithmeticType... Args,size_t... Is> <br>void</td>
@@ -486,20 +434,24 @@
 <td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-set">set</a></strong>(const <a href="/dakku/Classes/classdakku_1_1VectorBase/">VectorBase</a>&lt; Other, S, OtherDerived &gt; &amp; rhs)<br>set data by <code>rhs</code>'s data</td>
 </tr>
 <tr>
-<td>bool</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-hasnans">hasNaNs</a></strong>() const<br>check whether there are nan components</td>
-</tr>
-<tr>
 <td>const T &amp;</td>
 <td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-get">get</a></strong>(size_t i) const<br>get i'th component</td>
 </tr>
 <tr>
-<td>std::string</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-tostring">toString</a></strong>() const<br>convert vector to string</td>
-</tr>
-<tr>
 <td>size_t</td>
 <td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-size">size</a></strong>() const<br>size of the vector</td>
+</tr>
+<tr>
+<td>std::string</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-to-string">to_string</a></strong>() const<br>convert vector to string</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-has-nans">has_nans</a></strong>() const<br>check whether there are nan components</td>
+</tr>
+<tr>
+<td>D</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-clone">clone</a></strong>() const<br>get a copy</td>
 </tr>
 <tr>
 <td>const T &amp;</td>
@@ -510,152 +462,64 @@
 <td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-operator[]">operator[]</a></strong>(size_t i)<br>get i'th value</td>
 </tr>
 <tr>
-<td>const Derived &amp;</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-derived">derived</a></strong>() const<br>get derived class</td>
+<td>D &amp;</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-operator+=">operator+=</a></strong>(const D &amp; rhs)<br>addition</td>
 </tr>
 <tr>
-<td>Derived &amp;</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-derived">derived</a></strong>()<br>get derived class</td>
+<td>template &lt;ArithmeticType V> <br>D &amp;</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-operator+=">operator+=</a></strong>(V rhs)<br>addition</td>
 </tr>
 <tr>
-<td>Derived &amp;</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-operator+=">operator+=</a></strong>(const Derived &amp; rhs)<br>addition</td>
+<td>D</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-operator+">operator+</a></strong>(const D &amp; rhs) const<br>addition</td>
 </tr>
 <tr>
-<td>template &lt;ArithmeticType V> <br>Derived &amp;</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-operator+=">operator+=</a></strong>(const V &amp; rhs)<br>addition</td>
+<td>template &lt;ArithmeticType V> <br>D</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-operator+">operator+</a></strong>(V rhs) const<br>addition</td>
 </tr>
 <tr>
-<td>Derived &amp;</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-operator-=">operator-=</a></strong>(const Derived &amp; rhs)<br>subtraction</td>
+<td>D &amp;</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-operator-=">operator-=</a></strong>(const D &amp; rhs)<br>subtraction</td>
 </tr>
 <tr>
-<td>template &lt;ArithmeticType V> <br>Derived &amp;</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-operator-=">operator-=</a></strong>(const V &amp; rhs)<br>subtraction</td>
+<td>template &lt;ArithmeticType V> <br>D &amp;</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-operator-=">operator-=</a></strong>(V rhs)<br>subtraction</td>
 </tr>
 <tr>
-<td>Derived &amp;</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-operator*=">operator*=</a></strong>(const Derived &amp; rhs)<br>multiplication</td>
+<td>D &amp;</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-operator*=">operator*=</a></strong>(const D &amp; rhs)<br>multiplication</td>
 </tr>
 <tr>
-<td>template &lt;ArithmeticType V> <br>Derived &amp;</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-operator*=">operator*=</a></strong>(const V &amp; rhs)<br>multiplication</td>
+<td>template &lt;ArithmeticType V> <br>D &amp;</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-operator*=">operator*=</a></strong>(V rhs)<br>multiplication</td>
 </tr>
 <tr>
-<td>Derived &amp;</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-operator/=">operator/=</a></strong>(const Derived &amp; rhs)<br>division</td>
+<td>D</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-operator*">operator*</a></strong>(const D &amp; rhs) const<br>multiplication</td>
 </tr>
 <tr>
-<td>template &lt;ArithmeticType V> <br>Derived &amp;</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-operator/=">operator/=</a></strong>(const V &amp; rhs)<br>division</td>
+<td>template &lt;ArithmeticType V> <br>D</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-operator*">operator*</a></strong>(V rhs) const<br>multiplication</td>
 </tr>
 <tr>
-<td>std::vector&lt; float &gt;</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-tofloatvector">toFloatVector</a></strong>() const<br>convert this to float vector (Property::VECTOR)</td>
+<td>D &amp;</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-operator/=">operator/=</a></strong>(const D &amp; rhs)<br>division</td>
 </tr>
 <tr>
-<td></td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-vectorbase">VectorBase</a></strong>(const std::vector&lt; float &gt; &amp; v)<br>Construct a new <a href="/dakku/Classes/classdakku_1_1Vector/">Vector</a> Base object with std::vector<float> (Property::VECTOR)</td>
+<td>template &lt;ArithmeticType V> <br>D &amp;</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-operator/=">operator/=</a></strong>(V rhs)<br>division</td>
 </tr>
 <tr>
-<td>decltype(auto)</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-x">x</a></strong>() const<br>get the first element</td>
+<td>D</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-operator/">operator/</a></strong>(const D &amp; rhs) const<br>division</td>
 </tr>
 <tr>
-<td>decltype(auto)</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-x">x</a></strong>()<br>get the first element</td>
-</tr>
-<tr>
-<td>decltype(auto)</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-y">y</a></strong>() const<br>get the second element</td>
-</tr>
-<tr>
-<td>decltype(auto)</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-y">y</a></strong>()<br>get the second element</td>
-</tr>
-<tr>
-<td>decltype(auto)</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-z">z</a></strong>() const<br>get the third element</td>
-</tr>
-<tr>
-<td>decltype(auto)</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-z">z</a></strong>()<br>get the fourth element</td>
-</tr>
-<tr>
-<td>decltype(auto)</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-w">w</a></strong>() const<br>get the fourth element</td>
-</tr>
-<tr>
-<td>decltype(auto)</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-w">w</a></strong>()<br>get the third element</td>
-</tr>
-<tr>
-<td>size_t</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-maxelementindex">maxElementIndex</a></strong>() const<br>get the index of the max element</td>
-</tr>
-<tr>
-<td>decltype(auto)</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-maxelement">maxElement</a></strong>() const<br>get the max element in the vector</td>
-</tr>
-<tr>
-<td>decltype(auto)</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-begin">begin</a></strong>()</td>
-</tr>
-<tr>
-<td>decltype(auto)</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-begin">begin</a></strong>() const</td>
-</tr>
-<tr>
-<td>decltype(auto)</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-end">end</a></strong>()</td>
-</tr>
-<tr>
-<td>decltype(auto)</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-end">end</a></strong>() const</td>
-</tr>
-<tr>
-<td>decltype(auto)</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-normalized">normalized</a></strong>() const<br>normalized vector</td>
-</tr>
-<tr>
-<td>Derived &amp;</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-normalize">normalize</a></strong>()<br>normalize this</td>
-</tr>
-<tr>
-<td>template &lt;typename OtherDerived > <br>decltype(auto)</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-dot">dot</a></strong>(const <a href="/dakku/Classes/classdakku_1_1VectorBase/">VectorBase</a>&lt; T, S, OtherDerived &gt; &amp; rhs) const<br>dot product between two vectors</td>
-</tr>
-<tr>
-<td>decltype(auto)</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-squarednorm">squaredNorm</a></strong>() const<br>squared norm</td>
-</tr>
-<tr>
-<td>decltype(auto)</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-norm">norm</a></strong>() const<br>norm</td>
-</tr>
-<tr>
-<td>decltype(auto)</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-length">length</a></strong>() const<br>length</td>
-</tr>
-<tr>
-<td>Derived</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-cross">cross</a></strong>(const Derived &amp; rhs) const<br>cross product</td>
-</tr>
-<tr>
-<td>bool</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-iszero">isZero</a></strong>() const<br>check whether all components are zero</td>
-</tr>
-<tr>
-<td></td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-operator-stdspan&lt;-t,-s-&gt;">operator std::span&lt; T, S &gt;</a></strong>()</td>
-</tr>
-<tr>
-<td></td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-operator-stdspan&lt;-const-t,-s-&gt;">operator std::span&lt; const T, S &gt;</a></strong>() const</td>
+<td>template &lt;ArithmeticType U> <br>D</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#function-operator/">operator/</a></strong>(U rhs) const<br>division</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Protected Attributes inherited from <a href="/dakku/Classes/classdakku_1_1VectorBase/">dakku::VectorBase&lt; T, S, Point&lt; T, S &gt; &gt;</a></strong></p>
+<p><strong>Friends inherited from <a href="/dakku/Classes/classdakku_1_1VectorBase/">dakku::VectorBase&lt; T, S, D &gt;</a></strong></p>
 <table>
 <thead>
 <tr>
@@ -665,140 +529,42 @@
 </thead>
 <tbody>
 <tr>
-<td>std::array&lt; T, S &gt;</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#variable--data">_data</a></strong> <br>vector base data</td>
+<td>D</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-operator+">operator+</a></strong>(U a, const D &amp; b) <br>addition</td>
 </tr>
-</tbody>
-</table>
-<p><strong>Friends inherited from <a href="/dakku/Classes/classdakku_1_1VectorBase/">dakku::VectorBase&lt; T, S, Point&lt; T, S &gt; &gt;</a></strong></p>
-<table>
-<thead>
 <tr>
-<th></th>
-<th>Name</th>
+<td>D</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-operator-">operator-</a></strong>(U a, const D &amp; b) <br>subtraction</td>
 </tr>
-</thead>
-<tbody>
+<tr>
+<td>D</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-operator*">operator*</a></strong>(U a, const D &amp; b) <br>multiplication</td>
+</tr>
+<tr>
+<td>D</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-operator/">operator/</a></strong>(U a, const D &amp; b) <br>division</td>
+</tr>
 <tr>
 <td>std::ostream &amp;</td>
 <td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-operator&lt;&lt;">operator&lt;&lt;</a></strong>(std::ostream &amp; os, const <a href="/dakku/Classes/classdakku_1_1VectorBase/">VectorBase</a> &amp; vec) <br>output the vector</td>
 </tr>
-<tr>
-<td>Derived</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-operator*">operator*</a></strong>(const Derived &amp; a, const Derived &amp; b) <br>multiplication</td>
-</tr>
-<tr>
-<td>Derived</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-operator*">operator*</a></strong>(const Derived &amp; a, const U &amp; b) <br>multiplication</td>
-</tr>
-<tr>
-<td>Derived</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-operator*">operator*</a></strong>(const U &amp; a, const Derived &amp; b) <br>multiplication</td>
-</tr>
-<tr>
-<td>Derived</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-operator/">operator/</a></strong>(const Derived &amp; a, const Derived &amp; b) <br>division</td>
-</tr>
-<tr>
-<td>Derived</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-operator/">operator/</a></strong>(const Derived &amp; a, const U &amp; b) <br>division</td>
-</tr>
-<tr>
-<td>Derived</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-operator/">operator/</a></strong>(const U &amp; a, const Derived &amp; b) <br>division</td>
-</tr>
-<tr>
-<td>bool</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-operator==">operator==</a></strong>(const Derived &amp; a, const Derived &amp; b) <br>a == b (element wise)</td>
-</tr>
-<tr>
-<td>bool</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-operator!=">operator!=</a></strong>(const Derived &amp; a, const Derived &amp; b) <br>a != b (element wise)</td>
-</tr>
-<tr>
-<td>Derived</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-max">max</a></strong>(const Derived &amp; v1, const Derived &amp; v2) <br>element wise max</td>
-</tr>
-<tr>
-<td>Derived</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-min">min</a></strong>(const Derived &amp; v1, const Derived &amp; v2) <br>element wise min</td>
-</tr>
-<tr>
-<td>Derived</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-normalize">normalize</a></strong>(const Derived &amp; v) <br>normalized vector</td>
-</tr>
-<tr>
-<td>decltype(auto)</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-distance">distance</a></strong>(const Derived &amp; a, const Derived &amp; b) <br>the distance</td>
-</tr>
-<tr>
-<td>decltype(auto)</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-abs">abs</a></strong>(const Derived &amp; v) <br>abs</td>
-</tr>
-<tr>
-<td>Derived</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-sqrt">sqrt</a></strong>(const Derived &amp; v) <br>element-wise sqrt</td>
-</tr>
-<tr>
-<td>Derived</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-pow">pow</a></strong>(const Derived &amp; v, E e) <br>element-wise power</td>
-</tr>
-<tr>
-<td>Derived</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-exp">exp</a></strong>(const Derived &amp; v) <br>element-wise exp</td>
-</tr>
-<tr>
-<td>Derived</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-floor">floor</a></strong>(const Derived &amp; v) <br>element-wise floor</td>
-</tr>
-<tr>
-<td>Derived</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-ceil">ceil</a></strong>(const Derived &amp; v) <br>element-wise ceil</td>
-</tr>
-<tr>
-<td>Derived</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1VectorBase/#friend-lerp">lerp</a></strong>(const Derived &amp; a, const Derived &amp; b, T t) <br>element-wise linear interpolation</td>
-</tr>
 </tbody>
 </table>
 <h2 id="detailed-description">Detailed Description</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="n">ArithmeticType</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kt">size_t</span><span class="w"> </span><span class="n">S</span><span class="o">&gt;</span><span class="w"></span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">class</span><span class="w"> </span><span class="nc">dakku</span><span class="o">::</span><span class="n">Point</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kt">size_t</span><span class="w"> </span><span class="n">S</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">typename</span><span class="w"> </span><span class="nc">D</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">class</span><span class="w"> </span><span class="nc">dakku</span><span class="o">::</span><span class="n">Point</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <p>point </p>
 <p><strong>Template Parameters</strong>: </p>
 <ul>
-<li><strong>T</strong> data type </li>
+<li><strong>T</strong> type </li>
 <li><strong>S</strong> size </li>
+<li><strong>D</strong> derived </li>
 </ul>
-<h2 id="friends_1">Friends</h2>
-<h3 id="friend-operator-">friend operator-</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">friend</span><span class="w"> </span><span class="n">Vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="k">operator</span><span class="o">-</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Point</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Point</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">b</span><span class="w"></span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">);</span><span class="w"></span>
-</code></pre></div>
-<p>subtraction between two points yields vectors </p>
-<h3 id="friend-operator-_1">friend operator-</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">friend</span><span class="w"> </span><span class="n">Point</span><span class="w"> </span><span class="k">operator</span><span class="o">-</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Point</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">b</span><span class="w"></span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="p">);</span><span class="w"></span>
-</code></pre></div>
-<p>point - vector =&gt; point </p>
-<h3 id="friend-operator">friend operator+</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">friend</span><span class="w"> </span><span class="n">Point</span><span class="w"> </span><span class="k">operator</span><span class="o">+</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Point</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">b</span><span class="w"></span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="p">);</span><span class="w"></span>
-</code></pre></div>
-<p>point + vector =&gt; point </p>
 <hr />
-<p>Updated on 2022-04-14 at 12:27:16 +0000</p>
+<p>Updated on 2022-04-25 at 08:03:03 +0000</p>
 
               
             </article>
@@ -832,7 +598,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.6e54b5cd.min.js"></script>
+      <script src="../../assets/javascripts/bundle.748e2769.min.js"></script>
       
         <script src="../../javascripts/mathjax.js"></script>
       

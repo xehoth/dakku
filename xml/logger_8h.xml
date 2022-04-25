@@ -2,30 +2,18 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
   <compounddef id="logger_8h" kind="file" language="C++">
     <compoundname>logger.h</compoundname>
-    <includes refid="core_2fwd_8h" local="no">core/fwd.h</includes>
+    <includes refid="fwd_8h" local="no">core/fwd.h</includes>
+    <includes local="no">memory</includes>
     <includes local="no">spdlog/spdlog.h</includes>
     <includes local="no">spdlog/fmt/ostr.h</includes>
-    <includes local="no">cstdlib</includes>
-    <includedby refid="class_8h" local="no">src/core/class.h</includedby>
-    <includedby refid="memory_8h" local="no">src/core/memory.h</includedby>
     <includedby refid="vector__base_8h" local="no">src/core/vector_base.h</includedby>
     <incdepgraph>
       <node id="2">
         <label>core/fwd.h</label>
-        <link refid="core_2fwd_8h"/>
+        <link refid="fwd_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -33,39 +21,24 @@
         <link refid="logger_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="10" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="11" relation="include">
+        <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="12" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
       <node id="3">
         <label>platform.h</label>
         <link refid="platform_8h"/>
       </node>
-      <node id="9">
-        <label>bit</label>
+      <node id="5">
+        <label>memory</label>
       </node>
       <node id="7">
-        <label>cmath</label>
-      </node>
-      <node id="8">
-        <label>cstdint</label>
-      </node>
-      <node id="12">
-        <label>cstdlib</label>
-      </node>
-      <node id="5">
-        <label>limits</label>
-      </node>
-      <node id="6">
-        <label>numbers</label>
-      </node>
-      <node id="11">
         <label>spdlog/fmt/ostr.h</label>
       </node>
-      <node id="10">
+      <node id="6">
         <label>spdlog/spdlog.h</label>
       </node>
       <node id="4">
@@ -73,290 +46,20 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="8">
-        <label>src/cameras/api.h</label>
-        <link refid="cameras_2api_8h"/>
-      </node>
-      <node id="6">
-        <label>src/cameras/fwd.h</label>
-        <link refid="cameras_2fwd_8h"/>
-        <childnode refid="7" relation="include">
-        </childnode>
-      </node>
-      <node id="7">
-        <label>src/cameras/perspective.h</label>
-        <link refid="perspective_8h"/>
-        <childnode refid="8" relation="include">
-        </childnode>
-      </node>
-      <node id="4">
-        <label>src/core/api.h</label>
-        <link refid="core_2api_8h"/>
-      </node>
-      <node id="33">
-        <label>src/core/bounds.h</label>
-        <link refid="bounds_8h"/>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="21" relation="include">
-        </childnode>
-        <childnode refid="34" relation="include">
-        </childnode>
-      </node>
-      <node id="5">
-        <label>src/core/camera.h</label>
-        <link refid="camera_8h"/>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-      </node>
-      <node id="2">
-        <label>src/core/class.h</label>
-        <link refid="class_8h"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-      </node>
-      <node id="10">
-        <label>src/core/film.h</label>
-        <link refid="core_2film_8h"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
-      </node>
-      <node id="9">
-        <label>src/core/filter.h</label>
-        <link refid="filter_8h"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-      </node>
-      <node id="36">
-        <label>src/core/interaction.h</label>
-        <link refid="interaction_8h"/>
-      </node>
       <node id="1">
         <label>src/core/logger.h</label>
         <link refid="logger_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="27" relation="include">
-        </childnode>
-        <childnode refid="29" relation="include">
-        </childnode>
-      </node>
-      <node id="27">
-        <label>src/core/memory.h</label>
-        <link refid="memory_8h"/>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="28" relation="include">
-        </childnode>
-      </node>
-      <node id="31">
-        <label>src/core/mipmap.h</label>
-        <link refid="mipmap_8h"/>
-        <childnode refid="26" relation="include">
-        </childnode>
       </node>
       <node id="3">
-        <label>src/core/object.h</label>
-        <link refid="object_8h"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="15" relation="include">
-        </childnode>
-        <childnode refid="21" relation="include">
-        </childnode>
-        <childnode refid="22" relation="include">
-        </childnode>
-      </node>
-      <node id="35">
-        <label>src/core/property.h</label>
-        <link refid="property_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="37">
-        <label>src/core/ray.h</label>
-        <link refid="ray_8h"/>
-        <childnode refid="36" relation="include">
-        </childnode>
-        <childnode refid="34" relation="include">
-        </childnode>
-      </node>
-      <node id="38">
-        <label>src/core/reflection.h</label>
-        <link refid="reflection_8h"/>
-      </node>
-      <node id="16">
-        <label>src/core/sampler.h</label>
-        <link refid="sampler_8h"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-      </node>
-      <node id="39">
-        <label>src/core/sampling.h</label>
-        <link refid="sampling_8h"/>
-      </node>
-      <node id="15">
-        <label>src/core/serialization.h</label>
-        <link refid="serialization_8h"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="16" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
-        <childnode refid="17" relation="include">
-        </childnode>
-        <childnode refid="18" relation="include">
-        </childnode>
-      </node>
-      <node id="21">
-        <label>src/core/shape.h</label>
-        <link refid="shape_8h"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-      </node>
-      <node id="30">
-        <label>src/core/spectrum.h</label>
-        <link refid="spectrum_8h"/>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="31" relation="include">
-        </childnode>
-        <childnode refid="24" relation="include">
-        </childnode>
-      </node>
-      <node id="11">
-        <label>src/core/state.h</label>
-        <link refid="state_8h"/>
-      </node>
-      <node id="22">
-        <label>src/core/texture.h</label>
-        <link refid="texture_8h"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="23" relation="include">
-        </childnode>
-      </node>
-      <node id="34">
-        <label>src/core/transform.h</label>
-        <link refid="transform_8h"/>
-        <childnode refid="35" relation="include">
-        </childnode>
-        <childnode refid="21" relation="include">
-        </childnode>
-        <childnode refid="28" relation="include">
-        </childnode>
-      </node>
-      <node id="28">
-        <label>src/core/transform_cache.h</label>
-        <link refid="transform__cache_8h"/>
-      </node>
-      <node id="32">
         <label>src/core/vector.h</label>
         <link refid="vector_8h"/>
-        <childnode refid="33" relation="include">
-        </childnode>
-        <childnode refid="36" relation="include">
-        </childnode>
-        <childnode refid="31" relation="include">
-        </childnode>
-        <childnode refid="35" relation="include">
-        </childnode>
-        <childnode refid="37" relation="include">
-        </childnode>
-        <childnode refid="38" relation="include">
-        </childnode>
-        <childnode refid="39" relation="include">
-        </childnode>
-        <childnode refid="34" relation="include">
-        </childnode>
       </node>
-      <node id="29">
+      <node id="2">
         <label>src/core/vector_base.h</label>
         <link refid="vector__base_8h"/>
-        <childnode refid="30" relation="include">
-        </childnode>
-        <childnode refid="32" relation="include">
-        </childnode>
-      </node>
-      <node id="13">
-        <label>src/filters/api.h</label>
-        <link refid="filters_2api_8h"/>
-      </node>
-      <node id="12">
-        <label>src/filters/box.h</label>
-        <link refid="box_8h"/>
-        <childnode refid="13" relation="include">
-        </childnode>
-      </node>
-      <node id="17">
-        <label>src/filters/fwd.h</label>
-        <link refid="filters_2fwd_8h"/>
-        <childnode refid="12" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-      </node>
-      <node id="14">
-        <label>src/filters/triangle.h</label>
-        <link refid="triangle_8h"/>
-        <childnode refid="13" relation="include">
-        </childnode>
-      </node>
-      <node id="20">
-        <label>src/stream/api.h</label>
-        <link refid="stream_2api_8h"/>
-      </node>
-      <node id="19">
-        <label>src/stream/fstream.h</label>
-        <link refid="fstream_8h"/>
-        <childnode refid="20" relation="include">
-        </childnode>
-      </node>
-      <node id="18">
-        <label>src/stream/fwd.h</label>
-        <link refid="stream_2fwd_8h"/>
-        <childnode refid="19" relation="include">
-        </childnode>
-      </node>
-      <node id="25">
-        <label>src/textures/api.h</label>
-        <link refid="textures_2api_8h"/>
-      </node>
-      <node id="24">
-        <label>src/textures/constant.h</label>
-        <link refid="constant_8h"/>
-        <childnode refid="25" relation="include">
-        </childnode>
-      </node>
-      <node id="23">
-        <label>src/textures/fwd.h</label>
-        <link refid="textures_2fwd_8h"/>
-        <childnode refid="24" relation="include">
-        </childnode>
-        <childnode refid="26" relation="include">
-        </childnode>
-      </node>
-      <node id="26">
-        <label>src/textures/image.h</label>
-        <link refid="image_8h"/>
-        <childnode refid="25" relation="include">
+        <childnode refid="3" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -374,7 +77,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/logger.h" line="52" column="9" bodyfile="src/core/logger.h" bodystart="52" bodyend="-1"/>
+        <location file="src/core/logger.h" line="44" column="9" bodyfile="src/core/logger.h" bodystart="44" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="logger_8h_1a845073641399be84136c0143bedbde77" prot="public" static="no">
         <name>DAKKU_INFO</name>
@@ -387,7 +90,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/logger.h" line="55" column="9" bodyfile="src/core/logger.h" bodystart="55" bodyend="-1"/>
+        <location file="src/core/logger.h" line="47" column="9" bodyfile="src/core/logger.h" bodystart="47" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="logger_8h_1a614d277e34773e7302c6a2cda6909867" prot="public" static="no">
         <name>DAKKU_WARN</name>
@@ -400,7 +103,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/logger.h" line="58" column="9" bodyfile="src/core/logger.h" bodystart="58" bodyend="-1"/>
+        <location file="src/core/logger.h" line="50" column="9" bodyfile="src/core/logger.h" bodystart="50" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="logger_8h_1a9c5edb9052d4e1a515276aef0afef3e3" prot="public" static="no">
         <name>DAKKU_DEBUG</name>
@@ -413,7 +116,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/logger.h" line="66" column="9" bodyfile="src/core/logger.h" bodystart="66" bodyend="-1"/>
+        <location file="src/core/logger.h" line="58" column="9" bodyfile="src/core/logger.h" bodystart="58" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="logger_8h_1ad7e55cac030fb7ab38ebcfce264c1b3e" prot="public" static="no">
         <name>DAKKU_CHECK</name>
@@ -426,7 +129,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/logger.h" line="80" column="9" bodyfile="src/core/logger.h" bodystart="80" bodyend="-1"/>
+        <location file="src/core/logger.h" line="72" column="9" bodyfile="src/core/logger.h" bodystart="72" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -436,61 +139,52 @@
     <programlisting>
 <codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>DAKKU_CORE_LOGGER_H_</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DAKKU_CORE_LOGGER_H_</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="core_2fwd_8h" kindref="compound">core/fwd.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;spdlog/spdlog.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;spdlog/fmt/ostr.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdlib&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacedakku" kindref="compound">dakku</ref><sp/>{</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="fwd_8h" kindref="compound">core/fwd.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;spdlog/spdlog.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;spdlog/fmt/ostr.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight></codeline>
-<codeline lineno="14" refid="classdakku_1_1Logger" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref><sp/><ref refid="classdakku_1_1Logger" kindref="compound">Logger</ref><sp/>{</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="21" refid="classdakku_1_1Logger_1a75e95ca57e099bb7992724feec106edf" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Logger" kindref="compound">Logger</ref><sp/>&amp;<ref refid="classdakku_1_1Logger_1a75e95ca57e099bb7992724feec106edf" kindref="member">get</ref>();</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight></codeline>
-<codeline lineno="28" refid="classdakku_1_1Logger_1a323f22b6d56d140abe5a41da4daff699" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/>spdlog::logger<sp/>*<ref refid="classdakku_1_1Logger_1a323f22b6d56d140abe5a41da4daff699" kindref="member">handle</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_logger.get();<sp/>}</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Logger" kindref="compound">Logger</ref>(std::shared_ptr&lt;spdlog::logger&gt;<sp/>_logger);</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(_MSC_VER)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>warning(push)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>warning(disable<sp/>:<sp/>4251)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacedakku" kindref="compound">dakku</ref><sp/>{</highlight></codeline>
+<codeline lineno="15" refid="classdakku_1_1Logger" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref><sp/><ref refid="classdakku_1_1Logger" kindref="compound">Logger</ref><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="22" refid="classdakku_1_1Logger_1a75e95ca57e099bb7992724feec106edf" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Logger" kindref="compound">Logger</ref><sp/>&amp;<ref refid="classdakku_1_1Logger_1a75e95ca57e099bb7992724feec106edf" kindref="member">get</ref>();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="classdakku_1_1Logger_1a323f22b6d56d140abe5a41da4daff699" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/>spdlog::logger<sp/>*<ref refid="classdakku_1_1Logger_1a323f22b6d56d140abe5a41da4daff699" kindref="member">handle</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_logger.get();<sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Logger" kindref="compound">Logger</ref>(std::shared_ptr&lt;spdlog::logger&gt;<sp/>_logger);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;spdlog::logger&gt;<sp/>_logger;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;spdlog::logger&gt;<sp/>_logger;</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(_MSC_VER)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>warning(pop)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="52" refid="logger_8h_1a9edd762e54e3ce43a70ddfe81b6e2fc5" refkind="member"><highlight class="preprocessor">#define<sp/>DAKKU_ERR(...)<sp/>\</highlight></codeline>
-<codeline lineno="53"><highlight class="preprocessor"><sp/><sp/>SPDLOG_LOGGER_CALL(Logger::get().handle(),<sp/>spdlog::level::err,<sp/>__VA_ARGS__)</highlight></codeline>
-<codeline lineno="55" refid="logger_8h_1a845073641399be84136c0143bedbde77" refkind="member"><highlight class="preprocessor">#define<sp/>DAKKU_INFO(...)<sp/>\</highlight></codeline>
-<codeline lineno="56"><highlight class="preprocessor"><sp/><sp/>SPDLOG_LOGGER_CALL(Logger::get().handle(),<sp/>spdlog::level::info,<sp/>__VA_ARGS__)</highlight></codeline>
-<codeline lineno="58" refid="logger_8h_1a614d277e34773e7302c6a2cda6909867" refkind="member"><highlight class="preprocessor">#define<sp/>DAKKU_WARN(...)<sp/>\</highlight></codeline>
-<codeline lineno="59"><highlight class="preprocessor"><sp/><sp/>SPDLOG_LOGGER_CALL(Logger::get().handle(),<sp/>spdlog::level::warn,<sp/>__VA_ARGS__)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>DAKKU_BUILD_DEBUG</highlight></codeline>
-<codeline lineno="62"><highlight class="preprocessor">#define<sp/>DAKKU_DEBUG(...)<sp/>\</highlight></codeline>
-<codeline lineno="63"><highlight class="preprocessor"><sp/><sp/>SPDLOG_LOGGER_CALL(Logger::get().handle(),<sp/>spdlog::level::debug,<sp/>__VA_ARGS__)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight></codeline>
-<codeline lineno="66" refid="logger_8h_1a9c5edb9052d4e1a515276aef0afef3e3" refkind="member"><highlight class="preprocessor">#define<sp/>DAKKU_DEBUG(...)<sp/>static_cast&lt;void&gt;(0)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="68"><highlight class="normal"></highlight></codeline>
-<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>DAKKU_BUILD_CHECK</highlight></codeline>
-<codeline lineno="71"><highlight class="preprocessor">#define<sp/>DAKKU_CHECK(val,<sp/>...)<sp/>\</highlight></codeline>
-<codeline lineno="72"><highlight class="preprocessor"><sp/><sp/>do<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="73"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(!(val))<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="74"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>DAKKU_ERR(__VA_ARGS__);<sp/>\</highlight></codeline>
-<codeline lineno="75"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>std::exit(-1);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="76"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="77"><highlight class="preprocessor"><sp/><sp/>}<sp/>while<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight></codeline>
-<codeline lineno="80" refid="logger_8h_1ad7e55cac030fb7ab38ebcfce264c1b3e" refkind="member"><highlight class="preprocessor">#define<sp/>DAKKU_CHECK(...)<sp/>static_cast&lt;void&gt;(0)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="82"><highlight class="normal"></highlight></codeline>
-<codeline lineno="83"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dakku</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="44" refid="logger_8h_1a9edd762e54e3ce43a70ddfe81b6e2fc5" refkind="member"><highlight class="preprocessor">#define<sp/>DAKKU_ERR(...)<sp/>\</highlight></codeline>
+<codeline lineno="45"><highlight class="preprocessor"><sp/><sp/>SPDLOG_LOGGER_CALL(Logger::get().handle(),<sp/>spdlog::level::err,<sp/>__VA_ARGS__)</highlight></codeline>
+<codeline lineno="47" refid="logger_8h_1a845073641399be84136c0143bedbde77" refkind="member"><highlight class="preprocessor">#define<sp/>DAKKU_INFO(...)<sp/>\</highlight></codeline>
+<codeline lineno="48"><highlight class="preprocessor"><sp/><sp/>SPDLOG_LOGGER_CALL(Logger::get().handle(),<sp/>spdlog::level::info,<sp/>__VA_ARGS__)</highlight></codeline>
+<codeline lineno="50" refid="logger_8h_1a614d277e34773e7302c6a2cda6909867" refkind="member"><highlight class="preprocessor">#define<sp/>DAKKU_WARN(...)<sp/>\</highlight></codeline>
+<codeline lineno="51"><highlight class="preprocessor"><sp/><sp/>SPDLOG_LOGGER_CALL(Logger::get().handle(),<sp/>spdlog::level::warn,<sp/>__VA_ARGS__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>DAKKU_BUILD_DEBUG</highlight></codeline>
+<codeline lineno="54"><highlight class="preprocessor">#define<sp/>DAKKU_DEBUG(...)<sp/>\</highlight></codeline>
+<codeline lineno="55"><highlight class="preprocessor"><sp/><sp/>SPDLOG_LOGGER_CALL(Logger::get().handle(),<sp/>spdlog::level::debug,<sp/>__VA_ARGS__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="58" refid="logger_8h_1a9c5edb9052d4e1a515276aef0afef3e3" refkind="member"><highlight class="preprocessor">#define<sp/>DAKKU_DEBUG(...)<sp/>static_cast&lt;void&gt;(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>DAKKU_BUILD_CHECK</highlight></codeline>
+<codeline lineno="63"><highlight class="preprocessor">#define<sp/>DAKKU_CHECK(val,<sp/>...)<sp/>\</highlight></codeline>
+<codeline lineno="64"><highlight class="preprocessor"><sp/><sp/>do<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="65"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(!(val))<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="66"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>DAKKU_ERR(__VA_ARGS__);<sp/>\</highlight></codeline>
+<codeline lineno="67"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>std::exit(-1);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="68"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="69"><highlight class="preprocessor"><sp/><sp/>}<sp/>while<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="72" refid="logger_8h_1ad7e55cac030fb7ab38ebcfce264c1b3e" refkind="member"><highlight class="preprocessor">#define<sp/>DAKKU_CHECK(...)<sp/>static_cast&lt;void&gt;(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dakku</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="src/core/logger.h"/>
   </compounddef>

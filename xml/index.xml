@@ -1,834 +1,91 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.2" xml:lang="en-US">
-  <compound refid="classdakku_1_1BlockedArray" kind="class"><name>dakku::BlockedArray</name>
-    <member refid="classdakku_1_1BlockedArray_1a37737273da83a88a6674e9d64f8e80d2" kind="variable"><name>data</name></member>
-    <member refid="classdakku_1_1BlockedArray_1ac0741d200cf5e107805b8973faa25c5a" kind="variable"><name>uRes</name></member>
-    <member refid="classdakku_1_1BlockedArray_1a687d76d2769fd88b846662389057989f" kind="variable"><name>vRes</name></member>
-    <member refid="classdakku_1_1BlockedArray_1a4167d153925c2a35446a920df32533ce" kind="variable"><name>uBlocks</name></member>
-    <member refid="classdakku_1_1BlockedArray_1a03591132bf9c0e8adbb3f0257d5294e1" kind="function"><name>BlockedArray</name></member>
-    <member refid="classdakku_1_1BlockedArray_1ad5d1543d19412b247cfa7baab90e42ef" kind="function"><name>~BlockedArray</name></member>
-    <member refid="classdakku_1_1BlockedArray_1ae216af42c6652377e419936650dd0b3f" kind="function"><name>blockIdx</name></member>
-    <member refid="classdakku_1_1BlockedArray_1a4578be96d100f192600a8097145df17e" kind="function"><name>offset</name></member>
-    <member refid="classdakku_1_1BlockedArray_1a4f2ff6014a4a3da937ac35fa15c26174" kind="function"><name>blockSize</name></member>
-    <member refid="classdakku_1_1BlockedArray_1ab77aaff960362bd8167084053416879a" kind="function"><name>roundUp</name></member>
-    <member refid="classdakku_1_1BlockedArray_1af9cd727849a0f2fff54bee55d0aeb41f" kind="function"><name>uSize</name></member>
-    <member refid="classdakku_1_1BlockedArray_1aef7832e591051516bf31fd42ed6b446c" kind="function"><name>vSize</name></member>
-    <member refid="classdakku_1_1BlockedArray_1abb0eb492d206324b7ae2f7cb1d2c9cc0" kind="function"><name>operator()</name></member>
-    <member refid="classdakku_1_1BlockedArray_1afc5c7e0d533d8988acbad8dbbd7a2a6c" kind="function"><name>operator()</name></member>
-    <member refid="classdakku_1_1BlockedArray_1a0ca6195f068c9bb256df5b0b7c2123f0" kind="function"><name>toLinearArray</name></member>
-  </compound>
-  <compound refid="classdakku_1_1Bounds2" kind="class"><name>dakku::Bounds2</name>
-    <member refid="classdakku_1_1Bounds2_1a6ae823c1ed9889a5ac8ca8a0af4da79e" kind="function"><name>Bounds2</name></member>
-    <member refid="classdakku_1_1Bounds2_1ae986c4aae4bed669564ea89613984356" kind="function"><name>area</name></member>
-  </compound>
-  <compound refid="classdakku_1_1Bounds2iIterator" kind="class"><name>dakku::Bounds2iIterator</name>
-    <member refid="classdakku_1_1Bounds2iIterator_1a25db7490f2d16d4ce72ad2701535ffae" kind="variable"><name>b</name></member>
-    <member refid="classdakku_1_1Bounds2iIterator_1a03a906289f14103e080bc463642aeba3" kind="variable"><name>p</name></member>
-    <member refid="classdakku_1_1Bounds2iIterator_1a5c7da4004ef177e5726790240a2191aa" kind="function"><name>Bounds2iIterator</name></member>
-    <member refid="classdakku_1_1Bounds2iIterator_1ad19c79cc44f5407ffedd8fee2e74b873" kind="function"><name>operator++</name></member>
-    <member refid="classdakku_1_1Bounds2iIterator_1abba748bffd9de14381de7393279e0ab1" kind="function"><name>operator++</name></member>
-    <member refid="classdakku_1_1Bounds2iIterator_1aabbc42d3b83e2b025e1a8540ff62314b" kind="function"><name>operator==</name></member>
-    <member refid="classdakku_1_1Bounds2iIterator_1aec365c1c605c7f12c463b13668a6fa5b" kind="function"><name>operator!=</name></member>
-    <member refid="classdakku_1_1Bounds2iIterator_1a6b917d1a9e146470819a369ee789c65d" kind="function"><name>operator*</name></member>
-    <member refid="classdakku_1_1Bounds2iIterator_1aa30d8017ae278532454b1dacf52d1807" kind="function"><name>advance</name></member>
-  </compound>
-  <compound refid="classdakku_1_1Bounds3" kind="class"><name>dakku::Bounds3</name>
-    <member refid="classdakku_1_1Bounds3_1a46c718e38bed601047044a6f1c1b7d7c" kind="function"><name>Bounds3</name></member>
-  </compound>
-  <compound refid="classdakku_1_1BoundsBase" kind="class"><name>dakku::BoundsBase</name>
-    <member refid="classdakku_1_1BoundsBase_1abd7c34bec0f05f1dfb494b76eed47622" kind="variable"><name>pMin</name></member>
-    <member refid="classdakku_1_1BoundsBase_1a1df49abc60c6cee7febd54aa46d04aa8" kind="variable"><name>pMax</name></member>
-    <member refid="classdakku_1_1BoundsBase_1a4dea00502d665d2f3e6657507a9b03fb" kind="function"><name>BoundsBase</name></member>
-    <member refid="classdakku_1_1BoundsBase_1a4707e959360ddbc591c0645854575ad9" kind="function"><name>BoundsBase</name></member>
-    <member refid="classdakku_1_1BoundsBase_1ab17dcf1e9998aeb07b29614aaeb42118" kind="function"><name>BoundsBase</name></member>
-    <member refid="classdakku_1_1BoundsBase_1ac2e934c9361722edb8bb081686feff62" kind="function"><name>BoundsBase</name></member>
-    <member refid="classdakku_1_1BoundsBase_1a07b1800b4e56f7f2daf1f59785215aee" kind="function"><name>diagonal</name></member>
-    <member refid="classdakku_1_1BoundsBase_1acaa8ef9b9991109e049d9409a1216518" kind="function"><name>maxExtent</name></member>
-    <member refid="classdakku_1_1BoundsBase_1acd1339c39870cd9bac4a0c2ee3726d20" kind="function"><name>operator==</name></member>
-    <member refid="classdakku_1_1BoundsBase_1a06fb31654a6571636ccab3b28d4edbaf" kind="function"><name>operator!=</name></member>
-    <member refid="classdakku_1_1BoundsBase_1ac3a04d4a5ba9884d9ab2734c5c94248f" kind="function"><name>lerp</name></member>
-    <member refid="classdakku_1_1BoundsBase_1a91d113dc02fe1d57163f8b2cee408ed1" kind="function"><name>offset</name></member>
-    <member refid="classdakku_1_1BoundsBase_1a1533ac65725aee5fa771b9e068f1050d" kind="function"><name>boundingSphere</name></member>
-    <member refid="classdakku_1_1BoundsBase_1a1131f2fb765ed853a8623a5aa0266d5e" kind="function"><name>toString</name></member>
-    <member refid="classdakku_1_1BoundsBase_1a354b7ef9e0dc908b9eca0a47f64cd37c" kind="friend"><name>overlaps</name></member>
-    <member refid="classdakku_1_1BoundsBase_1a4ba0780dc5fab304376d54affb497ae8" kind="friend"><name>inside</name></member>
-    <member refid="classdakku_1_1BoundsBase_1aaac97265d9f25e86e8a992a5bf5a96d4" kind="friend"><name>insideExclusive</name></member>
-    <member refid="classdakku_1_1BoundsBase_1abfbe6e5a21f265e66a85a4ac6abb9083" kind="friend"><name>distanceSquared</name></member>
-    <member refid="classdakku_1_1BoundsBase_1aaa212d5e2487285c3fa01207563498c8" kind="friend"><name>distance</name></member>
-    <member refid="classdakku_1_1BoundsBase_1a911ebeb367646117e45b81b7c3fceb02" kind="friend"><name>operator|</name></member>
-    <member refid="classdakku_1_1BoundsBase_1a775827382a4cfcd6d7e18741bb7236f8" kind="friend"><name>operator|</name></member>
-    <member refid="classdakku_1_1BoundsBase_1aabca5f08125e27d64b79bcb2cd1e7704" kind="friend"><name>operator&amp;</name></member>
-    <member refid="classdakku_1_1BoundsBase_1a02d61000d3d0599081a30bafc71bf758" kind="friend"><name>operator&lt;&lt;</name></member>
-  </compound>
-  <compound refid="classdakku_1_1BoxFilter" kind="class"><name>dakku::BoxFilter</name>
-    <member refid="classdakku_1_1BoxFilter_1ac4033f9e7e2cb0eee1b0eb5d8bd299b9" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
-    <member refid="classdakku_1_1BoxFilter_1a28e72cf62d6533cd2768a64d4920ead3" kind="function"><name>BoxFilter</name></member>
-    <member refid="classdakku_1_1BoxFilter_1a062696aca56d7f4f1ed238f1df17f95f" kind="function"><name>evaluate</name></member>
-  </compound>
-  <compound refid="classdakku_1_1BSDF" kind="class"><name>dakku::BSDF</name>
-    <member refid="classdakku_1_1BSDF_1a7ab07005a7e1a9cb8e1c72727932bef3" kind="variable"><name>eta</name></member>
-    <member refid="classdakku_1_1BSDF_1a9dd0f085b38b411a16bf3add2ca407bd" kind="variable"><name>ns</name></member>
-    <member refid="classdakku_1_1BSDF_1ad9407348acecb3a7d6523b0c26733c1b" kind="variable"><name>ng</name></member>
-    <member refid="classdakku_1_1BSDF_1a3ba15a4c499986d97b2aab241e31084e" kind="variable"><name>ss</name></member>
-    <member refid="classdakku_1_1BSDF_1ae42573203cfeeb3d4cb3105592ff390c" kind="variable"><name>ts</name></member>
-    <member refid="classdakku_1_1BSDF_1a34c6aabf0f93bd53c665705ec0a6e734" kind="variable"><name>nBxDFs</name></member>
-    <member refid="classdakku_1_1BSDF_1aed692d33a06390f27db8d05485874ebc" kind="variable"><name>bxdfs</name></member>
-    <member refid="classdakku_1_1BSDF_1a9dc08946f513a58833e47a724e4126d5" kind="variable"><name>MAX_BXDFS</name></member>
-    <member refid="classdakku_1_1BSDF_1a126894c3deb1ad280865b2a4f00af23c" kind="function"><name>BSDF</name></member>
-    <member refid="classdakku_1_1BSDF_1a41722d90c317ad5eea521cfc4dec42f6" kind="function"><name>add</name></member>
-    <member refid="classdakku_1_1BSDF_1aff581f3e97964d29aec2e10b7548a265" kind="function"><name>worldToLocal</name></member>
-    <member refid="classdakku_1_1BSDF_1a5d63e7ea9cb6790be6f6c88c03781b44" kind="function"><name>localToWorld</name></member>
-    <member refid="classdakku_1_1BSDF_1ad3aa7ac3f3f868ee333cb04067124459" kind="function"><name>numComponents</name></member>
-    <member refid="classdakku_1_1BSDF_1a1d54c9cbd6d3048b2a9c03f55a0d1708" kind="function"><name>f</name></member>
-    <member refid="classdakku_1_1BSDF_1ade79e649ea561dbd1fb22946feba2abd" kind="function"><name>sampleF</name></member>
-    <member refid="classdakku_1_1BSDF_1a97af40d797653a84e77ae0dc9eb2c54c" kind="function"><name>pdf</name></member>
-  </compound>
-  <compound refid="classdakku_1_1BxDF" kind="class"><name>dakku::BxDF</name>
-    <member refid="classdakku_1_1BxDF_1af4e3363340c6ce72932ccc7303107f84" kind="variable"><name>type</name></member>
-    <member refid="classdakku_1_1BxDF_1a2985c5c9e8d7b6d743475ac13f651923" kind="function"><name>~BxDF</name></member>
-    <member refid="classdakku_1_1BxDF_1a2f834b64a6323b941fed1b5f21d450a6" kind="function"><name>BxDF</name></member>
-    <member refid="classdakku_1_1BxDF_1ad4e188a72bdf539443ecafa16e34b22e" kind="function"><name>matchesFlags</name></member>
-    <member refid="classdakku_1_1BxDF_1aa9a72f802cdc8f468bfb42e9e44415ca" kind="function"><name>f</name></member>
-    <member refid="classdakku_1_1BxDF_1a653ac17b4941a3b3ffdd0e1b53a4961f" kind="function"><name>sampleF</name></member>
-    <member refid="classdakku_1_1BxDF_1a57aed4a4de49f434b72cbf8a002e78cf" kind="function"><name>pdf</name></member>
-  </compound>
-  <compound refid="classdakku_1_1Camera" kind="class"><name>dakku::Camera</name>
-    <member refid="classdakku_1_1Camera_1a7fc4b592c175e9aed2d06351418a0b0f" kind="variable"><name>cameraToWorld</name></member>
-    <member refid="classdakku_1_1Camera_1a028dfc24965474cb15a35a20228e0a6d" kind="variable"><name>film</name></member>
-    <member refid="classdakku_1_1Camera_1a8363a3f645e4c0c7b1573fe6c846b843" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
-    <member refid="classdakku_1_1Camera_1a4e13deb3c0f9b88a3f36ba20d5dc99ed" kind="function"><name>Camera</name></member>
-    <member refid="classdakku_1_1Camera_1af4fe5f80584bfb8ce27ab44475a30241" kind="function"><name>generateRay</name></member>
-    <member refid="classdakku_1_1Camera_1a8ca4c8b01d3ea35c862b51513378917d" kind="function"><name>generateRayDifferential</name></member>
-  </compound>
-  <compound refid="structdakku_1_1CameraSample" kind="struct"><name>dakku::CameraSample</name>
-    <member refid="structdakku_1_1CameraSample_1a01c7c75c01bc38007b424d0d10cd91d7" kind="variable"><name>pFilm</name></member>
-  </compound>
-  <compound refid="classdakku_1_1Class" kind="class"><name>dakku::Class</name>
-    <member refid="classdakku_1_1Class_1a5ca387aebcee4d1363ac17e25749098a" kind="variable"><name>_classMap</name></member>
-    <member refid="classdakku_1_1Class_1a38f609682794eb8644448c458c9679cb" kind="function"><name>instance</name></member>
-    <member refid="classdakku_1_1Class_1abfdf06dcdc49b01551130b41358cb93d" kind="function"><name>registerClass</name></member>
-    <member refid="classdakku_1_1Class_1a09814cebf82067a31d3a25bcc7afe28a" kind="function"><name>isDerivedFrom</name></member>
-    <member refid="classdakku_1_1Class_1ad6be1cb702527b1d888254a7a7769c37" kind="function"><name>isBaseof</name></member>
-    <member refid="classdakku_1_1Class_1af4dcc1c45a0cc7ffed866abe23c55440" kind="function"><name>contains</name></member>
-    <member refid="classdakku_1_1Class_1a2660e682570378b72183207e1a7fa636" kind="function"><name>create</name></member>
-    <member refid="classdakku_1_1Class_1af64deeeb68dfef5d6d4db8401df6281b" kind="function"><name>Class</name></member>
-    <member refid="classdakku_1_1Class_1a055cb7eb3d914e2a1242d0d39f12f39d" kind="function"><name>constructor</name></member>
-  </compound>
-  <compound refid="classdakku_1_1CoefficientSpectrum" kind="class"><name>dakku::CoefficientSpectrum</name>
-    <member refid="classdakku_1_1CoefficientSpectrum_1a3419bb7bc9a9f6ab7b2c00c3cee942d1" kind="function"><name>isBlack</name></member>
-    <member refid="classdakku_1_1CoefficientSpectrum_1ae9b538dae7b0ef76e17b5b8379d62224" kind="function"><name>clamp</name></member>
-    <member refid="classdakku_1_1CoefficientSpectrum_1abfe0542a52a0c8473465f9e7b2b96cfd" kind="friend"><name>operator-</name></member>
-  </compound>
-  <compound refid="classdakku_1_1ConstantTexture" kind="class"><name>dakku::ConstantTexture</name>
-    <member refid="classdakku_1_1ConstantTexture_1af4dc898baf51be9db4582df096e3067d" kind="variable"><name>value</name></member>
-    <member refid="classdakku_1_1ConstantTexture_1ad9eb08983dde4d7ceae32d9396c01720" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
-    <member refid="classdakku_1_1ConstantTexture_1a84f1bec89957b9bcdff638aadfc8cbea" kind="function"><name>ConstantTexture</name></member>
-    <member refid="classdakku_1_1ConstantTexture_1a0aeadd0c4db60fc0bd81664ef0d23fdb" kind="function"><name>ConstantTexture</name></member>
-    <member refid="classdakku_1_1ConstantTexture_1ace5cc84dff05b8e68aa67fc59af21c4a" kind="function"><name>ConstantTexture</name></member>
-    <member refid="classdakku_1_1ConstantTexture_1aade90401c3068b8534a84994dcd0acd7" kind="function"><name>evaluate</name></member>
-  </compound>
-  <compound refid="classdakku_1_1FileInputStream" kind="class"><name>dakku::FileInputStream</name>
-    <member refid="classdakku_1_1FileInputStream_1ad64d091dae724af7202e76219a7eb59e" kind="variable"><name>stream</name></member>
-    <member refid="classdakku_1_1FileInputStream_1a78fcbd9bd3066af2b2d91e9f07f3b2d6" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
-    <member refid="classdakku_1_1FileInputStream_1a061b083cd03658c4a594d1d30d4d0b1b" kind="function"><name>FileInputStream</name></member>
-    <member refid="classdakku_1_1FileInputStream_1a7770c32b92e4f254caf5b728c4eb9f11" kind="function"><name>FileInputStream</name></member>
-    <member refid="classdakku_1_1FileInputStream_1a0bca053c299098766dc46f947ea35c52" kind="function"><name>readByte</name></member>
-    <member refid="classdakku_1_1FileInputStream_1a157681cafffcb6adadd5de64d8bc918d" kind="function"><name>readBytes</name></member>
-  </compound>
-  <compound refid="classdakku_1_1FileOutputStream" kind="class"><name>dakku::FileOutputStream</name>
-    <member refid="classdakku_1_1FileOutputStream_1a1c607c36adc63bb83817516964c6e72e" kind="variable"><name>stream</name></member>
-    <member refid="classdakku_1_1FileOutputStream_1af0bdc8b8c2e04c6602cc9d4048a4d281" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
-    <member refid="classdakku_1_1FileOutputStream_1a7a11c66c8938371d28c8f9ddce222f0c" kind="function"><name>FileOutputStream</name></member>
-    <member refid="classdakku_1_1FileOutputStream_1ab5996fdda5e46c08f414562b85d011df" kind="function"><name>FileOutputStream</name></member>
-    <member refid="classdakku_1_1FileOutputStream_1ac793da8372c702f923a5a3f3306367ae" kind="function"><name>writeByte</name></member>
-    <member refid="classdakku_1_1FileOutputStream_1a239a3e78d06f170d29b0e0db74e55c8c" kind="function"><name>writeBytes</name></member>
-  </compound>
-  <compound refid="classdakku_1_1Film" kind="class"><name>dakku::Film</name>
-    <member refid="classdakku_1_1Film_1ad88e45f878fce2f808efa02e0d4d15f1" kind="variable"><name>fullResolution</name></member>
-    <member refid="classdakku_1_1Film_1af37a20765786993f8e85f693da1aabae" kind="variable"><name>filter</name></member>
-    <member refid="classdakku_1_1Film_1a4e50af430a0965655502f18ebcd3a720" kind="variable"><name>fileName</name></member>
-    <member refid="classdakku_1_1Film_1ab903557a26253b8d83313dcc8d082162" kind="variable"><name>croppedPixelBounds</name></member>
-    <member refid="classdakku_1_1Film_1a428fa06a95483622e24fef64a6d8255a" kind="variable"><name>pixels</name></member>
-    <member refid="classdakku_1_1Film_1a6fd4d08f6a29e54713a3972cd5a86afa" kind="variable"><name>filterTable</name></member>
-    <member refid="classdakku_1_1Film_1a189e65e1fdac41477f8c4fbc953a6c79" kind="variable"><name>mutex</name></member>
-    <member refid="classdakku_1_1Film_1a59fba870ff465e7f3611cef64074c3f1" kind="variable"><name>scale</name></member>
-    <member refid="classdakku_1_1Film_1a388a8ca872d43f220b7efd79cccd84af" kind="variable"><name>maxSampleLuminance</name></member>
-    <member refid="classdakku_1_1Film_1a2761e7f49049136f7641e7eb9992aa3d" kind="variable"><name>filterTableWidth</name></member>
-    <member refid="classdakku_1_1Film_1a246c871f2adf1dca61f541a9f8544b4b" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
-    <member refid="classdakku_1_1Film_1ad8e4f2a09968ca20e9963575c573ef5d" kind="function"><name>Film</name></member>
-    <member refid="classdakku_1_1Film_1a9c627b36e3139774bd22557230dce664" kind="function"><name>Film</name></member>
-    <member refid="classdakku_1_1Film_1ab9c52d3813f1c4182aee9188a3f70651" kind="function"><name>getSampleBounds</name></member>
-    <member refid="classdakku_1_1Film_1ad9c09087e70ccaac1c152da26d064f1d" kind="function"><name>getFilmTile</name></member>
-    <member refid="classdakku_1_1Film_1a36494dc9faa8017ffefb68564d4c52e8" kind="function"><name>mergeFilmTile</name></member>
-    <member refid="classdakku_1_1Film_1ad946ef8b95c381e09413d18e4be3e0da" kind="function"><name>writeImage</name></member>
-    <member refid="classdakku_1_1Film_1a415a2a47e1f79349a0ee9b8968b3e4af" kind="function"><name>writeImageTo</name></member>
-    <member refid="classdakku_1_1Film_1a36e7bf6e4d3e5f606bfe8ab2e7fd374c" kind="function"><name>writeImageTo</name></member>
-    <member refid="classdakku_1_1Film_1abd5500d780cda9eb7b512dc7ac1740d5" kind="function"><name>serialize</name></member>
-    <member refid="classdakku_1_1Film_1a5c376ccf9abcdb293db2e9b9935b785c" kind="function"><name>deserialize</name></member>
-    <member refid="classdakku_1_1Film_1a56c7a227f4e4b163e52b04f4cf286ccf" kind="function"><name>getCroppedPixelBounds</name></member>
-    <member refid="classdakku_1_1Film_1a8a5b6b0f27f82805309c7f6600f0e7bb" kind="function"><name>getPixel</name></member>
-    <member refid="classdakku_1_1Film_1a2fd13089b42eba1f36bc4f94f8e19357" kind="function"><name>getPixel</name></member>
-  </compound>
-  <compound refid="classdakku_1_1FilmImageProvider" kind="class"><name>dakku::FilmImageProvider</name>
-    <member refid="classdakku_1_1FilmImageProvider_1a2d96f2e2c0b91cf67b1478eec80e959e" kind="variable"><name>image</name></member>
-    <member refid="classdakku_1_1FilmImageProvider_1a5f08965e463895ded371b7d78d3ec21c" kind="variable"><name>pixmap</name></member>
-    <member refid="classdakku_1_1FilmImageProvider_1a65cb6a36076140e4078bd0a92dacba19" kind="variable"><name>width</name></member>
-    <member refid="classdakku_1_1FilmImageProvider_1a0ef64883afef39f92f497e3ea4c15931" kind="variable"><name>height</name></member>
-    <member refid="classdakku_1_1FilmImageProvider_1a994df4048d6055475c15d40d36eaf84a" kind="variable"><name>currentIndex</name></member>
-    <member refid="classdakku_1_1FilmImageProvider_1a2c0930e0544d8771a8144537a2340e0b" kind="function"><name>FilmImageProvider</name></member>
-    <member refid="classdakku_1_1FilmImageProvider_1a2976843e97d8432bf5514ae0295e4dac" kind="function"><name>requestPixmap</name></member>
-    <member refid="classdakku_1_1FilmImageProvider_1a55782dc48694ef1626c6e9a93ea6f421" kind="function"><name>setImage</name></member>
-    <member refid="classdakku_1_1FilmImageProvider_1a9045e5f0228c4731a680985fad1f2cbd" kind="function"><name>setImage</name></member>
-    <member refid="classdakku_1_1FilmImageProvider_1a267eb4af2ea3a85a73ab2c830eecac6a" kind="signal"><name>updateGui</name></member>
-  </compound>
-  <compound refid="classdakku_1_1FilmTile" kind="class"><name>dakku::FilmTile</name>
-    <member refid="classdakku_1_1FilmTile_1a1508a6fd2a92c50b745f618f727c9a42" kind="variable"><name>pixelBounds</name></member>
-    <member refid="classdakku_1_1FilmTile_1a1afd075f21aa8b29c3251c25f9f64c04" kind="variable"><name>filterRadius</name></member>
-    <member refid="classdakku_1_1FilmTile_1a481cfd22c362b14f00356a5f5f6af2ca" kind="variable"><name>invFilterRadius</name></member>
-    <member refid="classdakku_1_1FilmTile_1a9e54ced1f78c9175bf3e0557c573149a" kind="variable"><name>filterTable</name></member>
-    <member refid="classdakku_1_1FilmTile_1a9cf8e3758bd19ae38f73790af53f5733" kind="variable"><name>filterTableSize</name></member>
-    <member refid="classdakku_1_1FilmTile_1aca37384e334a85748bb5cb84e9d9b8d0" kind="variable"><name>pixels</name></member>
-    <member refid="classdakku_1_1FilmTile_1a950301e119159f8a2bc744dd01618001" kind="variable"><name>maxSampleLuminance</name></member>
-    <member refid="classdakku_1_1FilmTile_1a4af0d3c902fcdaafd695e2caec4f25e2" kind="friend"><name>Film</name></member>
-    <member refid="classdakku_1_1FilmTile_1ab5e508950c376c05c2035bf0aff7af24" kind="function"><name>FilmTile</name></member>
-    <member refid="classdakku_1_1FilmTile_1a0d8326e3cf8dc31bc9bc6da5ca8a9574" kind="function"><name>getPixel</name></member>
-    <member refid="classdakku_1_1FilmTile_1a469b9f0732df43d2f056dcbdb996fca8" kind="function"><name>getPixel</name></member>
-    <member refid="classdakku_1_1FilmTile_1a59959fe4403070d8d2bc2d1a22bef92e" kind="function"><name>getPixelBounds</name></member>
-    <member refid="classdakku_1_1FilmTile_1a36ae7d12134c16a3785f4cb1dd0b8cf3" kind="function"><name>addSample</name></member>
-  </compound>
-  <compound refid="structdakku_1_1FilmTilePixel" kind="struct"><name>dakku::FilmTilePixel</name>
-    <member refid="structdakku_1_1FilmTilePixel_1af4beb8c6536598bd0233bcfa7b836f03" kind="variable"><name>contribSum</name></member>
-    <member refid="structdakku_1_1FilmTilePixel_1a4df7e5e93e3e44818913bb0e0fe3a97d" kind="variable"><name>filterWeightSum</name></member>
-  </compound>
-  <compound refid="classdakku_1_1Filter" kind="class"><name>dakku::Filter</name>
-    <member refid="classdakku_1_1Filter_1a3cc4c4500a494841a7ba4c8a1e9ec14f" kind="variable"><name>radius</name></member>
-    <member refid="classdakku_1_1Filter_1ab8e792b035b315019d7fe4279ac914d8" kind="variable"><name>invRadius</name></member>
-    <member refid="classdakku_1_1Filter_1af5facbb86027fe03ecc4c9d6e4ae6a17" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
-    <member refid="classdakku_1_1Filter_1a41c4e564d4f720c22852f36412836574" kind="function"><name>Filter</name></member>
-    <member refid="classdakku_1_1Filter_1abe92aa3911e6856f7abcb1ed841ff3e9" kind="function"><name>evaluate</name></member>
-  </compound>
-  <compound refid="classdakku_1_1GuiEngine" kind="class"><name>dakku::GuiEngine</name>
-    <member refid="classdakku_1_1GuiEngine_1a5ebd622d488e711360fa7dcbbe3aa8f5" kind="variable"><name>filmImageProvider</name></member>
-    <member refid="classdakku_1_1GuiEngine_1a135f9195dc943e6d9a81eea5acb0ead4" kind="function"><name>GuiEngine</name></member>
-    <member refid="classdakku_1_1GuiEngine_1a5f58820656543c972b970eb0a1ee4984" kind="function"><name>getProvider</name></member>
-    <member refid="classdakku_1_1GuiEngine_1a900dcdab4265fd19406805c654ace0b9" kind="slot"><name>updateFilmImage</name></member>
-  </compound>
-  <compound refid="classdakku_1_1ImageTexture" kind="class"><name>dakku::ImageTexture</name>
-    <member refid="classdakku_1_1ImageTexture_1a6760ffc4f832c5d18ca3a96178c8ef1a" kind="variable"><name>mapping</name></member>
-    <member refid="classdakku_1_1ImageTexture_1a205e6c8865159b8de73a594ecba02bb6" kind="variable"><name>mipmap</name></member>
-    <member refid="classdakku_1_1ImageTexture_1ab92c8d48435998844e940e6da4259402" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
-    <member refid="classdakku_1_1ImageTexture_1a5bdd4ddb6aaa38e4e5318559d5c0ead3" kind="function"><name>ImageTexture</name></member>
-    <member refid="classdakku_1_1ImageTexture_1adb32d1db70667a42940df7212450956b" kind="function"><name>ImageTexture</name></member>
-    <member refid="classdakku_1_1ImageTexture_1a1c8b8cb8b6ee872474195f8e71d47529" kind="function"><name>evaluate</name></member>
-  </compound>
-  <compound refid="classdakku_1_1InputStream" kind="class"><name>dakku::InputStream</name>
-    <member refid="classdakku_1_1InputStream_1a72f97ed2ffd8176e418dc962de184ade" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
-    <member refid="classdakku_1_1InputStream_1a2740268624ee2642cc70b419831153cd" kind="function"><name>readByte</name></member>
-    <member refid="classdakku_1_1InputStream_1a38473aafb15173995f837b818903ad47" kind="function"><name>readBytes</name></member>
-  </compound>
-  <compound refid="structdakku_1_1Interaction" kind="struct"><name>dakku::Interaction</name>
-    <member refid="structdakku_1_1Interaction_1afd2ec2651f8d52f175991ee6f51ca02f" kind="variable"><name>p</name></member>
-    <member refid="structdakku_1_1Interaction_1a09bac9c0ca5d0e616415f5591a930866" kind="variable"><name>wo</name></member>
-    <member refid="structdakku_1_1Interaction_1ada7d1f731aef826b61f3819cd31453ee" kind="variable"><name>n</name></member>
-    <member refid="structdakku_1_1Interaction_1a779a213fff1311416de40299c0a6f3b8" kind="function"><name>Interaction</name></member>
-    <member refid="structdakku_1_1Interaction_1a699eb6f8e671ddd0cb7358aefe5474c3" kind="function"><name>Interaction</name></member>
-    <member refid="structdakku_1_1Interaction_1a639b8d8d253fa5c86e9af807a9b8559f" kind="function"><name>isSurfaceInteraction</name></member>
-    <member refid="structdakku_1_1Interaction_1a5e9510b579b3a3b277f57716ce0c6dad" kind="function"><name>isMediumInteraction</name></member>
-    <member refid="structdakku_1_1Interaction_1afb8304e8d26f8149bac1ee51ec949b51" kind="function"><name>spawnRay</name></member>
-    <member refid="structdakku_1_1Interaction_1ad991618b3ef561e9f217ccd2075e918e" kind="function"><name>spawnRayTo</name></member>
-    <member refid="structdakku_1_1Interaction_1a26bc9218867d012021b32a5fc97f2cbd" kind="function"><name>spawnRayTo</name></member>
-  </compound>
-  <compound refid="classdakku_1_1L1CacheLineAlignedResource" kind="class"><name>dakku::L1CacheLineAlignedResource</name>
-    <member refid="classdakku_1_1L1CacheLineAlignedResource_1a510e0f8a82300e3cf0c6ee6fa8a889ed" kind="variable"><name>upStream</name></member>
-    <member refid="classdakku_1_1L1CacheLineAlignedResource_1aec866f03c500be7f144dc08f12add406" kind="function"><name>L1CacheLineAlignedResource</name></member>
-    <member refid="classdakku_1_1L1CacheLineAlignedResource_1a5d618ed96c73814fd10618cdf4694577" kind="function"><name>do_allocate</name></member>
-    <member refid="classdakku_1_1L1CacheLineAlignedResource_1a834de448e638b2bf9258b75bb210fcec" kind="function"><name>do_deallocate</name></member>
-    <member refid="classdakku_1_1L1CacheLineAlignedResource_1ac1a7d0784608447b9a4287fe81583a99" kind="function"><name>do_is_equal</name></member>
-  </compound>
   <compound refid="classdakku_1_1Logger" kind="class"><name>dakku::Logger</name>
     <member refid="classdakku_1_1Logger_1aa6afc845ad6d0bcec3849515afc971cd" kind="variable"><name>_logger</name></member>
     <member refid="classdakku_1_1Logger_1a75e95ca57e099bb7992724feec106edf" kind="function"><name>get</name></member>
     <member refid="classdakku_1_1Logger_1a323f22b6d56d140abe5a41da4daff699" kind="function"><name>handle</name></member>
     <member refid="classdakku_1_1Logger_1a25793d0b435146d8e4a813dd39a486e1" kind="function"><name>Logger</name></member>
   </compound>
-  <compound refid="structdakku_1_1Matrix4x4" kind="struct"><name>dakku::Matrix4x4</name>
-    <member refid="structdakku_1_1Matrix4x4_1a3580dce7dc2c230e59203cecd2760635" kind="variable"><name>m</name></member>
-    <member refid="structdakku_1_1Matrix4x4_1a04ffa0470a01980b11bd71b15a698fa0" kind="function"><name>Matrix4x4</name></member>
-    <member refid="structdakku_1_1Matrix4x4_1a9969de4e8ca980efbe5adde6d7f9b80c" kind="function"><name>Matrix4x4</name></member>
-    <member refid="structdakku_1_1Matrix4x4_1aa057e26fddc7b42656ae8425d48a5b20" kind="function"><name>Matrix4x4</name></member>
-    <member refid="structdakku_1_1Matrix4x4_1afa2d87deca31076d5166d3c5335e8e22" kind="function"><name>operator[]</name></member>
-    <member refid="structdakku_1_1Matrix4x4_1adbd9aa389d5861cbb9961db9ea21b219" kind="function"><name>operator[]</name></member>
-    <member refid="structdakku_1_1Matrix4x4_1a283f29f1cb3aa1bdeeb929a0896a5835" kind="function"><name>operator()</name></member>
-    <member refid="structdakku_1_1Matrix4x4_1a00d3970084edf324f911eb2bf3b29936" kind="function"><name>operator()</name></member>
-    <member refid="structdakku_1_1Matrix4x4_1a23f75e2553126934f408f117eaed9849" kind="function"><name>setIdentity</name></member>
-    <member refid="structdakku_1_1Matrix4x4_1aa440eb3fd11ed3003aad440b17e84e5c" kind="function"><name>operator==</name></member>
-    <member refid="structdakku_1_1Matrix4x4_1a5b55b6346b398a8dac63fbcb0f873375" kind="function"><name>operator!=</name></member>
-    <member refid="structdakku_1_1Matrix4x4_1a0a2e0854eec31d6d12a8c3757cd1a7c0" kind="function"><name>operator*</name></member>
-    <member refid="structdakku_1_1Matrix4x4_1a1f503531ba9a7dc39f0fc8124aa2d778" kind="function"><name>operator*=</name></member>
-    <member refid="structdakku_1_1Matrix4x4_1ad229acdd4f70387d3fd3b3df3dad8854" kind="function"><name>isIdentity</name></member>
-    <member refid="structdakku_1_1Matrix4x4_1af28df8d5712634ebdec64eebcc804bde" kind="function"><name>toString</name></member>
-    <member refid="structdakku_1_1Matrix4x4_1acf7c461dc9d1d64ef7cac56f038e07b3" kind="function"><name>toFloatVector</name></member>
-    <member refid="structdakku_1_1Matrix4x4_1a842b9884e102b87cb20746608fb04aa2" kind="function"><name>mul</name></member>
-    <member refid="structdakku_1_1Matrix4x4_1ad9179852977de8383c0ae1683f12fc5f" kind="friend"><name>transpose</name></member>
-    <member refid="structdakku_1_1Matrix4x4_1ac742caf08472cdfeda8fce5abf75c6a9" kind="friend"><name>inverse</name></member>
-    <member refid="structdakku_1_1Matrix4x4_1a014300d3c91b6eea30d2c2e20f5d08ab" kind="friend"><name>operator&lt;&lt;</name></member>
-  </compound>
-  <compound refid="classdakku_1_1MemoryArena" kind="class"><name>dakku::MemoryArena</name>
-    <member refid="classdakku_1_1MemoryArena_1a33ddc091d46cbe83ca867ba9874fe606" kind="variable"><name>upStream</name></member>
-    <member refid="classdakku_1_1MemoryArena_1a218ba07f5f79d5f45b1e5665d4635b4c" kind="variable"><name>resource</name></member>
-    <member refid="classdakku_1_1MemoryArena_1a7b9896cbdf1f21a31a4c12f875026b7d" kind="function"><name>MemoryArena</name></member>
-    <member refid="classdakku_1_1MemoryArena_1a71997f6b7b6fc9a808f95b8e729ff317" kind="function"><name>MemoryArena</name></member>
-    <member refid="classdakku_1_1MemoryArena_1af44583630a36c94b7040a9be738826af" kind="function"><name>allocObject</name></member>
-    <member refid="classdakku_1_1MemoryArena_1ae375338f226dc8cedae2d70eb6cb8111" kind="function"><name>release</name></member>
-  </compound>
-  <compound refid="structdakku_1_1Class_1_1Metadata" kind="struct"><name>dakku::Class::Metadata</name>
-    <member refid="structdakku_1_1Class_1_1Metadata_1a6a92c14c8c88f4c3345dcde94bb7dd64" kind="variable"><name>constructor</name></member>
-    <member refid="structdakku_1_1Class_1_1Metadata_1a8d7762b1bbefa76e48624868d987c871" kind="variable"><name>parent</name></member>
-  </compound>
-  <compound refid="classdakku_1_1MipMap" kind="class"><name>dakku::MipMap</name>
-    <member refid="classdakku_1_1MipMap_1ac6ca8840ae5bddcf0fd045f2a50fa414" kind="variable"><name>doTrilinear</name></member>
-    <member refid="classdakku_1_1MipMap_1a042ae1aae7c70c65cbb89d6a49ec7ed9" kind="variable"><name>maxAnisotropy</name></member>
-    <member refid="classdakku_1_1MipMap_1ada7958bd81d9742463689df8dc6371e8" kind="variable"><name>wrapMode</name></member>
-    <member refid="classdakku_1_1MipMap_1abe2aa9f5f186ccfedfe9aa58385bbd40" kind="variable"><name>resolution</name></member>
-    <member refid="classdakku_1_1MipMap_1aa61ecf5582cca022c002e42cdfe97e11" kind="variable"><name>pyramid</name></member>
-    <member refid="classdakku_1_1MipMap_1aba3ce8e11e111e692cf1eac85984ba8e" kind="function"><name>MipMap</name></member>
-    <member refid="classdakku_1_1MipMap_1a6b6aaee191275ccfb13805dc1759d819" kind="function"><name>width</name></member>
-    <member refid="classdakku_1_1MipMap_1a4134445335c6d3badf60022c7b7efb7c" kind="function"><name>height</name></member>
-    <member refid="classdakku_1_1MipMap_1a9f68ae9f89caa8b327bdb41813da2e37" kind="function"><name>levels</name></member>
-    <member refid="classdakku_1_1MipMap_1ac3c0905111e2b6d7d5440fe858eb8a37" kind="function"><name>texel</name></member>
-    <member refid="classdakku_1_1MipMap_1ad25a7c8b822b665377740f296bd06a40" kind="function"><name>lookup</name></member>
-    <member refid="classdakku_1_1MipMap_1a130a8b13049ca7fe2525d5b0c3882795" kind="function"><name>lookup</name></member>
-    <member refid="classdakku_1_1MipMap_1a0fc81d9a52721498646375c374d8577e" kind="function"><name>resampleWeights</name></member>
-    <member refid="classdakku_1_1MipMap_1abb83b1d932d1416a8d11ae568f7192d6" kind="function"><name>clamp</name></member>
-    <member refid="classdakku_1_1MipMap_1a37d1f785acc945b501cc3ee7f34027f6" kind="function"><name>triangle</name></member>
-    <member refid="classdakku_1_1MipMap_1af7005d286fc2af45aa51a4b929ddfa87" kind="function"><name>clamp</name></member>
+  <compound refid="classdakku_1_1Lua" kind="class"><name>dakku::Lua</name>
+    <member refid="classdakku_1_1Lua_1a8979a2546db6d85043ced22b5f2ede8f" kind="variable"><name>state</name></member>
+    <member refid="classdakku_1_1Lua_1ac3145c27d97b2c4cb342c5935e41fb62" kind="function"><name>instance</name></member>
+    <member refid="classdakku_1_1Lua_1a04a19bad0e52044a0422a23eee0ffc8c" kind="function"><name>get_state</name></member>
   </compound>
   <compound refid="classdakku_1_1Normal" kind="class"><name>dakku::Normal</name>
-    <member refid="classdakku_1_1Normal_1a5028bef9666f97b23bb23f11e3f4af7e" kind="friend"><name>operator-</name></member>
-  </compound>
-  <compound refid="classdakku_1_1Object" kind="class"><name>dakku::Object</name>
-    <member refid="classdakku_1_1Object_1a0c792f089351caf3fa7a704c86ce903d" kind="function"><name>~Object</name></member>
-    <member refid="classdakku_1_1Object_1a20e78d46fa11d575d63e048279150eac" kind="function"><name>Object</name></member>
-    <member refid="classdakku_1_1Object_1a543f734268f7be81badecee6cf7245cc" kind="function"><name>getClassName</name></member>
-    <member refid="classdakku_1_1Object_1accec0632e79097564677055bef4220bd" kind="function"><name>getParentName</name></member>
-    <member refid="classdakku_1_1Object_1a65d91c04e480b827fa495df96af2826b" kind="function"><name>toString</name></member>
-    <member refid="classdakku_1_1Object_1add47b28fc1878f008bb6664a83faad72" kind="function"><name>isDerivedFrom</name></member>
-    <member refid="classdakku_1_1Object_1a055e32b0624d9a96fc2014fe5d9d0c81" kind="function"><name>isBaseOf</name></member>
-    <member refid="classdakku_1_1Object_1a247ed68865f464d511b7fdb85467c354" kind="function"><name>getClassNameStatic</name></member>
-    <member refid="classdakku_1_1Object_1a08ec83c660afb1850455ef30c43fa29c" kind="function"><name>getParentNameStatic</name></member>
-  </compound>
-  <compound refid="classdakku_1_1OutputStream" kind="class"><name>dakku::OutputStream</name>
-    <member refid="classdakku_1_1OutputStream_1ac311e62efb5df496e544f8253d016852" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
-    <member refid="classdakku_1_1OutputStream_1aa806da54971824033daaa468f630eb80" kind="function"><name>writeByte</name></member>
-    <member refid="classdakku_1_1OutputStream_1aefc5fac8303fab5bd3c05aa1b7e26f90" kind="function"><name>writeBytes</name></member>
-  </compound>
-  <compound refid="classdakku_1_1PerspectiveCamera" kind="class"><name>dakku::PerspectiveCamera</name>
-    <member refid="classdakku_1_1PerspectiveCamera_1a580b9e853a6974d4f5ab2a8babfdf967" kind="variable"><name>dxCamera</name></member>
-    <member refid="classdakku_1_1PerspectiveCamera_1a98daef7e3c8040e02d2b0eb834bea77c" kind="variable"><name>dyCamera</name></member>
-    <member refid="classdakku_1_1PerspectiveCamera_1aec4c1672de8d081a922c5eca3eee70f9" kind="variable"><name>A</name></member>
-    <member refid="classdakku_1_1PerspectiveCamera_1af40d66b95aff6d291c6966aa02660f9d" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
-    <member refid="classdakku_1_1PerspectiveCamera_1aee6f7b6d66a2c5acca0e55629545c50e" kind="function"><name>PerspectiveCamera</name></member>
-    <member refid="classdakku_1_1PerspectiveCamera_1aee244e2d79c04391fd59bcf7091863ab" kind="function"><name>PerspectiveCamera</name></member>
-    <member refid="classdakku_1_1PerspectiveCamera_1add3eb3f906c80d82de3694fcbd822315" kind="function"><name>generateRay</name></member>
-    <member refid="classdakku_1_1PerspectiveCamera_1a29a3725de1185c816a05a899601b0da6" kind="function"><name>generateRayDifferential</name></member>
-  </compound>
-  <compound refid="structdakku_1_1Film_1_1Pixel" kind="struct"><name>dakku::Film::Pixel</name>
-    <member refid="structdakku_1_1Film_1_1Pixel_1a1605c1fd5405061a1d7b231109bbc2dd" kind="variable"><name>xyz</name></member>
-    <member refid="structdakku_1_1Film_1_1Pixel_1accd87822d3b67fbf4a0014915acc6cf2" kind="variable"><name>filterWeightSum</name></member>
-    <member refid="structdakku_1_1Film_1_1Pixel_1acfbbbf1e8a707f1c10b73ba2d9215473" kind="variable"><name>splatXyz</name></member>
-    <member refid="structdakku_1_1Film_1_1Pixel_1a4261a021d7b18f7c621e5344ab164b19" kind="variable"><name>_padding</name></member>
-  </compound>
-  <compound refid="classdakku_1_1PixelSampler" kind="class"><name>dakku::PixelSampler</name>
-    <member refid="classdakku_1_1PixelSampler_1aa27ea2abe937bf569c67838e75cbb3ba" kind="variable"><name>samples1D</name></member>
-    <member refid="classdakku_1_1PixelSampler_1a299da72f4d88821c44e41f765dc7a220" kind="variable"><name>samples2D</name></member>
-    <member refid="classdakku_1_1PixelSampler_1a76a0155347484dc71279a32000d6a189" kind="variable"><name>current1DDimension</name></member>
-    <member refid="classdakku_1_1PixelSampler_1aa720d4ef8598bbe42385c78b6c9a5125" kind="variable"><name>current2DDimension</name></member>
-    <member refid="classdakku_1_1PixelSampler_1a0043798965029fc6f5641ea9ca751b63" kind="variable"><name>rng</name></member>
-    <member refid="classdakku_1_1PixelSampler_1ac7993b270440783bfd3bc673510d0f16" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
-    <member refid="classdakku_1_1PixelSampler_1a7d90e9bef5d1661157c5f703bfa7182f" kind="function"><name>startNextSample</name></member>
-    <member refid="classdakku_1_1PixelSampler_1a7e86a30e3e73ae1b9903d5fb0e3421ef" kind="function"><name>setSampleNumber</name></member>
-    <member refid="classdakku_1_1PixelSampler_1acae4bb493e68f22343dc3e73c0e83d0e" kind="function"><name>get1D</name></member>
-    <member refid="classdakku_1_1PixelSampler_1a6ca8f0482c43fabb839628b4ca2627df" kind="function"><name>get2D</name></member>
+    <member refid="classdakku_1_1Normal_1aac4ba6d499744c5e758a1d0cea091bde" kind="function"><name>operator-</name></member>
+    <member refid="classdakku_1_1Normal_1a81522ce35d8b925dd8e4a9fdcc56c9fa" kind="function"><name>operator-</name></member>
+    <member refid="classdakku_1_1Normal_1ac042f0cd764003c684d2880c233d041c" kind="function"><name>operator-</name></member>
   </compound>
   <compound refid="classdakku_1_1Point" kind="class"><name>dakku::Point</name>
-    <member refid="classdakku_1_1Point_1ad8e485617ec76d5775ae2efd79522e29" kind="friend"><name>operator-</name></member>
-    <member refid="classdakku_1_1Point_1a8f79a28ee6306ace7ac3e4d7dbee3e22" kind="friend"><name>operator-</name></member>
-    <member refid="classdakku_1_1Point_1aa42db7f4fcc358dda0322ad91b45b7e7" kind="friend"><name>operator+</name></member>
-  </compound>
-  <compound refid="classdakku_1_1ProjectiveCamera" kind="class"><name>dakku::ProjectiveCamera</name>
-    <member refid="classdakku_1_1ProjectiveCamera_1a890b5514e65900976e66b73817ee485d" kind="variable"><name>cameraToScreen</name></member>
-    <member refid="classdakku_1_1ProjectiveCamera_1a80eabb36d5c13f9a8a71d05cbf8850c0" kind="variable"><name>rasterToCamera</name></member>
-    <member refid="classdakku_1_1ProjectiveCamera_1ad382d5c8b3a8e800f753e9570b71eb5e" kind="variable"><name>screenToRaster</name></member>
-    <member refid="classdakku_1_1ProjectiveCamera_1adc49572681d9d4db67106bec5d223f7e" kind="variable"><name>rasterToScreen</name></member>
-    <member refid="classdakku_1_1ProjectiveCamera_1a2ff0d0032ed0f7319f5b0422a1741b4d" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
-    <member refid="classdakku_1_1ProjectiveCamera_1ae25222d3c2004b039da5d4890315201f" kind="function"><name>ProjectiveCamera</name></member>
-  </compound>
-  <compound refid="classdakku_1_1Property" kind="class"><name>dakku::Property</name>
-    <member refid="classdakku_1_1Property_1a3572cc83d304fa13a828df071bc1530b" kind="typedef"><name>ObjectType</name></member>
-    <member refid="classdakku_1_1Property_1aa44ae47ef51fe042e4cdc2d558fd6c63" kind="typedef"><name>ArrayType</name></member>
-    <member refid="classdakku_1_1Property_1a84633bc387b4d29044d4b05972899905" kind="typedef"><name>NumberType</name></member>
-    <member refid="classdakku_1_1Property_1a24591b37ada180ec7c1d83a7d63dd2c5" kind="typedef"><name>VectorType</name></member>
-    <member refid="classdakku_1_1Property_1a1729c26b8c4e6cdb59801447bb2c8b1e" kind="typedef"><name>StringType</name></member>
-    <member refid="classdakku_1_1Property_1ac202831633c79a143333cebe0bbf704b" kind="typedef"><name>TransformType</name></member>
-    <member refid="classdakku_1_1Property_1ae83c9705acea5d552705a45e06328408" kind="variable"><name>data</name></member>
-    <member refid="classdakku_1_1Property_1aced3169c7b9d2a24ee8853660fb9ac54" kind="variable"><name>type</name></member>
-    <member refid="classdakku_1_1Property_1a8723ce4e4af1e43c638534da4df0359f" kind="function"><name>Property</name></member>
-    <member refid="classdakku_1_1Property_1a027a9fe4e51faa1849b99ebc276fa21e" kind="function"><name>Property</name></member>
-    <member refid="classdakku_1_1Property_1aaeaa4bdbeb0845bfa5ad94ad9e9bfb1c" kind="function"><name>Property</name></member>
-    <member refid="classdakku_1_1Property_1a23b873f32fb76880cf62bf6088974141" kind="function"><name>Property</name></member>
-    <member refid="classdakku_1_1Property_1a9ce8614e008659828c3a4bf2a4ca22d2" kind="function"><name>Property</name></member>
-    <member refid="classdakku_1_1Property_1a6190fd86132ce537fe5d9401a3deae13" kind="function"><name>Property</name></member>
-    <member refid="classdakku_1_1Property_1a86d3f30da8f500e82852c0dd6a47d892" kind="function"><name>getPropertyType</name></member>
-    <member refid="classdakku_1_1Property_1af7dd18be1dffb351f12b12c77467b2eb" kind="function"><name>get</name></member>
-    <member refid="classdakku_1_1Property_1a8cea54fddb8c1929675b801af12ff87b" kind="function"><name>get</name></member>
-    <member refid="classdakku_1_1Property_1a880441e5235f7e4340436b2ec39d1632" kind="function"><name>getObject</name></member>
-    <member refid="classdakku_1_1Property_1ac7a7d43961dbcd4a963290b7d054de5b" kind="function"><name>getObject</name></member>
-    <member refid="classdakku_1_1Property_1a022f642f3be87c9323b2271391677e52" kind="function"><name>getArray</name></member>
-    <member refid="classdakku_1_1Property_1aa0d85401103f48282137e7114a355718" kind="function"><name>getArray</name></member>
-    <member refid="classdakku_1_1Property_1a37f32d3f86e95035ce0ffd25dbe5e3ad" kind="function"><name>getNumber</name></member>
-    <member refid="classdakku_1_1Property_1af57cda896c0b9c10cc5f255592085f47" kind="function"><name>getNumber</name></member>
-    <member refid="classdakku_1_1Property_1ae6c51d63bf9638a751d7f0d0fdc8552d" kind="function"><name>getString</name></member>
-    <member refid="classdakku_1_1Property_1ab781c77819cd814717db2fff5f5cad83" kind="function"><name>getString</name></member>
-    <member refid="classdakku_1_1Property_1a7a29d6659e52edb24d84cb05484dc2b8" kind="function"><name>getVector</name></member>
-    <member refid="classdakku_1_1Property_1a1c56218b57ba11993787e415c42b7ee4" kind="function"><name>getVector</name></member>
-    <member refid="classdakku_1_1Property_1a8cf3044bb0e4278868f4d9561f01dd08" kind="function"><name>getTransform</name></member>
-    <member refid="classdakku_1_1Property_1afe9d1b89c27dd11be2408cd7de9dec39" kind="function"><name>getTransform</name></member>
-    <member refid="classdakku_1_1Property_1ac84d992765b5eefa36f4e91235f3a623" kind="function"><name>isObjectType</name></member>
-    <member refid="classdakku_1_1Property_1ad45449f0a8525a9b1fc70e3753e4c199" kind="function"><name>isArrayType</name></member>
-    <member refid="classdakku_1_1Property_1af34ece04b3a3225491e45d9b01237d97" kind="function"><name>isNumberType</name></member>
-    <member refid="classdakku_1_1Property_1a5f2653af041f944970b87daf31cc59f0" kind="function"><name>isStringType</name></member>
-    <member refid="classdakku_1_1Property_1a8c5286cd48d768e4fcae6b01d820c32a" kind="function"><name>isVectorType</name></member>
-    <member refid="classdakku_1_1Property_1a7cbd3a02acea9f94e8305289c588bc4e" kind="function"><name>isTransformType</name></member>
-    <member refid="classdakku_1_1Property_1a2bd84fd11bb5657b3ff18b1125fcd28e" kind="function"><name>operator[]</name></member>
-    <member refid="classdakku_1_1Property_1acfb003fa35dbddb453c8881e0d65c4d2" kind="function"><name>operator[]</name></member>
-    <member refid="classdakku_1_1Property_1ae2b5340d7459e700639dfb4e7f596a70" kind="function"><name>operator[]</name></member>
-    <member refid="classdakku_1_1Property_1a064f14a56b1525c7c0fdb246d5105ce1" kind="function"><name>operator[]</name></member>
-    <member refid="classdakku_1_1Property_1a98ec2192557128c57decc60656f2f019" kind="function"><name>toString</name></member>
-    <member refid="classdakku_1_1Property_1aed6c0ab5f44b13d225b82a40fed74911" kind="function"><name>mergeTransform</name></member>
-    <member refid="classdakku_1_1Property_1aad759eefcdaf6eb0cad384e4fb500513" kind="function"><name>getVectorIf</name></member>
-    <member refid="classdakku_1_1Property_1ad2362fb13438b965ac0362889fe4ac79" kind="function"><name>getNumberIf</name></member>
-    <member refid="classdakku_1_1Property_1a8e16cf738d78a8c08bab9d1537e926e5" kind="function"><name>getStringIf</name></member>
-    <member refid="classdakku_1_1Property_1ac83f11b8c568a198832de9754664be1d" kind="friend"><name>operator&lt;&lt;</name></member>
-    <member refid="classdakku_1_1Property_1adc0d617576e2a4f4c1a52bc6d553972d" kind="friend"><name>to_json</name></member>
-    <member refid="classdakku_1_1Property_1a23f4e939c57b1d95484c7ef925893aa2" kind="friend"><name>from_json</name></member>
-  </compound>
-  <compound refid="classdakku_1_1Ray" kind="class"><name>dakku::Ray</name>
-    <member refid="classdakku_1_1Ray_1ad3f89d04f0328c3efbb29d031d6ce88f" kind="variable"><name>o</name></member>
-    <member refid="classdakku_1_1Ray_1a8dcbd22835ce89acc2eaabacd4147a7f" kind="variable"><name>d</name></member>
-    <member refid="classdakku_1_1Ray_1ab5b9ced3d745542bb55fee75331aacfa" kind="variable"><name>tMax</name></member>
-    <member refid="classdakku_1_1Ray_1a80f9f0752c12f77ea1188551456dcc1a" kind="function"><name>Ray</name></member>
-    <member refid="classdakku_1_1Ray_1aaa347abfc9a1f2d225afaba19efcbe88" kind="function"><name>Ray</name></member>
-    <member refid="classdakku_1_1Ray_1a2d110baf64d56b0920dd3d898b6fe7c6" kind="function"><name>operator()</name></member>
-    <member refid="classdakku_1_1Ray_1a1d6bdc0bc027dcc545ca0c9a74933029" kind="function"><name>hasNaNs</name></member>
-  </compound>
-  <compound refid="classdakku_1_1RayDifferential" kind="class"><name>dakku::RayDifferential</name>
-    <member refid="classdakku_1_1RayDifferential_1ac6f8ba438a5800b4c3214130ef74ade9" kind="variable"><name>hasDifferentials</name></member>
-    <member refid="classdakku_1_1RayDifferential_1a3be040cf4594c7d98ee828cc57952836" kind="variable"><name>rxOrigin</name></member>
-    <member refid="classdakku_1_1RayDifferential_1aef5fba3bfaf8160133c2fbd431bad5e4" kind="variable"><name>ryOrigin</name></member>
-    <member refid="classdakku_1_1RayDifferential_1acf47caf596e05e6d6e0997db09639166" kind="variable"><name>rxDirection</name></member>
-    <member refid="classdakku_1_1RayDifferential_1a6592c3850275eb045ce8584d4f671019" kind="variable"><name>ryDirection</name></member>
-    <member refid="classdakku_1_1RayDifferential_1a0c4412c3c2c8e457f5db74c993519321" kind="function"><name>RayDifferential</name></member>
-    <member refid="classdakku_1_1RayDifferential_1a01c55686a54607a7e6a704ca84e86e6c" kind="function"><name>RayDifferential</name></member>
-    <member refid="classdakku_1_1RayDifferential_1af1dfdf49c2455d6ccda29e08bee4e6fa" kind="function"><name>hasNaNs</name></member>
-    <member refid="classdakku_1_1RayDifferential_1ad3b24f662902d6cff19067165ede3d24" kind="function"><name>scaleDifferentials</name></member>
-  </compound>
-  <compound refid="classdakku_1_1RelativeRoot" kind="class"><name>dakku::RelativeRoot</name>
-    <member refid="classdakku_1_1RelativeRoot_1a8e175836d965eef03467aeeb8367eee1" kind="variable"><name>dir</name></member>
-    <member refid="classdakku_1_1RelativeRoot_1aa6dd627bb9ec1a72dc72ac5f0646b52e" kind="function"><name>instance</name></member>
-    <member refid="classdakku_1_1RelativeRoot_1a29dea2b4e909cbb018c9cab5c3fa3c9f" kind="function"><name>get</name></member>
-    <member refid="classdakku_1_1RelativeRoot_1aed785def2bd530d251c47b21dc4e292c" kind="function"><name>get</name></member>
-    <member refid="classdakku_1_1RelativeRoot_1aec93de002b92243571f6c632317ba61e" kind="function"><name>get</name></member>
-    <member refid="classdakku_1_1RelativeRoot_1a808e9343f1b0aaec20fbf0b41d1738d6" kind="function"><name>set</name></member>
-    <member refid="classdakku_1_1RelativeRoot_1a6dec67b72433b4d4a169fd0006792c61" kind="function"><name>RelativeRoot</name></member>
-  </compound>
-  <compound refid="classdakku_1_1RenderState" kind="class"><name>dakku::RenderState</name>
-    <member refid="classdakku_1_1RenderState_1a57162465eb96495a4ea2240bf431d290" kind="variable"><name>film</name></member>
-    <member refid="classdakku_1_1RenderState_1a0260170ded95ed7eff205897080d3731" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
-    <member refid="classdakku_1_1RenderState_1a80b0c92cd0b7d9127ee1a65cc6129519" kind="function"><name>serialize</name></member>
-    <member refid="classdakku_1_1RenderState_1a4f75443e255bbfd9152ef9ba1d7485a6" kind="function"><name>deserialize</name></member>
-  </compound>
-  <compound refid="structdakku_1_1ResampleWeight" kind="struct"><name>dakku::ResampleWeight</name>
-    <member refid="structdakku_1_1ResampleWeight_1abc89fe6d4568cfb82e062d82898fca6f" kind="variable"><name>firstTexel</name></member>
-    <member refid="structdakku_1_1ResampleWeight_1abe9d0c7de12b36bd2f0ac68e490cd6aa" kind="variable"><name>weight</name></member>
-  </compound>
-  <compound refid="classdakku_1_1RgbSpectrum" kind="class"><name>dakku::RgbSpectrum</name>
-    <member refid="classdakku_1_1RgbSpectrum_1a24a0c6a84be207d959a6da3bd5bd4461" kind="function"><name>fromRgb</name></member>
-    <member refid="classdakku_1_1RgbSpectrum_1a840645ae729c87f3d95ec559dce855db" kind="function"><name>fromXyz</name></member>
-    <member refid="classdakku_1_1RgbSpectrum_1acad4b7dbdb3732a8e88029254ecdbca6" kind="function"><name>toRgb</name></member>
-    <member refid="classdakku_1_1RgbSpectrum_1a0b49739ae4a25e2954b07ba8b531d991" kind="function"><name>toXyz</name></member>
-  </compound>
-  <compound refid="classdakku_1_1RNG" kind="class"><name>dakku::RNG</name>
-    <member refid="classdakku_1_1RNG_1a2c43d5cb68d2d8d916975273f2a96c69" kind="variable"><name>state</name></member>
-    <member refid="classdakku_1_1RNG_1aae4ff6ee4409cb3a73fe9f6311c270c1" kind="variable"><name>inc</name></member>
-    <member refid="classdakku_1_1RNG_1a60a4df7bce09a12570d945cc5671ef12" kind="function"><name>RNG</name></member>
-    <member refid="classdakku_1_1RNG_1a91e29e4de22f6c2b40b3815828b895ef" kind="function"><name>RNG</name></member>
-    <member refid="classdakku_1_1RNG_1a9882a1720e68db403e2c592954d072bf" kind="function"><name>setSequence</name></member>
-    <member refid="classdakku_1_1RNG_1a6aee8cf23d2433e6886b5a49956969fa" kind="function"><name>uniformUInt32</name></member>
-    <member refid="classdakku_1_1RNG_1affe6ab66ec7f8bde975e14370fbf9a8f" kind="function"><name>uniformUInt32</name></member>
-    <member refid="classdakku_1_1RNG_1abaa85824d4779a1793a6f2d895e79549" kind="function"><name>uniformFloat</name></member>
-  </compound>
-  <compound refid="classdakku_1_1Sampler" kind="class"><name>dakku::Sampler</name>
-    <member refid="classdakku_1_1Sampler_1acdde307c6f496f28030d201d66611d80" kind="variable"><name>samplesPerPixel</name></member>
-    <member refid="classdakku_1_1Sampler_1a4c61b5fd19a6d1672c4742396804dfd4" kind="variable"><name>currentPixel</name></member>
-    <member refid="classdakku_1_1Sampler_1a671fb7b7228cb0f0e2bce280dcb643a9" kind="variable"><name>currentPixelSampleIndex</name></member>
-    <member refid="classdakku_1_1Sampler_1a807899c47f7117d6346f1ca5f4938dce" kind="variable"><name>samples1DArraySizes</name></member>
-    <member refid="classdakku_1_1Sampler_1a63158f6b2eb685906b31adf6399f19bf" kind="variable"><name>samples2DArraySizes</name></member>
-    <member refid="classdakku_1_1Sampler_1a7f53b7c7adadb6fc6a186de67fb90cc7" kind="variable"><name>sampleArray1D</name></member>
-    <member refid="classdakku_1_1Sampler_1a57c04456b070fa4dc07c70dbbb58252f" kind="variable"><name>sampleArray2D</name></member>
-    <member refid="classdakku_1_1Sampler_1ad3cae7489dc755fa1a867d52d354b5fb" kind="variable"><name>array1DOffset</name></member>
-    <member refid="classdakku_1_1Sampler_1afe89bf9a709f57f8e9a3a7b789291da0" kind="variable"><name>array2DOffset</name></member>
-    <member refid="classdakku_1_1Sampler_1a87a0a0e6ccbb2cfb44d4f9e812e602d7" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
-    <member refid="classdakku_1_1Sampler_1a1a4d3ba6a714afffb7c43837ac261a59" kind="function"><name>startPixel</name></member>
-    <member refid="classdakku_1_1Sampler_1ac5ed00e711106a8d52ec900279049545" kind="function"><name>get1D</name></member>
-    <member refid="classdakku_1_1Sampler_1a7feafc6bdc72041d97c4386d3ad04ee8" kind="function"><name>get2D</name></member>
-    <member refid="classdakku_1_1Sampler_1a13457b675c8b2f1c289e971daf688e6b" kind="function"><name>getCameraSample</name></member>
-    <member refid="classdakku_1_1Sampler_1a7d01589a839077c9aa8a714cc0f1c832" kind="function"><name>requestArray1D</name></member>
-    <member refid="classdakku_1_1Sampler_1a1681a439af954f9d7aaa8abf1cbcc7a9" kind="function"><name>requestArray2D</name></member>
-    <member refid="classdakku_1_1Sampler_1a9b150ed3c57754b074c76d4ef572c37b" kind="function"><name>roundCount</name></member>
-    <member refid="classdakku_1_1Sampler_1ad06bc5d5e33cec08785dfa9eeb3359b6" kind="function"><name>getArray1D</name></member>
-    <member refid="classdakku_1_1Sampler_1a4d6edef64da5e8f48a899e879873d4b0" kind="function"><name>getArray2D</name></member>
-    <member refid="classdakku_1_1Sampler_1a9ef74ec88ab34f09d92395361c3a5646" kind="function"><name>startNextSample</name></member>
-    <member refid="classdakku_1_1Sampler_1a6db4ea6e64512e53bcedd8e05d44f4da" kind="function"><name>clone</name></member>
-    <member refid="classdakku_1_1Sampler_1afa18394cead083d70cced88a81a4b353" kind="function"><name>setSampleNumber</name></member>
-    <member refid="classdakku_1_1Sampler_1a8e9bfb6f80a8a5c05f939b2723fc0af3" kind="function"><name>currentSampleNumber</name></member>
-  </compound>
-  <compound refid="classdakku_1_1SerializableObject" kind="class"><name>dakku::SerializableObject</name>
-    <member refid="classdakku_1_1SerializableObject_1a20425307e474662b2825ca6fe0c3e1fc" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
-    <member refid="classdakku_1_1SerializableObject_1afbd8e48383b89c71132d091c9cd8b023" kind="function"><name>serialize</name></member>
-    <member refid="classdakku_1_1SerializableObject_1af130034b07c1f5dc21fd84e0cbefbbb4" kind="function"><name>deserialize</name></member>
-  </compound>
-  <compound refid="classdakku_1_1Shape" kind="class"><name>dakku::Shape</name>
-    <member refid="classdakku_1_1Shape_1af14c5ad6380191698502a5b6ebfe30fe" kind="variable"><name>objectToWorld</name></member>
-    <member refid="classdakku_1_1Shape_1ac1c407215b941bade1fb229e74c58d2f" kind="variable"><name>worldToObject</name></member>
-    <member refid="classdakku_1_1Shape_1aad943a4507cb9b01f0103981c847e19b" kind="variable"><name>transformSwapsHandedness</name></member>
-    <member refid="classdakku_1_1Shape_1aac110048040df95b607cc505ad2eb218" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
-    <member refid="classdakku_1_1Shape_1acb5e66e646d6fd0709ef4b8d6179142f" kind="function"><name>Shape</name></member>
-    <member refid="classdakku_1_1Shape_1aa36bbef60c9caa01503d5fd50f47388a" kind="function"><name>Shape</name></member>
-    <member refid="classdakku_1_1Shape_1a5a9fd700c1e56cf18784384ba0eeb5e0" kind="function"><name>objectBound</name></member>
-    <member refid="classdakku_1_1Shape_1ad7d19f6b59f7cb7e333a43d3f0eaacf8" kind="function"><name>worldBound</name></member>
-    <member refid="classdakku_1_1Shape_1a8994ddc5864708868642720c2561a179" kind="function"><name>intersect</name></member>
-    <member refid="classdakku_1_1Shape_1aabda589a8380ec7b9f48c03693de58df" kind="function"><name>hasIntersection</name></member>
-    <member refid="classdakku_1_1Shape_1adfc5caa3d24760f7f76db43b343be1d3" kind="function"><name>area</name></member>
-    <member refid="classdakku_1_1Shape_1a2ab207143d959280b029b464d7ba18e7" kind="function"><name>samplePosition</name></member>
-    <member refid="classdakku_1_1Shape_1a350c4ead757cc7b6caefc91829ed0eff" kind="function"><name>pdfPosition</name></member>
-    <member refid="classdakku_1_1Shape_1a78022e0a960761b2ef450dc049cd9dc5" kind="function"><name>sampleDirection</name></member>
-    <member refid="classdakku_1_1Shape_1ae1c6ed9269dc96d83b38a0f9a2cb4aa2" kind="function"><name>pdfDirection</name></member>
-  </compound>
-  <compound refid="classdakku_1_1SurfaceInteraction" kind="class"><name>dakku::SurfaceInteraction</name>
-    <member refid="classdakku_1_1SurfaceInteraction_1a7774eb557414ba464259463b5ab7962f" kind="variable"><name>uv</name></member>
-    <member refid="classdakku_1_1SurfaceInteraction_1a68c93d85489d5d63a7f82a5c3f97a4dd" kind="variable"><name>n</name></member>
-    <member refid="classdakku_1_1SurfaceInteraction_1a4ae03f5b7ae7b1507a9667b6dfdf583d" kind="variable"><name>dpdu</name></member>
-    <member refid="classdakku_1_1SurfaceInteraction_1a3dce532f1359e1b092e6cac180509158" kind="variable"><name>dpdv</name></member>
-    <member refid="classdakku_1_1SurfaceInteraction_1af929217ce4fab197cc44620e1f677d4c" kind="variable"><name>dndu</name></member>
-    <member refid="classdakku_1_1SurfaceInteraction_1aff18cf41f92ffe80abdca7d7be3723e3" kind="variable"><name>dndv</name></member>
-    <member refid="classdakku_1_1SurfaceInteraction_1aab45461afd26056c1fea1694773111e7" kind="variable"><name>shading</name></member>
-    <member refid="classdakku_1_1SurfaceInteraction_1a07a0b261007cd1ca320be68615699e4a" kind="variable"><name>dudx</name></member>
-    <member refid="classdakku_1_1SurfaceInteraction_1ac577146c7a6332fca84741431f26bab3" kind="variable"><name>dvdx</name></member>
-    <member refid="classdakku_1_1SurfaceInteraction_1a06588edddf126d096896a9dccd32e3de" kind="variable"><name>dudy</name></member>
-    <member refid="classdakku_1_1SurfaceInteraction_1a067307528f3c62dcceb6fe003cca1e1a" kind="variable"><name>dvdy</name></member>
-  </compound>
-  <compound refid="classdakku_1_1Texture" kind="class"><name>dakku::Texture</name>
-    <member refid="classdakku_1_1Texture_1a04d50661884334a42b742e1214b77382" kind="variable"><name>floatType</name></member>
-    <member refid="classdakku_1_1Texture_1a34d7f1518a45937548bbfb8e9db857e4" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
-    <member refid="classdakku_1_1Texture_1a05fa14ceae94c76bf6c12b7d4a1c0b95" kind="function"><name>Texture</name></member>
-    <member refid="classdakku_1_1Texture_1af8a07f117e2286587cc7d06ac54b3ca6" kind="function"><name>evaluate</name></member>
-  </compound>
-  <compound refid="classdakku_1_1TextureMapping2D" kind="class"><name>dakku::TextureMapping2D</name>
-    <member refid="classdakku_1_1TextureMapping2D_1ae978410835f07f3806e4618f5271d248" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
-    <member refid="classdakku_1_1TextureMapping2D_1a5949962731e12cc33f18af3245436f95" kind="function"><name>map</name></member>
-  </compound>
-  <compound refid="classdakku_1_1Transform" kind="class"><name>dakku::Transform</name>
-    <member refid="classdakku_1_1Transform_1ae48463c594e04791689e017baa5478ea" kind="variable"><name>m</name></member>
-    <member refid="classdakku_1_1Transform_1aca0318c51a88c3abee67e5d749b47d44" kind="variable"><name>mInv</name></member>
-    <member refid="classdakku_1_1Transform_1a6a18809585d933e89bece05fd4fad20f" kind="function"><name>Transform</name></member>
-    <member refid="classdakku_1_1Transform_1a7809d4e7b8bffafdffe6667903333f2c" kind="function"><name>Transform</name></member>
-    <member refid="classdakku_1_1Transform_1a8102c7b4c288d853ef0f7084f9e2a607" kind="function"><name>Transform</name></member>
-    <member refid="classdakku_1_1Transform_1ac0970a3fb0e2e6beefdd501784ece9ab" kind="function"><name>operator==</name></member>
-    <member refid="classdakku_1_1Transform_1a7f9b98863c921918467d5350b50c7fac" kind="function"><name>operator!=</name></member>
-    <member refid="classdakku_1_1Transform_1aa23268759b85043f746f63d587b23c14" kind="function"><name>operator&lt;</name></member>
-    <member refid="classdakku_1_1Transform_1ab26be3dac928e072b2450cf295f728f0" kind="function"><name>isIdentity</name></member>
-    <member refid="classdakku_1_1Transform_1a16c268ca0de61e5592ae2a2189888a9a" kind="function"><name>getMatrix</name></member>
-    <member refid="classdakku_1_1Transform_1a0c00a8d967a8533934201d31f8395170" kind="function"><name>getInverseMatrix</name></member>
-    <member refid="classdakku_1_1Transform_1a7140b660a56fb533cceebcbedd6d4fab" kind="function"><name>operator()</name></member>
-    <member refid="classdakku_1_1Transform_1aa0b6d3baf3d84b715395a232a615c73f" kind="function"><name>operator()</name></member>
-    <member refid="classdakku_1_1Transform_1a17520267cbc3c89b0aef0943596dc3a2" kind="function"><name>operator()</name></member>
-    <member refid="classdakku_1_1Transform_1a78da0df5b5d2b335d7c71346cdc727de" kind="function"><name>operator()</name></member>
-    <member refid="classdakku_1_1Transform_1af1de7e6eabb7e21d00d2d424979f93d6" kind="function"><name>operator()</name></member>
-    <member refid="classdakku_1_1Transform_1ab7508f08a840c2dd4aa8a5fe6b82440f" kind="function"><name>operator()</name></member>
-    <member refid="classdakku_1_1Transform_1ac37fe5a9c1d271ad939d813cf6862043" kind="function"><name>operator*</name></member>
-    <member refid="classdakku_1_1Transform_1a5bc005e21588a6ae9f81eadbd312a38c" kind="function"><name>swapsHandedNess</name></member>
-    <member refid="classdakku_1_1Transform_1a31b9af404ee2dd732645cf796dc1aa62" kind="friend"><name>inverse</name></member>
-    <member refid="classdakku_1_1Transform_1a10d88784f95b7d578a498fe5d3ee6fa8" kind="friend"><name>transpose</name></member>
-  </compound>
-  <compound refid="classdakku_1_1TransformCache" kind="class"><name>dakku::TransformCache</name>
-    <member refid="classdakku_1_1TransformCache_1a3f5a68ef77dc94f615091af1cd6e053a" kind="variable"><name>cache</name></member>
-    <member refid="classdakku_1_1TransformCache_1ac97233f733cc4bbafa15944502430468" kind="variable"><name>arena</name></member>
-    <member refid="classdakku_1_1TransformCache_1af52ef4edff21443c20d6f1112f350884" kind="function"><name>instance</name></member>
-    <member refid="classdakku_1_1TransformCache_1ae36d3d769e844c9e053a55127005b030" kind="function"><name>lookUp</name></member>
-    <member refid="classdakku_1_1TransformCache_1a98c0568c222694cf1476e80d043c490a" kind="function"><name>clear</name></member>
-    <member refid="classdakku_1_1TransformCache_1a0be845b89b12d34508d21dc03567af16" kind="function"><name>lookUpByProperty</name></member>
-    <member refid="classdakku_1_1TransformCache_1a586b7be859d6129971b556079568998e" kind="function"><name>TransformCache</name></member>
-  </compound>
-  <compound refid="structdakku_1_1TransformCache_1_1TransformCacheEqual" kind="struct"><name>dakku::TransformCache::TransformCacheEqual</name>
-    <member refid="structdakku_1_1TransformCache_1_1TransformCacheEqual_1aaedd698609884d499ac0a978366202a9" kind="function"><name>operator()</name></member>
-  </compound>
-  <compound refid="structdakku_1_1TransformCache_1_1TransformCacheHash" kind="struct"><name>dakku::TransformCache::TransformCacheHash</name>
-    <member refid="structdakku_1_1TransformCache_1_1TransformCacheHash_1a6c50f38dfdf53361077f9ce524d56567" kind="function"><name>operator()</name></member>
-  </compound>
-  <compound refid="classdakku_1_1TriangleFilter" kind="class"><name>dakku::TriangleFilter</name>
-    <member refid="classdakku_1_1TriangleFilter_1a960b9a532a2a483637302dcd13925a57" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
-    <member refid="classdakku_1_1TriangleFilter_1afb1ac0aa688899286bc1a738e63578ab" kind="function"><name>TriangleFilter</name></member>
-    <member refid="classdakku_1_1TriangleFilter_1acbb6ae521434bdb0336233ca2c79fe9d" kind="function"><name>evaluate</name></member>
-  </compound>
-  <compound refid="classdakku_1_1UvMapping2D" kind="class"><name>dakku::UvMapping2D</name>
-    <member refid="classdakku_1_1UvMapping2D_1aeb53e469d40b1151af3ef5a9c6a4cc3c" kind="variable"><name>su</name></member>
-    <member refid="classdakku_1_1UvMapping2D_1af8db90320189b9ace72b7cac222ae530" kind="variable"><name>sv</name></member>
-    <member refid="classdakku_1_1UvMapping2D_1a75121f804ba2674b26c7fd871f2e6106" kind="variable"><name>du</name></member>
-    <member refid="classdakku_1_1UvMapping2D_1af818d0d211e0210abeb4af2afab2e988" kind="variable"><name>dv</name></member>
-    <member refid="classdakku_1_1UvMapping2D_1a8b87584e9f3b1f092590ab24ffc450bb" kind="function"><name>DAKKU_DECLARE_OBJECT</name></member>
-    <member refid="classdakku_1_1UvMapping2D_1a849b03c1ba565039a4ed91d756a4a830" kind="function"><name>UvMapping2D</name></member>
-    <member refid="classdakku_1_1UvMapping2D_1a127697cef93896ce6aec32fe6fcfeb45" kind="function"><name>UvMapping2D</name></member>
-    <member refid="classdakku_1_1UvMapping2D_1a04c457d53676eceee2ee7016ed0ebfcf" kind="function"><name>map</name></member>
   </compound>
   <compound refid="classdakku_1_1Vector" kind="class"><name>dakku::Vector</name>
-    <member refid="classdakku_1_1Vector_1a316d381a8ae7de1d299f2131a042a349" kind="friend"><name>operator-</name></member>
+    <member refid="classdakku_1_1Vector_1a0b156b7ee7b858ca8479dedb09845f1c" kind="function"><name>operator-</name></member>
+    <member refid="classdakku_1_1Vector_1a124a685ee7a313fa05c7c82475582bd6" kind="function"><name>operator-</name></member>
+    <member refid="classdakku_1_1Vector_1aea6318ab05aad538c997ec20b28a089a" kind="function"><name>operator-</name></member>
   </compound>
   <compound refid="classdakku_1_1VectorBase" kind="class"><name>dakku::VectorBase</name>
-    <member refid="classdakku_1_1VectorBase_1adfeaa30c58620f0e4e8cbc9bc911c60c" kind="variable"><name>_data</name></member>
-    <member refid="classdakku_1_1VectorBase_1acae6683bc17650d9ff87aafa8cfb6b18" kind="function"><name>VectorBase</name></member>
-    <member refid="classdakku_1_1VectorBase_1aee90251abb9484a6886f76d79091b96e" kind="function"><name>VectorBase</name></member>
-    <member refid="classdakku_1_1VectorBase_1a3992f122fe320723d8a2b08aa0f0b658" kind="function"><name>VectorBase</name></member>
-    <member refid="classdakku_1_1VectorBase_1acb37abb2d3484b94e77ce4db959e4aa5" kind="function"><name>VectorBase</name></member>
-    <member refid="classdakku_1_1VectorBase_1a707acaad663a7d8c53b0f31db60ad21f" kind="function"><name>VectorBase</name></member>
-    <member refid="classdakku_1_1VectorBase_1afe4959c7c80f7ae0297325ca971cc97a" kind="function"><name>operator=</name></member>
-    <member refid="classdakku_1_1VectorBase_1a9a1f1574000785aa4037f604a4fa21e2" kind="function"><name>operator=</name></member>
-    <member refid="classdakku_1_1VectorBase_1afa4cd455e4e2f12a88695122e221ca13" kind="function"><name>set</name></member>
-    <member refid="classdakku_1_1VectorBase_1aa040165f6c4711d6ac753670e76e868e" kind="function"><name>setByIndex</name></member>
-    <member refid="classdakku_1_1VectorBase_1a47ce308974d85dac95130bc829603e52" kind="function"><name>set</name></member>
-    <member refid="classdakku_1_1VectorBase_1a9ff0cd03971a94292507a01ba8852557" kind="function"><name>set</name></member>
-    <member refid="classdakku_1_1VectorBase_1a490cefc87b4becdd6a938140e2f8e533" kind="function"><name>set</name></member>
-    <member refid="classdakku_1_1VectorBase_1a24b199ecb70deba0853e9532b888a183" kind="function"><name>hasNaNs</name></member>
-    <member refid="classdakku_1_1VectorBase_1ae498067d7973072d02c9417b8b677e83" kind="function"><name>get</name></member>
-    <member refid="classdakku_1_1VectorBase_1ad762f525bce13332abbd4b9157287ecd" kind="function"><name>toString</name></member>
-    <member refid="classdakku_1_1VectorBase_1acc8e8a5aa7749125a4f6aa11b92f9dae" kind="function"><name>size</name></member>
-    <member refid="classdakku_1_1VectorBase_1ada05b4cd2b9838400f490961dc3ac825" kind="function"><name>operator[]</name></member>
-    <member refid="classdakku_1_1VectorBase_1a619efcd85e3a91770ccae7f80031e55e" kind="function"><name>operator[]</name></member>
-    <member refid="classdakku_1_1VectorBase_1a838ade15abc3b13923aa49d191c1b796" kind="function"><name>operator-</name></member>
-    <member refid="classdakku_1_1VectorBase_1a164c7c788c4967c1c6ebcf7ae8466ba8" kind="function"><name>derived</name></member>
-    <member refid="classdakku_1_1VectorBase_1abb0f3e3fa71aaf063c3a5a6002fcbf1f" kind="function"><name>derived</name></member>
-    <member refid="classdakku_1_1VectorBase_1ae64bc6bd658a94d08f3b407fcb0e7fba" kind="function"><name>operator+=</name></member>
-    <member refid="classdakku_1_1VectorBase_1a3351845012fbb55d54623d8af9c44a79" kind="function"><name>operator+=</name></member>
-    <member refid="classdakku_1_1VectorBase_1ad6e6b4c4275de701f79d952ed56fe9ff" kind="function"><name>operator-=</name></member>
-    <member refid="classdakku_1_1VectorBase_1a846dad82a5cd66baba195846d3da7c9d" kind="function"><name>operator-=</name></member>
-    <member refid="classdakku_1_1VectorBase_1a5353b2617ac5343efeee0f325632d772" kind="function"><name>operator*=</name></member>
-    <member refid="classdakku_1_1VectorBase_1ad4136ad736840507f9fc902d9d6c6dfd" kind="function"><name>operator*=</name></member>
-    <member refid="classdakku_1_1VectorBase_1add8d1fe3254c662f2c6bfc6beb541c9e" kind="function"><name>operator/=</name></member>
-    <member refid="classdakku_1_1VectorBase_1ad5b06200c617ca92964ad3d81787848f" kind="function"><name>operator/=</name></member>
-    <member refid="classdakku_1_1VectorBase_1a0efbe333b29373696a0fbb9cf0f11af2" kind="function"><name>toFloatVector</name></member>
-    <member refid="classdakku_1_1VectorBase_1a3cfd9b2142d1366bc105463b24fd5149" kind="function"><name>VectorBase</name></member>
-    <member refid="classdakku_1_1VectorBase_1aad720931a9787a87375de3f8d545567d" kind="function"><name>x</name></member>
-    <member refid="classdakku_1_1VectorBase_1ab937f5988070397cab4b236cda690356" kind="function"><name>x</name></member>
-    <member refid="classdakku_1_1VectorBase_1a14b6216fd55dc1cd2f321c834f6121ca" kind="function"><name>y</name></member>
-    <member refid="classdakku_1_1VectorBase_1a4c537c79e56ad3b82ac56711dc774dc7" kind="function"><name>y</name></member>
-    <member refid="classdakku_1_1VectorBase_1a207d3b94f85366aeb9e7773785a498ea" kind="function"><name>z</name></member>
-    <member refid="classdakku_1_1VectorBase_1ad4683c184e26c7879ed8359c34162f9b" kind="function"><name>z</name></member>
-    <member refid="classdakku_1_1VectorBase_1a70ef47d449743bb4e68dba7e93a56488" kind="function"><name>w</name></member>
-    <member refid="classdakku_1_1VectorBase_1a0abbcce49a53783f902e49b81b20b097" kind="function"><name>w</name></member>
-    <member refid="classdakku_1_1VectorBase_1a41e30926cb56189a7378f339bc175ccc" kind="function"><name>maxElementIndex</name></member>
-    <member refid="classdakku_1_1VectorBase_1ae42082956c30a3e7f611e421427a785f" kind="function"><name>maxElement</name></member>
-    <member refid="classdakku_1_1VectorBase_1ae4f16b45f3696a2c75abcbe8c09120df" kind="function"><name>begin</name></member>
-    <member refid="classdakku_1_1VectorBase_1abf676422e4f35272f97d5a9d286002b3" kind="function"><name>begin</name></member>
-    <member refid="classdakku_1_1VectorBase_1a77b079ddc174893319dbdb3bc1eb37ee" kind="function"><name>end</name></member>
-    <member refid="classdakku_1_1VectorBase_1a3b54e311208a4d3d90763cad329d1759" kind="function"><name>end</name></member>
-    <member refid="classdakku_1_1VectorBase_1a3c58e3c4dff9ad3a3a021c63ee8a7dfe" kind="function"><name>normalized</name></member>
-    <member refid="classdakku_1_1VectorBase_1aa7d5096dec8ced27b8637c43f689096c" kind="function"><name>normalize</name></member>
-    <member refid="classdakku_1_1VectorBase_1ab55fd8f1a9e9835b5383189560c86973" kind="function"><name>dot</name></member>
-    <member refid="classdakku_1_1VectorBase_1a407486b0eb23a07bb98e2d5a50910695" kind="function"><name>squaredNorm</name></member>
-    <member refid="classdakku_1_1VectorBase_1a3de0043db1772cb93312cc158d00df03" kind="function"><name>norm</name></member>
-    <member refid="classdakku_1_1VectorBase_1a8cc945684d6dca638d46a32ca403048d" kind="function"><name>length</name></member>
-    <member refid="classdakku_1_1VectorBase_1acb5565956ec02b69198a23c5e4046aa6" kind="function"><name>cross</name></member>
-    <member refid="classdakku_1_1VectorBase_1a3d663b309168d884b55d82b001b18ecb" kind="function"><name>isZero</name></member>
-    <member refid="classdakku_1_1VectorBase_1a05114dfb3499a8d0410b6b4bb8106706" kind="function"><name>operator std::span&lt; T, S &gt;</name></member>
-    <member refid="classdakku_1_1VectorBase_1a4e2cdbb5d684d8b3337ebdb93d756e5b" kind="function"><name>operator std::span&lt; const T, S &gt;</name></member>
+    <member refid="classdakku_1_1VectorBase_1aba40d32d76144c345f1b8d38574e3e24" kind="variable"><name>_data</name></member>
+    <member refid="classdakku_1_1VectorBase_1a75875fb982e9119e088a8041633af986" kind="function"><name>VectorBase</name></member>
+    <member refid="classdakku_1_1VectorBase_1af3bdbf112b98808eef281aca3cb82206" kind="function"><name>VectorBase</name></member>
+    <member refid="classdakku_1_1VectorBase_1a9c402092a7e88ec0a81f0c7ee5cecc53" kind="function"><name>VectorBase</name></member>
+    <member refid="classdakku_1_1VectorBase_1a702d9c09e3ad9c268125e98e50fc0f4f" kind="function"><name>VectorBase</name></member>
+    <member refid="classdakku_1_1VectorBase_1a2249aa0c050aa9a892a579252416082a" kind="function"><name>VectorBase</name></member>
+    <member refid="classdakku_1_1VectorBase_1a538605b55d14d6a8e69195986963fc6d" kind="function"><name>VectorBase</name></member>
+    <member refid="classdakku_1_1VectorBase_1a8f976fa3ab9629fe2b353acbd6fe16e6" kind="function"><name>operator=</name></member>
+    <member refid="classdakku_1_1VectorBase_1a7c61321e47d9bf792afe038cc7a466a8" kind="function"><name>operator=</name></member>
+    <member refid="classdakku_1_1VectorBase_1aaa5d8d3dd53cf5a2bbae02fcac4cad8c" kind="function"><name>derived</name></member>
+    <member refid="classdakku_1_1VectorBase_1ac6c6eeb7cdf5c8075b9ef313623325e6" kind="function"><name>derived</name></member>
+    <member refid="classdakku_1_1VectorBase_1a95e25d9c0c9fba8ec21479e52fd932de" kind="function"><name>set</name></member>
+    <member refid="classdakku_1_1VectorBase_1aa5e9b54dd454a15190cb47ef6dddc9af" kind="function"><name>set_by_index</name></member>
+    <member refid="classdakku_1_1VectorBase_1a0a45c53640e7e066f3d8043811e2e920" kind="function"><name>set</name></member>
+    <member refid="classdakku_1_1VectorBase_1ace755d8042dd022c0695c531c854344f" kind="function"><name>set</name></member>
+    <member refid="classdakku_1_1VectorBase_1a458e8e62a05e6576794214a047209501" kind="function"><name>set</name></member>
+    <member refid="classdakku_1_1VectorBase_1ad345b5adb85ffb7a09a1494e4cbf9cde" kind="function"><name>get</name></member>
+    <member refid="classdakku_1_1VectorBase_1a11976058f3dd1bc750f00d3a34a75968" kind="function"><name>size</name></member>
+    <member refid="classdakku_1_1VectorBase_1a118a9c7d9ffa23805af2c2e5fb4f0a0f" kind="function"><name>to_string</name></member>
+    <member refid="classdakku_1_1VectorBase_1a984bee52aac6c08519e052b0a62ded44" kind="function"><name>has_nans</name></member>
+    <member refid="classdakku_1_1VectorBase_1a85bd8a9c509a3c7149824f3bca29810f" kind="function"><name>clone</name></member>
+    <member refid="classdakku_1_1VectorBase_1a6e532dd029e2386515b0e6047a6e6866" kind="function"><name>operator[]</name></member>
+    <member refid="classdakku_1_1VectorBase_1a4638de6bd39666b4a7af36f157b62261" kind="function"><name>operator[]</name></member>
+    <member refid="classdakku_1_1VectorBase_1a7c41aa6431258fad65b506af8171df0c" kind="function"><name>operator+=</name></member>
+    <member refid="classdakku_1_1VectorBase_1a5c8ad5f1742dc0f2fe4b73430e90c119" kind="function"><name>operator+=</name></member>
+    <member refid="classdakku_1_1VectorBase_1a3ad97c8cd07eed945e3889dfaefd6c63" kind="function"><name>operator+</name></member>
+    <member refid="classdakku_1_1VectorBase_1a001bb398b96aae4135cfee98ba5259b3" kind="function"><name>operator+</name></member>
+    <member refid="classdakku_1_1VectorBase_1a65aec7973da5728caec270d91e51e399" kind="function"><name>operator-=</name></member>
+    <member refid="classdakku_1_1VectorBase_1ab11c62c5e8c7e5dae9d64cb4a8e144f4" kind="function"><name>operator-=</name></member>
+    <member refid="classdakku_1_1VectorBase_1abbfbc3bb4987be30346848dfbc0372ea" kind="function"><name>operator*=</name></member>
+    <member refid="classdakku_1_1VectorBase_1a878b656fc1b35eaa5b95e4cb673c15a3" kind="function"><name>operator*=</name></member>
+    <member refid="classdakku_1_1VectorBase_1a94f4b24cbd5c7feaf4066a9e894d8a72" kind="function"><name>operator*</name></member>
+    <member refid="classdakku_1_1VectorBase_1a63d725a6dddd8312eccabb215b9893a2" kind="function"><name>operator*</name></member>
+    <member refid="classdakku_1_1VectorBase_1a0a520b5f77010cdeef2f9beb2b053349" kind="function"><name>operator/=</name></member>
+    <member refid="classdakku_1_1VectorBase_1aa6a95ff2d4d223c4481873bbf3896039" kind="function"><name>operator/=</name></member>
+    <member refid="classdakku_1_1VectorBase_1aff2b2b32f14b1bf96bf233549bad1dca" kind="function"><name>operator/</name></member>
+    <member refid="classdakku_1_1VectorBase_1aa6a930e0cb5c2acbcaaf605a8dea115e" kind="function"><name>operator/</name></member>
+    <member refid="classdakku_1_1VectorBase_1a134cfc3963f540464c94205f742b29bd" kind="friend"><name>operator+</name></member>
+    <member refid="classdakku_1_1VectorBase_1a2b6a039c78a601cd7704d57ff1169d99" kind="friend"><name>operator-</name></member>
+    <member refid="classdakku_1_1VectorBase_1ae86ea43d8aa945505be5032018751b34" kind="friend"><name>operator*</name></member>
+    <member refid="classdakku_1_1VectorBase_1a9bb674f8e431d95d1f2388d28519472b" kind="friend"><name>operator/</name></member>
     <member refid="classdakku_1_1VectorBase_1a531ed133257631916fc3384392b2ab7f" kind="friend"><name>operator&lt;&lt;</name></member>
-    <member refid="classdakku_1_1VectorBase_1a6a604c24b1049ff1e9c3c12e9a26fff9" kind="friend"><name>operator+</name></member>
-    <member refid="classdakku_1_1VectorBase_1aaeb63fd4c52bae59b7e867829e8b1025" kind="friend"><name>operator+</name></member>
-    <member refid="classdakku_1_1VectorBase_1a5de1f00d31ab772c98c21a49c30dc9f8" kind="friend"><name>operator+</name></member>
-    <member refid="classdakku_1_1VectorBase_1a6a6648d452714192c0f8183c3dbfa55f" kind="friend"><name>operator-</name></member>
-    <member refid="classdakku_1_1VectorBase_1ae0aaf7fd6e1e306948150d83050aff99" kind="friend"><name>operator-</name></member>
-    <member refid="classdakku_1_1VectorBase_1a0c6afadb59bcfa664f49854936d20346" kind="friend"><name>operator*</name></member>
-    <member refid="classdakku_1_1VectorBase_1ad0aaef0a09d0762e9337d9646ef5fa21" kind="friend"><name>operator*</name></member>
-    <member refid="classdakku_1_1VectorBase_1a0cad9fc72b0af9e62bcdfa8867e72568" kind="friend"><name>operator*</name></member>
-    <member refid="classdakku_1_1VectorBase_1ab9d87c9943039f3db32f3a6c703400b0" kind="friend"><name>operator/</name></member>
-    <member refid="classdakku_1_1VectorBase_1aa48350ae3efe11576023da906438f0c8" kind="friend"><name>operator/</name></member>
-    <member refid="classdakku_1_1VectorBase_1ab4cd237f595d4bfe30fe64074eccd277" kind="friend"><name>operator/</name></member>
-    <member refid="classdakku_1_1VectorBase_1ab4e667ac24d41b5ddcbe5cdad3698336" kind="friend"><name>operator==</name></member>
-    <member refid="classdakku_1_1VectorBase_1aa26d1cd14931c869845edd5b7471b498" kind="friend"><name>operator!=</name></member>
-    <member refid="classdakku_1_1VectorBase_1a20d678a0f44b6e403a5a874227e6ee89" kind="friend"><name>max</name></member>
-    <member refid="classdakku_1_1VectorBase_1a0937015e2554ad069369c9f8b1697b06" kind="friend"><name>min</name></member>
-    <member refid="classdakku_1_1VectorBase_1abc86f2d398f3082ed867b4a685720d06" kind="friend"><name>normalize</name></member>
-    <member refid="classdakku_1_1VectorBase_1a9ed3b83465f89ef9e216e6f70a3be3c9" kind="friend"><name>distance</name></member>
-    <member refid="classdakku_1_1VectorBase_1a0edf71c48dff606bc0173b7a8f55cf4a" kind="friend"><name>abs</name></member>
-    <member refid="classdakku_1_1VectorBase_1a4f610bf85df7ec868b857a8e1542bb4a" kind="friend"><name>sqrt</name></member>
-    <member refid="classdakku_1_1VectorBase_1a6d186fbf4a1071a8ae202382485dc859" kind="friend"><name>pow</name></member>
-    <member refid="classdakku_1_1VectorBase_1afd74fa091a074a68449d1f8e493fd745" kind="friend"><name>exp</name></member>
-    <member refid="classdakku_1_1VectorBase_1ac1a4a8247b5394c188dcea147def6a2a" kind="friend"><name>floor</name></member>
-    <member refid="classdakku_1_1VectorBase_1ae6e15655167cb8377e29a6cc3198c18e" kind="friend"><name>ceil</name></member>
-    <member refid="classdakku_1_1VectorBase_1aa9cb373efabe5965e5f2f01d0c884084" kind="friend"><name>lerp</name></member>
   </compound>
   <compound refid="conceptdakku_1_1ArithmeticType" kind="concept"><name>dakku::ArithmeticType</name>
   </compound>
-  <compound refid="conceptdakku_1_1ObjectType" kind="concept"><name>dakku::ObjectType</name>
-  </compound>
   <compound refid="namespacedakku" kind="namespace"><name>dakku</name>
-    <member refid="namespacedakku_1a9f69e6875268e5345a38fd61108935dc" kind="enum"><name>ImageWrapMode</name></member>
-    <member refid="namespacedakku_1a9f69e6875268e5345a38fd61108935dca5be68175be14dfaa080165456c2e9555" kind="enumvalue"><name>REPEAT</name></member>
-    <member refid="namespacedakku_1a9f69e6875268e5345a38fd61108935dca08d0012388564e95c3b4a7407cf04965" kind="enumvalue"><name>BLACK</name></member>
-    <member refid="namespacedakku_1a9f69e6875268e5345a38fd61108935dcaecf301fe86e23bb2bf5155bbef3b1345" kind="enumvalue"><name>CLAMP</name></member>
-    <member refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfca" kind="enum"><name>PropertyType</name></member>
-    <member refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaab50339a10e1de285ac99d4c3990b8693" kind="enumvalue"><name>NONE</name></member>
-    <member refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaacb4fb1757fb37c43cded35d3eb857c43" kind="enumvalue"><name>ARRAY</name></member>
-    <member refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaa8eee8e217391199668cbac89472ace53" kind="enumvalue"><name>OBJECT</name></member>
-    <member refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaa34f55eca38e0605a84f169ff61a2a396" kind="enumvalue"><name>NUMBER</name></member>
-    <member refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaa63b588d5559f64f89a416e656880b949" kind="enumvalue"><name>STRING</name></member>
-    <member refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaa87752381b583740610f1dfeb07fdad7e" kind="enumvalue"><name>VECTOR</name></member>
-    <member refid="namespacedakku_1a61a88f7b109506521f2be6050dc9bfcaadceae9409e3ff24c6c0af99860ba44ac" kind="enumvalue"><name>TRANSFORM</name></member>
-    <member refid="namespacedakku_1a6ee44a156e67a6dd3f3d70609f10a12d" kind="enum"><name>BxDFType</name></member>
-    <member refid="namespacedakku_1a6ee44a156e67a6dd3f3d70609f10a12da356402ab98f54dd6f9952d489019fd94" kind="enumvalue"><name>BSDF_REFLECTION</name></member>
-    <member refid="namespacedakku_1a6ee44a156e67a6dd3f3d70609f10a12dad4b2381d05d0eff37cab70f4b32d09b4" kind="enumvalue"><name>BSDF_TRANSMISSION</name></member>
-    <member refid="namespacedakku_1a6ee44a156e67a6dd3f3d70609f10a12da89e47090c25e812346446e1fc9d025d3" kind="enumvalue"><name>BSDF_DIFFUSE</name></member>
-    <member refid="namespacedakku_1a6ee44a156e67a6dd3f3d70609f10a12da0446199c5b80a38b659b688b2ecf6b83" kind="enumvalue"><name>BSDF_GLOSSY</name></member>
-    <member refid="namespacedakku_1a6ee44a156e67a6dd3f3d70609f10a12da90b0abfd8625757492aea7d047aea985" kind="enumvalue"><name>BSDF_SPECULAR</name></member>
-    <member refid="namespacedakku_1a6ee44a156e67a6dd3f3d70609f10a12daa3f83dc1510822e8b71fd10be02a3186" kind="enumvalue"><name>BSDF_ALL</name></member>
-    <member refid="namespacedakku_1abcc743bdeb62068a56f14ac3ef9963b7" kind="typedef"><name>Bounds2f</name></member>
-    <member refid="namespacedakku_1ae2cd423e1acf2fd91f4cdf3cc5ad50c6" kind="typedef"><name>Bounds2i</name></member>
-    <member refid="namespacedakku_1a19129587abbff965c2c15bab5723e208" kind="typedef"><name>Bounds3f</name></member>
-    <member refid="namespacedakku_1a72f253f8c73b2ec7fef8e3c83c0eac17" kind="typedef"><name>Spectrum</name></member>
-    <member refid="namespacedakku_1ae7de7b89895e76d4a3f1c653393dde69" kind="typedef"><name>Vector2</name></member>
-    <member refid="namespacedakku_1a3109ad27ee688fdd3462458714d7f1e7" kind="typedef"><name>Vector3</name></member>
-    <member refid="namespacedakku_1abfd5a177365f8ffec7ab23d6cb6db8c0" kind="typedef"><name>Vector2f</name></member>
-    <member refid="namespacedakku_1aa12b2f1fc9684bf8ba7fbf5b600685c6" kind="typedef"><name>Vector3f</name></member>
-    <member refid="namespacedakku_1a56669db36360e52f7c7113768c7b35aa" kind="typedef"><name>Point2</name></member>
-    <member refid="namespacedakku_1aace4734db951234de5eb4567db0d1737" kind="typedef"><name>Point3</name></member>
-    <member refid="namespacedakku_1a9910f23501fd2ef5e9a829cdab0992be" kind="typedef"><name>Point2f</name></member>
-    <member refid="namespacedakku_1a059653c441fcfa28e3b00de3709176e9" kind="typedef"><name>Point2i</name></member>
-    <member refid="namespacedakku_1a8323b90fda75af310a40a4e0d6bdb3f0" kind="typedef"><name>Point3f</name></member>
-    <member refid="namespacedakku_1ade3699e7ff88bf28ae0ea31baafab11c" kind="typedef"><name>Normal3</name></member>
-    <member refid="namespacedakku_1a9b64e14dceffe6ac84029f1d40d6ec41" kind="typedef"><name>Normal3f</name></member>
-    <member refid="namespacedakku_1a53c476552ecb27caba955675d8efb680" kind="variable"><name>INF</name></member>
-    <member refid="namespacedakku_1af7aa9dc8532b3506d50b84f932560eb0" kind="variable"><name>PI</name></member>
-    <member refid="namespacedakku_1a4e370f12ecabfcf4c169ca0eb199f19a" kind="variable"><name>INV_PI</name></member>
-    <member refid="namespacedakku_1adae866489e43019f6aa30b0f577f8311" kind="variable"><name>PI_OVER_2</name></member>
-    <member refid="namespacedakku_1a2922918eae4cac3a44006897e878daf7" kind="variable"><name>PI_OVER_4</name></member>
-    <member refid="namespacedakku_1a09eee35861f6da88754b5645e5703ec4" kind="variable"><name>L1_CACHE_LINE_SIZE</name></member>
-    <member refid="namespacedakku_1a8ecbddd8386198d0dd187cd20b53e42d" kind="variable"><name>SHADOW_EPS</name></member>
-    <member refid="namespacedakku_1a204f33930db458865d7f796fd768055d" kind="variable"><name>ONE_MINUS_EPSILON</name></member>
-    <member refid="namespacedakku_1ab81d04f25c58c43667816d47b70f4734" kind="variable"><name>RelativeRoot</name></member>
-    <member refid="namespacedakku_1a60d80eeb1de44e0299e91a45d8f94446" kind="variable"><name>InputStream</name></member>
-    <member refid="namespacedakku_1a04dac11edaf26a2e58c8d00f31e6fa29" kind="variable"><name>OutputStream</name></member>
-    <member refid="namespacedakku_1a96416914fd138a9ad1724211806eaadc" kind="variable"><name>Property</name></member>
-    <member refid="namespacedakku_1a5e92e662fd955a5d5e138ec343496ecb" kind="variable"><name>Class</name></member>
-    <member refid="namespacedakku_1a814749a6cf3cd7575912f5119a5be6ad" kind="variable"><name>Object</name></member>
-    <member refid="namespacedakku_1afb9578030bac745ae0282d66d44df22c" kind="variable"><name>Matrix4x4</name></member>
-    <member refid="namespacedakku_1ad32aa25f5584289eda626b47ae3525cc" kind="variable"><name>Filter</name></member>
-    <member refid="namespacedakku_1a1bd6403f2998d6f8d22f87c99eca7eed" kind="variable"><name>Film</name></member>
-    <member refid="namespacedakku_1ad4c70953467b9d3d22eac250d8655aff" kind="variable"><name>Shape</name></member>
-    <member refid="namespacedakku_1a24e2c761467417bba0b7b17b7c0e9f79" kind="variable"><name>Texture</name></member>
-    <member refid="namespacedakku_1a91583977767aa3566783f8ab2c0538a7" kind="variable"><name>Camera</name></member>
-    <member refid="namespacedakku_1a13ba1e815be59eb9032a805e6a99bd95" kind="variable"><name>BSDF</name></member>
-    <member refid="namespacedakku_1a431a533ecd56199d41177b9192908e5b" kind="variable"><name>BxDF</name></member>
-    <member refid="namespacedakku_1ad67fc67650e8ff59c3b25b9e9d462ee4" kind="variable"><name>__pad0__</name></member>
-    <member refid="namespacedakku_1a041d325d33710e961b70ab2cf4dbfa11" kind="variable"><name>PCG32_DEFAULT_STATE</name></member>
-    <member refid="namespacedakku_1a86dfefa53a11b2cf2d06aaa75171fe3a" kind="variable"><name>PCG32_DEFAULT_STREAM</name></member>
-    <member refid="namespacedakku_1ac3bbfb2d54532e5e73bf8206d1323600" kind="variable"><name>PCG32_MULT</name></member>
-    <member refid="namespacedakku_1af9f5f7a876a1c02de56e9fa106171eda" kind="variable"><name>renderState</name></member>
-    <member refid="namespacedakku_1a4289fc5c55c00b2a466d37dfdacc67dc" kind="function"><name>DAKKU_EXPORT_OBJECTS</name></member>
-    <member refid="namespacedakku_1ad38f3dc8712fc913b351b2143d85fe79" kind="function"><name>DAKKU_EXPORT_OBJECTS</name></member>
-    <member refid="namespacedakku_1af0a2453f8db3eb948901c7a0aed18434" kind="function"><name>begin</name></member>
-    <member refid="namespacedakku_1a41ae9fcb2290e6ea6f7d4b0fbca86d17" kind="function"><name>end</name></member>
-    <member refid="namespacedakku_1af754e4967f947036a0c31c0dbb4bf6e1" kind="function"><name>isNaN</name></member>
-    <member refid="namespacedakku_1af703ca0ba560169d1daf114a07175bf4" kind="function"><name>isNaN</name></member>
-    <member refid="namespacedakku_1a2a53414d45143151128b45997c42d7af" kind="function"><name>radians</name></member>
-    <member refid="namespacedakku_1a3d1bddf363d9216df7df7c148f917cd4" kind="function"><name>degrees</name></member>
-    <member refid="namespacedakku_1a7b74e38fede77ac78a98a577ae8eff7c" kind="function"><name>isPowerOf2</name></member>
-    <member refid="namespacedakku_1a0d82bdc5016a1bcbb43a0a37c068be53" kind="function"><name>roundUpPow2</name></member>
-    <member refid="namespacedakku_1a1142b7cee4727248dd7911c3d3f93d79" kind="function"><name>roundUpPow2</name></member>
-    <member refid="namespacedakku_1af5b2aaaf6403e90c77a4746ff984db8b" kind="function"><name>evalLanczos</name></member>
-    <member refid="namespacedakku_1a08fa951dfb5b1584b36175563f648627" kind="function"><name>log2Int</name></member>
-    <member refid="namespacedakku_1a41d1cd0b3579a6b8c5e22ab4e2146f00" kind="function"><name>log2Int</name></member>
-    <member refid="namespacedakku_1acc81c85fd43a6c63486282435d8aecf1" kind="function"><name>log2Int</name></member>
-    <member refid="namespacedakku_1a66eb6977bab34786fa743859b0ffc52d" kind="function"><name>log2Int</name></member>
-    <member refid="namespacedakku_1a837463872226179eb46dde52c558f1c1" kind="function"><name>lerp</name></member>
-    <member refid="namespacedakku_1a5dc6c62020f3cb484153c43801d71ee0" kind="function"><name>maxAnisotropy</name></member>
-    <member refid="namespacedakku_1a3daeac9348858af9dbb1a9c0415f5f84" kind="function"><name>wrapMode</name></member>
-    <member refid="namespacedakku_1ad153e9f37e7a43e9abe4762557e4a187" kind="function"><name>resolution</name></member>
-    <member refid="namespacedakku_1ac5c65853b3b4155436da5b4402bebcad" kind="function"><name>registerObjects</name></member>
-    <member refid="namespacedakku_1ac70f11ace3ab613579837a2d336b38c5" kind="function"><name>offsetRayOrigin</name></member>
-    <member refid="namespacedakku_1afff271d6755ba6c5bce88e472b0fda97" kind="function"><name>cosTheta</name></member>
-    <member refid="namespacedakku_1af1be72fe6812bf50fc174613feb27653" kind="function"><name>cos2Theta</name></member>
-    <member refid="namespacedakku_1a879ba33876b48280366546d864b543f2" kind="function"><name>absCosTheta</name></member>
-    <member refid="namespacedakku_1aea86efd5024447271fd1b82566f21879" kind="function"><name>sin2Theta</name></member>
-    <member refid="namespacedakku_1ad8019351269f1f3f694d08469157e0a5" kind="function"><name>sinTheta</name></member>
-    <member refid="namespacedakku_1ac7b4842ad43512dfab7c97697743872b" kind="function"><name>tanTheta</name></member>
-    <member refid="namespacedakku_1a3eea109f743777a1225937b8e80add49" kind="function"><name>tan2Theta</name></member>
-    <member refid="namespacedakku_1a06e3b9f59237e8dc78bb02794fa80b04" kind="function"><name>cosPhi</name></member>
-    <member refid="namespacedakku_1a841c3518071695ee54986494313d1803" kind="function"><name>sinPhi</name></member>
-    <member refid="namespacedakku_1a8871f526c772a63c8aa084c2a4a5ed07" kind="function"><name>cos2Phi</name></member>
-    <member refid="namespacedakku_1accd4ed8e0230cdf8f420e33dcc532311" kind="function"><name>sin2Phi</name></member>
-    <member refid="namespacedakku_1acba70ca995b749f7ef8daa9379d22153" kind="function"><name>sameHemisphere</name></member>
-    <member refid="namespacedakku_1a89dbbdf1e8f3a5b8b0e813d8242541a3" kind="function"><name>sameHemisphere</name></member>
-    <member refid="namespacedakku_1a3bb200e88e63690051e6bad2afab6bb2" kind="function"><name>frDielectric</name></member>
-    <member refid="namespacedakku_1af4d59c83a86090d6b80cf663c39fbf85" kind="function"><name>frConductor</name></member>
-    <member refid="namespacedakku_1a8495aaad546987b3e302208282517a15" kind="function"><name>reflect</name></member>
-    <member refid="namespacedakku_1ad46911925bf23eb15e4f60875257ed9f" kind="function"><name>refract</name></member>
-    <member refid="namespacedakku_1ad12f3d2e3190c7aa08c22de45de621a9" kind="function"><name>operator&amp;</name></member>
-    <member refid="namespacedakku_1afd5aa3a8929d78feb77aea41fae4f997" kind="function"><name>operator|</name></member>
-    <member refid="namespacedakku_1ad73ccae1cd088ac5d10ec643bc15eb82" kind="function"><name>operator&amp;</name></member>
-    <member refid="namespacedakku_1aa24d67eab0201ec6b4f849fa11592eb2" kind="function"><name>operator&amp;</name></member>
-    <member refid="namespacedakku_1a48a0c304ff8eac7ee3d67fbd229c6307" kind="function"><name>operator|</name></member>
-    <member refid="namespacedakku_1a93adc4d20e18e33bc3904f0eb9658961" kind="function"><name>operator|</name></member>
-    <member refid="namespacedakku_1a972fe24ecab810defaab710b05a1d30a" kind="function"><name>uniformSampleTriangle</name></member>
-    <member refid="namespacedakku_1a656594e267b6cd6917580e34ed50ee01" kind="function"><name>concentricSampleDisk</name></member>
-    <member refid="namespacedakku_1a457a044effa42ab1afd0dc61ff2ddc71" kind="function"><name>cosineSampleHemisphere</name></member>
-    <member refid="namespacedakku_1a8d0a8a38a5884ff0cf4397214bd22378" kind="function"><name>uniformSampleSphere</name></member>
-    <member refid="namespacedakku_1a7c3e7ee0be950fb7fbfb62fceb80eec5" kind="function"><name>powerHeuristic</name></member>
-    <member refid="namespacedakku_1a80d2f8350cdcc84f6586fed5f396f8c7" kind="function"><name>xyzToRgb</name></member>
-    <member refid="namespacedakku_1a4eafe1eaa4b431b45c002f81b793b46f" kind="function"><name>rgbToXyz</name></member>
-    <member refid="namespacedakku_1a1e461427d5e700eff84e148509b7fcba" kind="function"><name>translate</name></member>
-    <member refid="namespacedakku_1a7acbd19453bccf5b94cfa1133df02981" kind="function"><name>scale</name></member>
-    <member refid="namespacedakku_1a9a343fe7cec03ad3c562a926fc052f6d" kind="function"><name>rotateX</name></member>
-    <member refid="namespacedakku_1a6ddc73eb8238f15d8c1016069962e8c4" kind="function"><name>rotateY</name></member>
-    <member refid="namespacedakku_1a2bbb040f4ba3ff426a543ad8129195de" kind="function"><name>rotateZ</name></member>
-    <member refid="namespacedakku_1a5158202b82b35e77f9fc61285161488a" kind="function"><name>rotate</name></member>
-    <member refid="namespacedakku_1aaa536865ee7be0b7a4ed6109f261eeb7" kind="function"><name>lookAt</name></member>
-    <member refid="namespacedakku_1afd935f8b4f1ca9b28257d07b7f276739" kind="function"><name>perspective</name></member>
-    <member refid="namespacedakku_1a2016f3c3a16c069a055a7017eacb0e66" kind="function"><name>dot</name></member>
-    <member refid="namespacedakku_1a8416c1b8bf26cb7dedb7fe0c886662dd" kind="function"><name>absDot</name></member>
-    <member refid="namespacedakku_1ab1fd7a566663942d0a6ddc982890d74b" kind="function"><name>DAKKU_EXPORT_OBJECTS</name></member>
-    <member refid="namespacedakku_1af6341cd9dee71fb7731ce988277fea7c" kind="function"><name>gammaCorrect</name></member>
-    <member refid="namespacedakku_1aeb8251264c62aa09029e8f63d598e2b3" kind="function"><name>inverseGammaCorrect</name></member>
-    <member refid="namespacedakku_1abc410b389b946378187c69b6cbeba1e7" kind="function"><name>writeImage</name></member>
-    <member refid="namespacedakku_1a2dd1a538eac12b436aad8012e5af1268" kind="function"><name>readImage</name></member>
-    <member refid="namespacedakku_1a56ee8590ffd24bd3f70b555372fa4697" kind="function"><name>DAKKU_EXPORT_OBJECTS</name></member>
-    <member refid="namespacedakku_1a84c83f6f4de090b0ef57c9298b8d91d5" kind="function"><name>DAKKU_EXPORT_OBJECTS</name></member>
+    <member refid="namespacedakku_1a08f737017abfd03bfaeb4b0c0d1d8928" kind="function"><name>isnan</name></member>
+    <member refid="namespacedakku_1a63937ef3cf02827d924baad7b2e783ab" kind="function"><name>isnan</name></member>
+    <member refid="namespacedakku_1ae303c565a0d5e6176b10af7aca2e7e53" kind="function"><name>DAKKU_DECLARE_VECTOR_TYPE</name></member>
+    <member refid="namespacedakku_1a3d234abea587b4d5f1a9ed2a572a18d8" kind="function"><name>DAKKU_DECLARE_VECTOR_TYPE</name></member>
+    <member refid="namespacedakku_1a9b62fff909c0a2340f5a280a9d6223b6" kind="function"><name>DAKKU_DECLARE_VECTOR_TYPE</name></member>
+    <member refid="namespacedakku_1a468ec76a23de6c67d1a82265d1ac4a3b" kind="function"><name>DAKKU_DECLARE_VECTOR_TYPE</name></member>
+    <member refid="namespacedakku_1ab924c4a5b6256128014af8e4656f73f4" kind="function"><name>DAKKU_DECLARE_POINT_TYPE</name></member>
+    <member refid="namespacedakku_1a09b52d0a7df2166ec5f4f543adf504eb" kind="function"><name>DAKKU_DECLARE_POINT_TYPE</name></member>
+    <member refid="namespacedakku_1a5119cab995df96b5bd09a4939f6033a3" kind="function"><name>DAKKU_DECLARE_POINT_TYPE</name></member>
+    <member refid="namespacedakku_1acabc131b8ead3ecb512e5eda962116e0" kind="function"><name>DAKKU_DECLARE_POINT_TYPE</name></member>
+    <member refid="namespacedakku_1abca7bbca41d0c48fad018ab314a0addd" kind="function"><name>DAKKU_DECLARE_VECTOR_TYPE</name></member>
   </compound>
-  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  <compound refid="constants_8h" kind="file"><name>constants.h</name>
   </compound>
-  <compound refid="namespacestd_1_1pmr" kind="namespace"><name>std::pmr</name>
-  </compound>
-  <compound refid="perspective_8h" kind="file"><name>perspective.h</name>
-  </compound>
-  <compound refid="blocked__array_8h" kind="file"><name>blocked_array.h</name>
-  </compound>
-  <compound refid="bounds_8h" kind="file"><name>bounds.h</name>
-  </compound>
-  <compound refid="camera_8h" kind="file"><name>camera.h</name>
-  </compound>
-  <compound refid="class_8h" kind="file"><name>class.h</name>
-  </compound>
-  <compound refid="filter_8h" kind="file"><name>filter.h</name>
-  </compound>
-  <compound refid="interaction_8h" kind="file"><name>interaction.h</name>
+  <compound refid="fwd_8h" kind="file"><name>fwd.h</name>
+    <member refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kind="define"><name>DAKKU_EXPORT_CORE</name></member>
   </compound>
   <compound refid="logger_8h" kind="file"><name>logger.h</name>
     <member refid="logger_8h_1a9edd762e54e3ce43a70ddfe81b6e2fc5" kind="define"><name>DAKKU_ERR</name></member>
@@ -837,126 +94,29 @@
     <member refid="logger_8h_1a9c5edb9052d4e1a515276aef0afef3e3" kind="define"><name>DAKKU_DEBUG</name></member>
     <member refid="logger_8h_1ad7e55cac030fb7ab38ebcfce264c1b3e" kind="define"><name>DAKKU_CHECK</name></member>
   </compound>
-  <compound refid="math_8h" kind="file"><name>math.h</name>
+  <compound refid="lua_8h" kind="file"><name>lua.h</name>
+    <member refid="lua_8h_1af49a65454b3af6c3580a532b5f86028e" kind="define"><name>SOL_ALL_SAFETIES_ON</name></member>
+    <member refid="lua_8h_1aafa5778caba2207c6f0fa9571e9c97d9" kind="define"><name>DAKKU_DECLARE_LUA_OBJECT</name></member>
+    <member refid="lua_8h_1a0587e5b4f4419faac9ccf7c9cd36d22d" kind="define"><name>DAKKU_IMPLEMENT_LUA_OBJECT</name></member>
   </compound>
-  <compound refid="memory_8h" kind="file"><name>memory.h</name>
-    <member refid="memory_8h_1a75ff6894fe90bba774fb4636c96c0031" kind="define"><name>DAKKU_ALLOCA</name></member>
-  </compound>
-  <compound refid="mipmap_8h" kind="file"><name>mipmap.h</name>
-  </compound>
-  <compound refid="object_8h" kind="file"><name>object.h</name>
-    <member refid="object_8h_1adebe9d6b28624419b368ed9d52f52f2f" kind="define"><name>DAKKU_DECLARE_OBJECT</name></member>
-    <member refid="object_8h_1a76ec8c7fb191261eda93e2d1b5a3e9be" kind="define"><name>DAKKU_EXPORT_OBJECTS</name></member>
-  </compound>
-  <compound refid="property_8h" kind="file"><name>property.h</name>
-  </compound>
-  <compound refid="ray_8h" kind="file"><name>ray.h</name>
-  </compound>
-  <compound refid="reflection_8h" kind="file"><name>reflection.h</name>
-  </compound>
-  <compound refid="relative_8h" kind="file"><name>relative.h</name>
-  </compound>
-  <compound refid="rng_8h" kind="file"><name>rng.h</name>
-  </compound>
-  <compound refid="sampler_8h" kind="file"><name>sampler.h</name>
-  </compound>
-  <compound refid="sampling_8h" kind="file"><name>sampling.h</name>
-  </compound>
-  <compound refid="serialization_8h" kind="file"><name>serialization.h</name>
-  </compound>
-  <compound refid="shape_8h" kind="file"><name>shape.h</name>
-  </compound>
-  <compound refid="spectrum_8h" kind="file"><name>spectrum.h</name>
-  </compound>
-  <compound refid="state_8h" kind="file"><name>state.h</name>
-  </compound>
-  <compound refid="texture_8h" kind="file"><name>texture.h</name>
-  </compound>
-  <compound refid="transform_8h" kind="file"><name>transform.h</name>
-  </compound>
-  <compound refid="transform__cache_8h" kind="file"><name>transform_cache.h</name>
+  <compound refid="math__func_8h" kind="file"><name>math_func.h</name>
   </compound>
   <compound refid="vector_8h" kind="file"><name>vector.h</name>
+    <member refid="vector_8h_1a7f2747e0722020eb72b1073fbb47646a" kind="define"><name>DAKKU_DECLARE_VECTOR_TYPE</name></member>
+    <member refid="vector_8h_1a0a1f8fd24b00ea16cba8753cf7692568" kind="define"><name>DAKKU_DECLARE_POINT_TYPE</name></member>
   </compound>
   <compound refid="vector__base_8h" kind="file"><name>vector_base.h</name>
-  </compound>
-  <compound refid="box_8h" kind="file"><name>box.h</name>
-  </compound>
-  <compound refid="triangle_8h" kind="file"><name>triangle.h</name>
-  </compound>
-  <compound refid="engine_8h" kind="file"><name>engine.h</name>
-  </compound>
-  <compound refid="core_2film_8h" kind="file"><name>film.h</name>
-  </compound>
-  <compound refid="gui_2film_8h" kind="file"><name>film.h</name>
-  </compound>
-  <compound refid="imageio_8h" kind="file"><name>imageio.h</name>
   </compound>
   <compound refid="platform_8h" kind="file"><name>platform.h</name>
     <member refid="platform_8h_1a7bc0107b6d161e4a712eee011c57792c" kind="define"><name>DAKKU_INLINE</name></member>
     <member refid="platform_8h_1a5a852c25cfd1f921bfe140d4216a332f" kind="define"><name>DAKKU_EXPORT</name></member>
     <member refid="platform_8h_1a4dc2ada1002dbe2abdfbc3ec4e1aee36" kind="define"><name>DAKKU_IMPORT</name></member>
     <member refid="platform_8h_1a727f841a8615f5ba2055132fb14a18ec" kind="define"><name>DAKKU_CORE_MODULE</name></member>
-    <member refid="platform_8h_1a6a1a04663120344778813d08185b6edb" kind="define"><name>DAKKU_STREAM_MODULE</name></member>
-    <member refid="platform_8h_1af38869f447ed6e8768ab41a8b2d4f7e9" kind="define"><name>DAKKU_IMAGEIO_MODULE</name></member>
-    <member refid="platform_8h_1ac321229e879d4e468e1eb21d57344d58" kind="define"><name>DAKKU_FILTERS_MODULE</name></member>
-    <member refid="platform_8h_1a897c968d2b673f9b096c9dd1ea3740c1" kind="define"><name>DAKKU_TEXTURES_MODULE</name></member>
-    <member refid="platform_8h_1a309a1930cb36a3536864199ed5bcb4f9" kind="define"><name>DAKKU_CAMERAS_MODULE</name></member>
     <member refid="platform_8h_1a09cd708407b8b153a1c5f21c764c142a" kind="define"><name>DAKKU_MAIN_MODULE</name></member>
-  </compound>
-  <compound refid="fstream_8h" kind="file"><name>fstream.h</name>
-  </compound>
-  <compound refid="cameras_2api_8h" kind="file"><name>api.h</name>
-  </compound>
-  <compound refid="core_2api_8h" kind="file"><name>api.h</name>
-  </compound>
-  <compound refid="filters_2api_8h" kind="file"><name>api.h</name>
-  </compound>
-  <compound refid="stream_2api_8h" kind="file"><name>api.h</name>
-  </compound>
-  <compound refid="textures_2api_8h" kind="file"><name>api.h</name>
-  </compound>
-  <compound refid="constant_8h" kind="file"><name>constant.h</name>
-  </compound>
-  <compound refid="cameras_2fwd_8h" kind="file"><name>fwd.h</name>
-    <member refid="cameras_2fwd_8h_1a51d4b1e853192e499742fc06398b5e2e" kind="define"><name>DAKKU_EXPORT_CAMERAS</name></member>
-  </compound>
-  <compound refid="core_2fwd_8h" kind="file"><name>fwd.h</name>
-    <member refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kind="define"><name>DAKKU_EXPORT_CORE</name></member>
-  </compound>
-  <compound refid="filters_2fwd_8h" kind="file"><name>fwd.h</name>
-    <member refid="filters_2fwd_8h_1a43808664e862ce668a722f7b1077b1e5" kind="define"><name>DAKKU_EXPORT_FILTERS</name></member>
-  </compound>
-  <compound refid="imageio_2fwd_8h" kind="file"><name>fwd.h</name>
-    <member refid="imageio_2fwd_8h_1ab0769d84ea09188408c5c02f1e8d42aa" kind="define"><name>DAKKU_EXPORT_IMAGEIO</name></member>
-  </compound>
-  <compound refid="stream_2fwd_8h" kind="file"><name>fwd.h</name>
-    <member refid="stream_2fwd_8h_1aaa6b0e6f6a552de3f9f6bb40ed162e36" kind="define"><name>DAKKU_EXPORT_STREAM</name></member>
-  </compound>
-  <compound refid="textures_2fwd_8h" kind="file"><name>fwd.h</name>
-    <member refid="textures_2fwd_8h_1aa6f8c6479da7d7bc597c87b9fe242d9e" kind="define"><name>DAKKU_EXPORT_TEXTURES</name></member>
-  </compound>
-  <compound refid="image_8h" kind="file"><name>image.h</name>
-  </compound>
-  <compound refid="reflection" kind="page"><name>reflection</name>
-  </compound>
-  <compound refid="vector_base" kind="page"><name>vector_base</name>
-  </compound>
-  <compound refid="dir_21bfb5c276f03895ab43337665096837" kind="dir"><name>src/cameras</name>
   </compound>
   <compound refid="dir_aebb8dcc11953d78e620bbef0b9e2183" kind="dir"><name>src/core</name>
   </compound>
-  <compound refid="dir_1bc13244e26df1e1f069a1fd18e36da3" kind="dir"><name>src/filters</name>
-  </compound>
-  <compound refid="dir_99d0482cf009f9d97a0877749b817f19" kind="dir"><name>src/gui</name>
-  </compound>
-  <compound refid="dir_a0ac0340ed7c73c764f7b19b1e0fdeee" kind="dir"><name>src/imageio</name>
-  </compound>
   <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
-  </compound>
-  <compound refid="dir_090521d29e73b40f7fc0a63254d8965e" kind="dir"><name>src/stream</name>
-  </compound>
-  <compound refid="dir_0a15cfbbecb5f97b1f4d0d4d1ae63ab7" kind="dir"><name>src/textures</name>
   </compound>
   <compound refid="indexpage" kind="page"><name>index</name>
   </compound>

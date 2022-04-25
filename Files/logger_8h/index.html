@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://xehoth.github.io/dakku/Files/logger_8h/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.9">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.10">
     
     
       
@@ -19,7 +19,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.120efc48.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.df45aa19.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.9647289d.min.css">
@@ -521,63 +521,54 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="cp">#ifndef DAKKU_CORE_LOGGER_H_</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="cp">#define DAKKU_CORE_LOGGER_H_</span>
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;core/fwd.h&gt;</span><span class="cp"></span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;spdlog/spdlog.h&gt;</span><span class="cp"></span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;spdlog/fmt/ostr.h&gt;</span><span class="cp"></span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstdlib&gt;</span><span class="cp"></span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">dakku</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;memory&gt;</span><span class="cp"></span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;spdlog/spdlog.h&gt;</span><span class="cp"></span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;spdlog/fmt/ostr.h&gt;</span><span class="cp"></span>
 <a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="k">class</span><span class="w"> </span><span class="nc">DAKKU_EXPORT_CORE</span><span class="w"> </span><span class="n">Logger</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w"> </span><span class="k">public</span><span class="o">:</span><span class="w"></span>
-<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">  </span><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Logger</span><span class="w"> </span><span class="o">&amp;</span><span class="n">get</span><span class="p">();</span><span class="w"></span>
-<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>
-<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="w">  </span><span class="p">[[</span><span class="n">nodiscard</span><span class="p">]]</span><span class="w"> </span><span class="n">spdlog</span><span class="o">::</span><span class="n">logger</span><span class="w"> </span><span class="o">*</span><span class="n">handle</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">_logger</span><span class="p">.</span><span class="n">get</span><span class="p">();</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>
-<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="w"> </span><span class="k">private</span><span class="o">:</span><span class="w"></span>
-<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="w">  </span><span class="k">explicit</span><span class="w"> </span><span class="n">Logger</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">spdlog</span><span class="o">::</span><span class="n">logger</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_logger</span><span class="p">);</span><span class="w"></span>
-<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>
-<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="cp">#if defined(_MSC_VER)</span>
-<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="cp">#pragma warning(push)</span>
-<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="cp">#pragma warning(disable : 4251)</span>
-<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="cp">#endif</span>
-<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>
-<a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">spdlog</span><span class="o">::</span><span class="n">logger</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_logger</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a>
-<a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a><span class="cp">#if defined(_MSC_VER)</span>
-<a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a><span class="cp">#pragma warning(pop)</span>
-<a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a><span class="cp">#endif</span>
-<a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a><span class="p">};</span><span class="w"></span>
-<a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a>
-<a id="__codelineno-5-31" name="__codelineno-5-31" href="#__codelineno-5-31"></a><span class="cp">#define DAKKU_ERR(...) \</span>
-<a id="__codelineno-5-32" name="__codelineno-5-32" href="#__codelineno-5-32"></a><span class="cp">  SPDLOG_LOGGER_CALL(Logger::get().handle(), spdlog::level::err, __VA_ARGS__)</span>
-<a id="__codelineno-5-33" name="__codelineno-5-33" href="#__codelineno-5-33"></a><span class="cp">#define DAKKU_INFO(...) \</span>
-<a id="__codelineno-5-34" name="__codelineno-5-34" href="#__codelineno-5-34"></a><span class="cp">  SPDLOG_LOGGER_CALL(Logger::get().handle(), spdlog::level::info, __VA_ARGS__)</span>
-<a id="__codelineno-5-35" name="__codelineno-5-35" href="#__codelineno-5-35"></a><span class="cp">#define DAKKU_WARN(...) \</span>
-<a id="__codelineno-5-36" name="__codelineno-5-36" href="#__codelineno-5-36"></a><span class="cp">  SPDLOG_LOGGER_CALL(Logger::get().handle(), spdlog::level::warn, __VA_ARGS__)</span>
-<a id="__codelineno-5-37" name="__codelineno-5-37" href="#__codelineno-5-37"></a><span class="cp">#ifdef DAKKU_BUILD_DEBUG</span>
-<a id="__codelineno-5-38" name="__codelineno-5-38" href="#__codelineno-5-38"></a><span class="cp">#define DAKKU_DEBUG(...) \</span>
-<a id="__codelineno-5-39" name="__codelineno-5-39" href="#__codelineno-5-39"></a><span class="cp">  SPDLOG_LOGGER_CALL(Logger::get().handle(), spdlog::level::debug, __VA_ARGS__)</span>
-<a id="__codelineno-5-40" name="__codelineno-5-40" href="#__codelineno-5-40"></a><span class="cp">#else</span>
-<a id="__codelineno-5-41" name="__codelineno-5-41" href="#__codelineno-5-41"></a><span class="cp">#define DAKKU_DEBUG(...) static_cast&lt;void&gt;(0)</span>
-<a id="__codelineno-5-42" name="__codelineno-5-42" href="#__codelineno-5-42"></a><span class="cp">#endif</span>
-<a id="__codelineno-5-43" name="__codelineno-5-43" href="#__codelineno-5-43"></a>
-<a id="__codelineno-5-44" name="__codelineno-5-44" href="#__codelineno-5-44"></a><span class="cp">#ifdef DAKKU_BUILD_CHECK</span>
-<a id="__codelineno-5-45" name="__codelineno-5-45" href="#__codelineno-5-45"></a><span class="cp">#define DAKKU_CHECK(val, ...) \</span>
-<a id="__codelineno-5-46" name="__codelineno-5-46" href="#__codelineno-5-46"></a><span class="cp">  do {                        \</span>
-<a id="__codelineno-5-47" name="__codelineno-5-47" href="#__codelineno-5-47"></a><span class="cp">    if (!(val)) {             \</span>
-<a id="__codelineno-5-48" name="__codelineno-5-48" href="#__codelineno-5-48"></a><span class="cp">      DAKKU_ERR(__VA_ARGS__); \</span>
-<a id="__codelineno-5-49" name="__codelineno-5-49" href="#__codelineno-5-49"></a><span class="cp">      std::exit(-1);          \</span>
-<a id="__codelineno-5-50" name="__codelineno-5-50" href="#__codelineno-5-50"></a><span class="cp">    }                         \</span>
-<a id="__codelineno-5-51" name="__codelineno-5-51" href="#__codelineno-5-51"></a><span class="cp">  } while (0)</span>
-<a id="__codelineno-5-52" name="__codelineno-5-52" href="#__codelineno-5-52"></a><span class="cp">#else</span>
-<a id="__codelineno-5-53" name="__codelineno-5-53" href="#__codelineno-5-53"></a><span class="cp">#define DAKKU_CHECK(...) static_cast&lt;void&gt;(0)</span>
-<a id="__codelineno-5-54" name="__codelineno-5-54" href="#__codelineno-5-54"></a><span class="cp">#endif</span>
-<a id="__codelineno-5-55" name="__codelineno-5-55" href="#__codelineno-5-55"></a>
-<a id="__codelineno-5-56" name="__codelineno-5-56" href="#__codelineno-5-56"></a><span class="p">}</span><span class="w">  </span><span class="c1">// namespace dakku</span>
-<a id="__codelineno-5-57" name="__codelineno-5-57" href="#__codelineno-5-57"></a><span class="cp">#endif</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">dakku</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="k">class</span><span class="w"> </span><span class="nc">DAKKU_EXPORT_CORE</span><span class="w"> </span><span class="n">Logger</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w"> </span><span class="k">public</span><span class="o">:</span><span class="w"></span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">  </span><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Logger</span><span class="w"> </span><span class="o">&amp;</span><span class="n">get</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="w">  </span><span class="p">[[</span><span class="n">nodiscard</span><span class="p">]]</span><span class="w"> </span><span class="n">spdlog</span><span class="o">::</span><span class="n">logger</span><span class="w"> </span><span class="o">*</span><span class="n">handle</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">_logger</span><span class="p">.</span><span class="n">get</span><span class="p">();</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="w"> </span><span class="k">private</span><span class="o">:</span><span class="w"></span>
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="w">  </span><span class="k">explicit</span><span class="w"> </span><span class="n">Logger</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">spdlog</span><span class="o">::</span><span class="n">logger</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_logger</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>
+<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">spdlog</span><span class="o">::</span><span class="n">logger</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_logger</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="p">};</span><span class="w"></span>
+<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>
+<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a><span class="cp">#define DAKKU_ERR(...) \</span>
+<a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a><span class="cp">  SPDLOG_LOGGER_CALL(Logger::get().handle(), spdlog::level::err, __VA_ARGS__)</span>
+<a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a><span class="cp">#define DAKKU_INFO(...) \</span>
+<a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a><span class="cp">  SPDLOG_LOGGER_CALL(Logger::get().handle(), spdlog::level::info, __VA_ARGS__)</span>
+<a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a><span class="cp">#define DAKKU_WARN(...) \</span>
+<a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a><span class="cp">  SPDLOG_LOGGER_CALL(Logger::get().handle(), spdlog::level::warn, __VA_ARGS__)</span>
+<a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a><span class="cp">#ifdef DAKKU_BUILD_DEBUG</span>
+<a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a><span class="cp">#define DAKKU_DEBUG(...) \</span>
+<a id="__codelineno-5-31" name="__codelineno-5-31" href="#__codelineno-5-31"></a><span class="cp">  SPDLOG_LOGGER_CALL(Logger::get().handle(), spdlog::level::debug, __VA_ARGS__)</span>
+<a id="__codelineno-5-32" name="__codelineno-5-32" href="#__codelineno-5-32"></a><span class="cp">#else</span>
+<a id="__codelineno-5-33" name="__codelineno-5-33" href="#__codelineno-5-33"></a><span class="cp">#define DAKKU_DEBUG(...) static_cast&lt;void&gt;(0)</span>
+<a id="__codelineno-5-34" name="__codelineno-5-34" href="#__codelineno-5-34"></a><span class="cp">#endif</span>
+<a id="__codelineno-5-35" name="__codelineno-5-35" href="#__codelineno-5-35"></a>
+<a id="__codelineno-5-36" name="__codelineno-5-36" href="#__codelineno-5-36"></a><span class="cp">#ifdef DAKKU_BUILD_CHECK</span>
+<a id="__codelineno-5-37" name="__codelineno-5-37" href="#__codelineno-5-37"></a><span class="cp">#define DAKKU_CHECK(val, ...) \</span>
+<a id="__codelineno-5-38" name="__codelineno-5-38" href="#__codelineno-5-38"></a><span class="cp">  do {                        \</span>
+<a id="__codelineno-5-39" name="__codelineno-5-39" href="#__codelineno-5-39"></a><span class="cp">    if (!(val)) {             \</span>
+<a id="__codelineno-5-40" name="__codelineno-5-40" href="#__codelineno-5-40"></a><span class="cp">      DAKKU_ERR(__VA_ARGS__); \</span>
+<a id="__codelineno-5-41" name="__codelineno-5-41" href="#__codelineno-5-41"></a><span class="cp">      std::exit(-1);          \</span>
+<a id="__codelineno-5-42" name="__codelineno-5-42" href="#__codelineno-5-42"></a><span class="cp">    }                         \</span>
+<a id="__codelineno-5-43" name="__codelineno-5-43" href="#__codelineno-5-43"></a><span class="cp">  } while (0)</span>
+<a id="__codelineno-5-44" name="__codelineno-5-44" href="#__codelineno-5-44"></a><span class="cp">#else</span>
+<a id="__codelineno-5-45" name="__codelineno-5-45" href="#__codelineno-5-45"></a><span class="cp">#define DAKKU_CHECK(...) static_cast&lt;void&gt;(0)</span>
+<a id="__codelineno-5-46" name="__codelineno-5-46" href="#__codelineno-5-46"></a><span class="cp">#endif</span>
+<a id="__codelineno-5-47" name="__codelineno-5-47" href="#__codelineno-5-47"></a><span class="p">}</span><span class="w">  </span><span class="c1">// namespace dakku</span>
+<a id="__codelineno-5-48" name="__codelineno-5-48" href="#__codelineno-5-48"></a><span class="cp">#endif</span>
 </code></pre></div>
 <hr />
-<p>Updated on 2022-04-14 at 12:27:16 +0000</p>
+<p>Updated on 2022-04-25 at 08:03:03 +0000</p>
 
               
             </article>
@@ -611,7 +602,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.6e54b5cd.min.js"></script>
+      <script src="../../assets/javascripts/bundle.748e2769.min.js"></script>
       
         <script src="../../javascripts/mathjax.js"></script>
       

@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://xehoth.github.io/dakku/Files/platform_8h/">
+        <link rel="canonical" href="https://xehoth.github.io/dakku/Files/lua_8h/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.10">
     
     
       
-        <title>src/platform.h - dakku documentation</title>
+        <title>src/core/lua.h - dakku documentation</title>
       
     
     
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#srcplatformh" class="md-skip">
+        <a href="#srccoreluah" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              src/platform.h
+              src/core/lua.h
             
           </span>
         </div>
@@ -335,6 +335,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    Classes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#defines" class="md-nav__link">
     Defines
   </a>
@@ -350,36 +357,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#define-dakku_inline" class="md-nav__link">
-    define DAKKU_INLINE
+  <a href="#define-sol_all_safeties_on" class="md-nav__link">
+    define SOL_ALL_SAFETIES_ON
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#define-dakku_export" class="md-nav__link">
-    define DAKKU_EXPORT
+  <a href="#define-dakku_declare_lua_object" class="md-nav__link">
+    define DAKKU_DECLARE_LUA_OBJECT
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#define-dakku_import" class="md-nav__link">
-    define DAKKU_IMPORT
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#define-dakku_core_module" class="md-nav__link">
-    define DAKKU_CORE_MODULE
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#define-dakku_main_module" class="md-nav__link">
-    define DAKKU_MAIN_MODULE
+  <a href="#define-dakku_implement_lua_object" class="md-nav__link">
+    define DAKKU_IMPLEMENT_LUA_OBJECT
   </a>
   
 </li>
@@ -408,13 +401,13 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/xehoth/dakku/edit/master/docs/Files/platform_8h.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/xehoth/dakku/edit/master/docs/Files/lua_8h.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="srcplatformh">src/platform.h</h1>
+<h1 id="srccoreluah">src/core/lua.h</h1>
 <h2 id="namespaces">Namespaces</h2>
 <table>
 <thead>
@@ -425,6 +418,21 @@
 <tbody>
 <tr>
 <td><strong><a href="/dakku/Namespaces/namespacedakku/">dakku</a></strong> <br>dakku namespace</td>
+</tr>
+</tbody>
+</table>
+<h2 id="classes">Classes</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>class</td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Lua/">dakku::Lua</a></strong> <br>dakku lua state</td>
 </tr>
 </tbody>
 </table>
@@ -439,75 +447,63 @@
 <tbody>
 <tr>
 <td></td>
-<td><strong><a href="/dakku/Files/platform_8h/#define-dakku-inline">DAKKU_INLINE</a></strong></td>
+<td><strong><a href="/dakku/Files/lua_8h/#define-sol-all-safeties-on">SOL_ALL_SAFETIES_ON</a></strong></td>
 </tr>
 <tr>
 <td></td>
-<td><strong><a href="/dakku/Files/platform_8h/#define-dakku-export">DAKKU_EXPORT</a></strong></td>
+<td><strong><a href="/dakku/Files/lua_8h/#define-dakku-declare-lua-object">DAKKU_DECLARE_LUA_OBJECT</a></strong>(name)</td>
 </tr>
 <tr>
 <td></td>
-<td><strong><a href="/dakku/Files/platform_8h/#define-dakku-import">DAKKU_IMPORT</a></strong></td>
-</tr>
-<tr>
-<td></td>
-<td><strong><a href="/dakku/Files/platform_8h/#define-dakku-core-module">DAKKU_CORE_MODULE</a></strong> <br>dakku core module</td>
-</tr>
-<tr>
-<td></td>
-<td><strong><a href="/dakku/Files/platform_8h/#define-dakku-main-module">DAKKU_MAIN_MODULE</a></strong> <br>dakku main module</td>
+<td><strong><a href="/dakku/Files/lua_8h/#define-dakku-implement-lua-object">DAKKU_IMPLEMENT_LUA_OBJECT</a></strong>(name, func)</td>
 </tr>
 </tbody>
 </table>
 <h2 id="macros-documentation">Macros Documentation</h2>
-<h3 id="define-dakku_inline">define DAKKU_INLINE</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#define DAKKU_INLINE __attribute__((always_inline)) inline</span>
+<h3 id="define-sol_all_safeties_on">define SOL_ALL_SAFETIES_ON</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#define SOL_ALL_SAFETIES_ON 1</span>
 </code></pre></div>
-<h3 id="define-dakku_export">define DAKKU_EXPORT</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cp">#define DAKKU_EXPORT __attribute__((visibility(&quot;default&quot;)))</span>
+<h3 id="define-dakku_declare_lua_object">define DAKKU_DECLARE_LUA_OBJECT</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cp">#define DAKKU_DECLARE_LUA_OBJECT(</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="n">name</span><span class="w"></span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">_</span><span class="err">##</span><span class="n">name</span><span class="err">##</span><span class="n">_bind_lua</span><span class="w"></span>
 </code></pre></div>
-<h3 id="define-dakku_import">define DAKKU_IMPORT</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="cp">#define DAKKU_IMPORT </span>
+<h3 id="define-dakku_implement_lua_object">define DAKKU_IMPLEMENT_LUA_OBJECT</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="cp">#define DAKKU_IMPLEMENT_LUA_OBJECT(</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="n">name</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="n">func</span><span class="w"></span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">name</span><span class="o">::</span><span class="n">_</span><span class="err">##</span><span class="n">name</span><span class="err">##</span><span class="n">_bind_lua</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">func</span><span class="p">)()</span><span class="w"></span>
 </code></pre></div>
-<h3 id="define-dakku_core_module">define DAKKU_CORE_MODULE</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="cp">#define DAKKU_CORE_MODULE 1</span>
-</code></pre></div>
-<p>dakku core module </p>
-<h3 id="define-dakku_main_module">define DAKKU_MAIN_MODULE</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="cp">#define DAKKU_MAIN_MODULE 10</span>
-</code></pre></div>
-<p>dakku main module </p>
 <h2 id="source-code">Source code</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="cp">#ifndef DAKKU_PLATFORM_H_</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="cp">#define DAKKU_PLATFORM_H_</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="cp">#if defined(_MSC_VER)</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="cp">#if !defined(_USE_MATH_DEFINES) &amp;&amp; !defined(M_PI)</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="cp">#define _USE_MATH_DEFINES</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="cp">#endif</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="cp">#endif</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">dakku</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="cp">#if defined(_MSC_VER)</span>
-<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="cp">#define DAKKU_INLINE __forceinline</span>
-<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="cp">#define DAKKU_EXPORT __declspec(dllexport)</span>
-<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="cp">#define DAKKU_IMPORT __declspec(dllimport)</span>
-<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="cp">#else</span>
-<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="cp">#define DAKKU_INLINE __attribute__((always_inline)) inline</span>
-<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="cp">#define DAKKU_EXPORT __attribute__((visibility(&quot;default&quot;)))</span>
-<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="cp">#define DAKKU_IMPORT</span>
-<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="cp">#endif</span>
-<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>
-<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="cp">#define DAKKU_CORE_MODULE 1</span>
-<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="cp">#define DAKKU_MAIN_MODULE 10</span>
-<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>
-<a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a><span class="cp">#if defined(_MSC_VER)</span>
-<a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a><span class="cp">#pragma warning(disable : 4251)</span>
-<a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a><span class="cp">#endif</span>
-<a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a>
-<a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a><span class="p">}</span><span class="w">  </span><span class="c1">// namespace dakku</span>
-<a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a>
-<a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a><span class="cp">#endif</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="cp">#ifndef DAKKU_CORE_LUA_H_</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="cp">#define DAKKU_CORE_LUA_H_</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;core/fwd.h&gt;</span><span class="cp"></span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="cp">#if !defined(SOL_ALL_SAFETIES_ON)</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="cp">#define SOL_ALL_SAFETIES_ON 1</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="cp">#endif</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sol/sol.hpp&gt;</span><span class="cp"></span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">dakku</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="k">class</span><span class="w"> </span><span class="nc">DAKKU_EXPORT_CORE</span><span class="w"> </span><span class="n">Lua</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w"> </span><span class="k">public</span><span class="o">:</span><span class="w"></span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">  </span><span class="k">static</span><span class="w"> </span><span class="n">Lua</span><span class="w"> </span><span class="o">&amp;</span><span class="n">instance</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">  </span><span class="n">sol</span><span class="o">::</span><span class="n">state</span><span class="w"> </span><span class="o">&amp;</span><span class="nf">get_state</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w"> </span><span class="k">private</span><span class="o">:</span><span class="w"></span>
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">  </span><span class="n">sol</span><span class="o">::</span><span class="n">state</span><span class="w"> </span><span class="n">state</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="p">};</span><span class="w"></span>
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="cp">#define DAKKU_DECLARE_LUA_OBJECT(name) static int _##name##_bind_lua</span>
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="cp">#define DAKKU_IMPLEMENT_LUA_OBJECT(name, func) \</span>
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="cp">  int name::_##name##_bind_lua = (func)()</span>
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="p">}</span><span class="w">  </span><span class="c1">// namespace dakku</span>
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a><span class="cp">#endif</span>
 </code></pre></div>
 <hr />
 <p>Updated on 2022-04-25 at 08:03:03 +0000</p>

@@ -2,7 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
   <compounddef id="conceptdakku_1_1ArithmeticType" kind="concept">
     <compoundname>dakku::ArithmeticType</compoundname>
-    <includes refid="core_2fwd_8h" local="no">fwd.h</includes>
+    <includes refid="fwd_8h" local="no">fwd.h</includes>
     <templateparamlist>
       <param>
         <type>typename T</type>
@@ -25,6 +25,6 @@ concept <ref refid="conceptdakku_1_1ArithmeticType" kindref="compound">dakku::Ar
 </parameterlist>
 </para>
     </detaileddescription>
-    <location file="src/core/fwd.h" line="52" column="1"/>
+    <location file="src/core/fwd.h" line="20" column="1"/>
   </compounddef>
 </doxygen>

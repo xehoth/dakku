@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="classdakku_1_1Lua" kind="class" language="C++" prot="public">
+    <compoundname>dakku::Lua</compoundname>
+    <includes refid="lua_8h" local="no">lua.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdakku_1_1Lua_1a8979a2546db6d85043ced22b5f2ede8f" prot="private" static="no" mutable="no">
+        <type>sol::state</type>
+        <definition>sol::state dakku::Lua::state</definition>
+        <argsstring></argsstring>
+        <name>state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/lua.h" line="31" column="14" bodyfile="src/core/lua.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classdakku_1_1Lua_1ac3145c27d97b2c4cb342c5935e41fb62" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdakku_1_1Lua" kindref="compound">Lua</ref> &amp;</type>
+        <definition>static Lua &amp; dakku::Lua::instance</definition>
+        <argsstring>()</argsstring>
+        <name>instance</name>
+        <briefdescription>
+<para>get lua instance </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/lua.h" line="22" column="14"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdakku_1_1Lua_1a04a19bad0e52044a0422a23eee0ffc8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>sol::state &amp;</type>
+        <definition>sol::state &amp; dakku::Lua::get_state</definition>
+        <argsstring>()</argsstring>
+        <name>get_state</name>
+        <briefdescription>
+<para>get lua state </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/lua.h" line="28" column="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>dakku lua state </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/core/lua.h" line="16" column="1" bodyfile="src/core/lua.h" bodystart="16" bodyend="32"/>
+    <listofallmembers>
+      <member refid="classdakku_1_1Lua_1a04a19bad0e52044a0422a23eee0ffc8c" prot="public" virt="non-virtual"><scope>dakku::Lua</scope><name>get_state</name></member>
+      <member refid="classdakku_1_1Lua_1ac3145c27d97b2c4cb342c5935e41fb62" prot="public" virt="non-virtual"><scope>dakku::Lua</scope><name>instance</name></member>
+      <member refid="classdakku_1_1Lua_1a8979a2546db6d85043ced22b5f2ede8f" prot="private" virt="non-virtual"><scope>dakku::Lua</scope><name>state</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
