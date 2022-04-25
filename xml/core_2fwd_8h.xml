@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
-  <compounddef id="fwd_8h" kind="file" language="C++">
+  <compounddef id="core_2fwd_8h" kind="file" language="C++">
     <compoundname>fwd.h</compoundname>
     <includes refid="platform_8h" local="no">platform.h</includes>
     <includes local="no">type_traits</includes>
@@ -11,7 +11,7 @@
     <incdepgraph>
       <node id="1">
         <label>src/core/fwd.h</label>
-        <link refid="fwd_8h"/>
+        <link refid="core_2fwd_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
@@ -34,16 +34,22 @@
         <label>src/core/constants.h</label>
         <link refid="constants_8h"/>
       </node>
+      <node id="7">
+        <label>src/core/filter.h</label>
+        <link refid="filter_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
       <node id="1">
         <label>src/core/fwd.h</label>
-        <link refid="fwd_8h"/>
+        <link refid="core_2fwd_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
+        <childnode refid="11" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
+        <childnode refid="12" relation="include">
         </childnode>
       </node>
       <node id="3">
@@ -52,7 +58,7 @@
         <childnode refid="4" relation="include">
         </childnode>
       </node>
-      <node id="7">
+      <node id="11">
         <label>src/core/lua.h</label>
         <link refid="lua_8h"/>
         <childnode refid="5" relation="include">
@@ -60,7 +66,7 @@
         <childnode refid="4" relation="include">
         </childnode>
       </node>
-      <node id="8">
+      <node id="12">
         <label>src/core/math_func.h</label>
         <link refid="math__func_8h"/>
       </node>
@@ -69,6 +75,8 @@
         <link refid="vector_8h"/>
         <childnode refid="6" relation="include">
         </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
       </node>
       <node id="4">
         <label>src/core/vector_base.h</label>
@@ -76,10 +84,26 @@
         <childnode refid="5" relation="include">
         </childnode>
       </node>
+      <node id="9">
+        <label>src/filters/box.h</label>
+        <link refid="box_8h"/>
+      </node>
+      <node id="8">
+        <label>src/filters/fwd.h</label>
+        <link refid="filters_2fwd_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>src/filters/triangle.h</label>
+        <link refid="triangle_8h"/>
+      </node>
     </invincdepgraph>
     <innernamespace refid="namespacedakku">dakku</innernamespace>
       <sectiondef kind="define">
-      <memberdef kind="define" id="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" prot="public" static="no">
+      <memberdef kind="define" id="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" prot="public" static="no">
         <name>DAKKU_EXPORT_CORE</name>
         <initializer><ref refid="platform_8h_1a5a852c25cfd1f921bfe140d4216a332f" kindref="member">DAKKU_EXPORT</ref></initializer>
         <briefdescription>
@@ -106,7 +130,7 @@
 <codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>DAKKU_BUILD_MODULE<sp/>!=<sp/>DAKKU_CORE_MODULE</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DAKKU_EXPORT_CORE<sp/>DAKKU_IMPORT</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="11" refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DAKKU_EXPORT_CORE<sp/>DAKKU_EXPORT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DAKKU_EXPORT_CORE<sp/>DAKKU_EXPORT</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="13"><highlight class="normal"></highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>

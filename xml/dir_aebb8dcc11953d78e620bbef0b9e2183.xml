@@ -4,7 +4,8 @@
     <compoundname>src/core</compoundname>
     <innerfile refid="bounds_8h">bounds.h</innerfile>
     <innerfile refid="constants_8h">constants.h</innerfile>
-    <innerfile refid="fwd_8h">fwd.h</innerfile>
+    <innerfile refid="filter_8h">filter.h</innerfile>
+    <innerfile refid="core_2fwd_8h">fwd.h</innerfile>
     <innerfile refid="logger_8h">logger.h</innerfile>
     <innerfile refid="lua_8h">lua.h</innerfile>
     <innerfile refid="math__func_8h">math_func.h</innerfile>

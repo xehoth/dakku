@@ -6,10 +6,13 @@
     <innerclass refid="classdakku_1_1Bounds2iIterator" prot="public">dakku::Bounds2iIterator</innerclass>
     <innerclass refid="classdakku_1_1Bounds3" prot="public">dakku::Bounds3</innerclass>
     <innerclass refid="classdakku_1_1BoundsBase" prot="public">dakku::BoundsBase</innerclass>
+    <innerclass refid="classdakku_1_1BoxFilter" prot="public">dakku::BoxFilter</innerclass>
+    <innerclass refid="classdakku_1_1Filter" prot="public">dakku::Filter</innerclass>
     <innerclass refid="classdakku_1_1Logger" prot="public">dakku::Logger</innerclass>
     <innerclass refid="classdakku_1_1Lua" prot="public">dakku::Lua</innerclass>
     <innerclass refid="classdakku_1_1Normal" prot="public">dakku::Normal</innerclass>
     <innerclass refid="classdakku_1_1Point" prot="public">dakku::Point</innerclass>
+    <innerclass refid="classdakku_1_1TriangleFilter" prot="public">dakku::TriangleFilter</innerclass>
     <innerclass refid="classdakku_1_1Vector" prot="public">dakku::Vector</innerclass>
     <innerclass refid="classdakku_1_1VectorBase" prot="public">dakku::VectorBase</innerclass>
       <sectiondef kind="typedef">
@@ -228,7 +231,7 @@
           <type>Bounds</type>
         </param>
         <param>
-          <type><ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
+          <type><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -327,7 +330,7 @@
           <type><ref refid="namespacedakku_1a2431c33b3d39e5cf0d0f8e952ea2b834" kindref="member">Vector2i</ref></type>
         </param>
         <param>
-          <type><ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
+          <type><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -346,7 +349,7 @@
           <type><ref refid="namespacedakku_1a99b4c761ebbe92955e167b5e27cb5992" kindref="member">Vector2f</ref></type>
         </param>
         <param>
-          <type><ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
+          <type><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -365,7 +368,7 @@
           <type><ref refid="namespacedakku_1ad924c9ec2e2e6a86ebb00f41aedc3e77" kindref="member">Vector3i</ref></type>
         </param>
         <param>
-          <type><ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
+          <type><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -384,7 +387,7 @@
           <type><ref refid="namespacedakku_1a890ec4679d6f6f83722a0b5a41d0eebb" kindref="member">Vector3f</ref></type>
         </param>
         <param>
-          <type><ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
+          <type><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -403,7 +406,7 @@
           <type><ref refid="namespacedakku_1a1fb7babbecae697c3b67e44b28425c43" kindref="member">Point3f</ref></type>
         </param>
         <param>
-          <type><ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
+          <type><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -422,7 +425,7 @@
           <type><ref refid="namespacedakku_1a8f5683cd8dc29bf2c90940f0dadcc5aa" kindref="member">Point3i</ref></type>
         </param>
         <param>
-          <type><ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
+          <type><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -441,7 +444,7 @@
           <type><ref refid="namespacedakku_1aa5c5407fb67da06d222ad3881949e9b6" kindref="member">Point2f</ref></type>
         </param>
         <param>
-          <type><ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
+          <type><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -460,7 +463,7 @@
           <type><ref refid="namespacedakku_1a8a5f9e6a937f1534e71801592fcab641" kindref="member">Point2i</ref></type>
         </param>
         <param>
-          <type><ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
+          <type><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -479,7 +482,7 @@
           <type><ref refid="namespacedakku_1ae27019e27a867bc17249704ed8dcb5d8" kindref="member">Normal3f</ref></type>
         </param>
         <param>
-          <type><ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
+          <type><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref></type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -488,6 +491,44 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/core/vector.h" line="179" column="1" declfile="src/core/vector.h" declline="179" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1a6883b120d067a58dc252b98914fb45cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dakku::DAKKU_DECLARE_LUA_OBJECT</definition>
+        <argsstring>(BoxFilter, DAKKU_EXPORT_FILTERS)</argsstring>
+        <name>DAKKU_DECLARE_LUA_OBJECT</name>
+        <param>
+          <type><ref refid="classdakku_1_1BoxFilter" kindref="compound">BoxFilter</ref></type>
+        </param>
+        <param>
+          <type><ref refid="filters_2fwd_8h_1a43808664e862ce668a722f7b1077b1e5" kindref="member">DAKKU_EXPORT_FILTERS</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/filters/box.h" line="18" column="1" declfile="src/filters/box.h" declline="18" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1af1d89de68cd9c6bd9e7b0c5e9bcdf615" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dakku::DAKKU_DECLARE_LUA_OBJECT</definition>
+        <argsstring>(TriangleFilter, DAKKU_EXPORT_FILTERS)</argsstring>
+        <name>DAKKU_DECLARE_LUA_OBJECT</name>
+        <param>
+          <type><ref refid="classdakku_1_1TriangleFilter" kindref="compound">TriangleFilter</ref></type>
+        </param>
+        <param>
+          <type><ref refid="filters_2fwd_8h_1a43808664e862ce668a722f7b1077b1e5" kindref="member">DAKKU_EXPORT_FILTERS</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/filters/triangle.h" line="18" column="1" declfile="src/filters/triangle.h" declline="18" declcolumn="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

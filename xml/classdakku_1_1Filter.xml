@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="classdakku_1_1Filter" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>dakku::Filter</compoundname>
+    <derivedcompoundref refid="classdakku_1_1BoxFilter" prot="public" virt="non-virtual">dakku::BoxFilter</derivedcompoundref>
+    <derivedcompoundref refid="classdakku_1_1TriangleFilter" prot="public" virt="non-virtual">dakku::TriangleFilter</derivedcompoundref>
+    <includes refid="filter_8h" local="no">filter.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classdakku_1_1Filter_1a3cc4c4500a494841a7ba4c8a1e9ec14f" prot="public" static="no" mutable="no">
+        <type>const <ref refid="namespacedakku_1a99b4c761ebbe92955e167b5e27cb5992" kindref="member">Vector2f</ref></type>
+        <definition>const Vector2f dakku::Filter::radius</definition>
+        <argsstring></argsstring>
+        <name>radius</name>
+        <briefdescription>
+<para>filter radius </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/filter.h" line="28" column="18" bodyfile="src/core/filter.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdakku_1_1Filter_1abc93abed13e29f4bc8a783907114b85f" prot="public" static="no" mutable="no">
+        <type>const <ref refid="namespacedakku_1a99b4c761ebbe92955e167b5e27cb5992" kindref="member">Vector2f</ref></type>
+        <definition>const Vector2f dakku::Filter::inv_radius</definition>
+        <argsstring></argsstring>
+        <name>inv_radius</name>
+        <briefdescription>
+<para>filter radius inversion </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/filter.h" line="30" column="18" bodyfile="src/core/filter.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdakku_1_1Filter_1a41c4e564d4f720c22852f36412836574" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dakku::Filter::Filter</definition>
+        <argsstring>(const Vector2f &amp;radius)</argsstring>
+        <name>Filter</name>
+        <param>
+          <type>const <ref refid="namespacedakku_1a99b4c761ebbe92955e167b5e27cb5992" kindref="member">Vector2f</ref> &amp;</type>
+          <declname>radius</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classdakku_1_1Filter" kindref="compound">Filter</ref> object The filter&apos;s overall extent in each direction is twice the value given in <computeroutput>radius</computeroutput> </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>radius</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>radius of the filter </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/filter.h" line="16" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1Filter_1abe92aa3911e6856f7abcb1ed841ff3e9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>float</type>
+        <definition>virtual float dakku::Filter::evaluate</definition>
+        <argsstring>(const Point2f &amp;p) const =0</argsstring>
+        <name>evaluate</name>
+        <reimplementedby refid="classdakku_1_1BoxFilter_1a062696aca56d7f4f1ed238f1df17f95f">evaluate</reimplementedby>
+        <reimplementedby refid="classdakku_1_1TriangleFilter_1acbb6ae521434bdb0336233ca2c79fe9d">evaluate</reimplementedby>
+        <param>
+          <type>const <ref refid="namespacedakku_1aa5c5407fb67da06d222ad3881949e9b6" kindref="member">Point2f</ref> &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Given a 2D point which is relative to the center of the filter, the filter&apos;s value at that point is returned. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the given 2D point </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>float filter&apos;s value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/filter.h" line="25" column="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>dakku::BoxFilter</label>
+        <link refid="classdakku_1_1BoxFilter"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>dakku::Filter</label>
+        <link refid="classdakku_1_1Filter"/>
+      </node>
+      <node id="3">
+        <label>dakku::TriangleFilter</label>
+        <link refid="classdakku_1_1TriangleFilter"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>dakku::VectorBase&lt; T, S, Vector&lt; T, S &gt; &gt;</label>
+        <link refid="classdakku_1_1VectorBase"/>
+      </node>
+      <node id="1">
+        <label>dakku::Filter</label>
+        <link refid="classdakku_1_1Filter"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>inv_radius</edgelabel>
+          <edgelabel>radius</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dakku::Vector&lt; T, S &gt;</label>
+        <link refid="classdakku_1_1Vector"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/core/filter.h" line="7" column="1" bodyfile="src/core/filter.h" bodystart="7" bodyend="31"/>
+    <listofallmembers>
+      <member refid="classdakku_1_1Filter_1abe92aa3911e6856f7abcb1ed841ff3e9" prot="public" virt="pure-virtual"><scope>dakku::Filter</scope><name>evaluate</name></member>
+      <member refid="classdakku_1_1Filter_1a41c4e564d4f720c22852f36412836574" prot="public" virt="non-virtual"><scope>dakku::Filter</scope><name>Filter</name></member>
+      <member refid="classdakku_1_1Filter_1abc93abed13e29f4bc8a783907114b85f" prot="public" virt="non-virtual"><scope>dakku::Filter</scope><name>inv_radius</name></member>
+      <member refid="classdakku_1_1Filter_1a3cc4c4500a494841a7ba4c8a1e9ec14f" prot="public" virt="non-virtual"><scope>dakku::Filter</scope><name>radius</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="dir_1bc13244e26df1e1f069a1fd18e36da3" kind="dir">
+    <compoundname>src/filters</compoundname>
+    <innerfile refid="box_8h">box.h</innerfile>
+    <innerfile refid="filters_2fwd_8h">fwd.h</innerfile>
+    <innerfile refid="triangle_8h">triangle.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/filters/"/>
+  </compounddef>
+</doxygen>

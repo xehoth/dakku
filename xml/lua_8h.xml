@@ -2,14 +2,14 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
   <compounddef id="lua_8h" kind="file" language="C++">
     <compoundname>lua.h</compoundname>
-    <includes refid="fwd_8h" local="no">core/fwd.h</includes>
+    <includes refid="core_2fwd_8h" local="no">core/fwd.h</includes>
     <includes local="no">sol/sol.hpp</includes>
     <includedby refid="vector_8h" local="no">src/core/vector.h</includedby>
     <includedby refid="vector__base_8h" local="no">src/core/vector_base.h</includedby>
     <incdepgraph>
       <node id="2">
         <label>core/fwd.h</label>
-        <link refid="fwd_8h"/>
+        <link refid="core_2fwd_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
@@ -39,12 +39,18 @@
         <label>src/core/bounds.h</label>
         <link refid="bounds_8h"/>
       </node>
+      <node id="4">
+        <label>src/core/filter.h</label>
+        <link refid="filter_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
       <node id="1">
         <label>src/core/lua.h</label>
         <link refid="lua_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="4" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
       <node id="2">
@@ -52,12 +58,30 @@
         <link refid="vector_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
       </node>
-      <node id="4">
+      <node id="8">
         <label>src/core/vector_base.h</label>
         <link refid="vector__base_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
+      </node>
+      <node id="6">
+        <label>src/filters/box.h</label>
+        <link refid="box_8h"/>
+      </node>
+      <node id="5">
+        <label>src/filters/fwd.h</label>
+        <link refid="filters_2fwd_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>src/filters/triangle.h</label>
+        <link refid="triangle_8h"/>
       </node>
     </invincdepgraph>
     <innerclass refid="classdakku_1_1Lua" prot="public">dakku::Lua</innerclass>
@@ -110,7 +134,7 @@
     <programlisting>
 <codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>DAKKU_CORE_LUA_H_</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DAKKU_CORE_LUA_H_</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="fwd_8h" kindref="compound">core/fwd.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="core_2fwd_8h" kindref="compound">core/fwd.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="4"><highlight class="normal"></highlight></codeline>
 <codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(SOL_ALL_SAFETIES_ON)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="6" refid="lua_8h_1af49a65454b3af6c3580a532b5f86028e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SOL_ALL_SAFETIES_ON<sp/>1</highlight><highlight class="normal"></highlight></codeline>
@@ -119,7 +143,7 @@
 <codeline lineno="9"><highlight class="normal"></highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacedakku" kindref="compound">dakku</ref><sp/>{</highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight></codeline>
-<codeline lineno="16" refid="classdakku_1_1Lua" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref><sp/><ref refid="classdakku_1_1Lua" kindref="compound">Lua</ref><sp/>{</highlight></codeline>
+<codeline lineno="16" refid="classdakku_1_1Lua" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kindref="member">DAKKU_EXPORT_CORE</ref><sp/><ref refid="classdakku_1_1Lua" kindref="compound">Lua</ref><sp/>{</highlight></codeline>
 <codeline lineno="17"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="22" refid="classdakku_1_1Lua_1ac3145c27d97b2c4cb342c5935e41fb62" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classdakku_1_1Lua" kindref="compound">Lua</ref><sp/>&amp;<ref refid="classdakku_1_1Lua_1ac3145c27d97b2c4cb342c5935e41fb62" kindref="member">instance</ref>();</highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight></codeline>
