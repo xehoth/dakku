@@ -2,7 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
   <compounddef id="classdakku_1_1Normal" kind="class" language="C++" prot="public">
     <compoundname>dakku::Normal</compoundname>
-    <basecompoundref refid="classdakku_1_1VectorBase" prot="public" virt="non-virtual">dakku::VectorBase&lt; T, S, D &gt;</basecompoundref>
+    <basecompoundref refid="classdakku_1_1VectorBase" prot="public" virt="non-virtual">dakku::VectorBase&lt; T, S, Normal&lt; T, S &gt; &gt;</basecompoundref>
     <includes refid="vector_8h" local="no">vector.h</includes>
     <templateparamlist>
       <param>
@@ -13,14 +13,11 @@
         <declname>S</declname>
         <defname>S</defname>
       </param>
-      <param>
-        <type>typename D</type>
-      </param>
     </templateparamlist>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="classdakku_1_1Normal_1aac4ba6d499744c5e758a1d0cea091bde" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>D</type>
-        <definition>D dakku::Normal&lt; T, S, D &gt;::operator-</definition>
+      <memberdef kind="function" id="classdakku_1_1Normal_1aa04239443f23952d8ab4c57beebefe45" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classdakku_1_1Normal" kindref="compound">Normal</ref></type>
+        <definition>Normal dakku::Normal&lt; T, S &gt;::operator-</definition>
         <argsstring>() const</argsstring>
         <name>operator-</name>
         <briefdescription>
@@ -33,15 +30,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector.h" line="132" column="5" bodyfile="src/core/vector.h" bodystart="132" bodyend="136"/>
+        <location file="src/core/vector.h" line="141" column="10" bodyfile="src/core/vector.h" bodystart="141" bodyend="145"/>
       </memberdef>
-      <memberdef kind="function" id="classdakku_1_1Normal_1a81522ce35d8b925dd8e4a9fdcc56c9fa" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>D</type>
-        <definition>D dakku::Normal&lt; T, S, D &gt;::operator-</definition>
-        <argsstring>(const D &amp;rhs) const</argsstring>
+      <memberdef kind="function" id="classdakku_1_1Normal_1aa2b0eb504a11de36c077d85e22c26e5c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classdakku_1_1Normal" kindref="compound">Normal</ref></type>
+        <definition>Normal dakku::Normal&lt; T, S &gt;::operator-</definition>
+        <argsstring>(const Normal &amp;rhs) const</argsstring>
         <name>operator-</name>
         <param>
-          <type>const D &amp;</type>
+          <type>const <ref refid="classdakku_1_1Normal" kindref="compound">Normal</ref> &amp;</type>
           <declname>rhs</declname>
         </param>
         <briefdescription>
@@ -51,9 +48,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector.h" line="142" column="5" bodyfile="src/core/vector.h" bodystart="142" bodyend="146"/>
+        <location file="src/core/vector.h" line="151" column="10" bodyfile="src/core/vector.h" bodystart="151" bodyend="155"/>
       </memberdef>
-      <memberdef kind="function" id="classdakku_1_1Normal_1ac042f0cd764003c684d2880c233d041c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classdakku_1_1Normal_1aaf226b5fdc9aa50476c0aa08d497e68d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>ArithmeticType</type>
@@ -61,8 +58,8 @@
             <defname>V</defname>
           </param>
         </templateparamlist>
-        <type>D</type>
-        <definition>D dakku::Normal&lt; T, S, D &gt;::operator-</definition>
+        <type><ref refid="classdakku_1_1Normal" kindref="compound">Normal</ref></type>
+        <definition>Normal dakku::Normal&lt; T, S &gt;::operator-</definition>
         <argsstring>(V rhs) const</argsstring>
         <name>operator-</name>
         <param>
@@ -76,7 +73,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector.h" line="153" column="5" bodyfile="src/core/vector.h" bodystart="153" bodyend="157"/>
+        <location file="src/core/vector.h" line="162" column="10" bodyfile="src/core/vector.h" bodystart="162" bodyend="166"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -99,42 +96,34 @@
 <para>size </para>
 </parameterdescription>
 </parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>D</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>derived </para>
-</parameterdescription>
-</parameteritem>
 </parameterlist>
 </para>
     </detaileddescription>
     <inheritancegraph>
+      <node id="2">
+        <label>dakku::VectorBase&lt; T, S, Normal&lt; T, S &gt; &gt;</label>
+        <link refid="classdakku_1_1VectorBase"/>
+      </node>
       <node id="1">
-        <label>dakku::Normal&lt; T, S, D &gt;</label>
+        <label>dakku::Normal&lt; T, S &gt;</label>
         <link refid="classdakku_1_1Normal"/>
         <childnode refid="2" relation="public-inheritance">
         </childnode>
-      </node>
-      <node id="2">
-        <label>dakku::VectorBase&lt; T, S, D &gt;</label>
-        <link refid="classdakku_1_1VectorBase"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
+      <node id="2">
+        <label>dakku::VectorBase&lt; T, S, Normal&lt; T, S &gt; &gt;</label>
+        <link refid="classdakku_1_1VectorBase"/>
+      </node>
       <node id="1">
-        <label>dakku::Normal&lt; T, S, D &gt;</label>
+        <label>dakku::Normal&lt; T, S &gt;</label>
         <link refid="classdakku_1_1Normal"/>
         <childnode refid="2" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="2">
-        <label>dakku::VectorBase&lt; T, S, D &gt;</label>
-        <link refid="classdakku_1_1VectorBase"/>
-      </node>
     </collaborationgraph>
-    <location file="src/core/vector.h" line="123" column="1" bodyfile="src/core/vector.h" bodystart="123" bodyend="158"/>
+    <location file="src/core/vector.h" line="132" column="1" bodyfile="src/core/vector.h" bodystart="132" bodyend="167"/>
     <listofallmembers>
       <member refid="classdakku_1_1VectorBase_1a1001be586e231d6dae084d4b209f8e97" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>abs</name></member>
       <member refid="classdakku_1_1VectorBase_1abdd1df2e4dc893221408c1fb4ff0ef7e" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>ceil</name></member>
@@ -167,9 +156,9 @@
       <member refid="classdakku_1_1VectorBase_1a001bb398b96aae4135cfee98ba5259b3" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>operator+</name></member>
       <member refid="classdakku_1_1VectorBase_1a7c41aa6431258fad65b506af8171df0c" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>operator+=</name></member>
       <member refid="classdakku_1_1VectorBase_1a5c8ad5f1742dc0f2fe4b73430e90c119" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>operator+=</name></member>
-      <member refid="classdakku_1_1Normal_1aac4ba6d499744c5e758a1d0cea091bde" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>operator-</name></member>
-      <member refid="classdakku_1_1Normal_1a81522ce35d8b925dd8e4a9fdcc56c9fa" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>operator-</name></member>
-      <member refid="classdakku_1_1Normal_1ac042f0cd764003c684d2880c233d041c" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>operator-</name></member>
+      <member refid="classdakku_1_1Normal_1aa04239443f23952d8ab4c57beebefe45" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>operator-</name></member>
+      <member refid="classdakku_1_1Normal_1aa2b0eb504a11de36c077d85e22c26e5c" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>operator-</name></member>
+      <member refid="classdakku_1_1Normal_1aaf226b5fdc9aa50476c0aa08d497e68d" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>operator-</name></member>
       <member refid="classdakku_1_1VectorBase_1a65aec7973da5728caec270d91e51e399" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>operator-=</name></member>
       <member refid="classdakku_1_1VectorBase_1ab11c62c5e8c7e5dae9d64cb4a8e144f4" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>operator-=</name></member>
       <member refid="classdakku_1_1VectorBase_1aff2b2b32f14b1bf96bf233549bad1dca" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>operator/</name></member>

@@ -2,9 +2,6 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
   <compounddef id="classdakku_1_1VectorBase" kind="class" language="C++" prot="public">
     <compoundname>dakku::VectorBase</compoundname>
-    <derivedcompoundref refid="classdakku_1_1Normal" prot="public" virt="non-virtual">dakku::Normal&lt; T, S, D &gt;</derivedcompoundref>
-    <derivedcompoundref refid="classdakku_1_1Point" prot="public" virt="non-virtual">dakku::Point&lt; T, S, D &gt;</derivedcompoundref>
-    <derivedcompoundref refid="classdakku_1_1Vector" prot="public" virt="non-virtual">dakku::Vector&lt; T, S, D &gt;</derivedcompoundref>
     <includes refid="vector__base_8h" local="no">vector_base.h</includes>
     <templateparamlist>
       <param>
@@ -2161,30 +2158,6 @@ Construct a new <ref refid="classdakku_1_1Vector" kindref="compound">Vector</ref
 </parameterlist>
 </para>
     </detaileddescription>
-    <inheritancegraph>
-      <node id="2">
-        <label>dakku::Normal&lt; T, S, D &gt;</label>
-        <link refid="classdakku_1_1Normal"/>
-        <childnode refid="1" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="3">
-        <label>dakku::Point&lt; T, S, D &gt;</label>
-        <link refid="classdakku_1_1Point"/>
-        <childnode refid="1" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4">
-        <label>dakku::Vector&lt; T, S, D &gt;</label>
-        <link refid="classdakku_1_1Vector"/>
-        <childnode refid="1" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="1">
-        <label>dakku::VectorBase&lt; T, S, D &gt;</label>
-        <link refid="classdakku_1_1VectorBase"/>
-      </node>
-    </inheritancegraph>
     <location file="src/core/vector_base.h" line="20" column="1" bodyfile="src/core/vector_base.h" bodystart="20" bodyend="780"/>
     <listofallmembers>
       <member refid="classdakku_1_1VectorBase_1aba40d32d76144c345f1b8d38574e3e24" prot="private" virt="non-virtual"><scope>dakku::VectorBase</scope><name>_data</name></member>

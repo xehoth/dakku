@@ -11,6 +11,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1BoundsBase/</loc>
+         <lastmod>2022-04-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://xehoth.github.io/dakku/Classes/classdakku_1_1Logger/</loc>
          <lastmod>2022-04-25</lastmod>
          <changefreq>daily</changefreq>
@@ -47,6 +52,11 @@
     </url>
     <url>
          <loc>https://xehoth.github.io/dakku/Files/</loc>
+         <lastmod>2022-04-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xehoth.github.io/dakku/Files/bounds_8h/</loc>
          <lastmod>2022-04-25</lastmod>
          <changefreq>daily</changefreq>
     </url>

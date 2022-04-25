@@ -403,7 +403,7 @@
 <h1 id="dakkuvector">dakku::Vector</h1>
 <p>vector  <a href="#detailed-description">More...</a></p>
 <p><code>#include &lt;vector.h&gt;</code></p>
-<p>Inherits from <a href="/dakku/Classes/classdakku_1_1VectorBase/">dakku::VectorBase&lt; T, S, D &gt;</a></p>
+<p>Inherits from <a href="/dakku/Classes/classdakku_1_1VectorBase/">dakku::VectorBase&lt; T, S, Vector&lt; T, S &gt; &gt;</a></p>
 <h2 id="public-functions">Public Functions</h2>
 <table>
 <thead>
@@ -414,21 +414,21 @@
 </thead>
 <tbody>
 <tr>
-<td>D</td>
+<td><a href="/dakku/Classes/classdakku_1_1Vector/">Vector</a></td>
 <td><strong><a href="/dakku/Classes/classdakku_1_1Vector/#function-operator-">operator-</a></strong>() const<br>negation of the vector</td>
 </tr>
 <tr>
-<td>D</td>
-<td><strong><a href="/dakku/Classes/classdakku_1_1Vector/#function-operator-">operator-</a></strong>(const D &amp; rhs) const<br>subtraction</td>
+<td><a href="/dakku/Classes/classdakku_1_1Vector/">Vector</a></td>
+<td><strong><a href="/dakku/Classes/classdakku_1_1Vector/#function-operator-">operator-</a></strong>(const <a href="/dakku/Classes/classdakku_1_1Vector/">Vector</a> &amp; rhs) const<br>subtraction</td>
 </tr>
 <tr>
-<td>template &lt;ArithmeticType V> <br>D</td>
+<td>template &lt;ArithmeticType V> <br><a href="/dakku/Classes/classdakku_1_1Vector/">Vector</a></td>
 <td><strong><a href="/dakku/Classes/classdakku_1_1Vector/#function-operator-">operator-</a></strong>(V rhs) const<br>subtraction</td>
 </tr>
 </tbody>
 </table>
 <h2 id="additional-inherited-members">Additional inherited members</h2>
-<p><strong>Public Functions inherited from <a href="/dakku/Classes/classdakku_1_1VectorBase/">dakku::VectorBase&lt; T, S, D &gt;</a></strong></p>
+<p><strong>Public Functions inherited from <a href="/dakku/Classes/classdakku_1_1VectorBase/">dakku::VectorBase&lt; T, S, Vector&lt; T, S &gt; &gt;</a></strong></p>
 <table>
 <thead>
 <tr>
@@ -703,7 +703,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Friends inherited from <a href="/dakku/Classes/classdakku_1_1VectorBase/">dakku::VectorBase&lt; T, S, D &gt;</a></strong></p>
+<p><strong>Friends inherited from <a href="/dakku/Classes/classdakku_1_1VectorBase/">dakku::VectorBase&lt; T, S, Vector&lt; T, S &gt; &gt;</a></strong></p>
 <table>
 <thead>
 <tr>
@@ -772,38 +772,36 @@
 </table>
 <h2 id="detailed-description">Detailed Description</h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kt">size_t</span><span class="w"> </span><span class="n">S</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">typename</span><span class="w"> </span><span class="nc">D</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">class</span><span class="w"> </span><span class="nc">dakku</span><span class="o">::</span><span class="n">Vector</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kt">size_t</span><span class="w"> </span><span class="n">S</span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">class</span><span class="w"> </span><span class="nc">dakku</span><span class="o">::</span><span class="n">Vector</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <p>vector </p>
 <p><strong>Template Parameters</strong>: </p>
 <ul>
 <li><strong>T</strong> type </li>
 <li><strong>S</strong> size </li>
-<li><strong>D</strong> derived </li>
 </ul>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-operator-">function operator-</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kr">inline</span><span class="w"> </span><span class="n">D</span><span class="w"> </span><span class="k">operator</span><span class="o">-</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kr">inline</span><span class="w"> </span><span class="n">Vector</span><span class="w"> </span><span class="k">operator</span><span class="o">-</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
 </code></pre></div>
 <p>negation of the vector </p>
 <p><strong>Return</strong>: <span class="arithmatex">\(-\vec v\)</span> </p>
 <h3 id="function-operator-_1">function operator-</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kr">inline</span><span class="w"> </span><span class="n">D</span><span class="w"> </span><span class="k">operator</span><span class="o">-</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">D</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">rhs</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kr">inline</span><span class="w"> </span><span class="n">Vector</span><span class="w"> </span><span class="k">operator</span><span class="o">-</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Vector</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">rhs</span><span class="w"></span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
 </code></pre></div>
 <p>subtraction </p>
 <h3 id="function-operator-_2">function operator-</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="n">ArithmeticType</span><span class="w"> </span><span class="n">V</span><span class="o">&gt;</span><span class="w"></span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kr">inline</span><span class="w"> </span><span class="n">D</span><span class="w"> </span><span class="k">operator</span><span class="o">-</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kr">inline</span><span class="w"> </span><span class="n">Vector</span><span class="w"> </span><span class="k">operator</span><span class="o">-</span><span class="p">(</span><span class="w"></span>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="n">V</span><span class="w"> </span><span class="n">rhs</span><span class="w"></span>
 <a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
 </code></pre></div>
 <p>subtraction </p>
 <hr />
-<p>Updated on 2022-04-25 at 08:42:24 +0000</p>
+<p>Updated on 2022-04-25 at 11:08:30 +0000</p>
 
               
             </article>

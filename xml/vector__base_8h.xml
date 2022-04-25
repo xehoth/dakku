@@ -81,9 +81,15 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
+      <node id="3">
+        <label>src/core/bounds.h</label>
+        <link refid="bounds_8h"/>
+      </node>
       <node id="2">
         <label>src/core/vector.h</label>
         <link refid="vector_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
       </node>
       <node id="1">
         <label>src/core/vector_base.h</label>

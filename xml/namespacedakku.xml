@@ -2,12 +2,132 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
   <compounddef id="namespacedakku" kind="namespace" language="C++">
     <compoundname>dakku</compoundname>
+    <innerclass refid="classdakku_1_1BoundsBase" prot="public">dakku::BoundsBase</innerclass>
     <innerclass refid="classdakku_1_1Logger" prot="public">dakku::Logger</innerclass>
     <innerclass refid="classdakku_1_1Lua" prot="public">dakku::Lua</innerclass>
     <innerclass refid="classdakku_1_1Normal" prot="public">dakku::Normal</innerclass>
     <innerclass refid="classdakku_1_1Point" prot="public">dakku::Point</innerclass>
     <innerclass refid="classdakku_1_1Vector" prot="public">dakku::Vector</innerclass>
     <innerclass refid="classdakku_1_1VectorBase" prot="public">dakku::VectorBase</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespacedakku_1a2431c33b3d39e5cf0d0f8e952ea2b834" prot="public" static="no">
+        <type><ref refid="classdakku_1_1Vector" kindref="compound">Vector</ref>&lt; int, 2 &gt;</type>
+        <definition>using dakku::Vector2i = typedef Vector&lt;int, 2&gt;</definition>
+        <argsstring></argsstring>
+        <name>Vector2i</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/vector.h" line="52" column="1" bodyfile="src/core/vector.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacedakku_1a99b4c761ebbe92955e167b5e27cb5992" prot="public" static="no">
+        <type><ref refid="classdakku_1_1Vector" kindref="compound">Vector</ref>&lt; float, 2 &gt;</type>
+        <definition>using dakku::Vector2f = typedef Vector&lt;float, 2&gt;</definition>
+        <argsstring></argsstring>
+        <name>Vector2f</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/vector.h" line="53" column="1" bodyfile="src/core/vector.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacedakku_1ad924c9ec2e2e6a86ebb00f41aedc3e77" prot="public" static="no">
+        <type><ref refid="classdakku_1_1Vector" kindref="compound">Vector</ref>&lt; int, 3 &gt;</type>
+        <definition>using dakku::Vector3i = typedef Vector&lt;int, 3&gt;</definition>
+        <argsstring></argsstring>
+        <name>Vector3i</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/vector.h" line="54" column="1" bodyfile="src/core/vector.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacedakku_1a890ec4679d6f6f83722a0b5a41d0eebb" prot="public" static="no">
+        <type><ref refid="classdakku_1_1Vector" kindref="compound">Vector</ref>&lt; float, 3 &gt;</type>
+        <definition>using dakku::Vector3f = typedef Vector&lt;float, 3&gt;</definition>
+        <argsstring></argsstring>
+        <name>Vector3f</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/vector.h" line="55" column="1" bodyfile="src/core/vector.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacedakku_1a1fb7babbecae697c3b67e44b28425c43" prot="public" static="no">
+        <type><ref refid="classdakku_1_1Point" kindref="compound">Point</ref>&lt; float, 3 &gt;</type>
+        <definition>using dakku::Point3f = typedef Point&lt;float, 3&gt;</definition>
+        <argsstring></argsstring>
+        <name>Point3f</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/vector.h" line="116" column="1" bodyfile="src/core/vector.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacedakku_1a8f5683cd8dc29bf2c90940f0dadcc5aa" prot="public" static="no">
+        <type><ref refid="classdakku_1_1Point" kindref="compound">Point</ref>&lt; int, 3 &gt;</type>
+        <definition>using dakku::Point3i = typedef Point&lt;int, 3&gt;</definition>
+        <argsstring></argsstring>
+        <name>Point3i</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/vector.h" line="117" column="1" bodyfile="src/core/vector.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacedakku_1aa5c5407fb67da06d222ad3881949e9b6" prot="public" static="no">
+        <type><ref refid="classdakku_1_1Point" kindref="compound">Point</ref>&lt; float, 2 &gt;</type>
+        <definition>using dakku::Point2f = typedef Point&lt;float, 2&gt;</definition>
+        <argsstring></argsstring>
+        <name>Point2f</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/vector.h" line="118" column="1" bodyfile="src/core/vector.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacedakku_1a8a5f9e6a937f1534e71801592fcab641" prot="public" static="no">
+        <type><ref refid="classdakku_1_1Point" kindref="compound">Point</ref>&lt; int, 2 &gt;</type>
+        <definition>using dakku::Point2i = typedef Point&lt;int, 2&gt;</definition>
+        <argsstring></argsstring>
+        <name>Point2i</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/vector.h" line="119" column="1" bodyfile="src/core/vector.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacedakku_1ae27019e27a867bc17249704ed8dcb5d8" prot="public" static="no">
+        <type><ref refid="classdakku_1_1Normal" kindref="compound">Normal</ref>&lt; float, 3 &gt;</type>
+        <definition>using dakku::Normal3f = typedef Normal&lt;float, 3&gt;</definition>
+        <argsstring></argsstring>
+        <name>Normal3f</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/vector.h" line="169" column="1" bodyfile="src/core/vector.h" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
       <sectiondef kind="func">
       <memberdef kind="function" id="namespacedakku_1a08f737017abfd03bfaeb4b0c0d1d8928" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -89,22 +209,13 @@
         </inbodydescription>
         <location file="src/core/math_func.h" line="28" column="21" bodyfile="src/core/math_func.h" bodystart="28" bodyend="28"/>
       </memberdef>
-      <memberdef kind="function" id="namespacedakku_1ae303c565a0d5e6176b10af7aca2e7e53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespacedakku_1af5ee18e804d8bfac2bf21f93a2f63aa6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
-        <definition>dakku::DAKKU_DECLARE_VECTOR_TYPE</definition>
-        <argsstring>(Vector2i, Vector, int, 2)</argsstring>
-        <name>DAKKU_DECLARE_VECTOR_TYPE</name>
+        <definition>dakku::DAKKU_DECLARE_LUA_OBJECT</definition>
+        <argsstring>(Vector2i)</argsstring>
+        <name>DAKKU_DECLARE_LUA_OBJECT</name>
         <param>
-          <type>Vector2i</type>
-        </param>
-        <param>
-          <type><ref refid="classdakku_1_1Vector" kindref="compound">Vector</ref></type>
-        </param>
-        <param>
-          <type>int</type>
-        </param>
-        <param>
-          <type>2</type>
+          <type><ref refid="namespacedakku_1a2431c33b3d39e5cf0d0f8e952ea2b834" kindref="member">Vector2i</ref></type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -112,24 +223,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector.h" line="62" column="1" declfile="src/core/vector.h" declline="62" declcolumn="1"/>
+        <location file="src/core/vector.h" line="57" column="1" declfile="src/core/vector.h" declline="57" declcolumn="1"/>
       </memberdef>
-      <memberdef kind="function" id="namespacedakku_1a3d234abea587b4d5f1a9ed2a572a18d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespacedakku_1a961c6cc58ef365112319c499f1c16bd5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
-        <definition>dakku::DAKKU_DECLARE_VECTOR_TYPE</definition>
-        <argsstring>(Vector2f, Vector, float, 2)</argsstring>
-        <name>DAKKU_DECLARE_VECTOR_TYPE</name>
+        <definition>dakku::DAKKU_DECLARE_LUA_OBJECT</definition>
+        <argsstring>(Vector2f)</argsstring>
+        <name>DAKKU_DECLARE_LUA_OBJECT</name>
         <param>
-          <type>Vector2f</type>
-        </param>
-        <param>
-          <type><ref refid="classdakku_1_1Vector" kindref="compound">Vector</ref></type>
-        </param>
-        <param>
-          <type>float</type>
-        </param>
-        <param>
-          <type>2</type>
+          <type><ref refid="namespacedakku_1a99b4c761ebbe92955e167b5e27cb5992" kindref="member">Vector2f</ref></type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -137,24 +239,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector.h" line="63" column="1" declfile="src/core/vector.h" declline="63" declcolumn="1"/>
+        <location file="src/core/vector.h" line="58" column="1" declfile="src/core/vector.h" declline="58" declcolumn="1"/>
       </memberdef>
-      <memberdef kind="function" id="namespacedakku_1a9b62fff909c0a2340f5a280a9d6223b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespacedakku_1a9ee2a15c54c05140193e2a18b16498fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
-        <definition>dakku::DAKKU_DECLARE_VECTOR_TYPE</definition>
-        <argsstring>(Vector3i, Vector, int, 3)</argsstring>
-        <name>DAKKU_DECLARE_VECTOR_TYPE</name>
+        <definition>dakku::DAKKU_DECLARE_LUA_OBJECT</definition>
+        <argsstring>(Vector3i)</argsstring>
+        <name>DAKKU_DECLARE_LUA_OBJECT</name>
         <param>
-          <type>Vector3i</type>
-        </param>
-        <param>
-          <type><ref refid="classdakku_1_1Vector" kindref="compound">Vector</ref></type>
-        </param>
-        <param>
-          <type>int</type>
-        </param>
-        <param>
-          <type>3</type>
+          <type><ref refid="namespacedakku_1ad924c9ec2e2e6a86ebb00f41aedc3e77" kindref="member">Vector3i</ref></type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -162,24 +255,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector.h" line="64" column="1" declfile="src/core/vector.h" declline="64" declcolumn="1"/>
+        <location file="src/core/vector.h" line="59" column="1" declfile="src/core/vector.h" declline="59" declcolumn="1"/>
       </memberdef>
-      <memberdef kind="function" id="namespacedakku_1a468ec76a23de6c67d1a82265d1ac4a3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespacedakku_1a4f5d78b55c1f6a5571a05304a9aa3779" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
-        <definition>dakku::DAKKU_DECLARE_VECTOR_TYPE</definition>
-        <argsstring>(Vector3f, Vector, float, 3)</argsstring>
-        <name>DAKKU_DECLARE_VECTOR_TYPE</name>
+        <definition>dakku::DAKKU_DECLARE_LUA_OBJECT</definition>
+        <argsstring>(Vector3f)</argsstring>
+        <name>DAKKU_DECLARE_LUA_OBJECT</name>
         <param>
-          <type>Vector3f</type>
-        </param>
-        <param>
-          <type><ref refid="classdakku_1_1Vector" kindref="compound">Vector</ref></type>
-        </param>
-        <param>
-          <type>float</type>
-        </param>
-        <param>
-          <type>3</type>
+          <type><ref refid="namespacedakku_1a890ec4679d6f6f83722a0b5a41d0eebb" kindref="member">Vector3f</ref></type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -187,27 +271,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector.h" line="65" column="1" declfile="src/core/vector.h" declline="65" declcolumn="1"/>
+        <location file="src/core/vector.h" line="60" column="1" declfile="src/core/vector.h" declline="60" declcolumn="1"/>
       </memberdef>
-      <memberdef kind="function" id="namespacedakku_1ab924c4a5b6256128014af8e4656f73f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespacedakku_1a4cf6521b6823380ec60ccca3cfcfaa46" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
-        <definition>dakku::DAKKU_DECLARE_POINT_TYPE</definition>
-        <argsstring>(Point3f, Point, float, 3, Vector3f)</argsstring>
-        <name>DAKKU_DECLARE_POINT_TYPE</name>
+        <definition>dakku::DAKKU_DECLARE_LUA_OBJECT</definition>
+        <argsstring>(Point3f)</argsstring>
+        <name>DAKKU_DECLARE_LUA_OBJECT</name>
         <param>
-          <type>Point3f</type>
-        </param>
-        <param>
-          <type><ref refid="classdakku_1_1Point" kindref="compound">Point</ref></type>
-        </param>
-        <param>
-          <type>float</type>
-        </param>
-        <param>
-          <type>3</type>
-        </param>
-        <param>
-          <type>Vector3f</type>
+          <type><ref refid="namespacedakku_1a1fb7babbecae697c3b67e44b28425c43" kindref="member">Point3f</ref></type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -215,27 +287,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector.h" line="110" column="1" declfile="src/core/vector.h" declline="110" declcolumn="1"/>
+        <location file="src/core/vector.h" line="120" column="1" declfile="src/core/vector.h" declline="120" declcolumn="1"/>
       </memberdef>
-      <memberdef kind="function" id="namespacedakku_1a09b52d0a7df2166ec5f4f543adf504eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespacedakku_1a796d8a3dc7c0dbe90129fb0e15b313e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
-        <definition>dakku::DAKKU_DECLARE_POINT_TYPE</definition>
-        <argsstring>(Point3i, Point, int, 3, Vector3i)</argsstring>
-        <name>DAKKU_DECLARE_POINT_TYPE</name>
+        <definition>dakku::DAKKU_DECLARE_LUA_OBJECT</definition>
+        <argsstring>(Point3i)</argsstring>
+        <name>DAKKU_DECLARE_LUA_OBJECT</name>
         <param>
-          <type>Point3i</type>
-        </param>
-        <param>
-          <type><ref refid="classdakku_1_1Point" kindref="compound">Point</ref></type>
-        </param>
-        <param>
-          <type>int</type>
-        </param>
-        <param>
-          <type>3</type>
-        </param>
-        <param>
-          <type>Vector3i</type>
+          <type><ref refid="namespacedakku_1a8f5683cd8dc29bf2c90940f0dadcc5aa" kindref="member">Point3i</ref></type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -243,27 +303,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector.h" line="111" column="1" declfile="src/core/vector.h" declline="111" declcolumn="1"/>
+        <location file="src/core/vector.h" line="121" column="1" declfile="src/core/vector.h" declline="121" declcolumn="1"/>
       </memberdef>
-      <memberdef kind="function" id="namespacedakku_1a5119cab995df96b5bd09a4939f6033a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespacedakku_1aabd06d61579de54a32a03434e895d8e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
-        <definition>dakku::DAKKU_DECLARE_POINT_TYPE</definition>
-        <argsstring>(Point2f, Point, float, 2, Vector2f)</argsstring>
-        <name>DAKKU_DECLARE_POINT_TYPE</name>
+        <definition>dakku::DAKKU_DECLARE_LUA_OBJECT</definition>
+        <argsstring>(Point2f)</argsstring>
+        <name>DAKKU_DECLARE_LUA_OBJECT</name>
         <param>
-          <type>Point2f</type>
-        </param>
-        <param>
-          <type><ref refid="classdakku_1_1Point" kindref="compound">Point</ref></type>
-        </param>
-        <param>
-          <type>float</type>
-        </param>
-        <param>
-          <type>2</type>
-        </param>
-        <param>
-          <type>Vector2f</type>
+          <type><ref refid="namespacedakku_1aa5c5407fb67da06d222ad3881949e9b6" kindref="member">Point2f</ref></type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -271,27 +319,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector.h" line="112" column="1" declfile="src/core/vector.h" declline="112" declcolumn="1"/>
+        <location file="src/core/vector.h" line="122" column="1" declfile="src/core/vector.h" declline="122" declcolumn="1"/>
       </memberdef>
-      <memberdef kind="function" id="namespacedakku_1acabc131b8ead3ecb512e5eda962116e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespacedakku_1a8155d9e5e0dbeef953fe78f3d1c534e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
-        <definition>dakku::DAKKU_DECLARE_POINT_TYPE</definition>
-        <argsstring>(Point2i, Point, int, 2, Vector2i)</argsstring>
-        <name>DAKKU_DECLARE_POINT_TYPE</name>
+        <definition>dakku::DAKKU_DECLARE_LUA_OBJECT</definition>
+        <argsstring>(Point2i)</argsstring>
+        <name>DAKKU_DECLARE_LUA_OBJECT</name>
         <param>
-          <type>Point2i</type>
-        </param>
-        <param>
-          <type><ref refid="classdakku_1_1Point" kindref="compound">Point</ref></type>
-        </param>
-        <param>
-          <type>int</type>
-        </param>
-        <param>
-          <type>2</type>
-        </param>
-        <param>
-          <type>Vector2i</type>
+          <type><ref refid="namespacedakku_1a8a5f9e6a937f1534e71801592fcab641" kindref="member">Point2i</ref></type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -299,24 +335,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector.h" line="113" column="1" declfile="src/core/vector.h" declline="113" declcolumn="1"/>
+        <location file="src/core/vector.h" line="123" column="1" declfile="src/core/vector.h" declline="123" declcolumn="1"/>
       </memberdef>
-      <memberdef kind="function" id="namespacedakku_1abca7bbca41d0c48fad018ab314a0addd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespacedakku_1a774abf706b01f9f62b922949f68c3f28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
-        <definition>dakku::DAKKU_DECLARE_VECTOR_TYPE</definition>
-        <argsstring>(Normal3f, Normal, float, 3)</argsstring>
-        <name>DAKKU_DECLARE_VECTOR_TYPE</name>
+        <definition>dakku::DAKKU_DECLARE_LUA_OBJECT</definition>
+        <argsstring>(Normal3f)</argsstring>
+        <name>DAKKU_DECLARE_LUA_OBJECT</name>
         <param>
-          <type>Normal3f</type>
-        </param>
-        <param>
-          <type><ref refid="classdakku_1_1Normal" kindref="compound">Normal</ref></type>
-        </param>
-        <param>
-          <type>float</type>
-        </param>
-        <param>
-          <type>3</type>
+          <type><ref refid="namespacedakku_1ae27019e27a867bc17249704ed8dcb5d8" kindref="member">Normal3f</ref></type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -324,7 +351,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector.h" line="160" column="1" declfile="src/core/vector.h" declline="160" declcolumn="1"/>
+        <location file="src/core/vector.h" line="170" column="1" declfile="src/core/vector.h" declline="170" declcolumn="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -332,6 +359,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/core/constants.h" line="5" column="1"/>
+    <location file="src/core/bounds.h" line="8" column="1"/>
   </compounddef>
 </doxygen>

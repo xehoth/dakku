@@ -2,7 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
   <compounddef id="classdakku_1_1Point" kind="class" language="C++" prot="public">
     <compoundname>dakku::Point</compoundname>
-    <basecompoundref refid="classdakku_1_1VectorBase" prot="public" virt="non-virtual">dakku::VectorBase&lt; T, S, D &gt;</basecompoundref>
+    <basecompoundref refid="classdakku_1_1VectorBase" prot="public" virt="non-virtual">dakku::VectorBase&lt; T, S, Point&lt; T, S &gt; &gt;</basecompoundref>
     <includes refid="vector_8h" local="no">vector.h</includes>
     <templateparamlist>
       <param>
@@ -13,10 +13,87 @@
         <declname>S</declname>
         <defname>S</defname>
       </param>
-      <param>
-        <type>typename D</type>
-      </param>
     </templateparamlist>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdakku_1_1Point_1ac1e97b68aae88bc8d3db4632c5effd1a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classdakku_1_1Point" kindref="compound">Point</ref></type>
+        <definition>Point dakku::Point&lt; T, S &gt;::operator-</definition>
+        <argsstring>() const</argsstring>
+        <name>operator-</name>
+        <briefdescription>
+<para>negation of the point </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>$-v$ </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/vector.h" line="78" column="9" bodyfile="src/core/vector.h" bodystart="78" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1Point_1a357933cb31a59a032eeed9a8fad60aa8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>ArithmeticType</type>
+            <declname>V</declname>
+            <defname>V</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classdakku_1_1Point" kindref="compound">Point</ref></type>
+        <definition>Point dakku::Point&lt; T, S &gt;::operator-</definition>
+        <argsstring>(V rhs) const</argsstring>
+        <name>operator-</name>
+        <param>
+          <type>V</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>subtraction </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/vector.h" line="89" column="9" bodyfile="src/core/vector.h" bodystart="89" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1Point_1a92f03c981317f9ea156e6878d165d75f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classdakku_1_1Vector" kindref="compound">Vector</ref>&lt; T, S &gt;</type>
+        <definition>Vector&lt; T, S &gt; dakku::Point&lt; T, S &gt;::operator-</definition>
+        <argsstring>(const Point &amp;rhs) const</argsstring>
+        <name>operator-</name>
+        <param>
+          <type>const <ref refid="classdakku_1_1Point" kindref="compound">Point</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>subtraction </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/vector.h" line="99" column="10" bodyfile="src/core/vector.h" bodystart="99" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1Point_1a3033f59d18e51f6978d102307cdd9a9a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classdakku_1_1Point" kindref="compound">Point</ref></type>
+        <definition>Point dakku::Point&lt; T, S &gt;::operator-</definition>
+        <argsstring>(const Vector&lt; T, S &gt; &amp;rhs) const</argsstring>
+        <name>operator-</name>
+        <param>
+          <type>const <ref refid="classdakku_1_1Vector" kindref="compound">Vector</ref>&lt; T, S &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>subtraction </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/vector.h" line="109" column="9" bodyfile="src/core/vector.h" bodystart="109" bodyend="113"/>
+      </memberdef>
+      </sectiondef>
     <briefdescription>
 <para>point </para>
     </briefdescription>
@@ -37,42 +114,34 @@
 <para>size </para>
 </parameterdescription>
 </parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>D</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>derived </para>
-</parameterdescription>
-</parameteritem>
 </parameterlist>
 </para>
     </detaileddescription>
     <inheritancegraph>
+      <node id="2">
+        <label>dakku::VectorBase&lt; T, S, Point&lt; T, S &gt; &gt;</label>
+        <link refid="classdakku_1_1VectorBase"/>
+      </node>
       <node id="1">
-        <label>dakku::Point&lt; T, S, D &gt;</label>
+        <label>dakku::Point&lt; T, S &gt;</label>
         <link refid="classdakku_1_1Point"/>
         <childnode refid="2" relation="public-inheritance">
         </childnode>
-      </node>
-      <node id="2">
-        <label>dakku::VectorBase&lt; T, S, D &gt;</label>
-        <link refid="classdakku_1_1VectorBase"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
+      <node id="2">
+        <label>dakku::VectorBase&lt; T, S, Point&lt; T, S &gt; &gt;</label>
+        <link refid="classdakku_1_1VectorBase"/>
+      </node>
       <node id="1">
-        <label>dakku::Point&lt; T, S, D &gt;</label>
+        <label>dakku::Point&lt; T, S &gt;</label>
         <link refid="classdakku_1_1Point"/>
         <childnode refid="2" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="2">
-        <label>dakku::VectorBase&lt; T, S, D &gt;</label>
-        <link refid="classdakku_1_1VectorBase"/>
-      </node>
     </collaborationgraph>
-    <location file="src/core/vector.h" line="75" column="1" bodyfile="src/core/vector.h" bodystart="75" bodyend="78"/>
+    <location file="src/core/vector.h" line="69" column="1" bodyfile="src/core/vector.h" bodystart="69" bodyend="114"/>
     <listofallmembers>
       <member refid="classdakku_1_1VectorBase_1a1001be586e231d6dae084d4b209f8e97" prot="public" virt="non-virtual"><scope>dakku::Point</scope><name>abs</name></member>
       <member refid="classdakku_1_1VectorBase_1abdd1df2e4dc893221408c1fb4ff0ef7e" prot="public" virt="non-virtual"><scope>dakku::Point</scope><name>ceil</name></member>
@@ -105,6 +174,10 @@
       <member refid="classdakku_1_1VectorBase_1a001bb398b96aae4135cfee98ba5259b3" prot="public" virt="non-virtual"><scope>dakku::Point</scope><name>operator+</name></member>
       <member refid="classdakku_1_1VectorBase_1a7c41aa6431258fad65b506af8171df0c" prot="public" virt="non-virtual"><scope>dakku::Point</scope><name>operator+=</name></member>
       <member refid="classdakku_1_1VectorBase_1a5c8ad5f1742dc0f2fe4b73430e90c119" prot="public" virt="non-virtual"><scope>dakku::Point</scope><name>operator+=</name></member>
+      <member refid="classdakku_1_1Point_1ac1e97b68aae88bc8d3db4632c5effd1a" prot="public" virt="non-virtual"><scope>dakku::Point</scope><name>operator-</name></member>
+      <member refid="classdakku_1_1Point_1a357933cb31a59a032eeed9a8fad60aa8" prot="public" virt="non-virtual"><scope>dakku::Point</scope><name>operator-</name></member>
+      <member refid="classdakku_1_1Point_1a92f03c981317f9ea156e6878d165d75f" prot="public" virt="non-virtual"><scope>dakku::Point</scope><name>operator-</name></member>
+      <member refid="classdakku_1_1Point_1a3033f59d18e51f6978d102307cdd9a9a" prot="public" virt="non-virtual"><scope>dakku::Point</scope><name>operator-</name></member>
       <member refid="classdakku_1_1VectorBase_1a65aec7973da5728caec270d91e51e399" prot="public" virt="non-virtual"><scope>dakku::Point</scope><name>operator-=</name></member>
       <member refid="classdakku_1_1VectorBase_1ab11c62c5e8c7e5dae9d64cb4a8e144f4" prot="public" virt="non-virtual"><scope>dakku::Point</scope><name>operator-=</name></member>
       <member refid="classdakku_1_1VectorBase_1aff2b2b32f14b1bf96bf233549bad1dca" prot="public" virt="non-virtual"><scope>dakku::Point</scope><name>operator/</name></member>

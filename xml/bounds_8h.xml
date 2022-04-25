@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="bounds_8h" kind="file" language="C++">
+    <compoundname>bounds.h</compoundname>
+    <includes refid="vector_8h" local="no">core/vector.h</includes>
+    <includes local="no">iterator</includes>
+    <includes local="no">utility</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>src/core/bounds.h</label>
+        <link refid="bounds_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>core/fwd.h</label>
+        <link refid="fwd_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>core/logger.h</label>
+        <link refid="logger_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>core/lua.h</label>
+        <link refid="lua_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>core/vector.h</label>
+        <link refid="vector_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>core/vector_base.h</label>
+        <link refid="vector__base_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>platform.h</label>
+        <link refid="platform_8h"/>
+      </node>
+      <node id="13">
+        <label>array</label>
+      </node>
+      <node id="16">
+        <label>iterator</label>
+      </node>
+      <node id="8">
+        <label>memory</label>
+      </node>
+      <node id="14">
+        <label>numeric</label>
+      </node>
+      <node id="12">
+        <label>sol/sol.hpp</label>
+      </node>
+      <node id="15">
+        <label>span</label>
+      </node>
+      <node id="10">
+        <label>spdlog/fmt/ostr.h</label>
+      </node>
+      <node id="9">
+        <label>spdlog/spdlog.h</label>
+      </node>
+      <node id="7">
+        <label>type_traits</label>
+      </node>
+      <node id="17">
+        <label>utility</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classdakku_1_1BoundsBase" prot="public">dakku::BoundsBase</innerclass>
+    <innernamespace refid="namespacedakku">dakku</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>DAKKU_CORE_BOUNDS_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DAKKU_CORE_BOUNDS_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="vector_8h" kindref="compound">core/vector.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iterator&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;utility&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="namespacedakku" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacedakku" kindref="compound">dakku</ref><sp/>{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;ArithmeticType<sp/>T,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>S&gt;</highlight></codeline>
+<codeline lineno="17" refid="classdakku_1_1BoundsBase" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdakku_1_1BoundsBase" kindref="compound">BoundsBase</ref><sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="23" refid="classdakku_1_1BoundsBase_1a4dea00502d665d2f3e6657507a9b03fb" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classdakku_1_1BoundsBase_1a4dea00502d665d2f3e6657507a9b03fb" kindref="member">BoundsBase</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="classdakku_1_1BoundsBase_1abd7c34bec0f05f1dfb494b76eed47622" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classdakku_1_1Point" kindref="compound">Point&lt;T, S&gt;</ref><sp/><ref refid="classdakku_1_1BoundsBase_1abd7c34bec0f05f1dfb494b76eed47622" kindref="member">pMin</ref>{std::numeric_limits&lt;T&gt;::max()};</highlight></codeline>
+<codeline lineno="28" refid="classdakku_1_1BoundsBase_1a1df49abc60c6cee7febd54aa46d04aa8" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classdakku_1_1Point" kindref="compound">Point&lt;T, S&gt;</ref><sp/><ref refid="classdakku_1_1BoundsBase_1a1df49abc60c6cee7febd54aa46d04aa8" kindref="member">pMax</ref>{std::numeric_limits&lt;T&gt;::lowest()};</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dakku</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="src/core/bounds.h"/>
+  </compounddef>
+</doxygen>

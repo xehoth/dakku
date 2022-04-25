@@ -1,5 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.2" xml:lang="en-US">
+  <compound refid="classdakku_1_1BoundsBase" kind="class"><name>dakku::BoundsBase</name>
+    <member refid="classdakku_1_1BoundsBase_1abd7c34bec0f05f1dfb494b76eed47622" kind="variable"><name>pMin</name></member>
+    <member refid="classdakku_1_1BoundsBase_1a1df49abc60c6cee7febd54aa46d04aa8" kind="variable"><name>pMax</name></member>
+    <member refid="classdakku_1_1BoundsBase_1a4dea00502d665d2f3e6657507a9b03fb" kind="function"><name>BoundsBase</name></member>
+  </compound>
   <compound refid="classdakku_1_1Logger" kind="class"><name>dakku::Logger</name>
     <member refid="classdakku_1_1Logger_1aa6afc845ad6d0bcec3849515afc971cd" kind="variable"><name>_logger</name></member>
     <member refid="classdakku_1_1Logger_1a75e95ca57e099bb7992724feec106edf" kind="function"><name>get</name></member>
@@ -12,16 +17,20 @@
     <member refid="classdakku_1_1Lua_1a04a19bad0e52044a0422a23eee0ffc8c" kind="function"><name>get_state</name></member>
   </compound>
   <compound refid="classdakku_1_1Normal" kind="class"><name>dakku::Normal</name>
-    <member refid="classdakku_1_1Normal_1aac4ba6d499744c5e758a1d0cea091bde" kind="function"><name>operator-</name></member>
-    <member refid="classdakku_1_1Normal_1a81522ce35d8b925dd8e4a9fdcc56c9fa" kind="function"><name>operator-</name></member>
-    <member refid="classdakku_1_1Normal_1ac042f0cd764003c684d2880c233d041c" kind="function"><name>operator-</name></member>
+    <member refid="classdakku_1_1Normal_1aa04239443f23952d8ab4c57beebefe45" kind="function"><name>operator-</name></member>
+    <member refid="classdakku_1_1Normal_1aa2b0eb504a11de36c077d85e22c26e5c" kind="function"><name>operator-</name></member>
+    <member refid="classdakku_1_1Normal_1aaf226b5fdc9aa50476c0aa08d497e68d" kind="function"><name>operator-</name></member>
   </compound>
   <compound refid="classdakku_1_1Point" kind="class"><name>dakku::Point</name>
+    <member refid="classdakku_1_1Point_1ac1e97b68aae88bc8d3db4632c5effd1a" kind="function"><name>operator-</name></member>
+    <member refid="classdakku_1_1Point_1a357933cb31a59a032eeed9a8fad60aa8" kind="function"><name>operator-</name></member>
+    <member refid="classdakku_1_1Point_1a92f03c981317f9ea156e6878d165d75f" kind="function"><name>operator-</name></member>
+    <member refid="classdakku_1_1Point_1a3033f59d18e51f6978d102307cdd9a9a" kind="function"><name>operator-</name></member>
   </compound>
   <compound refid="classdakku_1_1Vector" kind="class"><name>dakku::Vector</name>
-    <member refid="classdakku_1_1Vector_1a0b156b7ee7b858ca8479dedb09845f1c" kind="function"><name>operator-</name></member>
-    <member refid="classdakku_1_1Vector_1a124a685ee7a313fa05c7c82475582bd6" kind="function"><name>operator-</name></member>
-    <member refid="classdakku_1_1Vector_1aea6318ab05aad538c997ec20b28a089a" kind="function"><name>operator-</name></member>
+    <member refid="classdakku_1_1Vector_1aeab41d2f9c66295a58b4e63c349a96d4" kind="function"><name>operator-</name></member>
+    <member refid="classdakku_1_1Vector_1a45b30e1e82036c16ae6833e3b02173f3" kind="function"><name>operator-</name></member>
+    <member refid="classdakku_1_1Vector_1a99c4a67ed37c3c396fd54d5b4d86b7fa" kind="function"><name>operator-</name></member>
   </compound>
   <compound refid="classdakku_1_1VectorBase" kind="class"><name>dakku::VectorBase</name>
     <member refid="classdakku_1_1VectorBase_1aba40d32d76144c345f1b8d38574e3e24" kind="variable"><name>_data</name></member>
@@ -110,17 +119,28 @@
   <compound refid="conceptdakku_1_1ArithmeticType" kind="concept"><name>dakku::ArithmeticType</name>
   </compound>
   <compound refid="namespacedakku" kind="namespace"><name>dakku</name>
+    <member refid="namespacedakku_1a2431c33b3d39e5cf0d0f8e952ea2b834" kind="typedef"><name>Vector2i</name></member>
+    <member refid="namespacedakku_1a99b4c761ebbe92955e167b5e27cb5992" kind="typedef"><name>Vector2f</name></member>
+    <member refid="namespacedakku_1ad924c9ec2e2e6a86ebb00f41aedc3e77" kind="typedef"><name>Vector3i</name></member>
+    <member refid="namespacedakku_1a890ec4679d6f6f83722a0b5a41d0eebb" kind="typedef"><name>Vector3f</name></member>
+    <member refid="namespacedakku_1a1fb7babbecae697c3b67e44b28425c43" kind="typedef"><name>Point3f</name></member>
+    <member refid="namespacedakku_1a8f5683cd8dc29bf2c90940f0dadcc5aa" kind="typedef"><name>Point3i</name></member>
+    <member refid="namespacedakku_1aa5c5407fb67da06d222ad3881949e9b6" kind="typedef"><name>Point2f</name></member>
+    <member refid="namespacedakku_1a8a5f9e6a937f1534e71801592fcab641" kind="typedef"><name>Point2i</name></member>
+    <member refid="namespacedakku_1ae27019e27a867bc17249704ed8dcb5d8" kind="typedef"><name>Normal3f</name></member>
     <member refid="namespacedakku_1a08f737017abfd03bfaeb4b0c0d1d8928" kind="function"><name>isnan</name></member>
     <member refid="namespacedakku_1a63937ef3cf02827d924baad7b2e783ab" kind="function"><name>isnan</name></member>
-    <member refid="namespacedakku_1ae303c565a0d5e6176b10af7aca2e7e53" kind="function"><name>DAKKU_DECLARE_VECTOR_TYPE</name></member>
-    <member refid="namespacedakku_1a3d234abea587b4d5f1a9ed2a572a18d8" kind="function"><name>DAKKU_DECLARE_VECTOR_TYPE</name></member>
-    <member refid="namespacedakku_1a9b62fff909c0a2340f5a280a9d6223b6" kind="function"><name>DAKKU_DECLARE_VECTOR_TYPE</name></member>
-    <member refid="namespacedakku_1a468ec76a23de6c67d1a82265d1ac4a3b" kind="function"><name>DAKKU_DECLARE_VECTOR_TYPE</name></member>
-    <member refid="namespacedakku_1ab924c4a5b6256128014af8e4656f73f4" kind="function"><name>DAKKU_DECLARE_POINT_TYPE</name></member>
-    <member refid="namespacedakku_1a09b52d0a7df2166ec5f4f543adf504eb" kind="function"><name>DAKKU_DECLARE_POINT_TYPE</name></member>
-    <member refid="namespacedakku_1a5119cab995df96b5bd09a4939f6033a3" kind="function"><name>DAKKU_DECLARE_POINT_TYPE</name></member>
-    <member refid="namespacedakku_1acabc131b8ead3ecb512e5eda962116e0" kind="function"><name>DAKKU_DECLARE_POINT_TYPE</name></member>
-    <member refid="namespacedakku_1abca7bbca41d0c48fad018ab314a0addd" kind="function"><name>DAKKU_DECLARE_VECTOR_TYPE</name></member>
+    <member refid="namespacedakku_1af5ee18e804d8bfac2bf21f93a2f63aa6" kind="function"><name>DAKKU_DECLARE_LUA_OBJECT</name></member>
+    <member refid="namespacedakku_1a961c6cc58ef365112319c499f1c16bd5" kind="function"><name>DAKKU_DECLARE_LUA_OBJECT</name></member>
+    <member refid="namespacedakku_1a9ee2a15c54c05140193e2a18b16498fd" kind="function"><name>DAKKU_DECLARE_LUA_OBJECT</name></member>
+    <member refid="namespacedakku_1a4f5d78b55c1f6a5571a05304a9aa3779" kind="function"><name>DAKKU_DECLARE_LUA_OBJECT</name></member>
+    <member refid="namespacedakku_1a4cf6521b6823380ec60ccca3cfcfaa46" kind="function"><name>DAKKU_DECLARE_LUA_OBJECT</name></member>
+    <member refid="namespacedakku_1a796d8a3dc7c0dbe90129fb0e15b313e3" kind="function"><name>DAKKU_DECLARE_LUA_OBJECT</name></member>
+    <member refid="namespacedakku_1aabd06d61579de54a32a03434e895d8e1" kind="function"><name>DAKKU_DECLARE_LUA_OBJECT</name></member>
+    <member refid="namespacedakku_1a8155d9e5e0dbeef953fe78f3d1c534e7" kind="function"><name>DAKKU_DECLARE_LUA_OBJECT</name></member>
+    <member refid="namespacedakku_1a774abf706b01f9f62b922949f68c3f28" kind="function"><name>DAKKU_DECLARE_LUA_OBJECT</name></member>
+  </compound>
+  <compound refid="bounds_8h" kind="file"><name>bounds.h</name>
   </compound>
   <compound refid="constants_8h" kind="file"><name>constants.h</name>
   </compound>
@@ -142,8 +162,6 @@
   <compound refid="math__func_8h" kind="file"><name>math_func.h</name>
   </compound>
   <compound refid="vector_8h" kind="file"><name>vector.h</name>
-    <member refid="vector_8h_1a7f2747e0722020eb72b1073fbb47646a" kind="define"><name>DAKKU_DECLARE_VECTOR_TYPE</name></member>
-    <member refid="vector_8h_1a0a1f8fd24b00ea16cba8753cf7692568" kind="define"><name>DAKKU_DECLARE_POINT_TYPE</name></member>
   </compound>
   <compound refid="vector__base_8h" kind="file"><name>vector_base.h</name>
   </compound>

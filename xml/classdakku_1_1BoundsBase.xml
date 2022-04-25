@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="classdakku_1_1BoundsBase" kind="class" language="C++" prot="public">
+    <compoundname>dakku::BoundsBase</compoundname>
+    <includes refid="bounds_8h" local="no">bounds.h</includes>
+    <templateparamlist>
+      <param>
+        <type>ArithmeticType</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+      <param>
+        <type>size_t</type>
+        <declname>S</declname>
+        <defname>S</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classdakku_1_1BoundsBase_1abd7c34bec0f05f1dfb494b76eed47622" prot="public" static="no" mutable="no">
+        <type><ref refid="classdakku_1_1Point" kindref="compound">Point</ref>&lt; T, S &gt;</type>
+        <definition>Point&lt;T, S&gt; dakku::BoundsBase&lt; T, S &gt;::pMin</definition>
+        <argsstring></argsstring>
+        <name>pMin</name>
+        <initializer>{std::numeric_limits&lt;T&gt;::max()}</initializer>
+        <briefdescription>
+<para>left bottom corner of the bounds </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/bounds.h" line="26" column="9" bodyfile="src/core/bounds.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdakku_1_1BoundsBase_1a1df49abc60c6cee7febd54aa46d04aa8" prot="public" static="no" mutable="no">
+        <type><ref refid="classdakku_1_1Point" kindref="compound">Point</ref>&lt; T, S &gt;</type>
+        <definition>Point&lt;T, S&gt; dakku::BoundsBase&lt; T, S &gt;::pMax</definition>
+        <argsstring></argsstring>
+        <name>pMax</name>
+        <initializer>{std::numeric_limits&lt;T&gt;::lowest()}</initializer>
+        <briefdescription>
+<para>right top corner of the bounds </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/bounds.h" line="28" column="9" bodyfile="src/core/bounds.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdakku_1_1BoundsBase_1a4dea00502d665d2f3e6657507a9b03fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dakku::BoundsBase&lt; T, S &gt;::BoundsBase</definition>
+        <argsstring>()=default</argsstring>
+        <name>BoundsBase</name>
+        <briefdescription>
+<para>default constructor </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/bounds.h" line="23" column="3"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>bounding box base </para>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>data type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>S</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>dimension </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <location file="src/core/bounds.h" line="17" column="1" bodyfile="src/core/bounds.h" bodystart="17" bodyend="29"/>
+    <listofallmembers>
+      <member refid="classdakku_1_1BoundsBase_1a4dea00502d665d2f3e6657507a9b03fb" prot="public" virt="non-virtual"><scope>dakku::BoundsBase</scope><name>BoundsBase</name></member>
+      <member refid="classdakku_1_1BoundsBase_1a1df49abc60c6cee7febd54aa46d04aa8" prot="public" virt="non-virtual"><scope>dakku::BoundsBase</scope><name>pMax</name></member>
+      <member refid="classdakku_1_1BoundsBase_1abd7c34bec0f05f1dfb494b76eed47622" prot="public" virt="non-virtual"><scope>dakku::BoundsBase</scope><name>pMin</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

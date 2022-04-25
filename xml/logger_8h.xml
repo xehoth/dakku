@@ -46,6 +46,10 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
+      <node id="4">
+        <label>src/core/bounds.h</label>
+        <link refid="bounds_8h"/>
+      </node>
       <node id="1">
         <label>src/core/logger.h</label>
         <link refid="logger_8h"/>
@@ -55,6 +59,8 @@
       <node id="3">
         <label>src/core/vector.h</label>
         <link refid="vector_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
       </node>
       <node id="2">
         <label>src/core/vector_base.h</label>
