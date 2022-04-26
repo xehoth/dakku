@@ -6,18 +6,10 @@
         ["cmake#31fecfc4"] = {
             repo = {
                 branch = "master",
-                commit = "291f3d35bb47de9c0e8eec5944ccc14e968e27e9",
+                commit = "f0ba10d262e0fb25611cddcc9d1b23f4e9357faa",
                 url = "https://github.com/xmake-io/xmake-repo.git"
             },
             version = "3.22.1"
-        },
-        ["gtest#7895f0fa"] = {
-            repo = {
-                branch = "master",
-                commit = "a866090956c8d7375e71feafa27455697fb938b6",
-                url = "https://github.com/xmake-io/xmake-repo.git"
-            },
-            version = "1.11.0"
         },
         ["lua#31fecfc4"] = {
             repo = {
@@ -26,6 +18,14 @@
                 url = "https://github.com/xmake-io/xmake-repo.git"
             },
             version = "v5.4.4"
+        },
+        ["onetbb#31fecfc4"] = {
+            repo = {
+                branch = "master",
+                commit = "ee5a280779ec1b7fc61815ee936de1586b8a52e1",
+                url = "https://github.com/xmake-io/xmake-repo.git"
+            },
+            version = "2021.5.0"
         },
         ["sol2#31fecfc4"] = {
             repo = {

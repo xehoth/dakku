@@ -115,6 +115,14 @@ class Point : public VectorBase<T, S, Point<T, S>> {
     ret -= Point(rhs);
     return ret;
   }
+
+  /**
+   * @brief point + vector => point
+   *
+   */
+  friend Point operator+(const Point &a, const Vector<T, S> &b) {
+    return Point(Vector<T, S>(a) + b);
+  }
 };
 
 /// 3d float point

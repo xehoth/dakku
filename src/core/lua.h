@@ -28,6 +28,8 @@ class DAKKU_EXPORT_CORE Lua {
   sol::state &get_state();
 
  private:
+  Lua() = default;
+
   sol::state state;
 };
 
