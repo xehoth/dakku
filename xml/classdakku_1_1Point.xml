@@ -94,6 +94,30 @@
         <location file="src/core/vector.h" line="113" column="9" bodyfile="src/core/vector.h" bodystart="113" bodyend="117"/>
       </memberdef>
       </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classdakku_1_1Point_1aa42db7f4fcc358dda0322ad91b45b7e7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classdakku_1_1Point" kindref="compound">Point</ref></type>
+        <definition>Point operator+</definition>
+        <argsstring>(const Point &amp;a, const Vector&lt; T, S &gt; &amp;b)</argsstring>
+        <name>operator+</name>
+        <param>
+          <type>const <ref refid="classdakku_1_1Point" kindref="compound">Point</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classdakku_1_1Vector" kindref="compound">Vector</ref>&lt; T, S &gt; &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>point + vector =&gt; point </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/vector.h" line="123" column="16" bodyfile="src/core/vector.h" bodystart="123" bodyend="125"/>
+      </memberdef>
+      </sectiondef>
     <briefdescription>
 <para>point </para>
     </briefdescription>
@@ -141,7 +165,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/core/vector.h" line="73" column="1" bodyfile="src/core/vector.h" bodystart="73" bodyend="118"/>
+    <location file="src/core/vector.h" line="73" column="1" bodyfile="src/core/vector.h" bodystart="73" bodyend="126"/>
     <listofallmembers>
       <member refid="classdakku_1_1VectorBase_1a1001be586e231d6dae084d4b209f8e97" prot="public" virt="non-virtual"><scope>dakku::Point</scope><name>abs</name></member>
       <member refid="classdakku_1_1VectorBase_1abdd1df2e4dc893221408c1fb4ff0ef7e" prot="public" virt="non-virtual"><scope>dakku::Point</scope><name>ceil</name></member>
@@ -170,8 +194,9 @@
       <member refid="classdakku_1_1VectorBase_1a63d725a6dddd8312eccabb215b9893a2" prot="public" virt="non-virtual"><scope>dakku::Point</scope><name>operator*</name></member>
       <member refid="classdakku_1_1VectorBase_1abbfbc3bb4987be30346848dfbc0372ea" prot="public" virt="non-virtual"><scope>dakku::Point</scope><name>operator*=</name></member>
       <member refid="classdakku_1_1VectorBase_1a878b656fc1b35eaa5b95e4cb673c15a3" prot="public" virt="non-virtual"><scope>dakku::Point</scope><name>operator*=</name></member>
-      <member refid="classdakku_1_1VectorBase_1a3ad97c8cd07eed945e3889dfaefd6c63" prot="public" virt="non-virtual"><scope>dakku::Point</scope><name>operator+</name></member>
-      <member refid="classdakku_1_1VectorBase_1a001bb398b96aae4135cfee98ba5259b3" prot="public" virt="non-virtual"><scope>dakku::Point</scope><name>operator+</name></member>
+      <member refid="classdakku_1_1Point_1aa42db7f4fcc358dda0322ad91b45b7e7" prot="public" virt="non-virtual"><scope>dakku::Point</scope><name>operator+</name></member>
+      <member refid="classdakku_1_1VectorBase_1a3ad97c8cd07eed945e3889dfaefd6c63" prot="public" virt="non-virtual" ambiguityscope="VectorBase&lt; T, S, Point&lt; T, S &gt; &gt;::"><scope>dakku::Point</scope><name>operator+</name></member>
+      <member refid="classdakku_1_1VectorBase_1a001bb398b96aae4135cfee98ba5259b3" prot="public" virt="non-virtual" ambiguityscope="VectorBase&lt; T, S, Point&lt; T, S &gt; &gt;::"><scope>dakku::Point</scope><name>operator+</name></member>
       <member refid="classdakku_1_1VectorBase_1a7c41aa6431258fad65b506af8171df0c" prot="public" virt="non-virtual"><scope>dakku::Point</scope><name>operator+=</name></member>
       <member refid="classdakku_1_1VectorBase_1a5c8ad5f1742dc0f2fe4b73430e90c119" prot="public" virt="non-virtual"><scope>dakku::Point</scope><name>operator+=</name></member>
       <member refid="classdakku_1_1Point_1ac1e97b68aae88bc8d3db4632c5effd1a" prot="public" virt="non-virtual"><scope>dakku::Point</scope><name>operator-</name></member>

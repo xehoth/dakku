@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="classdakku_1_1MemoryArena" kind="class" language="C++" prot="public">
+    <compoundname>dakku::MemoryArena</compoundname>
+    <includes refid="memory_8h" local="no">memory.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdakku_1_1MemoryArena_1a33ddc091d46cbe83ca867ba9874fe606" prot="private" static="no" mutable="no">
+        <type>oneapi::tbb::cache_aligned_resource</type>
+        <definition>oneapi::tbb::cache_aligned_resource dakku::MemoryArena::upStream</definition>
+        <argsstring></argsstring>
+        <name>upStream</name>
+        <initializer>{
+      oneapi::tbb::scalable_memory_resource()}</initializer>
+        <briefdescription>
+<para>cache aligned scalable resource </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/memory.h" line="58" column="39" bodyfile="src/core/memory.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdakku_1_1MemoryArena_1a218ba07f5f79d5f45b1e5665d4635b4c" prot="private" static="no" mutable="no">
+        <type>std::pmr::unsynchronized_pool_resource</type>
+        <definition>std::pmr::unsynchronized_pool_resource dakku::MemoryArena::resource</definition>
+        <argsstring></argsstring>
+        <name>resource</name>
+        <initializer>{&amp;upStream}</initializer>
+        <briefdescription>
+<para>cache aligned scalable resource </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/memory.h" line="61" column="42" bodyfile="src/core/memory.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdakku_1_1MemoryArena_1a7b9896cbdf1f21a31a4c12f875026b7d" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dakku::MemoryArena::MemoryArena</definition>
+        <argsstring>()=default</argsstring>
+        <name>MemoryArena</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/memory.h" line="32" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1MemoryArena_1a71997f6b7b6fc9a808f95b8e729ff317" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>dakku::MemoryArena::MemoryArena</definition>
+        <argsstring>(std::pmr::memory_resource *buffer)</argsstring>
+        <name>MemoryArena</name>
+        <param>
+          <type>std::pmr::memory_resource *</type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/memory.h" line="33" column="12" bodyfile="src/core/memory.h" bodystart="33" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1MemoryArena_1af44583630a36c94b7040a9be738826af" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>T *</type>
+        <definition>T * dakku::MemoryArena::allocObject</definition>
+        <argsstring>(Args &amp;&amp;...args)</argsstring>
+        <name>allocObject</name>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+<para>allocate and construct a object from the arena </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>object type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>argument types </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>arguments </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>T* object instance </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/memory.h" line="45" column="5" bodyfile="src/core/memory.h" bodystart="45" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classdakku_1_1MemoryArena_1ae375338f226dc8cedae2d70eb6cb8111" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void dakku::MemoryArena::release</definition>
+        <argsstring>()</argsstring>
+        <name>release</name>
+        <briefdescription>
+<para>release the memory arena </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/memory.h" line="54" column="8" bodyfile="src/core/memory.h" bodystart="54" bodyend="54"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>memory arena (unsynchronized) </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/core/memory.h" line="30" column="1" bodyfile="src/core/memory.h" bodystart="30" bodyend="62"/>
+    <listofallmembers>
+      <member refid="classdakku_1_1MemoryArena_1af44583630a36c94b7040a9be738826af" prot="public" virt="non-virtual"><scope>dakku::MemoryArena</scope><name>allocObject</name></member>
+      <member refid="classdakku_1_1MemoryArena_1a7b9896cbdf1f21a31a4c12f875026b7d" prot="public" virt="non-virtual"><scope>dakku::MemoryArena</scope><name>MemoryArena</name></member>
+      <member refid="classdakku_1_1MemoryArena_1a71997f6b7b6fc9a808f95b8e729ff317" prot="public" virt="non-virtual"><scope>dakku::MemoryArena</scope><name>MemoryArena</name></member>
+      <member refid="classdakku_1_1MemoryArena_1ae375338f226dc8cedae2d70eb6cb8111" prot="public" virt="non-virtual"><scope>dakku::MemoryArena</scope><name>release</name></member>
+      <member refid="classdakku_1_1MemoryArena_1a218ba07f5f79d5f45b1e5665d4635b4c" prot="private" virt="non-virtual"><scope>dakku::MemoryArena</scope><name>resource</name></member>
+      <member refid="classdakku_1_1MemoryArena_1a33ddc091d46cbe83ca867ba9874fe606" prot="private" virt="non-virtual"><scope>dakku::MemoryArena</scope><name>upStream</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

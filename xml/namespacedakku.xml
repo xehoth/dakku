@@ -8,10 +8,14 @@
     <innerclass refid="classdakku_1_1BoundsBase" prot="public">dakku::BoundsBase</innerclass>
     <innerclass refid="classdakku_1_1BoxFilter" prot="public">dakku::BoxFilter</innerclass>
     <innerclass refid="classdakku_1_1Filter" prot="public">dakku::Filter</innerclass>
+    <innerclass refid="classdakku_1_1GlobalMemoryArena" prot="public">dakku::GlobalMemoryArena</innerclass>
     <innerclass refid="classdakku_1_1Logger" prot="public">dakku::Logger</innerclass>
     <innerclass refid="classdakku_1_1Lua" prot="public">dakku::Lua</innerclass>
+    <innerclass refid="classdakku_1_1MemoryArena" prot="public">dakku::MemoryArena</innerclass>
     <innerclass refid="classdakku_1_1Normal" prot="public">dakku::Normal</innerclass>
     <innerclass refid="classdakku_1_1Point" prot="public">dakku::Point</innerclass>
+    <innerclass refid="classdakku_1_1Ray" prot="public">dakku::Ray</innerclass>
+    <innerclass refid="classdakku_1_1RayDifferential" prot="public">dakku::RayDifferential</innerclass>
     <innerclass refid="classdakku_1_1TriangleFilter" prot="public">dakku::TriangleFilter</innerclass>
     <innerclass refid="classdakku_1_1Vector" prot="public">dakku::Vector</innerclass>
     <innerclass refid="classdakku_1_1VectorBase" prot="public">dakku::VectorBase</innerclass>
@@ -126,7 +130,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector.h" line="121" column="1" bodyfile="src/core/vector.h" bodystart="121" bodyend="-1"/>
+        <location file="src/core/vector.h" line="129" column="1" bodyfile="src/core/vector.h" bodystart="129" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespacedakku_1a8f5683cd8dc29bf2c90940f0dadcc5aa" prot="public" static="no">
         <type><ref refid="classdakku_1_1Point" kindref="compound">Point</ref>&lt; int, 3 &gt;</type>
@@ -140,7 +144,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector.h" line="123" column="1" bodyfile="src/core/vector.h" bodystart="123" bodyend="-1"/>
+        <location file="src/core/vector.h" line="131" column="1" bodyfile="src/core/vector.h" bodystart="131" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespacedakku_1aa5c5407fb67da06d222ad3881949e9b6" prot="public" static="no">
         <type><ref refid="classdakku_1_1Point" kindref="compound">Point</ref>&lt; float, 2 &gt;</type>
@@ -154,7 +158,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector.h" line="125" column="1" bodyfile="src/core/vector.h" bodystart="125" bodyend="-1"/>
+        <location file="src/core/vector.h" line="133" column="1" bodyfile="src/core/vector.h" bodystart="133" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespacedakku_1a8a5f9e6a937f1534e71801592fcab641" prot="public" static="no">
         <type><ref refid="classdakku_1_1Point" kindref="compound">Point</ref>&lt; int, 2 &gt;</type>
@@ -168,7 +172,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector.h" line="127" column="1" bodyfile="src/core/vector.h" bodystart="127" bodyend="-1"/>
+        <location file="src/core/vector.h" line="135" column="1" bodyfile="src/core/vector.h" bodystart="135" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespacedakku_1ae27019e27a867bc17249704ed8dcb5d8" prot="public" static="no">
         <type><ref refid="classdakku_1_1Normal" kindref="compound">Normal</ref>&lt; float, 3 &gt;</type>
@@ -182,7 +186,118 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector.h" line="178" column="1" bodyfile="src/core/vector.h" bodystart="178" bodyend="-1"/>
+        <location file="src/core/vector.h" line="186" column="1" bodyfile="src/core/vector.h" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacedakku_1a53c476552ecb27caba955675d8efb680" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr float</type>
+        <definition>constexpr float dakku::INF</definition>
+        <argsstring></argsstring>
+        <name>INF</name>
+        <initializer>= std::numeric_limits&lt;float&gt;::infinity()</initializer>
+        <briefdescription>
+<para>infinity </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/constants.h" line="11" column="24" bodyfile="src/core/constants.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacedakku_1af7aa9dc8532b3506d50b84f932560eb0" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr float</type>
+        <definition>constexpr float dakku::PI</definition>
+        <argsstring></argsstring>
+        <name>PI</name>
+        <initializer>= std::numbers::pi_v&lt;float&gt;</initializer>
+        <briefdescription>
+<para>PI. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/constants.h" line="14" column="24" bodyfile="src/core/constants.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacedakku_1a4e370f12ecabfcf4c169ca0eb199f19a" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr float</type>
+        <definition>constexpr float dakku::INV_PI</definition>
+        <argsstring></argsstring>
+        <name>INV_PI</name>
+        <initializer>=
+    static_cast&lt;float&gt;(1.0 / std::numbers::pi_v&lt;double&gt;)</initializer>
+        <briefdescription>
+<para>$\frac 1 \pi$ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/constants.h" line="17" column="24" bodyfile="src/core/constants.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacedakku_1adae866489e43019f6aa30b0f577f8311" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr float</type>
+        <definition>constexpr float dakku::PI_OVER_2</definition>
+        <argsstring></argsstring>
+        <name>PI_OVER_2</name>
+        <initializer>=
+    static_cast&lt;float&gt;(std::numbers::pi_v&lt;double&gt; / 2.0)</initializer>
+        <briefdescription>
+<para>$\frac \pi 2$ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/constants.h" line="21" column="24" bodyfile="src/core/constants.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacedakku_1a2922918eae4cac3a44006897e878daf7" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr float</type>
+        <definition>constexpr float dakku::PI_OVER_4</definition>
+        <argsstring></argsstring>
+        <name>PI_OVER_4</name>
+        <initializer>=
+    static_cast&lt;float&gt;(std::numbers::pi_v&lt;double&gt; / 4.0)</initializer>
+        <briefdescription>
+<para>$\frac \pi 4$ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/constants.h" line="25" column="24" bodyfile="src/core/constants.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacedakku_1a8ecbddd8386198d0dd187cd20b53e42d" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr float</type>
+        <definition>constexpr float dakku::SHADOW_EPS</definition>
+        <argsstring></argsstring>
+        <name>SHADOW_EPS</name>
+        <initializer>= 1e-5f</initializer>
+        <briefdescription>
+<para>shadow epsilon, used for shadow ray, offset ray origin </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/constants.h" line="29" column="24" bodyfile="src/core/constants.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacedakku_1a204f33930db458865d7f796fd768055d" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr float</type>
+        <definition>constexpr float dakku::ONE_MINUS_EPSILON</definition>
+        <argsstring></argsstring>
+        <name>ONE_MINUS_EPSILON</name>
+        <initializer>=
+    1 - std::numeric_limits&lt;float&gt;::epsilon()</initializer>
+        <briefdescription>
+<para>1 - eps </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/constants.h" line="32" column="24" bodyfile="src/core/constants.h" bodystart="32" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -414,7 +529,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector.h" line="128" column="1" declfile="src/core/vector.h" declline="128" declcolumn="1"/>
+        <location file="src/core/vector.h" line="136" column="1" declfile="src/core/vector.h" declline="136" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1a8ade4f916825f1624881833323159391" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -433,7 +548,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector.h" line="129" column="1" declfile="src/core/vector.h" declline="129" declcolumn="1"/>
+        <location file="src/core/vector.h" line="137" column="1" declfile="src/core/vector.h" declline="137" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1aeeaf3a4bc599ed441b0b5d440649d8f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -452,7 +567,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector.h" line="130" column="1" declfile="src/core/vector.h" declline="130" declcolumn="1"/>
+        <location file="src/core/vector.h" line="138" column="1" declfile="src/core/vector.h" declline="138" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1aad468b217fadca156b426897b4fddb7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -471,7 +586,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector.h" line="131" column="1" declfile="src/core/vector.h" declline="131" declcolumn="1"/>
+        <location file="src/core/vector.h" line="139" column="1" declfile="src/core/vector.h" declline="139" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1ab0a1c15a5d93b5e9775b90bd199f91e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -490,7 +605,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector.h" line="179" column="1" declfile="src/core/vector.h" declline="179" declcolumn="1"/>
+        <location file="src/core/vector.h" line="187" column="1" declfile="src/core/vector.h" declline="187" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1a6883b120d067a58dc252b98914fb45cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>

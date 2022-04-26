@@ -3,6 +3,8 @@
   <compounddef id="classdakku_1_1VectorBase" kind="class" language="C++" prot="public">
     <compoundname>dakku::VectorBase</compoundname>
     <derivedcompoundref refid="classdakku_1_1Point" prot="public" virt="non-virtual">dakku::Point&lt; int, 2 &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classdakku_1_1Point" prot="public" virt="non-virtual">dakku::Point&lt; float, 3 &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classdakku_1_1Vector" prot="public" virt="non-virtual">dakku::Vector&lt; float, 3 &gt;</derivedcompoundref>
     <includes refid="vector__base_8h" local="no">vector_base.h</includes>
     <templateparamlist>
       <param>
@@ -2160,9 +2162,21 @@ Construct a new <ref refid="classdakku_1_1Vector" kindref="compound">Vector</ref
 </para>
     </detaileddescription>
     <inheritancegraph>
+      <node id="3">
+        <label>dakku::Point&lt; float, 3 &gt;</label>
+        <link refid="classdakku_1_1Point"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
       <node id="2">
         <label>dakku::Point&lt; int, 2 &gt;</label>
         <link refid="classdakku_1_1Point"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>dakku::Vector&lt; float, 3 &gt;</label>
+        <link refid="classdakku_1_1Vector"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>

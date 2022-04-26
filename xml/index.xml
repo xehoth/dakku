@@ -60,6 +60,11 @@
     <member refid="classdakku_1_1Filter_1a41c4e564d4f720c22852f36412836574" kind="function"><name>Filter</name></member>
     <member refid="classdakku_1_1Filter_1abe92aa3911e6856f7abcb1ed841ff3e9" kind="function"><name>evaluate</name></member>
   </compound>
+  <compound refid="classdakku_1_1GlobalMemoryArena" kind="class"><name>dakku::GlobalMemoryArena</name>
+    <member refid="classdakku_1_1GlobalMemoryArena_1aa894444bbdf6b0b880e5b7443e5e736b" kind="variable"><name>arena</name></member>
+    <member refid="classdakku_1_1GlobalMemoryArena_1aa2ccda3c23be15b323780efc75f2ad5e" kind="function"><name>instance</name></member>
+    <member refid="classdakku_1_1GlobalMemoryArena_1a62c15dabe0b2dfa50ca24c58847a5d3a" kind="function"><name>GlobalMemoryArena</name></member>
+  </compound>
   <compound refid="classdakku_1_1Logger" kind="class"><name>dakku::Logger</name>
     <member refid="classdakku_1_1Logger_1aa6afc845ad6d0bcec3849515afc971cd" kind="variable"><name>_logger</name></member>
     <member refid="classdakku_1_1Logger_1a75e95ca57e099bb7992724feec106edf" kind="function"><name>get</name></member>
@@ -70,6 +75,15 @@
     <member refid="classdakku_1_1Lua_1a8979a2546db6d85043ced22b5f2ede8f" kind="variable"><name>state</name></member>
     <member refid="classdakku_1_1Lua_1ac3145c27d97b2c4cb342c5935e41fb62" kind="function"><name>instance</name></member>
     <member refid="classdakku_1_1Lua_1a04a19bad0e52044a0422a23eee0ffc8c" kind="function"><name>get_state</name></member>
+    <member refid="classdakku_1_1Lua_1a6cbab7035ca236336af39a40d28e6149" kind="function"><name>Lua</name></member>
+  </compound>
+  <compound refid="classdakku_1_1MemoryArena" kind="class"><name>dakku::MemoryArena</name>
+    <member refid="classdakku_1_1MemoryArena_1a33ddc091d46cbe83ca867ba9874fe606" kind="variable"><name>upStream</name></member>
+    <member refid="classdakku_1_1MemoryArena_1a218ba07f5f79d5f45b1e5665d4635b4c" kind="variable"><name>resource</name></member>
+    <member refid="classdakku_1_1MemoryArena_1a7b9896cbdf1f21a31a4c12f875026b7d" kind="function"><name>MemoryArena</name></member>
+    <member refid="classdakku_1_1MemoryArena_1a71997f6b7b6fc9a808f95b8e729ff317" kind="function"><name>MemoryArena</name></member>
+    <member refid="classdakku_1_1MemoryArena_1af44583630a36c94b7040a9be738826af" kind="function"><name>allocObject</name></member>
+    <member refid="classdakku_1_1MemoryArena_1ae375338f226dc8cedae2d70eb6cb8111" kind="function"><name>release</name></member>
   </compound>
   <compound refid="classdakku_1_1Normal" kind="class"><name>dakku::Normal</name>
     <member refid="classdakku_1_1Normal_1aa04239443f23952d8ab4c57beebefe45" kind="function"><name>operator-</name></member>
@@ -81,6 +95,27 @@
     <member refid="classdakku_1_1Point_1a357933cb31a59a032eeed9a8fad60aa8" kind="function"><name>operator-</name></member>
     <member refid="classdakku_1_1Point_1a92f03c981317f9ea156e6878d165d75f" kind="function"><name>operator-</name></member>
     <member refid="classdakku_1_1Point_1a3033f59d18e51f6978d102307cdd9a9a" kind="function"><name>operator-</name></member>
+    <member refid="classdakku_1_1Point_1aa42db7f4fcc358dda0322ad91b45b7e7" kind="friend"><name>operator+</name></member>
+  </compound>
+  <compound refid="classdakku_1_1Ray" kind="class"><name>dakku::Ray</name>
+    <member refid="classdakku_1_1Ray_1ad3f89d04f0328c3efbb29d031d6ce88f" kind="variable"><name>o</name></member>
+    <member refid="classdakku_1_1Ray_1a8dcbd22835ce89acc2eaabacd4147a7f" kind="variable"><name>d</name></member>
+    <member refid="classdakku_1_1Ray_1ab5b9ced3d745542bb55fee75331aacfa" kind="variable"><name>tMax</name></member>
+    <member refid="classdakku_1_1Ray_1a80f9f0752c12f77ea1188551456dcc1a" kind="function"><name>Ray</name></member>
+    <member refid="classdakku_1_1Ray_1a88ecaddfd2d6c7f30a979b7b5a33a10d" kind="function"><name>Ray</name></member>
+    <member refid="classdakku_1_1Ray_1a2d110baf64d56b0920dd3d898b6fe7c6" kind="function"><name>operator()</name></member>
+    <member refid="classdakku_1_1Ray_1a741b047e46b0dae844eb29fb533a329e" kind="function"><name>has_nans</name></member>
+  </compound>
+  <compound refid="classdakku_1_1RayDifferential" kind="class"><name>dakku::RayDifferential</name>
+    <member refid="classdakku_1_1RayDifferential_1ac50b21ad2744f60d413fb6aaa406101f" kind="variable"><name>has_differentials</name></member>
+    <member refid="classdakku_1_1RayDifferential_1aae4e44306f54a9fc6faff5e88bcf4828" kind="variable"><name>rx_origin</name></member>
+    <member refid="classdakku_1_1RayDifferential_1a523f5692126a720c13c18ff783a87cbc" kind="variable"><name>ry_origin</name></member>
+    <member refid="classdakku_1_1RayDifferential_1a127e9d3a315fc0e5eeeb87a3571cb979" kind="variable"><name>rx_direction</name></member>
+    <member refid="classdakku_1_1RayDifferential_1ae648f704a780c68cefb13d69e5d30112" kind="variable"><name>ry_direction</name></member>
+    <member refid="classdakku_1_1RayDifferential_1a0c4412c3c2c8e457f5db74c993519321" kind="function"><name>RayDifferential</name></member>
+    <member refid="classdakku_1_1RayDifferential_1a74693a108052790ce167ef6d47dbeaa3" kind="function"><name>RayDifferential</name></member>
+    <member refid="classdakku_1_1RayDifferential_1a2bb71ca1cf20bd1881b10bfbcfd62fa8" kind="function"><name>has_nans</name></member>
+    <member refid="classdakku_1_1RayDifferential_1adf90cf67939812ffeaf1b39b7547d75a" kind="function"><name>scale_differentials</name></member>
   </compound>
   <compound refid="classdakku_1_1TriangleFilter" kind="class"><name>dakku::TriangleFilter</name>
     <member refid="classdakku_1_1TriangleFilter_1acbb6ae521434bdb0336233ca2c79fe9d" kind="function"><name>evaluate</name></member>
@@ -190,6 +225,13 @@
     <member refid="namespacedakku_1aa5c5407fb67da06d222ad3881949e9b6" kind="typedef"><name>Point2f</name></member>
     <member refid="namespacedakku_1a8a5f9e6a937f1534e71801592fcab641" kind="typedef"><name>Point2i</name></member>
     <member refid="namespacedakku_1ae27019e27a867bc17249704ed8dcb5d8" kind="typedef"><name>Normal3f</name></member>
+    <member refid="namespacedakku_1a53c476552ecb27caba955675d8efb680" kind="variable"><name>INF</name></member>
+    <member refid="namespacedakku_1af7aa9dc8532b3506d50b84f932560eb0" kind="variable"><name>PI</name></member>
+    <member refid="namespacedakku_1a4e370f12ecabfcf4c169ca0eb199f19a" kind="variable"><name>INV_PI</name></member>
+    <member refid="namespacedakku_1adae866489e43019f6aa30b0f577f8311" kind="variable"><name>PI_OVER_2</name></member>
+    <member refid="namespacedakku_1a2922918eae4cac3a44006897e878daf7" kind="variable"><name>PI_OVER_4</name></member>
+    <member refid="namespacedakku_1a8ecbddd8386198d0dd187cd20b53e42d" kind="variable"><name>SHADOW_EPS</name></member>
+    <member refid="namespacedakku_1a204f33930db458865d7f796fd768055d" kind="variable"><name>ONE_MINUS_EPSILON</name></member>
     <member refid="namespacedakku_1af0a2453f8db3eb948901c7a0aed18434" kind="function"><name>begin</name></member>
     <member refid="namespacedakku_1a41ae9fcb2290e6ea6f7d4b0fbca86d17" kind="function"><name>end</name></member>
     <member refid="namespacedakku_1a79bc914e02b7226466716239448fbe68" kind="function"><name>DAKKU_DECLARE_LUA_OBJECT</name></member>
@@ -228,6 +270,11 @@
     <member refid="lua_8h_1a0587e5b4f4419faac9ccf7c9cd36d22d" kind="define"><name>DAKKU_IMPLEMENT_LUA_OBJECT</name></member>
   </compound>
   <compound refid="math__func_8h" kind="file"><name>math_func.h</name>
+  </compound>
+  <compound refid="memory_8h" kind="file"><name>memory.h</name>
+    <member refid="memory_8h_1a75ff6894fe90bba774fb4636c96c0031" kind="define"><name>DAKKU_ALLOCA</name></member>
+  </compound>
+  <compound refid="ray_8h" kind="file"><name>ray.h</name>
   </compound>
   <compound refid="vector_8h" kind="file"><name>vector.h</name>
   </compound>

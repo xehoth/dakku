@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/lua.h" line="31" column="14" bodyfile="src/core/lua.h" bodystart="31" bodyend="-1"/>
+        <location file="src/core/lua.h" line="33" column="14" bodyfile="src/core/lua.h" bodystart="33" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -50,15 +50,31 @@
         <location file="src/core/lua.h" line="28" column="14"/>
       </memberdef>
       </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classdakku_1_1Lua_1a6cbab7035ca236336af39a40d28e6149" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dakku::Lua::Lua</definition>
+        <argsstring>()=default</argsstring>
+        <name>Lua</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/lua.h" line="31" column="3"/>
+      </memberdef>
+      </sectiondef>
     <briefdescription>
 <para>dakku lua state </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/core/lua.h" line="16" column="1" bodyfile="src/core/lua.h" bodystart="16" bodyend="32"/>
+    <location file="src/core/lua.h" line="16" column="1" bodyfile="src/core/lua.h" bodystart="16" bodyend="34"/>
     <listofallmembers>
       <member refid="classdakku_1_1Lua_1a04a19bad0e52044a0422a23eee0ffc8c" prot="public" virt="non-virtual"><scope>dakku::Lua</scope><name>get_state</name></member>
       <member refid="classdakku_1_1Lua_1ac3145c27d97b2c4cb342c5935e41fb62" prot="public" virt="non-virtual"><scope>dakku::Lua</scope><name>instance</name></member>
+      <member refid="classdakku_1_1Lua_1a6cbab7035ca236336af39a40d28e6149" prot="private" virt="non-virtual"><scope>dakku::Lua</scope><name>Lua</name></member>
       <member refid="classdakku_1_1Lua_1a8979a2546db6d85043ced22b5f2ede8f" prot="private" virt="non-virtual"><scope>dakku::Lua</scope><name>state</name></member>
     </listofallmembers>
   </compounddef>

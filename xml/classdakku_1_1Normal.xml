@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector.h" line="149" column="10" bodyfile="src/core/vector.h" bodystart="149" bodyend="153"/>
+        <location file="src/core/vector.h" line="157" column="10" bodyfile="src/core/vector.h" bodystart="157" bodyend="161"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Normal_1aa2b0eb504a11de36c077d85e22c26e5c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classdakku_1_1Normal" kindref="compound">Normal</ref></type>
@@ -48,7 +48,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector.h" line="159" column="10" bodyfile="src/core/vector.h" bodystart="159" bodyend="163"/>
+        <location file="src/core/vector.h" line="167" column="10" bodyfile="src/core/vector.h" bodystart="167" bodyend="171"/>
       </memberdef>
       <memberdef kind="function" id="classdakku_1_1Normal_1aaf226b5fdc9aa50476c0aa08d497e68d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -73,7 +73,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/core/vector.h" line="170" column="10" bodyfile="src/core/vector.h" bodystart="170" bodyend="174"/>
+        <location file="src/core/vector.h" line="178" column="10" bodyfile="src/core/vector.h" bodystart="178" bodyend="182"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -123,7 +123,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/core/vector.h" line="140" column="1" bodyfile="src/core/vector.h" bodystart="140" bodyend="175"/>
+    <location file="src/core/vector.h" line="148" column="1" bodyfile="src/core/vector.h" bodystart="148" bodyend="183"/>
     <listofallmembers>
       <member refid="classdakku_1_1VectorBase_1a1001be586e231d6dae084d4b209f8e97" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>abs</name></member>
       <member refid="classdakku_1_1VectorBase_1abdd1df2e4dc893221408c1fb4ff0ef7e" prot="public" virt="non-virtual"><scope>dakku::Normal</scope><name>ceil</name></member>
