@@ -27,7 +27,7 @@ namespace dakku {
  * @brief memory arena (unsynchronized)
  *
  */
-class MemoryArena {
+class DAKKU_EXPORT_CORE MemoryArena {
  public:
   explicit MemoryArena() = default;
   explicit MemoryArena(std::pmr::memory_resource *buffer)
@@ -65,7 +65,7 @@ class MemoryArena {
  * @brief global memory arena
  *
  */
-class GlobalMemoryArena {
+class DAKKU_EXPORT_CORE GlobalMemoryArena {
  public:
   /**
    * @brief get memory arena instance

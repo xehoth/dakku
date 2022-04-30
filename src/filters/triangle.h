@@ -15,6 +15,12 @@ class DAKKU_EXPORT_FILTERS TriangleFilter : public Filter {
   [[nodiscard]] float evaluate(const Point2f &p) const override;
 };
 
+/**
+ * @brief Create a triangle filter object
+ * 
+ */
+DAKKU_EXPORT_FILTERS Filter *create_triangle_filter(float x_width, float y_width);
+
 DAKKU_DECLARE_LUA_OBJECT(TriangleFilter, DAKKU_EXPORT_FILTERS);
 }  // namespace dakku
 #endif
