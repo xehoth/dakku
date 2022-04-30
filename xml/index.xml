@@ -246,7 +246,9 @@
     <member refid="namespacedakku_1aeeaf3a4bc599ed441b0b5d440649d8f0" kind="function"><name>DAKKU_DECLARE_LUA_OBJECT</name></member>
     <member refid="namespacedakku_1aad468b217fadca156b426897b4fddb7a" kind="function"><name>DAKKU_DECLARE_LUA_OBJECT</name></member>
     <member refid="namespacedakku_1ab0a1c15a5d93b5e9775b90bd199f91e3" kind="function"><name>DAKKU_DECLARE_LUA_OBJECT</name></member>
+    <member refid="namespacedakku_1ac4d431d350901dc2f24fea60dabb4245" kind="function"><name>create_box_filter</name></member>
     <member refid="namespacedakku_1a6883b120d067a58dc252b98914fb45cc" kind="function"><name>DAKKU_DECLARE_LUA_OBJECT</name></member>
+    <member refid="namespacedakku_1a2a7f66fe482ec2408d7d779d7a6d5b03" kind="function"><name>create_triangle_filter</name></member>
     <member refid="namespacedakku_1af1d89de68cd9c6bd9e7b0c5e9bcdf615" kind="function"><name>DAKKU_DECLARE_LUA_OBJECT</name></member>
   </compound>
   <compound refid="namespacestd" kind="namespace"><name>std</name>
@@ -256,6 +258,12 @@
   <compound refid="constants_8h" kind="file"><name>constants.h</name>
   </compound>
   <compound refid="filter_8h" kind="file"><name>filter.h</name>
+  </compound>
+  <compound refid="core_2fwd_8h" kind="file"><name>fwd.h</name>
+    <member refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kind="define"><name>DAKKU_EXPORT_CORE</name></member>
+  </compound>
+  <compound refid="filters_2fwd_8h" kind="file"><name>fwd.h</name>
+    <member refid="filters_2fwd_8h_1a43808664e862ce668a722f7b1077b1e5" kind="define"><name>DAKKU_EXPORT_FILTERS</name></member>
   </compound>
   <compound refid="logger_8h" kind="file"><name>logger.h</name>
     <member refid="logger_8h_1a9edd762e54e3ce43a70ddfe81b6e2fc5" kind="define"><name>DAKKU_ERR</name></member>
@@ -281,12 +289,6 @@
   <compound refid="vector__base_8h" kind="file"><name>vector_base.h</name>
   </compound>
   <compound refid="box_8h" kind="file"><name>box.h</name>
-  </compound>
-  <compound refid="core_2fwd_8h" kind="file"><name>fwd.h</name>
-    <member refid="core_2fwd_8h_1ab23d79fec91df808d83b4f132f77eb56" kind="define"><name>DAKKU_EXPORT_CORE</name></member>
-  </compound>
-  <compound refid="filters_2fwd_8h" kind="file"><name>fwd.h</name>
-    <member refid="filters_2fwd_8h_1a43808664e862ce668a722f7b1077b1e5" kind="define"><name>DAKKU_EXPORT_FILTERS</name></member>
   </compound>
   <compound refid="triangle_8h" kind="file"><name>triangle.h</name>
   </compound>

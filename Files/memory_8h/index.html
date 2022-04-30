@@ -476,7 +476,7 @@
 <a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="cp">#define DAKKU_ALLOCA(type, count) \</span>
 <a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="cp">  (reinterpret_cast&lt;(type) *&gt;(alloca((count) * sizeof(type))))</span>
 <a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>
-<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="k">class</span><span class="w"> </span><span class="nc">MemoryArena</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="k">class</span><span class="w"> </span><span class="nc">DAKKU_EXPORT_CORE</span><span class="w"> </span><span class="n">MemoryArena</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w"> </span><span class="k">public</span><span class="o">:</span><span class="w"></span>
 <a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">  </span><span class="k">explicit</span><span class="w"> </span><span class="n">MemoryArena</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">default</span><span class="p">;</span><span class="w"></span>
 <a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">  </span><span class="k">explicit</span><span class="w"> </span><span class="n">MemoryArena</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">pmr</span><span class="o">::</span><span class="n">memory_resource</span><span class="w"> </span><span class="o">*</span><span class="n">buffer</span><span class="p">)</span><span class="w"></span>
@@ -496,7 +496,7 @@
 <a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">pmr</span><span class="o">::</span><span class="n">unsynchronized_pool_resource</span><span class="w"> </span><span class="n">resource</span><span class="p">{</span><span class="o">&amp;</span><span class="n">upStream</span><span class="p">};</span><span class="w"></span>
 <a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a><span class="p">};</span><span class="w"></span>
 <a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a>
-<a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a><span class="k">class</span><span class="w"> </span><span class="nc">GlobalMemoryArena</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a><span class="k">class</span><span class="w"> </span><span class="nc">DAKKU_EXPORT_CORE</span><span class="w"> </span><span class="n">GlobalMemoryArena</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a><span class="w"> </span><span class="k">public</span><span class="o">:</span><span class="w"></span>
 <a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a><span class="w">  </span><span class="k">static</span><span class="w"> </span><span class="n">MemoryArena</span><span class="w"> </span><span class="o">&amp;</span><span class="n">instance</span><span class="p">();</span><span class="w"></span>
 <a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a>
@@ -508,7 +508,7 @@
 <a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a><span class="cp">#endif</span>
 </code></pre></div>
 <hr />
-<p>Updated on 2022-04-26 at 14:33:26 +0000</p>
+<p>Updated on 2022-04-30 at 15:46:11 +0000</p>
 
               
             </article>

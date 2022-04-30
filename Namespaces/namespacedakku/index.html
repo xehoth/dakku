@@ -559,8 +559,22 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#function-create_box_filter" class="md-nav__link">
+    function create_box_filter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#function-dakku_declare_lua_object_10" class="md-nav__link">
     function DAKKU_DECLARE_LUA_OBJECT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-create_triangle_filter" class="md-nav__link">
+    function create_triangle_filter
   </a>
   
 </li>
@@ -863,8 +877,16 @@
 <td><strong><a href="/dakku/Namespaces/namespacedakku/#function-dakku-declare-lua-object">DAKKU_DECLARE_LUA_OBJECT</a></strong>(<a href="/dakku/Namespaces/namespacedakku/#using-normal3f">Normal3f</a> , <a href="/dakku/Files/core_2fwd_8h/#define-dakku-export-core">DAKKU_EXPORT_CORE</a> )</td>
 </tr>
 <tr>
+<td><a href="/dakku/Files/filters_2fwd_8h/#define-dakku-export-filters">DAKKU_EXPORT_FILTERS</a><a href="/dakku/Classes/classdakku_1_1Filter/">Filter</a> *</td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#function-create-box-filter">create_box_filter</a></strong>(float x_width, float y_width)<br>Create a box filter object.</td>
+</tr>
+<tr>
 <td></td>
 <td><strong><a href="/dakku/Namespaces/namespacedakku/#function-dakku-declare-lua-object">DAKKU_DECLARE_LUA_OBJECT</a></strong>(<a href="/dakku/Classes/classdakku_1_1BoxFilter/">BoxFilter</a> , <a href="/dakku/Files/filters_2fwd_8h/#define-dakku-export-filters">DAKKU_EXPORT_FILTERS</a> )</td>
+</tr>
+<tr>
+<td><a href="/dakku/Files/filters_2fwd_8h/#define-dakku-export-filters">DAKKU_EXPORT_FILTERS</a><a href="/dakku/Classes/classdakku_1_1Filter/">Filter</a> *</td>
+<td><strong><a href="/dakku/Namespaces/namespacedakku/#function-create-triangle-filter">create_triangle_filter</a></strong>(float x_width, float y_width)<br>Create a triangle filter object.</td>
 </tr>
 <tr>
 <td></td>
@@ -1061,53 +1083,67 @@
 <a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="w">    </span><span class="n">DAKKU_EXPORT_CORE</span><span class="w"> </span>
 <a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
-<h3 id="function-dakku_declare_lua_object_10">function DAKKU_DECLARE_LUA_OBJECT</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="n">DAKKU_DECLARE_LUA_OBJECT</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="w">    </span><span class="n">BoxFilter</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="w">    </span><span class="n">DAKKU_EXPORT_FILTERS</span><span class="w"> </span>
+<h3 id="function-create_box_filter">function create_box_filter</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="n">DAKKU_EXPORT_FILTERSFilter</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">create_box_filter</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">x_width</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">y_width</span><span class="w"></span>
 <a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
-<h3 id="function-dakku_declare_lua_object_11">function DAKKU_DECLARE_LUA_OBJECT</h3>
+<p>Create a box filter object. </p>
+<h3 id="function-dakku_declare_lua_object_10">function DAKKU_DECLARE_LUA_OBJECT</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="n">DAKKU_DECLARE_LUA_OBJECT</span><span class="p">(</span><span class="w"></span>
-<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="w">    </span><span class="n">TriangleFilter</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="w">    </span><span class="n">BoxFilter</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
 <a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="w">    </span><span class="n">DAKKU_EXPORT_FILTERS</span><span class="w"> </span>
 <a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
+<h3 id="function-create_triangle_filter">function create_triangle_filter</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="n">DAKKU_EXPORT_FILTERSFilter</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">create_triangle_filter</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">x_width</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">y_width</span><span class="w"></span>
+<a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>Create a triangle filter object. </p>
+<h3 id="function-dakku_declare_lua_object_11">function DAKKU_DECLARE_LUA_OBJECT</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="n">DAKKU_DECLARE_LUA_OBJECT</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="w">    </span><span class="n">TriangleFilter</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="w">    </span><span class="n">DAKKU_EXPORT_FILTERS</span><span class="w"> </span>
+<a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
 <h2 id="attributes-documentation">Attributes Documentation</h2>
 <h3 id="variable-inf">variable INF</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">INF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;::</span><span class="n">infinity</span><span class="p">();</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">INF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;::</span><span class="n">infinity</span><span class="p">();</span><span class="w"></span>
 </code></pre></div>
 <p>infinity </p>
 <h3 id="variable-pi">variable PI</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">PI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">numbers</span><span class="o">::</span><span class="n">pi_v</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">PI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">numbers</span><span class="o">::</span><span class="n">pi_v</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <p>PI. </p>
 <h3 id="variable-inv_pi">variable INV_PI</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">INV_PI</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
-<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="w">    </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">(</span><span class="mf">1.0</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">numbers</span><span class="o">::</span><span class="n">pi_v</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">);</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">INV_PI</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="w">    </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">(</span><span class="mf">1.0</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">numbers</span><span class="o">::</span><span class="n">pi_v</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 <p><span class="arithmatex">\(\frac 1 \pi\)</span> </p>
 <h3 id="variable-pi_over_2">variable PI_OVER_2</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">PI_OVER_2</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
-<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="w">    </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">numbers</span><span class="o">::</span><span class="n">pi_v</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2.0</span><span class="p">);</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">PI_OVER_2</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a><span class="w">    </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">numbers</span><span class="o">::</span><span class="n">pi_v</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2.0</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 <p><span class="arithmatex">\(\frac \pi 2\)</span> </p>
 <h3 id="variable-pi_over_4">variable PI_OVER_4</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">PI_OVER_4</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
-<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="w">    </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">numbers</span><span class="o">::</span><span class="n">pi_v</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">4.0</span><span class="p">);</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">PI_OVER_4</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a><span class="w">    </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">numbers</span><span class="o">::</span><span class="n">pi_v</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">4.0</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 <p><span class="arithmatex">\(\frac \pi 4\)</span> </p>
 <h3 id="variable-shadow_eps">variable SHADOW_EPS</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">SHADOW_EPS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1e-5f</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">SHADOW_EPS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1e-5f</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <p>shadow epsilon, used for shadow ray, offset ray origin </p>
 <h3 id="variable-one_minus_epsilon">variable ONE_MINUS_EPSILON</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">ONE_MINUS_EPSILON</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
-<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a><span class="w">    </span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;::</span><span class="n">epsilon</span><span class="p">();</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">ONE_MINUS_EPSILON</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a><span class="w">    </span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;::</span><span class="n">epsilon</span><span class="p">();</span><span class="w"></span>
 </code></pre></div>
 <p>1 - eps </p>
 <hr />
-<p>Updated on 2022-04-26 at 14:33:26 +0000</p>
+<p>Updated on 2022-04-30 at 15:46:11 +0000</p>
 
               
             </article>

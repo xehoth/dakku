@@ -607,6 +607,28 @@
         </inbodydescription>
         <location file="src/core/vector.h" line="187" column="1" declfile="src/core/vector.h" declline="187" declcolumn="1"/>
       </memberdef>
+      <memberdef kind="function" id="namespacedakku_1ac4d431d350901dc2f24fea60dabb4245" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="filters_2fwd_8h_1a43808664e862ce668a722f7b1077b1e5" kindref="member">DAKKU_EXPORT_FILTERS</ref> <ref refid="classdakku_1_1Filter" kindref="compound">Filter</ref> *</type>
+        <definition>DAKKU_EXPORT_FILTERS Filter * dakku::create_box_filter</definition>
+        <argsstring>(float x_width, float y_width)</argsstring>
+        <name>create_box_filter</name>
+        <param>
+          <type>float</type>
+          <declname>x_width</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y_width</declname>
+        </param>
+        <briefdescription>
+<para>Create a box filter object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/filters/box.h" line="22" column="29" declfile="src/filters/box.h" declline="22" declcolumn="29"/>
+      </memberdef>
       <memberdef kind="function" id="namespacedakku_1a6883b120d067a58dc252b98914fb45cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>dakku::DAKKU_DECLARE_LUA_OBJECT</definition>
@@ -624,7 +646,29 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/filters/box.h" line="18" column="1" declfile="src/filters/box.h" declline="18" declcolumn="1"/>
+        <location file="src/filters/box.h" line="24" column="1" declfile="src/filters/box.h" declline="24" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedakku_1a2a7f66fe482ec2408d7d779d7a6d5b03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="filters_2fwd_8h_1a43808664e862ce668a722f7b1077b1e5" kindref="member">DAKKU_EXPORT_FILTERS</ref> <ref refid="classdakku_1_1Filter" kindref="compound">Filter</ref> *</type>
+        <definition>DAKKU_EXPORT_FILTERS Filter * dakku::create_triangle_filter</definition>
+        <argsstring>(float x_width, float y_width)</argsstring>
+        <name>create_triangle_filter</name>
+        <param>
+          <type>float</type>
+          <declname>x_width</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y_width</declname>
+        </param>
+        <briefdescription>
+<para>Create a triangle filter object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/filters/triangle.h" line="22" column="29" declfile="src/filters/triangle.h" declline="22" declcolumn="29"/>
       </memberdef>
       <memberdef kind="function" id="namespacedakku_1af1d89de68cd9c6bd9e7b0c5e9bcdf615" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -643,7 +687,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/filters/triangle.h" line="18" column="1" declfile="src/filters/triangle.h" declline="18" declcolumn="1"/>
+        <location file="src/filters/triangle.h" line="24" column="1" declfile="src/filters/triangle.h" declline="24" declcolumn="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
